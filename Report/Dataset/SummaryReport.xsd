@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SummaryReport" targetNamespace="http://tempuri.org/SummaryReport.xsd" xmlns:mstns="http://tempuri.org/SummaryReport.xsd" xmlns="http://tempuri.org/SummaryReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SummaryReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SummaryReport" msprop:Generator_UserDSName="SummaryReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BranchProductivityDS" msprop:Generator_TableClassName="BranchProductivityDSDataTable" msprop:Generator_TableVarName="tableBranchProductivityDS" msprop:Generator_TablePropName="BranchProductivityDS" msprop:Generator_RowDeletingName="BranchProductivityDSRowDeleting" msprop:Generator_RowChangingName="BranchProductivityDSRowChanging" msprop:Generator_RowEvHandlerName="BranchProductivityDSRowChangeEventHandler" msprop:Generator_RowDeletedName="BranchProductivityDSRowDeleted" msprop:Generator_UserTableName="BranchProductivityDS" msprop:Generator_RowChangedName="BranchProductivityDSRowChanged" msprop:Generator_RowEvArgName="BranchProductivityDSRowChangeEvent" msprop:Generator_RowClassName="BranchProductivityDSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="new_num_client" msprop:Generator_ColumnVarNameInTable="columnnew_num_client" msprop:Generator_ColumnPropNameInRow="new_num_client" msprop:Generator_ColumnPropNameInTable="new_num_clientColumn" msprop:Generator_UserColumnName="new_num_client" type="xs:string" minOccurs="0" />
+              <xs:element name="siid" msprop:Generator_ColumnVarNameInTable="columnsiid" msprop:Generator_ColumnPropNameInRow="siid" msprop:Generator_ColumnPropNameInTable="siidColumn" msprop:Generator_UserColumnName="siid" type="xs:string" minOccurs="0" />
+              <xs:element name="new_amt" msprop:Generator_ColumnVarNameInTable="columnnew_amt" msprop:Generator_ColumnPropNameInRow="new_amt" msprop:Generator_ColumnPropNameInTable="new_amtColumn" msprop:Generator_UserColumnName="new_amt" type="xs:string" minOccurs="0" />
+              <xs:element name="redeem_num_client" msprop:Generator_ColumnVarNameInTable="columnredeem_num_client" msprop:Generator_ColumnPropNameInRow="redeem_num_client" msprop:Generator_ColumnPropNameInTable="redeem_num_clientColumn" msprop:Generator_UserColumnName="redeem_num_client" type="xs:string" minOccurs="0" />
+              <xs:element name="redeem_amt" msprop:Generator_ColumnVarNameInTable="columnredeem_amt" msprop:Generator_ColumnPropNameInRow="redeem_amt" msprop:Generator_ColumnPropNameInTable="redeem_amtColumn" msprop:Generator_UserColumnName="redeem_amt" type="xs:string" minOccurs="0" />
+              <xs:element name="current_num_client" msprop:Generator_ColumnVarNameInTable="columncurrent_num_client" msprop:Generator_ColumnPropNameInRow="current_num_client" msprop:Generator_ColumnPropNameInTable="current_num_clientColumn" msprop:Generator_UserColumnName="current_num_client" type="xs:string" minOccurs="0" />
+              <xs:element name="renew_client" msprop:Generator_ColumnVarNameInTable="columnrenew_client" msprop:Generator_ColumnPropNameInRow="renew_client" msprop:Generator_ColumnPropNameInTable="renew_clientColumn" msprop:Generator_UserColumnName="renew_client" type="xs:string" minOccurs="0" />
+              <xs:element name="current_amt" msprop:Generator_ColumnVarNameInTable="columncurrent_amt" msprop:Generator_ColumnPropNameInRow="current_amt" msprop:Generator_ColumnPropNameInTable="current_amtColumn" msprop:Generator_UserColumnName="current_amt" type="xs:string" minOccurs="0" />
+              <xs:element name="renew_amt" msprop:Generator_ColumnVarNameInTable="columnrenew_amt" msprop:Generator_ColumnPropNameInRow="renew_amt" msprop:Generator_ColumnPropNameInTable="renew_amtColumn" msprop:Generator_UserColumnName="renew_amt" type="xs:string" minOccurs="0" />
+              <xs:element name="late_principle_amt" msprop:Generator_ColumnVarNameInTable="columnlate_principle_amt" msprop:Generator_ColumnPropNameInRow="late_principle_amt" msprop:Generator_ColumnPropNameInTable="late_principle_amtColumn" msprop:Generator_UserColumnName="late_principle_amt" type="xs:string" minOccurs="0" />
+              <xs:element name="late_num_client" msprop:Generator_ColumnVarNameInTable="columnlate_num_client" msprop:Generator_ColumnPropNameInRow="late_num_client" msprop:Generator_ColumnPropNameInTable="late_num_clientColumn" msprop:Generator_UserColumnName="late_num_client" type="xs:string" minOccurs="0" />
+              <xs:element name="principle130" msprop:Generator_ColumnVarNameInTable="columnprinciple130" msprop:Generator_ColumnPropNameInRow="principle130" msprop:Generator_ColumnPropNameInTable="principle130Column" msprop:Generator_UserColumnName="principle130" type="xs:string" minOccurs="0" />
+              <xs:element name="interest130" msprop:Generator_ColumnVarNameInTable="columninterest130" msprop:Generator_ColumnPropNameInRow="interest130" msprop:Generator_ColumnPropNameInTable="interest130Column" msprop:Generator_UserColumnName="interest130" type="xs:string" minOccurs="0" />
+              <xs:element name="principle3160" msprop:Generator_ColumnVarNameInTable="columnprinciple3160" msprop:Generator_ColumnPropNameInRow="principle3160" msprop:Generator_ColumnPropNameInTable="principle3160Column" msprop:Generator_UserColumnName="principle3160" type="xs:string" minOccurs="0" />
+              <xs:element name="interest3160" msprop:Generator_ColumnVarNameInTable="columninterest3160" msprop:Generator_ColumnPropNameInRow="interest3160" msprop:Generator_ColumnPropNameInTable="interest3160Column" msprop:Generator_UserColumnName="interest3160" type="xs:string" minOccurs="0" />
+              <xs:element name="principle6190" msprop:Generator_ColumnVarNameInTable="columnprinciple6190" msprop:Generator_ColumnPropNameInRow="principle6190" msprop:Generator_ColumnPropNameInTable="principle6190Column" msprop:Generator_UserColumnName="principle6190" type="xs:string" minOccurs="0" />
+              <xs:element name="interest6190" msprop:Generator_ColumnVarNameInTable="columninterest6190" msprop:Generator_ColumnPropNameInRow="interest6190" msprop:Generator_ColumnPropNameInTable="interest6190Column" msprop:Generator_UserColumnName="interest6190" type="xs:string" minOccurs="0" />
+              <xs:element name="principle91" msprop:Generator_ColumnVarNameInTable="columnprinciple91" msprop:Generator_ColumnPropNameInRow="principle91" msprop:Generator_ColumnPropNameInTable="principle91Column" msprop:Generator_UserColumnName="principle91" type="xs:string" minOccurs="0" />
+              <xs:element name="interest91" msprop:Generator_ColumnVarNameInTable="columninterest91" msprop:Generator_ColumnPropNameInRow="interest91" msprop:Generator_ColumnPropNameInTable="interest91Column" msprop:Generator_UserColumnName="interest91" type="xs:string" minOccurs="0" />
+              <xs:element name="currency" msprop:Generator_ColumnVarNameInTable="columncurrency" msprop:Generator_ColumnPropNameInRow="currency" msprop:Generator_ColumnPropNameInTable="currencyColumn" msprop:Generator_UserColumnName="currency" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

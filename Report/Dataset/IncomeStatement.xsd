@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IncomeStatement" targetNamespace="http://tempuri.org/IncomeStatement.xsd" xmlns:mstns="http://tempuri.org/IncomeStatement.xsd" xmlns="http://tempuri.org/IncomeStatement.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="IncomeStatement" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="IncomeStatement" msprop:Generator_UserDSName="IncomeStatement">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PS_Details" msprop:Generator_TableClassName="PS_DetailsDataTable" msprop:Generator_TableVarName="tablePS_Details" msprop:Generator_TablePropName="PS_Details" msprop:Generator_RowDeletingName="PS_DetailsRowDeleting" msprop:Generator_RowChangingName="PS_DetailsRowChanging" msprop:Generator_RowEvHandlerName="PS_DetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="PS_DetailsRowDeleted" msprop:Generator_UserTableName="PS_Details" msprop:Generator_RowChangedName="PS_DetailsRowChanged" msprop:Generator_RowEvArgName="PS_DetailsRowChangeEvent" msprop:Generator_RowClassName="PS_DetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gl" msprop:Generator_ColumnVarNameInTable="columngl" msprop:Generator_ColumnPropNameInRow="gl" msprop:Generator_ColumnPropNameInTable="glColumn" msprop:Generator_UserColumnName="gl" type="xs:string" minOccurs="0" />
+              <xs:element name="gl_name" msprop:Generator_ColumnVarNameInTable="columngl_name" msprop:Generator_ColumnPropNameInRow="gl_name" msprop:Generator_ColumnPropNameInTable="gl_nameColumn" msprop:Generator_UserColumnName="gl_name" type="xs:string" minOccurs="0" />
+              <xs:element name="acc_class" msprop:Generator_ColumnVarNameInTable="columnacc_class" msprop:Generator_ColumnPropNameInRow="acc_class" msprop:Generator_ColumnPropNameInTable="acc_classColumn" msprop:Generator_UserColumnName="acc_class" type="xs:string" minOccurs="0" />
+              <xs:element name="ac_amt" msprop:Generator_ColumnVarNameInTable="columnac_amt" msprop:Generator_ColumnPropNameInRow="ac_amt" msprop:Generator_ColumnPropNameInTable="ac_amtColumn" msprop:Generator_UserColumnName="ac_amt" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PS_PL" msprop:Generator_TableClassName="PS_PLDataTable" msprop:Generator_TableVarName="tablePS_PL" msprop:Generator_TablePropName="PS_PL" msprop:Generator_RowDeletingName="PS_PLRowDeleting" msprop:Generator_RowChangingName="PS_PLRowChanging" msprop:Generator_RowEvHandlerName="PS_PLRowChangeEventHandler" msprop:Generator_RowDeletedName="PS_PLRowDeleted" msprop:Generator_UserTableName="PS_PL" msprop:Generator_RowChangedName="PS_PLRowChanged" msprop:Generator_RowEvArgName="PS_PLRowChangeEvent" msprop:Generator_RowClassName="PS_PLRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="total_i" msprop:Generator_ColumnVarNameInTable="columntotal_i" msprop:Generator_ColumnPropNameInRow="total_i" msprop:Generator_ColumnPropNameInTable="total_iColumn" msprop:Generator_UserColumnName="total_i" type="xs:string" minOccurs="0" />
+              <xs:element name="total_e" msprop:Generator_ColumnVarNameInTable="columntotal_e" msprop:Generator_ColumnPropNameInRow="total_e" msprop:Generator_ColumnPropNameInTable="total_eColumn" msprop:Generator_UserColumnName="total_e" type="xs:string" minOccurs="0" />
+              <xs:element name="p_l" msprop:Generator_ColumnVarNameInTable="columnp_l" msprop:Generator_ColumnPropNameInRow="p_l" msprop:Generator_ColumnPropNameInTable="p_lColumn" msprop:Generator_UserColumnName="p_l" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

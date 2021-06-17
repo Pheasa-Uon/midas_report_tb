@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CashflowStatement" targetNamespace="http://tempuri.org/CashflowStatement.xsd" xmlns:mstns="http://tempuri.org/CashflowStatement.xsd" xmlns="http://tempuri.org/CashflowStatement.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CashflowStatement" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CashflowStatement" msprop:Generator_UserDSName="CashflowStatement">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CashFlowDS" msprop:Generator_TableClassName="CashFlowDSDataTable" msprop:Generator_TableVarName="tableCashFlowDS" msprop:Generator_TablePropName="CashFlowDS" msprop:Generator_RowDeletingName="CashFlowDSRowDeleting" msprop:Generator_RowChangingName="CashFlowDSRowChanging" msprop:Generator_RowEvHandlerName="CashFlowDSRowChangeEventHandler" msprop:Generator_RowDeletedName="CashFlowDSRowDeleted" msprop:Generator_UserTableName="CashFlowDS" msprop:Generator_RowChangedName="CashFlowDSRowChanged" msprop:Generator_RowEvArgName="CashFlowDSRowChangeEvent" msprop:Generator_RowClassName="CashFlowDSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="class" msprop:Generator_ColumnVarNameInTable="columnclass" msprop:Generator_ColumnPropNameInRow="_class" msprop:Generator_ColumnPropNameInTable="classColumn" msprop:Generator_UserColumnName="class" type="xs:string" minOccurs="0" />
+              <xs:element name="gl" msprop:Generator_ColumnVarNameInTable="columngl" msprop:Generator_ColumnPropNameInRow="gl" msprop:Generator_ColumnPropNameInTable="glColumn" msprop:Generator_UserColumnName="gl" type="xs:string" minOccurs="0" />
+              <xs:element name="sub_class" msprop:Generator_ColumnVarNameInTable="columnsub_class" msprop:Generator_ColumnPropNameInRow="sub_class" msprop:Generator_ColumnPropNameInTable="sub_classColumn" msprop:Generator_UserColumnName="sub_class" type="xs:string" minOccurs="0" />
+              <xs:element name="gl_name" msprop:Generator_ColumnVarNameInTable="columngl_name" msprop:Generator_ColumnPropNameInRow="gl_name" msprop:Generator_ColumnPropNameInTable="gl_nameColumn" msprop:Generator_UserColumnName="gl_name" type="xs:string" minOccurs="0" />
+              <xs:element name="acc_class_id" msprop:Generator_ColumnVarNameInTable="columnacc_class_id" msprop:Generator_ColumnPropNameInRow="acc_class_id" msprop:Generator_ColumnPropNameInTable="acc_class_idColumn" msprop:Generator_UserColumnName="acc_class_id" type="xs:string" minOccurs="0" />
+              <xs:element name="amt" msprop:Generator_ColumnVarNameInTable="columnamt" msprop:Generator_ColumnPropNameInRow="amt" msprop:Generator_ColumnPropNameInTable="amtColumn" msprop:Generator_UserColumnName="amt" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

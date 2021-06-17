@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewGrant" targetNamespace="http://tempuri.org/NewGrant.xsd" xmlns:mstns="http://tempuri.org/NewGrant.xsd" xmlns="http://tempuri.org/NewGrant.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="NewGrant" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="NewGrant" msprop:Generator_UserDSName="NewGrant">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NewGrantDS" msprop:Generator_TableClassName="NewGrantDSDataTable" msprop:Generator_TableVarName="tableNewGrantDS" msprop:Generator_TablePropName="NewGrantDS" msprop:Generator_RowDeletingName="NewGrantDSRowDeleting" msprop:Generator_RowChangingName="NewGrantDSRowChanging" msprop:Generator_RowEvHandlerName="NewGrantDSRowChangeEventHandler" msprop:Generator_RowDeletedName="NewGrantDSRowDeleted" msprop:Generator_UserTableName="NewGrantDS" msprop:Generator_RowChangedName="NewGrantDSRowChanged" msprop:Generator_RowEvArgName="NewGrantDSRowChangeEvent" msprop:Generator_RowClassName="NewGrantDSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="disbursement_date" msprop:Generator_ColumnVarNameInTable="columndisbursement_date" msprop:Generator_ColumnPropNameInRow="disbursement_date" msprop:Generator_ColumnPropNameInTable="disbursement_dateColumn" msprop:Generator_UserColumnName="disbursement_date" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_name" msprop:Generator_ColumnVarNameInTable="columncustomer_name" msprop:Generator_ColumnPropNameInRow="customer_name" msprop:Generator_ColumnPropNameInTable="customer_nameColumn" msprop:Generator_UserColumnName="customer_name" type="xs:string" minOccurs="0" />
+              <xs:element name="ticket_no" msprop:Generator_ColumnVarNameInTable="columnticket_no" msprop:Generator_ColumnPropNameInRow="ticket_no" msprop:Generator_ColumnPropNameInTable="ticket_noColumn" msprop:Generator_UserColumnName="ticket_no" type="xs:string" minOccurs="0" />
+              <xs:element name="due_date" msprop:Generator_ColumnVarNameInTable="columndue_date" msprop:Generator_ColumnPropNameInRow="due_date" msprop:Generator_ColumnPropNameInTable="due_dateColumn" msprop:Generator_UserColumnName="due_date" type="xs:string" minOccurs="0" />
+              <xs:element name="pawn_price_approved" msprop:Generator_ColumnVarNameInTable="columnpawn_price_approved" msprop:Generator_ColumnPropNameInRow="pawn_price_approved" msprop:Generator_ColumnPropNameInTable="pawn_price_approvedColumn" msprop:Generator_UserColumnName="pawn_price_approved" type="xs:string" minOccurs="0" />
+              <xs:element name="currency" msprop:Generator_ColumnVarNameInTable="columncurrency" msprop:Generator_ColumnPropNameInRow="currency" msprop:Generator_ColumnPropNameInTable="currencyColumn" msprop:Generator_UserColumnName="currency" type="xs:string" minOccurs="0" />
+              <xs:element name="currency_code" msprop:Generator_ColumnVarNameInTable="columncurrency_code" msprop:Generator_ColumnPropNameInRow="currency_code" msprop:Generator_ColumnPropNameInTable="currency_codeColumn" msprop:Generator_UserColumnName="currency_code" type="xs:string" minOccurs="0" />
+              <xs:element name="pawn_officer" msprop:Generator_ColumnVarNameInTable="columnpawn_officer" msprop:Generator_ColumnPropNameInRow="pawn_officer" msprop:Generator_ColumnPropNameInTable="pawn_officerColumn" msprop:Generator_UserColumnName="pawn_officer" type="xs:string" minOccurs="0" />
+              <xs:element name="lob_name" msprop:Generator_ColumnVarNameInTable="columnlob_name" msprop:Generator_ColumnPropNameInRow="lob_name" msprop:Generator_ColumnPropNameInTable="lob_nameColumn" msprop:Generator_UserColumnName="lob_name" type="xs:string" minOccurs="0" />
+              <xs:element name="int_amt" msprop:Generator_ColumnVarNameInTable="columnint_amt" msprop:Generator_ColumnPropNameInRow="int_amt" msprop:Generator_ColumnPropNameInTable="int_amtColumn" msprop:Generator_UserColumnName="int_amt" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

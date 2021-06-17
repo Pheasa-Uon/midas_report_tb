@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Redeem" targetNamespace="http://tempuri.org/Redeem.xsd" xmlns:mstns="http://tempuri.org/Redeem.xsd" xmlns="http://tempuri.org/Redeem.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Redeem" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Redeem" msprop:Generator_UserDSName="Redeem">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RedeemDS" msprop:Generator_TableClassName="RedeemDSDataTable" msprop:Generator_TableVarName="tableRedeemDS" msprop:Generator_TablePropName="RedeemDS" msprop:Generator_RowDeletingName="RedeemDSRowDeleting" msprop:Generator_RowChangingName="RedeemDSRowChanging" msprop:Generator_RowEvHandlerName="RedeemDSRowChangeEventHandler" msprop:Generator_RowDeletedName="RedeemDSRowDeleted" msprop:Generator_UserTableName="RedeemDS" msprop:Generator_RowChangedName="RedeemDSRowChanged" msprop:Generator_RowEvArgName="RedeemDSRowChangeEvent" msprop:Generator_RowClassName="RedeemDSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="ticket_no" msprop:Generator_ColumnVarNameInTable="columnticket_no" msprop:Generator_ColumnPropNameInRow="ticket_no" msprop:Generator_ColumnPropNameInTable="ticket_noColumn" msprop:Generator_UserColumnName="ticket_no" type="xs:string" minOccurs="0" />
+              <xs:element name="redeem_date" msprop:Generator_ColumnVarNameInTable="columnredeem_date" msprop:Generator_ColumnPropNameInRow="redeem_date" msprop:Generator_ColumnPropNameInTable="redeem_dateColumn" msprop:Generator_UserColumnName="redeem_date" type="xs:string" minOccurs="0" />
+              <xs:element name="principle" msprop:Generator_ColumnVarNameInTable="columnprinciple" msprop:Generator_ColumnPropNameInRow="principle" msprop:Generator_ColumnPropNameInTable="principleColumn" msprop:Generator_UserColumnName="principle" type="xs:string" minOccurs="0" />
+              <xs:element name="interest" msprop:Generator_ColumnVarNameInTable="columninterest" msprop:Generator_ColumnPropNameInRow="interest" msprop:Generator_ColumnPropNameInTable="interestColumn" msprop:Generator_UserColumnName="interest" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_name" msprop:Generator_ColumnVarNameInTable="columncustomer_name" msprop:Generator_ColumnPropNameInRow="customer_name" msprop:Generator_ColumnPropNameInTable="customer_nameColumn" msprop:Generator_UserColumnName="customer_name" type="xs:string" minOccurs="0" />
+              <xs:element name="total_penalty_paid" msprop:Generator_ColumnVarNameInTable="columntotal_penalty_paid" msprop:Generator_ColumnPropNameInRow="total_penalty_paid" msprop:Generator_ColumnPropNameInTable="total_penalty_paidColumn" msprop:Generator_UserColumnName="total_penalty_paid" type="xs:string" minOccurs="0" />
+              <xs:element name="lob_name" msprop:Generator_ColumnVarNameInTable="columnlob_name" msprop:Generator_ColumnPropNameInRow="lob_name" msprop:Generator_ColumnPropNameInTable="lob_nameColumn" msprop:Generator_UserColumnName="lob_name" type="xs:string" minOccurs="0" />
+              <xs:element name="serial_number" msprop:Generator_ColumnVarNameInTable="columnserial_number" msprop:Generator_ColumnPropNameInRow="serial_number" msprop:Generator_ColumnPropNameInTable="serial_numberColumn" msprop:Generator_UserColumnName="serial_number" type="xs:string" minOccurs="0" />
+              <xs:element name="currency" msprop:Generator_ColumnVarNameInTable="columncurrency" msprop:Generator_ColumnPropNameInRow="currency" msprop:Generator_ColumnPropNameInTable="currencyColumn" msprop:Generator_UserColumnName="currency" type="xs:string" minOccurs="0" />
+              <xs:element name="currency_code" msprop:Generator_ColumnVarNameInTable="columncurrency_code" msprop:Generator_ColumnPropNameInRow="currency_code" msprop:Generator_ColumnPropNameInTable="currency_codeColumn" msprop:Generator_UserColumnName="currency_code" type="xs:string" minOccurs="0" />
+              <xs:element name="pawn_officer" msprop:Generator_ColumnVarNameInTable="columnpawn_officer" msprop:Generator_ColumnPropNameInRow="pawn_officer" msprop:Generator_ColumnPropNameInTable="pawn_officerColumn" msprop:Generator_UserColumnName="pawn_officer" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

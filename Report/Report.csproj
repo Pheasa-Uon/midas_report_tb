@@ -1,0 +1,894 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69EAEFA3-B0CA-40CC-938E-69F368768157}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Report</RootNamespace>
+    <AssemblyName>Report</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.2.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.16.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.16\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accounting\AccrualInterestOnPawn.aspx" />
+    <Content Include="Accounting\BalanceSheet.aspx" />
+    <Content Include="Accounting\CashflowStatement.aspx" />
+    <Content Include="Accounting\ChartOfAccount.aspx" />
+    <Content Include="Accounting\GLTransactionHistory.aspx" />
+    <Content Include="Accounting\IncomeStatement.aspx" />
+    <Content Include="Accounting\IncomeStatementByDate.aspx" />
+    <Content Include="Accounting\JournalEntryByDate.aspx" />
+    <Content Include="Accounting\TrialBalance.aspx" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery.datetimepicker.css" />
+    <Content Include="Content\jquery.mCustomScrollbar.min.css" />
+    <Content Include="Content\login.css" />
+    <Content Include="Images\profile.png" />
+    <Content Include="Images\ui-icons_444444_256x240.png" />
+    <Content Include="Operation\AllContractList.aspx" />
+    <Content Include="Operation\BranchProductivity.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\mCustomScrollbar.min.css" />
+    <Content Include="Content\override.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Dataset\BranchProductivity.xsc">
+      <DependentUpon>BranchProductivity.xsd</DependentUpon>
+    </Content>
+    <EmbeddedResource Include="Accounting\CashflowStatement.rdlc" />
+    <EmbeddedResource Include="Accounting\ChartOfAccount.rdlc" />
+    <EmbeddedResource Include="Accounting\AccrualInterestOnPawn.rdlc" />
+    <EmbeddedResource Include="Accounting\JournalEntryByDate.rdlc" />
+    <Content Include="Dataset\AccrualInterestOnPawn.xsc">
+      <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
+    </Content>
+    <EmbeddedResource Include="Accounting\TrialBalance.rdlc" />
+    <EmbeddedResource Include="Accounting\IncomeStatementByDate.rdlc" />
+    <EmbeddedResource Include="Accounting\IncomeStatement.rdlc" />
+    <EmbeddedResource Include="Accounting\GLTransactionHistory.rdlc" />
+    <EmbeddedResource Include="Accounting\BalanceSheet.rdlc" />
+    <None Include="Dataset\AccrualInterestOnPawn.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccrualInterestOnPawn.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\AccrualInterestOnPawn.xss">
+      <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\BranchProductivity.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BranchProductivity.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\BranchProductivity.xss">
+      <DependentUpon>BranchProductivity.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\PawnListDetail.xsc">
+      <DependentUpon>PawnListDetail.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\COProductivity.xsc">
+      <DependentUpon>COProductivity.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\CollectionSheet.xsc">
+      <DependentUpon>CollectionSheet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\ChartOfAccount.xsc">
+      <DependentUpon>ChartOfAccount.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\CashflowStatement.xsc">
+      <DependentUpon>CashflowStatement.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\CashflowStatement.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CashflowStatement.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\CashflowStatement.xss">
+      <DependentUpon>CashflowStatement.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\ChartOfAccount.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChartOfAccount.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\ChartOfAccount.xss">
+      <DependentUpon>ChartOfAccount.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\CollectionSheet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CollectionSheet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\CollectionSheet.xss">
+      <DependentUpon>CollectionSheet.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\COProductivity.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COProductivity.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\COProductivity.xss">
+      <DependentUpon>COProductivity.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\NewGrant.xsc">
+      <DependentUpon>NewGrant.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\LateReport.xsc">
+      <DependentUpon>LateReport.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\JournalEntryByDate.xsc">
+      <DependentUpon>JournalEntryByDate.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\GLTransactionHistory.xsc">
+      <DependentUpon>GLTransactionHistory.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\GLTransactionHistory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GLTransactionHistory.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\GLTransactionHistory.xss">
+      <DependentUpon>GLTransactionHistory.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\JournalEntryByDate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JournalEntryByDate.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\JournalEntryByDate.xss">
+      <DependentUpon>JournalEntryByDate.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\LateReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LateReport.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\LateReport.xss">
+      <DependentUpon>LateReport.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\NewGrant.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewGrant.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\NewGrant.xss">
+      <DependentUpon>NewGrant.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\PawnListDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PawnListDetail.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\PawnListDetail.xss">
+      <DependentUpon>PawnListDetail.xsd</DependentUpon>
+    </Content>
+    <EmbeddedResource Include="Operation\PawnListDetail.rdlc" />
+    <EmbeddedResource Include="Operation\TurnOver.rdlc" />
+    <Content Include="Dataset\TurnOver.xsc">
+      <DependentUpon>TurnOver.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\StockReport.xsc">
+      <DependentUpon>StockReport.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\Renew.xsc">
+      <DependentUpon>Renew.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\Redeem.xsc">
+      <DependentUpon>Redeem.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\ProductivityConsolidateByDate.xsc">
+      <DependentUpon>ProductivityConsolidateByDate.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\ProductivityConsolidateByDate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductivityConsolidateByDate.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\ProductivityConsolidateByDate.xss">
+      <DependentUpon>ProductivityConsolidateByDate.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\ProductivityConsolidateByLOB.xsc">
+      <DependentUpon>ProductivityConsolidateByLOB.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\ProductivityConsolidateByLOB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductivityConsolidateByLOB.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\ProductivityConsolidateByLOB.xss">
+      <DependentUpon>ProductivityConsolidateByLOB.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\Redeem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Redeem.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\Redeem.xss">
+      <DependentUpon>Redeem.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\Renew.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Renew.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\Renew.xss">
+      <DependentUpon>Renew.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\StockReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockReport.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\StockReport.xss">
+      <DependentUpon>StockReport.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\TrailBalance.xsc">
+      <DependentUpon>TrailBalance.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\SummaryReport.xsc">
+      <DependentUpon>SummaryReport.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\SummaryReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SummaryReport.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\SummaryReport.xss">
+      <DependentUpon>SummaryReport.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\TrailBalance.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrailBalance.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\TrailBalance.xss">
+      <DependentUpon>TrailBalance.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\TurnOver.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurnOver.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\TurnOver.xss">
+      <DependentUpon>TurnOver.xsd</DependentUpon>
+    </Content>
+    <EmbeddedResource Include="Operation\StockReport.rdlc" />
+    <EmbeddedResource Include="Operation\SummaryReport.rdlc" />
+    <EmbeddedResource Include="Operation\Renew.rdlc" />
+    <EmbeddedResource Include="Operation\Redeem.rdlc" />
+    <EmbeddedResource Include="Operation\BranchProductivity.rdlc" />
+    <EmbeddedResource Include="Operation\COProductivity.rdlc" />
+    <Content Include="Dataset\BalanceSheet.xsc">
+      <DependentUpon>BalanceSheet.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\BalanceSheet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BalanceSheet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\BalanceSheet.xss">
+      <DependentUpon>BalanceSheet.xsd</DependentUpon>
+    </Content>
+    <EmbeddedResource Include="Operation\All Contract List Report.rdlc" />
+    <Content Include="Operation\All Contract List Report.rdl.data" />
+    <None Include="Operation\CollectionSheet.rdlc" />
+    <EmbeddedResource Include="Operation\NewGrant.rdlc" />
+    <EmbeddedResource Include="Operation\LateReport.rdlc" />
+    <Content Include="Dataset\IncomeStatementByDate.xsc">
+      <DependentUpon>IncomeStatementByDate.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\IncomeStatement.xsc">
+      <DependentUpon>IncomeStatement.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\IncomeStatement.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IncomeStatement.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\IncomeStatement.xss">
+      <DependentUpon>IncomeStatement.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\IncomeStatementByDate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IncomeStatementByDate.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\IncomeStatementByDate.xss">
+      <DependentUpon>IncomeStatementByDate.xsd</DependentUpon>
+    </Content>
+    <EmbeddedResource Include="Operation\ProductivityConsolidateByBranch.rdlc" />
+    <EmbeddedResource Include="Operation\ProductivityConsolidateByLOB.rdlc" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Operation\CollectionSheet.aspx" />
+    <Content Include="Operation\COProductivity.aspx" />
+    <Content Include="Operation\LateReport.aspx" />
+    <Content Include="Operation\NewGrant.aspx" />
+    <Content Include="Operation\PawnListDetail.aspx" />
+    <Content Include="Operation\ProductivityConsolidateByBranch.aspx" />
+    <Content Include="Operation\ProductivityConsolidateByLOB.aspx" />
+    <Content Include="Operation\RedeemReport.aspx" />
+    <Content Include="Operation\RenewReport.aspx" />
+    <Content Include="Operation\StockReport.aspx" />
+    <Content Include="Operation\SummaryReport.aspx" />
+    <Content Include="Operation\TurnOver.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\datetimepicker.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.datetimepicker.js" />
+    <Content Include="Scripts\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\scrollbar.js" />
+    <Content Include="Scripts\sidebar.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Unauthorized.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounting\AccrualInterestOnPawn.aspx.cs">
+      <DependentUpon>AccrualInterestOnPawn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccrualInterestOnPawn.aspx.designer.cs">
+      <DependentUpon>AccrualInterestOnPawn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\BalanceSheet.aspx.cs">
+      <DependentUpon>BalanceSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\BalanceSheet.aspx.designer.cs">
+      <DependentUpon>BalanceSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\CashflowStatement.aspx.cs">
+      <DependentUpon>CashflowStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\CashflowStatement.aspx.designer.cs">
+      <DependentUpon>CashflowStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\ChartOfAccount.aspx.cs">
+      <DependentUpon>ChartOfAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\ChartOfAccount.aspx.designer.cs">
+      <DependentUpon>ChartOfAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\GLTransactionHistory.aspx.cs">
+      <DependentUpon>GLTransactionHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\GLTransactionHistory.aspx.designer.cs">
+      <DependentUpon>GLTransactionHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\IncomeStatement.aspx.cs">
+      <DependentUpon>IncomeStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\IncomeStatement.aspx.designer.cs">
+      <DependentUpon>IncomeStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\IncomeStatementByDate.aspx.cs">
+      <DependentUpon>IncomeStatementByDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\IncomeStatementByDate.aspx.designer.cs">
+      <DependentUpon>IncomeStatementByDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\JournalEntryByDate.aspx.cs">
+      <DependentUpon>JournalEntryByDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\JournalEntryByDate.aspx.designer.cs">
+      <DependentUpon>JournalEntryByDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\TrialBalance.aspx.cs">
+      <DependentUpon>TrialBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\TrialBalance.aspx.designer.cs">
+      <DependentUpon>TrialBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Dataset\AccrualInterestOnPawn.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CashflowStatement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CashflowStatement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\ChartOfAccount.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChartOfAccount.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CollectionSheet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CollectionSheet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\COProductivity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COProductivity.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\GLTransactionHistory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GLTransactionHistory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\JournalEntryByDate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JournalEntryByDate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\LateReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LateReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\NewGrant.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewGrant.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\PawnListDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PawnListDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\ProductivityConsolidateByDate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductivityConsolidateByDate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\ProductivityConsolidateByLOB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductivityConsolidateByLOB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Redeem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Redeem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\Renew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Renew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\StockReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\SummaryReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SummaryReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TrailBalance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrailBalance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\TurnOver.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurnOver.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Branch.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\GL.cs" />
+    <Compile Include="Models\MenuField.cs" />
+    <Compile Include="Models\Officer.cs" />
+    <Compile Include="Models\Procedure.cs" />
+    <Compile Include="Models\ReportItem.cs" />
+    <Compile Include="Models\Response.cs" />
+    <Compile Include="Models\SubItem.cs" />
+    <Compile Include="Models\TransactionType.cs" />
+    <Compile Include="Dataset\BalanceSheet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BalanceSheet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserResponse.cs" />
+    <Compile Include="Operation\AllContractList.aspx.cs">
+      <DependentUpon>AllContractList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\AllContractList.aspx.designer.cs">
+      <DependentUpon>AllContractList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\BranchProductivity.aspx.cs">
+      <DependentUpon>BranchProductivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\BranchProductivity.aspx.designer.cs">
+      <DependentUpon>BranchProductivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\BranchProductivity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BranchProductivity.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\DBConnect.cs" />
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Operation\CollectionSheet.aspx.cs">
+      <DependentUpon>CollectionSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\CollectionSheet.aspx.designer.cs">
+      <DependentUpon>CollectionSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\COProductivity.aspx.cs">
+      <DependentUpon>COProductivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\COProductivity.aspx.designer.cs">
+      <DependentUpon>COProductivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\IncomeStatement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncomeStatement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\IncomeStatementByDate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncomeStatementByDate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\LateReport.aspx.cs">
+      <DependentUpon>LateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\LateReport.aspx.designer.cs">
+      <DependentUpon>LateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\NewGrant.aspx.cs">
+      <DependentUpon>NewGrant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\NewGrant.aspx.designer.cs">
+      <DependentUpon>NewGrant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\PawnListDetail.aspx.cs">
+      <DependentUpon>PawnListDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\PawnListDetail.aspx.designer.cs">
+      <DependentUpon>PawnListDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\ProductivityConsolidateByBranch.aspx.cs">
+      <DependentUpon>ProductivityConsolidateByBranch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\ProductivityConsolidateByBranch.aspx.designer.cs">
+      <DependentUpon>ProductivityConsolidateByBranch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\ProductivityConsolidateByLOB.aspx.cs">
+      <DependentUpon>ProductivityConsolidateByLOB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\ProductivityConsolidateByLOB.aspx.designer.cs">
+      <DependentUpon>ProductivityConsolidateByLOB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\RedeemReport.aspx.cs">
+      <DependentUpon>RedeemReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\RedeemReport.aspx.designer.cs">
+      <DependentUpon>RedeemReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\RenewReport.aspx.cs">
+      <DependentUpon>RenewReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\RenewReport.aspx.designer.cs">
+      <DependentUpon>RenewReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\StockReport.aspx.cs">
+      <DependentUpon>StockReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\StockReport.aspx.designer.cs">
+      <DependentUpon>StockReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\SummaryReport.aspx.cs">
+      <DependentUpon>SummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\SummaryReport.aspx.designer.cs">
+      <DependentUpon>SummaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\TurnOver.aspx.cs">
+      <DependentUpon>TurnOver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\TurnOver.aspx.designer.cs">
+      <DependentUpon>TurnOver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Unauthorized.aspx.cs">
+      <DependentUpon>Unauthorized.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unauthorized.aspx.designer.cs">
+      <DependentUpon>Unauthorized.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\AESUtil.cs" />
+    <Compile Include="Utils\DataHelper.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50734</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50734/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
