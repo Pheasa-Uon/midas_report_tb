@@ -363,7 +363,7 @@ namespace Report.Utils
             ddl.DataValueField = "id";
             ddl.DataSource = officerList;
             ddl.DataBind();
-            ddl.Items.Insert(0, new ListItem("--- All ---", "null"));
+            ddl.Items.Insert(0, new ListItem("--- All ---", "0"));
             ddl.SelectedIndex = 0;
         }
 
@@ -444,13 +444,28 @@ namespace Report.Utils
         }
 
         //Generate Operation Report Type Statement
-        public static void generateOperationReport(ReportViewer reportViewer, string reportName, Microsoft.Reporting.WebForms.ReportParameterCollection reportParameterCollection, params ReportDataSource[] reportDataSources)
+        public static void generateOperationReport(ReportViewer reportViewer, string reportName, ReportParameterCollection reportParameterCollection, params ReportDataSource[] reportDataSources)
         {
             reportViewer.SizeToReportContent = true;
             reportViewer.LocalReport.ReportPath = HttpContext.Current.Server.MapPath(String.Format("~/Operation/{0}.rdlc", reportName));
             reportViewer.LocalReport.DataSources.Clear();
+            //Add Default Parameter CompanyName
+            reportParameterCollection.Add(new ReportParameter("CompanyName", DataHelper.getCompanyName()));
             reportViewer.LocalReport.SetParameters(reportParameterCollection);
 
+            foreach (var item in reportDataSources)
+            {
+                reportViewer.LocalReport.DataSources.Add(item);
+            }
+            reportViewer.LocalReport.Refresh();
+        }
+
+        public static void generateOperationReport(ReportViewer reportViewer, string reportName, params ReportDataSource[] reportDataSources)
+        {
+            reportViewer.SizeToReportContent = true;
+            reportViewer.LocalReport.ReportPath = HttpContext.Current.Server.MapPath(String.Format("~/Operation/{0}.rdlc", reportName));
+            reportViewer.LocalReport.DataSources.Clear();
+            
             foreach (var item in reportDataSources)
             {
                 reportViewer.LocalReport.DataSources.Add(item);
@@ -471,6 +486,21 @@ namespace Report.Utils
                 reportViewer.LocalReport.DataSources.Add(item);
             }
             reportViewer.LocalReport.Refresh();
+        }
+
+        public static String getCompanyName()
+        {
+            if (HttpContext.Current.Session["company_name"] != null)
+            {
+                return HttpContext.Current.Session["company_name"].ToString();
+            }
+            else
+            {
+                DBConnect db = new DBConnect();
+                var res = db.GetCompanyName();
+                HttpContext.Current.Session["company_name"] = res;
+                return res;
+            }
         }
     }
 }   

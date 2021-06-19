@@ -42,7 +42,8 @@
             <center>
                 <rsweb:ReportViewer ID="ReportViewer1" runat="server" nt-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana"  
                 WaitMessageFont-Size="14pt" ShowPrintButton="true" ShowBackButton="true" BackColor="#999999" CssClass="printer"  
-                PageCountMode="Actual" ShowZoomControl="False"></rsweb:ReportViewer>
+                PageCountMode="Actual" ShowZoomControl="False" SizeToReportContent="True">
+                </rsweb:ReportViewer>
             </center>
         </div>
     </div>
