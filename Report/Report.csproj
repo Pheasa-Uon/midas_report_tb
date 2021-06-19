@@ -190,6 +190,17 @@
     <Content Include="Dataset\AccrualInterestOnPawn.xss">
       <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\AllContractList.xsc">
+      <DependentUpon>AllContractList.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\AllContractList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AllContractList.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\AllContractList.xss">
+      <DependentUpon>AllContractList.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\BranchProductivity.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -212,6 +223,17 @@
     </Content>
     <Content Include="Dataset\CashflowStatement.xsc">
       <DependentUpon>CashflowStatement.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\BranchProductivityAsOf.xsc">
+      <DependentUpon>BranchProductivityAsOf.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\BranchProductivityAsOf.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BranchProductivityAsOf.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\BranchProductivityAsOf.xss">
+      <DependentUpon>BranchProductivityAsOf.xsd</DependentUpon>
     </Content>
     <None Include="Dataset\CashflowStatement.xsd">
       <SubType>Designer</SubType>
@@ -404,8 +426,10 @@
     <Content Include="Dataset\BalanceSheet.xss">
       <DependentUpon>BalanceSheet.xsd</DependentUpon>
     </Content>
-    <EmbeddedResource Include="Operation\All Contract List Report.rdlc" />
-    <Content Include="Operation\All Contract List Report.rdl.data" />
+    <Content Include="Operation\AllContractList.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Operation\BranchProductivityAsOf.rdlc" />
     <None Include="Operation\CollectionSheet.rdlc" />
     <EmbeddedResource Include="Operation\NewGrant.rdlc" />
     <EmbeddedResource Include="Operation\LateReport.rdlc" />
@@ -436,6 +460,7 @@
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Operation\BranchProductivityAsOf.aspx" />
     <Content Include="Operation\CollectionSheet.aspx" />
     <Content Include="Operation\COProductivity.aspx" />
     <Content Include="Operation\LateReport.aspx" />
@@ -573,6 +598,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\AllContractList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllContractList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\BranchProductivityAsOf.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BranchProductivityAsOf.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\CashflowStatement.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -692,6 +727,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BranchProductivity.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\BranchProductivityAsOf.aspx.cs">
+      <DependentUpon>BranchProductivityAsOf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\BranchProductivityAsOf.aspx.designer.cs">
+      <DependentUpon>BranchProductivityAsOf.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utils\DBConnect.cs" />
     <Compile Include="Dashboard.aspx.cs">

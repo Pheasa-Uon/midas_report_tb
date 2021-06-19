@@ -36,7 +36,7 @@
                     <div>
                         <label>&nbsp;</label>
                     </div>
-                    <asp:Button ID="btnView" runat="server" Text="View Report" CssClass="btn btn-sm btn-primary" />
+                    <asp:Button ID="btnView" runat="server" Text="View Report" CssClass="btn btn-sm btn-primary" OnClick="btnView_Click" />
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
             <center>
                 <rsweb:ReportViewer ID="ReportViewer1" runat="server" nt-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana"  
                 WaitMessageFont-Size="14pt" ShowPrintButton="true" ShowBackButton="true" BackColor="#999999" CssClass="printer"  
-                PageCountMode="Actual" ShowZoomControl="False"></rsweb:ReportViewer>
+                PageCountMode="Actual" ShowZoomControl="False" BorderStyle="None"></rsweb:ReportViewer>
             </center>
         </div>
     </div>
