@@ -24,5 +24,7 @@ namespace Report.Operation
                 DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedItem.Value));
             }
         }
+     
     }
+
 }

@@ -21,7 +21,8 @@ namespace Report
         protected void Button1_Click(object sender, EventArgs e)
         {
             var pEncrypt = AESUtil.EncryptString(txtPassword.Text);
-            var user = DataHelper.login(txtUsername.Text, "AQUpvTCF66ztPrYRtLm9ew==");
+         
+            var user = DataHelper.login(txtUsername.Text, "BorhjiY6JTfWc/HRSOkbOQ==");
             if (user.id != 0)
             {
                 HttpContext.Current.Session["userID"] = user.id;
