@@ -5,11 +5,14 @@ using Report.Utils;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Report.Operation
 {
-    public partial class BranchProductivityAsOf : System.Web.UI.Page
+    public partial class BranchProductivityOnDate : System.Web.UI.Page
     {
         private DBConnect db = new DBConnect();
         string urlPath = HttpContext.Current.Request.Url.AbsoluteUri;
@@ -25,7 +28,7 @@ namespace Report.Operation
 
         protected void btnView_Click(object sender, EventArgs e)
         {
-            var spd = "PS_BRANCH_PROD_AS_OFF";
+            var spd = "PS_BRANCH_PROD_ON_DATE";
             List<Procedure> parameters = new List<Procedure>();
             parameters.Add(item: new Procedure() { field_name = "@pBranch", sql_db_type = MySqlDbType.VarChar, value_name = ddBranchName.SelectedItem.Value });
             parameters.Add(item: new Procedure() { field_name = "@pCurrency", sql_db_type = MySqlDbType.VarChar, value_name = ddCurrency.SelectedItem.Value });
@@ -40,8 +43,8 @@ namespace Report.Operation
             reportParameters.Add(new ReportParameter("SystemDate", DataHelper.getSystemDateStr()));
             reportParameters.Add(new ReportParameter("Currency", ddCurrency.SelectedItem.Text));
 
-            var ds = new ReportDataSource("BranchProductivityAsOfDS", dt);
-            DataHelper.generateOperationReport(ReportViewer1, "BranchProductivityAsOf", reportParameters, ds);
+            var ds = new ReportDataSource("BranchProductivityOnDateDS", dt);
+            DataHelper.generateOperationReport(ReportViewer1, "BranchProductivityOnDate", reportParameters, ds);
         }
     }
 }

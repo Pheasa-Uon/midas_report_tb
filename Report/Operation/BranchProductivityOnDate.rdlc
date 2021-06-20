@@ -7,11 +7,11 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>8a988766-d8ae-4389-9074-089e1e477b9d</rd:DataSourceID>
+      <rd:DataSourceID>ea5e9f51-b207-4f0f-a879-48fabee44712</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="BranchProductivityAsOfDS">
+    <DataSet Name="BranchProductivityOnDateDS">
       <Query>
         <DataSourceName>BranchProductivityAsOff</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -221,7 +221,7 @@
       <rd:DataSetInfo>
         <rd:DataSetName>BranchProductivityAsOff</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\BranchProductivityAsOf.xsd</rd:SchemaPath>
-        <rd:TableName>BranchProductivityAsOf</rd:TableName>
+        <rd:TableName>BranchProductivityAsOfDS</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -386,7 +386,7 @@
             <Top>0.43032in</Top>
             <Left>0.125in</Left>
             <Height>0.25in</Height>
-            <Width>1.57292in</Width>
+            <Width>1.1875in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -406,7 +406,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>AS OFF DATE:</Value>
+                    <Value>SYSTEM DATE:</Value>
                     <Style>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -420,7 +420,7 @@
             <Top>0.69421in</Top>
             <Left>0.125in</Left>
             <Height>0.25in</Height>
-            <Width>1.57292in</Width>
+            <Width>1.1875in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -660,7 +660,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=RowNumber("BranchProductivityAsOfDS")</Value>
+                                  <Value>=RowNumber("BranchProductivityOnDateDS")</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                   </Style>
@@ -5264,7 +5264,7 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>BranchProductivityAsOfDS</DataSetName>
+            <DataSetName>BranchProductivityOnDateDS</DataSetName>
             <Top>1.59896in</Top>
             <Left>0.12691in</Left>
             <Height>1.375in</Height>
@@ -5297,13 +5297,45 @@
             <Top>0.97199in</Top>
             <Left>0.12691in</Left>
             <Height>0.25in</Height>
-            <Width>1.57292in</Width>
+            <Width>1.1875in</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
               <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CompanyName">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!CompanyName.Value</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CompanyName</rd:DefaultName>
+            <Top>0.11088in</Top>
+            <Left>0.12691in</Left>
+            <Height>0.25in</Height>
+            <Width>6.32241in</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -5326,10 +5358,10 @@
             </Paragraphs>
             <rd:DefaultName>Branch</rd:DefaultName>
             <Top>0.43032in</Top>
-            <Left>1.69792in</Left>
+            <Left>1.32639in</Left>
             <Height>0.25in</Height>
-            <Width>4.17328in</Width>
-            <ZIndex>13</ZIndex>
+            <Width>2.90104in</Width>
+            <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -5355,11 +5387,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>SystemDate</rd:DefaultName>
-            <Top>0.69421in</Top>
-            <Left>1.71181in</Left>
+            <Top>0.7081in</Top>
+            <Left>1.32639in</Left>
             <Height>0.25in</Height>
-            <Width>4.15939in</Width>
-            <ZIndex>14</ZIndex>
+            <Width>2.90104in</Width>
+            <ZIndex>15</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -5386,41 +5418,9 @@
             </Paragraphs>
             <rd:DefaultName>Currency</rd:DefaultName>
             <Top>0.97396in</Top>
-            <Left>1.71181in</Left>
+            <Left>1.3283in</Left>
             <Height>0.25in</Height>
-            <Width>4.15748in</Width>
-            <ZIndex>15</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="CompanyName">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!CompanyName.Value</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>CompanyName</rd:DefaultName>
-            <Top>0.16643in</Top>
-            <Left>0.125in</Left>
-            <Height>0.25in</Height>
-            <Width>6.72917in</Width>
+            <Width>2.90104in</Width>
             <ZIndex>16</ZIndex>
             <Style>
               <Border>
@@ -5449,12 +5449,6 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="CompanyName">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
     <ReportParameter Name="Branch">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
@@ -5473,6 +5467,12 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="CompanyName">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -5482,22 +5482,22 @@
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>CompanyName</ParameterName>
+          <ParameterName>Branch</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>Branch</ParameterName>
+          <ParameterName>SystemDate</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>2</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>SystemDate</ParameterName>
+          <ParameterName>Currency</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>Currency</ParameterName>
+          <ParameterName>CompanyName</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

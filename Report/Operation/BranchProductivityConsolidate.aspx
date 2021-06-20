@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Branch Productivity As Of" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BranchProductivityAsOf.aspx.cs" Inherits="Report.Operation.BranchProductivityAsOf" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BranchProductivityConsolidate.aspx.cs" Inherits="Report.Operation.BranchProductivityConsolidate" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
@@ -6,14 +6,6 @@
     <div class="panel panel-default no-margin">
         <div class="panel-body">
             <div class="row">
-                <div class="col-sm-3 form-group">
-                    <label>Branch: </label>
-                    <asp:DropDownList ID="ddBranchName" runat="server" CssClass="form-control input-sm">
-                    </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddBranchName"
-                        ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
-                    </asp:RequiredFieldValidator>
-                </div>
                 <div class="col-sm-3 form-group">
                     <label>Currency:</label>
                     <asp:DropDownList ID="ddCurrency" runat="server" CssClass="form-control input-sm">

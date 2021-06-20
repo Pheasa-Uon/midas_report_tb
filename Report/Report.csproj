@@ -235,6 +235,17 @@
     <Content Include="Dataset\BranchProductivityAsOf.xss">
       <DependentUpon>BranchProductivityAsOf.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\BranchProductivityConsolidate.xsc">
+      <DependentUpon>BranchProductivityConsolidate.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\BranchProductivityConsolidate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BranchProductivityConsolidate.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\BranchProductivityConsolidate.xss">
+      <DependentUpon>BranchProductivityConsolidate.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\CashflowStatement.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -430,7 +441,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="Operation\BranchProductivityAsOf.rdlc" />
-    <None Include="Operation\CollectionSheet.rdlc" />
+    <EmbeddedResource Include="Operation\BranchProductivityConsolidate.rdlc" />
+    <EmbeddedResource Include="Operation\BranchProductivityOnDate.rdlc" />
     <EmbeddedResource Include="Operation\NewGrant.rdlc" />
     <EmbeddedResource Include="Operation\LateReport.rdlc" />
     <Content Include="Dataset\IncomeStatementByDate.xsc">
@@ -457,10 +469,13 @@
     </Content>
     <EmbeddedResource Include="Operation\ProductivityConsolidateByBranch.rdlc" />
     <EmbeddedResource Include="Operation\ProductivityConsolidateByLOB.rdlc" />
+    <EmbeddedResource Include="Operation\CollectionSheet.rdlc" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="Operation\BranchProductivityAsOf.aspx" />
+    <Content Include="Operation\BranchProductivityConsolidate.aspx" />
+    <Content Include="Operation\BranchProductivityOnDate.aspx" />
     <Content Include="Operation\CollectionSheet.aspx" />
     <Content Include="Operation\COProductivity.aspx" />
     <Content Include="Operation\LateReport.aspx" />
@@ -608,6 +623,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BranchProductivityAsOf.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\BranchProductivityConsolidate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BranchProductivityConsolidate.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\CashflowStatement.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -734,6 +754,20 @@
     </Compile>
     <Compile Include="Operation\BranchProductivityAsOf.aspx.designer.cs">
       <DependentUpon>BranchProductivityAsOf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\BranchProductivityConsolidate.aspx.cs">
+      <DependentUpon>BranchProductivityConsolidate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\BranchProductivityConsolidate.aspx.designer.cs">
+      <DependentUpon>BranchProductivityConsolidate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\BranchProductivityOnDate.aspx.cs">
+      <DependentUpon>BranchProductivityOnDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\BranchProductivityOnDate.aspx.designer.cs">
+      <DependentUpon>BranchProductivityOnDate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utils\DBConnect.cs" />
     <Compile Include="Dashboard.aspx.cs">
