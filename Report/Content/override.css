@@ -275,3 +275,6 @@ ul ul a {
 .ui-icon, .ui-widget-content .ui-icon {
     background-image:  url("/Images/ui-icons_444444_256x240.png") !important;
 }
+.form-group label {
+    margin-bottom: 0 !important;
+}

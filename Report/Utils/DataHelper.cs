@@ -338,7 +338,7 @@ namespace Report.Utils
         }
 
         //Check And Get System Date Statement
-        public static String getSystemDateStr(string format = "dd/MM/yyyy")
+        public static String getSystemDateStr(string format = "dd-MMM-yyyy")
         {
             if (HttpContext.Current.Session["system_date"] != null)
             {
@@ -351,6 +351,22 @@ namespace Report.Utils
                 var res = db.GetSystemDate();
                 DateTime sysDate = Convert.ToDateTime(res);
                 return sysDate.ToString(format);
+            }
+        }
+
+        public static DateTime getSystemDate()
+        {
+            if (HttpContext.Current.Session["system_date"] != null)
+            {
+                DateTime sysDate = Convert.ToDateTime(HttpContext.Current.Session["system_date"].ToString());
+                return sysDate;
+            }
+            else
+            {
+                DBConnect db = new DBConnect();
+                var res = db.GetSystemDate();
+                DateTime sysDate = Convert.ToDateTime(res);
+                return sysDate;
             }
         }
 

@@ -3346,6 +3346,8 @@
     </ReportParameter>
     <ReportParameter Name="CompanyName">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>

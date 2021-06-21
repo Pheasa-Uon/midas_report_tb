@@ -8,7 +8,7 @@
             <div class="form-inline">
                 <div class="form-group">
                     <label>Branch:</label>
-                    <asp:DropDownList ID="ddBranchName" runat="server" CssClass="form-control cnt-min-width">
+                    <asp:DropDownList ID="ddBranchName" runat="server" CssClass="form-control input-sm">
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddBranchName"
                         ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
@@ -16,11 +16,11 @@
                 </div>
                 <div class="form-group ml16">
                     <label>Currency:</label>
-                    <asp:DropDownList ID="ddCurrency" runat="server" CssClass="form-control cnt-min-width">
+                    <asp:DropDownList ID="ddCurrency" runat="server" CssClass="form-control input-sm">
                     </asp:DropDownList>
                 </div>
                 <div class="form-group ml16">
-                    <asp:Button ID="btnView" runat="server" Text="View" OnClick="btnView_Click" CssClass="btn btn-info" />
+                    <asp:Button ID="btnView" runat="server" Text="View Report" OnClick="btnView_Click" CssClass="btn btn-sm btn-primary" />
                 </div>
             </div>
         </div>

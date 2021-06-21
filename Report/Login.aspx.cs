@@ -22,7 +22,7 @@ namespace Report
         {
             var pEncrypt = AESUtil.EncryptString(txtPassword.Text);
          
-            var user = DataHelper.login(txtUsername.Text, "BorhjiY6JTfWc/HRSOkbOQ==");
+            var user = DataHelper.login(txtUsername.Text, "AQUpvTCF66ztPrYRtLm9ew==");
             if (user.id != 0)
             {
                 HttpContext.Current.Session["userID"] = user.id;

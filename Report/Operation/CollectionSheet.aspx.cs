@@ -1,13 +1,6 @@
 ﻿using Microsoft.Reporting.WebForms;
-using Report.Models;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Globalization;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using Report.Utils;
 
 namespace Report.Operation
@@ -16,30 +9,30 @@ namespace Report.Operation
     {
         private DBConnect db = new DBConnect();
         DateTime currentDate = DateTime.Today;
-        private static string fromDate, toDate, systemDateStr;
+        private static string fromDate, toDate;
         public string format = "dd/MM/yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataHelper.checkLoginSession();
             //Convert Date Block
             fromDate = dtpFromDate.Text;
             toDate = dtpToDate.Text;
 
             if (!IsPostBack)
             {
+                var sysDate = DataHelper.getSystemDate();
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
-                dtpFromDate.Text = DataHelper.getSystemDateStr();
-                dtpToDate.Text = DataHelper.getSystemDateStr();
+                dtpFromDate.Text = sysDate.ToString(format);
+                dtpToDate.Text = sysDate.ToString(format);
             }
         }
 
         private void GenerateReport(DataTable collectionSheetDT)
         {
             ReportParameterCollection reportParameters = new ReportParameterCollection();
-            reportParameters.Add(new ReportParameter("BranchParameter", ddBranchName.SelectedItem.Text));
-            reportParameters.Add(new ReportParameter("OfficerParameter", ddOfficer.SelectedItem.Text));
-            reportParameters.Add(new ReportParameter("FromDateParameter", DateTime.ParseExact(dtpFromDate.Text, format, null).ToString("dd-MMM-yyyy")));
-            reportParameters.Add(new ReportParameter("ToDateParameter", DateTime.ParseExact(dtpToDate.Text, format, null).ToString("dd-MMM-yyyy")));
+            reportParameters.Add(new ReportParameter("Branch", ddBranchName.SelectedItem.Text));
+            reportParameters.Add(new ReportParameter("PawnOfficer", ddOfficer.SelectedItem.Text));
+            reportParameters.Add(new ReportParameter("FromDate", DateTime.ParseExact(dtpFromDate.Text, format, null).ToString("dd-MMM-yyyy")));
+            reportParameters.Add(new ReportParameter("ToDate", DateTime.ParseExact(dtpToDate.Text, format, null).ToString("dd-MMM-yyyy")));
 
             var _collectionSheetlist = new ReportDataSource("CollectionSheetDS", collectionSheetDT);
             DataHelper.generateOperationReport(ReportViewer1, "CollectionSheet", reportParameters, _collectionSheetlist);
@@ -49,29 +42,35 @@ namespace Report.Operation
         {   
             //Split Date Time variable
             var fromDateSql = DateTime.ParseExact(dtpFromDate.Text, format, null);
-            var fromDay = fromDateSql.ToString("dd");
+            var fromDay = fromDateSql.ToString("yyyy-MM-dd");
 
             var toDateSql = DateTime.ParseExact(dtpToDate.Text, format, null);
-            var toDay = toDateSql.ToString("dd");
+            var toDay = toDateSql.ToString("yyyy-MM-dd");
 
-            var collectionSheetSql = "SELECT ST.ticket_no,CUS.customer_name,CUS.personal_phone,CONCAT_WS(', ',COM.commune_kh,VIL.village_kh),CONCAT(COM.commune_kh,', ',VIL.village_kh) as cus_address, " +
-                                    "CUR.currency,PL.principle_less princ_outstanding, CASE WHEN C.product_type_id = 1 THEN ST.due_date ELSE ST.created_date END as due_date, " +
-                                    "ST.interest_less,ST.principle_less,ST.penalty_less,P.lob_name " +
-                                    "FROM schedule_ticket ST " +
-                                    "LEFT JOIN contract C ON ST.contract_id = C.id " +
-                                    "LEFT JOIN customer CUS ON C.customer_id = CUS.id " +
-                                    "LEFT JOIN commune COM ON CUS.commune_id = COM.id " +
-                                    "LEFT JOIN village VIL ON CUS.village_id = VIL.id " +
-                                    "LEFT JOIN currency CUR ON C.currency_id = CUR.id " +
-                                    "LEFT JOIN product P ON C.product_id = P.id " +
-                                    "LEFT JOIN(SELECT contract_id, SUM(principle_less) principle_less " +
-                                        "FROM schedule_ticket " +
-                                        "WHERE ticket_status != 'P' AND branch_id =" + ddBranchName.SelectedValue + 
-                                        " GROUP BY contract_id) PL ON C.id = PL.contract_id " +
-                                    " WHERE ST.ticket_status != 'P' AND ST.ticket_status != 'FPP' AND DATE(CASE WHEN C.product_type_id = 1 THEN ST.due_date ELSE ST.created_date END) BETWEEN " + fromDay + " AND " + toDay + 
-                                    " AND C.pawn_officer_id = CASE WHEN " + ddOfficer.SelectedValue + " IS NULL THEN C.pawn_officer_id ELSE " + ddOfficer.SelectedValue + " END AND C.branch_id = " + ddBranchName.SelectedValue ;
+            var sql = "SELECT ST.ticket_no,CUS.customer_name,CUS.personal_phone, " +
+                    "CUR.currency,PL.principle_less princ_outstanding, ST.due_date, " +
+                    "ST.interest_less,ST.principle_less,ST.penalty_less, " +
+                    "P.lob_name,SI.name CO_Name " +
+                    "FROM schedule_ticket ST " +
+                    "LEFT JOIN contract C ON ST.contract_id = C.id " +
+                    "LEFT JOIN customer CUS ON C.customer_id = CUS.id "+
+                    "LEFT JOIN currency CUR ON C.currency_id = CUR.id "+
+                    "LEFT JOIN product P ON C.product_id = P.id "+
+                    "LEFT JOIN staff_info SI ON C.pawn_officer_id = SI.id "+
+                    "LEFT JOIN(SELECT contract_id, SUM(principle_less) principle_less "+
+                    "FROM schedule_ticket " +
+                    "WHERE ticket_status != 'P' AND branch_id = " + ddBranchName.SelectedItem.Value + " " +
+                    "GROUP BY contract_id) PL ON C.id = PL.contract_id " +
+                    "WHERE ST.ticket_status != 'P' AND ST.ticket_status != 'FPP' " +
+                    "AND DATE(ST.due_date) BETWEEN DATE('" + fromDay + "') AND DATE('" + toDay + "') " +
+                    "AND C.branch_id = " + ddBranchName.SelectedItem.Value + " AND C.contract_status IN(4, 7) AND c.`b_status`= TRUE " +
+                    "AND ST.ticket_status != 'I' ";
+            if (ddOfficer.SelectedItem.Value != "0")
+            {
+                sql += " AND C.pawn_officer_id=" + ddOfficer.SelectedItem.Value + ";"; 
+            }
             
-            var collectionSheetDT = db.getDataTable(collectionSheetSql);
+            var collectionSheetDT = db.getDataTable(sql);
             GenerateReport(collectionSheetDT);
         }
 

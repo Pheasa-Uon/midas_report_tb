@@ -283,8 +283,6 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnpersonal_phone;
             
-            private global::System.Data.DataColumn columncus_address;
-            
             private global::System.Data.DataColumn columncurrency;
             
             private global::System.Data.DataColumn columncustomer_name;
@@ -300,6 +298,8 @@ namespace Report.Dataset {
             private global::System.Data.DataColumn columndue_date;
             
             private global::System.Data.DataColumn columnlob_name;
+            
+            private global::System.Data.DataColumn columnCO_Name;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -347,14 +347,6 @@ namespace Report.Dataset {
             public global::System.Data.DataColumn personal_phoneColumn {
                 get {
                     return this.columnpersonal_phone;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn cus_addressColumn {
-                get {
-                    return this.columncus_address;
                 }
             }
             
@@ -424,6 +416,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CO_NameColumn {
+                get {
+                    return this.columnCO_Name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -459,12 +459,11 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public CollectionSheetDSRow AddCollectionSheetDSRow(string ticket_no, string personal_phone, string cus_address, string currency, string customer_name, string princ_outstanding, string interest_less, string principle_less, string penalty_less, string due_date, string lob_name) {
+            public CollectionSheetDSRow AddCollectionSheetDSRow(string ticket_no, string personal_phone, string currency, string customer_name, string princ_outstanding, string interest_less, string principle_less, string penalty_less, string due_date, string lob_name, string CO_Name) {
                 CollectionSheetDSRow rowCollectionSheetDSRow = ((CollectionSheetDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ticket_no,
                         personal_phone,
-                        cus_address,
                         currency,
                         customer_name,
                         princ_outstanding,
@@ -472,7 +471,8 @@ namespace Report.Dataset {
                         principle_less,
                         penalty_less,
                         due_date,
-                        lob_name};
+                        lob_name,
+                        CO_Name};
                 rowCollectionSheetDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCollectionSheetDSRow);
                 return rowCollectionSheetDSRow;
@@ -497,7 +497,6 @@ namespace Report.Dataset {
             internal void InitVars() {
                 this.columnticket_no = base.Columns["ticket_no"];
                 this.columnpersonal_phone = base.Columns["personal_phone"];
-                this.columncus_address = base.Columns["cus_address"];
                 this.columncurrency = base.Columns["currency"];
                 this.columncustomer_name = base.Columns["customer_name"];
                 this.columnprinc_outstanding = base.Columns["princ_outstanding"];
@@ -506,6 +505,7 @@ namespace Report.Dataset {
                 this.columnpenalty_less = base.Columns["penalty_less"];
                 this.columndue_date = base.Columns["due_date"];
                 this.columnlob_name = base.Columns["lob_name"];
+                this.columnCO_Name = base.Columns["CO_Name"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -515,8 +515,6 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnticket_no);
                 this.columnpersonal_phone = new global::System.Data.DataColumn("personal_phone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpersonal_phone);
-                this.columncus_address = new global::System.Data.DataColumn("cus_address", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncus_address);
                 this.columncurrency = new global::System.Data.DataColumn("currency", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncurrency);
                 this.columncustomer_name = new global::System.Data.DataColumn("customer_name", typeof(string), null, global::System.Data.MappingType.Element);
@@ -533,6 +531,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columndue_date);
                 this.columnlob_name = new global::System.Data.DataColumn("lob_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlob_name);
+                this.columnCO_Name = new global::System.Data.DataColumn("CO_Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCO_Name);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -707,22 +707,6 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string cus_address {
-                get {
-                    try {
-                        return ((string)(this[this.tableCollectionSheetDS.cus_addressColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cus_address\' in table \'CollectionSheetDS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCollectionSheetDS.cus_addressColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string currency {
                 get {
                     try {
@@ -851,6 +835,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CO_Name {
+                get {
+                    try {
+                        return ((string)(this[this.tableCollectionSheetDS.CO_NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CO_Name\' in table \'CollectionSheetDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCollectionSheetDS.CO_NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isticket_noNull() {
                 return this.IsNull(this.tableCollectionSheetDS.ticket_noColumn);
             }
@@ -871,18 +871,6 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setpersonal_phoneNull() {
                 this[this.tableCollectionSheetDS.personal_phoneColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Iscus_addressNull() {
-                return this.IsNull(this.tableCollectionSheetDS.cus_addressColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setcus_addressNull() {
-                this[this.tableCollectionSheetDS.cus_addressColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -979,6 +967,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setlob_nameNull() {
                 this[this.tableCollectionSheetDS.lob_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCO_NameNull() {
+                return this.IsNull(this.tableCollectionSheetDS.CO_NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCO_NameNull() {
+                this[this.tableCollectionSheetDS.CO_NameColumn] = global::System.Convert.DBNull;
             }
         }
         

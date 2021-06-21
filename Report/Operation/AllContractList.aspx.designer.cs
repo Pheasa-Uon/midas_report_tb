@@ -10,7 +10,7 @@
 namespace Report.Operation {
     
     
-    public partial class AllContractList {
+    public partial class AllContractList1 {
         
         /// <summary>
         /// UpdatePanel1 control.

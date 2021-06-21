@@ -10,7 +10,7 @@
 namespace Report.Operation {
     
     
-    public partial class LateReportV2 {
+    public partial class LateReportV21 {
         
         /// <summary>
         /// ddBranchName control.

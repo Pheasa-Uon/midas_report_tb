@@ -222,6 +222,28 @@
     <Content Include="Dataset\CashflowStatement.xsc">
       <DependentUpon>CashflowStatement.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\BranchProductivityAsOf.xsc">
+      <DependentUpon>BranchProductivityAsOf.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\BranchProductivityAsOf.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BranchProductivityAsOf.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\BranchProductivityAsOf.xss">
+      <DependentUpon>BranchProductivityAsOf.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\BranchProductivityConsolidate.xsc">
+      <DependentUpon>BranchProductivityConsolidate.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\BranchProductivityConsolidate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BranchProductivityConsolidate.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\BranchProductivityConsolidate.xss">
+      <DependentUpon>BranchProductivityConsolidate.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\CashflowStatement.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -265,6 +287,17 @@
     </Content>
     <Content Include="Dataset\GLTransactionHistory.xsc">
       <DependentUpon>GLTransactionHistory.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\CustomerList.xsc">
+      <DependentUpon>CustomerList.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\CustomerList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerList.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\CustomerList.xss">
+      <DependentUpon>CustomerList.xsd</DependentUpon>
     </Content>
     <None Include="Dataset\GLTransactionHistory.xsd">
       <SubType>Designer</SubType>
@@ -413,7 +446,12 @@
     <Content Include="Dataset\BalanceSheet.xss">
       <DependentUpon>BalanceSheet.xsd</DependentUpon>
     </Content>
-    <None Include="Operation\CollectionSheet.rdlc" />
+    <Content Include="Operation\AllContractList.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Operation\BranchProductivityAsOf.rdlc" />
+    <EmbeddedResource Include="Operation\BranchProductivityConsolidate.rdlc" />
+    <EmbeddedResource Include="Operation\BranchProductivityOnDate.rdlc" />
     <EmbeddedResource Include="Operation\NewGrant.rdlc" />
     <EmbeddedResource Include="Operation\LateReport.rdlc" />
     <Content Include="Dataset\IncomeStatementByDate.xsc">
@@ -440,6 +478,10 @@
     </Content>
     <EmbeddedResource Include="Operation\ProductivityConsolidateByBranch.rdlc" />
     <EmbeddedResource Include="Operation\ProductivityConsolidateByLOB.rdlc" />
+    <EmbeddedResource Include="Operation\CollectionSheet.rdlc" />
+    <EmbeddedResource Include="Operation\CustomerList.rdlc" />
+    <Content Include="Operation\LateReportV2.aspx" />
+    <EmbeddedResource Include="Operation\LateReportV2.rdlc" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
@@ -651,6 +693,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\AllContractList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllContractList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\BranchProductivityAsOf.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BranchProductivityAsOf.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\BranchProductivityConsolidate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BranchProductivityConsolidate.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\CashflowStatement.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -670,6 +727,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>COProductivity.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CustomerList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerList.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\GLTransactionHistory.Designer.cs">
       <AutoGen>True</AutoGen>
