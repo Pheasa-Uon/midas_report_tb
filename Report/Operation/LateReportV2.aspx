@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Collection Sheet" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CollectionSheet.aspx.cs" Inherits="Report.Operation.CollectionSheet" %>
+﻿<%@ Page Title="Late Report V2" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LateReportV2.aspx.cs" Inherits="Report.Operation.LateReportV2" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
@@ -10,20 +10,12 @@
         <div class="panel-body">
             <div class="form-inline">
                 <div class="form-group">
-                    <label>Branch:</label>
-                    <asp:DropDownList ID="ddBranchName" runat="server" AutoPostBack="true"  CssClass="form-control cnt-min-width">
+                    <label>Branch:</label> 
+                    <asp:DropDownList ID="ddBranchName" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddBranchName_SelectedIndexChanged" CssClass="form-control cnt-min-width">
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddBranchName"
                         ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
                     </asp:RequiredFieldValidator>
-                </div>
-                <div class="form-group ml16">
-                    <label>From Date:</label>
-                    <asp:TextBox ID="dtpFromDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
-                </div>
-                <div class="form-group ml16">
-                    <label>ToDate:</label>
-                    <asp:TextBox ID="dtpToDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
                 </div>
                 <div class="form-group ml16">
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
@@ -32,11 +24,12 @@
                         </Triggers>
                         <ContentTemplate>
                             <label>Pawn Officer:</label>
-                            <asp:DropDownList ID="ddOfficer" runat="server" CssClass="form-control cnt-min-width" >
+                            <asp:DropDownList ID="ddOfficer" runat="server" CssClass="form-control cnt-min-width" Enabled="false">
                             </asp:DropDownList>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>
+                
                 <div class="form-group ml16">
                     <asp:Button ID="btnView" runat="server" Text="View" OnClick="btnView_Click" CssClass="btn btn-info" />
                 </div>
@@ -50,8 +43,8 @@
                 <rsweb:ReportViewer ID="ReportViewer1" runat="server" nt-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana"  
                 WaitMessageFont-Size="14pt" ShowPrintButton="true" ShowBackButton="true" BackColor="#999999" CssClass="printer"  
                 PageCountMode="Actual" ShowZoomControl="False"></rsweb:ReportViewer>
-           
-                </center>
+            </center>
         </div>
     </div>
+
 </asp:Content>

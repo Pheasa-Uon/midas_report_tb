@@ -1,23 +1,17 @@
-﻿<%@ Page Title="Collection Sheet" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CollectionSheet.aspx.cs" Inherits="Report.Operation.CollectionSheet" %>
-
+﻿<%@ Page Title="Payment Detail" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="PaymentDetailV2.aspx.cs" Inherits="Report.Operation.PaymentDetailV2" %>
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="../Content/jquery-ui.css" rel="Stylesheet" type="text/css" />
-    <script src="../Scripts/jquery-ui.js" type="text/javascript"></script>
-    <script src="../Scripts/datetimepicker.js" type="text/javascript"></script>
-    <div class="panel panel-warning no-margin">
+    <div class="panel panel-warning no-margin ">
         <div class="panel-body">
             <div class="form-inline">
                 <div class="form-group">
-                    <label>Branch:</label>
-                    <asp:DropDownList ID="ddBranchName" runat="server" AutoPostBack="true"  CssClass="form-control cnt-min-width">
-                    </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddBranchName"
+                    <label>BRANCH</label>
+                    <asp:DropDownList ID="ddBranchName" runat="server" AutoPostBack="true" CssClass="form-control cnt-min-width"></asp:DropDownList>
+                      <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddBranchName"
                         ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
                     </asp:RequiredFieldValidator>
                 </div>
-                <div class="form-group ml16">
+                 <div class="form-group ml16">
                     <label>From Date:</label>
                     <asp:TextBox ID="dtpFromDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
                 </div>
@@ -25,20 +19,13 @@
                     <label>ToDate:</label>
                     <asp:TextBox ID="dtpToDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
                 </div>
-                <div class="form-group ml16">
-                    <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
-                        <Triggers>
-                            <asp:AsyncPostBackTrigger ControlID="ddBranchName" />
-                        </Triggers>
-                        <ContentTemplate>
+                  <div class="form-group ml16">
                             <label>Pawn Officer:</label>
-                            <asp:DropDownList ID="ddOfficer" runat="server" CssClass="form-control cnt-min-width" >
+                            <asp:DropDownList ID="DropDownList2" runat="server" CssClass="form-control cnt-min-width" Enabled="true">
                             </asp:DropDownList>
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
                 </div>
                 <div class="form-group ml16">
-                    <asp:Button ID="btnView" runat="server" Text="View" OnClick="btnView_Click" CssClass="btn btn-info" />
+                    <asp:Button ID="btnView" runat="server" Text="View"  CssClass="btn btn-info" />
                 </div>
             </div>
         </div>
@@ -50,8 +37,7 @@
                 <rsweb:ReportViewer ID="ReportViewer1" runat="server" nt-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana"  
                 WaitMessageFont-Size="14pt" ShowPrintButton="true" ShowBackButton="true" BackColor="#999999" CssClass="printer"  
                 PageCountMode="Actual" ShowZoomControl="False"></rsweb:ReportViewer>
-           
-                </center>
+            </center>
         </div>
     </div>
 </asp:Content>
