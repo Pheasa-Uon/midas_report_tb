@@ -8,24 +8,25 @@ using System.Web.UI.WebControls;
 
 namespace Report.Accounting
 {
-    public partial class AccrualDetail : System.Web.UI.Page
+    public partial class DailyTillCashOperation : System.Web.UI.Page
     {
         private DBConnect db = new DBConnect();
         DateTime currentDate = DateTime.Today;
-        private static string  systemDate;
+        private static string fromDate, toDate;
         public string format = "dd/MM/yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
             DataHelper.checkLoginSession();
             //Convert Date Block
-            systemDate = dtpSystemDate.Text;
-        
+            fromDate = dtpfromDate.Text;
+            toDate = dtpToDate.Text;
 
             if (!IsPostBack)
             {
-                txtContract.Text = "";
-                dtpSystemDate.Text = DataHelper.getSystemDateStr();
-           
+                DataHelper.checkLoginSession();
+                dtpfromDate.Text = DataHelper.getSystemDateStr();
+                dtpToDate.Text = DataHelper.getSystemDateStr();
+                DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
             }
         }
     }

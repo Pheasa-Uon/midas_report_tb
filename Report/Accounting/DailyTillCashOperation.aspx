@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" Title="Accrual Detail" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AccrualDetail.aspx.cs" Inherits="Report.Accounting.AccrualDetail" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DailyTillCashOperation.aspx.cs" Inherits="Report.Accounting.DailyTillCashOperation" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
@@ -9,12 +9,17 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-3 form-group">
-                    <label>Contract# :</label>
-                    <asp:TextBox ID="txtContract" runat="server" class="form-control cnt-min-width"></asp:TextBox>
+                    <label>Branch  :</label>
+                            <asp:DropDownList ID="ddBranchName"  runat="server" CssClass="form-control input-sm" AutoPostBack="true" >
+                            </asp:DropDownList>
                 </div>
                   <div class="col-sm-3 form-group">
-                    <label>System Date  :</label>
-                    <asp:TextBox ID="dtpSystemDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
+                    <label>From Date  :</label>
+                    <asp:TextBox ID="dtpfromDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
+                </div>
+                   <div class="col-sm-3 form-group">
+                    <label>To Date  :</label>
+                    <asp:TextBox ID="dtpToDate"  runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
                 </div>
                 <div class="form-group ml16">
                     <div>

@@ -135,13 +135,20 @@
     <Content Include="Accounting\AccrualInterest.aspx" />
     <Content Include="Accounting\AccrualInterestOnPawn.aspx" />
     <Content Include="Accounting\BalanceSheet.aspx" />
+    <Content Include="Accounting\CashConsolidate.aspx" />
     <Content Include="Accounting\CashflowStatement.aspx" />
     <Content Include="Accounting\ChartOfAccount.aspx" />
+    <Content Include="Accounting\DailyCashVault.aspx" />
+    <Content Include="Accounting\DailyTillCashOperation.aspx" />
+    <Content Include="Accounting\DailyTillPettyCash.aspx" />
     <Content Include="Accounting\GLTransactionHistory.aspx" />
     <Content Include="Accounting\IncomeStatement.aspx" />
     <Content Include="Accounting\IncomeStatementByDate.aspx" />
+    <Content Include="Accounting\IncomeStatementByMonth.aspx" />
+    <Content Include="Accounting\IncomeStatementYTD.aspx" />
     <Content Include="Accounting\JournalEntryByDate.aspx" />
     <Content Include="Accounting\TrialBalance.aspx" />
+    <Content Include="Accounting\UnearnedRevenue.aspx" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\jquery.datetimepicker.css" />
     <Content Include="Content\jquery.mCustomScrollbar.min.css" />
@@ -406,8 +413,6 @@
     <Content Include="Dataset\BalanceSheet.xss">
       <DependentUpon>BalanceSheet.xsd</DependentUpon>
     </Content>
-    <EmbeddedResource Include="Operation\All Contract List Report.rdlc" />
-    <Content Include="Operation\All Contract List Report.rdl.data" />
     <None Include="Operation\CollectionSheet.rdlc" />
     <EmbeddedResource Include="Operation\NewGrant.rdlc" />
     <EmbeddedResource Include="Operation\LateReport.rdlc" />
@@ -541,6 +546,13 @@
     <Compile Include="Accounting\BalanceSheet.aspx.designer.cs">
       <DependentUpon>BalanceSheet.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\CashConsolidate.aspx.cs">
+      <DependentUpon>CashConsolidate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\CashConsolidate.aspx.designer.cs">
+      <DependentUpon>CashConsolidate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\CashflowStatement.aspx.cs">
       <DependentUpon>CashflowStatement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -554,6 +566,27 @@
     </Compile>
     <Compile Include="Accounting\ChartOfAccount.aspx.designer.cs">
       <DependentUpon>ChartOfAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\DailyCashVault.aspx.cs">
+      <DependentUpon>DailyCashVault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\DailyCashVault.aspx.designer.cs">
+      <DependentUpon>DailyCashVault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\DailyTillCashOperation.aspx.cs">
+      <DependentUpon>DailyTillCashOperation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\DailyTillCashOperation.aspx.designer.cs">
+      <DependentUpon>DailyTillCashOperation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\DailyTillPettyCash.aspx.cs">
+      <DependentUpon>DailyTillPettyCash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\DailyTillPettyCash.aspx.designer.cs">
+      <DependentUpon>DailyTillPettyCash.aspx</DependentUpon>
     </Compile>
     <Compile Include="Accounting\GLTransactionHistory.aspx.cs">
       <DependentUpon>GLTransactionHistory.aspx</DependentUpon>
@@ -576,6 +609,20 @@
     <Compile Include="Accounting\IncomeStatementByDate.aspx.designer.cs">
       <DependentUpon>IncomeStatementByDate.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\IncomeStatementByMonth.aspx.cs">
+      <DependentUpon>IncomeStatementByMonth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\IncomeStatementByMonth.aspx.designer.cs">
+      <DependentUpon>IncomeStatementByMonth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\IncomeStatementYTD.aspx.cs">
+      <DependentUpon>IncomeStatementYTD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\IncomeStatementYTD.aspx.designer.cs">
+      <DependentUpon>IncomeStatementYTD.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\JournalEntryByDate.aspx.cs">
       <DependentUpon>JournalEntryByDate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -589,6 +636,13 @@
     </Compile>
     <Compile Include="Accounting\TrialBalance.aspx.designer.cs">
       <DependentUpon>TrialBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\UnearnedRevenue.aspx.cs">
+      <DependentUpon>UnearnedRevenue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\UnearnedRevenue.aspx.designer.cs">
+      <DependentUpon>UnearnedRevenue.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />

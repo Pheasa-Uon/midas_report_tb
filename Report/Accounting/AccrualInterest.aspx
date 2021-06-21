@@ -2,19 +2,38 @@
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="panel panel-warning no-margin ">
+        <link href="../Content/jquery-ui.css" rel="Stylesheet" type="text/css" />
+    <script src="../Scripts/jquery-ui.js" type="text/javascript"></script>
+    <script src="../Scripts/datetimepicker.js" type="text/javascript"></script>
+   <div class="panel panel-default no-margin">
         <div class="panel-body">
-            <div class="form-inline">
-                <div class="form-group">
-                    <label>CURRENCY</label>
-                    <asp:DropDownList ID="ddBranchName" runat="server" AutoPostBack="true" CssClass="form-control cnt-min-width"></asp:DropDownList>
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddBranchName"
-                        ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
-                    </asp:RequiredFieldValidator>
+            <div class="row">
+                   <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <div class="col-sm-3 form-group">
+                            <label>Branch: </label>
+                            <asp:DropDownList ID="ddBranchName"  runat="server" CssClass="form-control input-sm" AutoPostBack="true" OnSelectedIndexChanged="ddBranchName_SelectedIndexChanged" >
+                            </asp:DropDownList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddBranchName"
+                                ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
+                            </asp:RequiredFieldValidator>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <label>Pawn Officer:</label>
+                            <asp:DropDownList ID="ddOfficer" runat="server" CssClass="form-control input-sm">
+                            </asp:DropDownList>
+                        </div>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                  <div class="col-sm-3 form-group">
+                    <label>System Date  :</label>
+                    <asp:TextBox ID="dtpSystemDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
                 </div>
-
                 <div class="form-group ml16">
-                    <asp:Button ID="btnView" runat="server" Text="View"  CssClass="btn btn-info" />
+                    <div>
+                        <label>&nbsp;</label>
+                    </div>
+                    <asp:Button ID="btnView" runat="server" Text="View Report" CssClass="btn btn-sm btn-primary" />
                 </div>
             </div>
         </div>

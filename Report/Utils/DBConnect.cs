@@ -131,13 +131,27 @@ namespace Report.Utils
         {
             string system_date = "";
             string query = "SELECT system_date FROM system_date where is_active = 1";
-            if (this.OpenConnection() == true)
+            if (OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 system_date = cmd.ExecuteScalar().ToString();
-                this.CloseConnection();
+                CloseConnection();
             }
             return system_date;
+        }
+
+        //Get Company name
+        public string GetCompanyName()
+        {
+            string companyName = "";
+            string query = "SELECT company_name FROM general_setting ORDER BY id LIMIT 1;";
+            if (OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                companyName = cmd.ExecuteScalar().ToString();
+                CloseConnection();
+            }
+            return companyName;
         }
 
         //Get Max Date Statement

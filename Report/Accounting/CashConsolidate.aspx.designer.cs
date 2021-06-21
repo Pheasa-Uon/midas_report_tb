@@ -10,25 +10,7 @@
 namespace Report.Accounting {
     
     
-    public partial class AccrualDetail {
-        
-        /// <summary>
-        /// txtContract control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContract;
-        
-        /// <summary>
-        /// dtpSystemDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dtpSystemDate;
+    public partial class CashConsolidate {
         
         /// <summary>
         /// btnView control.

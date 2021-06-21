@@ -10,16 +10,7 @@
 namespace Report.Accounting {
     
     
-    public partial class AccrualInterest {
-        
-        /// <summary>
-        /// UpdatePanel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+    public partial class IncomeStatementYTD {
         
         /// <summary>
         /// ddBranchName control.
@@ -31,31 +22,13 @@ namespace Report.Accounting {
         protected global::System.Web.UI.WebControls.DropDownList ddBranchName;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// dtpAsOfDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
-        /// <summary>
-        /// ddOfficer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddOfficer;
-        
-        /// <summary>
-        /// dtpSystemDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dtpSystemDate;
+        protected global::System.Web.UI.WebControls.TextBox dtpAsOfDate;
         
         /// <summary>
         /// btnView control.

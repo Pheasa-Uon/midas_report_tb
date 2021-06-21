@@ -1,20 +1,16 @@
-﻿<%@ Page Language="C#" Title="Accrual Detail" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AccrualDetail.aspx.cs" Inherits="Report.Accounting.AccrualDetail" %>
+﻿<%@ Page Language="C#" Title="Accrual Interest" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CashConsolidate.aspx.cs" Inherits="Report.Accounting.CashConsolidate" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="../Content/jquery-ui.css" rel="Stylesheet" type="text/css" />
+        <link href="../Content/jquery-ui.css" rel="Stylesheet" type="text/css" />
     <script src="../Scripts/jquery-ui.js" type="text/javascript"></script>
     <script src="../Scripts/datetimepicker.js" type="text/javascript"></script>
-     <div class="panel panel-default no-margin">
+   <div class="panel panel-default no-margin">
         <div class="panel-body">
             <div class="row">
-                <div class="col-sm-3 form-group">
-                    <label>Contract# :</label>
-                    <asp:TextBox ID="txtContract" runat="server" class="form-control cnt-min-width"></asp:TextBox>
-                </div>
                   <div class="col-sm-3 form-group">
                     <label>System Date  :</label>
-                    <asp:TextBox ID="dtpSystemDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
+                    <asp:TextBox  runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
                 </div>
                 <div class="form-group ml16">
                     <div>
@@ -36,3 +32,4 @@
         </div>
     </div>
 </asp:Content>
+

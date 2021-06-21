@@ -10,7 +10,7 @@
 namespace Report.Accounting {
     
     
-    public partial class AccrualInterest {
+    public partial class UnearnedRevenue {
         
         /// <summary>
         /// UpdatePanel1 control.

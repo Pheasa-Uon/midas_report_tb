@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Collection Sheet" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CollectionSheet.aspx.cs" Inherits="Report.Operation.CollectionSheet" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="IncomeStatementByMonth.aspx.cs" Inherits="Report.Accounting.IncomeStatementByMonth" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
@@ -11,7 +11,7 @@
             <div class="form-inline">
                 <div class="form-group">
                     <label>Branch:</label>
-                    <asp:DropDownList ID="ddBranchName" runat="server" AutoPostBack="true"  CssClass="form-control cnt-min-width">
+                    <asp:DropDownList ID="ddBranchName" runat="server" CssClass="form-control cnt-min-width">
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddBranchName"
                         ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
@@ -22,23 +22,12 @@
                     <asp:TextBox ID="dtpFromDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
                 </div>
                 <div class="form-group ml16">
-                    <label>ToDate:</label>
+                    <label>To Date:</label>
                     <asp:TextBox ID="dtpToDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
                 </div>
+                
                 <div class="form-group ml16">
-                    <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
-                        <Triggers>
-                            <asp:AsyncPostBackTrigger ControlID="ddBranchName" />
-                        </Triggers>
-                        <ContentTemplate>
-                            <label>Pawn Officer:</label>
-                            <asp:DropDownList ID="ddOfficer" runat="server" CssClass="form-control cnt-min-width" >
-                            </asp:DropDownList>
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
-                </div>
-                <div class="form-group ml16">
-                    <asp:Button ID="btnView" runat="server" Text="View" OnClick="btnView_Click" CssClass="btn btn-info" />
+                    <asp:Button ID="btnView" runat="server" Text="View" CssClass="btn btn-info" />
                 </div>
             </div>
         </div>
@@ -50,8 +39,7 @@
                 <rsweb:ReportViewer ID="ReportViewer1" runat="server" nt-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana"  
                 WaitMessageFont-Size="14pt" ShowPrintButton="true" ShowBackButton="true" BackColor="#999999" CssClass="printer"  
                 PageCountMode="Actual" ShowZoomControl="False"></rsweb:ReportViewer>
-           
-                </center>
+            </center>
         </div>
     </div>
 </asp:Content>

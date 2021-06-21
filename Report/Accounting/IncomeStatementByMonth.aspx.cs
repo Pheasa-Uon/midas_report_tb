@@ -8,24 +8,25 @@ using System.Web.UI.WebControls;
 
 namespace Report.Accounting
 {
-    public partial class AccrualDetail : System.Web.UI.Page
+    public partial class IncomeStatementByMonth : System.Web.UI.Page
     {
         private DBConnect db = new DBConnect();
         DateTime currentDate = DateTime.Today;
-        private static string  systemDate;
+        private string fromDateStr, toDateStr;
         public string format = "dd/MM/yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
             DataHelper.checkLoginSession();
             //Convert Date Block
-            systemDate = dtpSystemDate.Text;
-        
+            fromDateStr = dtpFromDate.Text;
+            toDateStr = dtpToDate.Text;
 
+            //Adding Text and Value to Branch DropdownList block
             if (!IsPostBack)
             {
-                txtContract.Text = "";
-                dtpSystemDate.Text = DataHelper.getSystemDateStr();
-           
+                DataHelper.populateBranchDDLAllowAll(ddBranchName, DataHelper.getUserId());
+                dtpFromDate.Text = DataHelper.getSystemDateStr();
+                dtpToDate.Text = DataHelper.getSystemDateStr();
             }
         }
     }
