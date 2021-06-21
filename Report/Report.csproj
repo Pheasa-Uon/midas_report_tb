@@ -290,6 +290,17 @@
     <Content Include="Dataset\GLTransactionHistory.xsc">
       <DependentUpon>GLTransactionHistory.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\CustomerList.xsc">
+      <DependentUpon>CustomerList.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\CustomerList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerList.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\CustomerList.xss">
+      <DependentUpon>CustomerList.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\GLTransactionHistory.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -470,6 +481,9 @@
     <EmbeddedResource Include="Operation\ProductivityConsolidateByBranch.rdlc" />
     <EmbeddedResource Include="Operation\ProductivityConsolidateByLOB.rdlc" />
     <EmbeddedResource Include="Operation\CollectionSheet.rdlc" />
+    <EmbeddedResource Include="Operation\CustomerList.rdlc" />
+    <Content Include="Operation\LateReportV2.aspx" />
+    <EmbeddedResource Include="Operation\LateReportV2.rdlc" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
@@ -478,6 +492,7 @@
     <Content Include="Operation\BranchProductivityOnDate.aspx" />
     <Content Include="Operation\CollectionSheet.aspx" />
     <Content Include="Operation\COProductivity.aspx" />
+    <Content Include="Operation\CustomerList.aspx" />
     <Content Include="Operation\LateReport.aspx" />
     <Content Include="Operation\NewGrant.aspx" />
     <Content Include="Operation\PawnListDetail.aspx" />
@@ -648,6 +663,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COProductivity.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\CustomerList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerList.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\GLTransactionHistory.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -768,6 +788,20 @@
     </Compile>
     <Compile Include="Operation\BranchProductivityOnDate.aspx.designer.cs">
       <DependentUpon>BranchProductivityOnDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\CustomerList.aspx.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\CustomerList.aspx.designer.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\LateReportV2.aspx.cs">
+      <DependentUpon>LateReportV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\LateReportV2.aspx.designer.cs">
+      <DependentUpon>LateReportV2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utils\DBConnect.cs" />
     <Compile Include="Dashboard.aspx.cs">

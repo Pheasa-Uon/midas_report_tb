@@ -338,7 +338,7 @@ namespace Report.Utils
         }
 
         //Check And Get System Date Statement
-        public static String getSystemDateStr(string format = "dd/MM/yyyy")
+        public static String getSystemDateStr(string format = "dd-MMM-yyyy")
         {
             if (HttpContext.Current.Session["system_date"] != null)
             {

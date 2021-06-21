@@ -1,13 +1,6 @@
 ﻿using Microsoft.Reporting.WebForms;
-using Report.Models;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Globalization;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using Report.Utils;
 
 namespace Report.Operation
@@ -20,7 +13,6 @@ namespace Report.Operation
         public string format = "dd/MM/yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataHelper.checkLoginSession();
             //Convert Date Block
             fromDate = dtpFromDate.Text;
             toDate = dtpToDate.Text;

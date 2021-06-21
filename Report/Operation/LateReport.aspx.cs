@@ -16,7 +16,7 @@ namespace Report.Operation
     {
         private DBConnect db = new DBConnect();
         public static string systemDateStr;
-        public string format = "dd/MM/yyyy";
+        public string format = "dd-MMM-yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
             DataHelper.checkLoginSession();
