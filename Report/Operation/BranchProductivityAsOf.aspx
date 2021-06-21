@@ -14,7 +14,7 @@
                         ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
                     </asp:RequiredFieldValidator>
                 </div>
-                <div class="col-sm-3 form-group">
+                <div class="col-sm-2 form-group">
                     <label>Currency:</label>
                     <asp:DropDownList ID="ddCurrency" runat="server" CssClass="form-control input-sm">
                     </asp:DropDownList>

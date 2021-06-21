@@ -354,6 +354,22 @@ namespace Report.Utils
             }
         }
 
+        public static DateTime getSystemDate()
+        {
+            if (HttpContext.Current.Session["system_date"] != null)
+            {
+                DateTime sysDate = Convert.ToDateTime(HttpContext.Current.Session["system_date"].ToString());
+                return sysDate;
+            }
+            else
+            {
+                DBConnect db = new DBConnect();
+                var res = db.GetSystemDate();
+                DateTime sysDate = Convert.ToDateTime(res);
+                return sysDate;
+            }
+        }
+
         //Populate Officer List To Dropdown List Statement
         public static void populateOfficerDDL(DropDownList ddl, int branchId)
         {

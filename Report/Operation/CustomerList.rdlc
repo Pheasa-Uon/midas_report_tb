@@ -89,6 +89,7 @@
                   <TextRun>
                     <Value>BRANCH:</Value>
                     <Style>
+                      <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -1326,7 +1327,7 @@
             </Paragraphs>
             <rd:DefaultName>CompanyName</rd:DefaultName>
             <Top>0.15972in</Top>
-            <Left>0.14708in</Left>
+            <Left>0.125in</Left>
             <Height>0.25in</Height>
             <Width>7.11409in</Width>
             <ZIndex>10</ZIndex>

@@ -21,6 +21,7 @@ namespace Report
         protected void Button1_Click(object sender, EventArgs e)
         {
             var pEncrypt = AESUtil.EncryptString(txtPassword.Text);
+         
             var user = DataHelper.login(txtUsername.Text, "AQUpvTCF66ztPrYRtLm9ew==");
             if (user.id != 0)
             {

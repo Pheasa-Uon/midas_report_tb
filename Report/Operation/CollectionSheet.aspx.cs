@@ -9,7 +9,7 @@ namespace Report.Operation
     {
         private DBConnect db = new DBConnect();
         DateTime currentDate = DateTime.Today;
-        private static string fromDate, toDate, systemDateStr;
+        private static string fromDate, toDate;
         public string format = "dd/MM/yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,9 +19,10 @@ namespace Report.Operation
 
             if (!IsPostBack)
             {
+                var sysDate = DataHelper.getSystemDate();
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
-                dtpFromDate.Text = DataHelper.getSystemDateStr();
-                dtpToDate.Text = DataHelper.getSystemDateStr();
+                dtpFromDate.Text = sysDate.ToString(format);
+                dtpToDate.Text = sysDate.ToString(format);
             }
         }
 
@@ -62,7 +63,6 @@ namespace Report.Operation
                     "GROUP BY contract_id) PL ON C.id = PL.contract_id " +
                     "WHERE ST.ticket_status != 'P' AND ST.ticket_status != 'FPP' " +
                     "AND DATE(ST.due_date) BETWEEN DATE('" + fromDay + "') AND DATE('" + toDay + "') " +
-                   // "AND C.pawn_officer_id = CASE WHEN? IS NULL THEN C.pawn_officer_id ELSE ? END " +
                     "AND C.branch_id = " + ddBranchName.SelectedItem.Value + " AND C.contract_status IN(4, 7) AND c.`b_status`= TRUE " +
                     "AND ST.ticket_status != 'I' ";
             if (ddOfficer.SelectedItem.Value != "0")

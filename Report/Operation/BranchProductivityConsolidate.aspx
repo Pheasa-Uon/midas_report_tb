@@ -6,7 +6,7 @@
     <div class="panel panel-default no-margin">
         <div class="panel-body">
             <div class="row">
-                <div class="col-sm-3 form-group">
+                <div class="col-sm-2 form-group">
                     <label>Currency:</label>
                     <asp:DropDownList ID="ddCurrency" runat="server" CssClass="form-control input-sm">
                     </asp:DropDownList>

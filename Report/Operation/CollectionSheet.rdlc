@@ -85,6 +85,7 @@
                   <TextRun>
                     <Value>BRANCH:</Value>
                     <Style>
+                      <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -2291,7 +2292,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Parameters!CompanyName.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />

@@ -2,14 +2,12 @@
 using Report.Utils;
 using System;
 using System.Data;
-using System.Web;
 
 namespace Report.Operation
 {
-    public partial class AllContractList : System.Web.UI.Page
+    public partial class AllContractList1 : System.Web.UI.Page
     {
         private DBConnect db = new DBConnect();
-        string urlPath = HttpContext.Current.Request.Url.AbsoluteUri;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,7 +23,8 @@ namespace Report.Operation
             if (ddBranchName.SelectedItem.Value == "")
             {
                 ddOfficer.Items.Clear();
-            } else
+            }
+            else
             {
                 DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedItem.Value));
             }
@@ -92,7 +91,8 @@ namespace Report.Operation
             if (ddContractStatus.SelectedItem.Value == "0")
             {
                 sql += " AND CT.contract_status IN(4,7,8,6,9,10) ";
-            } else
+            }
+            else
             {
                 sql += " AND CT.contract_status = " + ddContractStatus.SelectedItem.Value;
             }
@@ -100,11 +100,11 @@ namespace Report.Operation
             if (ddOfficer.SelectedItem.Value != "0")
             {
                 sql += " AND CT.pawn_officer_id = " + ddOfficer.SelectedItem.Value;
-            } 
+            }
             DataTable dt = db.getDataTable(sql + ";");
             GenerateReport(dt);
         }
-        
+
         private void GenerateReport(DataTable dt)
         {
             var reportParameters = new ReportParameterCollection();
@@ -116,6 +116,5 @@ namespace Report.Operation
             var ds = new ReportDataSource("AllContractList", dt);
             DataHelper.generateOperationReport(ReportViewer1, "AllContractList", reportParameters, ds);
         }
-
     }
 }

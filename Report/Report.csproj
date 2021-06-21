@@ -131,15 +131,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Accounting\AccrualDetail.aspx" />
+    <Content Include="Accounting\AccrualInterest.aspx" />
     <Content Include="Accounting\AccrualInterestOnPawn.aspx" />
     <Content Include="Accounting\BalanceSheet.aspx" />
+    <Content Include="Accounting\CashConsolidate.aspx" />
     <Content Include="Accounting\CashflowStatement.aspx" />
     <Content Include="Accounting\ChartOfAccount.aspx" />
+    <Content Include="Accounting\DailyCashVault.aspx" />
+    <Content Include="Accounting\DailyTillCashOperation.aspx" />
+    <Content Include="Accounting\DailyTillPettyCash.aspx" />
     <Content Include="Accounting\GLTransactionHistory.aspx" />
     <Content Include="Accounting\IncomeStatement.aspx" />
     <Content Include="Accounting\IncomeStatementByDate.aspx" />
+    <Content Include="Accounting\IncomeStatementByMonth.aspx" />
+    <Content Include="Accounting\IncomeStatementYTD.aspx" />
     <Content Include="Accounting\JournalEntryByDate.aspx" />
     <Content Include="Accounting\TrialBalance.aspx" />
+    <Content Include="Accounting\UnearnedRevenue.aspx" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\jquery.datetimepicker.css" />
     <Content Include="Content\jquery.mCustomScrollbar.min.css" />
@@ -189,17 +198,6 @@
     </None>
     <Content Include="Dataset\AccrualInterestOnPawn.xss">
       <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
-    </Content>
-    <Content Include="Dataset\AllContractList.xsc">
-      <DependentUpon>AllContractList.xsd</DependentUpon>
-    </Content>
-    <None Include="Dataset\AllContractList.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AllContractList.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="Dataset\AllContractList.xss">
-      <DependentUpon>AllContractList.xsd</DependentUpon>
     </Content>
     <None Include="Dataset\BranchProductivity.xsd">
       <SubType>Designer</SubType>
@@ -494,10 +492,14 @@
     <Content Include="Operation\COProductivity.aspx" />
     <Content Include="Operation\CustomerList.aspx" />
     <Content Include="Operation\LateReport.aspx" />
+    <Content Include="Operation\LateReportV2.aspx" />
     <Content Include="Operation\NewGrant.aspx" />
     <Content Include="Operation\PawnListDetail.aspx" />
+    <Content Include="Operation\PaymentDetailV2.aspx" />
     <Content Include="Operation\ProductivityConsolidateByBranch.aspx" />
+    <Content Include="Operation\ProductivityConsolidateByBranchOnDate.aspx" />
     <Content Include="Operation\ProductivityConsolidateByLOB.aspx" />
+    <Content Include="Operation\ProductivityConsolidateByLOBOnDate.aspx" />
     <Content Include="Operation\RedeemReport.aspx" />
     <Content Include="Operation\RenewReport.aspx" />
     <Content Include="Operation\StockReport.aspx" />
@@ -558,6 +560,20 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accounting\AccrualDetail.aspx.cs">
+      <DependentUpon>AccrualDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccrualDetail.aspx.designer.cs">
+      <DependentUpon>AccrualDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\AccrualInterest.aspx.cs">
+      <DependentUpon>AccrualInterest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccrualInterest.aspx.designer.cs">
+      <DependentUpon>AccrualInterest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\AccrualInterestOnPawn.aspx.cs">
       <DependentUpon>AccrualInterestOnPawn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -572,6 +588,13 @@
     <Compile Include="Accounting\BalanceSheet.aspx.designer.cs">
       <DependentUpon>BalanceSheet.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\CashConsolidate.aspx.cs">
+      <DependentUpon>CashConsolidate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\CashConsolidate.aspx.designer.cs">
+      <DependentUpon>CashConsolidate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\CashflowStatement.aspx.cs">
       <DependentUpon>CashflowStatement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -585,6 +608,27 @@
     </Compile>
     <Compile Include="Accounting\ChartOfAccount.aspx.designer.cs">
       <DependentUpon>ChartOfAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\DailyCashVault.aspx.cs">
+      <DependentUpon>DailyCashVault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\DailyCashVault.aspx.designer.cs">
+      <DependentUpon>DailyCashVault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\DailyTillCashOperation.aspx.cs">
+      <DependentUpon>DailyTillCashOperation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\DailyTillCashOperation.aspx.designer.cs">
+      <DependentUpon>DailyTillCashOperation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\DailyTillPettyCash.aspx.cs">
+      <DependentUpon>DailyTillPettyCash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\DailyTillPettyCash.aspx.designer.cs">
+      <DependentUpon>DailyTillPettyCash.aspx</DependentUpon>
     </Compile>
     <Compile Include="Accounting\GLTransactionHistory.aspx.cs">
       <DependentUpon>GLTransactionHistory.aspx</DependentUpon>
@@ -607,6 +651,20 @@
     <Compile Include="Accounting\IncomeStatementByDate.aspx.designer.cs">
       <DependentUpon>IncomeStatementByDate.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\IncomeStatementByMonth.aspx.cs">
+      <DependentUpon>IncomeStatementByMonth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\IncomeStatementByMonth.aspx.designer.cs">
+      <DependentUpon>IncomeStatementByMonth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\IncomeStatementYTD.aspx.cs">
+      <DependentUpon>IncomeStatementYTD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\IncomeStatementYTD.aspx.designer.cs">
+      <DependentUpon>IncomeStatementYTD.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\JournalEntryByDate.aspx.cs">
       <DependentUpon>JournalEntryByDate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -620,6 +678,13 @@
     </Compile>
     <Compile Include="Accounting\TrialBalance.aspx.designer.cs">
       <DependentUpon>TrialBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\UnearnedRevenue.aspx.cs">
+      <DependentUpon>UnearnedRevenue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\UnearnedRevenue.aspx.designer.cs">
+      <DependentUpon>UnearnedRevenue.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -802,6 +867,27 @@
     </Compile>
     <Compile Include="Operation\LateReportV2.aspx.designer.cs">
       <DependentUpon>LateReportV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\PaymentDetailV2.aspx.cs">
+      <DependentUpon>PaymentDetailV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\PaymentDetailV2.aspx.designer.cs">
+      <DependentUpon>PaymentDetailV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\ProductivityConsolidateByBranchOnDate.aspx.cs">
+      <DependentUpon>ProductivityConsolidateByBranchOnDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\ProductivityConsolidateByBranchOnDate.aspx.designer.cs">
+      <DependentUpon>ProductivityConsolidateByBranchOnDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\ProductivityConsolidateByLOBOnDate.aspx.cs">
+      <DependentUpon>ProductivityConsolidateByLOBOnDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\ProductivityConsolidateByLOBOnDate.aspx.designer.cs">
+      <DependentUpon>ProductivityConsolidateByLOBOnDate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utils\DBConnect.cs" />
     <Compile Include="Dashboard.aspx.cs">

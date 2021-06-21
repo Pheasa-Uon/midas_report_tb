@@ -1,5 +1,4 @@
-﻿<%@ Page Title="All Contract List Report" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AllContractList.aspx.cs" Inherits="Report.Operation.AllContractList" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AllContractList.aspx.cs" Inherits="Report.Operation.AllContractList1" %>
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
@@ -24,7 +23,7 @@
                     </ContentTemplate>
                 </asp:UpdatePanel>
 
-                <div class="col-sm-3 form-group">
+                <div class="col-sm-2 form-group">
                     <label>Contract Status:</label>
                     <asp:DropDownList ID="ddContractStatus" runat="server" CssClass="form-control input-sm">
                         <asp:ListItem Value="0" Text="--- All ---" />
