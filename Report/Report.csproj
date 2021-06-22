@@ -492,7 +492,6 @@
     <Content Include="Operation\COProductivity.aspx" />
     <Content Include="Operation\CustomerList.aspx" />
     <Content Include="Operation\LateReport.aspx" />
-    <Content Include="Operation\LateReportV2.aspx" />
     <Content Include="Operation\NewGrant.aspx" />
     <Content Include="Operation\PawnListDetail.aspx" />
     <Content Include="Operation\PaymentDetailV2.aspx" />

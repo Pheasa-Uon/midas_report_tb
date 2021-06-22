@@ -1,5 +1,4 @@
-﻿<%@ Page Title="Late Report V2" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LateReportV2.aspx.cs" Inherits="Report.Operation.LateReportV21" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LateReportV2.aspx.cs" Inherits="Report.Operation.LateReportV22" %>
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">

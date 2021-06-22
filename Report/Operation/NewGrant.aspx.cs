@@ -124,7 +124,7 @@ namespace Report.Operation
             }
             else
             {
-                dtpFromDate.Text = DataHelper.getSystemDateStr();
+                dtpFromDate.Text = DataHelper.getSystemDate().ToString("dd/MM/yyyy");
                 dtpFromDate.Enabled = true;
             }
         }

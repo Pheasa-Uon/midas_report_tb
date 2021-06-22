@@ -12,7 +12,7 @@ using System.Web.UI.WebControls;
 
 namespace Report.Operation
 {
-    public partial class LateReportV21 : System.Web.UI.Page
+    public partial class LateReportV22 : System.Web.UI.Page
     {
         private DBConnect db = new DBConnect();
         DateTime currentDate = DateTime.Today;
@@ -68,7 +68,7 @@ namespace Report.Operation
                 " LEFT JOIN currency CUR ON C.currency_id = CUR.id " +
                 " LEFT JOIN(SELECT id, contract_id, collateral_type_id FROM collateral GROUP BY contract_id) COL ON C.id = COL.contract_id " +
                 " LEFT JOIN product P ON C.product_id = P.id " +
-                " LEFT JOIN(SELECT contract_id, SUM(principle_less) principle_less FROM schedule_ticket WHERE ticket_status != 'P' AND branch_id = "+ddBranchName.SelectedItem.Value+" GROUP BY contract_id) OUS ON OUS.contract_id = C.id " +
+                " LEFT JOIN(SELECT contract_id, SUM(principle_less) principle_less FROM schedule_ticket WHERE ticket_status != 'P' AND branch_id = " + ddBranchName.SelectedItem.Value + " GROUP BY contract_id) OUS ON OUS.contract_id = C.id " +
                 " LEFT JOIN(SELECT SDT.contract_id, MAX(SDT.Serial_number) Serial_number FROM schedule_ticket SDT LEFT JOIN contract CC ON SDT.contract_id = CC.id " +
                 " WHERE CC.contract_status >= 4 AND CC.b_status = TRUE AND SDT.branch_id = " + ddBranchName.SelectedItem.Value +
                 " GROUP BY SDT.contract_id) SR ON A.contract_id = SR.contract_id " +
@@ -81,14 +81,14 @@ namespace Report.Operation
             sql += " ORDER BY P.lob_name,CUR.currency_code,C.contract_no;";
 
             var lateDS = db.getDataTable(sql);
-            
+
             var spd = "PS_BRANCH_PROD_TEST";
             List<Procedure> parameters = new List<Procedure>();
             parameters.Add(item: new Procedure() { field_name = "@pBranch", sql_db_type = MySqlDbType.VarChar, value_name = ddBranchName.SelectedItem.Value });
             parameters.Add(item: new Procedure() { field_name = "@pSystem_date", sql_db_type = MySqlDbType.Date, value_name = DataHelper.getSystemDate().ToString("yyyy-MM-dd") });
             parameters.Add(item: new Procedure() { field_name = "@pCurrency", sql_db_type = MySqlDbType.VarChar, value_name = "2" });
             DataTable summaryDS = db.getProcedureDataTable(spd, parameters);
-           
+
             GenerateReport(lateDS, summaryDS);
         }
 
