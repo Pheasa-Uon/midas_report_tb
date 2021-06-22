@@ -2,83 +2,175 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ProductivityByLOBDSource">
-      <DataSourceReference>PS</DataSourceReference>
-      <rd:DataSourceID>41e852f4-9176-4922-9e8b-7cef75eedad8</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="ProductivityConsolidateByDate">
+    <DataSource Name="ProductivityConsolidateByBranch">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>3677d66c-a1d9-4479-8425-10411b6c0b35</rd:DataSourceID>
+      <rd:DataSourceID>61cc25eb-829e-4b49-b644-4bf66fe95e14</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ProductivityByLOBDS">
+    <DataSet Name="ProductivityConsolidateByBranchDS">
       <Query>
-        <DataSourceName>ProductivityConsolidateByDate</DataSourceName>
+        <DataSourceName>ProductivityConsolidateByBranch</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="appr">
-          <DataField>appr</DataField>
+        <Field Name="system_date">
+          <DataField>system_date</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="new_num_client">
-          <DataField>new_num_client</DataField>
+        <Field Name="branch_code">
+          <DataField>branch_code</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="branchid">
-          <DataField>branchid</DataField>
+        <Field Name="lob_name">
+          <DataField>lob_name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="open_bl_num">
           <DataField>open_bl_num</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="new_amt">
-          <DataField>new_amt</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="open_bl_amt">
           <DataField>open_bl_amt</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="redeem_num_client">
-          <DataField>redeem_num_client</DataField>
+        <Field Name="new_count">
+          <DataField>new_count</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="new_interest">
-          <DataField>new_interest</DataField>
+        <Field Name="new_amt">
+          <DataField>new_amt</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="redeem_principle">
-          <DataField>redeem_principle</DataField>
+        <Field Name="new_fee">
+          <DataField>new_fee</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="current_num_client">
-          <DataField>current_num_client</DataField>
+        <Field Name="new_principle_pay">
+          <DataField>new_principle_pay</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="redeem_interest">
-          <DataField>redeem_interest</DataField>
+        <Field Name="new_interest_pay">
+          <DataField>new_interest_pay</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="renew_client">
-          <DataField>renew_client</DataField>
+        <Field Name="new_other_income">
+          <DataField>new_other_income</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="current_amt">
-          <DataField>current_amt</DataField>
+        <Field Name="redeem_count">
+          <DataField>redeem_count</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="redeem_priciple_pay">
+          <DataField>redeem_priciple_pay</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="redeem_interest_pay">
+          <DataField>redeem_interest_pay</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="redeem_early">
+          <DataField>redeem_early</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="redeem_penalty">
+          <DataField>redeem_penalty</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="redeem_other_income">
+          <DataField>redeem_other_income</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="renew_count">
+          <DataField>renew_count</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="renew_amt">
           <DataField>renew_amt</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="renew_interest">
-          <DataField>renew_interest</DataField>
+        <Field Name="renew_fee">
+          <DataField>renew_fee</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="renew_principle_pay">
+          <DataField>renew_principle_pay</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="renew_interest_pay">
+          <DataField>renew_interest_pay</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="renew_other_income">
+          <DataField>renew_other_income</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="renew_penalty_pay">
+          <DataField>renew_penalty_pay</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rn_principle_pay">
+          <DataField>rn_principle_pay</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rn_interest_pay">
+          <DataField>rn_interest_pay</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rn_early">
+          <DataField>rn_early</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rn_penalty">
+          <DataField>rn_penalty</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="re_other_income">
+          <DataField>re_other_income</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="re_balance">
+          <DataField>re_balance</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="re_disburse">
+          <DataField>re_disburse</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ppap_principle">
+          <DataField>ppap_principle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rn_total_count">
+          <DataField>rn_total_count</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rn_total_amt">
+          <DataField>rn_total_amt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rn_total_principle_pay">
+          <DataField>rn_total_principle_pay</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rn_total_interest_pay">
+          <DataField>rn_total_interest_pay</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rn_total_other_income">
+          <DataField>rn_total_other_income</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="num_contract">
+          <DataField>num_contract</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="balance">
+          <DataField>balance</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="late_principle_amt">
@@ -89,47 +181,51 @@
           <DataField>late_num_client</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="principle130">
-          <DataField>principle130</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="interest130">
           <DataField>interest130</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="principle3160">
-          <DataField>principle3160</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="interest3160">
           <DataField>interest3160</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="principle6190">
-          <DataField>principle6190</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="interest6190">
           <DataField>interest6190</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="principle91">
-          <DataField>principle91</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="interest91">
           <DataField>interest91</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="currency">
-          <DataField>currency</DataField>
+        <Field Name="principle130">
+          <DataField>principle130</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="principle3160">
+          <DataField>principle3160</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="principle6190">
+          <DataField>principle6190</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="principle91">
+          <DataField>principle91</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="penalty_less">
+          <DataField>penalty_less</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="appr">
+          <DataField>appr</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ProductivityConsolidateByDate</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Heng\Documents\C#_Projects\Report\Report\Dataset\ProductivityConsolidateByDate.xsd</rd:SchemaPath>
-        <rd:TableName>ProductivityConsolidateByDate</rd:TableName>
+        <rd:DataSetName>ProductivityConsolidateByBranch</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\ProductivityConsolidateByBranch.xsd</rd:SchemaPath>
+        <rd:TableName>ProductivityConsolidateByBranch</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -141,8 +237,8 @@
       <Body>
         <ReportItems>
           <Line Name="Line3">
-            <Top>3.47396in</Top>
-            <Left>0.04153in</Left>
+            <Top>4.09896in</Top>
+            <Left>0.54153in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <Style>
@@ -152,8 +248,8 @@
             </Style>
           </Line>
           <Line Name="Line2">
-            <Top>3.47396in</Top>
-            <Left>10.0925in</Left>
+            <Top>4.09896in</Top>
+            <Left>10.2175in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>1</ZIndex>
@@ -164,8 +260,8 @@
             </Style>
           </Line>
           <Line Name="Line1">
-            <Top>3.47396in</Top>
-            <Left>19.97208in</Left>
+            <Top>4.09896in</Top>
+            <Left>20.09708in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>2</ZIndex>
@@ -194,8 +290,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>3.47396in</Top>
-            <Left>0.04153in</Left>
+            <Top>4.11285in</Top>
+            <Left>0.54153in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>3</ZIndex>
@@ -227,8 +323,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>3.47396in</Top>
-            <Left>10.0925in</Left>
+            <Top>4.11285in</Top>
+            <Left>10.2175in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>4</ZIndex>
@@ -260,8 +356,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>3.47396in</Top>
-            <Left>19.97208in</Left>
+            <Top>4.11285in</Top>
+            <Left>20.09708in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>5</ZIndex>
@@ -271,38 +367,6 @@
               </Border>
               <VerticalAlign>Middle</VerticalAlign>
               <PaddingRight>2pt</PaddingRight>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox1">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>CASH U UP CO., LTD</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Left>0.00191in</Left>
-            <Height>0.25in</Height>
-            <Width>1.57292in</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
@@ -324,50 +388,15 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.27778in</Top>
+            <Top>0.40278in</Top>
+            <Left>0.125in</Left>
             <Height>0.25in</Height>
-            <Width>1.57292in</Width>
-            <ZIndex>7</ZIndex>
+            <Width>1.08334in</Width>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="txtMonth">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!SystemDateParameter.Value</Value>
-                    <Style>
-                      <FontStyle>Italic</FontStyle>
-                      <FontFamily>Gill Sans MT</FontFamily>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <Top>0.27778in</Top>
-            <Left>1.58742in</Left>
-            <Height>0.25in</Height>
-            <Width>1.19792in</Width>
-            <ZIndex>8</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <BackgroundColor>Gainsboro</BackgroundColor>
               <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -396,11 +425,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.15452in</Top>
-            <Left>0.00382in</Left>
+            <Top>1.27952in</Top>
+            <Left>0.12882in</Left>
             <Height>0.25in</Height>
-            <Width>20.11471in</Width>
-            <ZIndex>9</ZIndex>
+            <Width>26.98105in</Width>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -431,11 +460,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.14781in</Top>
-            <Left>20.17409in</Left>
+            <Top>1.27281in</Top>
+            <Left>27.10987in</Left>
             <Height>0.25in</Height>
             <Width>1.09599in</Width>
-            <ZIndex>10</ZIndex>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -466,11 +495,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.14781in</Top>
-            <Left>21.28458in</Left>
+            <Top>1.27281in</Top>
+            <Left>28.22036in</Left>
             <Height>0.25in</Height>
             <Width>1.19792in</Width>
-            <ZIndex>11</ZIndex>
+            <ZIndex>9</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -502,19 +531,28 @@
                   <Width>0.45833in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.96327in</Width>
+                  <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.73054in</Width>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.4894in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.9851in</Width>
+                  <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.87632in</Width>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.46279in</Width>
@@ -523,7 +561,13 @@
                   <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.79024in</Width>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.45833in</Width>
@@ -532,7 +576,10 @@
                   <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.84375in</Width>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.4806in</Width>
@@ -720,14 +767,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="new_num_client">
+                        <Textbox Name="new_count">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!new_num_client.Value</Value>
+                                  <Value>=Fields!new_count.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0;(#,0);'-'</Format>
@@ -739,7 +786,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>new_num_client</rd:DefaultName>
+                          <rd:DefaultName>new_count</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -756,7 +803,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="new_amt">
+                        <Textbox Name="new_amt2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -775,7 +822,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>new_amt</rd:DefaultName>
+                          <rd:DefaultName>new_amt2</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -792,14 +839,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="new_interest">
+                        <Textbox Name="new_principle_pay">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!new_interest.Value</Value>
+                                  <Value>=Fields!new_principle_pay.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0.00;(#,0.00).'-'</Format>
@@ -811,7 +858,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>new_interest</rd:DefaultName>
+                          <rd:DefaultName>new_principle_pay</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -828,14 +875,86 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="redeem_num_client">
+                        <Textbox Name="new_interest_pay">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!redeem_num_client.Value</Value>
+                                  <Value>=Fields!new_interest_pay.Value</Value>
+                                  <Style>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <Format>#,0.00;(#,0.00).'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>new_interest_pay</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="new_other_income">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!new_other_income.Value + Fields!new_fee.Value</Value>
+                                  <Style>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <Format>#,0.00;(#,0.00).'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>new_other_income</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="redeem_count">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!redeem_count.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0;(#,0);'-'</Format>
@@ -847,7 +966,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>redeem_num_client</rd:DefaultName>
+                          <rd:DefaultName>redeem_count</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -864,14 +983,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="redeem_principle">
+                        <Textbox Name="redeem_priciple_pay">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!redeem_principle.Value</Value>
+                                  <Value>=Fields!redeem_priciple_pay.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0.00;(#,0.00).'-'</Format>
@@ -883,7 +1002,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>redeem_principle</rd:DefaultName>
+                          <rd:DefaultName>redeem_priciple_pay</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -900,14 +1019,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="redeem_interest">
+                        <Textbox Name="redeem_interest_pay">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!redeem_interest.Value</Value>
+                                  <Value>=Fields!redeem_interest_pay.Value + Fields!redeem_early.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0.00;(#,0.00).'-'</Format>
@@ -919,7 +1038,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>redeem_interest</rd:DefaultName>
+                          <rd:DefaultName>redeem_interest_pay</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -936,14 +1055,50 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="renew_client">
+                        <Textbox Name="Textbox18">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!renew_client.Value</Value>
+                                  <Value>=Fields!redeem_penalty.Value + Fields!redeem_other_income.Value</Value>
+                                  <Style>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <Format>#,0.00;(#,0.00).'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox18</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="rn_total_count">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!rn_total_count.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0;(#,0);'-'</Format>
@@ -955,7 +1110,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>renew_client</rd:DefaultName>
+                          <rd:DefaultName>rn_total_count</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -972,14 +1127,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="renew_amt">
+                        <Textbox Name="rn_total_amt">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!renew_amt.Value</Value>
+                                  <Value>=Fields!rn_total_amt.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0.00;(#,0.00).'-'</Format>
@@ -991,7 +1146,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>renew_amt</rd:DefaultName>
+                          <rd:DefaultName>rn_total_amt</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1008,14 +1163,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="renew_interest">
+                        <Textbox Name="rn_total_principle_pay">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!renew_interest.Value</Value>
+                                  <Value>=Fields!rn_total_principle_pay.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0.00;(#,0.00).'-'</Format>
@@ -1027,7 +1182,79 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>renew_interest</rd:DefaultName>
+                          <rd:DefaultName>rn_total_principle_pay</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="rn_total_interest_pay">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!rn_total_interest_pay.Value</Value>
+                                  <Style>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <Format>#,0.00;(#,0.00).'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>rn_total_interest_pay</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="rn_total_other_income">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!rn_total_other_income.Value</Value>
+                                  <Style>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <Format>#,0.00;(#,0.00).'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>rn_total_other_income</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1051,7 +1278,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(IsNothing(Fields!new_num_client.Value) AND IsNothing(Fields!renew_client.Value),"",Fields!new_num_client.Value + Fields!renew_client.Value)</Value>
+                                  <Value>=Fields!new_count.Value + Fields!rn_total_count.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0;(#,0);'-'</Format>
@@ -1087,7 +1314,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(IsNothing(Fields!new_amt.Value) AND IsNothing(Fields!renew_amt.Value),"",Fields!new_amt.Value + Fields!renew_amt.Value)</Value>
+                                  <Value>=Fields!new_amt.Value + Fields!rn_total_amt.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0.00;(#,0.00).'-'</Format>
@@ -1123,7 +1350,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(IsNothing(Fields!new_interest.Value) AND IsNothing(Fields!renew_interest.Value),"",Fields!new_interest.Value + Fields!renew_interest.Value)</Value>
+                                  <Value>=Fields!new_interest_pay.Value + Fields!redeem_interest_pay.Value + Fields!redeem_early.Value + Fields!rn_total_interest_pay.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0.00;(#,0.00).'-'</Format>
@@ -1152,6 +1379,42 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Textbox48">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!new_other_income.Value + Fields!new_fee.Value + Fields!redeem_penalty.Value + Fields!redeem_other_income.Value + Fields!rn_total_other_income.Value</Value>
+                                  <Style>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <Format>#,0.00;(#,0.00).'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox48</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="current_num_client">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -1159,7 +1422,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!current_num_client.Value</Value>
+                                  <Value>=Fields!num_contract.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0;(#,0);'-'</Format>
@@ -1188,14 +1451,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="current_amt">
+                        <Textbox Name="balance">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!current_amt.Value</Value>
+                                  <Value>=Fields!balance.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0.00;(#,0.00).'-'</Format>
@@ -1207,7 +1470,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>current_amt</rd:DefaultName>
+                          <rd:DefaultName>balance</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1752,14 +2015,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="new_num_client1">
+                        <Textbox Name="new_count1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!new_num_client.Value)</Value>
+                                  <Value>=Sum(Fields!new_count.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -1774,7 +2037,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>new_num_client1</rd:DefaultName>
+                          <rd:DefaultName>new_count1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1792,7 +2055,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="new_amt1">
+                        <Textbox Name="new_amt">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1814,7 +2077,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>new_amt1</rd:DefaultName>
+                          <rd:DefaultName>new_amt</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1832,14 +2095,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox40">
+                        <Textbox Name="new_principle_pay1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!new_interest.Value)</Value>
+                                  <Value>=Sum(Fields!new_principle_pay.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -1854,7 +2117,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox40</rd:DefaultName>
+                          <rd:DefaultName>new_principle_pay1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1872,14 +2135,94 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="redeem_num_client1">
+                        <Textbox Name="new_interest_pay1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!redeem_num_client.Value)</Value>
+                                  <Value>=Sum(Fields!new_interest_pay.Value)</Value>
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00).'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>new_interest_pay1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox39">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!new_other_income.Value + Fields!new_fee.Value)</Value>
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00).'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox39</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="redeem_count1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!redeem_count.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -1894,7 +2237,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>redeem_num_client1</rd:DefaultName>
+                          <rd:DefaultName>redeem_count1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1912,14 +2255,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="redeem_principle1">
+                        <Textbox Name="redeem_priciple_pay1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!redeem_principle.Value)</Value>
+                                  <Value>=Sum(Fields!redeem_priciple_pay.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -1934,7 +2277,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>redeem_principle1</rd:DefaultName>
+                          <rd:DefaultName>redeem_priciple_pay1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1952,14 +2295,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="redeem_interest1">
+                        <Textbox Name="redeem_interest_pay1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!redeem_interest.Value)</Value>
+                                  <Value>=Sum(Fields!redeem_interest_pay.Value + Fields!redeem_early.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -1974,7 +2317,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>redeem_interest1</rd:DefaultName>
+                          <rd:DefaultName>redeem_interest_pay1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1992,14 +2335,54 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox14">
+                        <Textbox Name="Textbox24">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!renew_client.Value)</Value>
+                                  <Value>=sum(Fields!redeem_penalty.Value + Fields!redeem_other_income.Value)</Value>
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00).'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox24</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="rn_total_count1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!rn_total_count.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -2014,7 +2397,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox14</rd:DefaultName>
+                          <rd:DefaultName>rn_total_count1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -2032,14 +2415,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox22">
+                        <Textbox Name="Textbox67">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!renew_amt.Value)</Value>
+                                  <Value>=Sum(Fields!rn_total_amt.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -2054,7 +2437,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox22</rd:DefaultName>
+                          <rd:DefaultName>Textbox67</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -2072,14 +2455,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="renew_interest1">
+                        <Textbox Name="rn_total_principle_pay1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!renew_interest.Value)</Value>
+                                  <Value>=Sum(Fields!rn_total_principle_pay.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -2094,7 +2477,87 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>renew_interest1</rd:DefaultName>
+                          <rd:DefaultName>rn_total_principle_pay1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="rn_total_interest_pay1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!rn_total_interest_pay.Value)</Value>
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00).'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>rn_total_interest_pay1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox74">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!rn_total_other_income.Value)</Value>
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00).'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox74</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -2119,7 +2582,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(fields!new_num_client.value) + sum(fields!renew_client.Value)</Value>
+                                  <Value>=sum(Fields!new_count.Value + Fields!rn_total_count.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -2159,7 +2622,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=SUM(Fields!new_amt.Value + Fields!renew_amt.Value)</Value>
+                                  <Value>=SUM(Fields!new_amt.Value + Fields!rn_total_amt.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -2199,7 +2662,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=SUM(Fields!new_interest.Value + Fields!renew_interest.Value)</Value>
+                                  <Value>=SUM(Fields!new_interest_pay.Value + Fields!redeem_interest_pay.Value + Fields!redeem_early.Value + Fields!rn_total_interest_pay.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -2232,20 +2695,20 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="current_num_client1">
+                        <Textbox Name="Textbox49">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!current_num_client.Value)</Value>
+                                  <Value>=sum(Fields!new_other_income.Value + Fields!new_fee.Value + Fields!redeem_penalty.Value + Fields!redeem_other_income.Value + Fields!rn_total_other_income.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;(#,0);'-'</Format>
+                                    <Format>#,0.00;(#,0.00).'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2254,7 +2717,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>current_num_client1</rd:DefaultName>
+                          <rd:DefaultName>Textbox49</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -2272,14 +2735,54 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="current_amt1">
+                        <Textbox Name="num_contract">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!current_amt.Value)</Value>
+                                  <Value>=Sum(Fields!num_contract.Value)</Value>
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0;(#,0);'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>num_contract</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Yellow</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="balance1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!balance.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -2294,7 +2797,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>current_amt1</rd:DefaultName>
+                          <rd:DefaultName>balance1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -3002,7 +3505,7 @@
                       <TablixHeader>
                         <Size>0.25in</Size>
                         <CellContents>
-                          <Textbox Name="Textbox8">
+                          <Textbox Name="Textbox2">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
@@ -3021,7 +3524,7 @@
                                 </Style>
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Textbox8</rd:DefaultName>
+                            <rd:DefaultName>Textbox2</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Color>LightGrey</Color>
@@ -3042,7 +3545,7 @@
                           <TablixHeader>
                             <Size>0.25in</Size>
                             <CellContents>
-                              <Textbox Name="Textbox12">
+                              <Textbox Name="Textbox13">
                                 <CanGrow>true</CanGrow>
                                 <KeepTogether>true</KeepTogether>
                                 <Paragraphs>
@@ -3050,6 +3553,45 @@
                                     <TextRuns>
                                       <TextRun>
                                         <Value>Principle</Value>
+                                        <Style>
+                                          <FontFamily>Gill Sans MT</FontFamily>
+                                        </Style>
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style>
+                                      <TextAlign>Center</TextAlign>
+                                    </Style>
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox13</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <BackgroundColor>Wheat</BackgroundColor>
+                                  <VerticalAlign>Middle</VerticalAlign>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                        </TablixMember>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>0.25in</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox12">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>Principle Paid</Value>
                                         <Style>
                                           <FontFamily>Gill Sans MT</FontFamily>
                                         </Style>
@@ -3088,7 +3630,7 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Interest</Value>
+                                        <Value>Interest Paid</Value>
                                         <Style>
                                           <FontFamily>Gill Sans MT</FontFamily>
                                         </Style>
@@ -3100,6 +3642,45 @@
                                   </Paragraph>
                                 </Paragraphs>
                                 <rd:DefaultName>Textbox38</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <BackgroundColor>Wheat</BackgroundColor>
+                                  <VerticalAlign>Middle</VerticalAlign>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                        </TablixMember>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>0.25in</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox28">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>Other Income</Value>
+                                        <Style>
+                                          <FontFamily>Gill Sans MT</FontFamily>
+                                        </Style>
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style>
+                                      <TextAlign>Center</TextAlign>
+                                    </Style>
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox28</rd:DefaultName>
                                 <Style>
                                   <Border>
                                     <Color>LightGrey</Color>
@@ -3255,7 +3836,7 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Principle</Value>
+                                        <Value>Principle Paid</Value>
                                         <Style>
                                           <FontFamily>Gill Sans MT</FontFamily>
                                         </Style>
@@ -3297,7 +3878,7 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Interest</Value>
+                                        <Value>Interest Paid</Value>
                                         <Style>
                                           <FontFamily>Gill Sans MT</FontFamily>
                                         </Style>
@@ -3309,6 +3890,45 @@
                                   </Paragraph>
                                 </Paragraphs>
                                 <rd:DefaultName>Textbox44</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <BackgroundColor>Wheat</BackgroundColor>
+                                  <VerticalAlign>Middle</VerticalAlign>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                        </TablixMember>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>0.25in</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox17">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>Other Income</Value>
+                                        <Style>
+                                          <FontFamily>Gill Sans MT</FontFamily>
+                                        </Style>
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style>
+                                      <TextAlign>Center</TextAlign>
+                                    </Style>
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox17</rd:DefaultName>
                                 <Style>
                                   <Border>
                                     <Color>LightGrey</Color>
@@ -3412,7 +4032,7 @@
                       <TablixHeader>
                         <Size>0.25in</Size>
                         <CellContents>
-                          <Textbox Name="Textbox16">
+                          <Textbox Name="Textbox57">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
@@ -3431,7 +4051,7 @@
                                 </Style>
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Textbox16</rd:DefaultName>
+                            <rd:DefaultName>Textbox57</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Color>LightGrey</Color>
@@ -3452,7 +4072,7 @@
                           <TablixHeader>
                             <Size>0.25in</Size>
                             <CellContents>
-                              <Textbox Name="Textbox55">
+                              <Textbox Name="Textbox64">
                                 <CanGrow>true</CanGrow>
                                 <KeepTogether>true</KeepTogether>
                                 <Paragraphs>
@@ -3460,6 +4080,45 @@
                                     <TextRuns>
                                       <TextRun>
                                         <Value>Principle</Value>
+                                        <Style>
+                                          <FontFamily>Gill Sans MT</FontFamily>
+                                        </Style>
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style>
+                                      <TextAlign>Center</TextAlign>
+                                    </Style>
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox64</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <BackgroundColor>Wheat</BackgroundColor>
+                                  <VerticalAlign>Middle</VerticalAlign>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                        </TablixMember>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>0.25in</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox55">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>Principle Paid</Value>
                                         <Style>
                                           <FontFamily>Gill Sans MT</FontFamily>
                                         </Style>
@@ -3498,7 +4157,7 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Interest</Value>
+                                        <Value>Interest Paid</Value>
                                         <Style>
                                           <FontFamily>Gill Sans MT</FontFamily>
                                         </Style>
@@ -3510,6 +4169,45 @@
                                   </Paragraph>
                                 </Paragraphs>
                                 <rd:DefaultName>Textbox52</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <BackgroundColor>Wheat</BackgroundColor>
+                                  <VerticalAlign>Middle</VerticalAlign>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                        </TablixMember>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>0.25in</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox72">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>Other Income</Value>
+                                        <Style>
+                                          <FontFamily>Gill Sans MT</FontFamily>
+                                        </Style>
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style>
+                                      <TextAlign>Center</TextAlign>
+                                    </Style>
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox72</rd:DefaultName>
                                 <Style>
                                   <Border>
                                     <Color>LightGrey</Color>
@@ -3613,7 +4311,7 @@
                       <TablixHeader>
                         <Size>0.25in</Size>
                         <CellContents>
-                          <Textbox Name="Textbox26">
+                          <Textbox Name="Textbox75">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
@@ -3632,7 +4330,7 @@
                                 </Style>
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Textbox26</rd:DefaultName>
+                            <rd:DefaultName>Textbox75</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Color>LightGrey</Color>
@@ -3711,6 +4409,45 @@
                                   </Paragraph>
                                 </Paragraphs>
                                 <rd:DefaultName>Textbox58</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <BackgroundColor>Wheat</BackgroundColor>
+                                  <VerticalAlign>Middle</VerticalAlign>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                        </TablixMember>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>0.25in</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox46">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>Other Income</Value>
+                                        <Style>
+                                          <FontFamily>Gill Sans MT</FontFamily>
+                                        </Style>
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style>
+                                      <TextAlign>Center</TextAlign>
+                                    </Style>
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox46</rd:DefaultName>
                                 <Style>
                                   <Border>
                                     <Color>LightGrey</Color>
@@ -4499,12 +5236,12 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>ProductivityByLOBDS</DataSetName>
-            <Top>1.47396in</Top>
-            <Left>0.00382in</Left>
+            <DataSetName>ProductivityConsolidateByBranchDS</DataSetName>
+            <Top>1.59896in</Top>
+            <Left>0.12882in</Left>
             <Height>1.375in</Height>
-            <Width>22.47868in</Width>
-            <ZIndex>12</ZIndex>
+            <Width>29.28946in</Width>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -4529,11 +5266,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.55556in</Top>
-            <Left>0.00191in</Left>
+            <Top>0.68056in</Top>
+            <Left>0.12691in</Left>
             <Height>0.25in</Height>
-            <Width>1.57292in</Width>
-            <ZIndex>13</ZIndex>
+            <Width>1.08334in</Width>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -4545,36 +5282,92 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="txtMonth3">
+          <Textbox Name="CompanyName">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!CurrencyParameter.Value</Value>
+                    <Value>=Parameters!CompanyName.Value</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
-                      <FontFamily>Gill Sans MT</FontFamily>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
+                <Style />
               </Paragraph>
             </Paragraphs>
-            <Top>0.55556in</Top>
-            <Left>1.58933in</Left>
+            <rd:DefaultName>CompanyName</rd:DefaultName>
+            <Top>0.08334in</Top>
+            <Left>0.12882in</Left>
             <Height>0.25in</Height>
-            <Width>1.19792in</Width>
+            <Width>6.54455in</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="SystemDate">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!SystemDate.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>SystemDate</rd:DefaultName>
+            <Top>0.40278in</Top>
+            <Left>1.22223in</Left>
+            <Height>0.25in</Height>
+            <Width>2.64583in</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Currency">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!Currency.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Currency</rd:DefaultName>
+            <Top>0.68056in</Top>
+            <Left>1.22223in</Left>
+            <Height>0.25in</Height>
+            <Width>2.64583in</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <BackgroundColor>Gainsboro</BackgroundColor>
-              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -4582,10 +5375,10 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>4.46354in</Height>
+        <Height>4.47396in</Height>
         <Style />
       </Body>
-      <Width>23.26036in</Width>
+      <Width>30.20852in</Width>
       <Page>
         <InteractiveHeight>0in</InteractiveHeight>
         <InteractiveWidth>8.5in</InteractiveWidth>
@@ -4598,29 +5391,44 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="SystemDateParameter">
+    <ReportParameter Name="CompanyName">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="CurrencyParameter">
+    <ReportParameter Name="SystemDate">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Currency">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>1</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
+      <NumberOfRows>5</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>SystemDateParameter</ParameterName>
+          <RowIndex>2</RowIndex>
+          <ParameterName>CompanyName</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>CurrencyParameter</ParameterName>
+          <RowIndex>3</RowIndex>
+          <ParameterName>SystemDate</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>4</RowIndex>
+          <ParameterName>Currency</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

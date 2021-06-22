@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NewGrant.aspx.cs" Inherits="Report.Operation.NewGrant" %>
+﻿<%@ Page Title="New Grant" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NewGrant.aspx.cs" Inherits="Report.Operation.NewGrant" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
@@ -18,16 +18,18 @@
                     </asp:RequiredFieldValidator>
                 </div>
                 <div class="col-sm-2 form-group">
-                    <label style="display: block">From Date:</label>
+                    <label>From Date: </label> &nbsp;&nbsp;&nbsp;
+                    
                      <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                         <Triggers>
                             <asp:AsyncPostBackTrigger ControlID="chkFromDate" />
                         </Triggers>
                         <ContentTemplate>
-                            <asp:TextBox ID="dtpFromDate" runat="server" class="form-control input-sm inline-input datepick"></asp:TextBox>
+                            <asp:TextBox ID="dtpFromDate" runat="server" class="form-control input-sm input-inline datepick"></asp:TextBox>
+                            &nbsp;&nbsp;&nbsp;<asp:CheckBox ID="chkFromDate" runat="server" Text=" Null" AutoPostBack="true" TextAlign="Right" OnCheckedChanged="chkFromDate_CheckedChanged"/>
                         </ContentTemplate>
                     </asp:UpdatePanel>
-                    <asp:CheckBox ID="chkFromDate" runat="server" Text="Null" AutoPostBack="true" TextAlign="Right" OnCheckedChanged="chkFromDate_CheckedChanged"/>
+                    
                 </div>
                 <div class="col-sm-2 form-group">
                     <label>System Date:</label>

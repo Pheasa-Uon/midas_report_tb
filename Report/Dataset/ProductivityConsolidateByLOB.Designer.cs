@@ -24,7 +24,7 @@ namespace Report.Dataset {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class ProductivityConsolidateByLOB : global::System.Data.DataSet {
         
-        private ProductivityConsolidateByLOBDataTable tableProductivityConsolidateByLOB;
+        private ProductivityConsolidateByLOBDSDataTable tableProductivityConsolidateByLOBDS;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace Report.Dataset {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["ProductivityConsolidateByLOB"] != null)) {
-                    base.Tables.Add(new ProductivityConsolidateByLOBDataTable(ds.Tables["ProductivityConsolidateByLOB"]));
+                if ((ds.Tables["ProductivityConsolidateByLOBDS"] != null)) {
+                    base.Tables.Add(new ProductivityConsolidateByLOBDSDataTable(ds.Tables["ProductivityConsolidateByLOBDS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Report.Dataset {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ProductivityConsolidateByLOBDataTable _ProductivityConsolidateByLOB {
+        public ProductivityConsolidateByLOBDSDataTable ProductivityConsolidateByLOBDS {
             get {
-                return this.tableProductivityConsolidateByLOB;
+                return this.tableProductivityConsolidateByLOBDS;
             }
         }
         
@@ -152,8 +152,8 @@ namespace Report.Dataset {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["ProductivityConsolidateByLOB"] != null)) {
-                    base.Tables.Add(new ProductivityConsolidateByLOBDataTable(ds.Tables["ProductivityConsolidateByLOB"]));
+                if ((ds.Tables["ProductivityConsolidateByLOBDS"] != null)) {
+                    base.Tables.Add(new ProductivityConsolidateByLOBDSDataTable(ds.Tables["ProductivityConsolidateByLOBDS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableProductivityConsolidateByLOB = ((ProductivityConsolidateByLOBDataTable)(base.Tables["ProductivityConsolidateByLOB"]));
+            this.tableProductivityConsolidateByLOBDS = ((ProductivityConsolidateByLOBDSDataTable)(base.Tables["ProductivityConsolidateByLOBDS"]));
             if ((initTable == true)) {
-                if ((this.tableProductivityConsolidateByLOB != null)) {
-                    this.tableProductivityConsolidateByLOB.InitVars();
+                if ((this.tableProductivityConsolidateByLOBDS != null)) {
+                    this.tableProductivityConsolidateByLOBDS.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace Report.Dataset {
             this.Namespace = "http://tempuri.org/ProductivityConsolidateByLOB.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableProductivityConsolidateByLOB = new ProductivityConsolidateByLOBDataTable();
-            base.Tables.Add(this.tableProductivityConsolidateByLOB);
+            this.tableProductivityConsolidateByLOBDS = new ProductivityConsolidateByLOBDSDataTable();
+            base.Tables.Add(this.tableProductivityConsolidateByLOBDS);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerialize_ProductivityConsolidateByLOB() {
+        private bool ShouldSerializeProductivityConsolidateByLOBDS() {
             return false;
         }
         
@@ -270,71 +270,123 @@ namespace Report.Dataset {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void ProductivityConsolidateByLOBRowChangeEventHandler(object sender, ProductivityConsolidateByLOBRowChangeEvent e);
+        public delegate void ProductivityConsolidateByLOBDSRowChangeEventHandler(object sender, ProductivityConsolidateByLOBDSRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ProductivityConsolidateByLOBDataTable : global::System.Data.TypedTableBase<ProductivityConsolidateByLOBRow> {
+        public partial class ProductivityConsolidateByLOBDSDataTable : global::System.Data.TypedTableBase<ProductivityConsolidateByLOBDSRow> {
+            
+            private global::System.Data.DataColumn columnsystem_date;
+            
+            private global::System.Data.DataColumn columnbranch_code;
             
             private global::System.Data.DataColumn columnlob_name;
             
-            private global::System.Data.DataColumn columnnew_num_client;
-            
             private global::System.Data.DataColumn columnopen_bl_num;
-            
-            private global::System.Data.DataColumn columnproid;
-            
-            private global::System.Data.DataColumn columnnew_amt;
             
             private global::System.Data.DataColumn columnopen_bl_amt;
             
-            private global::System.Data.DataColumn columnredeem_num_client;
+            private global::System.Data.DataColumn columnnew_count;
             
-            private global::System.Data.DataColumn columnnew_interest;
+            private global::System.Data.DataColumn columnnew_amt;
             
-            private global::System.Data.DataColumn columnredeem_principle;
+            private global::System.Data.DataColumn columnnew_fee;
             
-            private global::System.Data.DataColumn columncurrent_num_client;
+            private global::System.Data.DataColumn columnnew_principle_pay;
             
-            private global::System.Data.DataColumn columnredeem_interest;
+            private global::System.Data.DataColumn columnnew_interest_pay;
             
-            private global::System.Data.DataColumn columnrenew_client;
+            private global::System.Data.DataColumn columnnew_other_income;
             
-            private global::System.Data.DataColumn columncurrent_amt;
+            private global::System.Data.DataColumn columnredeem_count;
+            
+            private global::System.Data.DataColumn columnredeem_priciple_pay;
+            
+            private global::System.Data.DataColumn columnredeem_interest_pay;
+            
+            private global::System.Data.DataColumn columnredeem_early;
+            
+            private global::System.Data.DataColumn columnredeem_penalty;
+            
+            private global::System.Data.DataColumn columnredeem_other_income;
+            
+            private global::System.Data.DataColumn columnrenew_count;
             
             private global::System.Data.DataColumn columnrenew_amt;
             
-            private global::System.Data.DataColumn columnrenew_interest;
+            private global::System.Data.DataColumn columnrenew_fee;
+            
+            private global::System.Data.DataColumn columnrenew_principle_pay;
+            
+            private global::System.Data.DataColumn columnrenew_interest_pay;
+            
+            private global::System.Data.DataColumn columnrenew_other_income;
+            
+            private global::System.Data.DataColumn columnrenew_penalty_pay;
+            
+            private global::System.Data.DataColumn columnrn_principle_pay;
+            
+            private global::System.Data.DataColumn columnrn_interest_pay;
+            
+            private global::System.Data.DataColumn columnrn_early;
+            
+            private global::System.Data.DataColumn columnrn_penalty;
+            
+            private global::System.Data.DataColumn columnre_other_income;
+            
+            private global::System.Data.DataColumn columnre_balance;
+            
+            private global::System.Data.DataColumn columnre_disburse;
+            
+            private global::System.Data.DataColumn columnppap_principle;
+            
+            private global::System.Data.DataColumn columnrn_total_count;
+            
+            private global::System.Data.DataColumn columnrn_total_amt;
+            
+            private global::System.Data.DataColumn columnrn_total_principle_pay;
+            
+            private global::System.Data.DataColumn columnrn_total_interest_pay;
+            
+            private global::System.Data.DataColumn columnrn_total_other_income;
+            
+            private global::System.Data.DataColumn columnnum_contract;
+            
+            private global::System.Data.DataColumn columnbalance;
             
             private global::System.Data.DataColumn columnlate_principle_amt;
             
             private global::System.Data.DataColumn columnlate_num_client;
             
-            private global::System.Data.DataColumn columnprinciple130;
-            
             private global::System.Data.DataColumn columninterest130;
-            
-            private global::System.Data.DataColumn columnprinciple3160;
             
             private global::System.Data.DataColumn columninterest3160;
             
-            private global::System.Data.DataColumn columnprinciple6190;
-            
             private global::System.Data.DataColumn columninterest6190;
-            
-            private global::System.Data.DataColumn columnprinciple91;
             
             private global::System.Data.DataColumn columninterest91;
             
-            private global::System.Data.DataColumn columncurrency;
+            private global::System.Data.DataColumn columnprinciple130;
+            
+            private global::System.Data.DataColumn columnprinciple3160;
+            
+            private global::System.Data.DataColumn columnprinciple6190;
+            
+            private global::System.Data.DataColumn columnprinciple91;
+            
+            private global::System.Data.DataColumn columnpenalty_less;
+            
+            private global::System.Data.DataColumn columnappr;
+            
+            private global::System.Data.DataColumn columnsysDateId;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProductivityConsolidateByLOBDataTable() {
-                this.TableName = "ProductivityConsolidateByLOB";
+            public ProductivityConsolidateByLOBDSDataTable() {
+                this.TableName = "ProductivityConsolidateByLOBDS";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -342,7 +394,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ProductivityConsolidateByLOBDataTable(global::System.Data.DataTable table) {
+            internal ProductivityConsolidateByLOBDSDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -359,9 +411,25 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected ProductivityConsolidateByLOBDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ProductivityConsolidateByLOBDSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn system_dateColumn {
+                get {
+                    return this.columnsystem_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn branch_codeColumn {
+                get {
+                    return this.columnbranch_code;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -369,14 +437,6 @@ namespace Report.Dataset {
             public global::System.Data.DataColumn lob_nameColumn {
                 get {
                     return this.columnlob_name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn new_num_clientColumn {
-                get {
-                    return this.columnnew_num_client;
                 }
             }
             
@@ -390,9 +450,17 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn proidColumn {
+            public global::System.Data.DataColumn open_bl_amtColumn {
                 get {
-                    return this.columnproid;
+                    return this.columnopen_bl_amt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn new_countColumn {
+                get {
+                    return this.columnnew_count;
                 }
             }
             
@@ -406,65 +474,89 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn open_bl_amtColumn {
+            public global::System.Data.DataColumn new_feeColumn {
                 get {
-                    return this.columnopen_bl_amt;
+                    return this.columnnew_fee;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn redeem_num_clientColumn {
+            public global::System.Data.DataColumn new_principle_payColumn {
                 get {
-                    return this.columnredeem_num_client;
+                    return this.columnnew_principle_pay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn new_interestColumn {
+            public global::System.Data.DataColumn new_interest_payColumn {
                 get {
-                    return this.columnnew_interest;
+                    return this.columnnew_interest_pay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn redeem_principleColumn {
+            public global::System.Data.DataColumn new_other_incomeColumn {
                 get {
-                    return this.columnredeem_principle;
+                    return this.columnnew_other_income;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn current_num_clientColumn {
+            public global::System.Data.DataColumn redeem_countColumn {
                 get {
-                    return this.columncurrent_num_client;
+                    return this.columnredeem_count;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn redeem_interestColumn {
+            public global::System.Data.DataColumn redeem_priciple_payColumn {
                 get {
-                    return this.columnredeem_interest;
+                    return this.columnredeem_priciple_pay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn renew_clientColumn {
+            public global::System.Data.DataColumn redeem_interest_payColumn {
                 get {
-                    return this.columnrenew_client;
+                    return this.columnredeem_interest_pay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn current_amtColumn {
+            public global::System.Data.DataColumn redeem_earlyColumn {
                 get {
-                    return this.columncurrent_amt;
+                    return this.columnredeem_early;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn redeem_penaltyColumn {
+                get {
+                    return this.columnredeem_penalty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn redeem_other_incomeColumn {
+                get {
+                    return this.columnredeem_other_income;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn renew_countColumn {
+                get {
+                    return this.columnrenew_count;
                 }
             }
             
@@ -478,9 +570,161 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn renew_interestColumn {
+            public global::System.Data.DataColumn renew_feeColumn {
                 get {
-                    return this.columnrenew_interest;
+                    return this.columnrenew_fee;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn renew_principle_payColumn {
+                get {
+                    return this.columnrenew_principle_pay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn renew_interest_payColumn {
+                get {
+                    return this.columnrenew_interest_pay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn renew_other_incomeColumn {
+                get {
+                    return this.columnrenew_other_income;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn renew_penalty_payColumn {
+                get {
+                    return this.columnrenew_penalty_pay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn rn_principle_payColumn {
+                get {
+                    return this.columnrn_principle_pay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn rn_interest_payColumn {
+                get {
+                    return this.columnrn_interest_pay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn rn_earlyColumn {
+                get {
+                    return this.columnrn_early;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn rn_penaltyColumn {
+                get {
+                    return this.columnrn_penalty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn re_other_incomeColumn {
+                get {
+                    return this.columnre_other_income;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn re_balanceColumn {
+                get {
+                    return this.columnre_balance;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn re_disburseColumn {
+                get {
+                    return this.columnre_disburse;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ppap_principleColumn {
+                get {
+                    return this.columnppap_principle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn rn_total_countColumn {
+                get {
+                    return this.columnrn_total_count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn rn_total_amtColumn {
+                get {
+                    return this.columnrn_total_amt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn rn_total_principle_payColumn {
+                get {
+                    return this.columnrn_total_principle_pay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn rn_total_interest_payColumn {
+                get {
+                    return this.columnrn_total_interest_pay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn rn_total_other_incomeColumn {
+                get {
+                    return this.columnrn_total_other_income;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn num_contractColumn {
+                get {
+                    return this.columnnum_contract;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn balanceColumn {
+                get {
+                    return this.columnbalance;
                 }
             }
             
@@ -502,25 +746,9 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn principle130Column {
-                get {
-                    return this.columnprinciple130;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn interest130Column {
                 get {
                     return this.columninterest130;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn principle3160Column {
-                get {
-                    return this.columnprinciple3160;
                 }
             }
             
@@ -534,25 +762,9 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn principle6190Column {
-                get {
-                    return this.columnprinciple6190;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn interest6190Column {
                 get {
                     return this.columninterest6190;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn principle91Column {
-                get {
-                    return this.columnprinciple91;
                 }
             }
             
@@ -566,9 +778,57 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn currencyColumn {
+            public global::System.Data.DataColumn principle130Column {
                 get {
-                    return this.columncurrency;
+                    return this.columnprinciple130;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn principle3160Column {
+                get {
+                    return this.columnprinciple3160;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn principle6190Column {
+                get {
+                    return this.columnprinciple6190;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn principle91Column {
+                get {
+                    return this.columnprinciple91;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn penalty_lessColumn {
+                get {
+                    return this.columnpenalty_less;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn apprColumn {
+                get {
+                    return this.columnappr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn sysDateIdColumn {
+                get {
+                    return this.columnsysDateId;
                 }
             }
             
@@ -583,96 +843,148 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProductivityConsolidateByLOBRow this[int index] {
+            public ProductivityConsolidateByLOBDSRow this[int index] {
                 get {
-                    return ((ProductivityConsolidateByLOBRow)(this.Rows[index]));
+                    return ((ProductivityConsolidateByLOBDSRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ProductivityConsolidateByLOBRowChangeEventHandler ProductivityConsolidateByLOBRowChanging;
+            public event ProductivityConsolidateByLOBDSRowChangeEventHandler ProductivityConsolidateByLOBDSRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ProductivityConsolidateByLOBRowChangeEventHandler ProductivityConsolidateByLOBRowChanged;
+            public event ProductivityConsolidateByLOBDSRowChangeEventHandler ProductivityConsolidateByLOBDSRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ProductivityConsolidateByLOBRowChangeEventHandler ProductivityConsolidateByLOBRowDeleting;
+            public event ProductivityConsolidateByLOBDSRowChangeEventHandler ProductivityConsolidateByLOBDSRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event ProductivityConsolidateByLOBRowChangeEventHandler ProductivityConsolidateByLOBRowDeleted;
+            public event ProductivityConsolidateByLOBDSRowChangeEventHandler ProductivityConsolidateByLOBDSRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddProductivityConsolidateByLOBRow(ProductivityConsolidateByLOBRow row) {
+            public void AddProductivityConsolidateByLOBDSRow(ProductivityConsolidateByLOBDSRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProductivityConsolidateByLOBRow AddProductivityConsolidateByLOBRow(
+            public ProductivityConsolidateByLOBDSRow AddProductivityConsolidateByLOBDSRow(
+                        string system_date, 
+                        string branch_code, 
                         string lob_name, 
-                        string new_num_client, 
                         string open_bl_num, 
-                        string proid, 
-                        string new_amt, 
                         string open_bl_amt, 
-                        string redeem_num_client, 
-                        string new_interest, 
-                        string redeem_principle, 
-                        string current_num_client, 
-                        string redeem_interest, 
-                        string renew_client, 
-                        string current_amt, 
+                        string new_count, 
+                        string new_amt, 
+                        string new_fee, 
+                        string new_principle_pay, 
+                        string new_interest_pay, 
+                        string new_other_income, 
+                        string redeem_count, 
+                        string redeem_priciple_pay, 
+                        string redeem_interest_pay, 
+                        string redeem_early, 
+                        string redeem_penalty, 
+                        string redeem_other_income, 
+                        string renew_count, 
                         string renew_amt, 
-                        string renew_interest, 
+                        string renew_fee, 
+                        string renew_principle_pay, 
+                        string renew_interest_pay, 
+                        string renew_other_income, 
+                        string renew_penalty_pay, 
+                        string rn_principle_pay, 
+                        string rn_interest_pay, 
+                        string rn_early, 
+                        string rn_penalty, 
+                        string re_other_income, 
+                        string re_balance, 
+                        string re_disburse, 
+                        string ppap_principle, 
+                        string rn_total_count, 
+                        string rn_total_amt, 
+                        string rn_total_principle_pay, 
+                        string rn_total_interest_pay, 
+                        string rn_total_other_income, 
+                        string num_contract, 
+                        string balance, 
                         string late_principle_amt, 
                         string late_num_client, 
-                        string principle130, 
                         string interest130, 
-                        string principle3160, 
                         string interest3160, 
-                        string principle6190, 
                         string interest6190, 
-                        string principle91, 
                         string interest91, 
-                        string currency) {
-                ProductivityConsolidateByLOBRow rowProductivityConsolidateByLOBRow = ((ProductivityConsolidateByLOBRow)(this.NewRow()));
+                        string principle130, 
+                        string principle3160, 
+                        string principle6190, 
+                        string principle91, 
+                        string penalty_less, 
+                        string appr, 
+                        string sysDateId) {
+                ProductivityConsolidateByLOBDSRow rowProductivityConsolidateByLOBDSRow = ((ProductivityConsolidateByLOBDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        system_date,
+                        branch_code,
                         lob_name,
-                        new_num_client,
                         open_bl_num,
-                        proid,
-                        new_amt,
                         open_bl_amt,
-                        redeem_num_client,
-                        new_interest,
-                        redeem_principle,
-                        current_num_client,
-                        redeem_interest,
-                        renew_client,
-                        current_amt,
+                        new_count,
+                        new_amt,
+                        new_fee,
+                        new_principle_pay,
+                        new_interest_pay,
+                        new_other_income,
+                        redeem_count,
+                        redeem_priciple_pay,
+                        redeem_interest_pay,
+                        redeem_early,
+                        redeem_penalty,
+                        redeem_other_income,
+                        renew_count,
                         renew_amt,
-                        renew_interest,
+                        renew_fee,
+                        renew_principle_pay,
+                        renew_interest_pay,
+                        renew_other_income,
+                        renew_penalty_pay,
+                        rn_principle_pay,
+                        rn_interest_pay,
+                        rn_early,
+                        rn_penalty,
+                        re_other_income,
+                        re_balance,
+                        re_disburse,
+                        ppap_principle,
+                        rn_total_count,
+                        rn_total_amt,
+                        rn_total_principle_pay,
+                        rn_total_interest_pay,
+                        rn_total_other_income,
+                        num_contract,
+                        balance,
                         late_principle_amt,
                         late_num_client,
-                        principle130,
                         interest130,
-                        principle3160,
                         interest3160,
-                        principle6190,
                         interest6190,
-                        principle91,
                         interest91,
-                        currency};
-                rowProductivityConsolidateByLOBRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowProductivityConsolidateByLOBRow);
-                return rowProductivityConsolidateByLOBRow;
+                        principle130,
+                        principle3160,
+                        principle6190,
+                        principle91,
+                        penalty_less,
+                        appr,
+                        sysDateId};
+                rowProductivityConsolidateByLOBDSRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProductivityConsolidateByLOBDSRow);
+                return rowProductivityConsolidateByLOBDSRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ProductivityConsolidateByLOBDataTable cln = ((ProductivityConsolidateByLOBDataTable)(base.Clone()));
+                ProductivityConsolidateByLOBDSDataTable cln = ((ProductivityConsolidateByLOBDSDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -680,123 +992,201 @@ namespace Report.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ProductivityConsolidateByLOBDataTable();
+                return new ProductivityConsolidateByLOBDSDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
+                this.columnsystem_date = base.Columns["system_date"];
+                this.columnbranch_code = base.Columns["branch_code"];
                 this.columnlob_name = base.Columns["lob_name"];
-                this.columnnew_num_client = base.Columns["new_num_client"];
                 this.columnopen_bl_num = base.Columns["open_bl_num"];
-                this.columnproid = base.Columns["proid"];
-                this.columnnew_amt = base.Columns["new_amt"];
                 this.columnopen_bl_amt = base.Columns["open_bl_amt"];
-                this.columnredeem_num_client = base.Columns["redeem_num_client"];
-                this.columnnew_interest = base.Columns["new_interest"];
-                this.columnredeem_principle = base.Columns["redeem_principle"];
-                this.columncurrent_num_client = base.Columns["current_num_client"];
-                this.columnredeem_interest = base.Columns["redeem_interest"];
-                this.columnrenew_client = base.Columns["renew_client"];
-                this.columncurrent_amt = base.Columns["current_amt"];
+                this.columnnew_count = base.Columns["new_count"];
+                this.columnnew_amt = base.Columns["new_amt"];
+                this.columnnew_fee = base.Columns["new_fee"];
+                this.columnnew_principle_pay = base.Columns["new_principle_pay"];
+                this.columnnew_interest_pay = base.Columns["new_interest_pay"];
+                this.columnnew_other_income = base.Columns["new_other_income"];
+                this.columnredeem_count = base.Columns["redeem_count"];
+                this.columnredeem_priciple_pay = base.Columns["redeem_priciple_pay"];
+                this.columnredeem_interest_pay = base.Columns["redeem_interest_pay"];
+                this.columnredeem_early = base.Columns["redeem_early"];
+                this.columnredeem_penalty = base.Columns["redeem_penalty"];
+                this.columnredeem_other_income = base.Columns["redeem_other_income"];
+                this.columnrenew_count = base.Columns["renew_count"];
                 this.columnrenew_amt = base.Columns["renew_amt"];
-                this.columnrenew_interest = base.Columns["renew_interest"];
+                this.columnrenew_fee = base.Columns["renew_fee"];
+                this.columnrenew_principle_pay = base.Columns["renew_principle_pay"];
+                this.columnrenew_interest_pay = base.Columns["renew_interest_pay"];
+                this.columnrenew_other_income = base.Columns["renew_other_income"];
+                this.columnrenew_penalty_pay = base.Columns["renew_penalty_pay"];
+                this.columnrn_principle_pay = base.Columns["rn_principle_pay"];
+                this.columnrn_interest_pay = base.Columns["rn_interest_pay"];
+                this.columnrn_early = base.Columns["rn_early"];
+                this.columnrn_penalty = base.Columns["rn_penalty"];
+                this.columnre_other_income = base.Columns["re_other_income"];
+                this.columnre_balance = base.Columns["re_balance"];
+                this.columnre_disburse = base.Columns["re_disburse"];
+                this.columnppap_principle = base.Columns["ppap_principle"];
+                this.columnrn_total_count = base.Columns["rn_total_count"];
+                this.columnrn_total_amt = base.Columns["rn_total_amt"];
+                this.columnrn_total_principle_pay = base.Columns["rn_total_principle_pay"];
+                this.columnrn_total_interest_pay = base.Columns["rn_total_interest_pay"];
+                this.columnrn_total_other_income = base.Columns["rn_total_other_income"];
+                this.columnnum_contract = base.Columns["num_contract"];
+                this.columnbalance = base.Columns["balance"];
                 this.columnlate_principle_amt = base.Columns["late_principle_amt"];
                 this.columnlate_num_client = base.Columns["late_num_client"];
-                this.columnprinciple130 = base.Columns["principle130"];
                 this.columninterest130 = base.Columns["interest130"];
-                this.columnprinciple3160 = base.Columns["principle3160"];
                 this.columninterest3160 = base.Columns["interest3160"];
-                this.columnprinciple6190 = base.Columns["principle6190"];
                 this.columninterest6190 = base.Columns["interest6190"];
-                this.columnprinciple91 = base.Columns["principle91"];
                 this.columninterest91 = base.Columns["interest91"];
-                this.columncurrency = base.Columns["currency"];
+                this.columnprinciple130 = base.Columns["principle130"];
+                this.columnprinciple3160 = base.Columns["principle3160"];
+                this.columnprinciple6190 = base.Columns["principle6190"];
+                this.columnprinciple91 = base.Columns["principle91"];
+                this.columnpenalty_less = base.Columns["penalty_less"];
+                this.columnappr = base.Columns["appr"];
+                this.columnsysDateId = base.Columns["sysDateId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
+                this.columnsystem_date = new global::System.Data.DataColumn("system_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsystem_date);
+                this.columnbranch_code = new global::System.Data.DataColumn("branch_code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbranch_code);
                 this.columnlob_name = new global::System.Data.DataColumn("lob_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlob_name);
-                this.columnnew_num_client = new global::System.Data.DataColumn("new_num_client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnew_num_client);
                 this.columnopen_bl_num = new global::System.Data.DataColumn("open_bl_num", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnopen_bl_num);
-                this.columnproid = new global::System.Data.DataColumn("proid", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnproid);
-                this.columnnew_amt = new global::System.Data.DataColumn("new_amt", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnew_amt);
                 this.columnopen_bl_amt = new global::System.Data.DataColumn("open_bl_amt", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnopen_bl_amt);
-                this.columnredeem_num_client = new global::System.Data.DataColumn("redeem_num_client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnredeem_num_client);
-                this.columnnew_interest = new global::System.Data.DataColumn("new_interest", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnew_interest);
-                this.columnredeem_principle = new global::System.Data.DataColumn("redeem_principle", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnredeem_principle);
-                this.columncurrent_num_client = new global::System.Data.DataColumn("current_num_client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncurrent_num_client);
-                this.columnredeem_interest = new global::System.Data.DataColumn("redeem_interest", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnredeem_interest);
-                this.columnrenew_client = new global::System.Data.DataColumn("renew_client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrenew_client);
-                this.columncurrent_amt = new global::System.Data.DataColumn("current_amt", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncurrent_amt);
+                this.columnnew_count = new global::System.Data.DataColumn("new_count", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnew_count);
+                this.columnnew_amt = new global::System.Data.DataColumn("new_amt", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnew_amt);
+                this.columnnew_fee = new global::System.Data.DataColumn("new_fee", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnew_fee);
+                this.columnnew_principle_pay = new global::System.Data.DataColumn("new_principle_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnew_principle_pay);
+                this.columnnew_interest_pay = new global::System.Data.DataColumn("new_interest_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnew_interest_pay);
+                this.columnnew_other_income = new global::System.Data.DataColumn("new_other_income", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnew_other_income);
+                this.columnredeem_count = new global::System.Data.DataColumn("redeem_count", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnredeem_count);
+                this.columnredeem_priciple_pay = new global::System.Data.DataColumn("redeem_priciple_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnredeem_priciple_pay);
+                this.columnredeem_interest_pay = new global::System.Data.DataColumn("redeem_interest_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnredeem_interest_pay);
+                this.columnredeem_early = new global::System.Data.DataColumn("redeem_early", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnredeem_early);
+                this.columnredeem_penalty = new global::System.Data.DataColumn("redeem_penalty", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnredeem_penalty);
+                this.columnredeem_other_income = new global::System.Data.DataColumn("redeem_other_income", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnredeem_other_income);
+                this.columnrenew_count = new global::System.Data.DataColumn("renew_count", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrenew_count);
                 this.columnrenew_amt = new global::System.Data.DataColumn("renew_amt", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnrenew_amt);
-                this.columnrenew_interest = new global::System.Data.DataColumn("renew_interest", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrenew_interest);
+                this.columnrenew_fee = new global::System.Data.DataColumn("renew_fee", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrenew_fee);
+                this.columnrenew_principle_pay = new global::System.Data.DataColumn("renew_principle_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrenew_principle_pay);
+                this.columnrenew_interest_pay = new global::System.Data.DataColumn("renew_interest_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrenew_interest_pay);
+                this.columnrenew_other_income = new global::System.Data.DataColumn("renew_other_income", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrenew_other_income);
+                this.columnrenew_penalty_pay = new global::System.Data.DataColumn("renew_penalty_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrenew_penalty_pay);
+                this.columnrn_principle_pay = new global::System.Data.DataColumn("rn_principle_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrn_principle_pay);
+                this.columnrn_interest_pay = new global::System.Data.DataColumn("rn_interest_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrn_interest_pay);
+                this.columnrn_early = new global::System.Data.DataColumn("rn_early", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrn_early);
+                this.columnrn_penalty = new global::System.Data.DataColumn("rn_penalty", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrn_penalty);
+                this.columnre_other_income = new global::System.Data.DataColumn("re_other_income", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnre_other_income);
+                this.columnre_balance = new global::System.Data.DataColumn("re_balance", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnre_balance);
+                this.columnre_disburse = new global::System.Data.DataColumn("re_disburse", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnre_disburse);
+                this.columnppap_principle = new global::System.Data.DataColumn("ppap_principle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnppap_principle);
+                this.columnrn_total_count = new global::System.Data.DataColumn("rn_total_count", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrn_total_count);
+                this.columnrn_total_amt = new global::System.Data.DataColumn("rn_total_amt", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrn_total_amt);
+                this.columnrn_total_principle_pay = new global::System.Data.DataColumn("rn_total_principle_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrn_total_principle_pay);
+                this.columnrn_total_interest_pay = new global::System.Data.DataColumn("rn_total_interest_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrn_total_interest_pay);
+                this.columnrn_total_other_income = new global::System.Data.DataColumn("rn_total_other_income", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrn_total_other_income);
+                this.columnnum_contract = new global::System.Data.DataColumn("num_contract", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnum_contract);
+                this.columnbalance = new global::System.Data.DataColumn("balance", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbalance);
                 this.columnlate_principle_amt = new global::System.Data.DataColumn("late_principle_amt", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlate_principle_amt);
                 this.columnlate_num_client = new global::System.Data.DataColumn("late_num_client", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlate_num_client);
-                this.columnprinciple130 = new global::System.Data.DataColumn("principle130", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprinciple130);
                 this.columninterest130 = new global::System.Data.DataColumn("interest130", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columninterest130);
-                this.columnprinciple3160 = new global::System.Data.DataColumn("principle3160", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprinciple3160);
                 this.columninterest3160 = new global::System.Data.DataColumn("interest3160", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columninterest3160);
-                this.columnprinciple6190 = new global::System.Data.DataColumn("principle6190", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprinciple6190);
                 this.columninterest6190 = new global::System.Data.DataColumn("interest6190", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columninterest6190);
-                this.columnprinciple91 = new global::System.Data.DataColumn("principle91", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprinciple91);
                 this.columninterest91 = new global::System.Data.DataColumn("interest91", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columninterest91);
-                this.columncurrency = new global::System.Data.DataColumn("currency", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncurrency);
-                this.ExtendedProperties.Add("Generator_TablePropName", "_ProductivityConsolidateByLOB");
-                this.ExtendedProperties.Add("Generator_UserTableName", "ProductivityConsolidateByLOB");
+                this.columnprinciple130 = new global::System.Data.DataColumn("principle130", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprinciple130);
+                this.columnprinciple3160 = new global::System.Data.DataColumn("principle3160", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprinciple3160);
+                this.columnprinciple6190 = new global::System.Data.DataColumn("principle6190", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprinciple6190);
+                this.columnprinciple91 = new global::System.Data.DataColumn("principle91", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprinciple91);
+                this.columnpenalty_less = new global::System.Data.DataColumn("penalty_less", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpenalty_less);
+                this.columnappr = new global::System.Data.DataColumn("appr", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnappr);
+                this.columnsysDateId = new global::System.Data.DataColumn("sysDateId", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsysDateId);
+                this.columnsystem_date.Caption = "sysDateId";
+                this.columnbranch_code.Caption = "id";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProductivityConsolidateByLOBRow NewProductivityConsolidateByLOBRow() {
-                return ((ProductivityConsolidateByLOBRow)(this.NewRow()));
+            public ProductivityConsolidateByLOBDSRow NewProductivityConsolidateByLOBDSRow() {
+                return ((ProductivityConsolidateByLOBDSRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ProductivityConsolidateByLOBRow(builder);
+                return new ProductivityConsolidateByLOBDSRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ProductivityConsolidateByLOBRow);
+                return typeof(ProductivityConsolidateByLOBDSRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ProductivityConsolidateByLOBRowChanged != null)) {
-                    this.ProductivityConsolidateByLOBRowChanged(this, new ProductivityConsolidateByLOBRowChangeEvent(((ProductivityConsolidateByLOBRow)(e.Row)), e.Action));
+                if ((this.ProductivityConsolidateByLOBDSRowChanged != null)) {
+                    this.ProductivityConsolidateByLOBDSRowChanged(this, new ProductivityConsolidateByLOBDSRowChangeEvent(((ProductivityConsolidateByLOBDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -804,8 +1194,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ProductivityConsolidateByLOBRowChanging != null)) {
-                    this.ProductivityConsolidateByLOBRowChanging(this, new ProductivityConsolidateByLOBRowChangeEvent(((ProductivityConsolidateByLOBRow)(e.Row)), e.Action));
+                if ((this.ProductivityConsolidateByLOBDSRowChanging != null)) {
+                    this.ProductivityConsolidateByLOBDSRowChanging(this, new ProductivityConsolidateByLOBDSRowChangeEvent(((ProductivityConsolidateByLOBDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -813,8 +1203,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ProductivityConsolidateByLOBRowDeleted != null)) {
-                    this.ProductivityConsolidateByLOBRowDeleted(this, new ProductivityConsolidateByLOBRowChangeEvent(((ProductivityConsolidateByLOBRow)(e.Row)), e.Action));
+                if ((this.ProductivityConsolidateByLOBDSRowDeleted != null)) {
+                    this.ProductivityConsolidateByLOBDSRowDeleted(this, new ProductivityConsolidateByLOBDSRowChangeEvent(((ProductivityConsolidateByLOBDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -822,14 +1212,14 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ProductivityConsolidateByLOBRowDeleting != null)) {
-                    this.ProductivityConsolidateByLOBRowDeleting(this, new ProductivityConsolidateByLOBRowChangeEvent(((ProductivityConsolidateByLOBRow)(e.Row)), e.Action));
+                if ((this.ProductivityConsolidateByLOBDSRowDeleting != null)) {
+                    this.ProductivityConsolidateByLOBDSRowDeleting(this, new ProductivityConsolidateByLOBDSRowChangeEvent(((ProductivityConsolidateByLOBDSRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveProductivityConsolidateByLOBRow(ProductivityConsolidateByLOBRow row) {
+            public void RemoveProductivityConsolidateByLOBDSRow(ProductivityConsolidateByLOBDSRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -856,7 +1246,7 @@ namespace Report.Dataset {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ProductivityConsolidateByLOBDataTable";
+                attribute2.FixedValue = "ProductivityConsolidateByLOBDSDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -900,15 +1290,49 @@ namespace Report.Dataset {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ProductivityConsolidateByLOBRow : global::System.Data.DataRow {
+        public partial class ProductivityConsolidateByLOBDSRow : global::System.Data.DataRow {
             
-            private ProductivityConsolidateByLOBDataTable tableProductivityConsolidateByLOB;
+            private ProductivityConsolidateByLOBDSDataTable tableProductivityConsolidateByLOBDS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal ProductivityConsolidateByLOBRow(global::System.Data.DataRowBuilder rb) : 
+            internal ProductivityConsolidateByLOBDSRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableProductivityConsolidateByLOB = ((ProductivityConsolidateByLOBDataTable)(this.Table));
+                this.tableProductivityConsolidateByLOBDS = ((ProductivityConsolidateByLOBDSDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string system_date {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.system_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'system_date\' in table \'ProductivityConsolidateByLOBDS\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.system_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string branch_code {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.branch_codeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'branch_code\' in table \'ProductivityConsolidateByLOBDS\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.branch_codeColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -916,32 +1340,15 @@ namespace Report.Dataset {
             public string lob_name {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.lob_nameColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.lob_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'lob_name\' in table \'ProductivityConsolidateByLOB\' is DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'lob_name\' in table \'ProductivityConsolidateByLOBDS\' is DBNu" +
+                                "ll.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.lob_nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string new_num_client {
-                get {
-                    try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.new_num_clientColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'new_num_client\' in table \'ProductivityConsolidateByLOB\' is " +
-                                "DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProductivityConsolidateByLOB.new_num_clientColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.lob_nameColumn] = value;
                 }
             }
             
@@ -950,48 +1357,15 @@ namespace Report.Dataset {
             public string open_bl_num {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.open_bl_numColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.open_bl_numColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'open_bl_num\' in table \'ProductivityConsolidateByLOB\' is DBN" +
-                                "ull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'open_bl_num\' in table \'ProductivityConsolidateByLOBDS\' is D" +
+                                "BNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.open_bl_numColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string proid {
-                get {
-                    try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.proidColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'proid\' in table \'ProductivityConsolidateByLOB\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProductivityConsolidateByLOB.proidColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string new_amt {
-                get {
-                    try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.new_amtColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'new_amt\' in table \'ProductivityConsolidateByLOB\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tableProductivityConsolidateByLOB.new_amtColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.open_bl_numColumn] = value;
                 }
             }
             
@@ -1000,134 +1374,236 @@ namespace Report.Dataset {
             public string open_bl_amt {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.open_bl_amtColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.open_bl_amtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'open_bl_amt\' in table \'ProductivityConsolidateByLOB\' is DBN" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'open_bl_amt\' in table \'ProductivityConsolidateByLOBDS\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.open_bl_amtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string new_count {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.new_countColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'new_count\' in table \'ProductivityConsolidateByLOBDS\' is DBN" +
                                 "ull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.open_bl_amtColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.new_countColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string redeem_num_client {
+            public string new_amt {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.redeem_num_clientColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.new_amtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_num_client\' in table \'ProductivityConsolidateByLOB\' " +
-                                "is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'new_amt\' in table \'ProductivityConsolidateByLOBDS\' is DBNul" +
+                                "l.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.redeem_num_clientColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.new_amtColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string new_interest {
+            public string new_fee {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.new_interestColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.new_feeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'new_interest\' in table \'ProductivityConsolidateByLOB\' is DB" +
-                                "Null.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'new_fee\' in table \'ProductivityConsolidateByLOBDS\' is DBNul" +
+                                "l.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.new_interestColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.new_feeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string redeem_principle {
+            public string new_principle_pay {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.redeem_principleColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.new_principle_payColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_principle\' in table \'ProductivityConsolidateByLOB\' i" +
-                                "s DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'new_principle_pay\' in table \'ProductivityConsolidateByLOBDS" +
+                                "\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.redeem_principleColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.new_principle_payColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string current_num_client {
+            public string new_interest_pay {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.current_num_clientColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.new_interest_payColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'current_num_client\' in table \'ProductivityConsolidateByLOB\'" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'new_interest_pay\' in table \'ProductivityConsolidateByLOBDS\'" +
                                 " is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.current_num_clientColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.new_interest_payColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string redeem_interest {
+            public string new_other_income {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.redeem_interestColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.new_other_incomeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_interest\' in table \'ProductivityConsolidateByLOB\' is" +
-                                " DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'new_other_income\' in table \'ProductivityConsolidateByLOBDS\'" +
+                                " is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.redeem_interestColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.new_other_incomeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string renew_client {
+            public string redeem_count {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.renew_clientColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.redeem_countColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'renew_client\' in table \'ProductivityConsolidateByLOB\' is DB" +
-                                "Null.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_count\' in table \'ProductivityConsolidateByLOBDS\' is " +
+                                "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.renew_clientColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.redeem_countColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string current_amt {
+            public string redeem_priciple_pay {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.current_amtColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.redeem_priciple_payColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'current_amt\' in table \'ProductivityConsolidateByLOB\' is DBN" +
-                                "ull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_priciple_pay\' in table \'ProductivityConsolidateByLOB" +
+                                "DS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.current_amtColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.redeem_priciple_payColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string redeem_interest_pay {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.redeem_interest_payColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_interest_pay\' in table \'ProductivityConsolidateByLOB" +
+                                "DS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.redeem_interest_payColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string redeem_early {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.redeem_earlyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_early\' in table \'ProductivityConsolidateByLOBDS\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.redeem_earlyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string redeem_penalty {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.redeem_penaltyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_penalty\' in table \'ProductivityConsolidateByLOBDS\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.redeem_penaltyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string redeem_other_income {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.redeem_other_incomeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_other_income\' in table \'ProductivityConsolidateByLOB" +
+                                "DS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.redeem_other_incomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string renew_count {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.renew_countColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_count\' in table \'ProductivityConsolidateByLOBDS\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.renew_countColumn] = value;
                 }
             }
             
@@ -1136,32 +1612,355 @@ namespace Report.Dataset {
             public string renew_amt {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.renew_amtColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.renew_amtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'renew_amt\' in table \'ProductivityConsolidateByLOB\' is DBNul" +
-                                "l.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_amt\' in table \'ProductivityConsolidateByLOBDS\' is DBN" +
+                                "ull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.renew_amtColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.renew_amtColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string renew_interest {
+            public string renew_fee {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.renew_interestColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.renew_feeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'renew_interest\' in table \'ProductivityConsolidateByLOB\' is " +
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_fee\' in table \'ProductivityConsolidateByLOBDS\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.renew_feeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string renew_principle_pay {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.renew_principle_payColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_principle_pay\' in table \'ProductivityConsolidateByLOB" +
+                                "DS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.renew_principle_payColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string renew_interest_pay {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.renew_interest_payColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_interest_pay\' in table \'ProductivityConsolidateByLOBD" +
+                                "S\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.renew_interest_payColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string renew_other_income {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.renew_other_incomeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_other_income\' in table \'ProductivityConsolidateByLOBD" +
+                                "S\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.renew_other_incomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string renew_penalty_pay {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.renew_penalty_payColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_penalty_pay\' in table \'ProductivityConsolidateByLOBDS" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.renew_penalty_payColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string rn_principle_pay {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.rn_principle_payColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rn_principle_pay\' in table \'ProductivityConsolidateByLOBDS\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.rn_principle_payColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string rn_interest_pay {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.rn_interest_payColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rn_interest_pay\' in table \'ProductivityConsolidateByLOBDS\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.rn_interest_payColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string rn_early {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.rn_earlyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rn_early\' in table \'ProductivityConsolidateByLOBDS\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.rn_earlyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string rn_penalty {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.rn_penaltyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rn_penalty\' in table \'ProductivityConsolidateByLOBDS\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.rn_penaltyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string re_other_income {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.re_other_incomeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'re_other_income\' in table \'ProductivityConsolidateByLOBDS\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.re_other_incomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string re_balance {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.re_balanceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'re_balance\' in table \'ProductivityConsolidateByLOBDS\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.re_balanceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string re_disburse {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.re_disburseColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'re_disburse\' in table \'ProductivityConsolidateByLOBDS\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.re_disburseColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ppap_principle {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.ppap_principleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ppap_principle\' in table \'ProductivityConsolidateByLOBDS\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.ppap_principleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string rn_total_count {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.rn_total_countColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rn_total_count\' in table \'ProductivityConsolidateByLOBDS\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.rn_total_countColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string rn_total_amt {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.rn_total_amtColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rn_total_amt\' in table \'ProductivityConsolidateByLOBDS\' is " +
                                 "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.renew_interestColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.rn_total_amtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string rn_total_principle_pay {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.rn_total_principle_payColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rn_total_principle_pay\' in table \'ProductivityConsolidateBy" +
+                                "LOBDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.rn_total_principle_payColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string rn_total_interest_pay {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.rn_total_interest_payColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rn_total_interest_pay\' in table \'ProductivityConsolidateByL" +
+                                "OBDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.rn_total_interest_payColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string rn_total_other_income {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.rn_total_other_incomeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rn_total_other_income\' in table \'ProductivityConsolidateByL" +
+                                "OBDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.rn_total_other_incomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string num_contract {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.num_contractColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'num_contract\' in table \'ProductivityConsolidateByLOBDS\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.num_contractColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string balance {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.balanceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'balance\' in table \'ProductivityConsolidateByLOBDS\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.balanceColumn] = value;
                 }
             }
             
@@ -1170,15 +1969,15 @@ namespace Report.Dataset {
             public string late_principle_amt {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.late_principle_amtColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.late_principle_amtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'late_principle_amt\' in table \'ProductivityConsolidateByLOB\'" +
-                                " is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'late_principle_amt\' in table \'ProductivityConsolidateByLOBD" +
+                                "S\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.late_principle_amtColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.late_principle_amtColumn] = value;
                 }
             }
             
@@ -1187,32 +1986,15 @@ namespace Report.Dataset {
             public string late_num_client {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.late_num_clientColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.late_num_clientColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'late_num_client\' in table \'ProductivityConsolidateByLOB\' is" +
-                                " DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'late_num_client\' in table \'ProductivityConsolidateByLOBDS\' " +
+                                "is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.late_num_clientColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string principle130 {
-                get {
-                    try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.principle130Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'principle130\' in table \'ProductivityConsolidateByLOB\' is DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableProductivityConsolidateByLOB.principle130Column] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.late_num_clientColumn] = value;
                 }
             }
             
@@ -1221,32 +2003,15 @@ namespace Report.Dataset {
             public string interest130 {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.interest130Column]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.interest130Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest130\' in table \'ProductivityConsolidateByLOB\' is DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProductivityConsolidateByLOB.interest130Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string principle3160 {
-                get {
-                    try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.principle3160Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'principle3160\' in table \'ProductivityConsolidateByLOB\' is D" +
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest130\' in table \'ProductivityConsolidateByLOBDS\' is D" +
                                 "BNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.principle3160Column] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.interest130Column] = value;
                 }
             }
             
@@ -1255,32 +2020,15 @@ namespace Report.Dataset {
             public string interest3160 {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.interest3160Column]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.interest3160Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest3160\' in table \'ProductivityConsolidateByLOB\' is DB" +
-                                "Null.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest3160\' in table \'ProductivityConsolidateByLOBDS\' is " +
+                                "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.interest3160Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string principle6190 {
-                get {
-                    try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.principle6190Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'principle6190\' in table \'ProductivityConsolidateByLOB\' is D" +
-                                "BNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProductivityConsolidateByLOB.principle6190Column] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.interest3160Column] = value;
                 }
             }
             
@@ -1289,32 +2037,15 @@ namespace Report.Dataset {
             public string interest6190 {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.interest6190Column]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.interest6190Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest6190\' in table \'ProductivityConsolidateByLOB\' is DB" +
-                                "Null.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest6190\' in table \'ProductivityConsolidateByLOBDS\' is " +
+                                "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.interest6190Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string principle91 {
-                get {
-                    try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.principle91Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'principle91\' in table \'ProductivityConsolidateByLOB\' is DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProductivityConsolidateByLOB.principle91Column] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.interest6190Column] = value;
                 }
             }
             
@@ -1323,345 +2054,758 @@ namespace Report.Dataset {
             public string interest91 {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.interest91Column]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.interest91Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest91\' in table \'ProductivityConsolidateByLOB\' is DBNu" +
-                                "ll.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest91\' in table \'ProductivityConsolidateByLOBDS\' is DB" +
+                                "Null.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.interest91Column] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.interest91Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string currency {
+            public string principle130 {
                 get {
                     try {
-                        return ((string)(this[this.tableProductivityConsolidateByLOB.currencyColumn]));
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.principle130Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'currency\' in table \'ProductivityConsolidateByLOB\' is DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle130\' in table \'ProductivityConsolidateByLOBDS\' is " +
+                                "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProductivityConsolidateByLOB.currencyColumn] = value;
+                    this[this.tableProductivityConsolidateByLOBDS.principle130Column] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string principle3160 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.principle3160Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle3160\' in table \'ProductivityConsolidateByLOBDS\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.principle3160Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string principle6190 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.principle6190Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle6190\' in table \'ProductivityConsolidateByLOBDS\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.principle6190Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string principle91 {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.principle91Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle91\' in table \'ProductivityConsolidateByLOBDS\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.principle91Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string penalty_less {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.penalty_lessColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'penalty_less\' in table \'ProductivityConsolidateByLOBDS\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.penalty_lessColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string appr {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.apprColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'appr\' in table \'ProductivityConsolidateByLOBDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.apprColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string sysDateId {
+                get {
+                    try {
+                        return ((string)(this[this.tableProductivityConsolidateByLOBDS.sysDateIdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'sysDateId\' in table \'ProductivityConsolidateByLOBDS\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProductivityConsolidateByLOBDS.sysDateIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Issystem_dateNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.system_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setsystem_dateNull() {
+                this[this.tableProductivityConsolidateByLOBDS.system_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isbranch_codeNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.branch_codeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setbranch_codeNull() {
+                this[this.tableProductivityConsolidateByLOBDS.branch_codeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Islob_nameNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.lob_nameColumn);
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.lob_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setlob_nameNull() {
-                this[this.tableProductivityConsolidateByLOB.lob_nameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isnew_num_clientNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.new_num_clientColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setnew_num_clientNull() {
-                this[this.tableProductivityConsolidateByLOB.new_num_clientColumn] = global::System.Convert.DBNull;
+                this[this.tableProductivityConsolidateByLOBDS.lob_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isopen_bl_numNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.open_bl_numColumn);
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.open_bl_numColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setopen_bl_numNull() {
-                this[this.tableProductivityConsolidateByLOB.open_bl_numColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsproidNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.proidColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetproidNull() {
-                this[this.tableProductivityConsolidateByLOB.proidColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isnew_amtNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.new_amtColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setnew_amtNull() {
-                this[this.tableProductivityConsolidateByLOB.new_amtColumn] = global::System.Convert.DBNull;
+                this[this.tableProductivityConsolidateByLOBDS.open_bl_numColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isopen_bl_amtNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.open_bl_amtColumn);
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.open_bl_amtColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setopen_bl_amtNull() {
-                this[this.tableProductivityConsolidateByLOB.open_bl_amtColumn] = global::System.Convert.DBNull;
+                this[this.tableProductivityConsolidateByLOBDS.open_bl_amtColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isredeem_num_clientNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.redeem_num_clientColumn);
+            public bool Isnew_countNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.new_countColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setredeem_num_clientNull() {
-                this[this.tableProductivityConsolidateByLOB.redeem_num_clientColumn] = global::System.Convert.DBNull;
+            public void Setnew_countNull() {
+                this[this.tableProductivityConsolidateByLOBDS.new_countColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isnew_interestNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.new_interestColumn);
+            public bool Isnew_amtNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.new_amtColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setnew_interestNull() {
-                this[this.tableProductivityConsolidateByLOB.new_interestColumn] = global::System.Convert.DBNull;
+            public void Setnew_amtNull() {
+                this[this.tableProductivityConsolidateByLOBDS.new_amtColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isredeem_principleNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.redeem_principleColumn);
+            public bool Isnew_feeNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.new_feeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setredeem_principleNull() {
-                this[this.tableProductivityConsolidateByLOB.redeem_principleColumn] = global::System.Convert.DBNull;
+            public void Setnew_feeNull() {
+                this[this.tableProductivityConsolidateByLOBDS.new_feeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Iscurrent_num_clientNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.current_num_clientColumn);
+            public bool Isnew_principle_payNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.new_principle_payColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setcurrent_num_clientNull() {
-                this[this.tableProductivityConsolidateByLOB.current_num_clientColumn] = global::System.Convert.DBNull;
+            public void Setnew_principle_payNull() {
+                this[this.tableProductivityConsolidateByLOBDS.new_principle_payColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isredeem_interestNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.redeem_interestColumn);
+            public bool Isnew_interest_payNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.new_interest_payColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setredeem_interestNull() {
-                this[this.tableProductivityConsolidateByLOB.redeem_interestColumn] = global::System.Convert.DBNull;
+            public void Setnew_interest_payNull() {
+                this[this.tableProductivityConsolidateByLOBDS.new_interest_payColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isrenew_clientNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.renew_clientColumn);
+            public bool Isnew_other_incomeNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.new_other_incomeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setrenew_clientNull() {
-                this[this.tableProductivityConsolidateByLOB.renew_clientColumn] = global::System.Convert.DBNull;
+            public void Setnew_other_incomeNull() {
+                this[this.tableProductivityConsolidateByLOBDS.new_other_incomeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Iscurrent_amtNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.current_amtColumn);
+            public bool Isredeem_countNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.redeem_countColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setcurrent_amtNull() {
-                this[this.tableProductivityConsolidateByLOB.current_amtColumn] = global::System.Convert.DBNull;
+            public void Setredeem_countNull() {
+                this[this.tableProductivityConsolidateByLOBDS.redeem_countColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isredeem_priciple_payNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.redeem_priciple_payColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setredeem_priciple_payNull() {
+                this[this.tableProductivityConsolidateByLOBDS.redeem_priciple_payColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isredeem_interest_payNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.redeem_interest_payColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setredeem_interest_payNull() {
+                this[this.tableProductivityConsolidateByLOBDS.redeem_interest_payColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isredeem_earlyNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.redeem_earlyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setredeem_earlyNull() {
+                this[this.tableProductivityConsolidateByLOBDS.redeem_earlyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isredeem_penaltyNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.redeem_penaltyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setredeem_penaltyNull() {
+                this[this.tableProductivityConsolidateByLOBDS.redeem_penaltyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isredeem_other_incomeNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.redeem_other_incomeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setredeem_other_incomeNull() {
+                this[this.tableProductivityConsolidateByLOBDS.redeem_other_incomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrenew_countNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.renew_countColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrenew_countNull() {
+                this[this.tableProductivityConsolidateByLOBDS.renew_countColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isrenew_amtNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.renew_amtColumn);
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.renew_amtColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setrenew_amtNull() {
-                this[this.tableProductivityConsolidateByLOB.renew_amtColumn] = global::System.Convert.DBNull;
+                this[this.tableProductivityConsolidateByLOBDS.renew_amtColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isrenew_interestNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.renew_interestColumn);
+            public bool Isrenew_feeNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.renew_feeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setrenew_interestNull() {
-                this[this.tableProductivityConsolidateByLOB.renew_interestColumn] = global::System.Convert.DBNull;
+            public void Setrenew_feeNull() {
+                this[this.tableProductivityConsolidateByLOBDS.renew_feeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrenew_principle_payNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.renew_principle_payColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrenew_principle_payNull() {
+                this[this.tableProductivityConsolidateByLOBDS.renew_principle_payColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrenew_interest_payNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.renew_interest_payColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrenew_interest_payNull() {
+                this[this.tableProductivityConsolidateByLOBDS.renew_interest_payColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrenew_other_incomeNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.renew_other_incomeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrenew_other_incomeNull() {
+                this[this.tableProductivityConsolidateByLOBDS.renew_other_incomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrenew_penalty_payNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.renew_penalty_payColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrenew_penalty_payNull() {
+                this[this.tableProductivityConsolidateByLOBDS.renew_penalty_payColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrn_principle_payNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.rn_principle_payColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrn_principle_payNull() {
+                this[this.tableProductivityConsolidateByLOBDS.rn_principle_payColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrn_interest_payNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.rn_interest_payColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrn_interest_payNull() {
+                this[this.tableProductivityConsolidateByLOBDS.rn_interest_payColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrn_earlyNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.rn_earlyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrn_earlyNull() {
+                this[this.tableProductivityConsolidateByLOBDS.rn_earlyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrn_penaltyNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.rn_penaltyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrn_penaltyNull() {
+                this[this.tableProductivityConsolidateByLOBDS.rn_penaltyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isre_other_incomeNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.re_other_incomeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setre_other_incomeNull() {
+                this[this.tableProductivityConsolidateByLOBDS.re_other_incomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isre_balanceNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.re_balanceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setre_balanceNull() {
+                this[this.tableProductivityConsolidateByLOBDS.re_balanceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isre_disburseNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.re_disburseColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setre_disburseNull() {
+                this[this.tableProductivityConsolidateByLOBDS.re_disburseColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isppap_principleNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.ppap_principleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setppap_principleNull() {
+                this[this.tableProductivityConsolidateByLOBDS.ppap_principleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrn_total_countNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.rn_total_countColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrn_total_countNull() {
+                this[this.tableProductivityConsolidateByLOBDS.rn_total_countColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrn_total_amtNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.rn_total_amtColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrn_total_amtNull() {
+                this[this.tableProductivityConsolidateByLOBDS.rn_total_amtColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrn_total_principle_payNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.rn_total_principle_payColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrn_total_principle_payNull() {
+                this[this.tableProductivityConsolidateByLOBDS.rn_total_principle_payColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrn_total_interest_payNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.rn_total_interest_payColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrn_total_interest_payNull() {
+                this[this.tableProductivityConsolidateByLOBDS.rn_total_interest_payColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrn_total_other_incomeNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.rn_total_other_incomeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrn_total_other_incomeNull() {
+                this[this.tableProductivityConsolidateByLOBDS.rn_total_other_incomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isnum_contractNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.num_contractColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setnum_contractNull() {
+                this[this.tableProductivityConsolidateByLOBDS.num_contractColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsbalanceNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.balanceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetbalanceNull() {
+                this[this.tableProductivityConsolidateByLOBDS.balanceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Islate_principle_amtNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.late_principle_amtColumn);
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.late_principle_amtColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setlate_principle_amtNull() {
-                this[this.tableProductivityConsolidateByLOB.late_principle_amtColumn] = global::System.Convert.DBNull;
+                this[this.tableProductivityConsolidateByLOBDS.late_principle_amtColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Islate_num_clientNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.late_num_clientColumn);
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.late_num_clientColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setlate_num_clientNull() {
-                this[this.tableProductivityConsolidateByLOB.late_num_clientColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isprinciple130Null() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.principle130Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setprinciple130Null() {
-                this[this.tableProductivityConsolidateByLOB.principle130Column] = global::System.Convert.DBNull;
+                this[this.tableProductivityConsolidateByLOBDS.late_num_clientColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isinterest130Null() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.interest130Column);
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.interest130Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setinterest130Null() {
-                this[this.tableProductivityConsolidateByLOB.interest130Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isprinciple3160Null() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.principle3160Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setprinciple3160Null() {
-                this[this.tableProductivityConsolidateByLOB.principle3160Column] = global::System.Convert.DBNull;
+                this[this.tableProductivityConsolidateByLOBDS.interest130Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isinterest3160Null() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.interest3160Column);
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.interest3160Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setinterest3160Null() {
-                this[this.tableProductivityConsolidateByLOB.interest3160Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isprinciple6190Null() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.principle6190Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setprinciple6190Null() {
-                this[this.tableProductivityConsolidateByLOB.principle6190Column] = global::System.Convert.DBNull;
+                this[this.tableProductivityConsolidateByLOBDS.interest3160Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isinterest6190Null() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.interest6190Column);
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.interest6190Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setinterest6190Null() {
-                this[this.tableProductivityConsolidateByLOB.interest6190Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isprinciple91Null() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.principle91Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setprinciple91Null() {
-                this[this.tableProductivityConsolidateByLOB.principle91Column] = global::System.Convert.DBNull;
+                this[this.tableProductivityConsolidateByLOBDS.interest6190Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isinterest91Null() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.interest91Column);
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.interest91Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setinterest91Null() {
-                this[this.tableProductivityConsolidateByLOB.interest91Column] = global::System.Convert.DBNull;
+                this[this.tableProductivityConsolidateByLOBDS.interest91Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IscurrencyNull() {
-                return this.IsNull(this.tableProductivityConsolidateByLOB.currencyColumn);
+            public bool Isprinciple130Null() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.principle130Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetcurrencyNull() {
-                this[this.tableProductivityConsolidateByLOB.currencyColumn] = global::System.Convert.DBNull;
+            public void Setprinciple130Null() {
+                this[this.tableProductivityConsolidateByLOBDS.principle130Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isprinciple3160Null() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.principle3160Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setprinciple3160Null() {
+                this[this.tableProductivityConsolidateByLOBDS.principle3160Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isprinciple6190Null() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.principle6190Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setprinciple6190Null() {
+                this[this.tableProductivityConsolidateByLOBDS.principle6190Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isprinciple91Null() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.principle91Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setprinciple91Null() {
+                this[this.tableProductivityConsolidateByLOBDS.principle91Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Ispenalty_lessNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.penalty_lessColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setpenalty_lessNull() {
+                this[this.tableProductivityConsolidateByLOBDS.penalty_lessColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsapprNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.apprColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetapprNull() {
+                this[this.tableProductivityConsolidateByLOBDS.apprColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IssysDateIdNull() {
+                return this.IsNull(this.tableProductivityConsolidateByLOBDS.sysDateIdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetsysDateIdNull() {
+                this[this.tableProductivityConsolidateByLOBDS.sysDateIdColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1669,22 +2813,22 @@ namespace Report.Dataset {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class ProductivityConsolidateByLOBRowChangeEvent : global::System.EventArgs {
+        public class ProductivityConsolidateByLOBDSRowChangeEvent : global::System.EventArgs {
             
-            private ProductivityConsolidateByLOBRow eventRow;
+            private ProductivityConsolidateByLOBDSRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProductivityConsolidateByLOBRowChangeEvent(ProductivityConsolidateByLOBRow row, global::System.Data.DataRowAction action) {
+            public ProductivityConsolidateByLOBDSRowChangeEvent(ProductivityConsolidateByLOBDSRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ProductivityConsolidateByLOBRow Row {
+            public ProductivityConsolidateByLOBDSRow Row {
                 get {
                     return this.eventRow;
                 }

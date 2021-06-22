@@ -1,18 +1,20 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductivityConsolidateByLOB.aspx.cs" Inherits="Report.Operation.ProductivityConsolidateByLOB" %>
-
+﻿<%@ Page Title="Productivity Consolidate By LOB" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductivityConsolidateByLOB.aspx.cs" Inherits="Report.Operation.ProductivityConsolidateByLOB" %>
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="panel panel-warning no-margin">
         <div class="panel-body">
-            <div class="form-inline">
-                <div class="form-group ml16">
+            <div class="row">
+                <div class="col-sm-2 form-group">
                     <label>Currency:</label>
-                    <asp:DropDownList ID="ddCurrency" runat="server" CssClass="form-control cnt-min-width">
+                    <asp:DropDownList ID="ddCurrency" runat="server" CssClass="form-control input-sm">
                     </asp:DropDownList>
                 </div>
                 <div class="form-group ml16">
-                    <asp:Button ID="btnView" runat="server" Text="View" OnClick="btnView_Click" CssClass="btn btn-info" />
+                     <div>
+                        <label>&nbsp;</label>
+                    </div>
+                    <asp:Button ID="btnView" runat="server" Text="View" OnClick="btnView_Click" CssClass="btn btn-sm btn-primary" />
                 </div>
             </div>
         </div>

@@ -16,41 +16,33 @@ namespace Report.Operation
     {
         private DBConnect db = new DBConnect();
         static List<Currency> currencyList;
-        public static string systemDateStr;
-        public string format = "dd/MM/yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataHelper.checkLoginSession();
             if (!IsPostBack)
             {
+                DataHelper.checkLoginSession();
                 currencyList = DataHelper.populateCurrencyDDL(ddCurrency);
-                systemDateStr = DataHelper.getSystemDateStr();
             }
         }
 
-        //GenerateReport Function
-        private void GenerateReport(DataTable productivityByLOBDT)
+        private void GenerateReport(DataTable productivityByBranchDT)
         {
             var reportParameters = new ReportParameterCollection();
-            reportParameters.Add(new ReportParameter("CurrencyParameter", ddCurrency.SelectedItem.Text));
-            reportParameters.Add(new ReportParameter("SystemDateParameter", DateTime.ParseExact(systemDateStr, format, null).ToString("dd-MMM-yyyy")));
+            reportParameters.Add(new ReportParameter("Currency", ddCurrency.SelectedItem.Text));
+            reportParameters.Add(new ReportParameter("SystemDate", DataHelper.getSystemDateStr()));
 
-            var _productivityByLOBlist = new ReportDataSource("ProductivityByLOBDS", productivityByLOBDT);
-            DataHelper.generateOperationReport(ReportViewer1, "ProductivityConsolidateByLOB", reportParameters, _productivityByLOBlist);
+            var _productivityByBranchlist = new ReportDataSource("ProductivityConsolidateByLOBDS", productivityByBranchDT);
+            DataHelper.generateOperationReport(ReportViewer1, "ProductivityConsolidateByLOB", reportParameters, _productivityByBranchlist);
         }
 
         protected void btnView_Click(object sender, EventArgs e)
         {
-            //Split System Date Time variable
-            var systemDateSql = DateTime.ParseExact(systemDateStr, format, null);
-
-            var productivityByLOBProcedure = "PS_PROD_BY_LOB";
+            var stp = "PS_PROD_BY_LOB_V1";
             List<Procedure> procedureList = new List<Procedure>();
-            procedureList.Add(item: new Procedure() { field_name = "@pSystem_date", sql_db_type = MySqlDbType.Date, value_name = DateTime.ParseExact(systemDateStr, format, null).ToString("yyyy-MM-dd") });
             procedureList.Add(item: new Procedure() { field_name = "@pCurrency", sql_db_type = MySqlDbType.VarChar, value_name = ddCurrency.SelectedItem.Value });
 
-            DataTable productivityByLOBDT = db.getProcedureDataTable(productivityByLOBProcedure, procedureList);
-            GenerateReport(productivityByLOBDT);
+            DataTable dt = db.getProcedureDataTable(stp, procedureList);
+            GenerateReport(dt);
         }
     }
 }

@@ -299,9 +299,13 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columncurrency;
             
-            private global::System.Data.DataColumn columncurrency_code;
-            
             private global::System.Data.DataColumn columnpawn_officer;
+            
+            private global::System.Data.DataColumn columnproduct_id;
+            
+            private global::System.Data.DataColumn columnredeem_other_income;
+            
+            private global::System.Data.DataColumn columnwaive_amount;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -418,17 +422,33 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn currency_codeColumn {
+            public global::System.Data.DataColumn pawn_officerColumn {
                 get {
-                    return this.columncurrency_code;
+                    return this.columnpawn_officer;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn pawn_officerColumn {
+            public global::System.Data.DataColumn product_idColumn {
                 get {
-                    return this.columnpawn_officer;
+                    return this.columnproduct_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn redeem_other_incomeColumn {
+                get {
+                    return this.columnredeem_other_income;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn waive_amountColumn {
+                get {
+                    return this.columnwaive_amount;
                 }
             }
             
@@ -469,7 +489,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public RedeemDSRow AddRedeemDSRow(string id, string ticket_no, string redeem_date, string principle, string interest, string customer_name, string total_penalty_paid, string lob_name, string serial_number, string currency, string currency_code, string pawn_officer) {
+            public RedeemDSRow AddRedeemDSRow(string id, string ticket_no, string redeem_date, string principle, string interest, string customer_name, string total_penalty_paid, string lob_name, string serial_number, string currency, string pawn_officer, string product_id, string redeem_other_income, string waive_amount) {
                 RedeemDSRow rowRedeemDSRow = ((RedeemDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -482,8 +502,10 @@ namespace Report.Dataset {
                         lob_name,
                         serial_number,
                         currency,
-                        currency_code,
-                        pawn_officer};
+                        pawn_officer,
+                        product_id,
+                        redeem_other_income,
+                        waive_amount};
                 rowRedeemDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRedeemDSRow);
                 return rowRedeemDSRow;
@@ -516,8 +538,10 @@ namespace Report.Dataset {
                 this.columnlob_name = base.Columns["lob_name"];
                 this.columnserial_number = base.Columns["serial_number"];
                 this.columncurrency = base.Columns["currency"];
-                this.columncurrency_code = base.Columns["currency_code"];
                 this.columnpawn_officer = base.Columns["pawn_officer"];
+                this.columnproduct_id = base.Columns["product_id"];
+                this.columnredeem_other_income = base.Columns["redeem_other_income"];
+                this.columnwaive_amount = base.Columns["waive_amount"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -543,10 +567,14 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnserial_number);
                 this.columncurrency = new global::System.Data.DataColumn("currency", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncurrency);
-                this.columncurrency_code = new global::System.Data.DataColumn("currency_code", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncurrency_code);
                 this.columnpawn_officer = new global::System.Data.DataColumn("pawn_officer", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpawn_officer);
+                this.columnproduct_id = new global::System.Data.DataColumn("product_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproduct_id);
+                this.columnredeem_other_income = new global::System.Data.DataColumn("redeem_other_income", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnredeem_other_income);
+                this.columnwaive_amount = new global::System.Data.DataColumn("waive_amount", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnwaive_amount);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -849,22 +877,6 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string currency_code {
-                get {
-                    try {
-                        return ((string)(this[this.tableRedeemDS.currency_codeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'currency_code\' in table \'RedeemDS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableRedeemDS.currency_codeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string pawn_officer {
                 get {
                     try {
@@ -876,6 +888,54 @@ namespace Report.Dataset {
                 }
                 set {
                     this[this.tableRedeemDS.pawn_officerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string product_id {
+                get {
+                    try {
+                        return ((string)(this[this.tableRedeemDS.product_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'product_id\' in table \'RedeemDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRedeemDS.product_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string redeem_other_income {
+                get {
+                    try {
+                        return ((string)(this[this.tableRedeemDS.redeem_other_incomeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_other_income\' in table \'RedeemDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRedeemDS.redeem_other_incomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string waive_amount {
+                get {
+                    try {
+                        return ((string)(this[this.tableRedeemDS.waive_amountColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'waive_amount\' in table \'RedeemDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRedeemDS.waive_amountColumn] = value;
                 }
             }
             
@@ -1001,18 +1061,6 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Iscurrency_codeNull() {
-                return this.IsNull(this.tableRedeemDS.currency_codeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setcurrency_codeNull() {
-                this[this.tableRedeemDS.currency_codeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Ispawn_officerNull() {
                 return this.IsNull(this.tableRedeemDS.pawn_officerColumn);
             }
@@ -1021,6 +1069,42 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setpawn_officerNull() {
                 this[this.tableRedeemDS.pawn_officerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isproduct_idNull() {
+                return this.IsNull(this.tableRedeemDS.product_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setproduct_idNull() {
+                this[this.tableRedeemDS.product_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isredeem_other_incomeNull() {
+                return this.IsNull(this.tableRedeemDS.redeem_other_incomeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setredeem_other_incomeNull() {
+                this[this.tableRedeemDS.redeem_other_incomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iswaive_amountNull() {
+                return this.IsNull(this.tableRedeemDS.waive_amountColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setwaive_amountNull() {
+                this[this.tableRedeemDS.waive_amountColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -29,6 +29,7 @@ namespace Report.Operation
             List<Procedure> parameters = new List<Procedure>();
             parameters.Add(item: new Procedure() { field_name = "@pBranch", sql_db_type = MySqlDbType.VarChar, value_name = ddBranchName.SelectedItem.Value });
             parameters.Add(item: new Procedure() { field_name = "@pCurrency", sql_db_type = MySqlDbType.VarChar, value_name = ddCurrency.SelectedItem.Value });
+
             DataTable dt = db.getProcedureDataTable(spd, parameters);
             GenerateReport(dt);
         }

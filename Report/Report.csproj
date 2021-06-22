@@ -276,9 +276,6 @@
     <Content Include="Dataset\COProductivity.xss">
       <DependentUpon>COProductivity.xsd</DependentUpon>
     </Content>
-    <Content Include="Dataset\NewGrant.xsc">
-      <DependentUpon>NewGrant.xsd</DependentUpon>
-    </Content>
     <Content Include="Dataset\LateReport.xsc">
       <DependentUpon>LateReport.xsd</DependentUpon>
     </Content>
@@ -323,6 +320,9 @@
     <Content Include="Dataset\LateReport.xss">
       <DependentUpon>LateReport.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\NewGrant.xsc">
+      <DependentUpon>NewGrant.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\NewGrant.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -353,16 +353,16 @@
     <Content Include="Dataset\Redeem.xsc">
       <DependentUpon>Redeem.xsd</DependentUpon>
     </Content>
-    <Content Include="Dataset\ProductivityConsolidateByDate.xsc">
-      <DependentUpon>ProductivityConsolidateByDate.xsd</DependentUpon>
+    <Content Include="Dataset\ProductivityConsolidateByBranch.xsc">
+      <DependentUpon>ProductivityConsolidateByBranch.xsd</DependentUpon>
     </Content>
-    <None Include="Dataset\ProductivityConsolidateByDate.xsd">
+    <None Include="Dataset\ProductivityConsolidateByBranch.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProductivityConsolidateByDate.Designer.cs</LastGenOutput>
+      <LastGenOutput>ProductivityConsolidateByBranch.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Dataset\ProductivityConsolidateByDate.xss">
-      <DependentUpon>ProductivityConsolidateByDate.xsd</DependentUpon>
+    <Content Include="Dataset\ProductivityConsolidateByBranch.xss">
+      <DependentUpon>ProductivityConsolidateByBranch.xsd</DependentUpon>
     </Content>
     <Content Include="Dataset\ProductivityConsolidateByLOB.xsc">
       <DependentUpon>ProductivityConsolidateByLOB.xsd</DependentUpon>
@@ -431,8 +431,6 @@
     </Content>
     <EmbeddedResource Include="Operation\StockReport.rdlc" />
     <EmbeddedResource Include="Operation\SummaryReport.rdlc" />
-    <EmbeddedResource Include="Operation\Renew.rdlc" />
-    <EmbeddedResource Include="Operation\Redeem.rdlc" />
     <EmbeddedResource Include="Operation\BranchProductivity.rdlc" />
     <EmbeddedResource Include="Operation\COProductivity.rdlc" />
     <Content Include="Dataset\BalanceSheet.xsc">
@@ -452,7 +450,6 @@
     <EmbeddedResource Include="Operation\BranchProductivityAsOf.rdlc" />
     <EmbeddedResource Include="Operation\BranchProductivityConsolidate.rdlc" />
     <EmbeddedResource Include="Operation\BranchProductivityOnDate.rdlc" />
-    <EmbeddedResource Include="Operation\NewGrant.rdlc" />
     <EmbeddedResource Include="Operation\LateReport.rdlc" />
     <Content Include="Dataset\IncomeStatementByDate.xsc">
       <DependentUpon>IncomeStatementByDate.xsd</DependentUpon>
@@ -476,12 +473,17 @@
     <Content Include="Dataset\IncomeStatementByDate.xss">
       <DependentUpon>IncomeStatementByDate.xsd</DependentUpon>
     </Content>
-    <EmbeddedResource Include="Operation\ProductivityConsolidateByBranch.rdlc" />
-    <EmbeddedResource Include="Operation\ProductivityConsolidateByLOB.rdlc" />
     <EmbeddedResource Include="Operation\CollectionSheet.rdlc" />
     <EmbeddedResource Include="Operation\CustomerList.rdlc" />
     <Content Include="Operation\LateReportV2.aspx" />
     <EmbeddedResource Include="Operation\LateReportV2.rdlc" />
+    <EmbeddedResource Include="Operation\NewGrant.rdlc" />
+    <EmbeddedResource Include="Operation\Redeem.rdlc" />
+    <EmbeddedResource Include="Operation\ProductivityConsolidateByBranch.rdlc" />
+    <EmbeddedResource Include="Operation\ProductivityConsolidateByBranchOnDate.rdlc" />
+    <EmbeddedResource Include="Operation\ProductivityConsolidateByLOBOnDate.rdlc" />
+    <EmbeddedResource Include="Operation\ProductivityConsolidateByLOB.rdlc" />
+    <EmbeddedResource Include="Operation\RenewReport.rdlc" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
@@ -757,10 +759,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PawnListDetail.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Dataset\ProductivityConsolidateByDate.Designer.cs">
+    <Compile Include="Dataset\ProductivityConsolidateByBranch.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ProductivityConsolidateByDate.xsd</DependentUpon>
+      <DependentUpon>ProductivityConsolidateByBranch.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\ProductivityConsolidateByLOB.Designer.cs">
       <AutoGen>True</AutoGen>

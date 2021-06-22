@@ -3,11 +3,6 @@ using Report.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Globalization;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using Report.Utils;
 
 namespace Report.Operation
@@ -21,8 +16,7 @@ namespace Report.Operation
         protected void Page_Load(object sender, EventArgs e)
         {
             DataHelper.checkLoginSession();
-            systemDateStr = DataHelper.getSystemDateStr();
-            //Adding Text and Value to Branch DropdownList block
+            systemDateStr = DataHelper.getSystemDate().ToString("dd/MM/yyyy");
             if (!IsPostBack)
             {
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
@@ -42,63 +36,111 @@ namespace Report.Operation
             }
         }
 
-        private void GenerateReport(DataTable newGrantDT)
+        private void GenerateReport(DataTable dt)
         {
             ReportParameterCollection reportParameters = new ReportParameterCollection();
-            reportParameters.Add(new ReportParameter("BranchParameter", ddBranchName.SelectedItem.Text));
-            reportParameters.Add(new ReportParameter("OfficerParameter", ddOfficer.SelectedItem.Text));
+            reportParameters.Add(new ReportParameter("Branch", ddBranchName.SelectedItem.Text));
+            reportParameters.Add(new ReportParameter("PawnOfficer", ddOfficer.SelectedItem.Text));
             if (dtpFromDate.Text != "")
             {
-                reportParameters.Add(new ReportParameter("FromDateParameter", DateTime.ParseExact(dtpFromDate.Text, format, null).ToString("dd-MMM-yyyy")));
+                reportParameters.Add(new ReportParameter("FromDate", DateTime.ParseExact(dtpFromDate.Text, format, null).ToString("dd-MMM-yyyy")));
             }
             else
             {
-                reportParameters.Add(new ReportParameter("FromDateParameter", " "));
+                reportParameters.Add(new ReportParameter("FromDate", " "));
             }
-            reportParameters.Add(new ReportParameter("SystemDateParameter", DateTime.ParseExact(dtpSystemDate.Text, format, null).ToString("dd-MMM-yyyy")));
-            reportParameters.Add(new ReportParameter("CurrencyParameter", ddCurrency.SelectedItem.Text));
-            var _newGrant = new ReportDataSource("NewGrantDS", newGrantDT);
+            reportParameters.Add(new ReportParameter("ToDate", DateTime.ParseExact(dtpSystemDate.Text, format, null).ToString("dd-MMM-yyyy")));
+            reportParameters.Add(new ReportParameter("Currency", ddCurrency.SelectedItem.Text));
 
-            DataHelper.generateOperationReport(ReportViewer1, "NewGrant", reportParameters, _newGrant);
+            var ds = new ReportDataSource("NewGrantDS", dt);
+
+            DataHelper.generateOperationReport(ReportViewer1, "NewGrant", reportParameters, ds);
         }
 
         protected void btnView_Click(object sender, EventArgs e)
         {
             //Split System Date Time variable
-            var fromDay = new Object();
-            var fromDayDate = new Object();
+            var fromDay = "";
+            var fromDayDate = "";
             if (dtpFromDate.Text != "")
             {
                 var fromDateSql = DateTime.ParseExact(dtpFromDate.Text, format, null);
                 fromDay = fromDateSql.ToString("yyyy-MM-dd");
                 fromDayDate = fromDateSql.ToString("dd");
             }
-            else
-            {
-                fromDay = "null";
-                fromDayDate = "null";
-            }
-
+          
             var systemDateSql = DateTime.ParseExact(dtpSystemDate.Text, format, null);
             var systemDate = systemDateSql.ToString("yyyy-MM-dd");
             var month = systemDateSql.ToString("MM");
             var year = systemDateSql.ToString("yyyy");
 
-            var newGrantSql = "SELECT C.id,C.disbursement_date,CUS.customer_name,ST.ticket_no,ST.due_date,C.pawn_price_approved,CUR.currency,CUR.currency_code,SI.`name` pawn_officer,PD.lob_name, " +
-                              "CASE WHEN ST.ticket_status = 'P' THEN ST.interest WHEN ST.ticket_status = 'FPP' THEN ST.interest WHEN ST.ticket_status = 'PAP' OR ST.ticket_status = 'PPP' THEN(ST.interest - ST.interest_less) ELSE 0 END AS int_amt " +
-                              "FROM contract C " +
-                              "LEFT JOIN schedule_ticket ST    ON ST.contract_id = C.id " +
-                              "LEFT JOIN customer CUS ON C.customer_id = CUS.id " +
-                              "LEFT JOIN currency CUR ON C.currency_id = CUR.id " +
-                              "LEFT JOIN staff_info SI ON C.pawn_officer_id = SI.id " +
-                              "LEFT JOIN product PD ON PD.id = C.product_id " +
-                              "WHERE C.branch_id = " + ddBranchName.SelectedValue + " AND C.contract_status >= 4 AND C.`b_status`= 1 AND C.currency_id = " + ddCurrency.SelectedValue +
-                              " AND CASE WHEN " + fromDay + " IS NULL THEN MONTH(C.disbursement_date) = " + month + " AND YEAR(C.disbursement_date) = " + year + " ELSE C.disbursement_date BETWEEN '" + fromDay + "' AND '" + systemDate + "' END AND ST.order_no = 1 " +
-                              "AND C.pawn_officer_id = CASE WHEN " + ddOfficer.SelectedValue + " IS NULL THEN C.pawn_officer_id ELSE " + ddOfficer.SelectedValue + " END " +
-                              "ORDER BY C.currency_id; ";
+            var sql = "SELECT C.id,C.disbursement_date,CUS.customer_name,STINFO.ticket_no,STINFO.due_date,C.pawn_price_approved, " +
+                    " CUR.currency,CUR.currency_code,SI.`name` pawn_officer,PD.lob_name,0 principle_amt,0 int_amt, " +
+                    " ROUND(IFNULL(CF.fee, 0), 2) AS other_income_amt, " +
+                    " STINFO.serial_number,C.contract_type, C.come_through " +
+                    " FROM contract C " +
+                    " LEFT JOIN(SELECT contract_id, SUM(fee_amount) AS fee FROM contract_fee WHERE b_status= 1 GROUP BY contract_id) CF ON C.id = CF.contract_id " +
+                    " LEFT JOIN customer CUS ON C.customer_id = CUS.id " +
+                    " LEFT JOIN currency CUR ON C.currency_id = CUR.id " +
+                    " LEFT JOIN staff_info SI ON C.pawn_officer_id = SI.id " +
+                    " LEFT JOIN product PD ON PD.id = C.product_id " +
+                    " LEFT JOIN schedule_ticket STINFO ON STINFO.contract_id = C.id AND STINFO.order_no = 1 " +
+                    " WHERE C.contract_status >= 4 AND C.`b_status`= 1 AND C.contract_type = 'New' " +
+                    " AND C.branch_id = " + ddBranchName.SelectedItem.Value +
+                    " AND C.currency_id = " + ddCurrency.SelectedItem.Value;
+            if (fromDay != "")
+            {
+                sql += " AND C.disbursement_date BETWEEN DATE('" + fromDay + "') AND DATE('" + systemDate + "') ";
+            }
+            else
+            {
+                sql += " AND MONTH(C.disbursement_date) = "+ month +" AND YEAR(C.disbursement_date) = " + year;
+            }
 
-            DataTable newGrantDT = db.getDataTable(newGrantSql);
-            GenerateReport(newGrantDT);
+            if (ddOfficer.SelectedItem.Value != "0")
+            {
+                sql += " AND C.pawn_officer_id = " + ddOfficer.SelectedItem.Value;
+            }
+            sql += " UNION " +
+                  " SELECT C.id,P.payment_date,CUS.customer_name,ST.ticket_no,ST.due_date,0, " +
+                  " CUR.currency,CUR.currency_code,SI.`name` pawn_officer,PD.lob_name,P.principle_pay,P.interest_pay, " +
+                  " ROUND(IFNULL(OI.total_other_income, 0), 2) AS other_income_amt, " +
+                  " ST.serial_number,C.contract_type, C.`come_through` " +
+                  " FROM payment P " +
+                  " INNER JOIN payment_total PTT ON P.payment_total_id = PTT.id " +
+                  " INNER JOIN contract C ON PTT.`contract_id`= C.id " +
+                  " LEFT JOIN schedule_ticket ST ON ST.id = PTT.schedule_ticket_id " +
+                  " LEFT JOIN customer CUS ON C.customer_id = CUS.id " +
+                  " LEFT JOIN currency CUR ON C.currency_id = CUR.id " +
+                  " LEFT JOIN staff_info SI ON C.pawn_officer_id = SI.id " +
+                  " LEFT JOIN product PD ON PD.id = C.product_id " +
+                  " LEFT JOIN " +
+                  " ( " +
+                  "     SELECT payment_total_id, SUM(other_income_amount) AS total_other_income " +
+                  "     FROM payment_other_income " +
+                  "     GROUP BY payment_total_id " +
+                  " ) OI ON OI.payment_total_id = PTT.id " +
+                  " WHERE PTT.system_date_id = C.disburse_sys_date_id  AND C.contract_type = 'New' AND C.`b_status`= 1 AND PTT.payment_total_status = 1 " +
+                  " AND C.branch_id = " + ddBranchName.SelectedItem.Value +
+                  " AND C.currency_id = " + ddCurrency.SelectedItem.Value;
+
+            if (fromDay != "")
+            {
+                sql += " AND P.payment_date BETWEEN DATE('" + fromDay + "') AND DATE('" + systemDate + "') ";
+            }
+            else
+            {
+                sql += " AND MONTH(P.payment_date) = " + month + " AND YEAR(P.payment_date) = " + year + " ";
+            }
+
+            if (ddOfficer.SelectedItem.Value != "0")
+            {
+                sql += " AND C.pawn_officer_id = " + ddOfficer.SelectedItem.Value;
+            }
+            sql += " ORDER BY disbursement_date;";
+            
+            DataTable dt = db.getDataTable(sql);
+            GenerateReport(dt);
         }
 
         protected void ddBranchName_SelectedIndexChanged(object sender, EventArgs e)
