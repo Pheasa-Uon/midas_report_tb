@@ -338,7 +338,6 @@
       <DependentUpon>PawnListDetail.xsd</DependentUpon>
     </Content>
     <EmbeddedResource Include="Operation\PawnListDetail.rdlc" />
-    <EmbeddedResource Include="Operation\TurnOver.rdlc" />
     <Content Include="Dataset\TurnOver.xsc">
       <DependentUpon>TurnOver.xsd</DependentUpon>
     </Content>
@@ -438,7 +437,6 @@
     <Content Include="Dataset\TurnOver.xss">
       <DependentUpon>TurnOver.xsd</DependentUpon>
     </Content>
-    <EmbeddedResource Include="Operation\SummaryReport.rdlc" />
     <EmbeddedResource Include="Operation\BranchProductivity.rdlc" />
     <EmbeddedResource Include="Operation\COProductivity.rdlc" />
     <Content Include="Dataset\BalanceSheet.xsc">
@@ -494,6 +492,8 @@
     <EmbeddedResource Include="Operation\RenewReport.rdlc" />
     <EmbeddedResource Include="Operation\PaymentDetail.rdlc" />
     <EmbeddedResource Include="Operation\StockReport.rdlc" />
+    <EmbeddedResource Include="Operation\SummaryReport.rdlc" />
+    <EmbeddedResource Include="Operation\TurnoverReport.rdlc" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
@@ -515,7 +515,7 @@
     <Content Include="Operation\RenewReport.aspx" />
     <Content Include="Operation\StockReport.aspx" />
     <Content Include="Operation\SummaryReport.aspx" />
-    <Content Include="Operation\TurnOver.aspx" />
+    <Content Include="Operation\TurnoverReport.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\datetimepicker.js" />
@@ -1012,12 +1012,12 @@
     <Compile Include="Operation\SummaryReport.aspx.designer.cs">
       <DependentUpon>SummaryReport.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Operation\TurnOver.aspx.cs">
-      <DependentUpon>TurnOver.aspx</DependentUpon>
+    <Compile Include="Operation\TurnoverReport.aspx.cs">
+      <DependentUpon>TurnoverReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Operation\TurnOver.aspx.designer.cs">
-      <DependentUpon>TurnOver.aspx</DependentUpon>
+    <Compile Include="Operation\TurnoverReport.aspx.designer.cs">
+      <DependentUpon>TurnoverReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

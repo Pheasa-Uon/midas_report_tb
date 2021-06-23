@@ -24,7 +24,7 @@ namespace Report.Dataset {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class SummaryReport : global::System.Data.DataSet {
         
-        private BranchProductivityDSDataTable tableBranchProductivityDS;
+        private SummaryDSDataTable tableSummaryDS;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace Report.Dataset {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["BranchProductivityDS"] != null)) {
-                    base.Tables.Add(new BranchProductivityDSDataTable(ds.Tables["BranchProductivityDS"]));
+                if ((ds.Tables["SummaryDS"] != null)) {
+                    base.Tables.Add(new SummaryDSDataTable(ds.Tables["SummaryDS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Report.Dataset {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public BranchProductivityDSDataTable BranchProductivityDS {
+        public SummaryDSDataTable SummaryDS {
             get {
-                return this.tableBranchProductivityDS;
+                return this.tableSummaryDS;
             }
         }
         
@@ -152,8 +152,8 @@ namespace Report.Dataset {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["BranchProductivityDS"] != null)) {
-                    base.Tables.Add(new BranchProductivityDSDataTable(ds.Tables["BranchProductivityDS"]));
+                if ((ds.Tables["SummaryDS"] != null)) {
+                    base.Tables.Add(new SummaryDSDataTable(ds.Tables["SummaryDS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableBranchProductivityDS = ((BranchProductivityDSDataTable)(base.Tables["BranchProductivityDS"]));
+            this.tableSummaryDS = ((SummaryDSDataTable)(base.Tables["SummaryDS"]));
             if ((initTable == true)) {
-                if ((this.tableBranchProductivityDS != null)) {
-                    this.tableBranchProductivityDS.InitVars();
+                if ((this.tableSummaryDS != null)) {
+                    this.tableSummaryDS.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace Report.Dataset {
             this.Namespace = "http://tempuri.org/SummaryReport.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableBranchProductivityDS = new BranchProductivityDSDataTable();
-            base.Tables.Add(this.tableBranchProductivityDS);
+            this.tableSummaryDS = new SummaryDSDataTable();
+            base.Tables.Add(this.tableSummaryDS);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeBranchProductivityDS() {
+        private bool ShouldSerializeSummaryDS() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace Report.Dataset {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void BranchProductivityDSRowChangeEventHandler(object sender, BranchProductivityDSRowChangeEvent e);
+        public delegate void SummaryDSRowChangeEventHandler(object sender, SummaryDSRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class BranchProductivityDSDataTable : global::System.Data.TypedTableBase<BranchProductivityDSRow> {
+        public partial class SummaryDSDataTable : global::System.Data.TypedTableBase<SummaryDSRow> {
             
             private global::System.Data.DataColumn columnname;
             
@@ -323,8 +323,8 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public BranchProductivityDSDataTable() {
-                this.TableName = "BranchProductivityDS";
+            public SummaryDSDataTable() {
+                this.TableName = "SummaryDS";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -332,7 +332,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal BranchProductivityDSDataTable(global::System.Data.DataTable table) {
+            internal SummaryDSDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -349,7 +349,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected BranchProductivityDSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected SummaryDSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -533,33 +533,33 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public BranchProductivityDSRow this[int index] {
+            public SummaryDSRow this[int index] {
                 get {
-                    return ((BranchProductivityDSRow)(this.Rows[index]));
+                    return ((SummaryDSRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event BranchProductivityDSRowChangeEventHandler BranchProductivityDSRowChanging;
+            public event SummaryDSRowChangeEventHandler SummaryDSRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event BranchProductivityDSRowChangeEventHandler BranchProductivityDSRowChanged;
+            public event SummaryDSRowChangeEventHandler SummaryDSRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event BranchProductivityDSRowChangeEventHandler BranchProductivityDSRowDeleting;
+            public event SummaryDSRowChangeEventHandler SummaryDSRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event BranchProductivityDSRowChangeEventHandler BranchProductivityDSRowDeleted;
+            public event SummaryDSRowChangeEventHandler SummaryDSRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddBranchProductivityDSRow(BranchProductivityDSRow row) {
+            public void AddSummaryDSRow(SummaryDSRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public BranchProductivityDSRow AddBranchProductivityDSRow(
+            public SummaryDSRow AddSummaryDSRow(
                         string name, 
                         string new_num_client, 
                         string siid, 
@@ -581,7 +581,7 @@ namespace Report.Dataset {
                         string principle91, 
                         string interest91, 
                         string currency) {
-                BranchProductivityDSRow rowBranchProductivityDSRow = ((BranchProductivityDSRow)(this.NewRow()));
+                SummaryDSRow rowSummaryDSRow = ((SummaryDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         name,
                         new_num_client,
@@ -604,15 +604,15 @@ namespace Report.Dataset {
                         principle91,
                         interest91,
                         currency};
-                rowBranchProductivityDSRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowBranchProductivityDSRow);
-                return rowBranchProductivityDSRow;
+                rowSummaryDSRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSummaryDSRow);
+                return rowSummaryDSRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                BranchProductivityDSDataTable cln = ((BranchProductivityDSDataTable)(base.Clone()));
+                SummaryDSDataTable cln = ((SummaryDSDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -620,7 +620,7 @@ namespace Report.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new BranchProductivityDSDataTable();
+                return new SummaryDSDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -698,28 +698,28 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public BranchProductivityDSRow NewBranchProductivityDSRow() {
-                return ((BranchProductivityDSRow)(this.NewRow()));
+            public SummaryDSRow NewSummaryDSRow() {
+                return ((SummaryDSRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new BranchProductivityDSRow(builder);
+                return new SummaryDSRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(BranchProductivityDSRow);
+                return typeof(SummaryDSRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.BranchProductivityDSRowChanged != null)) {
-                    this.BranchProductivityDSRowChanged(this, new BranchProductivityDSRowChangeEvent(((BranchProductivityDSRow)(e.Row)), e.Action));
+                if ((this.SummaryDSRowChanged != null)) {
+                    this.SummaryDSRowChanged(this, new SummaryDSRowChangeEvent(((SummaryDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -727,8 +727,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.BranchProductivityDSRowChanging != null)) {
-                    this.BranchProductivityDSRowChanging(this, new BranchProductivityDSRowChangeEvent(((BranchProductivityDSRow)(e.Row)), e.Action));
+                if ((this.SummaryDSRowChanging != null)) {
+                    this.SummaryDSRowChanging(this, new SummaryDSRowChangeEvent(((SummaryDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -736,8 +736,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.BranchProductivityDSRowDeleted != null)) {
-                    this.BranchProductivityDSRowDeleted(this, new BranchProductivityDSRowChangeEvent(((BranchProductivityDSRow)(e.Row)), e.Action));
+                if ((this.SummaryDSRowDeleted != null)) {
+                    this.SummaryDSRowDeleted(this, new SummaryDSRowChangeEvent(((SummaryDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -745,14 +745,14 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.BranchProductivityDSRowDeleting != null)) {
-                    this.BranchProductivityDSRowDeleting(this, new BranchProductivityDSRowChangeEvent(((BranchProductivityDSRow)(e.Row)), e.Action));
+                if ((this.SummaryDSRowDeleting != null)) {
+                    this.SummaryDSRowDeleting(this, new SummaryDSRowChangeEvent(((SummaryDSRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveBranchProductivityDSRow(BranchProductivityDSRow row) {
+            public void RemoveSummaryDSRow(SummaryDSRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -779,7 +779,7 @@ namespace Report.Dataset {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "BranchProductivityDSDataTable";
+                attribute2.FixedValue = "SummaryDSDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -823,15 +823,15 @@ namespace Report.Dataset {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class BranchProductivityDSRow : global::System.Data.DataRow {
+        public partial class SummaryDSRow : global::System.Data.DataRow {
             
-            private BranchProductivityDSDataTable tableBranchProductivityDS;
+            private SummaryDSDataTable tableSummaryDS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal BranchProductivityDSRow(global::System.Data.DataRowBuilder rb) : 
+            internal SummaryDSRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableBranchProductivityDS = ((BranchProductivityDSDataTable)(this.Table));
+                this.tableSummaryDS = ((SummaryDSDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -839,14 +839,14 @@ namespace Report.Dataset {
             public string name {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.nameColumn]));
+                        return ((string)(this[this.tableSummaryDS.nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'name\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'name\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.nameColumn] = value;
+                    this[this.tableSummaryDS.nameColumn] = value;
                 }
             }
             
@@ -855,14 +855,14 @@ namespace Report.Dataset {
             public string new_num_client {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.new_num_clientColumn]));
+                        return ((string)(this[this.tableSummaryDS.new_num_clientColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'new_num_client\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'new_num_client\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.new_num_clientColumn] = value;
+                    this[this.tableSummaryDS.new_num_clientColumn] = value;
                 }
             }
             
@@ -871,14 +871,14 @@ namespace Report.Dataset {
             public string siid {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.siidColumn]));
+                        return ((string)(this[this.tableSummaryDS.siidColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'siid\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'siid\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.siidColumn] = value;
+                    this[this.tableSummaryDS.siidColumn] = value;
                 }
             }
             
@@ -887,14 +887,14 @@ namespace Report.Dataset {
             public string new_amt {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.new_amtColumn]));
+                        return ((string)(this[this.tableSummaryDS.new_amtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'new_amt\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'new_amt\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.new_amtColumn] = value;
+                    this[this.tableSummaryDS.new_amtColumn] = value;
                 }
             }
             
@@ -903,15 +903,14 @@ namespace Report.Dataset {
             public string redeem_num_client {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.redeem_num_clientColumn]));
+                        return ((string)(this[this.tableSummaryDS.redeem_num_clientColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_num_client\' in table \'BranchProductivityDS\' is DBNul" +
-                                "l.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_num_client\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.redeem_num_clientColumn] = value;
+                    this[this.tableSummaryDS.redeem_num_clientColumn] = value;
                 }
             }
             
@@ -920,14 +919,14 @@ namespace Report.Dataset {
             public string redeem_amt {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.redeem_amtColumn]));
+                        return ((string)(this[this.tableSummaryDS.redeem_amtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_amt\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_amt\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.redeem_amtColumn] = value;
+                    this[this.tableSummaryDS.redeem_amtColumn] = value;
                 }
             }
             
@@ -936,15 +935,14 @@ namespace Report.Dataset {
             public string current_num_client {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.current_num_clientColumn]));
+                        return ((string)(this[this.tableSummaryDS.current_num_clientColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'current_num_client\' in table \'BranchProductivityDS\' is DBNu" +
-                                "ll.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'current_num_client\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.current_num_clientColumn] = value;
+                    this[this.tableSummaryDS.current_num_clientColumn] = value;
                 }
             }
             
@@ -953,14 +951,14 @@ namespace Report.Dataset {
             public string renew_client {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.renew_clientColumn]));
+                        return ((string)(this[this.tableSummaryDS.renew_clientColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'renew_client\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_client\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.renew_clientColumn] = value;
+                    this[this.tableSummaryDS.renew_clientColumn] = value;
                 }
             }
             
@@ -969,14 +967,14 @@ namespace Report.Dataset {
             public string current_amt {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.current_amtColumn]));
+                        return ((string)(this[this.tableSummaryDS.current_amtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'current_amt\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'current_amt\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.current_amtColumn] = value;
+                    this[this.tableSummaryDS.current_amtColumn] = value;
                 }
             }
             
@@ -985,14 +983,14 @@ namespace Report.Dataset {
             public string renew_amt {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.renew_amtColumn]));
+                        return ((string)(this[this.tableSummaryDS.renew_amtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'renew_amt\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_amt\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.renew_amtColumn] = value;
+                    this[this.tableSummaryDS.renew_amtColumn] = value;
                 }
             }
             
@@ -1001,15 +999,14 @@ namespace Report.Dataset {
             public string late_principle_amt {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.late_principle_amtColumn]));
+                        return ((string)(this[this.tableSummaryDS.late_principle_amtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'late_principle_amt\' in table \'BranchProductivityDS\' is DBNu" +
-                                "ll.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'late_principle_amt\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.late_principle_amtColumn] = value;
+                    this[this.tableSummaryDS.late_principle_amtColumn] = value;
                 }
             }
             
@@ -1018,15 +1015,14 @@ namespace Report.Dataset {
             public string late_num_client {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.late_num_clientColumn]));
+                        return ((string)(this[this.tableSummaryDS.late_num_clientColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'late_num_client\' in table \'BranchProductivityDS\' is DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'late_num_client\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.late_num_clientColumn] = value;
+                    this[this.tableSummaryDS.late_num_clientColumn] = value;
                 }
             }
             
@@ -1035,14 +1031,14 @@ namespace Report.Dataset {
             public string principle130 {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.principle130Column]));
+                        return ((string)(this[this.tableSummaryDS.principle130Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'principle130\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle130\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.principle130Column] = value;
+                    this[this.tableSummaryDS.principle130Column] = value;
                 }
             }
             
@@ -1051,14 +1047,14 @@ namespace Report.Dataset {
             public string interest130 {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.interest130Column]));
+                        return ((string)(this[this.tableSummaryDS.interest130Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest130\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest130\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.interest130Column] = value;
+                    this[this.tableSummaryDS.interest130Column] = value;
                 }
             }
             
@@ -1067,14 +1063,14 @@ namespace Report.Dataset {
             public string principle3160 {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.principle3160Column]));
+                        return ((string)(this[this.tableSummaryDS.principle3160Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'principle3160\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle3160\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.principle3160Column] = value;
+                    this[this.tableSummaryDS.principle3160Column] = value;
                 }
             }
             
@@ -1083,14 +1079,14 @@ namespace Report.Dataset {
             public string interest3160 {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.interest3160Column]));
+                        return ((string)(this[this.tableSummaryDS.interest3160Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest3160\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest3160\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.interest3160Column] = value;
+                    this[this.tableSummaryDS.interest3160Column] = value;
                 }
             }
             
@@ -1099,14 +1095,14 @@ namespace Report.Dataset {
             public string principle6190 {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.principle6190Column]));
+                        return ((string)(this[this.tableSummaryDS.principle6190Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'principle6190\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle6190\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.principle6190Column] = value;
+                    this[this.tableSummaryDS.principle6190Column] = value;
                 }
             }
             
@@ -1115,14 +1111,14 @@ namespace Report.Dataset {
             public string interest6190 {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.interest6190Column]));
+                        return ((string)(this[this.tableSummaryDS.interest6190Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest6190\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest6190\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.interest6190Column] = value;
+                    this[this.tableSummaryDS.interest6190Column] = value;
                 }
             }
             
@@ -1131,14 +1127,14 @@ namespace Report.Dataset {
             public string principle91 {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.principle91Column]));
+                        return ((string)(this[this.tableSummaryDS.principle91Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'principle91\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle91\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.principle91Column] = value;
+                    this[this.tableSummaryDS.principle91Column] = value;
                 }
             }
             
@@ -1147,14 +1143,14 @@ namespace Report.Dataset {
             public string interest91 {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.interest91Column]));
+                        return ((string)(this[this.tableSummaryDS.interest91Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest91\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest91\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.interest91Column] = value;
+                    this[this.tableSummaryDS.interest91Column] = value;
                 }
             }
             
@@ -1163,267 +1159,267 @@ namespace Report.Dataset {
             public string currency {
                 get {
                     try {
-                        return ((string)(this[this.tableBranchProductivityDS.currencyColumn]));
+                        return ((string)(this[this.tableSummaryDS.currencyColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'currency\' in table \'BranchProductivityDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'currency\' in table \'SummaryDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBranchProductivityDS.currencyColumn] = value;
+                    this[this.tableSummaryDS.currencyColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsnameNull() {
-                return this.IsNull(this.tableBranchProductivityDS.nameColumn);
+                return this.IsNull(this.tableSummaryDS.nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetnameNull() {
-                this[this.tableBranchProductivityDS.nameColumn] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isnew_num_clientNull() {
-                return this.IsNull(this.tableBranchProductivityDS.new_num_clientColumn);
+                return this.IsNull(this.tableSummaryDS.new_num_clientColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setnew_num_clientNull() {
-                this[this.tableBranchProductivityDS.new_num_clientColumn] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.new_num_clientColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IssiidNull() {
-                return this.IsNull(this.tableBranchProductivityDS.siidColumn);
+                return this.IsNull(this.tableSummaryDS.siidColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetsiidNull() {
-                this[this.tableBranchProductivityDS.siidColumn] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.siidColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isnew_amtNull() {
-                return this.IsNull(this.tableBranchProductivityDS.new_amtColumn);
+                return this.IsNull(this.tableSummaryDS.new_amtColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setnew_amtNull() {
-                this[this.tableBranchProductivityDS.new_amtColumn] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.new_amtColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isredeem_num_clientNull() {
-                return this.IsNull(this.tableBranchProductivityDS.redeem_num_clientColumn);
+                return this.IsNull(this.tableSummaryDS.redeem_num_clientColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setredeem_num_clientNull() {
-                this[this.tableBranchProductivityDS.redeem_num_clientColumn] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.redeem_num_clientColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isredeem_amtNull() {
-                return this.IsNull(this.tableBranchProductivityDS.redeem_amtColumn);
+                return this.IsNull(this.tableSummaryDS.redeem_amtColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setredeem_amtNull() {
-                this[this.tableBranchProductivityDS.redeem_amtColumn] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.redeem_amtColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Iscurrent_num_clientNull() {
-                return this.IsNull(this.tableBranchProductivityDS.current_num_clientColumn);
+                return this.IsNull(this.tableSummaryDS.current_num_clientColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setcurrent_num_clientNull() {
-                this[this.tableBranchProductivityDS.current_num_clientColumn] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.current_num_clientColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isrenew_clientNull() {
-                return this.IsNull(this.tableBranchProductivityDS.renew_clientColumn);
+                return this.IsNull(this.tableSummaryDS.renew_clientColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setrenew_clientNull() {
-                this[this.tableBranchProductivityDS.renew_clientColumn] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.renew_clientColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Iscurrent_amtNull() {
-                return this.IsNull(this.tableBranchProductivityDS.current_amtColumn);
+                return this.IsNull(this.tableSummaryDS.current_amtColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setcurrent_amtNull() {
-                this[this.tableBranchProductivityDS.current_amtColumn] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.current_amtColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isrenew_amtNull() {
-                return this.IsNull(this.tableBranchProductivityDS.renew_amtColumn);
+                return this.IsNull(this.tableSummaryDS.renew_amtColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setrenew_amtNull() {
-                this[this.tableBranchProductivityDS.renew_amtColumn] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.renew_amtColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Islate_principle_amtNull() {
-                return this.IsNull(this.tableBranchProductivityDS.late_principle_amtColumn);
+                return this.IsNull(this.tableSummaryDS.late_principle_amtColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setlate_principle_amtNull() {
-                this[this.tableBranchProductivityDS.late_principle_amtColumn] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.late_principle_amtColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Islate_num_clientNull() {
-                return this.IsNull(this.tableBranchProductivityDS.late_num_clientColumn);
+                return this.IsNull(this.tableSummaryDS.late_num_clientColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setlate_num_clientNull() {
-                this[this.tableBranchProductivityDS.late_num_clientColumn] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.late_num_clientColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isprinciple130Null() {
-                return this.IsNull(this.tableBranchProductivityDS.principle130Column);
+                return this.IsNull(this.tableSummaryDS.principle130Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setprinciple130Null() {
-                this[this.tableBranchProductivityDS.principle130Column] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.principle130Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isinterest130Null() {
-                return this.IsNull(this.tableBranchProductivityDS.interest130Column);
+                return this.IsNull(this.tableSummaryDS.interest130Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setinterest130Null() {
-                this[this.tableBranchProductivityDS.interest130Column] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.interest130Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isprinciple3160Null() {
-                return this.IsNull(this.tableBranchProductivityDS.principle3160Column);
+                return this.IsNull(this.tableSummaryDS.principle3160Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setprinciple3160Null() {
-                this[this.tableBranchProductivityDS.principle3160Column] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.principle3160Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isinterest3160Null() {
-                return this.IsNull(this.tableBranchProductivityDS.interest3160Column);
+                return this.IsNull(this.tableSummaryDS.interest3160Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setinterest3160Null() {
-                this[this.tableBranchProductivityDS.interest3160Column] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.interest3160Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isprinciple6190Null() {
-                return this.IsNull(this.tableBranchProductivityDS.principle6190Column);
+                return this.IsNull(this.tableSummaryDS.principle6190Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setprinciple6190Null() {
-                this[this.tableBranchProductivityDS.principle6190Column] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.principle6190Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isinterest6190Null() {
-                return this.IsNull(this.tableBranchProductivityDS.interest6190Column);
+                return this.IsNull(this.tableSummaryDS.interest6190Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setinterest6190Null() {
-                this[this.tableBranchProductivityDS.interest6190Column] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.interest6190Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isprinciple91Null() {
-                return this.IsNull(this.tableBranchProductivityDS.principle91Column);
+                return this.IsNull(this.tableSummaryDS.principle91Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setprinciple91Null() {
-                this[this.tableBranchProductivityDS.principle91Column] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.principle91Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isinterest91Null() {
-                return this.IsNull(this.tableBranchProductivityDS.interest91Column);
+                return this.IsNull(this.tableSummaryDS.interest91Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setinterest91Null() {
-                this[this.tableBranchProductivityDS.interest91Column] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.interest91Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IscurrencyNull() {
-                return this.IsNull(this.tableBranchProductivityDS.currencyColumn);
+                return this.IsNull(this.tableSummaryDS.currencyColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetcurrencyNull() {
-                this[this.tableBranchProductivityDS.currencyColumn] = global::System.Convert.DBNull;
+                this[this.tableSummaryDS.currencyColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1431,22 +1427,22 @@ namespace Report.Dataset {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class BranchProductivityDSRowChangeEvent : global::System.EventArgs {
+        public class SummaryDSRowChangeEvent : global::System.EventArgs {
             
-            private BranchProductivityDSRow eventRow;
+            private SummaryDSRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public BranchProductivityDSRowChangeEvent(BranchProductivityDSRow row, global::System.Data.DataRowAction action) {
+            public SummaryDSRowChangeEvent(SummaryDSRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public BranchProductivityDSRow Row {
+            public SummaryDSRow Row {
                 get {
                     return this.eventRow;
                 }

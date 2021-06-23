@@ -18,8 +18,7 @@
                     </asp:RequiredFieldValidator>
                 </div>
                 <div class="col-sm-2 form-group">
-                    <label>From Date: </label> &nbsp;&nbsp;&nbsp;
-                    
+                    <label>From Date: </label>
                      <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
                         <Triggers>
                             <asp:AsyncPostBackTrigger ControlID="chkFromDate" />

@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace Report.Operation
 {
-    public partial class Renew : System.Web.UI.Page
+    public partial class TurnOver : System.Web.UI.Page
     {
         private DBConnect db = new DBConnect();
         static List<Currency> currencyList;
@@ -16,10 +16,10 @@ namespace Report.Operation
         public string format = "dd/MM/yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataHelper.checkLoginSession();
-            systemDateStr = DataHelper.getSystemDate().ToString("dd/MM/yyyy");
             if (!IsPostBack)
             {
+                DataHelper.checkLoginSession();
+                systemDateStr = DataHelper.getSystemDate().ToString("dd/MM/yyyy");
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
                 chkFromDate.Checked = true;
                 dtpFromDate.Enabled = false;
@@ -50,12 +50,12 @@ namespace Report.Operation
             {
                 reportParameters.Add(new ReportParameter("FromDate", " "));
             }
-            reportParameters.Add(new ReportParameter("SystemDate", DateTime.ParseExact(dtpSystemDate.Text, format, null).ToString("dd-MMM-yyyy")));
+            reportParameters.Add(new ReportParameter("ToDate", DateTime.ParseExact(dtpSystemDate.Text, format, null).ToString("dd-MMM-yyyy")));
             reportParameters.Add(new ReportParameter("Currency", ddCurrency.SelectedItem.Text));
 
-            var ds = new ReportDataSource("RenewDS", dt);
+            var ds = new ReportDataSource("TurnoverDS", dt);
 
-            DataHelper.generateOperationReport(ReportViewer1, "RenewReport", reportParameters, ds);
+            DataHelper.generateOperationReport(ReportViewer1, "TurnoverReport", reportParameters, ds);
         }
 
         protected void btnView_Click(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace Report.Operation
                 officer = ddOfficer.SelectedItem.Value;
             }
 
-            var spd = "PS_RENEW";
+            var spd = "PS_TURNOVER";
             List<Procedure> parameters = new List<Procedure>();
             parameters.Add(item: new Procedure() { field_name = "@branchId", sql_db_type = MySqlDbType.VarChar, value_name = ddBranchName.SelectedItem.Value });
             parameters.Add(item: new Procedure() { field_name = "@currencyId", sql_db_type = MySqlDbType.VarChar, value_name = ddCurrency.SelectedItem.Value });

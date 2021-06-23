@@ -279,21 +279,55 @@ namespace Report.Dataset {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class TurnoverDSDataTable : global::System.Data.TypedTableBase<TurnoverDSRow> {
             
-            private global::System.Data.DataColumn columntrnx_date;
+            private global::System.Data.DataColumn columnpayment_flag;
+            
+            private global::System.Data.DataColumn columndate_created;
             
             private global::System.Data.DataColumn columnticket_no;
             
-            private global::System.Data.DataColumn columnnewgrant;
+            private global::System.Data.DataColumn columndisbursement_date;
             
             private global::System.Data.DataColumn columncustomer_name;
-            
-            private global::System.Data.DataColumn columnouts;
             
             private global::System.Data.DataColumn columndue_date;
             
             private global::System.Data.DataColumn columnlob_name;
             
             private global::System.Data.DataColumn columnserial_number;
+            
+            private global::System.Data.DataColumn columnpawn_officer;
+            
+            private global::System.Data.DataColumn columnnew_pawn_price;
+            
+            private global::System.Data.DataColumn columnnew_principle;
+            
+            private global::System.Data.DataColumn columnnew_interest;
+            
+            private global::System.Data.DataColumn columnnew_other_income;
+            
+            private global::System.Data.DataColumn columnnew_penalty;
+            
+            private global::System.Data.DataColumn columnrenew_pawn_price;
+            
+            private global::System.Data.DataColumn columnrenew_principle;
+            
+            private global::System.Data.DataColumn columnrenew_interest;
+            
+            private global::System.Data.DataColumn columnrenew_other_income;
+            
+            private global::System.Data.DataColumn columnrenew_penalty;
+            
+            private global::System.Data.DataColumn columnrow_number;
+            
+            private global::System.Data.DataColumn columncontract_id;
+            
+            private global::System.Data.DataColumn columnsys_date_id;
+            
+            private global::System.Data.DataColumn columnredeem_interest;
+            
+            private global::System.Data.DataColumn columnredeem_other_income;
+            
+            private global::System.Data.DataColumn columnredeem_penalty;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -330,9 +364,17 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn trnx_dateColumn {
+            public global::System.Data.DataColumn payment_flagColumn {
                 get {
-                    return this.columntrnx_date;
+                    return this.columnpayment_flag;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn date_createdColumn {
+                get {
+                    return this.columndate_created;
                 }
             }
             
@@ -346,9 +388,9 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn newgrantColumn {
+            public global::System.Data.DataColumn disbursement_dateColumn {
                 get {
-                    return this.columnnewgrant;
+                    return this.columndisbursement_date;
                 }
             }
             
@@ -357,14 +399,6 @@ namespace Report.Dataset {
             public global::System.Data.DataColumn customer_nameColumn {
                 get {
                     return this.columncustomer_name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn outsColumn {
-                get {
-                    return this.columnouts;
                 }
             }
             
@@ -389,6 +423,142 @@ namespace Report.Dataset {
             public global::System.Data.DataColumn serial_numberColumn {
                 get {
                     return this.columnserial_number;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn pawn_officerColumn {
+                get {
+                    return this.columnpawn_officer;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn new_pawn_priceColumn {
+                get {
+                    return this.columnnew_pawn_price;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn new_principleColumn {
+                get {
+                    return this.columnnew_principle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn new_interestColumn {
+                get {
+                    return this.columnnew_interest;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn new_other_incomeColumn {
+                get {
+                    return this.columnnew_other_income;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn new_penaltyColumn {
+                get {
+                    return this.columnnew_penalty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn renew_pawn_priceColumn {
+                get {
+                    return this.columnrenew_pawn_price;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn renew_principleColumn {
+                get {
+                    return this.columnrenew_principle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn renew_interestColumn {
+                get {
+                    return this.columnrenew_interest;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn renew_other_incomeColumn {
+                get {
+                    return this.columnrenew_other_income;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn renew_penaltyColumn {
+                get {
+                    return this.columnrenew_penalty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn row_numberColumn {
+                get {
+                    return this.columnrow_number;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn contract_idColumn {
+                get {
+                    return this.columncontract_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn sys_date_idColumn {
+                get {
+                    return this.columnsys_date_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn redeem_interestColumn {
+                get {
+                    return this.columnredeem_interest;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn redeem_other_incomeColumn {
+                get {
+                    return this.columnredeem_other_income;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn redeem_penaltyColumn {
+                get {
+                    return this.columnredeem_penalty;
                 }
             }
             
@@ -429,17 +599,59 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TurnoverDSRow AddTurnoverDSRow(string trnx_date, string ticket_no, string newgrant, string customer_name, string outs, string due_date, string lob_name, string serial_number) {
+            public TurnoverDSRow AddTurnoverDSRow(
+                        string payment_flag, 
+                        string date_created, 
+                        string ticket_no, 
+                        string disbursement_date, 
+                        string customer_name, 
+                        string due_date, 
+                        string lob_name, 
+                        string serial_number, 
+                        string pawn_officer, 
+                        string new_pawn_price, 
+                        string new_principle, 
+                        string new_interest, 
+                        string new_other_income, 
+                        string new_penalty, 
+                        string renew_pawn_price, 
+                        string renew_principle, 
+                        string renew_interest, 
+                        string renew_other_income, 
+                        string renew_penalty, 
+                        string row_number, 
+                        string contract_id, 
+                        string sys_date_id, 
+                        string redeem_interest, 
+                        string redeem_other_income, 
+                        string redeem_penalty) {
                 TurnoverDSRow rowTurnoverDSRow = ((TurnoverDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        trnx_date,
+                        payment_flag,
+                        date_created,
                         ticket_no,
-                        newgrant,
+                        disbursement_date,
                         customer_name,
-                        outs,
                         due_date,
                         lob_name,
-                        serial_number};
+                        serial_number,
+                        pawn_officer,
+                        new_pawn_price,
+                        new_principle,
+                        new_interest,
+                        new_other_income,
+                        new_penalty,
+                        renew_pawn_price,
+                        renew_principle,
+                        renew_interest,
+                        renew_other_income,
+                        renew_penalty,
+                        row_number,
+                        contract_id,
+                        sys_date_id,
+                        redeem_interest,
+                        redeem_other_income,
+                        redeem_penalty};
                 rowTurnoverDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTurnoverDSRow);
                 return rowTurnoverDSRow;
@@ -462,35 +674,86 @@ namespace Report.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columntrnx_date = base.Columns["trnx_date"];
+                this.columnpayment_flag = base.Columns["payment_flag"];
+                this.columndate_created = base.Columns["date_created"];
                 this.columnticket_no = base.Columns["ticket_no"];
-                this.columnnewgrant = base.Columns["newgrant"];
+                this.columndisbursement_date = base.Columns["disbursement_date"];
                 this.columncustomer_name = base.Columns["customer_name"];
-                this.columnouts = base.Columns["outs"];
                 this.columndue_date = base.Columns["due_date"];
                 this.columnlob_name = base.Columns["lob_name"];
                 this.columnserial_number = base.Columns["serial_number"];
+                this.columnpawn_officer = base.Columns["pawn_officer"];
+                this.columnnew_pawn_price = base.Columns["new_pawn_price"];
+                this.columnnew_principle = base.Columns["new_principle"];
+                this.columnnew_interest = base.Columns["new_interest"];
+                this.columnnew_other_income = base.Columns["new_other_income"];
+                this.columnnew_penalty = base.Columns["new_penalty"];
+                this.columnrenew_pawn_price = base.Columns["renew_pawn_price"];
+                this.columnrenew_principle = base.Columns["renew_principle"];
+                this.columnrenew_interest = base.Columns["renew_interest"];
+                this.columnrenew_other_income = base.Columns["renew_other_income"];
+                this.columnrenew_penalty = base.Columns["renew_penalty"];
+                this.columnrow_number = base.Columns["row_number"];
+                this.columncontract_id = base.Columns["contract_id"];
+                this.columnsys_date_id = base.Columns["sys_date_id"];
+                this.columnredeem_interest = base.Columns["redeem_interest"];
+                this.columnredeem_other_income = base.Columns["redeem_other_income"];
+                this.columnredeem_penalty = base.Columns["redeem_penalty"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columntrnx_date = new global::System.Data.DataColumn("trnx_date", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntrnx_date);
+                this.columnpayment_flag = new global::System.Data.DataColumn("payment_flag", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpayment_flag);
+                this.columndate_created = new global::System.Data.DataColumn("date_created", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate_created);
                 this.columnticket_no = new global::System.Data.DataColumn("ticket_no", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnticket_no);
-                this.columnnewgrant = new global::System.Data.DataColumn("newgrant", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnewgrant);
+                this.columndisbursement_date = new global::System.Data.DataColumn("disbursement_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndisbursement_date);
                 this.columncustomer_name = new global::System.Data.DataColumn("customer_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncustomer_name);
-                this.columnouts = new global::System.Data.DataColumn("outs", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnouts);
                 this.columndue_date = new global::System.Data.DataColumn("due_date", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndue_date);
                 this.columnlob_name = new global::System.Data.DataColumn("lob_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlob_name);
                 this.columnserial_number = new global::System.Data.DataColumn("serial_number", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnserial_number);
+                this.columnpawn_officer = new global::System.Data.DataColumn("pawn_officer", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpawn_officer);
+                this.columnnew_pawn_price = new global::System.Data.DataColumn("new_pawn_price", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnew_pawn_price);
+                this.columnnew_principle = new global::System.Data.DataColumn("new_principle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnew_principle);
+                this.columnnew_interest = new global::System.Data.DataColumn("new_interest", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnew_interest);
+                this.columnnew_other_income = new global::System.Data.DataColumn("new_other_income", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnew_other_income);
+                this.columnnew_penalty = new global::System.Data.DataColumn("new_penalty", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnew_penalty);
+                this.columnrenew_pawn_price = new global::System.Data.DataColumn("renew_pawn_price", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrenew_pawn_price);
+                this.columnrenew_principle = new global::System.Data.DataColumn("renew_principle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrenew_principle);
+                this.columnrenew_interest = new global::System.Data.DataColumn("renew_interest", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrenew_interest);
+                this.columnrenew_other_income = new global::System.Data.DataColumn("renew_other_income", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrenew_other_income);
+                this.columnrenew_penalty = new global::System.Data.DataColumn("renew_penalty", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrenew_penalty);
+                this.columnrow_number = new global::System.Data.DataColumn("row_number", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrow_number);
+                this.columncontract_id = new global::System.Data.DataColumn("contract_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontract_id);
+                this.columnsys_date_id = new global::System.Data.DataColumn("sys_date_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsys_date_id);
+                this.columnredeem_interest = new global::System.Data.DataColumn("redeem_interest", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnredeem_interest);
+                this.columnredeem_other_income = new global::System.Data.DataColumn("redeem_other_income", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnredeem_other_income);
+                this.columnredeem_penalty = new global::System.Data.DataColumn("redeem_penalty", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnredeem_penalty);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -633,17 +896,33 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string trnx_date {
+            public string payment_flag {
                 get {
                     try {
-                        return ((string)(this[this.tableTurnoverDS.trnx_dateColumn]));
+                        return ((string)(this[this.tableTurnoverDS.payment_flagColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'trnx_date\' in table \'TurnoverDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'payment_flag\' in table \'TurnoverDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTurnoverDS.trnx_dateColumn] = value;
+                    this[this.tableTurnoverDS.payment_flagColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string date_created {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.date_createdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'date_created\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.date_createdColumn] = value;
                 }
             }
             
@@ -665,17 +944,17 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string newgrant {
+            public string disbursement_date {
                 get {
                     try {
-                        return ((string)(this[this.tableTurnoverDS.newgrantColumn]));
+                        return ((string)(this[this.tableTurnoverDS.disbursement_dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'newgrant\' in table \'TurnoverDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'disbursement_date\' in table \'TurnoverDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTurnoverDS.newgrantColumn] = value;
+                    this[this.tableTurnoverDS.disbursement_dateColumn] = value;
                 }
             }
             
@@ -692,22 +971,6 @@ namespace Report.Dataset {
                 }
                 set {
                     this[this.tableTurnoverDS.customer_nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string outs {
-                get {
-                    try {
-                        return ((string)(this[this.tableTurnoverDS.outsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'outs\' in table \'TurnoverDS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableTurnoverDS.outsColumn] = value;
                 }
             }
             
@@ -761,14 +1024,298 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Istrnx_dateNull() {
-                return this.IsNull(this.tableTurnoverDS.trnx_dateColumn);
+            public string pawn_officer {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.pawn_officerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'pawn_officer\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.pawn_officerColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Settrnx_dateNull() {
-                this[this.tableTurnoverDS.trnx_dateColumn] = global::System.Convert.DBNull;
+            public string new_pawn_price {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.new_pawn_priceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'new_pawn_price\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.new_pawn_priceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string new_principle {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.new_principleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'new_principle\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.new_principleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string new_interest {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.new_interestColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'new_interest\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.new_interestColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string new_other_income {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.new_other_incomeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'new_other_income\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.new_other_incomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string new_penalty {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.new_penaltyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'new_penalty\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.new_penaltyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string renew_pawn_price {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.renew_pawn_priceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_pawn_price\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.renew_pawn_priceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string renew_principle {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.renew_principleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_principle\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.renew_principleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string renew_interest {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.renew_interestColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_interest\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.renew_interestColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string renew_other_income {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.renew_other_incomeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_other_income\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.renew_other_incomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string renew_penalty {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.renew_penaltyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_penalty\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.renew_penaltyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string row_number {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.row_numberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'row_number\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.row_numberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string contract_id {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.contract_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'contract_id\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.contract_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string sys_date_id {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.sys_date_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'sys_date_id\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.sys_date_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string redeem_interest {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.redeem_interestColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_interest\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.redeem_interestColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string redeem_other_income {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.redeem_other_incomeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_other_income\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.redeem_other_incomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string redeem_penalty {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.redeem_penaltyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_penalty\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.redeem_penaltyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Ispayment_flagNull() {
+                return this.IsNull(this.tableTurnoverDS.payment_flagColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setpayment_flagNull() {
+                this[this.tableTurnoverDS.payment_flagColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isdate_createdNull() {
+                return this.IsNull(this.tableTurnoverDS.date_createdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setdate_createdNull() {
+                this[this.tableTurnoverDS.date_createdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -785,14 +1332,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsnewgrantNull() {
-                return this.IsNull(this.tableTurnoverDS.newgrantColumn);
+            public bool Isdisbursement_dateNull() {
+                return this.IsNull(this.tableTurnoverDS.disbursement_dateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetnewgrantNull() {
-                this[this.tableTurnoverDS.newgrantColumn] = global::System.Convert.DBNull;
+            public void Setdisbursement_dateNull() {
+                this[this.tableTurnoverDS.disbursement_dateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -805,18 +1352,6 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setcustomer_nameNull() {
                 this[this.tableTurnoverDS.customer_nameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsoutsNull() {
-                return this.IsNull(this.tableTurnoverDS.outsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetoutsNull() {
-                this[this.tableTurnoverDS.outsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -853,6 +1388,210 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setserial_numberNull() {
                 this[this.tableTurnoverDS.serial_numberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Ispawn_officerNull() {
+                return this.IsNull(this.tableTurnoverDS.pawn_officerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setpawn_officerNull() {
+                this[this.tableTurnoverDS.pawn_officerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isnew_pawn_priceNull() {
+                return this.IsNull(this.tableTurnoverDS.new_pawn_priceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setnew_pawn_priceNull() {
+                this[this.tableTurnoverDS.new_pawn_priceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isnew_principleNull() {
+                return this.IsNull(this.tableTurnoverDS.new_principleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setnew_principleNull() {
+                this[this.tableTurnoverDS.new_principleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isnew_interestNull() {
+                return this.IsNull(this.tableTurnoverDS.new_interestColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setnew_interestNull() {
+                this[this.tableTurnoverDS.new_interestColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isnew_other_incomeNull() {
+                return this.IsNull(this.tableTurnoverDS.new_other_incomeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setnew_other_incomeNull() {
+                this[this.tableTurnoverDS.new_other_incomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isnew_penaltyNull() {
+                return this.IsNull(this.tableTurnoverDS.new_penaltyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setnew_penaltyNull() {
+                this[this.tableTurnoverDS.new_penaltyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrenew_pawn_priceNull() {
+                return this.IsNull(this.tableTurnoverDS.renew_pawn_priceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrenew_pawn_priceNull() {
+                this[this.tableTurnoverDS.renew_pawn_priceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrenew_principleNull() {
+                return this.IsNull(this.tableTurnoverDS.renew_principleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrenew_principleNull() {
+                this[this.tableTurnoverDS.renew_principleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrenew_interestNull() {
+                return this.IsNull(this.tableTurnoverDS.renew_interestColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrenew_interestNull() {
+                this[this.tableTurnoverDS.renew_interestColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrenew_other_incomeNull() {
+                return this.IsNull(this.tableTurnoverDS.renew_other_incomeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrenew_other_incomeNull() {
+                this[this.tableTurnoverDS.renew_other_incomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrenew_penaltyNull() {
+                return this.IsNull(this.tableTurnoverDS.renew_penaltyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrenew_penaltyNull() {
+                this[this.tableTurnoverDS.renew_penaltyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isrow_numberNull() {
+                return this.IsNull(this.tableTurnoverDS.row_numberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setrow_numberNull() {
+                this[this.tableTurnoverDS.row_numberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscontract_idNull() {
+                return this.IsNull(this.tableTurnoverDS.contract_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcontract_idNull() {
+                this[this.tableTurnoverDS.contract_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Issys_date_idNull() {
+                return this.IsNull(this.tableTurnoverDS.sys_date_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setsys_date_idNull() {
+                this[this.tableTurnoverDS.sys_date_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isredeem_interestNull() {
+                return this.IsNull(this.tableTurnoverDS.redeem_interestColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setredeem_interestNull() {
+                this[this.tableTurnoverDS.redeem_interestColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isredeem_other_incomeNull() {
+                return this.IsNull(this.tableTurnoverDS.redeem_other_incomeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setredeem_other_incomeNull() {
+                this[this.tableTurnoverDS.redeem_other_incomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isredeem_penaltyNull() {
+                return this.IsNull(this.tableTurnoverDS.redeem_penaltyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setredeem_penaltyNull() {
+                this[this.tableTurnoverDS.redeem_penaltyColumn] = global::System.Convert.DBNull;
             }
         }
         

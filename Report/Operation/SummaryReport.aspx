@@ -5,23 +5,26 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="panel panel-warning no-margin">
         <div class="panel-body">
-            <div class="form-inline">
-                <div class="form-group">
-                    <label>Branch</label>
-                    <asp:DropDownList ID="ddBranchName" runat="server" CssClass="form-control cnt-min-width">
+            <div class="row">
+                <div class="col-sm-3 form-group">
+                    <label>Branch: </label>
+                    <asp:DropDownList ID="ddBranchName" runat="server" CssClass="form-control input-sm">
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddBranchName"
                         ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
                     </asp:RequiredFieldValidator>
                 </div>
-                <div class="form-group ml16">
-                    <label>Currency:</label>
-                    <asp:DropDownList ID="ddCurrency" runat="server" CssClass="form-control cnt-min-width">
+                <div class="col-sm-2 form-group">
+                    <label>Currency: </label>
+                    <asp:DropDownList ID="ddCurrency" runat="server" CssClass="form-control input-sm">
                     </asp:DropDownList>
                 </div>
 
                 <div class="form-group ml16">
-                    <asp:Button ID="btnView" runat="server" Text="View" OnClick="btnView_Click" CssClass="btn btn-info" />
+                    <div>
+                        <label>&nbsp;</label>
+                    </div>
+                    <asp:Button ID="btnView" runat="server" Text="View Report" OnClick="btnView_Click" CssClass="btn btn-sm btn-primary" />
                 </div>
             </div>
         </div>
