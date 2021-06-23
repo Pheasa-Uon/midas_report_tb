@@ -10,11 +10,11 @@
             <div class="row">
                 <div class="col-sm-3 form-group">
                     <label>Contract# :</label>
-                    <asp:TextBox ID="txtContract" runat="server" class="form-control cnt-min-width"></asp:TextBox>
+                    <asp:TextBox ID="txtContract" runat="server" CssClass="form-control input-sm"></asp:TextBox>
                 </div>
                   <div class="col-sm-3 form-group">
                     <label>System Date  :</label>
-                    <asp:TextBox ID="dtpSystemDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
+                    <asp:TextBox ID="dtpSystemDate" runat="server" CssClass="form-control input-sm datepick"></asp:TextBox>
                 </div>
                 <div class="form-group ml16">
                     <div>

@@ -15,7 +15,7 @@
                 </div>
                   <div class="col-sm-3 form-group">
                     <label>As Of :</label>
-                    <asp:TextBox ID="dtpAsOfDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
+                    <asp:TextBox ID="dtpAsOfDate" runat="server" class="form-control input-sm datepick"></asp:TextBox>
                 </div>
                 <div class="form-group ml16">
                     <div>

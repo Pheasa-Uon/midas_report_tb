@@ -8,19 +8,21 @@
     <script src="../Scripts/datetimepicker.js" type="text/javascript"></script>
     <div class="panel panel-warning no-margin">
         <div class="panel-body">
-            <div class="form-inline">
-                <div class="form-group">
+            <div class="row">
+                <div class="col-sm-3 form-group">
                     <label>Branch:</label>
-                    <asp:DropDownList ID="ddBranchName" runat="server" CssClass="form-control cnt-min-width">
+                    <asp:DropDownList ID="ddBranchName" runat="server" CssClass="form-control input-sm">
                     </asp:DropDownList>
                 </div>
-                <div class="form-group ml16">
+                <div class="col-sm-3 form-group">
                     <label>Date:</label>
-                    <asp:TextBox ID="dtpDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
+                    <asp:TextBox ID="dtpDate" runat="server" class="form-control input-sm datepick"></asp:TextBox>
                 </div>
-                
-                <div class="form-group ml16">
-                    <asp:Button ID="btnView" runat="server" Text="View" OnClick="btnView_Click" CssClass="btn btn-info" />
+              <div class="form-group ml16">
+                    <div>
+                        <label>&nbsp;</label>
+                    </div>
+                    <asp:Button ID="btnView" runat="server" Text="View Report" CssClass="btn btn-sm btn-primary" />
                 </div>
             </div>
         </div>
