@@ -15,11 +15,11 @@
                 </div>
                   <div class="col-sm-3 form-group">
                     <label>From Date  :</label>
-                    <asp:TextBox ID="dtpfromDate" runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
+                    <asp:TextBox ID="dtpfromDate" runat="server" class="form-control input-sm datepick"></asp:TextBox>
                 </div>
                    <div class="col-sm-3 form-group">
                     <label>To Date  :</label>
-                    <asp:TextBox ID="dtpToDate"  runat="server" class="form-control cnt-min-width datepick"></asp:TextBox>
+                    <asp:TextBox ID="dtpToDate"  runat="server" class="form-control input-sm datepick"></asp:TextBox>
                 </div>
                 <div class="form-group ml16">
                     <div>

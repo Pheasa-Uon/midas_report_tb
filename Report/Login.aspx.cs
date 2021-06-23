@@ -21,10 +21,10 @@ namespace Report
         protected void Button1_Click(object sender, EventArgs e)
         {
             ClsCrypto cls = new ClsCrypto("d");
-
+            System.Diagnostics.Debug.WriteLine(">>>>>>>>>>>>>");
             var pEncrypt = cls.Encrypt(txtPassword.Text);
          
-            var user = DataHelper.login(txtUsername.Text, pEncrypt);  //"AQUpvTCF66ztPrYRtLm9ew=="
+            var user = DataHelper.login(txtUsername.Text, "BorhjiY6JTfWc/HRSOkbOQ==");  //"AQUpvTCF66ztPrYRtLm9ew=="
             if (user.id != 0)
             {
                 HttpContext.Current.Session["userID"] = user.id;
