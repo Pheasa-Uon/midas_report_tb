@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Redeem" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RedeemReport.aspx.cs" Inherits="Report.Operation.Redeem" %>
+﻿<%@ Page Title="Redeem Report" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RedeemReport.aspx.cs" Inherits="Report.Operation.Redeem" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
@@ -6,7 +6,7 @@
     <link href="../Content/jquery-ui.css" rel="Stylesheet" type="text/css" />
     <script src="../Scripts/jquery-ui.js" type="text/javascript"></script>
     <script src="../Scripts/datetimepicker.js" type="text/javascript"></script>
-    <div class="panel panel-default no-margin">
+    <div class="panel panel-warning no-margin">
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-3 form-group">
@@ -17,21 +17,30 @@
                         ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
                     </asp:RequiredFieldValidator>
                 </div>
-                <div class="col-sm-3 form-group">
-                    <label>From Date:</label>
-                    <asp:TextBox ID="dtpFromDate" runat="server" class="form-control input-sm datepick"></asp:TextBox>
-                    <asp:CheckBox ID="chkFromDate" runat="server" Text="Null" AutoPostBack="true" TextAlign="Right" OnCheckedChanged="chkFromDate_CheckedChanged" />
+                <div class="col-sm-2 form-group">
+                    <label>From Date: </label> &nbsp;&nbsp;&nbsp;
+                    
+                     <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
+                        <Triggers>
+                            <asp:AsyncPostBackTrigger ControlID="chkFromDate" />
+                        </Triggers>
+                        <ContentTemplate>
+                            <asp:TextBox ID="dtpFromDate" runat="server" class="form-control input-sm input-inline datepick"></asp:TextBox>
+                            &nbsp;&nbsp;&nbsp;<asp:CheckBox ID="chkFromDate" runat="server" Text=" Null" AutoPostBack="true" TextAlign="Right" OnCheckedChanged="chkFromDate_CheckedChanged"/>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    
                 </div>
-                <div class="col-sm-3 form-group">
+                <div class="col-sm-2 form-group">
                     <label>System Date:</label>
                     <asp:TextBox ID="dtpSystemDate" runat="server" class="form-control input-sm datepick"></asp:TextBox>
                 </div>
-                <div class="col-sm-3 form-group">
+                <div class="col-sm-2 form-group">
                     <label>Currency:</label>
                     <asp:DropDownList ID="ddCurrency" runat="server" CssClass="form-control input-sm">
                     </asp:DropDownList>
                 </div>
-                <div class="col-sm-3 form-group">
+                <div class="col-sm-2 form-group">
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
                         <Triggers>
                             <asp:AsyncPostBackTrigger ControlID="ddBranchName" />
@@ -44,7 +53,9 @@
                     </asp:UpdatePanel>
                 </div>
                 <div class="form-group ml16">
-                    <div><label>&nbsp;</label></div>
+                     <div>
+                        <label>&nbsp;</label>
+                    </div>
                     <asp:Button ID="btnView" runat="server" Text="View Report" OnClick="btnView_Click" CssClass="btn btn-sm btn-primary" />
                 </div>
             </div>

@@ -59,7 +59,6 @@ namespace Report.Operation
 
         protected void btnView_Click(object sender, EventArgs e)
         {
-            //Split System Date Time variable
             var fromDay = "";
             var fromDayDate = "";
             if (dtpFromDate.Text != "")
@@ -166,7 +165,7 @@ namespace Report.Operation
             }
             else
             {
-                dtpFromDate.Text = DataHelper.getSystemDate().ToString("dd/MM/yyyy");
+                dtpFromDate.Text = systemDateStr;
                 dtpFromDate.Enabled = true;
             }
         }

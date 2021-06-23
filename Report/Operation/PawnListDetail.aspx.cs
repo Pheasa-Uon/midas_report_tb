@@ -27,6 +27,7 @@ namespace Report.Operation
             ReportParameterCollection reportParameters = new ReportParameterCollection();
             reportParameters.Add(new ReportParameter("Branch", ddBranchName.SelectedItem.Text));
             reportParameters.Add(new ReportParameter("PawnOfficer", ddOfficer.SelectedItem.Text));
+            reportParameters.Add(new ReportParameter("SystemDate", DataHelper.getSystemDateStr()));
          
 
             var _pawnlist = new ReportDataSource("PawnListDetailDS", pawnlistDT);
@@ -57,7 +58,7 @@ namespace Report.Operation
 
             if (ddOfficer.SelectedItem.Value != "0")
             {
-                sql += "  AND CT.pawn_officer_id = CASE WHEN " + ddOfficer.SelectedValue + " IS NULL THEN CT.pawn_officer_id ELSE  " + ddOfficer.SelectedValue + " END ";
+                sql += " AND CT.pawn_officer_id = " + ddOfficer.SelectedValue + ";";
             }
             var pawnlistDT = db.getDataTable(sql);
             GenerateReport(pawnlistDT);
