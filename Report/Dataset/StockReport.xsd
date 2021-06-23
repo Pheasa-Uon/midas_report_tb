@@ -12,7 +12,7 @@
   <xs:element name="StockReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="StockReport" msprop:Generator_UserDSName="StockReport">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="StockDS" msprop:Generator_TableClassName="StockDSDataTable" msprop:Generator_TableVarName="tableStockDS" msprop:Generator_TablePropName="StockDS" msprop:Generator_RowDeletingName="StockDSRowDeleting" msprop:Generator_RowChangingName="StockDSRowChanging" msprop:Generator_RowEvHandlerName="StockDSRowChangeEventHandler" msprop:Generator_RowDeletedName="StockDSRowDeleted" msprop:Generator_UserTableName="StockDS" msprop:Generator_RowChangedName="StockDSRowChanged" msprop:Generator_RowEvArgName="StockDSRowChangeEvent" msprop:Generator_RowClassName="StockDSRow">
+        <xs:element name="StockDS" msprop:Generator_TableClassName="StockDSDataTable" msprop:Generator_TableVarName="tableStockDS" msprop:Generator_RowChangedName="StockDSRowChanged" msprop:Generator_TablePropName="StockDS" msprop:Generator_RowDeletingName="StockDSRowDeleting" msprop:Generator_RowChangingName="StockDSRowChanging" msprop:Generator_RowEvHandlerName="StockDSRowChangeEventHandler" msprop:Generator_RowDeletedName="StockDSRowDeleted" msprop:Generator_RowClassName="StockDSRow" msprop:Generator_UserTableName="StockDS" msprop:Generator_RowEvArgName="StockDSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
@@ -49,6 +49,11 @@
               <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" type="xs:string" minOccurs="0" />
               <xs:element name="pawn_officer" msprop:Generator_ColumnVarNameInTable="columnpawn_officer" msprop:Generator_ColumnPropNameInRow="pawn_officer" msprop:Generator_ColumnPropNameInTable="pawn_officerColumn" msprop:Generator_UserColumnName="pawn_officer" type="xs:string" minOccurs="0" />
               <xs:element name="lob_name" msprop:Generator_ColumnVarNameInTable="columnlob_name" msprop:Generator_ColumnPropNameInRow="lob_name" msprop:Generator_ColumnPropNameInTable="lob_nameColumn" msprop:Generator_UserColumnName="lob_name" type="xs:string" minOccurs="0" />
+              <xs:element name="pre_ticket_no" msprop:Generator_ColumnVarNameInTable="columnpre_ticket_no" msprop:Generator_ColumnPropNameInRow="pre_ticket_no" msprop:Generator_ColumnPropNameInTable="pre_ticket_noColumn" msprop:Generator_UserColumnName="pre_ticket_no" type="xs:string" minOccurs="0" />
+              <xs:element name="pre_serial_number" msprop:Generator_ColumnVarNameInTable="columnpre_serial_number" msprop:Generator_ColumnPropNameInRow="pre_serial_number" msprop:Generator_ColumnPropNameInTable="pre_serial_numberColumn" msprop:Generator_UserColumnName="pre_serial_number" type="xs:string" minOccurs="0" />
+              <xs:element name="vh_type" msprop:Generator_ColumnVarNameInTable="columnvh_type" msprop:Generator_ColumnPropNameInRow="vh_type" msprop:Generator_ColumnPropNameInTable="vh_typeColumn" msprop:Generator_UserColumnName="vh_type" type="xs:string" minOccurs="0" />
+              <xs:element name="vh_mark" msprop:Generator_ColumnVarNameInTable="columnvh_mark" msprop:Generator_ColumnPropNameInRow="vh_mark" msprop:Generator_ColumnPropNameInTable="vh_markColumn" msprop:Generator_UserColumnName="vh_mark" type="xs:string" minOccurs="0" />
+              <xs:element name="vh_color" msprop:Generator_ColumnVarNameInTable="columnvh_color" msprop:Generator_ColumnPropNameInRow="vh_color" msprop:Generator_ColumnPropNameInTable="vh_colorColumn" msprop:Generator_UserColumnName="vh_color" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

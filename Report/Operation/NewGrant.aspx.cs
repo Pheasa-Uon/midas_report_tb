@@ -15,10 +15,10 @@ namespace Report.Operation
         public string format = "dd/MM/yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataHelper.checkLoginSession();
-            systemDateStr = DataHelper.getSystemDate().ToString("dd/MM/yyyy");
             if (!IsPostBack)
             {
+                DataHelper.checkLoginSession();
+                systemDateStr = DataHelper.getSystemDate().ToString("dd/MM/yyyy");
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
                 chkFromDate.Checked = true;
                 dtpFromDate.Enabled = false;

@@ -20,17 +20,17 @@ namespace Report.Dataset {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SummaryReport")]
+    [global::System.Xml.Serialization.XmlRootAttribute("PaymentDetail")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SummaryReport : global::System.Data.DataSet {
+    public partial class PaymentDetail : global::System.Data.DataSet {
         
-        private SummaryDSDataTable tableSummaryDS;
+        private PaymentDetailDSDataTable tablePaymentDetailDS;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public SummaryReport() {
+        public PaymentDetail() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Report.Dataset {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected SummaryReport(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected PaymentDetail(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Report.Dataset {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["SummaryDS"] != null)) {
-                    base.Tables.Add(new SummaryDSDataTable(ds.Tables["SummaryDS"]));
+                if ((ds.Tables["PaymentDetailDS"] != null)) {
+                    base.Tables.Add(new PaymentDetailDSDataTable(ds.Tables["PaymentDetailDS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Report.Dataset {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SummaryDSDataTable SummaryDS {
+        public PaymentDetailDSDataTable PaymentDetailDS {
             get {
-                return this.tableSummaryDS;
+                return this.tablePaymentDetailDS;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SummaryReport cln = ((SummaryReport)(base.Clone()));
+            PaymentDetail cln = ((PaymentDetail)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Report.Dataset {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["SummaryDS"] != null)) {
-                    base.Tables.Add(new SummaryDSDataTable(ds.Tables["SummaryDS"]));
+                if ((ds.Tables["PaymentDetailDS"] != null)) {
+                    base.Tables.Add(new PaymentDetailDSDataTable(ds.Tables["PaymentDetailDS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableSummaryDS = ((SummaryDSDataTable)(base.Tables["SummaryDS"]));
+            this.tablePaymentDetailDS = ((PaymentDetailDSDataTable)(base.Tables["PaymentDetailDS"]));
             if ((initTable == true)) {
-                if ((this.tableSummaryDS != null)) {
-                    this.tableSummaryDS.InitVars();
+                if ((this.tablePaymentDetailDS != null)) {
+                    this.tablePaymentDetailDS.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SummaryReport";
+            this.DataSetName = "PaymentDetail";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SummaryReport.xsd";
+            this.Namespace = "http://tempuri.org/PaymentDetail.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableSummaryDS = new SummaryDSDataTable();
-            base.Tables.Add(this.tableSummaryDS);
+            this.tablePaymentDetailDS = new PaymentDetailDSDataTable();
+            base.Tables.Add(this.tablePaymentDetailDS);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeSummaryDS() {
+        private bool ShouldSerializePaymentDetailDS() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SummaryReport ds = new SummaryReport();
+            PaymentDetail ds = new PaymentDetail();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,61 +270,61 @@ namespace Report.Dataset {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void SummaryDSRowChangeEventHandler(object sender, SummaryDSRowChangeEvent e);
+        public delegate void PaymentDetailDSRowChangeEventHandler(object sender, PaymentDetailDSRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SummaryDSDataTable : global::System.Data.TypedTableBase<SummaryDSRow> {
+        public partial class PaymentDetailDSDataTable : global::System.Data.TypedTableBase<PaymentDetailDSRow> {
             
-            private global::System.Data.DataColumn columnname;
+            private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columnnew_num_client;
+            private global::System.Data.DataColumn columnpayment_type;
             
-            private global::System.Data.DataColumn columnsiid;
+            private global::System.Data.DataColumn columnpayment_date;
             
-            private global::System.Data.DataColumn columnnew_amt;
+            private global::System.Data.DataColumn columncustomer_name;
             
-            private global::System.Data.DataColumn columnredeem_num_client;
+            private global::System.Data.DataColumn columnticket_no;
             
-            private global::System.Data.DataColumn columnredeem_amt;
+            private global::System.Data.DataColumn columnlob_name;
             
-            private global::System.Data.DataColumn columncurrent_num_client;
+            private global::System.Data.DataColumn columnprinciple_pay;
             
-            private global::System.Data.DataColumn columnrenew_client;
+            private global::System.Data.DataColumn columninterest_pay;
             
-            private global::System.Data.DataColumn columncurrent_amt;
+            private global::System.Data.DataColumn columnearly_redeem_pay;
             
-            private global::System.Data.DataColumn columnrenew_amt;
+            private global::System.Data.DataColumn columnpenalty_pay;
             
-            private global::System.Data.DataColumn columnlate_principle_amt;
+            private global::System.Data.DataColumn columnprinciple_less;
             
-            private global::System.Data.DataColumn columnlate_num_client;
+            private global::System.Data.DataColumn columndue_date;
             
-            private global::System.Data.DataColumn columnprinciple130;
+            private global::System.Data.DataColumn columnserial_number;
             
-            private global::System.Data.DataColumn columninterest130;
+            private global::System.Data.DataColumn columnpawn_officer;
             
-            private global::System.Data.DataColumn columnprinciple3160;
+            private global::System.Data.DataColumn columnwaive_amount;
             
-            private global::System.Data.DataColumn columninterest3160;
+            private global::System.Data.DataColumn columnticket_type;
             
-            private global::System.Data.DataColumn columnprinciple6190;
+            private global::System.Data.DataColumn columnother_income_amount;
             
-            private global::System.Data.DataColumn columninterest6190;
+            private global::System.Data.DataColumn columncontract_status;
             
-            private global::System.Data.DataColumn columnprinciple91;
+            private global::System.Data.DataColumn columnor_ref;
             
-            private global::System.Data.DataColumn columninterest91;
+            private global::System.Data.DataColumn columnfee_collect;
             
-            private global::System.Data.DataColumn columncurrency;
+            private global::System.Data.DataColumn columnpayment_method;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public SummaryDSDataTable() {
-                this.TableName = "SummaryDS";
+            public PaymentDetailDSDataTable() {
+                this.TableName = "PaymentDetailDS";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -332,7 +332,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal SummaryDSDataTable(global::System.Data.DataTable table) {
+            internal PaymentDetailDSDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -349,176 +349,176 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected SummaryDSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected PaymentDetailDSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn nameColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnname;
+                    return this.columnid;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn new_num_clientColumn {
+            public global::System.Data.DataColumn payment_typeColumn {
                 get {
-                    return this.columnnew_num_client;
+                    return this.columnpayment_type;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn siidColumn {
+            public global::System.Data.DataColumn payment_dateColumn {
                 get {
-                    return this.columnsiid;
+                    return this.columnpayment_date;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn new_amtColumn {
+            public global::System.Data.DataColumn customer_nameColumn {
                 get {
-                    return this.columnnew_amt;
+                    return this.columncustomer_name;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn redeem_num_clientColumn {
+            public global::System.Data.DataColumn ticket_noColumn {
                 get {
-                    return this.columnredeem_num_client;
+                    return this.columnticket_no;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn redeem_amtColumn {
+            public global::System.Data.DataColumn lob_nameColumn {
                 get {
-                    return this.columnredeem_amt;
+                    return this.columnlob_name;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn current_num_clientColumn {
+            public global::System.Data.DataColumn principle_payColumn {
                 get {
-                    return this.columncurrent_num_client;
+                    return this.columnprinciple_pay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn renew_clientColumn {
+            public global::System.Data.DataColumn interest_payColumn {
                 get {
-                    return this.columnrenew_client;
+                    return this.columninterest_pay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn current_amtColumn {
+            public global::System.Data.DataColumn early_redeem_payColumn {
                 get {
-                    return this.columncurrent_amt;
+                    return this.columnearly_redeem_pay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn renew_amtColumn {
+            public global::System.Data.DataColumn penalty_payColumn {
                 get {
-                    return this.columnrenew_amt;
+                    return this.columnpenalty_pay;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn late_principle_amtColumn {
+            public global::System.Data.DataColumn principle_lessColumn {
                 get {
-                    return this.columnlate_principle_amt;
+                    return this.columnprinciple_less;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn late_num_clientColumn {
+            public global::System.Data.DataColumn due_dateColumn {
                 get {
-                    return this.columnlate_num_client;
+                    return this.columndue_date;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn principle130Column {
+            public global::System.Data.DataColumn serial_numberColumn {
                 get {
-                    return this.columnprinciple130;
+                    return this.columnserial_number;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn interest130Column {
+            public global::System.Data.DataColumn pawn_officerColumn {
                 get {
-                    return this.columninterest130;
+                    return this.columnpawn_officer;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn principle3160Column {
+            public global::System.Data.DataColumn waive_amountColumn {
                 get {
-                    return this.columnprinciple3160;
+                    return this.columnwaive_amount;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn interest3160Column {
+            public global::System.Data.DataColumn ticket_typeColumn {
                 get {
-                    return this.columninterest3160;
+                    return this.columnticket_type;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn principle6190Column {
+            public global::System.Data.DataColumn other_income_amountColumn {
                 get {
-                    return this.columnprinciple6190;
+                    return this.columnother_income_amount;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn interest6190Column {
+            public global::System.Data.DataColumn contract_statusColumn {
                 get {
-                    return this.columninterest6190;
+                    return this.columncontract_status;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn principle91Column {
+            public global::System.Data.DataColumn or_refColumn {
                 get {
-                    return this.columnprinciple91;
+                    return this.columnor_ref;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn interest91Column {
+            public global::System.Data.DataColumn fee_collectColumn {
                 get {
-                    return this.columninterest91;
+                    return this.columnfee_collect;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn currencyColumn {
+            public global::System.Data.DataColumn payment_methodColumn {
                 get {
-                    return this.columncurrency;
+                    return this.columnpayment_method;
                 }
             }
             
@@ -533,86 +533,86 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public SummaryDSRow this[int index] {
+            public PaymentDetailDSRow this[int index] {
                 get {
-                    return ((SummaryDSRow)(this.Rows[index]));
+                    return ((PaymentDetailDSRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event SummaryDSRowChangeEventHandler SummaryDSRowChanging;
+            public event PaymentDetailDSRowChangeEventHandler PaymentDetailDSRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event SummaryDSRowChangeEventHandler SummaryDSRowChanged;
+            public event PaymentDetailDSRowChangeEventHandler PaymentDetailDSRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event SummaryDSRowChangeEventHandler SummaryDSRowDeleting;
+            public event PaymentDetailDSRowChangeEventHandler PaymentDetailDSRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event SummaryDSRowChangeEventHandler SummaryDSRowDeleted;
+            public event PaymentDetailDSRowChangeEventHandler PaymentDetailDSRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddSummaryDSRow(SummaryDSRow row) {
+            public void AddPaymentDetailDSRow(PaymentDetailDSRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public SummaryDSRow AddSummaryDSRow(
-                        string name, 
-                        string new_num_client, 
-                        string siid, 
-                        string new_amt, 
-                        string redeem_num_client, 
-                        string redeem_amt, 
-                        string current_num_client, 
-                        string renew_client, 
-                        string current_amt, 
-                        string renew_amt, 
-                        string late_principle_amt, 
-                        string late_num_client, 
-                        string principle130, 
-                        string interest130, 
-                        string principle3160, 
-                        string interest3160, 
-                        string principle6190, 
-                        string interest6190, 
-                        string principle91, 
-                        string interest91, 
-                        string currency) {
-                SummaryDSRow rowSummaryDSRow = ((SummaryDSRow)(this.NewRow()));
+            public PaymentDetailDSRow AddPaymentDetailDSRow(
+                        string id, 
+                        string payment_type, 
+                        string payment_date, 
+                        string customer_name, 
+                        string ticket_no, 
+                        string lob_name, 
+                        string principle_pay, 
+                        string interest_pay, 
+                        string early_redeem_pay, 
+                        string penalty_pay, 
+                        string principle_less, 
+                        string due_date, 
+                        string serial_number, 
+                        string pawn_officer, 
+                        string waive_amount, 
+                        string ticket_type, 
+                        string other_income_amount, 
+                        string contract_status, 
+                        string or_ref, 
+                        string fee_collect, 
+                        string payment_method) {
+                PaymentDetailDSRow rowPaymentDetailDSRow = ((PaymentDetailDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        name,
-                        new_num_client,
-                        siid,
-                        new_amt,
-                        redeem_num_client,
-                        redeem_amt,
-                        current_num_client,
-                        renew_client,
-                        current_amt,
-                        renew_amt,
-                        late_principle_amt,
-                        late_num_client,
-                        principle130,
-                        interest130,
-                        principle3160,
-                        interest3160,
-                        principle6190,
-                        interest6190,
-                        principle91,
-                        interest91,
-                        currency};
-                rowSummaryDSRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSummaryDSRow);
-                return rowSummaryDSRow;
+                        id,
+                        payment_type,
+                        payment_date,
+                        customer_name,
+                        ticket_no,
+                        lob_name,
+                        principle_pay,
+                        interest_pay,
+                        early_redeem_pay,
+                        penalty_pay,
+                        principle_less,
+                        due_date,
+                        serial_number,
+                        pawn_officer,
+                        waive_amount,
+                        ticket_type,
+                        other_income_amount,
+                        contract_status,
+                        or_ref,
+                        fee_collect,
+                        payment_method};
+                rowPaymentDetailDSRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPaymentDetailDSRow);
+                return rowPaymentDetailDSRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                SummaryDSDataTable cln = ((SummaryDSDataTable)(base.Clone()));
+                PaymentDetailDSDataTable cln = ((PaymentDetailDSDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -620,106 +620,106 @@ namespace Report.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new SummaryDSDataTable();
+                return new PaymentDetailDSDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnname = base.Columns["name"];
-                this.columnnew_num_client = base.Columns["new_num_client"];
-                this.columnsiid = base.Columns["siid"];
-                this.columnnew_amt = base.Columns["new_amt"];
-                this.columnredeem_num_client = base.Columns["redeem_num_client"];
-                this.columnredeem_amt = base.Columns["redeem_amt"];
-                this.columncurrent_num_client = base.Columns["current_num_client"];
-                this.columnrenew_client = base.Columns["renew_client"];
-                this.columncurrent_amt = base.Columns["current_amt"];
-                this.columnrenew_amt = base.Columns["renew_amt"];
-                this.columnlate_principle_amt = base.Columns["late_principle_amt"];
-                this.columnlate_num_client = base.Columns["late_num_client"];
-                this.columnprinciple130 = base.Columns["principle130"];
-                this.columninterest130 = base.Columns["interest130"];
-                this.columnprinciple3160 = base.Columns["principle3160"];
-                this.columninterest3160 = base.Columns["interest3160"];
-                this.columnprinciple6190 = base.Columns["principle6190"];
-                this.columninterest6190 = base.Columns["interest6190"];
-                this.columnprinciple91 = base.Columns["principle91"];
-                this.columninterest91 = base.Columns["interest91"];
-                this.columncurrency = base.Columns["currency"];
+                this.columnid = base.Columns["id"];
+                this.columnpayment_type = base.Columns["payment_type"];
+                this.columnpayment_date = base.Columns["payment_date"];
+                this.columncustomer_name = base.Columns["customer_name"];
+                this.columnticket_no = base.Columns["ticket_no"];
+                this.columnlob_name = base.Columns["lob_name"];
+                this.columnprinciple_pay = base.Columns["principle_pay"];
+                this.columninterest_pay = base.Columns["interest_pay"];
+                this.columnearly_redeem_pay = base.Columns["early_redeem_pay"];
+                this.columnpenalty_pay = base.Columns["penalty_pay"];
+                this.columnprinciple_less = base.Columns["principle_less"];
+                this.columndue_date = base.Columns["due_date"];
+                this.columnserial_number = base.Columns["serial_number"];
+                this.columnpawn_officer = base.Columns["pawn_officer"];
+                this.columnwaive_amount = base.Columns["waive_amount"];
+                this.columnticket_type = base.Columns["ticket_type"];
+                this.columnother_income_amount = base.Columns["other_income_amount"];
+                this.columncontract_status = base.Columns["contract_status"];
+                this.columnor_ref = base.Columns["or_ref"];
+                this.columnfee_collect = base.Columns["fee_collect"];
+                this.columnpayment_method = base.Columns["payment_method"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnname);
-                this.columnnew_num_client = new global::System.Data.DataColumn("new_num_client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnew_num_client);
-                this.columnsiid = new global::System.Data.DataColumn("siid", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsiid);
-                this.columnnew_amt = new global::System.Data.DataColumn("new_amt", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnew_amt);
-                this.columnredeem_num_client = new global::System.Data.DataColumn("redeem_num_client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnredeem_num_client);
-                this.columnredeem_amt = new global::System.Data.DataColumn("redeem_amt", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnredeem_amt);
-                this.columncurrent_num_client = new global::System.Data.DataColumn("current_num_client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncurrent_num_client);
-                this.columnrenew_client = new global::System.Data.DataColumn("renew_client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrenew_client);
-                this.columncurrent_amt = new global::System.Data.DataColumn("current_amt", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncurrent_amt);
-                this.columnrenew_amt = new global::System.Data.DataColumn("renew_amt", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrenew_amt);
-                this.columnlate_principle_amt = new global::System.Data.DataColumn("late_principle_amt", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlate_principle_amt);
-                this.columnlate_num_client = new global::System.Data.DataColumn("late_num_client", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlate_num_client);
-                this.columnprinciple130 = new global::System.Data.DataColumn("principle130", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprinciple130);
-                this.columninterest130 = new global::System.Data.DataColumn("interest130", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columninterest130);
-                this.columnprinciple3160 = new global::System.Data.DataColumn("principle3160", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprinciple3160);
-                this.columninterest3160 = new global::System.Data.DataColumn("interest3160", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columninterest3160);
-                this.columnprinciple6190 = new global::System.Data.DataColumn("principle6190", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprinciple6190);
-                this.columninterest6190 = new global::System.Data.DataColumn("interest6190", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columninterest6190);
-                this.columnprinciple91 = new global::System.Data.DataColumn("principle91", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprinciple91);
-                this.columninterest91 = new global::System.Data.DataColumn("interest91", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columninterest91);
-                this.columncurrency = new global::System.Data.DataColumn("currency", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncurrency);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnpayment_type = new global::System.Data.DataColumn("payment_type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpayment_type);
+                this.columnpayment_date = new global::System.Data.DataColumn("payment_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpayment_date);
+                this.columncustomer_name = new global::System.Data.DataColumn("customer_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncustomer_name);
+                this.columnticket_no = new global::System.Data.DataColumn("ticket_no", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnticket_no);
+                this.columnlob_name = new global::System.Data.DataColumn("lob_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlob_name);
+                this.columnprinciple_pay = new global::System.Data.DataColumn("principle_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprinciple_pay);
+                this.columninterest_pay = new global::System.Data.DataColumn("interest_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterest_pay);
+                this.columnearly_redeem_pay = new global::System.Data.DataColumn("early_redeem_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnearly_redeem_pay);
+                this.columnpenalty_pay = new global::System.Data.DataColumn("penalty_pay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpenalty_pay);
+                this.columnprinciple_less = new global::System.Data.DataColumn("principle_less", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprinciple_less);
+                this.columndue_date = new global::System.Data.DataColumn("due_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndue_date);
+                this.columnserial_number = new global::System.Data.DataColumn("serial_number", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnserial_number);
+                this.columnpawn_officer = new global::System.Data.DataColumn("pawn_officer", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpawn_officer);
+                this.columnwaive_amount = new global::System.Data.DataColumn("waive_amount", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnwaive_amount);
+                this.columnticket_type = new global::System.Data.DataColumn("ticket_type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnticket_type);
+                this.columnother_income_amount = new global::System.Data.DataColumn("other_income_amount", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnother_income_amount);
+                this.columncontract_status = new global::System.Data.DataColumn("contract_status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontract_status);
+                this.columnor_ref = new global::System.Data.DataColumn("or_ref", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnor_ref);
+                this.columnfee_collect = new global::System.Data.DataColumn("fee_collect", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfee_collect);
+                this.columnpayment_method = new global::System.Data.DataColumn("payment_method", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpayment_method);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public SummaryDSRow NewSummaryDSRow() {
-                return ((SummaryDSRow)(this.NewRow()));
+            public PaymentDetailDSRow NewPaymentDetailDSRow() {
+                return ((PaymentDetailDSRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SummaryDSRow(builder);
+                return new PaymentDetailDSRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(SummaryDSRow);
+                return typeof(PaymentDetailDSRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.SummaryDSRowChanged != null)) {
-                    this.SummaryDSRowChanged(this, new SummaryDSRowChangeEvent(((SummaryDSRow)(e.Row)), e.Action));
+                if ((this.PaymentDetailDSRowChanged != null)) {
+                    this.PaymentDetailDSRowChanged(this, new PaymentDetailDSRowChangeEvent(((PaymentDetailDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -727,8 +727,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.SummaryDSRowChanging != null)) {
-                    this.SummaryDSRowChanging(this, new SummaryDSRowChangeEvent(((SummaryDSRow)(e.Row)), e.Action));
+                if ((this.PaymentDetailDSRowChanging != null)) {
+                    this.PaymentDetailDSRowChanging(this, new PaymentDetailDSRowChangeEvent(((PaymentDetailDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -736,8 +736,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.SummaryDSRowDeleted != null)) {
-                    this.SummaryDSRowDeleted(this, new SummaryDSRowChangeEvent(((SummaryDSRow)(e.Row)), e.Action));
+                if ((this.PaymentDetailDSRowDeleted != null)) {
+                    this.PaymentDetailDSRowDeleted(this, new PaymentDetailDSRowChangeEvent(((PaymentDetailDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -745,14 +745,14 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.SummaryDSRowDeleting != null)) {
-                    this.SummaryDSRowDeleting(this, new SummaryDSRowChangeEvent(((SummaryDSRow)(e.Row)), e.Action));
+                if ((this.PaymentDetailDSRowDeleting != null)) {
+                    this.PaymentDetailDSRowDeleting(this, new PaymentDetailDSRowChangeEvent(((PaymentDetailDSRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveSummaryDSRow(SummaryDSRow row) {
+            public void RemovePaymentDetailDSRow(PaymentDetailDSRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -761,7 +761,7 @@ namespace Report.Dataset {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SummaryReport ds = new SummaryReport();
+                PaymentDetail ds = new PaymentDetail();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -779,7 +779,7 @@ namespace Report.Dataset {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SummaryDSDataTable";
+                attribute2.FixedValue = "PaymentDetailDSDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -823,603 +823,603 @@ namespace Report.Dataset {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class SummaryDSRow : global::System.Data.DataRow {
+        public partial class PaymentDetailDSRow : global::System.Data.DataRow {
             
-            private SummaryDSDataTable tableSummaryDS;
+            private PaymentDetailDSDataTable tablePaymentDetailDS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal SummaryDSRow(global::System.Data.DataRowBuilder rb) : 
+            internal PaymentDetailDSRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableSummaryDS = ((SummaryDSDataTable)(this.Table));
+                this.tablePaymentDetailDS = ((PaymentDetailDSDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string name {
+            public string id {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.nameColumn]));
+                        return ((string)(this[this.tablePaymentDetailDS.idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'name\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.nameColumn] = value;
+                    this[this.tablePaymentDetailDS.idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string new_num_client {
+            public string payment_type {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.new_num_clientColumn]));
+                        return ((string)(this[this.tablePaymentDetailDS.payment_typeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'new_num_client\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'payment_type\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.new_num_clientColumn] = value;
+                    this[this.tablePaymentDetailDS.payment_typeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string siid {
+            public string payment_date {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.siidColumn]));
+                        return ((string)(this[this.tablePaymentDetailDS.payment_dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'siid\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'payment_date\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.siidColumn] = value;
+                    this[this.tablePaymentDetailDS.payment_dateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string new_amt {
+            public string customer_name {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.new_amtColumn]));
+                        return ((string)(this[this.tablePaymentDetailDS.customer_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'new_amt\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'customer_name\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.new_amtColumn] = value;
+                    this[this.tablePaymentDetailDS.customer_nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string redeem_num_client {
+            public string ticket_no {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.redeem_num_clientColumn]));
+                        return ((string)(this[this.tablePaymentDetailDS.ticket_noColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_num_client\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ticket_no\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.redeem_num_clientColumn] = value;
+                    this[this.tablePaymentDetailDS.ticket_noColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string redeem_amt {
+            public string lob_name {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.redeem_amtColumn]));
+                        return ((string)(this[this.tablePaymentDetailDS.lob_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'redeem_amt\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'lob_name\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.redeem_amtColumn] = value;
+                    this[this.tablePaymentDetailDS.lob_nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string current_num_client {
+            public string principle_pay {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.current_num_clientColumn]));
+                        return ((string)(this[this.tablePaymentDetailDS.principle_payColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'current_num_client\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle_pay\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.current_num_clientColumn] = value;
+                    this[this.tablePaymentDetailDS.principle_payColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string renew_client {
+            public string interest_pay {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.renew_clientColumn]));
+                        return ((string)(this[this.tablePaymentDetailDS.interest_payColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'renew_client\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest_pay\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.renew_clientColumn] = value;
+                    this[this.tablePaymentDetailDS.interest_payColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string current_amt {
+            public string early_redeem_pay {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.current_amtColumn]));
+                        return ((string)(this[this.tablePaymentDetailDS.early_redeem_payColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'current_amt\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'early_redeem_pay\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.current_amtColumn] = value;
+                    this[this.tablePaymentDetailDS.early_redeem_payColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string renew_amt {
+            public string penalty_pay {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.renew_amtColumn]));
+                        return ((string)(this[this.tablePaymentDetailDS.penalty_payColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'renew_amt\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'penalty_pay\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.renew_amtColumn] = value;
+                    this[this.tablePaymentDetailDS.penalty_payColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string late_principle_amt {
+            public string principle_less {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.late_principle_amtColumn]));
+                        return ((string)(this[this.tablePaymentDetailDS.principle_lessColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'late_principle_amt\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle_less\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.late_principle_amtColumn] = value;
+                    this[this.tablePaymentDetailDS.principle_lessColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string late_num_client {
+            public string due_date {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.late_num_clientColumn]));
+                        return ((string)(this[this.tablePaymentDetailDS.due_dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'late_num_client\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'due_date\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.late_num_clientColumn] = value;
+                    this[this.tablePaymentDetailDS.due_dateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string principle130 {
+            public string serial_number {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.principle130Column]));
+                        return ((string)(this[this.tablePaymentDetailDS.serial_numberColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'principle130\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'serial_number\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.principle130Column] = value;
+                    this[this.tablePaymentDetailDS.serial_numberColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string interest130 {
+            public string pawn_officer {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.interest130Column]));
+                        return ((string)(this[this.tablePaymentDetailDS.pawn_officerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest130\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'pawn_officer\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.interest130Column] = value;
+                    this[this.tablePaymentDetailDS.pawn_officerColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string principle3160 {
+            public string waive_amount {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.principle3160Column]));
+                        return ((string)(this[this.tablePaymentDetailDS.waive_amountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'principle3160\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'waive_amount\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.principle3160Column] = value;
+                    this[this.tablePaymentDetailDS.waive_amountColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string interest3160 {
+            public string ticket_type {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.interest3160Column]));
+                        return ((string)(this[this.tablePaymentDetailDS.ticket_typeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest3160\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ticket_type\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.interest3160Column] = value;
+                    this[this.tablePaymentDetailDS.ticket_typeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string principle6190 {
+            public string other_income_amount {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.principle6190Column]));
+                        return ((string)(this[this.tablePaymentDetailDS.other_income_amountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'principle6190\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'other_income_amount\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.principle6190Column] = value;
+                    this[this.tablePaymentDetailDS.other_income_amountColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string interest6190 {
+            public string contract_status {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.interest6190Column]));
+                        return ((string)(this[this.tablePaymentDetailDS.contract_statusColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest6190\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'contract_status\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.interest6190Column] = value;
+                    this[this.tablePaymentDetailDS.contract_statusColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string principle91 {
+            public string or_ref {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.principle91Column]));
+                        return ((string)(this[this.tablePaymentDetailDS.or_refColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'principle91\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'or_ref\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.principle91Column] = value;
+                    this[this.tablePaymentDetailDS.or_refColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string interest91 {
+            public string fee_collect {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.interest91Column]));
+                        return ((string)(this[this.tablePaymentDetailDS.fee_collectColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest91\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'fee_collect\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.interest91Column] = value;
+                    this[this.tablePaymentDetailDS.fee_collectColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string currency {
+            public string payment_method {
                 get {
                     try {
-                        return ((string)(this[this.tableSummaryDS.currencyColumn]));
+                        return ((string)(this[this.tablePaymentDetailDS.payment_methodColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'currency\' in table \'SummaryDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'payment_method\' in table \'PaymentDetailDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSummaryDS.currencyColumn] = value;
+                    this[this.tablePaymentDetailDS.payment_methodColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsnameNull() {
-                return this.IsNull(this.tableSummaryDS.nameColumn);
+            public bool IsidNull() {
+                return this.IsNull(this.tablePaymentDetailDS.idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetnameNull() {
-                this[this.tableSummaryDS.nameColumn] = global::System.Convert.DBNull;
+            public void SetidNull() {
+                this[this.tablePaymentDetailDS.idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isnew_num_clientNull() {
-                return this.IsNull(this.tableSummaryDS.new_num_clientColumn);
+            public bool Ispayment_typeNull() {
+                return this.IsNull(this.tablePaymentDetailDS.payment_typeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setnew_num_clientNull() {
-                this[this.tableSummaryDS.new_num_clientColumn] = global::System.Convert.DBNull;
+            public void Setpayment_typeNull() {
+                this[this.tablePaymentDetailDS.payment_typeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IssiidNull() {
-                return this.IsNull(this.tableSummaryDS.siidColumn);
+            public bool Ispayment_dateNull() {
+                return this.IsNull(this.tablePaymentDetailDS.payment_dateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetsiidNull() {
-                this[this.tableSummaryDS.siidColumn] = global::System.Convert.DBNull;
+            public void Setpayment_dateNull() {
+                this[this.tablePaymentDetailDS.payment_dateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isnew_amtNull() {
-                return this.IsNull(this.tableSummaryDS.new_amtColumn);
+            public bool Iscustomer_nameNull() {
+                return this.IsNull(this.tablePaymentDetailDS.customer_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setnew_amtNull() {
-                this[this.tableSummaryDS.new_amtColumn] = global::System.Convert.DBNull;
+            public void Setcustomer_nameNull() {
+                this[this.tablePaymentDetailDS.customer_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isredeem_num_clientNull() {
-                return this.IsNull(this.tableSummaryDS.redeem_num_clientColumn);
+            public bool Isticket_noNull() {
+                return this.IsNull(this.tablePaymentDetailDS.ticket_noColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setredeem_num_clientNull() {
-                this[this.tableSummaryDS.redeem_num_clientColumn] = global::System.Convert.DBNull;
+            public void Setticket_noNull() {
+                this[this.tablePaymentDetailDS.ticket_noColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isredeem_amtNull() {
-                return this.IsNull(this.tableSummaryDS.redeem_amtColumn);
+            public bool Islob_nameNull() {
+                return this.IsNull(this.tablePaymentDetailDS.lob_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setredeem_amtNull() {
-                this[this.tableSummaryDS.redeem_amtColumn] = global::System.Convert.DBNull;
+            public void Setlob_nameNull() {
+                this[this.tablePaymentDetailDS.lob_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Iscurrent_num_clientNull() {
-                return this.IsNull(this.tableSummaryDS.current_num_clientColumn);
+            public bool Isprinciple_payNull() {
+                return this.IsNull(this.tablePaymentDetailDS.principle_payColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setcurrent_num_clientNull() {
-                this[this.tableSummaryDS.current_num_clientColumn] = global::System.Convert.DBNull;
+            public void Setprinciple_payNull() {
+                this[this.tablePaymentDetailDS.principle_payColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isrenew_clientNull() {
-                return this.IsNull(this.tableSummaryDS.renew_clientColumn);
+            public bool Isinterest_payNull() {
+                return this.IsNull(this.tablePaymentDetailDS.interest_payColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setrenew_clientNull() {
-                this[this.tableSummaryDS.renew_clientColumn] = global::System.Convert.DBNull;
+            public void Setinterest_payNull() {
+                this[this.tablePaymentDetailDS.interest_payColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Iscurrent_amtNull() {
-                return this.IsNull(this.tableSummaryDS.current_amtColumn);
+            public bool Isearly_redeem_payNull() {
+                return this.IsNull(this.tablePaymentDetailDS.early_redeem_payColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setcurrent_amtNull() {
-                this[this.tableSummaryDS.current_amtColumn] = global::System.Convert.DBNull;
+            public void Setearly_redeem_payNull() {
+                this[this.tablePaymentDetailDS.early_redeem_payColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isrenew_amtNull() {
-                return this.IsNull(this.tableSummaryDS.renew_amtColumn);
+            public bool Ispenalty_payNull() {
+                return this.IsNull(this.tablePaymentDetailDS.penalty_payColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setrenew_amtNull() {
-                this[this.tableSummaryDS.renew_amtColumn] = global::System.Convert.DBNull;
+            public void Setpenalty_payNull() {
+                this[this.tablePaymentDetailDS.penalty_payColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Islate_principle_amtNull() {
-                return this.IsNull(this.tableSummaryDS.late_principle_amtColumn);
+            public bool Isprinciple_lessNull() {
+                return this.IsNull(this.tablePaymentDetailDS.principle_lessColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setlate_principle_amtNull() {
-                this[this.tableSummaryDS.late_principle_amtColumn] = global::System.Convert.DBNull;
+            public void Setprinciple_lessNull() {
+                this[this.tablePaymentDetailDS.principle_lessColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Islate_num_clientNull() {
-                return this.IsNull(this.tableSummaryDS.late_num_clientColumn);
+            public bool Isdue_dateNull() {
+                return this.IsNull(this.tablePaymentDetailDS.due_dateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setlate_num_clientNull() {
-                this[this.tableSummaryDS.late_num_clientColumn] = global::System.Convert.DBNull;
+            public void Setdue_dateNull() {
+                this[this.tablePaymentDetailDS.due_dateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isprinciple130Null() {
-                return this.IsNull(this.tableSummaryDS.principle130Column);
+            public bool Isserial_numberNull() {
+                return this.IsNull(this.tablePaymentDetailDS.serial_numberColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setprinciple130Null() {
-                this[this.tableSummaryDS.principle130Column] = global::System.Convert.DBNull;
+            public void Setserial_numberNull() {
+                this[this.tablePaymentDetailDS.serial_numberColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isinterest130Null() {
-                return this.IsNull(this.tableSummaryDS.interest130Column);
+            public bool Ispawn_officerNull() {
+                return this.IsNull(this.tablePaymentDetailDS.pawn_officerColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setinterest130Null() {
-                this[this.tableSummaryDS.interest130Column] = global::System.Convert.DBNull;
+            public void Setpawn_officerNull() {
+                this[this.tablePaymentDetailDS.pawn_officerColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isprinciple3160Null() {
-                return this.IsNull(this.tableSummaryDS.principle3160Column);
+            public bool Iswaive_amountNull() {
+                return this.IsNull(this.tablePaymentDetailDS.waive_amountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setprinciple3160Null() {
-                this[this.tableSummaryDS.principle3160Column] = global::System.Convert.DBNull;
+            public void Setwaive_amountNull() {
+                this[this.tablePaymentDetailDS.waive_amountColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isinterest3160Null() {
-                return this.IsNull(this.tableSummaryDS.interest3160Column);
+            public bool Isticket_typeNull() {
+                return this.IsNull(this.tablePaymentDetailDS.ticket_typeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setinterest3160Null() {
-                this[this.tableSummaryDS.interest3160Column] = global::System.Convert.DBNull;
+            public void Setticket_typeNull() {
+                this[this.tablePaymentDetailDS.ticket_typeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isprinciple6190Null() {
-                return this.IsNull(this.tableSummaryDS.principle6190Column);
+            public bool Isother_income_amountNull() {
+                return this.IsNull(this.tablePaymentDetailDS.other_income_amountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setprinciple6190Null() {
-                this[this.tableSummaryDS.principle6190Column] = global::System.Convert.DBNull;
+            public void Setother_income_amountNull() {
+                this[this.tablePaymentDetailDS.other_income_amountColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isinterest6190Null() {
-                return this.IsNull(this.tableSummaryDS.interest6190Column);
+            public bool Iscontract_statusNull() {
+                return this.IsNull(this.tablePaymentDetailDS.contract_statusColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setinterest6190Null() {
-                this[this.tableSummaryDS.interest6190Column] = global::System.Convert.DBNull;
+            public void Setcontract_statusNull() {
+                this[this.tablePaymentDetailDS.contract_statusColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isprinciple91Null() {
-                return this.IsNull(this.tableSummaryDS.principle91Column);
+            public bool Isor_refNull() {
+                return this.IsNull(this.tablePaymentDetailDS.or_refColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setprinciple91Null() {
-                this[this.tableSummaryDS.principle91Column] = global::System.Convert.DBNull;
+            public void Setor_refNull() {
+                this[this.tablePaymentDetailDS.or_refColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isinterest91Null() {
-                return this.IsNull(this.tableSummaryDS.interest91Column);
+            public bool Isfee_collectNull() {
+                return this.IsNull(this.tablePaymentDetailDS.fee_collectColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setinterest91Null() {
-                this[this.tableSummaryDS.interest91Column] = global::System.Convert.DBNull;
+            public void Setfee_collectNull() {
+                this[this.tablePaymentDetailDS.fee_collectColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IscurrencyNull() {
-                return this.IsNull(this.tableSummaryDS.currencyColumn);
+            public bool Ispayment_methodNull() {
+                return this.IsNull(this.tablePaymentDetailDS.payment_methodColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetcurrencyNull() {
-                this[this.tableSummaryDS.currencyColumn] = global::System.Convert.DBNull;
+            public void Setpayment_methodNull() {
+                this[this.tablePaymentDetailDS.payment_methodColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1427,22 +1427,22 @@ namespace Report.Dataset {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class SummaryDSRowChangeEvent : global::System.EventArgs {
+        public class PaymentDetailDSRowChangeEvent : global::System.EventArgs {
             
-            private SummaryDSRow eventRow;
+            private PaymentDetailDSRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public SummaryDSRowChangeEvent(SummaryDSRow row, global::System.Data.DataRowAction action) {
+            public PaymentDetailDSRowChangeEvent(PaymentDetailDSRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public SummaryDSRow Row {
+            public PaymentDetailDSRow Row {
                 get {
                     return this.eventRow;
                 }

@@ -347,6 +347,16 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnlob_name;
             
+            private global::System.Data.DataColumn columnpre_ticket_no;
+            
+            private global::System.Data.DataColumn columnpre_serial_number;
+            
+            private global::System.Data.DataColumn columnvh_type;
+            
+            private global::System.Data.DataColumn columnvh_mark;
+            
+            private global::System.Data.DataColumn columnvh_color;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public StockDSDataTable() {
@@ -654,6 +664,46 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn pre_ticket_noColumn {
+                get {
+                    return this.columnpre_ticket_no;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn pre_serial_numberColumn {
+                get {
+                    return this.columnpre_serial_number;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn vh_typeColumn {
+                get {
+                    return this.columnvh_type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn vh_markColumn {
+                get {
+                    return this.columnvh_mark;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn vh_colorColumn {
+                get {
+                    return this.columnvh_color;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -723,7 +773,12 @@ namespace Report.Dataset {
                         string outstanding, 
                         string status, 
                         string pawn_officer, 
-                        string lob_name) {
+                        string lob_name, 
+                        string pre_ticket_no, 
+                        string pre_serial_number, 
+                        string vh_type, 
+                        string vh_mark, 
+                        string vh_color) {
                 StockDSRow rowStockDSRow = ((StockDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -759,7 +814,12 @@ namespace Report.Dataset {
                         outstanding,
                         status,
                         pawn_officer,
-                        lob_name};
+                        lob_name,
+                        pre_ticket_no,
+                        pre_serial_number,
+                        vh_type,
+                        vh_mark,
+                        vh_color};
                 rowStockDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStockDSRow);
                 return rowStockDSRow;
@@ -816,6 +876,11 @@ namespace Report.Dataset {
                 this.columnstatus = base.Columns["status"];
                 this.columnpawn_officer = base.Columns["pawn_officer"];
                 this.columnlob_name = base.Columns["lob_name"];
+                this.columnpre_ticket_no = base.Columns["pre_ticket_no"];
+                this.columnpre_serial_number = base.Columns["pre_serial_number"];
+                this.columnvh_type = base.Columns["vh_type"];
+                this.columnvh_mark = base.Columns["vh_mark"];
+                this.columnvh_color = base.Columns["vh_color"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -889,6 +954,16 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnpawn_officer);
                 this.columnlob_name = new global::System.Data.DataColumn("lob_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlob_name);
+                this.columnpre_ticket_no = new global::System.Data.DataColumn("pre_ticket_no", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpre_ticket_no);
+                this.columnpre_serial_number = new global::System.Data.DataColumn("pre_serial_number", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpre_serial_number);
+                this.columnvh_type = new global::System.Data.DataColumn("vh_type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvh_type);
+                this.columnvh_mark = new global::System.Data.DataColumn("vh_mark", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvh_mark);
+                this.columnvh_color = new global::System.Data.DataColumn("vh_color", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvh_color);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1575,6 +1650,86 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string pre_ticket_no {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.pre_ticket_noColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'pre_ticket_no\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.pre_ticket_noColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string pre_serial_number {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.pre_serial_numberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'pre_serial_number\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.pre_serial_numberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string vh_type {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.vh_typeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'vh_type\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.vh_typeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string vh_mark {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.vh_markColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'vh_mark\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.vh_markColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string vh_color {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.vh_colorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'vh_color\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.vh_colorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tableStockDS.idColumn);
             }
@@ -1979,6 +2134,66 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setlob_nameNull() {
                 this[this.tableStockDS.lob_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Ispre_ticket_noNull() {
+                return this.IsNull(this.tableStockDS.pre_ticket_noColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setpre_ticket_noNull() {
+                this[this.tableStockDS.pre_ticket_noColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Ispre_serial_numberNull() {
+                return this.IsNull(this.tableStockDS.pre_serial_numberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setpre_serial_numberNull() {
+                this[this.tableStockDS.pre_serial_numberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isvh_typeNull() {
+                return this.IsNull(this.tableStockDS.vh_typeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setvh_typeNull() {
+                this[this.tableStockDS.vh_typeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isvh_markNull() {
+                return this.IsNull(this.tableStockDS.vh_markColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setvh_markNull() {
+                this[this.tableStockDS.vh_markColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isvh_colorNull() {
+                return this.IsNull(this.tableStockDS.vh_colorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setvh_colorNull() {
+                this[this.tableStockDS.vh_colorColumn] = global::System.Convert.DBNull;
             }
         }
         
