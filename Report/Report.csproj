@@ -354,6 +354,17 @@
     <Content Include="Dataset\ProductivityConsolidateByBranch.xsc">
       <DependentUpon>ProductivityConsolidateByBranch.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\PaymentDetail.xsc">
+      <DependentUpon>PaymentDetail.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\PaymentDetail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PaymentDetail.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\PaymentDetail.xss">
+      <DependentUpon>PaymentDetail.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\ProductivityConsolidateByBranch.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -482,6 +493,7 @@
     <EmbeddedResource Include="Operation\ProductivityConsolidateByLOBOnDate.rdlc" />
     <EmbeddedResource Include="Operation\ProductivityConsolidateByLOB.rdlc" />
     <EmbeddedResource Include="Operation\RenewReport.rdlc" />
+    <EmbeddedResource Include="Operation\PaymentDetail.rdlc" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
@@ -756,6 +768,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PawnListDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\PaymentDetail.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaymentDetail.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\ProductivityConsolidateByBranch.Designer.cs">
       <AutoGen>True</AutoGen>
