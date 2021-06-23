@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Web;
-
 namespace Report.Utils
 {
     public class ClsCrypto
@@ -12,8 +10,7 @@ namespace Report.Utils
         private RijndaelManaged myRijndael = new RijndaelManaged();
         private int iterations;
         private byte[] salt;
-
-        public ClsCrypto(string strPassword)
+        public ClsCrypto()
         {
             myRijndael.BlockSize = 128;
             myRijndael.KeySize = 128;
@@ -24,6 +21,7 @@ namespace Report.Utils
             iterations = 1000;
             salt = System.Text.Encoding.UTF8.GetBytes("c113bc8b3d03e1135309df7567d351dd");
             myRijndael.Key = GenerateKey("9452e6b9-2b47-4493-b5c0-647be1f93809");
+            Console.WriteLine(myRijndael.Key);
         }
 
         public string Encrypt(string strPlainText)
@@ -57,7 +55,7 @@ namespace Report.Utils
         private byte[] GenerateKey(string strPassword)
         {
             Rfc2898DeriveBytes rfc2898 = new Rfc2898DeriveBytes(System.Text.Encoding.UTF8.GetBytes(strPassword), salt, iterations);
-
+            Console.WriteLine(rfc2898.GetHashCode());
             return rfc2898.GetBytes(128 / 8);
         }
     }
