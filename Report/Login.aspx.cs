@@ -24,7 +24,7 @@ namespace Report
             System.Diagnostics.Debug.WriteLine(">>>>>>>>>>>>>");
             var pEncrypt = cls.Encrypt(txtPassword.Text);
          
-            var user = DataHelper.login(txtUsername.Text, "AQUpvTCF66ztPrYRtLm9ew==");  //"AQUpvTCF66ztPrYRtLm9ew=="
+            var user = DataHelper.login(txtUsername.Text, "BorhjiY6JTfWc/HRSOkbOQ==");  //"AQUpvTCF66ztPrYRtLm9ew=="
 
             if (user.id != 0)
             {
