@@ -207,6 +207,7 @@
     </Content>
     <Content Include="Dataset\PawnListDetail.xsc">
       <DependentUpon>PawnListDetail.xsd</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Dataset\COProductivity.xsc">
       <DependentUpon>COProductivity.xsd</DependentUpon>
@@ -476,12 +477,12 @@
     <Content Include="Operation\LateReportV2.aspx" />
     <EmbeddedResource Include="Operation\LateReportV2.rdlc" />
     <EmbeddedResource Include="Operation\NewGrant.rdlc" />
-    <EmbeddedResource Include="Operation\Redeem.rdlc" />
     <EmbeddedResource Include="Operation\ProductivityConsolidateByBranch.rdlc" />
     <EmbeddedResource Include="Operation\ProductivityConsolidateByBranchOnDate.rdlc" />
     <EmbeddedResource Include="Operation\ProductivityConsolidateByLOBOnDate.rdlc" />
     <EmbeddedResource Include="Operation\ProductivityConsolidateByLOB.rdlc" />
     <EmbeddedResource Include="Operation\RenewReport.rdlc" />
+    <EmbeddedResource Include="Operation\RedeemReport.rdlc" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
@@ -494,7 +495,6 @@
     <Content Include="Operation\LateReport.aspx" />
     <Content Include="Operation\NewGrant.aspx" />
     <Content Include="Operation\PawnListDetail.aspx" />
-    <Content Include="Operation\PaymentDetailV2.aspx" />
     <Content Include="Operation\ProductivityConsolidateByBranch.aspx" />
     <Content Include="Operation\ProductivityConsolidateByBranchOnDate.aspx" />
     <Content Include="Operation\ProductivityConsolidateByLOB.aspx" />
@@ -867,12 +867,6 @@
     <Compile Include="Operation\LateReportV2.aspx.designer.cs">
       <DependentUpon>LateReportV2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Operation\PaymentDetailV2.aspx.cs">
-      <DependentUpon>PaymentDetailV2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operation\PaymentDetailV2.aspx.designer.cs">
-      <DependentUpon>PaymentDetailV2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Operation\ProductivityConsolidateByBranchOnDate.aspx.cs">
       <DependentUpon>ProductivityConsolidateByBranchOnDate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -887,6 +881,7 @@
     <Compile Include="Operation\ProductivityConsolidateByLOBOnDate.aspx.designer.cs">
       <DependentUpon>ProductivityConsolidateByLOBOnDate.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Utils\AES.cs" />
     <Compile Include="Utils\ClsCrypto.cs" />
     <Compile Include="Utils\DBConnect.cs" />
     <Compile Include="Dashboard.aspx.cs">
