@@ -438,7 +438,6 @@
     <Content Include="Dataset\TurnOver.xss">
       <DependentUpon>TurnOver.xsd</DependentUpon>
     </Content>
-    <EmbeddedResource Include="Operation\StockReport.rdlc" />
     <EmbeddedResource Include="Operation\SummaryReport.rdlc" />
     <EmbeddedResource Include="Operation\BranchProductivity.rdlc" />
     <EmbeddedResource Include="Operation\COProductivity.rdlc" />
@@ -494,6 +493,7 @@
     <EmbeddedResource Include="Operation\ProductivityConsolidateByLOB.rdlc" />
     <EmbeddedResource Include="Operation\RenewReport.rdlc" />
     <EmbeddedResource Include="Operation\PaymentDetail.rdlc" />
+    <EmbeddedResource Include="Operation\StockReport.rdlc" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
