@@ -890,6 +890,7 @@
     <Compile Include="Operation\ProductivityConsolidateByLOBOnDate.aspx.designer.cs">
       <DependentUpon>ProductivityConsolidateByLOBOnDate.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Utils\ClsCrypto.cs" />
     <Compile Include="Utils\DBConnect.cs" />
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

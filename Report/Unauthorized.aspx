@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <center>
-            <h1>Unauthorized Page</h1>
+            <h1>Unauthorized</h1>
         </center>
     </form>
 </body>

@@ -20,9 +20,11 @@ namespace Report
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var pEncrypt = AESUtil.EncryptString(txtPassword.Text);
+            ClsCrypto cls = new ClsCrypto("d");
+
+            var pEncrypt = cls.Encrypt(txtPassword.Text);
          
-            var user = DataHelper.login(txtUsername.Text, "AQUpvTCF66ztPrYRtLm9ew==");
+            var user = DataHelper.login(txtUsername.Text, pEncrypt);  //"AQUpvTCF66ztPrYRtLm9ew=="
             if (user.id != 0)
             {
                 HttpContext.Current.Session["userID"] = user.id;
