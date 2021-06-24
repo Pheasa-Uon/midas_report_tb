@@ -177,18 +177,36 @@
     <Content Include="Dataset\BranchProductivity.xsc">
       <DependentUpon>BranchProductivity.xsd</DependentUpon>
     </Content>
-    <EmbeddedResource Include="Accounting\CashflowStatement.rdlc" />
-    <EmbeddedResource Include="Accounting\ChartOfAccount.rdlc" />
-    <EmbeddedResource Include="Accounting\AccrualInterestOnPawn.rdlc" />
-    <EmbeddedResource Include="Accounting\JournalEntryByDate.rdlc" />
+    <Content Include="Accounting\CashflowStatement.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\ChartOfAccount.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\AccrualInterestOnPawn.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\JournalEntryByDate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Dataset\AccrualInterestOnPawn.xsc">
       <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
     </Content>
-    <EmbeddedResource Include="Accounting\TrialBalance.rdlc" />
-    <EmbeddedResource Include="Accounting\IncomeStatementByDate.rdlc" />
-    <EmbeddedResource Include="Accounting\IncomeStatement.rdlc" />
-    <EmbeddedResource Include="Accounting\GLTransactionHistory.rdlc" />
-    <EmbeddedResource Include="Accounting\BalanceSheet.rdlc" />
+    <Content Include="Accounting\TrialBalance.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\IncomeStatementByDate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\IncomeStatement.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\GLTransactionHistory.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\BalanceSheet.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Dataset\AccrualInterestOnPawn.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
