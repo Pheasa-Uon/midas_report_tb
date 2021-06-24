@@ -13,12 +13,11 @@ namespace Report.Operation
         public string format = "dd/MM/yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Convert Date Block
-            fromDate = dtpFromDate.Text;
-            toDate = dtpToDate.Text;
-
             if (!IsPostBack)
             {
+                DataHelper.checkLoginSession();
+                fromDate = dtpFromDate.Text;
+                toDate = dtpToDate.Text;
                 var sysDate = DataHelper.getSystemDate();
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
                 dtpFromDate.Text = sysDate.ToString(format);

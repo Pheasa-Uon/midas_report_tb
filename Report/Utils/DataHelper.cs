@@ -187,7 +187,7 @@ namespace Report.Utils
             }
             else
             {
-                if (urlPath.ToLower() == "/Dashboard" || urlPath == "")
+                if (urlPath.ToLower() == "/dashboard" || urlPath == "")
                 {
                     return;
                 }
@@ -222,6 +222,7 @@ namespace Report.Utils
                         }
                         else
                         {
+                            HttpContext.Current.Session["userID"] = null;
                             HttpContext.Current.Response.Redirect("~/Login");
                         }
                     }
@@ -430,7 +431,7 @@ namespace Report.Utils
             ddl.DataValueField = "id";
             ddl.DataSource = branchList;
             ddl.DataBind();
-            ddl.Items.Insert(0, new ListItem("   ALL   ", "ALL"));
+            ddl.Items.Insert(0, new ListItem("-- ALL --", "ALL"));
         }
 
         //Populate Transaction Type List To Dropdown List Statement
@@ -495,6 +496,8 @@ namespace Report.Utils
             reportViewer.SizeToReportContent = true;
             reportViewer.LocalReport.ReportPath = HttpContext.Current.Server.MapPath(String.Format("~/Accounting/{0}.rdlc", reportName));
             reportViewer.LocalReport.DataSources.Clear();
+            //Add Default Parameter CompanyName
+            reportParameterCollection.Add(new ReportParameter("CompanyName", DataHelper.getCompanyName()));
             reportViewer.LocalReport.SetParameters(reportParameterCollection);
 
             foreach (var item in reportDataSources)

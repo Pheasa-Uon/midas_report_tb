@@ -10,24 +10,30 @@ namespace Report.Operation
         private DBConnect db = new DBConnect();
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataHelper.checkLoginSession();
             if (!IsPostBack)
             {
+                DataHelper.checkLoginSession();
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
+                populateOfficer();
             }
         }
 
         protected void ddBranchName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ddBranchName.SelectedValue != "")
+            populateOfficer();
+        }
+
+        private void populateOfficer()
+        {
+            if (ddBranchName.SelectedItem.Value != "")
             {
                 ddOfficer.Enabled = true;
-                DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedValue));
+                DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedItem.Value));
             }
             else
             {
                 ddOfficer.Enabled = false;
-                ddOfficer.SelectedItem.Text = "";
+                ddOfficer.Items.Clear();
             }
         }
 

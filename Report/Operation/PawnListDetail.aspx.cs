@@ -9,16 +9,13 @@ namespace Report.Operation
     public partial class PawnlistDetail : System.Web.UI.Page
     {
         private DBConnect db = new DBConnect();
-        public static string systemDateStr;
-        public string format = "dd/MM/yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataHelper.checkLoginSession();
-            systemDateStr = DataHelper.getSystemDateStr();
             if (!IsPostBack)
             {
+                DataHelper.checkLoginSession();
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
-                systemDateStr = DataHelper.getSystemDateStr();
+                populateOfficer();
             }
         }
         
@@ -66,6 +63,10 @@ namespace Report.Operation
 
         protected void ddBranchName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            populateOfficer();
+        }
+        private void populateOfficer()
+        {
             if (ddBranchName.SelectedValue != "")
             {
                 ddOfficer.Enabled = true;
@@ -74,7 +75,7 @@ namespace Report.Operation
             else
             {
                 ddOfficer.Enabled = false;
-                ddOfficer.SelectedItem.Text = "";
+                ddOfficer.Items.Clear();
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BalanceSheet.aspx.cs" Inherits="Report.Accounting.BalanceSheet" %>
+﻿<%@ Page Title="Balance Sheet" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BalanceSheet.aspx.cs" Inherits="Report.Accounting.BalanceSheet" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
@@ -13,16 +13,26 @@
                     <label>Branch:</label>
                     <asp:DropDownList ID="ddBranchName" runat="server" CssClass="form-control input-sm">
                     </asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddBranchName"
+                        ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
+                    </asp:RequiredFieldValidator>
                 </div>
                 <div class="col-sm-3 form-group">
                     <label>Date:</label>
-                    <asp:TextBox ID="dtpDate" runat="server" class="form-control input-sm datepick"></asp:TextBox>
+                    <asp:TextBox ID="dtpSystemDate" runat="server" class="form-control input-sm datepick"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="dtpSystemDate"
+                        ErrorMessage="* Please select date" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="reqValidate" runat="server" ControlToValidate="dtpSystemDate"
+                        ErrorMessage="* Wrong date formate" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic"
+                        ValidationExpression="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$"></asp:RegularExpressionValidator>
+                    <span style="color: red"><%=dateError %></span>
                 </div>
-              <div class="form-group ml16">
+                <div class="form-group ml16">
                     <div>
                         <label>&nbsp;</label>
                     </div>
-                    <asp:Button ID="btnView" runat="server" Text="View Report" CssClass="btn btn-sm btn-primary" />
+                    <asp:Button ID="btnView" runat="server" Text="View Report" CssClass="btn btn-sm btn-primary" OnClick="btnView_Click" />
                 </div>
             </div>
         </div>

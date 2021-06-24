@@ -16,11 +16,12 @@ namespace Report.Operation
         public string format = "dd/MM/yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataHelper.checkLoginSession();
-            systemDateStr = DataHelper.getSystemDate().ToString("dd/MM/yyyy");
             if (!IsPostBack)
             {
+                DataHelper.checkLoginSession();
+                systemDateStr = DataHelper.getSystemDate().ToString("dd/MM/yyyy");
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
+                populateOfficer();
                 chkFromDate.Checked = true;
                 dtpFromDate.Enabled = false;
                 dtpFromDate.Text = "";
@@ -90,16 +91,7 @@ namespace Report.Operation
 
         protected void ddBranchName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ddBranchName.SelectedValue != "")
-            {
-                ddOfficer.Enabled = true;
-                DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedValue));
-            }
-            else
-            {
-                ddOfficer.Enabled = false;
-                ddOfficer.SelectedItem.Text = "";
-            }
+            populateOfficer();
         }
 
         protected void chkFromDate_CheckedChanged(object sender, EventArgs e)
@@ -113,6 +105,19 @@ namespace Report.Operation
             {
                 dtpFromDate.Text = DataHelper.getSystemDate().ToString("dd/MM/yyyy");
                 dtpFromDate.Enabled = true;
+            }
+        }
+        private void populateOfficer()
+        {
+            if (ddBranchName.SelectedValue != "")
+            {
+                ddOfficer.Enabled = true;
+                DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedValue));
+            }
+            else
+            {
+                ddOfficer.Enabled = false;
+                ddOfficer.Items.Clear();
             }
         }
     }

@@ -21,6 +21,7 @@ namespace Report.Operation
                 var sysDate = DataHelper.getSystemDate();
                 systemDateStr = sysDate.ToString(format);
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
+                populateOfficer();
                 chkFromDate.Checked = true;
                 dtpFromDate.Enabled = false;
                 dtpFromDate.Text = "";
@@ -37,8 +38,7 @@ namespace Report.Operation
                 dtpSystemDate.Text = sysDate.ToString(format);
             }
         }
-
-        //GenerateReport Function
+        
         private void GenerateReport(DataTable redeemDT)
         {
             var reportParameters = new ReportParameterCollection();
@@ -138,6 +138,10 @@ namespace Report.Operation
 
         protected void ddBranchName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            populateOfficer();
+        }
+        private void populateOfficer()
+        {
             if (ddBranchName.SelectedValue != "")
             {
                 ddOfficer.Enabled = true;
@@ -146,8 +150,9 @@ namespace Report.Operation
             else
             {
                 ddOfficer.Enabled = false;
-                ddOfficer.SelectedItem.Text = "";
+                ddOfficer.Items.Clear();
             }
         }
+
     }
 }

@@ -5,10 +5,6 @@ using Report.Utils;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Report.Operation
 {
@@ -21,7 +17,9 @@ namespace Report.Operation
         {
             if (!IsPostBack)
             {
+                DataHelper.checkLoginSession();
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
+                populateOfficer();
             }
         }
 
@@ -94,6 +92,10 @@ namespace Report.Operation
 
         protected void ddBranchName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            populateOfficer();
+        }
+        private void populateOfficer()
+        {
             if (ddBranchName.SelectedValue != "")
             {
                 ddOfficer.Enabled = true;
@@ -102,7 +104,7 @@ namespace Report.Operation
             else
             {
                 ddOfficer.Enabled = false;
-                ddOfficer.SelectedItem.Text = "";
+                ddOfficer.Items.Clear();
             }
         }
     }

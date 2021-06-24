@@ -15,18 +15,26 @@ namespace Report.Operation
             {
                 DataHelper.checkLoginSession();
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
+                populateOfficer();
             }
         }
 
         protected void ddBranchName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ddBranchName.SelectedItem.Value == "")
+            populateOfficer();
+        }
+
+        private void populateOfficer()
+        {
+            if (ddBranchName.SelectedItem.Value != "")
             {
-                ddOfficer.Items.Clear();
+                ddOfficer.Enabled = true;
+                DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedItem.Value));
             }
             else
             {
-                DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedItem.Value));
+                ddOfficer.Enabled = false;
+                ddOfficer.Items.Clear();
             }
         }
 

@@ -131,7 +131,6 @@
   <ItemGroup>
     <Content Include="Accounting\AccrualDetail.aspx" />
     <Content Include="Accounting\AccrualInterest.aspx" />
-    <Content Include="Accounting\AccrualInterestOnPawn.aspx" />
     <Content Include="Accounting\BalanceSheet.aspx" />
     <Content Include="Accounting\CashConsolidate.aspx" />
     <Content Include="Accounting\CashflowStatement.aspx" />
@@ -183,14 +182,8 @@
     <Content Include="Accounting\ChartOfAccount.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Accounting\AccrualInterestOnPawn.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Accounting\JournalEntryByDate.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Dataset\AccrualInterestOnPawn.xsc">
-      <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
     </Content>
     <Content Include="Accounting\TrialBalance.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -204,16 +197,30 @@
     <Content Include="Accounting\GLTransactionHistory.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Accounting\BalanceSheet.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <EmbeddedResource Include="Accounting\AccrualDetail.rdlc" />
+    <Content Include="Dataset\AccrualDetail.xsc">
+      <DependentUpon>AccrualDetail.xsd</DependentUpon>
     </Content>
-    <None Include="Dataset\AccrualInterestOnPawn.xsd">
+    <EmbeddedResource Include="Accounting\AccrualInterest.rdlc" />
+    <EmbeddedResource Include="Accounting\BalanceSheet.rdlc" />
+    <None Include="Dataset\AccrualDetail.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AccrualInterestOnPawn.Designer.cs</LastGenOutput>
+      <LastGenOutput>AccrualDetail.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Dataset\AccrualInterestOnPawn.xss">
-      <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
+    <Content Include="Dataset\AccrualDetail.xss">
+      <DependentUpon>AccrualDetail.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\AccrualInterest.xsc">
+      <DependentUpon>AccrualInterest.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\AccrualInterest.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccrualInterest.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\AccrualInterest.xss">
+      <DependentUpon>AccrualInterest.xsd</DependentUpon>
     </Content>
     <None Include="Dataset\BranchProductivity.xsd">
       <SubType>Designer</SubType>
@@ -646,13 +653,6 @@
     <Compile Include="Accounting\AccrualInterest.aspx.designer.cs">
       <DependentUpon>AccrualInterest.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\AccrualInterestOnPawn.aspx.cs">
-      <DependentUpon>AccrualInterestOnPawn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Accounting\AccrualInterestOnPawn.aspx.designer.cs">
-      <DependentUpon>AccrualInterestOnPawn.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Accounting\BalanceSheet.aspx.cs">
       <DependentUpon>BalanceSheet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -760,10 +760,15 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Dataset\AccrualInterestOnPawn.Designer.cs">
+    <Compile Include="Dataset\AccrualDetail.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
+      <DependentUpon>AccrualDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\AccrualInterest.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccrualInterest.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\AllContractList.Designer.cs">
       <AutoGen>True</AutoGen>
