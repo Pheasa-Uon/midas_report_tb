@@ -8,12 +8,12 @@
      <div class="panel panel-default no-margin">
         <div class="panel-body">
             <div class="row">
-                <div class="col-sm-3 form-group">
+                <div class="col-sm-2 form-group">
                     <label>Contract# :</label>
                     <asp:TextBox ID="txtContract" runat="server" CssClass="form-control input-sm"></asp:TextBox>
                 </div>
-                  <div class="col-sm-3 form-group">
-                    <label>System Date  :</label>
+                  <div class="col-sm-2 form-group">
+                    <label>System Date :</label>
                     <asp:TextBox ID="dtpSystemDate" runat="server" CssClass="form-control input-sm datepick"></asp:TextBox>
                 </div>
                 <div class="form-group ml16">

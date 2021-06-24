@@ -2,17 +2,17 @@
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-        <link href="../Content/jquery-ui.css" rel="Stylesheet" type="text/css" />
+    <link href="../Content/jquery-ui.css" rel="Stylesheet" type="text/css" />
     <script src="../Scripts/jquery-ui.js" type="text/javascript"></script>
     <script src="../Scripts/datetimepicker.js" type="text/javascript"></script>
-   <div class="panel panel-default no-margin">
+    <div class="panel panel-default no-margin">
         <div class="panel-body">
             <div class="row">
-                   <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                         <div class="col-sm-3 form-group">
                             <label>Branch: </label>
-                            <asp:DropDownList ID="ddBranchName"  runat="server" CssClass="form-control input-sm" AutoPostBack="true" OnSelectedIndexChanged="ddBranchName_SelectedIndexChanged" >
+                            <asp:DropDownList ID="ddBranchName" runat="server" CssClass="form-control input-sm" AutoPostBack="true" OnSelectedIndexChanged="ddBranchName_SelectedIndexChanged">
                             </asp:DropDownList>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddBranchName"
                                 ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
@@ -25,7 +25,7 @@
                         </div>
                     </ContentTemplate>
                 </asp:UpdatePanel>
-                  <div class="col-sm-3 form-group">
+                <div class="col-sm-3 form-group">
                     <label>System Date  :</label>
                     <asp:TextBox ID="dtpSystemDate" runat="server" CssClass="form-control input-sm datepick"></asp:TextBox>
                 </div>
