@@ -549,6 +549,7 @@
     <Content Include="Operation\LateReport.aspx" />
     <Content Include="Operation\NewGrant.aspx" />
     <Content Include="Operation\PawnListDetail.aspx" />
+    <Content Include="Operation\PaymentDetail.aspx" />
     <Content Include="Operation\ProductivityConsolidateByBranch.aspx" />
     <Content Include="Operation\ProductivityConsolidateByBranchOnDate.aspx" />
     <Content Include="Operation\ProductivityConsolidateByLOB.aspx" />
@@ -925,6 +926,13 @@
     </Compile>
     <Compile Include="Operation\LateReportV2.aspx.designer.cs">
       <DependentUpon>LateReportV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\PaymentDetail.aspx.cs">
+      <DependentUpon>PaymentDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\PaymentDetail.aspx.designer.cs">
+      <DependentUpon>PaymentDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Operation\ProductivityConsolidateByBranchOnDate.aspx.cs">
       <DependentUpon>ProductivityConsolidateByBranchOnDate.aspx</DependentUpon>
