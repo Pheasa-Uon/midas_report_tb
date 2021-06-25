@@ -3,31 +3,32 @@
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="panel panel-warning no-margin">
+    <div class="panel panel-default no-margin">
         <div class="panel-body">
-            <div class="form-inline">
-                <div class="form-group">
+            <div class="row">
+                <div class="col-sm-3 form-group">
                     <label>Branch</label>
-                    <asp:DropDownList ID="ddBranchName" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddBranchName_SelectedIndexChanged" CssClass="form-control cnt-min-width">
+                    <asp:DropDownList ID="ddBranchName" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddBranchName_SelectedIndexChanged" CssClass="form-control input-sm">
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddBranchName"
                         ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
                     </asp:RequiredFieldValidator>
                 </div>
-                <div class="form-group ml16">
+                <div class="col-sm-3 form-group">
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
                         <Triggers>
                             <asp:AsyncPostBackTrigger ControlID="ddBranchName" />
                         </Triggers>
                         <ContentTemplate>
                             <label>Officer:</label>
-                            <asp:DropDownList ID="ddOfficer" runat="server" CssClass="form-control cnt-min-width" Enabled="false">
+                            <asp:DropDownList ID="ddOfficer" runat="server" CssClass="form-control input-sm" Enabled="false">
                             </asp:DropDownList>
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>
                 <div class="form-group ml16">
-                    <asp:Button ID="btnView" runat="server" Text="View" OnClick="btnView_Click" CssClass="btn btn-info" />
+                    <div><label>&nbsp;</label></div>
+                    <asp:Button ID="btnView" runat="server" Text="View Report" OnClick="btnView_Click" CssClass="btn btn-sm btn-primary" />
                 </div>
             </div>
         </div>

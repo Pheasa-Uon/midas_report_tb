@@ -26,7 +26,7 @@ namespace LMSReport.Utils
             {
                 MemoryStream ms = new MemoryStream();
 
-                using (CryptoStream cs = new CryptoStream(ms, rj.CreateEncryptor(Key, IV), CryptoStreamMode.Write))
+                using (CryptoStream cs = new CryptoStream(ms, rj.CreateEncryptor(rj.Key, rj.IV), CryptoStreamMode.Write))
                 {
                     using (StreamWriter sw = new StreamWriter(cs))
                     {
