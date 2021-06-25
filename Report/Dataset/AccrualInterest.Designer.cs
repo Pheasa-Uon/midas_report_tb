@@ -20,17 +20,17 @@ namespace Report.Dataset {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("AccrualInterestOnPawn")]
+    [global::System.Xml.Serialization.XmlRootAttribute("AccrualInterest")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class AccrualInterestOnPawn : global::System.Data.DataSet {
+    public partial class AccrualInterest : global::System.Data.DataSet {
         
-        private PawnDetailDSDataTable tablePawnDetailDS;
+        private AIRDSDataTable tableAIRDS;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public AccrualInterestOnPawn() {
+        public AccrualInterest() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Report.Dataset {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected AccrualInterestOnPawn(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected AccrualInterest(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Report.Dataset {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["PawnDetailDS"] != null)) {
-                    base.Tables.Add(new PawnDetailDSDataTable(ds.Tables["PawnDetailDS"]));
+                if ((ds.Tables["AIRDS"] != null)) {
+                    base.Tables.Add(new AIRDSDataTable(ds.Tables["AIRDS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Report.Dataset {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PawnDetailDSDataTable PawnDetailDS {
+        public AIRDSDataTable AIRDS {
             get {
-                return this.tablePawnDetailDS;
+                return this.tableAIRDS;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            AccrualInterestOnPawn cln = ((AccrualInterestOnPawn)(base.Clone()));
+            AccrualInterest cln = ((AccrualInterest)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Report.Dataset {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["PawnDetailDS"] != null)) {
-                    base.Tables.Add(new PawnDetailDSDataTable(ds.Tables["PawnDetailDS"]));
+                if ((ds.Tables["AIRDS"] != null)) {
+                    base.Tables.Add(new AIRDSDataTable(ds.Tables["AIRDS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablePawnDetailDS = ((PawnDetailDSDataTable)(base.Tables["PawnDetailDS"]));
+            this.tableAIRDS = ((AIRDSDataTable)(base.Tables["AIRDS"]));
             if ((initTable == true)) {
-                if ((this.tablePawnDetailDS != null)) {
-                    this.tablePawnDetailDS.InitVars();
+                if ((this.tableAIRDS != null)) {
+                    this.tableAIRDS.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "AccrualInterestOnPawn";
+            this.DataSetName = "AccrualInterest";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/AccrualInterestOnPawn.xsd";
+            this.Namespace = "http://tempuri.org/AccrualInterest.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablePawnDetailDS = new PawnDetailDSDataTable();
-            base.Tables.Add(this.tablePawnDetailDS);
+            this.tableAIRDS = new AIRDSDataTable();
+            base.Tables.Add(this.tableAIRDS);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializePawnDetailDS() {
+        private bool ShouldSerializeAIRDS() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            AccrualInterestOnPawn ds = new AccrualInterestOnPawn();
+            AccrualInterest ds = new AccrualInterest();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,59 +270,75 @@ namespace Report.Dataset {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void PawnDetailDSRowChangeEventHandler(object sender, PawnDetailDSRowChangeEvent e);
+        public delegate void AIRDSRowChangeEventHandler(object sender, AIRDSRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PawnDetailDSDataTable : global::System.Data.TypedTableBase<PawnDetailDSRow> {
+        public partial class AIRDSDataTable : global::System.Data.TypedTableBase<AIRDSRow> {
             
-            private global::System.Data.DataColumn columncustomer_no;
+            private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columncontract_id;
+            private global::System.Data.DataColumn columncontract_no;
             
-            private global::System.Data.DataColumn columncustomer_name;
-            
-            private global::System.Data.DataColumn columnlob_name;
+            private global::System.Data.DataColumn columncontract_status;
             
             private global::System.Data.DataColumn columndisbursement_date;
+            
+            private global::System.Data.DataColumn columnexpired_date;
             
             private global::System.Data.DataColumn columnpawn_price_approved;
             
             private global::System.Data.DataColumn columninterest_rate;
             
-            private global::System.Data.DataColumn columnOutstanding;
-            
             private global::System.Data.DataColumn columnnum_of_install;
             
-            private global::System.Data.DataColumn columnlate_status;
+            private global::System.Data.DataColumn columnproduct_id;
             
-            private global::System.Data.DataColumn columnexpired_date;
+            private global::System.Data.DataColumn columnlob_name;
             
-            private global::System.Data.DataColumn columnlas_accrue_date;
+            private global::System.Data.DataColumn columncustomer_name;
             
-            private global::System.Data.DataColumn columnDEBIT;
+            private global::System.Data.DataColumn columncustomer_no;
             
-            private global::System.Data.DataColumn columnCREDIT;
+            private global::System.Data.DataColumn columnschedule_id;
             
-            private global::System.Data.DataColumn columnPRE_DEBIT;
+            private global::System.Data.DataColumn columnticket_no;
             
-            private global::System.Data.DataColumn columnPRE_CREDIT;
+            private global::System.Data.DataColumn columnserial_number;
             
-            private global::System.Data.DataColumn columncurrency_code;
+            private global::System.Data.DataColumn columnprinciple_due;
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columninterest;
             
-            private global::System.Data.DataColumn columnname;
+            private global::System.Data.DataColumn columnnum_of_day;
             
-            private global::System.Data.DataColumn columnmax_due_date;
+            private global::System.Data.DataColumn columnsAccDate;
+            
+            private global::System.Data.DataColumn columneAccDate;
+            
+            private global::System.Data.DataColumn columnticket_status;
+            
+            private global::System.Data.DataColumn columnnum;
+            
+            private global::System.Data.DataColumn columnDRCur;
+            
+            private global::System.Data.DataColumn columnCRCur;
+            
+            private global::System.Data.DataColumn columnDRPre;
+            
+            private global::System.Data.DataColumn columnCRPre;
+            
+            private global::System.Data.DataColumn columncurrency_label;
+            
+            private global::System.Data.DataColumn columnacc_per_day;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PawnDetailDSDataTable() {
-                this.TableName = "PawnDetailDS";
+            public AIRDSDataTable() {
+                this.TableName = "AIRDS";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -330,7 +346,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PawnDetailDSDataTable(global::System.Data.DataTable table) {
+            internal AIRDSDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -347,40 +363,32 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected PawnDetailDSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected AIRDSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn customer_noColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columncustomer_no;
+                    return this.columnid;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn contract_idColumn {
+            public global::System.Data.DataColumn contract_noColumn {
                 get {
-                    return this.columncontract_id;
+                    return this.columncontract_no;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn customer_nameColumn {
+            public global::System.Data.DataColumn contract_statusColumn {
                 get {
-                    return this.columncustomer_name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn lob_nameColumn {
-                get {
-                    return this.columnlob_name;
+                    return this.columncontract_status;
                 }
             }
             
@@ -389,6 +397,14 @@ namespace Report.Dataset {
             public global::System.Data.DataColumn disbursement_dateColumn {
                 get {
                     return this.columndisbursement_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn expired_dateColumn {
+                get {
+                    return this.columnexpired_date;
                 }
             }
             
@@ -410,14 +426,6 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn OutstandingColumn {
-                get {
-                    return this.columnOutstanding;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn num_of_installColumn {
                 get {
                     return this.columnnum_of_install;
@@ -426,89 +434,161 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn late_statusColumn {
+            public global::System.Data.DataColumn product_idColumn {
                 get {
-                    return this.columnlate_status;
+                    return this.columnproduct_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn expired_dateColumn {
+            public global::System.Data.DataColumn lob_nameColumn {
                 get {
-                    return this.columnexpired_date;
+                    return this.columnlob_name;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn las_accrue_dateColumn {
+            public global::System.Data.DataColumn customer_nameColumn {
                 get {
-                    return this.columnlas_accrue_date;
+                    return this.columncustomer_name;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DEBITColumn {
+            public global::System.Data.DataColumn customer_noColumn {
                 get {
-                    return this.columnDEBIT;
+                    return this.columncustomer_no;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CREDITColumn {
+            public global::System.Data.DataColumn schedule_idColumn {
                 get {
-                    return this.columnCREDIT;
+                    return this.columnschedule_id;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PRE_DEBITColumn {
+            public global::System.Data.DataColumn ticket_noColumn {
                 get {
-                    return this.columnPRE_DEBIT;
+                    return this.columnticket_no;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PRE_CREDITColumn {
+            public global::System.Data.DataColumn serial_numberColumn {
                 get {
-                    return this.columnPRE_CREDIT;
+                    return this.columnserial_number;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn currency_codeColumn {
+            public global::System.Data.DataColumn principle_dueColumn {
                 get {
-                    return this.columncurrency_code;
+                    return this.columnprinciple_due;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn interestColumn {
                 get {
-                    return this.columnid;
+                    return this.columninterest;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn nameColumn {
+            public global::System.Data.DataColumn num_of_dayColumn {
                 get {
-                    return this.columnname;
+                    return this.columnnum_of_day;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn max_due_dateColumn {
+            public global::System.Data.DataColumn sAccDateColumn {
                 get {
-                    return this.columnmax_due_date;
+                    return this.columnsAccDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn eAccDateColumn {
+                get {
+                    return this.columneAccDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ticket_statusColumn {
+                get {
+                    return this.columnticket_status;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn numColumn {
+                get {
+                    return this.columnnum;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DRCurColumn {
+                get {
+                    return this.columnDRCur;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CRCurColumn {
+                get {
+                    return this.columnCRCur;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DRPreColumn {
+                get {
+                    return this.columnDRPre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CRPreColumn {
+                get {
+                    return this.columnCRPre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn currency_labelColumn {
+                get {
+                    return this.columncurrency_label;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn acc_per_dayColumn {
+                get {
+                    return this.columnacc_per_day;
                 }
             }
             
@@ -523,84 +603,100 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PawnDetailDSRow this[int index] {
+            public AIRDSRow this[int index] {
                 get {
-                    return ((PawnDetailDSRow)(this.Rows[index]));
+                    return ((AIRDSRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PawnDetailDSRowChangeEventHandler PawnDetailDSRowChanging;
+            public event AIRDSRowChangeEventHandler AIRDSRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PawnDetailDSRowChangeEventHandler PawnDetailDSRowChanged;
+            public event AIRDSRowChangeEventHandler AIRDSRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PawnDetailDSRowChangeEventHandler PawnDetailDSRowDeleting;
+            public event AIRDSRowChangeEventHandler AIRDSRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PawnDetailDSRowChangeEventHandler PawnDetailDSRowDeleted;
+            public event AIRDSRowChangeEventHandler AIRDSRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddPawnDetailDSRow(PawnDetailDSRow row) {
+            public void AddAIRDSRow(AIRDSRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PawnDetailDSRow AddPawnDetailDSRow(
-                        string customer_no, 
-                        string contract_id, 
-                        string customer_name, 
-                        string lob_name, 
+            public AIRDSRow AddAIRDSRow(
+                        string id, 
+                        string contract_no, 
+                        string contract_status, 
                         string disbursement_date, 
+                        string expired_date, 
                         string pawn_price_approved, 
                         string interest_rate, 
-                        string Outstanding, 
                         string num_of_install, 
-                        string late_status, 
-                        string expired_date, 
-                        string las_accrue_date, 
-                        string DEBIT, 
-                        string CREDIT, 
-                        string PRE_DEBIT, 
-                        string PRE_CREDIT, 
-                        string currency_code, 
-                        string id, 
-                        string name, 
-                        string max_due_date) {
-                PawnDetailDSRow rowPawnDetailDSRow = ((PawnDetailDSRow)(this.NewRow()));
+                        string product_id, 
+                        string lob_name, 
+                        string customer_name, 
+                        string customer_no, 
+                        string schedule_id, 
+                        string ticket_no, 
+                        string serial_number, 
+                        string principle_due, 
+                        string interest, 
+                        string num_of_day, 
+                        string sAccDate, 
+                        string eAccDate, 
+                        string ticket_status, 
+                        string num, 
+                        string DRCur, 
+                        string CRCur, 
+                        string DRPre, 
+                        string CRPre, 
+                        string currency_label, 
+                        string acc_per_day) {
+                AIRDSRow rowAIRDSRow = ((AIRDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        customer_no,
-                        contract_id,
-                        customer_name,
-                        lob_name,
+                        id,
+                        contract_no,
+                        contract_status,
                         disbursement_date,
+                        expired_date,
                         pawn_price_approved,
                         interest_rate,
-                        Outstanding,
                         num_of_install,
-                        late_status,
-                        expired_date,
-                        las_accrue_date,
-                        DEBIT,
-                        CREDIT,
-                        PRE_DEBIT,
-                        PRE_CREDIT,
-                        currency_code,
-                        id,
-                        name,
-                        max_due_date};
-                rowPawnDetailDSRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPawnDetailDSRow);
-                return rowPawnDetailDSRow;
+                        product_id,
+                        lob_name,
+                        customer_name,
+                        customer_no,
+                        schedule_id,
+                        ticket_no,
+                        serial_number,
+                        principle_due,
+                        interest,
+                        num_of_day,
+                        sAccDate,
+                        eAccDate,
+                        ticket_status,
+                        num,
+                        DRCur,
+                        CRCur,
+                        DRPre,
+                        CRPre,
+                        currency_label,
+                        acc_per_day};
+                rowAIRDSRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAIRDSRow);
+                return rowAIRDSRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PawnDetailDSDataTable cln = ((PawnDetailDSDataTable)(base.Clone()));
+                AIRDSDataTable cln = ((AIRDSDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -608,103 +704,130 @@ namespace Report.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PawnDetailDSDataTable();
+                return new AIRDSDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columncustomer_no = base.Columns["customer_no"];
-                this.columncontract_id = base.Columns["contract_id"];
-                this.columncustomer_name = base.Columns["customer_name"];
-                this.columnlob_name = base.Columns["lob_name"];
+                this.columnid = base.Columns["id"];
+                this.columncontract_no = base.Columns["contract_no"];
+                this.columncontract_status = base.Columns["contract_status"];
                 this.columndisbursement_date = base.Columns["disbursement_date"];
+                this.columnexpired_date = base.Columns["expired_date"];
                 this.columnpawn_price_approved = base.Columns["pawn_price_approved"];
                 this.columninterest_rate = base.Columns["interest_rate"];
-                this.columnOutstanding = base.Columns["Outstanding"];
                 this.columnnum_of_install = base.Columns["num_of_install"];
-                this.columnlate_status = base.Columns["late_status"];
-                this.columnexpired_date = base.Columns["expired_date"];
-                this.columnlas_accrue_date = base.Columns["las_accrue_date"];
-                this.columnDEBIT = base.Columns["DEBIT"];
-                this.columnCREDIT = base.Columns["CREDIT"];
-                this.columnPRE_DEBIT = base.Columns["PRE_DEBIT"];
-                this.columnPRE_CREDIT = base.Columns["PRE_CREDIT"];
-                this.columncurrency_code = base.Columns["currency_code"];
-                this.columnid = base.Columns["id"];
-                this.columnname = base.Columns["name"];
-                this.columnmax_due_date = base.Columns["max_due_date"];
+                this.columnproduct_id = base.Columns["product_id"];
+                this.columnlob_name = base.Columns["lob_name"];
+                this.columncustomer_name = base.Columns["customer_name"];
+                this.columncustomer_no = base.Columns["customer_no"];
+                this.columnschedule_id = base.Columns["schedule_id"];
+                this.columnticket_no = base.Columns["ticket_no"];
+                this.columnserial_number = base.Columns["serial_number"];
+                this.columnprinciple_due = base.Columns["principle_due"];
+                this.columninterest = base.Columns["interest"];
+                this.columnnum_of_day = base.Columns["num_of_day"];
+                this.columnsAccDate = base.Columns["sAccDate"];
+                this.columneAccDate = base.Columns["eAccDate"];
+                this.columnticket_status = base.Columns["ticket_status"];
+                this.columnnum = base.Columns["num"];
+                this.columnDRCur = base.Columns["DRCur"];
+                this.columnCRCur = base.Columns["CRCur"];
+                this.columnDRPre = base.Columns["DRPre"];
+                this.columnCRPre = base.Columns["CRPre"];
+                this.columncurrency_label = base.Columns["currency_label"];
+                this.columnacc_per_day = base.Columns["acc_per_day"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columncustomer_no = new global::System.Data.DataColumn("customer_no", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncustomer_no);
-                this.columncontract_id = new global::System.Data.DataColumn("contract_id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncontract_id);
-                this.columncustomer_name = new global::System.Data.DataColumn("customer_name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncustomer_name);
-                this.columnlob_name = new global::System.Data.DataColumn("lob_name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlob_name);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columncontract_no = new global::System.Data.DataColumn("contract_no", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontract_no);
+                this.columncontract_status = new global::System.Data.DataColumn("contract_status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontract_status);
                 this.columndisbursement_date = new global::System.Data.DataColumn("disbursement_date", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndisbursement_date);
+                this.columnexpired_date = new global::System.Data.DataColumn("expired_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnexpired_date);
                 this.columnpawn_price_approved = new global::System.Data.DataColumn("pawn_price_approved", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpawn_price_approved);
                 this.columninterest_rate = new global::System.Data.DataColumn("interest_rate", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columninterest_rate);
-                this.columnOutstanding = new global::System.Data.DataColumn("Outstanding", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOutstanding);
                 this.columnnum_of_install = new global::System.Data.DataColumn("num_of_install", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnum_of_install);
-                this.columnlate_status = new global::System.Data.DataColumn("late_status", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlate_status);
-                this.columnexpired_date = new global::System.Data.DataColumn("expired_date", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnexpired_date);
-                this.columnlas_accrue_date = new global::System.Data.DataColumn("las_accrue_date", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlas_accrue_date);
-                this.columnDEBIT = new global::System.Data.DataColumn("DEBIT", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDEBIT);
-                this.columnCREDIT = new global::System.Data.DataColumn("CREDIT", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCREDIT);
-                this.columnPRE_DEBIT = new global::System.Data.DataColumn("PRE_DEBIT", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPRE_DEBIT);
-                this.columnPRE_CREDIT = new global::System.Data.DataColumn("PRE_CREDIT", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPRE_CREDIT);
-                this.columncurrency_code = new global::System.Data.DataColumn("currency_code", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncurrency_code);
-                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnname);
-                this.columnmax_due_date = new global::System.Data.DataColumn("max_due_date", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmax_due_date);
+                this.columnproduct_id = new global::System.Data.DataColumn("product_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproduct_id);
+                this.columnlob_name = new global::System.Data.DataColumn("lob_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlob_name);
+                this.columncustomer_name = new global::System.Data.DataColumn("customer_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncustomer_name);
+                this.columncustomer_no = new global::System.Data.DataColumn("customer_no", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncustomer_no);
+                this.columnschedule_id = new global::System.Data.DataColumn("schedule_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnschedule_id);
+                this.columnticket_no = new global::System.Data.DataColumn("ticket_no", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnticket_no);
+                this.columnserial_number = new global::System.Data.DataColumn("serial_number", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnserial_number);
+                this.columnprinciple_due = new global::System.Data.DataColumn("principle_due", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprinciple_due);
+                this.columninterest = new global::System.Data.DataColumn("interest", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterest);
+                this.columnnum_of_day = new global::System.Data.DataColumn("num_of_day", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnum_of_day);
+                this.columnsAccDate = new global::System.Data.DataColumn("sAccDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsAccDate);
+                this.columneAccDate = new global::System.Data.DataColumn("eAccDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columneAccDate);
+                this.columnticket_status = new global::System.Data.DataColumn("ticket_status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnticket_status);
+                this.columnnum = new global::System.Data.DataColumn("num", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnum);
+                this.columnDRCur = new global::System.Data.DataColumn("DRCur", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDRCur);
+                this.columnCRCur = new global::System.Data.DataColumn("CRCur", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCRCur);
+                this.columnDRPre = new global::System.Data.DataColumn("DRPre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDRPre);
+                this.columnCRPre = new global::System.Data.DataColumn("CRPre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCRPre);
+                this.columncurrency_label = new global::System.Data.DataColumn("currency_label", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncurrency_label);
+                this.columnacc_per_day = new global::System.Data.DataColumn("acc_per_day", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnacc_per_day);
+                this.columnid.Caption = "customer_no";
+                this.columncontract_no.Caption = "contract_id";
+                this.columncontract_status.Caption = "customer_name";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PawnDetailDSRow NewPawnDetailDSRow() {
-                return ((PawnDetailDSRow)(this.NewRow()));
+            public AIRDSRow NewAIRDSRow() {
+                return ((AIRDSRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PawnDetailDSRow(builder);
+                return new AIRDSRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PawnDetailDSRow);
+                return typeof(AIRDSRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PawnDetailDSRowChanged != null)) {
-                    this.PawnDetailDSRowChanged(this, new PawnDetailDSRowChangeEvent(((PawnDetailDSRow)(e.Row)), e.Action));
+                if ((this.AIRDSRowChanged != null)) {
+                    this.AIRDSRowChanged(this, new AIRDSRowChangeEvent(((AIRDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -712,8 +835,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PawnDetailDSRowChanging != null)) {
-                    this.PawnDetailDSRowChanging(this, new PawnDetailDSRowChangeEvent(((PawnDetailDSRow)(e.Row)), e.Action));
+                if ((this.AIRDSRowChanging != null)) {
+                    this.AIRDSRowChanging(this, new AIRDSRowChangeEvent(((AIRDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -721,8 +844,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PawnDetailDSRowDeleted != null)) {
-                    this.PawnDetailDSRowDeleted(this, new PawnDetailDSRowChangeEvent(((PawnDetailDSRow)(e.Row)), e.Action));
+                if ((this.AIRDSRowDeleted != null)) {
+                    this.AIRDSRowDeleted(this, new AIRDSRowChangeEvent(((AIRDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -730,14 +853,14 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PawnDetailDSRowDeleting != null)) {
-                    this.PawnDetailDSRowDeleting(this, new PawnDetailDSRowChangeEvent(((PawnDetailDSRow)(e.Row)), e.Action));
+                if ((this.AIRDSRowDeleting != null)) {
+                    this.AIRDSRowDeleting(this, new AIRDSRowChangeEvent(((AIRDSRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovePawnDetailDSRow(PawnDetailDSRow row) {
+            public void RemoveAIRDSRow(AIRDSRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -746,7 +869,7 @@ namespace Report.Dataset {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                AccrualInterestOnPawn ds = new AccrualInterestOnPawn();
+                AccrualInterest ds = new AccrualInterest();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -764,7 +887,7 @@ namespace Report.Dataset {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PawnDetailDSDataTable";
+                attribute2.FixedValue = "AIRDSDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -808,78 +931,62 @@ namespace Report.Dataset {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PawnDetailDSRow : global::System.Data.DataRow {
+        public partial class AIRDSRow : global::System.Data.DataRow {
             
-            private PawnDetailDSDataTable tablePawnDetailDS;
+            private AIRDSDataTable tableAIRDS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PawnDetailDSRow(global::System.Data.DataRowBuilder rb) : 
+            internal AIRDSRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePawnDetailDS = ((PawnDetailDSDataTable)(this.Table));
+                this.tableAIRDS = ((AIRDSDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string customer_no {
+            public string id {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.customer_noColumn]));
+                        return ((string)(this[this.tableAIRDS.idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'customer_no\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.customer_noColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string contract_id {
-                get {
-                    try {
-                        return ((string)(this[this.tablePawnDetailDS.contract_idColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'contract_id\' in table \'PawnDetailDS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePawnDetailDS.contract_idColumn] = value;
+                    this[this.tableAIRDS.idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string customer_name {
+            public string contract_no {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.customer_nameColumn]));
+                        return ((string)(this[this.tableAIRDS.contract_noColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'customer_name\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'contract_no\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.customer_nameColumn] = value;
+                    this[this.tableAIRDS.contract_noColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string lob_name {
+            public string contract_status {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.lob_nameColumn]));
+                        return ((string)(this[this.tableAIRDS.contract_statusColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'lob_name\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'contract_status\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.lob_nameColumn] = value;
+                    this[this.tableAIRDS.contract_statusColumn] = value;
                 }
             }
             
@@ -888,94 +995,14 @@ namespace Report.Dataset {
             public string disbursement_date {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.disbursement_dateColumn]));
+                        return ((string)(this[this.tableAIRDS.disbursement_dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'disbursement_date\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'disbursement_date\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.disbursement_dateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string pawn_price_approved {
-                get {
-                    try {
-                        return ((string)(this[this.tablePawnDetailDS.pawn_price_approvedColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'pawn_price_approved\' in table \'PawnDetailDS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePawnDetailDS.pawn_price_approvedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string interest_rate {
-                get {
-                    try {
-                        return ((string)(this[this.tablePawnDetailDS.interest_rateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest_rate\' in table \'PawnDetailDS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePawnDetailDS.interest_rateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Outstanding {
-                get {
-                    try {
-                        return ((string)(this[this.tablePawnDetailDS.OutstandingColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Outstanding\' in table \'PawnDetailDS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePawnDetailDS.OutstandingColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string num_of_install {
-                get {
-                    try {
-                        return ((string)(this[this.tablePawnDetailDS.num_of_installColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'num_of_install\' in table \'PawnDetailDS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePawnDetailDS.num_of_installColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string late_status {
-                get {
-                    try {
-                        return ((string)(this[this.tablePawnDetailDS.late_statusColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'late_status\' in table \'PawnDetailDS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePawnDetailDS.late_statusColumn] = value;
+                    this[this.tableAIRDS.disbursement_dateColumn] = value;
                 }
             }
             
@@ -984,399 +1011,719 @@ namespace Report.Dataset {
             public string expired_date {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.expired_dateColumn]));
+                        return ((string)(this[this.tableAIRDS.expired_dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'expired_date\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'expired_date\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.expired_dateColumn] = value;
+                    this[this.tableAIRDS.expired_dateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string las_accrue_date {
+            public string pawn_price_approved {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.las_accrue_dateColumn]));
+                        return ((string)(this[this.tableAIRDS.pawn_price_approvedColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'las_accrue_date\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'pawn_price_approved\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.las_accrue_dateColumn] = value;
+                    this[this.tableAIRDS.pawn_price_approvedColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string DEBIT {
+            public string interest_rate {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.DEBITColumn]));
+                        return ((string)(this[this.tableAIRDS.interest_rateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DEBIT\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest_rate\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.DEBITColumn] = value;
+                    this[this.tableAIRDS.interest_rateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string CREDIT {
+            public string num_of_install {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.CREDITColumn]));
+                        return ((string)(this[this.tableAIRDS.num_of_installColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CREDIT\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'num_of_install\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.CREDITColumn] = value;
+                    this[this.tableAIRDS.num_of_installColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string PRE_DEBIT {
+            public string product_id {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.PRE_DEBITColumn]));
+                        return ((string)(this[this.tableAIRDS.product_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PRE_DEBIT\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'product_id\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.PRE_DEBITColumn] = value;
+                    this[this.tableAIRDS.product_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string PRE_CREDIT {
+            public string lob_name {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.PRE_CREDITColumn]));
+                        return ((string)(this[this.tableAIRDS.lob_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PRE_CREDIT\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'lob_name\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.PRE_CREDITColumn] = value;
+                    this[this.tableAIRDS.lob_nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string currency_code {
+            public string customer_name {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.currency_codeColumn]));
+                        return ((string)(this[this.tableAIRDS.customer_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'currency_code\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'customer_name\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.currency_codeColumn] = value;
+                    this[this.tableAIRDS.customer_nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string id {
+            public string customer_no {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.idColumn]));
+                        return ((string)(this[this.tableAIRDS.customer_noColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'customer_no\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.idColumn] = value;
+                    this[this.tableAIRDS.customer_noColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string name {
+            public string schedule_id {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.nameColumn]));
+                        return ((string)(this[this.tableAIRDS.schedule_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'name\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'schedule_id\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.nameColumn] = value;
+                    this[this.tableAIRDS.schedule_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string max_due_date {
+            public string ticket_no {
                 get {
                     try {
-                        return ((string)(this[this.tablePawnDetailDS.max_due_dateColumn]));
+                        return ((string)(this[this.tableAIRDS.ticket_noColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'max_due_date\' in table \'PawnDetailDS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ticket_no\' in table \'AIRDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePawnDetailDS.max_due_dateColumn] = value;
+                    this[this.tableAIRDS.ticket_noColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Iscustomer_noNull() {
-                return this.IsNull(this.tablePawnDetailDS.customer_noColumn);
+            public string serial_number {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.serial_numberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'serial_number\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.serial_numberColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setcustomer_noNull() {
-                this[this.tablePawnDetailDS.customer_noColumn] = global::System.Convert.DBNull;
+            public string principle_due {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.principle_dueColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle_due\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.principle_dueColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Iscontract_idNull() {
-                return this.IsNull(this.tablePawnDetailDS.contract_idColumn);
+            public string interest {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.interestColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.interestColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setcontract_idNull() {
-                this[this.tablePawnDetailDS.contract_idColumn] = global::System.Convert.DBNull;
+            public string num_of_day {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.num_of_dayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'num_of_day\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.num_of_dayColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Iscustomer_nameNull() {
-                return this.IsNull(this.tablePawnDetailDS.customer_nameColumn);
+            public string sAccDate {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.sAccDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'sAccDate\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.sAccDateColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setcustomer_nameNull() {
-                this[this.tablePawnDetailDS.customer_nameColumn] = global::System.Convert.DBNull;
+            public string eAccDate {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.eAccDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'eAccDate\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.eAccDateColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Islob_nameNull() {
-                return this.IsNull(this.tablePawnDetailDS.lob_nameColumn);
+            public string ticket_status {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.ticket_statusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ticket_status\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.ticket_statusColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setlob_nameNull() {
-                this[this.tablePawnDetailDS.lob_nameColumn] = global::System.Convert.DBNull;
+            public string num {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.numColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'num\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.numColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isdisbursement_dateNull() {
-                return this.IsNull(this.tablePawnDetailDS.disbursement_dateColumn);
+            public string DRCur {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.DRCurColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DRCur\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.DRCurColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setdisbursement_dateNull() {
-                this[this.tablePawnDetailDS.disbursement_dateColumn] = global::System.Convert.DBNull;
+            public string CRCur {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.CRCurColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CRCur\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.CRCurColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Ispawn_price_approvedNull() {
-                return this.IsNull(this.tablePawnDetailDS.pawn_price_approvedColumn);
+            public string DRPre {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.DRPreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DRPre\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.DRPreColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setpawn_price_approvedNull() {
-                this[this.tablePawnDetailDS.pawn_price_approvedColumn] = global::System.Convert.DBNull;
+            public string CRPre {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.CRPreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CRPre\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.CRPreColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isinterest_rateNull() {
-                return this.IsNull(this.tablePawnDetailDS.interest_rateColumn);
+            public string currency_label {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.currency_labelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'currency_label\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.currency_labelColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setinterest_rateNull() {
-                this[this.tablePawnDetailDS.interest_rateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsOutstandingNull() {
-                return this.IsNull(this.tablePawnDetailDS.OutstandingColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetOutstandingNull() {
-                this[this.tablePawnDetailDS.OutstandingColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isnum_of_installNull() {
-                return this.IsNull(this.tablePawnDetailDS.num_of_installColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setnum_of_installNull() {
-                this[this.tablePawnDetailDS.num_of_installColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Islate_statusNull() {
-                return this.IsNull(this.tablePawnDetailDS.late_statusColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setlate_statusNull() {
-                this[this.tablePawnDetailDS.late_statusColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isexpired_dateNull() {
-                return this.IsNull(this.tablePawnDetailDS.expired_dateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setexpired_dateNull() {
-                this[this.tablePawnDetailDS.expired_dateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Islas_accrue_dateNull() {
-                return this.IsNull(this.tablePawnDetailDS.las_accrue_dateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setlas_accrue_dateNull() {
-                this[this.tablePawnDetailDS.las_accrue_dateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsDEBITNull() {
-                return this.IsNull(this.tablePawnDetailDS.DEBITColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetDEBITNull() {
-                this[this.tablePawnDetailDS.DEBITColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsCREDITNull() {
-                return this.IsNull(this.tablePawnDetailDS.CREDITColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetCREDITNull() {
-                this[this.tablePawnDetailDS.CREDITColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPRE_DEBITNull() {
-                return this.IsNull(this.tablePawnDetailDS.PRE_DEBITColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPRE_DEBITNull() {
-                this[this.tablePawnDetailDS.PRE_DEBITColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsPRE_CREDITNull() {
-                return this.IsNull(this.tablePawnDetailDS.PRE_CREDITColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetPRE_CREDITNull() {
-                this[this.tablePawnDetailDS.PRE_CREDITColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Iscurrency_codeNull() {
-                return this.IsNull(this.tablePawnDetailDS.currency_codeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setcurrency_codeNull() {
-                this[this.tablePawnDetailDS.currency_codeColumn] = global::System.Convert.DBNull;
+            public string acc_per_day {
+                get {
+                    try {
+                        return ((string)(this[this.tableAIRDS.acc_per_dayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'acc_per_day\' in table \'AIRDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAIRDS.acc_per_dayColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsidNull() {
-                return this.IsNull(this.tablePawnDetailDS.idColumn);
+                return this.IsNull(this.tableAIRDS.idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetidNull() {
-                this[this.tablePawnDetailDS.idColumn] = global::System.Convert.DBNull;
+                this[this.tableAIRDS.idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsnameNull() {
-                return this.IsNull(this.tablePawnDetailDS.nameColumn);
+            public bool Iscontract_noNull() {
+                return this.IsNull(this.tableAIRDS.contract_noColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetnameNull() {
-                this[this.tablePawnDetailDS.nameColumn] = global::System.Convert.DBNull;
+            public void Setcontract_noNull() {
+                this[this.tableAIRDS.contract_noColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Ismax_due_dateNull() {
-                return this.IsNull(this.tablePawnDetailDS.max_due_dateColumn);
+            public bool Iscontract_statusNull() {
+                return this.IsNull(this.tableAIRDS.contract_statusColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setmax_due_dateNull() {
-                this[this.tablePawnDetailDS.max_due_dateColumn] = global::System.Convert.DBNull;
+            public void Setcontract_statusNull() {
+                this[this.tableAIRDS.contract_statusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isdisbursement_dateNull() {
+                return this.IsNull(this.tableAIRDS.disbursement_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setdisbursement_dateNull() {
+                this[this.tableAIRDS.disbursement_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isexpired_dateNull() {
+                return this.IsNull(this.tableAIRDS.expired_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setexpired_dateNull() {
+                this[this.tableAIRDS.expired_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Ispawn_price_approvedNull() {
+                return this.IsNull(this.tableAIRDS.pawn_price_approvedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setpawn_price_approvedNull() {
+                this[this.tableAIRDS.pawn_price_approvedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isinterest_rateNull() {
+                return this.IsNull(this.tableAIRDS.interest_rateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setinterest_rateNull() {
+                this[this.tableAIRDS.interest_rateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isnum_of_installNull() {
+                return this.IsNull(this.tableAIRDS.num_of_installColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setnum_of_installNull() {
+                this[this.tableAIRDS.num_of_installColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isproduct_idNull() {
+                return this.IsNull(this.tableAIRDS.product_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setproduct_idNull() {
+                this[this.tableAIRDS.product_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Islob_nameNull() {
+                return this.IsNull(this.tableAIRDS.lob_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setlob_nameNull() {
+                this[this.tableAIRDS.lob_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscustomer_nameNull() {
+                return this.IsNull(this.tableAIRDS.customer_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcustomer_nameNull() {
+                this[this.tableAIRDS.customer_nameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscustomer_noNull() {
+                return this.IsNull(this.tableAIRDS.customer_noColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcustomer_noNull() {
+                this[this.tableAIRDS.customer_noColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isschedule_idNull() {
+                return this.IsNull(this.tableAIRDS.schedule_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setschedule_idNull() {
+                this[this.tableAIRDS.schedule_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isticket_noNull() {
+                return this.IsNull(this.tableAIRDS.ticket_noColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setticket_noNull() {
+                this[this.tableAIRDS.ticket_noColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isserial_numberNull() {
+                return this.IsNull(this.tableAIRDS.serial_numberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setserial_numberNull() {
+                this[this.tableAIRDS.serial_numberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isprinciple_dueNull() {
+                return this.IsNull(this.tableAIRDS.principle_dueColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setprinciple_dueNull() {
+                this[this.tableAIRDS.principle_dueColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsinterestNull() {
+                return this.IsNull(this.tableAIRDS.interestColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetinterestNull() {
+                this[this.tableAIRDS.interestColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isnum_of_dayNull() {
+                return this.IsNull(this.tableAIRDS.num_of_dayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setnum_of_dayNull() {
+                this[this.tableAIRDS.num_of_dayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IssAccDateNull() {
+                return this.IsNull(this.tableAIRDS.sAccDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetsAccDateNull() {
+                this[this.tableAIRDS.sAccDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IseAccDateNull() {
+                return this.IsNull(this.tableAIRDS.eAccDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SeteAccDateNull() {
+                this[this.tableAIRDS.eAccDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isticket_statusNull() {
+                return this.IsNull(this.tableAIRDS.ticket_statusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setticket_statusNull() {
+                this[this.tableAIRDS.ticket_statusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsnumNull() {
+                return this.IsNull(this.tableAIRDS.numColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetnumNull() {
+                this[this.tableAIRDS.numColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDRCurNull() {
+                return this.IsNull(this.tableAIRDS.DRCurColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDRCurNull() {
+                this[this.tableAIRDS.DRCurColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCRCurNull() {
+                return this.IsNull(this.tableAIRDS.CRCurColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCRCurNull() {
+                this[this.tableAIRDS.CRCurColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsDRPreNull() {
+                return this.IsNull(this.tableAIRDS.DRPreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetDRPreNull() {
+                this[this.tableAIRDS.DRPreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCRPreNull() {
+                return this.IsNull(this.tableAIRDS.CRPreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCRPreNull() {
+                this[this.tableAIRDS.CRPreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Iscurrency_labelNull() {
+                return this.IsNull(this.tableAIRDS.currency_labelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setcurrency_labelNull() {
+                this[this.tableAIRDS.currency_labelColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isacc_per_dayNull() {
+                return this.IsNull(this.tableAIRDS.acc_per_dayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setacc_per_dayNull() {
+                this[this.tableAIRDS.acc_per_dayColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1384,22 +1731,22 @@ namespace Report.Dataset {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class PawnDetailDSRowChangeEvent : global::System.EventArgs {
+        public class AIRDSRowChangeEvent : global::System.EventArgs {
             
-            private PawnDetailDSRow eventRow;
+            private AIRDSRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PawnDetailDSRowChangeEvent(PawnDetailDSRow row, global::System.Data.DataRowAction action) {
+            public AIRDSRowChangeEvent(AIRDSRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PawnDetailDSRow Row {
+            public AIRDSRow Row {
                 get {
                     return this.eventRow;
                 }

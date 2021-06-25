@@ -11,6 +11,7 @@ namespace Report
 {
     public partial class _Default : Page
     {
+        public static string appName = System.Configuration.ConfigurationManager.AppSettings["appName"];
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

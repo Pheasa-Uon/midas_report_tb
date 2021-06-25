@@ -9,16 +9,13 @@ namespace Report.Operation
     public partial class PawnlistDetail : System.Web.UI.Page
     {
         private DBConnect db = new DBConnect();
-        public static string systemDateStr;
-        public string format = "dd/MM/yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataHelper.checkLoginSession();
-            systemDateStr = DataHelper.getSystemDateStr();
             if (!IsPostBack)
             {
+                DataHelper.checkLoginSession();
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
-                systemDateStr = DataHelper.getSystemDateStr();
+                populateOfficer();
             }
         }
         
@@ -27,6 +24,7 @@ namespace Report.Operation
             ReportParameterCollection reportParameters = new ReportParameterCollection();
             reportParameters.Add(new ReportParameter("Branch", ddBranchName.SelectedItem.Text));
             reportParameters.Add(new ReportParameter("PawnOfficer", ddOfficer.SelectedItem.Text));
+            reportParameters.Add(new ReportParameter("SystemDate", DataHelper.getSystemDateStr()));
          
 
             var _pawnlist = new ReportDataSource("PawnListDetailDS", pawnlistDT);
@@ -57,13 +55,17 @@ namespace Report.Operation
 
             if (ddOfficer.SelectedItem.Value != "0")
             {
-                sql += "  AND CT.pawn_officer_id = CASE WHEN " + ddOfficer.SelectedValue + " IS NULL THEN CT.pawn_officer_id ELSE  " + ddOfficer.SelectedValue + " END ";
+                sql += " AND CT.pawn_officer_id = " + ddOfficer.SelectedValue + ";";
             }
             var pawnlistDT = db.getDataTable(sql);
             GenerateReport(pawnlistDT);
         }
 
         protected void ddBranchName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            populateOfficer();
+        }
+        private void populateOfficer()
         {
             if (ddBranchName.SelectedValue != "")
             {
@@ -73,7 +75,7 @@ namespace Report.Operation
             else
             {
                 ddOfficer.Enabled = false;
-                ddOfficer.SelectedItem.Text = "";
+                ddOfficer.Items.Clear();
             }
         }
     }

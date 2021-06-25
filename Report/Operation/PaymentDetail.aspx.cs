@@ -18,7 +18,7 @@ namespace Report.Operation
                 DataHelper.checkLoginSession();
                 systemDateStr = DataHelper.getSystemDate().ToString("dd/MM/yyyy");
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
-
+                populateOfficer();
                 dtpFromDate.Text = systemDateStr;
                 dtpToDate.Text = systemDateStr;
             }
@@ -101,6 +101,10 @@ namespace Report.Operation
 
         protected void ddBranchName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            populateOfficer();
+        }
+        private void populateOfficer()
+        {
             if (ddBranchName.SelectedValue != "")
             {
                 ddOfficer.Enabled = true;
@@ -109,7 +113,7 @@ namespace Report.Operation
             else
             {
                 ddOfficer.Enabled = false;
-                ddOfficer.SelectedItem.Text = "";
+                ddOfficer.Items.Clear();
             }
         }
 

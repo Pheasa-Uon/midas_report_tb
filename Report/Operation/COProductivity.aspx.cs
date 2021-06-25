@@ -20,10 +20,11 @@ namespace Report.Operation
         public string format = "dd-MMM-yyyy";
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataHelper.checkLoginSession();
             if (!IsPostBack)
             {
+                DataHelper.checkLoginSession();
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
+                populateOfficer();
                 currencyList = DataHelper.populateCurrencyDDL(ddCurrency);
                 systemDateStr = DataHelper.getSystemDateStr();
             }
@@ -111,15 +112,19 @@ namespace Report.Operation
 
         protected void ddBranchName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ddBranchName.SelectedValue != "")
+            populateOfficer();
+        }
+        private void populateOfficer()
+        {
+            if (ddBranchName.SelectedItem.Value != "")
             {
                 ddOfficer.Enabled = true;
-                DataHelper.populateCOProductivityOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedValue));
+                DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedItem.Value));
             }
             else
             {
                 ddOfficer.Enabled = false;
-                ddOfficer.SelectedItem.Text = "";
+                ddOfficer.Items.Clear();
             }
         }
     }

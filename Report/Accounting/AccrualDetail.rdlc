@@ -1,180 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DSource">
-      <DataSourceReference>PS</DataSourceReference>
-      <rd:SecurityType>None</rd:SecurityType>
-      <rd:DataSourceID>170b3e4a-b098-4ca0-842b-423302711a2d</rd:DataSourceID>
+    <DataSource Name="AccrualDetail">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>784296e6-4699-46a8-a0df-f1a0fb8ad82e</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="branch">
+    <DataSet Name="SCHEDULE_DS">
       <Query>
-        <DataSourceName>DSource</DataSourceName>
-        <CommandText>SELECT id, appr, branch_name
-FROM  branch</CommandText>
+        <DataSourceName>AccrualDetail</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="due_date">
+          <DataField>due_date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="principle_due">
+          <DataField>principle_due</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="interest">
+          <DataField>interest</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="interest_rate">
+          <DataField>interest_rate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="num_of_day">
+          <DataField>num_of_day</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="accrual_amt">
+          <DataField>accrual_amt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AccrualDetail</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\AccrualDetail.xsd</rd:SchemaPath>
+        <rd:TableName>SCHEDULE_DS</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="CONTRACT_DS">
+      <Query>
+        <DataSourceName>AccrualDetail</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
         <Field Name="id">
           <DataField>id</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
-        </Field>
-        <Field Name="appr">
-          <DataField>appr</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="branch_name">
           <DataField>branch_name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="RenewDS">
-      <Query>
-        <DataSourceName>DSource</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="?">
-            <Value>=Parameters!Parameter1.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="?">
-            <Value>=Parameters!Parameter1.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="?">
-            <Value>=Parameters!Parameter1.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="?">
-            <Value>=Parameters!Parameter1.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="?">
-            <Value>=Parameters!Parameter2.Value</Value>
-          </QueryParameter>
-          <QueryParameter Name="?">
-            <Value>=Parameters!Parameter3.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>SELECT CASE WHEN ST.`ticket_status` = 'P' THEN ST.paid_date WHEN ST.`ticket_status` = 'FPP' THEN ST.prepaid_date END as trnx_date,
-C.customer_name,ST.ticket_no,P.lob_name,ST.principle,ST.interest,ST.total_penalty_paid,ST.principle_due principle_less,CASE WHEN IC.product_type_id = 1 THEN STT.due_date ELSE ST.due_date END due_date,ST.serial_number
- FROM schedule_ticket ST LEFT JOIN contract IC ON ST.contract_id = IC.id 
-LEFT JOIN schedule_ticket STT ON ST.id + 1 = STT.id
-LEFT JOIN product P ON IC.product_id = P.id
-LEFT JOIN customer C ON IC.customer_id = C.id
-WHERE (ST.`ticket_status` = 'P' OR ST.`ticket_status` = 'FPP') 
-AND CASE WHEN ST.`ticket_status` = 'P' THEN MONTH(ST.paid_date) = MONTH(?) AND YEAR(ST.paid_date) = YEAR(?) 
-				 WHEN ST.`ticket_status` = 'FPP' THEN MONTH(ST.prepaid_date) = MONTH(?) AND YEAR(ST.prepaid_date) = YEAR(?)
-		END 
-AND ST.order_no &gt; 1 AND ST.last_schedule = FALSE AND IC.contract_status = 4 AND IC.`b_status`=1
-AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
-        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
-      </Query>
-      <Fields>
-        <Field Name="trnx_date">
-          <DataField>trnx_date</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="ticket_no">
-          <DataField>ticket_no</DataField>
+        <Field Name="contract_no">
+          <DataField>contract_no</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="principle">
-          <DataField>principle</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="interest">
-          <DataField>interest</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="customer_name">
           <DataField>customer_name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="total_penalty_paid">
-          <DataField>total_penalty_paid</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+        <Field Name="disbursement_date">
+          <DataField>disbursement_date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="due_date">
-          <DataField>due_date</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="principle_less">
-          <DataField>principle_less</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+        <Field Name="expired_date">
+          <DataField>expired_date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="lob_name">
           <DataField>lob_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="pawn_price_approved">
+          <DataField>pawn_price_approved</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="balance">
+          <DataField>balance</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="contract_status">
+          <DataField>contract_status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AccrualDetail</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\AccrualDetail.xsd</rd:SchemaPath>
+        <rd:TableName>CONTRACT_DS</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="AIR_DS">
+      <Query>
+        <DataSourceName>AccrualDetail</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="sys_date">
+          <DataField>sys_date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ticket_no">
+          <DataField>ticket_no</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="serial_number">
           <DataField>serial_number</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="SystemDate">
-      <Query>
-        <DataSourceName>DSource</DataSourceName>
-        <CommandText>SELECT DATE(system_date) as system_date FROM system_date WHERE is_active = 1 limit 1</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="system_date">
-          <DataField>system_date</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+        <Field Name="DR">
+          <DataField>DR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-      </Fields>
-    </DataSet>
-    <DataSet Name="RenewCurrncy">
-      <Query>
-        <DataSourceName>DSource</DataSourceName>
-        <CommandText>SELECT id,currency FROM currency</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="id">
-          <DataField>id</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
-        </Field>
-        <Field Name="currency">
-          <DataField>currency</DataField>
+        <Field Name="CR">
+          <DataField>CR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>AccrualDetail</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\AccrualDetail.xsd</rd:SchemaPath>
+        <rd:TableName>AIR_DS</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
         <ReportItems>
-          <Textbox Name="Textbox1">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>CASH U UP CO., LTD</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.12499in</Top>
-            <Left>0.17587in</Left>
-            <Height>0.25in</Height>
-            <Width>1.57292in</Width>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox2">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -182,8 +155,9 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>BRANCH:</Value>
+                    <Value>BRANCH</Value>
                     <Style>
+                      <FontFamily>Calibri</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -192,11 +166,10 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.4375in</Top>
-            <Left>0.17587in</Left>
+            <Top>1.00522in</Top>
+            <Left>0.13542in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
-            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -215,9 +188,9 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>SYSTEM DATE:</Value>
+                    <Value>As of:</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
+                      <FontFamily>Calibri</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -226,11 +199,11 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.96528in</Top>
-            <Left>0.17587in</Left>
+            <Top>1.00522in</Top>
+            <Left>4.09552in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
-            <ZIndex>2</ZIndex>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -249,10 +222,10 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!Parameter2.Label</Value>
+                    <Value>=First(Fields!branch_name.Value, "CONTRACT_DS")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Gill Sans MT</FontFamily>
+                      <FontFamily>Calibri</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -261,11 +234,11 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.4375in</Top>
-            <Left>1.76329in</Left>
+            <Top>1.00522in</Top>
+            <Left>1.73612in</Left>
             <Height>0.25in</Height>
-            <Width>1.19792in</Width>
-            <ZIndex>3</ZIndex>
+            <Width>1.82292in</Width>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -285,23 +258,23 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Format(Parameters!Parameter1.Value, "dd-MMM-yyyy")</Value>
+                    <Value>=Parameters!SystemDate.Value</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
-                      <FontFamily>Gill Sans MT</FontFamily>
+                      <FontFamily>Calibri</FontFamily>
+                      <Format>dd-MM-yyyy</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Center</TextAlign>
+                  <TextAlign>Right</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.96528in</Top>
-            <Left>1.76329in</Left>
+            <Top>1.00522in</Top>
+            <Left>5.66844in</Left>
             <Height>0.25in</Height>
-            <Width>1.19792in</Width>
-            <ZIndex>4</ZIndex>
+            <Width>1.82119in</Width>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -314,150 +287,16 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Line Name="Line3">
-            <Top>6.79167in</Top>
-            <Left>0.85341in</Left>
-            <Height>0in</Height>
-            <Width>1.9075in</Width>
-            <ZIndex>5</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Line>
-          <Line Name="Line2">
-            <Top>6.79167in</Top>
-            <Left>8.02938in</Left>
-            <Height>0in</Height>
-            <Width>1.9075in</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Line>
-          <Line Name="Line1">
-            <Top>6.79167in</Top>
-            <Left>10.37598in</Left>
-            <Height>0in</Height>
-            <Width>1.9075in</Width>
-            <ZIndex>7</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Line>
-          <Textbox Name="Textbox23">
+          <Textbox Name="Textbox5">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Prepared by/date :</Value>
+                    <Value>ACCRUAL DETAIL REPORT</Value>
                     <Style>
-                      <FontFamily>Gill Sans MT</FontFamily>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>6.79167in</Top>
-            <Left>0.85341in</Left>
-            <Height>0.25in</Height>
-            <Width>1.57292in</Width>
-            <ZIndex>8</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox20">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Reviewed by/date :</Value>
-                    <Style>
-                      <FontFamily>Gill Sans MT</FontFamily>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>6.79167in</Top>
-            <Left>8.02938in</Left>
-            <Height>0.25in</Height>
-            <Width>1.57292in</Width>
-            <ZIndex>9</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox10">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Approved by/date :</Value>
-                    <Style>
-                      <FontFamily>Gill Sans MT</FontFamily>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>6.79167in</Top>
-            <Left>10.37598in</Left>
-            <Height>0.25in</Height>
-            <Width>1.57292in</Width>
-            <ZIndex>10</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox6">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>RENEW REPORT</Value>
-                    <Style>
+                      <FontFamily>Calibri</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <Color>Red</Color>
@@ -470,11 +309,11 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.29388in</Top>
-            <Left>0.17587in</Left>
+            <Top>0.63763in</Top>
+            <Left>0.13542in</Left>
             <Height>0.25in</Height>
-            <Width>9.71635in</Width>
-            <ZIndex>11</ZIndex>
+            <Width>5.39649in</Width>
+            <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -482,6 +321,96 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line1">
+            <Top>5.5925in</Top>
+            <Left>5.35064in</Left>
+            <Height>0in</Height>
+            <Width>1.9075in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox10">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Seen&amp;Approved By: </Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>4.54042in</Top>
+            <Left>5.35064in</Left>
+            <Height>0.25in</Height>
+            <Width>1.9075in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line3">
+            <Top>5.5925in</Top>
+            <Left>0.30898in</Left>
+            <Height>0in</Height>
+            <Width>1.9075in</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox21">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Prepared By:</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>4.54042in</Top>
+            <Left>0.3194in</Left>
+            <Height>0.25in</Height>
+            <Width>1.9075in</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>2pt</PaddingRight>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
@@ -494,6 +423,7 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                   <TextRun>
                     <Value>Print Date:</Value>
                     <Style>
+                      <FontFamily>Calibri</FontFamily>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -505,11 +435,11 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.29388in</Top>
-            <Left>9.96166in</Left>
+            <Top>0.63763in</Top>
+            <Left>5.53191in</Left>
             <Height>0.25in</Height>
-            <Width>1.09599in</Width>
-            <ZIndex>12</ZIndex>
+            <Width>0.74591in</Width>
+            <ZIndex>9</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -531,20 +461,20 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                     <Value>=Microsoft.VisualBasic.Strings.Format(NOW, "dd-MMM-yyyy")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Gill Sans MT</FontFamily>
+                      <FontFamily>Calibri</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Center</TextAlign>
+                  <TextAlign>Right</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.29388in</Top>
-            <Left>11.07215in</Left>
+            <Top>0.63763in</Top>
+            <Left>6.29171in</Left>
             <Height>0.25in</Height>
             <Width>1.19792in</Width>
-            <ZIndex>13</ZIndex>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -557,16 +487,16 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox7">
+          <Textbox Name="Textbox23">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>CURRENCY:</Value>
+                    <Value>CONTRACT #</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
+                      <FontFamily>Calibri</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -575,11 +505,11 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.70139in</Top>
-            <Left>0.17587in</Left>
+            <Top>1.2691in</Top>
+            <Left>0.13542in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
-            <ZIndex>14</ZIndex>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -598,10 +528,10 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!Parameter3.Label</Value>
+                    <Value>=First(Fields!contract_no.Value, "CONTRACT_DS")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Gill Sans MT</FontFamily>
+                      <FontFamily>Calibri</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -610,11 +540,11 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.70139in</Top>
-            <Left>1.76329in</Left>
+            <Top>1.2691in</Top>
+            <Left>1.73612in</Left>
             <Height>0.25in</Height>
-            <Width>1.19792in</Width>
-            <ZIndex>15</ZIndex>
+            <Width>1.82292in</Width>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -627,65 +557,837 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Tablix Name="Tablix4">
+          <Textbox Name="Textbox22">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Branch Accountant </Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>5.64806in</Top>
+            <Left>0.29856in</Left>
+            <Height>0.25in</Height>
+            <Width>1.91792in</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox24">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Branch Manager </Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>5.64806in</Top>
+            <Left>5.35064in</Left>
+            <Height>0.25in</Height>
+            <Width>1.9075in</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox12">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Contract Status</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>1.2691in</Top>
+            <Left>4.09552in</Left>
+            <Height>0.25in</Height>
+            <Width>1.57292in</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtMonth4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!contract_status.Value, "CONTRACT_DS")</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.2691in</Top>
+            <Left>5.66844in</Left>
+            <Height>0.25in</Height>
+            <Width>1.82119in</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>Gainsboro</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox25">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Customer Name</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>1.533in</Top>
+            <Left>0.13542in</Left>
+            <Height>0.25in</Height>
+            <Width>1.57292in</Width>
+            <ZIndex>17</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtMonth5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!customer_name.Value, "CONTRACT_DS")</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.533in</Top>
+            <Left>1.73612in</Left>
+            <Height>0.25in</Height>
+            <Width>1.82292in</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>Gainsboro</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox26">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>LOB Type:</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>1.533in</Top>
+            <Left>4.09552in</Left>
+            <Height>0.25in</Height>
+            <Width>1.57292in</Width>
+            <ZIndex>19</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtMonth6">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!lob_name.Value, "CONTRACT_DS")</Value>
+                    <Style>
+                      <FontStyle>Italic</FontStyle>
+                      <FontFamily>Calibri</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.533in</Top>
+            <Left>5.66844in</Left>
+            <Height>0.25in</Height>
+            <Width>1.82119in</Width>
+            <ZIndex>20</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>Gainsboro</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox27">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Date Disbursed</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>1.79688in</Top>
+            <Left>0.13542in</Left>
+            <Height>0.25in</Height>
+            <Width>1.57292in</Width>
+            <ZIndex>21</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtMonth7">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!disbursement_date.Value, "CONTRACT_DS")</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <Format>dd-MM-yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.79688in</Top>
+            <Left>1.73612in</Left>
+            <Height>0.25in</Height>
+            <Width>1.82292in</Width>
+            <ZIndex>22</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>Gainsboro</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox28">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Date Expired</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>2.06078in</Top>
+            <Left>0.13542in</Left>
+            <Height>0.25in</Height>
+            <Width>1.57292in</Width>
+            <ZIndex>23</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtMonth8">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!expired_date.Value, "CONTRACT_DS")</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <Format>dd-MM-yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.06078in</Top>
+            <Left>1.73612in</Left>
+            <Height>0.25in</Height>
+            <Width>1.82292in</Width>
+            <ZIndex>24</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>Gainsboro</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox29">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Disbured Amount</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>1.79688in</Top>
+            <Left>4.09552in</Left>
+            <Height>0.25in</Height>
+            <Width>1.57292in</Width>
+            <ZIndex>25</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtMonth9">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!pawn_price_approved.Value, "CONTRACT_DS")</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <Format>#,0.00;(#,0.00);'-'</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.79688in</Top>
+            <Left>5.90109in</Left>
+            <Height>0.25in</Height>
+            <Width>1.58854in</Width>
+            <ZIndex>26</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>Gainsboro</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox30">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Outstanding Amount</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>2.06078in</Top>
+            <Left>4.09552in</Left>
+            <Height>0.25in</Height>
+            <Width>1.57292in</Width>
+            <ZIndex>27</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtMonth10">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!balance.Value, "CONTRACT_DS")</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                      <Format>#,0.00;(#,0.00);'-'</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.06078in</Top>
+            <Left>5.90109in</Left>
+            <Height>0.25in</Height>
+            <Width>1.58854in</Width>
+            <ZIndex>28</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>Gainsboro</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Tablix Name="Tablix1">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.50217in</Width>
+                  <Width>1.13148in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.01032in</Width>
+                  <Width>0.21257in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.47653in</Width>
+                  <Width>1.3in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.50231in</Width>
+                  <Width>0.79712in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.56276in</Width>
+                  <Width>0.20736in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.125in</Width>
+                  <Width>1.3in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.24378in</Width>
+                  <Width>0.87626in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.14688in</Width>
+                  <Width>0.22942in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.97462in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.15625in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.69865in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.71736in</Width>
+                  <Width>1.3in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
+                <TablixRow>
+                  <Height>0.42708in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox6">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Due Date</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Silver</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox32">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Outstanding</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox32</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Silver</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>2</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox14">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Interest Rate %</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox14</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Silver</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox36">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Current Due Interest</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox36</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Silver</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>2</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox16">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value># Schedule Days</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox16</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Silver</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox38">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Accrual / Day</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox38</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Silver</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <ColSpan>2</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
                 <TablixRow>
                   <Height>0.25in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox166">
+                        <Textbox Name="due_date">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=RowNumber("RenewDS")</Value>
+                                  <Value>=Fields!due_date.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <Format>dd-MM-yyyy</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -694,7 +1396,7 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox166</rd:DefaultName>
+                          <rd:DefaultName>due_date</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -711,167 +1413,23 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="trnx_date1">
+                        <Textbox Name="Textbox33">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!trnx_date.Value</Value>
+                                  <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <Format>dd-MMM-yyyy</Format>
+                                    <FontFamily>Calibri</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
+                              <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>trnx_date1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="customer_name2">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!customer_name.Value</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <Format>#,0;(#,0);'-'</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>customer_name2</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="lob_name1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!lob_name.Value</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>lob_name1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox88">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!ticket_no.Value &amp; "(" &amp; Fields!serial_number.Value &amp; ")"</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox88</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox120">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=IIF(Parameters!Parameter3.Value = "2","$","KHR")</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox120</rd:DefaultName>
+                          <rd:DefaultName>Textbox33</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -891,16 +1449,16 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="principle_less">
+                        <Textbox Name="principle_due">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!principle_less.Value</Value>
+                                  <Value>=Fields!principle_due.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -910,7 +1468,7 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>principle_less</rd:DefaultName>
+                          <rd:DefaultName>principle_due</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -930,25 +1488,64 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox124">
+                        <Textbox Name="interest_rate">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(Parameters!Parameter3.Value = "2","$","KHR")</Value>
+                                  <Value>=Fields!interest_rate.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value> %</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox124</rd:DefaultName>
+                          <rd:DefaultName>interest_rate</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox37">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>$</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox37</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -977,7 +1574,7 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                                 <TextRun>
                                   <Value>=Fields!interest.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1007,94 +1604,16 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox128">
+                        <Textbox Name="num_of_day">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(Parameters!Parameter3.Value = "2","$","KHR")</Value>
+                                  <Value>=Fields!num_of_day.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox128</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <RightBorder>
-                              <Style>None</Style>
-                            </RightBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="total_penalty_paid">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!total_penalty_paid.Value</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <Format>#,0.00;(#,0.00);'-'</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>total_penalty_paid</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <LeftBorder>
-                              <Style>None</Style>
-                            </LeftBorder>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="due_date1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!due_date.Value</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <Format>dd-MMM-yyyy</Format>
+                                    <FontFamily>Calibri</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1103,7 +1622,7 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>due_date1</rd:DefaultName>
+                          <rd:DefaultName>num_of_day</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1120,16 +1639,53 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox101">
+                        <Textbox Name="Textbox39">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox39</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <RightBorder>
+                              <Style>None</Style>
+                            </RightBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="accrual_amt">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!accrual_amt.Value</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1138,7 +1694,406 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox101</rd:DefaultName>
+                          <rd:DefaultName>accrual_amt</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <LeftBorder>
+                              <Style>None</Style>
+                            </LeftBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>SCHEDULE_DS</DataSetName>
+            <Top>2.37896in</Top>
+            <Left>0.13542in</Left>
+            <Height>0.67708in</Height>
+            <Width>7.35421in</Width>
+            <ZIndex>29</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Textbox Name="txtMonth11">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>$</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.79688in</Top>
+            <Left>5.66844in</Left>
+            <Height>0.25in</Height>
+            <Width>0.23265in</Width>
+            <ZIndex>30</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>Gainsboro</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtMonth12">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>$</Value>
+                    <Style>
+                      <FontFamily>Calibri</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.06078in</Top>
+            <Left>5.66844in</Left>
+            <Height>0.25in</Height>
+            <Width>0.23265in</Width>
+            <ZIndex>31</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>Gainsboro</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Tablix Name="Tablix3">
+            <TablixCorner>
+              <TablixCornerRows>
+                <TablixCornerRow>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox83">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>No</Value>
+                                <Style>
+                                  <FontFamily>Calibri</FontFamily>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox83</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>#adc4a0</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                      <RowSpan>2</RowSpan>
+                    </CellContents>
+                  </TablixCornerCell>
+                </TablixCornerRow>
+                <TablixCornerRow>
+                  <TablixCornerCell />
+                </TablixCornerRow>
+              </TablixCornerRows>
+            </TablixCorner>
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1.12453in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.30946in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.39921in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="sys_date">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!sys_date.Value</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <Format>dd-MM-yyyy</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>sys_date</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ticket_no">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ticket_no.Value</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ticket_no</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="serial_number">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!serial_number.Value</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>serial_number</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="DR">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!DR.Value</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>DR</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="CR">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!CR.Value</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>CR</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox15">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=RunningValue((Fields!DR.Value - Fields!CR.Value), Sum, Nothing)</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox14</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1160,292 +2115,7 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox108">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>= "Total " &amp; Fields!lob_name.Value &amp; ": "</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox108</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>Gainsboro</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                        <ColSpan>5</ColSpan>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell />
-                    <TablixCell />
-                    <TablixCell />
-                    <TablixCell />
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox121">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=IIF(Parameters!Parameter3.Value = 2,"$","KHR")</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox121</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <RightBorder>
-                              <Style>None</Style>
-                            </RightBorder>
-                            <BackgroundColor>Gainsboro</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="principle_less1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!principle_less.Value)</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Format>#,0.00;(#,0.00);'-'</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>principle_less1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <LeftBorder>
-                              <Style>None</Style>
-                            </LeftBorder>
-                            <BackgroundColor>Gainsboro</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox125">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=IIF(Parameters!Parameter3.Value = 2,"$","KHR")</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox125</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <RightBorder>
-                              <Style>None</Style>
-                            </RightBorder>
-                            <BackgroundColor>Gainsboro</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="interest1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!interest.Value)</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Format>#,0.00;(#,0.00);'-'</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>interest1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <LeftBorder>
-                              <Style>None</Style>
-                            </LeftBorder>
-                            <BackgroundColor>Gainsboro</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox129">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=IIF(Parameters!Parameter3.Value = 2,"$","KHR")</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox129</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <RightBorder>
-                              <Style>None</Style>
-                            </RightBorder>
-                            <BackgroundColor>Gainsboro</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="total_penalty_paid1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!total_penalty_paid.Value)</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Format>#,0.00;(#,0.00);'-'</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>total_penalty_paid1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <LeftBorder>
-                              <Style>None</Style>
-                            </LeftBorder>
-                            <BackgroundColor>Gainsboro</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox116">
+                        <Textbox Name="Textbox157">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1454,22 +2124,22 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Calibri</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox116</rd:DefaultName>
+                          <rd:DefaultName>Textbox157</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Gainsboro</BackgroundColor>
+                            <BackgroundColor>Silver</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1481,7 +2151,7 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox117">
+                        <Textbox Name="Textbox147">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -1490,110 +2160,22 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Calibri</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox117</rd:DefaultName>
+                          <rd:DefaultName>Textbox147</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Gainsboro</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                  </TablixCells>
-                </TablixRow>
-                <TablixRow>
-                  <Height>0.25in</Height>
-                  <TablixCells>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox374">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>GRAND TOTAL :</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox374</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                        <ColSpan>5</ColSpan>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell />
-                    <TablixCell />
-                    <TablixCell />
-                    <TablixCell />
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox122">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=IIF(Parameters!Parameter3.Value = 2,"$","KHR")</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox122</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <RightBorder>
-                              <Style>None</Style>
-                            </RightBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>Silver</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1605,19 +2187,50 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="principle_less2">
+                        <Textbox Name="Textbox148">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!principle_less.Value)</Value>
+                                  <Value />
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
+                                    <FontFamily>Calibri</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox148</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>Silver</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox149">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!DR.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1627,16 +2240,13 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>principle_less2</rd:DefaultName>
+                          <rd:DefaultName>Textbox149</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <LeftBorder>
-                              <Style>None</Style>
-                            </LeftBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>Silver</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1648,61 +2258,16 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox126">
+                        <Textbox Name="Textbox150">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(Parameters!Parameter3.Value = 2,"$","KHR")</Value>
+                                  <Value>=Sum(Fields!CR.Value)</Value>
                                   <Style>
-                                    <FontStyle>Normal</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox126</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <RightBorder>
-                              <Style>None</Style>
-                            </RightBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="interest2">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!interest.Value)</Value>
-                                  <Style>
-                                    <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
+                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1712,16 +2277,13 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>interest2</rd:DefaultName>
+                          <rd:DefaultName>Textbox150</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <LeftBorder>
-                              <Style>None</Style>
-                            </LeftBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>Silver</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1733,60 +2295,16 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox130">
+                        <Textbox Name="Textbox151">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(Parameters!Parameter3.Value = 2,"$","KHR")</Value>
+                                  <Value>=sum(Fields!DR.Value) -sum(Fields!CR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox130</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <RightBorder>
-                              <Style>None</Style>
-                            </RightBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="total_penalty_paid2">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!total_penalty_paid.Value)</Value>
-                                  <Style>
-                                    <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
+                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1796,94 +2314,13 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>total_penalty_paid2</rd:DefaultName>
+                          <rd:DefaultName>Textbox151</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <LeftBorder>
-                              <Style>None</Style>
-                            </LeftBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox98">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox98</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox102">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox102</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>Silver</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1901,18 +2338,18 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.48958in</Size>
+                    <Size>0.5in</Size>
                     <CellContents>
-                      <Textbox Name="Textbox168">
+                      <Textbox Name="Textbox152">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>No</Value>
+                                <Value>Accrual Date</Value>
                                 <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -1922,142 +2359,13 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                             </Style>
                           </Paragraph>
                         </Paragraphs>
-                        <rd:DefaultName>Textbox168</rd:DefaultName>
+                        <rd:DefaultName>Textbox152</rd:DefaultName>
                         <Style>
                           <Border>
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
-                          <VerticalAlign>Middle</VerticalAlign>
-                          <PaddingLeft>2pt</PaddingLeft>
-                          <PaddingRight>2pt</PaddingRight>
-                          <PaddingTop>2pt</PaddingTop>
-                          <PaddingBottom>2pt</PaddingBottom>
-                        </Style>
-                      </Textbox>
-                    </CellContents>
-                  </TablixHeader>
-                  <TablixMembers>
-                    <TablixMember />
-                  </TablixMembers>
-                </TablixMember>
-                <TablixMember>
-                  <TablixHeader>
-                    <Size>0.48958in</Size>
-                    <CellContents>
-                      <Textbox Name="Textbox172">
-                        <CanGrow>true</CanGrow>
-                        <KeepTogether>true</KeepTogether>
-                        <Paragraphs>
-                          <Paragraph>
-                            <TextRuns>
-                              <TextRun>
-                                <Value>Transaction Date</Value>
-                                <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
-                                  <FontWeight>Bold</FontWeight>
-                                </Style>
-                              </TextRun>
-                            </TextRuns>
-                            <Style>
-                              <TextAlign>Center</TextAlign>
-                            </Style>
-                          </Paragraph>
-                        </Paragraphs>
-                        <rd:DefaultName>Textbox172</rd:DefaultName>
-                        <Style>
-                          <Border>
-                            <Color>LightGrey</Color>
-                            <Style>Solid</Style>
-                          </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
-                          <VerticalAlign>Middle</VerticalAlign>
-                          <PaddingLeft>2pt</PaddingLeft>
-                          <PaddingRight>2pt</PaddingRight>
-                          <PaddingTop>2pt</PaddingTop>
-                          <PaddingBottom>2pt</PaddingBottom>
-                        </Style>
-                      </Textbox>
-                    </CellContents>
-                  </TablixHeader>
-                  <TablixMembers>
-                    <TablixMember />
-                  </TablixMembers>
-                </TablixMember>
-                <TablixMember>
-                  <TablixHeader>
-                    <Size>0.48958in</Size>
-                    <CellContents>
-                      <Textbox Name="Textbox176">
-                        <CanGrow>true</CanGrow>
-                        <KeepTogether>true</KeepTogether>
-                        <Paragraphs>
-                          <Paragraph>
-                            <TextRuns>
-                              <TextRun>
-                                <Value>Client Name</Value>
-                                <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
-                                  <FontWeight>Bold</FontWeight>
-                                </Style>
-                              </TextRun>
-                            </TextRuns>
-                            <Style>
-                              <TextAlign>Center</TextAlign>
-                            </Style>
-                          </Paragraph>
-                        </Paragraphs>
-                        <rd:DefaultName>Textbox176</rd:DefaultName>
-                        <Style>
-                          <Border>
-                            <Color>LightGrey</Color>
-                            <Style>Solid</Style>
-                          </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
-                          <VerticalAlign>Middle</VerticalAlign>
-                          <PaddingLeft>2pt</PaddingLeft>
-                          <PaddingRight>2pt</PaddingRight>
-                          <PaddingTop>2pt</PaddingTop>
-                          <PaddingBottom>2pt</PaddingBottom>
-                        </Style>
-                      </Textbox>
-                    </CellContents>
-                  </TablixHeader>
-                  <TablixMembers>
-                    <TablixMember />
-                  </TablixMembers>
-                </TablixMember>
-                <TablixMember>
-                  <TablixHeader>
-                    <Size>0.48958in</Size>
-                    <CellContents>
-                      <Textbox Name="Textbox77">
-                        <CanGrow>true</CanGrow>
-                        <KeepTogether>true</KeepTogether>
-                        <Paragraphs>
-                          <Paragraph>
-                            <TextRuns>
-                              <TextRun>
-                                <Value>LOB</Value>
-                                <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
-                                  <FontWeight>Bold</FontWeight>
-                                </Style>
-                              </TextRun>
-                            </TextRuns>
-                            <Style>
-                              <TextAlign>Center</TextAlign>
-                            </Style>
-                          </Paragraph>
-                        </Paragraphs>
-                        <rd:DefaultName>Textbox77</rd:DefaultName>
-                        <Style>
-                          <Border>
-                            <Color>LightGrey</Color>
-                            <Style>Solid</Style>
-                          </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
+                          <BackgroundColor>#adc4a0</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2070,18 +2378,18 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.48958in</Size>
+                    <Size>0.5in</Size>
                     <CellContents>
-                      <Textbox Name="Textbox85">
+                      <Textbox Name="Textbox7">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>Ref. Ticket #</Value>
+                                <Value>Ticket #</Value>
                                 <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2091,13 +2399,13 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                             </Style>
                           </Paragraph>
                         </Paragraphs>
-                        <rd:DefaultName>Textbox85</rd:DefaultName>
+                        <rd:DefaultName>Textbox6</rd:DefaultName>
                         <Style>
                           <Border>
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
+                          <BackgroundColor>#adc4a0</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2110,18 +2418,18 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.23958in</Size>
+                    <Size>0.5in</Size>
                     <CellContents>
-                      <Textbox Name="Textbox118">
+                      <Textbox Name="Textbox17">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>Renew</Value>
+                                <Value>Serial #</Value>
                                 <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2131,14 +2439,54 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                             </Style>
                           </Paragraph>
                         </Paragraphs>
-                        <rd:DefaultName>Textbox118</rd:DefaultName>
+                        <rd:DefaultName>Textbox16</rd:DefaultName>
                         <Style>
                           <Border>
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
-                          <VerticalAlign>Top</VerticalAlign>
+                          <BackgroundColor>#adc4a0</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                </TablixMember>
+                <TablixMember>
+                  <TablixHeader>
+                    <Size>0.25in</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox131">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Accrual Amount</Value>
+                                <Style>
+                                  <FontFamily>Calibri</FontFamily>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox131</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>#adc4a0</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
                           <PaddingTop>2pt</PaddingTop>
@@ -2152,16 +2500,17 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                       <TablixHeader>
                         <Size>0.25in</Size>
                         <CellContents>
-                          <Textbox Name="Textbox119">
+                          <Textbox Name="Textbox153">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>Outstanding</Value>
+                                    <Value>DEBIT</Value>
                                     <Style>
-                                      <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontFamily>Calibri</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -2171,13 +2520,13 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                                 </Style>
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Textbox119</rd:DefaultName>
+                            <rd:DefaultName>Textbox126</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
-                              <BackgroundColor>Wheat</BackgroundColor>
+                              <BackgroundColor>#adc4a0</BackgroundColor>
                               <VerticalAlign>Middle</VerticalAlign>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
@@ -2187,25 +2536,22 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                           </Textbox>
                         </CellContents>
                       </TablixHeader>
-                      <TablixMembers>
-                        <TablixMember />
-                        <TablixMember />
-                      </TablixMembers>
                     </TablixMember>
                     <TablixMember>
                       <TablixHeader>
                         <Size>0.25in</Size>
                         <CellContents>
-                          <Textbox Name="Textbox123">
+                          <Textbox Name="Textbox154">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>Interest</Value>
+                                    <Value>CREDIT</Value>
                                     <Style>
-                                      <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontFamily>Calibri</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -2215,13 +2561,13 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                                 </Style>
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Textbox123</rd:DefaultName>
+                            <rd:DefaultName>Textbox129</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
-                              <BackgroundColor>Wheat</BackgroundColor>
+                              <BackgroundColor>#adc4a0</BackgroundColor>
                               <VerticalAlign>Middle</VerticalAlign>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
@@ -2231,25 +2577,22 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                           </Textbox>
                         </CellContents>
                       </TablixHeader>
-                      <TablixMembers>
-                        <TablixMember />
-                        <TablixMember />
-                      </TablixMembers>
                     </TablixMember>
                     <TablixMember>
                       <TablixHeader>
                         <Size>0.25in</Size>
                         <CellContents>
-                          <Textbox Name="Textbox127">
+                          <Textbox Name="Textbox13">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>Penalty</Value>
+                                    <Value>BALANCE</Value>
                                     <Style>
-                                      <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontFamily>Calibri</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -2259,13 +2602,13 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                                 </Style>
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>Textbox127</rd:DefaultName>
+                            <rd:DefaultName>Textbox13</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
-                              <BackgroundColor>Wheat</BackgroundColor>
+                              <BackgroundColor>#adc4a0</BackgroundColor>
                               <VerticalAlign>Middle</VerticalAlign>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
@@ -2275,140 +2618,157 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
                           </Textbox>
                         </CellContents>
                       </TablixHeader>
-                      <TablixMembers>
-                        <TablixMember />
-                        <TablixMember />
-                      </TablixMembers>
                     </TablixMember>
                   </TablixMembers>
-                </TablixMember>
-                <TablixMember>
-                  <TablixHeader>
-                    <Size>0.48958in</Size>
-                    <CellContents>
-                      <Textbox Name="Textbox95">
-                        <CanGrow>true</CanGrow>
-                        <KeepTogether>true</KeepTogether>
-                        <Paragraphs>
-                          <Paragraph>
-                            <TextRuns>
-                              <TextRun>
-                                <Value>Expired Date</Value>
-                                <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
-                                  <FontWeight>Bold</FontWeight>
-                                </Style>
-                              </TextRun>
-                            </TextRuns>
-                            <Style>
-                              <TextAlign>Center</TextAlign>
-                            </Style>
-                          </Paragraph>
-                        </Paragraphs>
-                        <rd:DefaultName>Textbox95</rd:DefaultName>
-                        <Style>
-                          <Border>
-                            <Color>LightGrey</Color>
-                            <Style>Solid</Style>
-                          </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
-                          <VerticalAlign>Middle</VerticalAlign>
-                          <PaddingLeft>2pt</PaddingLeft>
-                          <PaddingRight>2pt</PaddingRight>
-                          <PaddingTop>2pt</PaddingTop>
-                          <PaddingBottom>2pt</PaddingBottom>
-                        </Style>
-                      </Textbox>
-                    </CellContents>
-                  </TablixHeader>
-                </TablixMember>
-                <TablixMember>
-                  <TablixHeader>
-                    <Size>0.48958in</Size>
-                    <CellContents>
-                      <Textbox Name="Textbox99">
-                        <CanGrow>true</CanGrow>
-                        <KeepTogether>true</KeepTogether>
-                        <Paragraphs>
-                          <Paragraph>
-                            <TextRuns>
-                              <TextRun>
-                                <Value>REMARK</Value>
-                                <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
-                                  <FontWeight>Bold</FontWeight>
-                                </Style>
-                              </TextRun>
-                            </TextRuns>
-                            <Style>
-                              <TextAlign>Center</TextAlign>
-                            </Style>
-                          </Paragraph>
-                        </Paragraphs>
-                        <rd:DefaultName>Textbox99</rd:DefaultName>
-                        <Style>
-                          <Border>
-                            <Color>LightGrey</Color>
-                            <Style>Solid</Style>
-                          </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
-                          <VerticalAlign>Middle</VerticalAlign>
-                          <PaddingLeft>2pt</PaddingLeft>
-                          <PaddingRight>2pt</PaddingRight>
-                          <PaddingTop>2pt</PaddingTop>
-                          <PaddingBottom>2pt</PaddingBottom>
-                        </Style>
-                      </Textbox>
-                    </CellContents>
-                  </TablixHeader>
                 </TablixMember>
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
               <TablixMembers>
                 <TablixMember>
-                  <Group Name="lob_name1">
-                    <GroupExpressions>
-                      <GroupExpression>=Fields!lob_name.Value</GroupExpression>
-                    </GroupExpressions>
-                  </Group>
+                  <Group Name="RowDetail" />
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!lob_name.Value</Value>
+                      <Value>=Fields!sys_date.Value</Value>
+                    </SortExpression>
+                    <SortExpression>
+                      <Value>=Fields!ticket_no.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <TablixMembers>
-                    <TablixMember>
-                      <Group Name="RowGroup" />
-                    </TablixMember>
-                    <TablixMember>
-                      <KeepWithGroup>Before</KeepWithGroup>
-                    </TablixMember>
-                  </TablixMembers>
+                  <TablixHeader>
+                    <Size>0.52102in</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox80">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=RowNumber(Nothing)</Value>
+                                <Style>
+                                  <FontFamily>Calibri</FontFamily>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox80</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
                 </TablixMember>
-                <TablixMember />
+                <TablixMember>
+                  <TablixHeader>
+                    <Size>0.52102in</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox146">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Total</Value>
+                                <Style>
+                                  <FontFamily>Calibri</FontFamily>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox146</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>Silver</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>RenewDS</DataSetName>
-            <Top>1.59854in</Top>
-            <Left>0.15344in</Left>
-            <Height>1.23958in</Height>
-            <Width>12.11663in</Width>
-            <ZIndex>16</ZIndex>
+            <FixedColumnHeaders>true</FixedColumnHeaders>
+            <DataSetName>AIR_DS</DataSetName>
+            <Top>3.19903in</Top>
+            <Left>0.13542in</Left>
+            <Height>1in</Height>
+            <Width>7.35422in</Width>
+            <ZIndex>32</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
+          <Textbox Name="CompanyName">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!CompanyName.Value</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CompanyName</rd:DefaultName>
+            <Top>0.18104in</Top>
+            <Left>0.13542in</Left>
+            <Height>0.25in</Height>
+            <Width>6.1424in</Width>
+            <ZIndex>33</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>8.27in</Height>
+        <Height>6.03869in</Height>
         <Style />
       </Body>
-      <Width>12.43659in</Width>
+      <Width>7.62572in</Width>
       <Page>
         <PageHeight>8.27in</PageHeight>
         <PageWidth>11.69in</PageWidth>
+        <InteractiveHeight>0in</InteractiveHeight>
+        <InteractiveWidth>11.69in</InteractiveWidth>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
         <TopMargin>1in</TopMargin>
@@ -2418,44 +2778,37 @@ AND ST.branch_id = ? AND IC.currency_id = ?</CommandText>
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="Parameter2">
-      <DataType>Integer</DataType>
-      <Prompt>BRANCH:</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>branch</DataSetName>
-          <ValueField>id</ValueField>
-          <LabelField>appr</LabelField>
-        </DataSetReference>
-      </ValidValues>
+    <ReportParameter Name="SystemDate">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="Parameter1">
-      <DataType>DateTime</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>SystemDate</DataSetName>
-          <ValueField>system_date</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>SYSTEM DATE:</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="Parameter3">
-      <DataType>Integer</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>2</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>CURRENCY:</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>RenewCurrncy</DataSetName>
-          <ValueField>id</ValueField>
-          <LabelField>currency</LabelField>
-        </DataSetReference>
-      </ValidValues>
+    <ReportParameter Name="CompanyName">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>2</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>SystemDate</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>CompanyName</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>d497106b-9fd5-4372-ae25-9a71f9768efa</rd:ReportID>
+  <rd:ReportID>f9847cd5-a915-4021-86d0-19e9f1b480b8</rd:ReportID>
 </Report>

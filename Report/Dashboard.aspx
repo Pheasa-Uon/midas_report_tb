@@ -2,6 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1 class="ml16 text-center mt50">
-        Pawn Shop Reporting System
+        Pawn Shop Reporting System (<%=appName %>)
     </h1>
 </asp:Content>

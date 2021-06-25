@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AllContractList.aspx.cs" Inherits="Report.Operation.AllContractList1" %>
+﻿<%@ Page Title="All Contract List" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AllContractList.aspx.cs" Inherits="Report.Operation.AllContractList1" %>
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
@@ -27,7 +27,7 @@
                     <label>Contract Status:</label>
                     <asp:DropDownList ID="ddContractStatus" runat="server" CssClass="form-control input-sm">
                         <asp:ListItem Value="0" Text="--- All ---" />
-                        <asp:ListItem Value="4" Text="Active" />
+                        <asp:ListItem Selected="True" Value="4" Text="Active" />
                         <asp:ListItem Value="6" Text="Redeem" />
                     </asp:DropDownList>
                 </div>

@@ -131,13 +131,12 @@
   <ItemGroup>
     <Content Include="Accounting\AccrualDetail.aspx" />
     <Content Include="Accounting\AccrualInterest.aspx" />
-    <Content Include="Accounting\AccrualInterestOnPawn.aspx" />
     <Content Include="Accounting\BalanceSheet.aspx" />
     <Content Include="Accounting\CashConsolidate.aspx" />
     <Content Include="Accounting\CashflowStatement.aspx" />
     <Content Include="Accounting\ChartOfAccount.aspx" />
     <Content Include="Accounting\DailyCashVault.aspx" />
-    <Content Include="Accounting\DailyTillCashOperation.aspx" />
+    <Content Include="Accounting\DailyTillCashPawnOperation.aspx" />
     <Content Include="Accounting\DailyTillPettyCash.aspx" />
     <Content Include="Accounting\GLTransactionHistory.aspx" />
     <Content Include="Accounting\IncomeStatement.aspx" />
@@ -177,25 +176,51 @@
     <Content Include="Dataset\BranchProductivity.xsc">
       <DependentUpon>BranchProductivity.xsd</DependentUpon>
     </Content>
-    <EmbeddedResource Include="Accounting\CashflowStatement.rdlc" />
-    <EmbeddedResource Include="Accounting\ChartOfAccount.rdlc" />
-    <EmbeddedResource Include="Accounting\AccrualInterestOnPawn.rdlc" />
-    <EmbeddedResource Include="Accounting\JournalEntryByDate.rdlc" />
-    <Content Include="Dataset\AccrualInterestOnPawn.xsc">
-      <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
+    <Content Include="Accounting\CashflowStatement.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Accounting\TrialBalance.rdlc" />
-    <EmbeddedResource Include="Accounting\IncomeStatementByDate.rdlc" />
-    <EmbeddedResource Include="Accounting\IncomeStatement.rdlc" />
-    <EmbeddedResource Include="Accounting\GLTransactionHistory.rdlc" />
+    <Content Include="Accounting\ChartOfAccount.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\JournalEntryByDate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\TrialBalance.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\IncomeStatementByDate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\IncomeStatement.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\GLTransactionHistory.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Accounting\AccrualDetail.rdlc" />
+    <Content Include="Dataset\AccrualDetail.xsc">
+      <DependentUpon>AccrualDetail.xsd</DependentUpon>
+    </Content>
+    <EmbeddedResource Include="Accounting\AccrualInterest.rdlc" />
     <EmbeddedResource Include="Accounting\BalanceSheet.rdlc" />
-    <None Include="Dataset\AccrualInterestOnPawn.xsd">
+    <None Include="Dataset\AccrualDetail.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AccrualInterestOnPawn.Designer.cs</LastGenOutput>
+      <LastGenOutput>AccrualDetail.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="Dataset\AccrualInterestOnPawn.xss">
-      <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
+    <Content Include="Dataset\AccrualDetail.xss">
+      <DependentUpon>AccrualDetail.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\AccrualInterest.xsc">
+      <DependentUpon>AccrualInterest.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\AccrualInterest.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccrualInterest.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\AccrualInterest.xss">
+      <DependentUpon>AccrualInterest.xsd</DependentUpon>
     </Content>
     <None Include="Dataset\BranchProductivity.xsd">
       <SubType>Designer</SubType>
@@ -338,7 +363,9 @@
     <Content Include="Dataset\PawnListDetail.xss">
       <DependentUpon>PawnListDetail.xsd</DependentUpon>
     </Content>
-    <EmbeddedResource Include="Operation\PawnListDetail.rdlc" />
+    <Content Include="Operation\PawnListDetail.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Dataset\TurnOver.xsc">
       <DependentUpon>TurnOver.xsd</DependentUpon>
     </Content>
@@ -438,8 +465,12 @@
     <Content Include="Dataset\TurnOver.xss">
       <DependentUpon>TurnOver.xsd</DependentUpon>
     </Content>
-    <EmbeddedResource Include="Operation\BranchProductivity.rdlc" />
-    <EmbeddedResource Include="Operation\COProductivity.rdlc" />
+    <Content Include="Operation\BranchProductivity.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\COProductivity.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Dataset\BalanceSheet.xsc">
       <DependentUpon>BalanceSheet.xsd</DependentUpon>
     </Content>
@@ -454,10 +485,18 @@
     <Content Include="Operation\AllContractList.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Operation\BranchProductivityAsOf.rdlc" />
-    <EmbeddedResource Include="Operation\BranchProductivityConsolidate.rdlc" />
-    <EmbeddedResource Include="Operation\BranchProductivityOnDate.rdlc" />
-    <EmbeddedResource Include="Operation\LateReport.rdlc" />
+    <Content Include="Operation\BranchProductivityAsOf.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\BranchProductivityConsolidate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\BranchProductivityOnDate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\LateReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Dataset\IncomeStatementByDate.xsc">
       <DependentUpon>IncomeStatementByDate.xsd</DependentUpon>
     </Content>
@@ -480,21 +519,49 @@
     <Content Include="Dataset\IncomeStatementByDate.xss">
       <DependentUpon>IncomeStatementByDate.xsd</DependentUpon>
     </Content>
-    <EmbeddedResource Include="Operation\CollectionSheet.rdlc" />
-    <EmbeddedResource Include="Operation\CustomerList.rdlc" />
+    <Content Include="Operation\CollectionSheet.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\CustomerList.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Operation\LateReportV2.aspx" />
-    <EmbeddedResource Include="Operation\LateReportV2.rdlc" />
-    <EmbeddedResource Include="Operation\NewGrant.rdlc" />
-    <EmbeddedResource Include="Operation\ProductivityConsolidateByBranch.rdlc" />
-    <EmbeddedResource Include="Operation\ProductivityConsolidateByBranchOnDate.rdlc" />
-    <EmbeddedResource Include="Operation\ProductivityConsolidateByLOBOnDate.rdlc" />
-    <EmbeddedResource Include="Operation\ProductivityConsolidateByLOB.rdlc" />
-    <EmbeddedResource Include="Operation\RenewReport.rdlc" />
-    <EmbeddedResource Include="Operation\RedeemReport.rdlc" />
-    <EmbeddedResource Include="Operation\PaymentDetail.rdlc" />
-    <EmbeddedResource Include="Operation\StockReport.rdlc" />
-    <EmbeddedResource Include="Operation\SummaryReport.rdlc" />
-    <EmbeddedResource Include="Operation\TurnoverReport.rdlc" />
+    <Content Include="Operation\LateReportV2.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\NewGrant.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\ProductivityConsolidateByBranch.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\ProductivityConsolidateByBranchOnDate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\ProductivityConsolidateByLOBOnDate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\ProductivityConsolidateByLOB.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\RenewReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\RedeemReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\PaymentDetail.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\StockReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\SummaryReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Operation\TurnoverReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
@@ -507,6 +574,7 @@
     <Content Include="Operation\LateReport.aspx" />
     <Content Include="Operation\NewGrant.aspx" />
     <Content Include="Operation\PawnListDetail.aspx" />
+    <Content Include="Operation\PaymentDetail.aspx" />
     <Content Include="Operation\ProductivityConsolidateByBranch.aspx" />
     <Content Include="Operation\ProductivityConsolidateByBranchOnDate.aspx" />
     <Content Include="Operation\ProductivityConsolidateByLOB.aspx" />
@@ -585,13 +653,6 @@
     <Compile Include="Accounting\AccrualInterest.aspx.designer.cs">
       <DependentUpon>AccrualInterest.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\AccrualInterestOnPawn.aspx.cs">
-      <DependentUpon>AccrualInterestOnPawn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Accounting\AccrualInterestOnPawn.aspx.designer.cs">
-      <DependentUpon>AccrualInterestOnPawn.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Accounting\BalanceSheet.aspx.cs">
       <DependentUpon>BalanceSheet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -627,12 +688,12 @@
     <Compile Include="Accounting\DailyCashVault.aspx.designer.cs">
       <DependentUpon>DailyCashVault.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\DailyTillCashOperation.aspx.cs">
-      <DependentUpon>DailyTillCashOperation.aspx</DependentUpon>
+    <Compile Include="Accounting\DailyTillCashPawnOperation.aspx.cs">
+      <DependentUpon>DailyTillCashPawnOperation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Accounting\DailyTillCashOperation.aspx.designer.cs">
-      <DependentUpon>DailyTillCashOperation.aspx</DependentUpon>
+    <Compile Include="Accounting\DailyTillCashPawnOperation.aspx.designer.cs">
+      <DependentUpon>DailyTillCashPawnOperation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Accounting\DailyTillPettyCash.aspx.cs">
       <DependentUpon>DailyTillPettyCash.aspx</DependentUpon>
@@ -699,10 +760,15 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Dataset\AccrualInterestOnPawn.Designer.cs">
+    <Compile Include="Dataset\AccrualDetail.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AccrualInterestOnPawn.xsd</DependentUpon>
+      <DependentUpon>AccrualDetail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\AccrualInterest.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccrualInterest.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\AllContractList.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -883,6 +949,13 @@
     </Compile>
     <Compile Include="Operation\LateReportV2.aspx.designer.cs">
       <DependentUpon>LateReportV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\PaymentDetail.aspx.cs">
+      <DependentUpon>PaymentDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\PaymentDetail.aspx.designer.cs">
+      <DependentUpon>PaymentDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Operation\ProductivityConsolidateByBranchOnDate.aspx.cs">
       <DependentUpon>ProductivityConsolidateByBranchOnDate.aspx</DependentUpon>

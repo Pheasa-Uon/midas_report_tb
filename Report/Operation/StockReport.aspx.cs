@@ -17,6 +17,7 @@ namespace Report.Operation
             {
                 DataHelper.checkLoginSession();
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
+                populateOfficer();
                 systemDateStr = DataHelper.getSystemDateStr();
             }
         }
@@ -79,6 +80,10 @@ namespace Report.Operation
 
         protected void ddBranchName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            populateOfficer();
+        }
+        private void populateOfficer()
+        {
             if (ddBranchName.SelectedValue != "")
             {
                 ddOfficer.Enabled = true;
@@ -87,7 +92,7 @@ namespace Report.Operation
             else
             {
                 ddOfficer.Enabled = false;
-                ddOfficer.SelectedItem.Text = "";
+                ddOfficer.Items.Clear();
             }
         }
     }
