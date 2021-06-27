@@ -359,15 +359,29 @@ namespace Report.Utils
         {
             if (HttpContext.Current.Session["system_date"] != null)
             {
+                return Convert.ToDateTime(HttpContext.Current.Session["system_date"].ToString());
+            }
+            else
+            {
+                DBConnect db = new DBConnect();
+                var res = db.GetSystemDate();
+                return Convert.ToDateTime(res);
+            }
+        }
+
+        public static string getSystemDateTextbox()
+        {
+            if (HttpContext.Current.Session["system_date"] != null)
+            {
                 DateTime sysDate = Convert.ToDateTime(HttpContext.Current.Session["system_date"].ToString());
-                return sysDate;
+                return sysDate.ToString("dd/MM/yyyy");
             }
             else
             {
                 DBConnect db = new DBConnect();
                 var res = db.GetSystemDate();
                 DateTime sysDate = Convert.ToDateTime(res);
-                return sysDate;
+                return sysDate.ToString("dd/MM/yyyy");
             }
         }
 

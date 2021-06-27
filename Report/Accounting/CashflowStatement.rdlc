@@ -2,16 +2,12 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DSource">
-      <DataSourceReference>PS1</DataSourceReference>
-      <rd:DataSourceID>170b3e4a-b098-4ca0-842b-423302711a2d</rd:DataSourceID>
-    </DataSource>
     <DataSource Name="CashflowStatement">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>0ccbe84d-1db7-497b-ac4c-ba90476905b9</rd:DataSourceID>
+      <rd:DataSourceID>7be772ee-0592-474a-aba5-ad85922b0f48</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -48,7 +44,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>CashflowStatement</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Heng\Documents\C#_Projects\Report\Report\Dataset\CashflowStatement.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\CashflowStatement.xsd</rd:SchemaPath>
         <rd:TableName>CashFlowDS</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -167,41 +163,6 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox1">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>IG TECH GROUP CO., LTD</Value>
-                    <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.12499in</Top>
-            <Left>0.17587in</Left>
-            <Height>0.25in</Height>
-            <Width>2.12153in</Width>
-            <ZIndex>3</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox2">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -223,7 +184,7 @@
             <Left>0.17587in</Left>
             <Height>0.25in</Height>
             <Width>0.89584in</Width>
-            <ZIndex>4</ZIndex>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -253,11 +214,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.72444in</Top>
-            <Left>0.17587in</Left>
+            <Top>0.4375in</Top>
+            <Left>3.78698in</Left>
             <Height>0.25in</Height>
             <Width>0.89584in</Width>
-            <ZIndex>5</ZIndex>
+            <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -276,7 +237,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!BranchParameter.Value</Value>
+                    <Value>=Parameters!Branch.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Gill Sans MT</FontFamily>
@@ -291,8 +252,8 @@
             <Top>0.4375in</Top>
             <Left>1.09948in</Left>
             <Height>0.25in</Height>
-            <Width>1.82292in</Width>
-            <ZIndex>6</ZIndex>
+            <Width>2.64584in</Width>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -312,7 +273,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!FromDateParameter.Value</Value>
+                    <Value>=Parameters!FromDate.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Gill Sans MT</FontFamily>
@@ -324,11 +285,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.71528in</Top>
-            <Left>1.09948in</Left>
+            <Top>0.4375in</Top>
+            <Left>4.7106in</Left>
             <Height>0.25in</Height>
-            <Width>1.82292in</Width>
-            <ZIndex>7</ZIndex>
+            <Width>1.19792in</Width>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -342,11 +303,11 @@
             </Style>
           </Textbox>
           <Line Name="Line3">
-            <Top>6.79167in</Top>
+            <Top>3.79167in</Top>
             <Left>0.17587in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
-            <ZIndex>8</ZIndex>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -354,11 +315,11 @@
             </Style>
           </Line>
           <Line Name="Line1">
-            <Top>6.79167in</Top>
+            <Top>3.79167in</Top>
             <Left>9.35216in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
-            <ZIndex>9</ZIndex>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -384,11 +345,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>6.79167in</Top>
+            <Top>3.79167in</Top>
             <Left>0.17587in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
-            <ZIndex>10</ZIndex>
+            <ZIndex>9</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -417,11 +378,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>6.79167in</Top>
+            <Top>3.79167in</Top>
             <Left>9.35216in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
-            <ZIndex>11</ZIndex>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -449,11 +410,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.4375in</Top>
-            <Left>2.9224in</Left>
+            <Top>0.71055in</Top>
+            <Left>0.17587in</Left>
             <Height>0.25in</Height>
             <Width>0.89584in</Width>
-            <ZIndex>12</ZIndex>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -472,7 +433,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!CurrencyParameter.Value</Value>
+                    <Value>=Parameters!Currency.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Gill Sans MT</FontFamily>
@@ -484,11 +445,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.4375in</Top>
-            <Left>3.84602in</Left>
+            <Top>0.71055in</Top>
+            <Left>1.09949in</Left>
             <Height>0.25in</Height>
-            <Width>1.63542in</Width>
-            <ZIndex>13</ZIndex>
+            <Width>2.64583in</Width>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -519,11 +480,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.71528in</Top>
-            <Left>2.9224in</Left>
+            <Top>0.71055in</Top>
+            <Left>3.78698in</Left>
             <Height>0.25in</Height>
             <Width>0.89584in</Width>
-            <ZIndex>14</ZIndex>
+            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -542,7 +503,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!ToDateParameter.Value</Value>
+                    <Value>=Parameters!ToDate.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Gill Sans MT</FontFamily>
@@ -554,11 +515,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.71528in</Top>
-            <Left>3.84602in</Left>
+            <Top>0.71055in</Top>
+            <Left>4.7106in</Left>
             <Height>0.25in</Height>
-            <Width>1.63542in</Width>
-            <ZIndex>15</ZIndex>
+            <Width>1.19792in</Width>
+            <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -898,15 +859,47 @@
             <Left>0.17587in</Left>
             <Height>0.78125in</Height>
             <Width>11.08379in</Width>
-            <ZIndex>16</ZIndex>
+            <ZIndex>15</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
+          <Textbox Name="CompanyName">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!CompanyName.Value</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CompanyName</rd:DefaultName>
+            <Top>0.11806in</Top>
+            <Left>0.17587in</Left>
+            <Height>0.25in</Height>
+            <Width>5.73265in</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>8.27in</Height>
+        <Height>4.42104in</Height>
         <Style />
       </Body>
       <Width>11.40875in</Width>
@@ -924,47 +917,71 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="BranchParameter">
+    <ReportParameter Name="Branch">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>BRANCH: </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Currency">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>2</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>CURRENCY: </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FromDate">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="CurrencyParameter">
+    <ReportParameter Name="ToDate">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="FromDateParameter">
+    <ReportParameter Name="CompanyName">
       <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="ToDateParameter">
-      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>2</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
+      <NumberOfRows>4</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>BranchParameter</ParameterName>
+          <ParameterName>Branch</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>CurrencyParameter</ParameterName>
+          <RowIndex>1</RowIndex>
+          <ParameterName>Currency</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>FromDateParameter</ParameterName>
+          <RowIndex>2</RowIndex>
+          <ParameterName>FromDate</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>ToDateParameter</ParameterName>
+          <RowIndex>2</RowIndex>
+          <ParameterName>ToDate</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>3</RowIndex>
+          <ParameterName>CompanyName</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

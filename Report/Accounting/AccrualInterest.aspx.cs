@@ -14,7 +14,6 @@ namespace Report.Accounting
 {
     public partial class AccrualInterest : System.Web.UI.Page
     {
-
         private DBConnect db = new DBConnect();
         public string format = "dd/MM/yyyy";
         public string dateError = "";
@@ -80,7 +79,7 @@ namespace Report.Accounting
         {
             var reportParameters = new ReportParameterCollection();
             reportParameters.Add(new ReportParameter("Branch", ddBranchName.SelectedItem.Text));
-            reportParameters.Add(new ReportParameter("SystemDate", DataHelper.getSystemDateStr()));
+            reportParameters.Add(new ReportParameter("SystemDate", DateTime.ParseExact(dtpSystemDate.Text.Trim(), format, null).ToString("dd-MMM-yyyy")));
             reportParameters.Add(new ReportParameter("PawnOfficer", ddOfficer.SelectedItem.Text));
 
             var ds = new ReportDataSource("AIR_DS", dt);

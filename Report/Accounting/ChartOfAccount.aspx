@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ChartOfAccount.aspx.cs" Inherits="Report.Accounting.ChartOfAccount" %>
+﻿<%@ Page Title="Chart Of Account" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ChartOfAccount.aspx.cs" Inherits="Report.Accounting.ChartOfAccount" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-sm-3 form-group">
                     <label>Branch:</label>
-                    <asp:DropDownList ID="ddBranchName" runat="server" AutoPostBack="true" CssClass="form-control input-sm">
+                    <asp:DropDownList ID="ddBranchName" runat="server" CssClass="form-control input-sm">
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddBranchName"
                         ErrorMessage="* Please select branch" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">

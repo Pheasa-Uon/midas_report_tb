@@ -176,12 +176,6 @@
     <Content Include="Dataset\BranchProductivity.xsc">
       <DependentUpon>BranchProductivity.xsd</DependentUpon>
     </Content>
-    <Content Include="Accounting\CashflowStatement.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Accounting\ChartOfAccount.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Accounting\JournalEntryByDate.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -203,6 +197,10 @@
     </Content>
     <EmbeddedResource Include="Accounting\AccrualInterest.rdlc" />
     <EmbeddedResource Include="Accounting\BalanceSheet.rdlc" />
+    <EmbeddedResource Include="Accounting\CashConsolidate.rdlc" />
+    <EmbeddedResource Include="Accounting\CashflowStatement.rdlc" />
+    <EmbeddedResource Include="Accounting\ChartOfAccount.rdlc" />
+    <EmbeddedResource Include="Accounting\DailyCashVault.rdlc" />
     <None Include="Dataset\AccrualDetail.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -268,6 +266,17 @@
     <Content Include="Dataset\BranchProductivityConsolidate.xss">
       <DependentUpon>BranchProductivityConsolidate.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\CashConsolidate.xsc">
+      <DependentUpon>CashConsolidate.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\CashConsolidate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CashConsolidate.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\CashConsolidate.xss">
+      <DependentUpon>CashConsolidate.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\CashflowStatement.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -319,6 +328,17 @@
     </None>
     <Content Include="Dataset\CustomerList.xss">
       <DependentUpon>CustomerList.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\DailyCashVault.xsc">
+      <DependentUpon>DailyCashVault.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\DailyCashVault.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DailyCashVault.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\DailyCashVault.xss">
+      <DependentUpon>DailyCashVault.xsd</DependentUpon>
     </Content>
     <None Include="Dataset\GLTransactionHistory.xsd">
       <SubType>Designer</SubType>
@@ -785,6 +805,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BranchProductivityConsolidate.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\CashConsolidate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CashConsolidate.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\CashflowStatement.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -809,6 +834,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CustomerList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DailyCashVault.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyCashVault.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\GLTransactionHistory.Designer.cs">
       <AutoGen>True</AutoGen>

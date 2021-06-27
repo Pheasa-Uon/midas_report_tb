@@ -20,17 +20,17 @@ namespace Report.Dataset {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ChartOfAccount")]
+    [global::System.Xml.Serialization.XmlRootAttribute("CashConsolidate")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ChartOfAccount : global::System.Data.DataSet {
+    public partial class CashConsolidate : global::System.Data.DataSet {
         
-        private COADSDataTable tableCOADS;
+        private CashConsolidateDSDataTable tableCashConsolidateDS;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public ChartOfAccount() {
+        public CashConsolidate() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Report.Dataset {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected ChartOfAccount(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected CashConsolidate(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Report.Dataset {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["COADS"] != null)) {
-                    base.Tables.Add(new COADSDataTable(ds.Tables["COADS"]));
+                if ((ds.Tables["CashConsolidateDS"] != null)) {
+                    base.Tables.Add(new CashConsolidateDSDataTable(ds.Tables["CashConsolidateDS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Report.Dataset {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public COADSDataTable COADS {
+        public CashConsolidateDSDataTable CashConsolidateDS {
             get {
-                return this.tableCOADS;
+                return this.tableCashConsolidateDS;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ChartOfAccount cln = ((ChartOfAccount)(base.Clone()));
+            CashConsolidate cln = ((CashConsolidate)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Report.Dataset {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["COADS"] != null)) {
-                    base.Tables.Add(new COADSDataTable(ds.Tables["COADS"]));
+                if ((ds.Tables["CashConsolidateDS"] != null)) {
+                    base.Tables.Add(new CashConsolidateDSDataTable(ds.Tables["CashConsolidateDS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableCOADS = ((COADSDataTable)(base.Tables["COADS"]));
+            this.tableCashConsolidateDS = ((CashConsolidateDSDataTable)(base.Tables["CashConsolidateDS"]));
             if ((initTable == true)) {
-                if ((this.tableCOADS != null)) {
-                    this.tableCOADS.InitVars();
+                if ((this.tableCashConsolidateDS != null)) {
+                    this.tableCashConsolidateDS.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ChartOfAccount";
+            this.DataSetName = "CashConsolidate";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ChartOfAccount.xsd";
+            this.Namespace = "http://tempuri.org/CashConsolidate.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableCOADS = new COADSDataTable();
-            base.Tables.Add(this.tableCOADS);
+            this.tableCashConsolidateDS = new CashConsolidateDSDataTable();
+            base.Tables.Add(this.tableCashConsolidateDS);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeCOADS() {
+        private bool ShouldSerializeCashConsolidateDS() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ChartOfAccount ds = new ChartOfAccount();
+            CashConsolidate ds = new CashConsolidate();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,39 +270,29 @@ namespace Report.Dataset {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void COADSRowChangeEventHandler(object sender, COADSRowChangeEvent e);
+        public delegate void CashConsolidateDSRowChangeEventHandler(object sender, CashConsolidateDSRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class COADSDataTable : global::System.Data.TypedTableBase<COADSRow> {
+        public partial class CashConsolidateDSDataTable : global::System.Data.TypedTableBase<CashConsolidateDSRow> {
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columnbranch_name;
             
-            private global::System.Data.DataColumn columngl_name;
+            private global::System.Data.DataColumn columnvault;
             
-            private global::System.Data.DataColumn columnparent_acc_id;
+            private global::System.Data.DataColumn columnbank;
             
-            private global::System.Data.DataColumn columngl;
+            private global::System.Data.DataColumn columntotal_cash;
             
-            private global::System.Data.DataColumn columnbranch_code;
-            
-            private global::System.Data.DataColumn columnappr;
-            
-            private global::System.Data.DataColumn columncurrency;
-            
-            private global::System.Data.DataColumn columnclass_name;
-            
-            private global::System.Data.DataColumn columncurrency_code;
-            
-            private global::System.Data.DataColumn columnaccount_type;
+            private global::System.Data.DataColumn columnlast_day_cash;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public COADSDataTable() {
-                this.TableName = "COADS";
+            public CashConsolidateDSDataTable() {
+                this.TableName = "CashConsolidateDS";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -310,7 +300,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal COADSDataTable(global::System.Data.DataTable table) {
+            internal CashConsolidateDSDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -327,88 +317,48 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected COADSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected CashConsolidateDSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn branch_nameColumn {
                 get {
-                    return this.columnid;
+                    return this.columnbranch_name;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn gl_nameColumn {
+            public global::System.Data.DataColumn vaultColumn {
                 get {
-                    return this.columngl_name;
+                    return this.columnvault;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn parent_acc_idColumn {
+            public global::System.Data.DataColumn bankColumn {
                 get {
-                    return this.columnparent_acc_id;
+                    return this.columnbank;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn glColumn {
+            public global::System.Data.DataColumn total_cashColumn {
                 get {
-                    return this.columngl;
+                    return this.columntotal_cash;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn branch_codeColumn {
+            public global::System.Data.DataColumn last_day_cashColumn {
                 get {
-                    return this.columnbranch_code;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn apprColumn {
-                get {
-                    return this.columnappr;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn currencyColumn {
-                get {
-                    return this.columncurrency;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn class_nameColumn {
-                get {
-                    return this.columnclass_name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn currency_codeColumn {
-                get {
-                    return this.columncurrency_code;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn account_typeColumn {
-                get {
-                    return this.columnaccount_type;
+                    return this.columnlast_day_cash;
                 }
             }
             
@@ -423,54 +373,49 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public COADSRow this[int index] {
+            public CashConsolidateDSRow this[int index] {
                 get {
-                    return ((COADSRow)(this.Rows[index]));
+                    return ((CashConsolidateDSRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event COADSRowChangeEventHandler COADSRowChanging;
+            public event CashConsolidateDSRowChangeEventHandler CashConsolidateDSRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event COADSRowChangeEventHandler COADSRowChanged;
+            public event CashConsolidateDSRowChangeEventHandler CashConsolidateDSRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event COADSRowChangeEventHandler COADSRowDeleting;
+            public event CashConsolidateDSRowChangeEventHandler CashConsolidateDSRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event COADSRowChangeEventHandler COADSRowDeleted;
+            public event CashConsolidateDSRowChangeEventHandler CashConsolidateDSRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddCOADSRow(COADSRow row) {
+            public void AddCashConsolidateDSRow(CashConsolidateDSRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public COADSRow AddCOADSRow(string id, string gl_name, string parent_acc_id, string gl, string branch_code, string appr, string currency, string class_name, string currency_code, string account_type) {
-                COADSRow rowCOADSRow = ((COADSRow)(this.NewRow()));
+            public CashConsolidateDSRow AddCashConsolidateDSRow(string branch_name, string vault, string bank, string total_cash, string last_day_cash) {
+                CashConsolidateDSRow rowCashConsolidateDSRow = ((CashConsolidateDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id,
-                        gl_name,
-                        parent_acc_id,
-                        gl,
-                        branch_code,
-                        appr,
-                        currency,
-                        class_name,
-                        currency_code,
-                        account_type};
-                rowCOADSRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowCOADSRow);
-                return rowCOADSRow;
+                        branch_name,
+                        vault,
+                        bank,
+                        total_cash,
+                        last_day_cash};
+                rowCashConsolidateDSRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCashConsolidateDSRow);
+                return rowCashConsolidateDSRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                COADSDataTable cln = ((COADSDataTable)(base.Clone()));
+                CashConsolidateDSDataTable cln = ((CashConsolidateDSDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -478,73 +423,58 @@ namespace Report.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new COADSDataTable();
+                return new CashConsolidateDSDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columngl_name = base.Columns["gl_name"];
-                this.columnparent_acc_id = base.Columns["parent_acc_id"];
-                this.columngl = base.Columns["gl"];
-                this.columnbranch_code = base.Columns["branch_code"];
-                this.columnappr = base.Columns["appr"];
-                this.columncurrency = base.Columns["currency"];
-                this.columnclass_name = base.Columns["class_name"];
-                this.columncurrency_code = base.Columns["currency_code"];
-                this.columnaccount_type = base.Columns["account_type"];
+                this.columnbranch_name = base.Columns["branch_name"];
+                this.columnvault = base.Columns["vault"];
+                this.columnbank = base.Columns["bank"];
+                this.columntotal_cash = base.Columns["total_cash"];
+                this.columnlast_day_cash = base.Columns["last_day_cash"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columngl_name = new global::System.Data.DataColumn("gl_name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columngl_name);
-                this.columnparent_acc_id = new global::System.Data.DataColumn("parent_acc_id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnparent_acc_id);
-                this.columngl = new global::System.Data.DataColumn("gl", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columngl);
-                this.columnbranch_code = new global::System.Data.DataColumn("branch_code", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnbranch_code);
-                this.columnappr = new global::System.Data.DataColumn("appr", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnappr);
-                this.columncurrency = new global::System.Data.DataColumn("currency", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncurrency);
-                this.columnclass_name = new global::System.Data.DataColumn("class_name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnclass_name);
-                this.columncurrency_code = new global::System.Data.DataColumn("currency_code", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncurrency_code);
-                this.columnaccount_type = new global::System.Data.DataColumn("account_type", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnaccount_type);
+                this.columnbranch_name = new global::System.Data.DataColumn("branch_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbranch_name);
+                this.columnvault = new global::System.Data.DataColumn("vault", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvault);
+                this.columnbank = new global::System.Data.DataColumn("bank", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbank);
+                this.columntotal_cash = new global::System.Data.DataColumn("total_cash", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal_cash);
+                this.columnlast_day_cash = new global::System.Data.DataColumn("last_day_cash", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlast_day_cash);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public COADSRow NewCOADSRow() {
-                return ((COADSRow)(this.NewRow()));
+            public CashConsolidateDSRow NewCashConsolidateDSRow() {
+                return ((CashConsolidateDSRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new COADSRow(builder);
+                return new CashConsolidateDSRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(COADSRow);
+                return typeof(CashConsolidateDSRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.COADSRowChanged != null)) {
-                    this.COADSRowChanged(this, new COADSRowChangeEvent(((COADSRow)(e.Row)), e.Action));
+                if ((this.CashConsolidateDSRowChanged != null)) {
+                    this.CashConsolidateDSRowChanged(this, new CashConsolidateDSRowChangeEvent(((CashConsolidateDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -552,8 +482,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.COADSRowChanging != null)) {
-                    this.COADSRowChanging(this, new COADSRowChangeEvent(((COADSRow)(e.Row)), e.Action));
+                if ((this.CashConsolidateDSRowChanging != null)) {
+                    this.CashConsolidateDSRowChanging(this, new CashConsolidateDSRowChangeEvent(((CashConsolidateDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -561,8 +491,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.COADSRowDeleted != null)) {
-                    this.COADSRowDeleted(this, new COADSRowChangeEvent(((COADSRow)(e.Row)), e.Action));
+                if ((this.CashConsolidateDSRowDeleted != null)) {
+                    this.CashConsolidateDSRowDeleted(this, new CashConsolidateDSRowChangeEvent(((CashConsolidateDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -570,14 +500,14 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.COADSRowDeleting != null)) {
-                    this.COADSRowDeleting(this, new COADSRowChangeEvent(((COADSRow)(e.Row)), e.Action));
+                if ((this.CashConsolidateDSRowDeleting != null)) {
+                    this.CashConsolidateDSRowDeleting(this, new CashConsolidateDSRowChangeEvent(((CashConsolidateDSRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveCOADSRow(COADSRow row) {
+            public void RemoveCashConsolidateDSRow(CashConsolidateDSRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -586,7 +516,7 @@ namespace Report.Dataset {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ChartOfAccount ds = new ChartOfAccount();
+                CashConsolidate ds = new CashConsolidate();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -604,7 +534,7 @@ namespace Report.Dataset {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "COADSDataTable";
+                attribute2.FixedValue = "CashConsolidateDSDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -648,295 +578,155 @@ namespace Report.Dataset {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class COADSRow : global::System.Data.DataRow {
+        public partial class CashConsolidateDSRow : global::System.Data.DataRow {
             
-            private COADSDataTable tableCOADS;
+            private CashConsolidateDSDataTable tableCashConsolidateDS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal COADSRow(global::System.Data.DataRowBuilder rb) : 
+            internal CashConsolidateDSRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableCOADS = ((COADSDataTable)(this.Table));
+                this.tableCashConsolidateDS = ((CashConsolidateDSDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string id {
+            public string branch_name {
                 get {
                     try {
-                        return ((string)(this[this.tableCOADS.idColumn]));
+                        return ((string)(this[this.tableCashConsolidateDS.branch_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'COADS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'branch_name\' in table \'CashConsolidateDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCOADS.idColumn] = value;
+                    this[this.tableCashConsolidateDS.branch_nameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string gl_name {
+            public string vault {
                 get {
                     try {
-                        return ((string)(this[this.tableCOADS.gl_nameColumn]));
+                        return ((string)(this[this.tableCashConsolidateDS.vaultColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'gl_name\' in table \'COADS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'vault\' in table \'CashConsolidateDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCOADS.gl_nameColumn] = value;
+                    this[this.tableCashConsolidateDS.vaultColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string parent_acc_id {
+            public string bank {
                 get {
                     try {
-                        return ((string)(this[this.tableCOADS.parent_acc_idColumn]));
+                        return ((string)(this[this.tableCashConsolidateDS.bankColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'parent_acc_id\' in table \'COADS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'bank\' in table \'CashConsolidateDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCOADS.parent_acc_idColumn] = value;
+                    this[this.tableCashConsolidateDS.bankColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string gl {
+            public string total_cash {
                 get {
                     try {
-                        return ((string)(this[this.tableCOADS.glColumn]));
+                        return ((string)(this[this.tableCashConsolidateDS.total_cashColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'gl\' in table \'COADS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'total_cash\' in table \'CashConsolidateDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCOADS.glColumn] = value;
+                    this[this.tableCashConsolidateDS.total_cashColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string branch_code {
+            public string last_day_cash {
                 get {
                     try {
-                        return ((string)(this[this.tableCOADS.branch_codeColumn]));
+                        return ((string)(this[this.tableCashConsolidateDS.last_day_cashColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'branch_code\' in table \'COADS\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'last_day_cash\' in table \'CashConsolidateDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCOADS.branch_codeColumn] = value;
+                    this[this.tableCashConsolidateDS.last_day_cashColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string appr {
-                get {
-                    try {
-                        return ((string)(this[this.tableCOADS.apprColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'appr\' in table \'COADS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCOADS.apprColumn] = value;
-                }
+            public bool Isbranch_nameNull() {
+                return this.IsNull(this.tableCashConsolidateDS.branch_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string currency {
-                get {
-                    try {
-                        return ((string)(this[this.tableCOADS.currencyColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'currency\' in table \'COADS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCOADS.currencyColumn] = value;
-                }
+            public void Setbranch_nameNull() {
+                this[this.tableCashConsolidateDS.branch_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string class_name {
-                get {
-                    try {
-                        return ((string)(this[this.tableCOADS.class_nameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'class_name\' in table \'COADS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCOADS.class_nameColumn] = value;
-                }
+            public bool IsvaultNull() {
+                return this.IsNull(this.tableCashConsolidateDS.vaultColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string currency_code {
-                get {
-                    try {
-                        return ((string)(this[this.tableCOADS.currency_codeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'currency_code\' in table \'COADS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCOADS.currency_codeColumn] = value;
-                }
+            public void SetvaultNull() {
+                this[this.tableCashConsolidateDS.vaultColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string account_type {
-                get {
-                    try {
-                        return ((string)(this[this.tableCOADS.account_typeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'account_type\' in table \'COADS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCOADS.account_typeColumn] = value;
-                }
+            public bool IsbankNull() {
+                return this.IsNull(this.tableCashConsolidateDS.bankColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsidNull() {
-                return this.IsNull(this.tableCOADS.idColumn);
+            public void SetbankNull() {
+                this[this.tableCashConsolidateDS.bankColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetidNull() {
-                this[this.tableCOADS.idColumn] = global::System.Convert.DBNull;
+            public bool Istotal_cashNull() {
+                return this.IsNull(this.tableCashConsolidateDS.total_cashColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isgl_nameNull() {
-                return this.IsNull(this.tableCOADS.gl_nameColumn);
+            public void Settotal_cashNull() {
+                this[this.tableCashConsolidateDS.total_cashColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setgl_nameNull() {
-                this[this.tableCOADS.gl_nameColumn] = global::System.Convert.DBNull;
+            public bool Islast_day_cashNull() {
+                return this.IsNull(this.tableCashConsolidateDS.last_day_cashColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isparent_acc_idNull() {
-                return this.IsNull(this.tableCOADS.parent_acc_idColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setparent_acc_idNull() {
-                this[this.tableCOADS.parent_acc_idColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsglNull() {
-                return this.IsNull(this.tableCOADS.glColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetglNull() {
-                this[this.tableCOADS.glColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isbranch_codeNull() {
-                return this.IsNull(this.tableCOADS.branch_codeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setbranch_codeNull() {
-                this[this.tableCOADS.branch_codeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsapprNull() {
-                return this.IsNull(this.tableCOADS.apprColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetapprNull() {
-                this[this.tableCOADS.apprColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IscurrencyNull() {
-                return this.IsNull(this.tableCOADS.currencyColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetcurrencyNull() {
-                this[this.tableCOADS.currencyColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isclass_nameNull() {
-                return this.IsNull(this.tableCOADS.class_nameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setclass_nameNull() {
-                this[this.tableCOADS.class_nameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Iscurrency_codeNull() {
-                return this.IsNull(this.tableCOADS.currency_codeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setcurrency_codeNull() {
-                this[this.tableCOADS.currency_codeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isaccount_typeNull() {
-                return this.IsNull(this.tableCOADS.account_typeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setaccount_typeNull() {
-                this[this.tableCOADS.account_typeColumn] = global::System.Convert.DBNull;
+            public void Setlast_day_cashNull() {
+                this[this.tableCashConsolidateDS.last_day_cashColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -944,22 +734,22 @@ namespace Report.Dataset {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class COADSRowChangeEvent : global::System.EventArgs {
+        public class CashConsolidateDSRowChangeEvent : global::System.EventArgs {
             
-            private COADSRow eventRow;
+            private CashConsolidateDSRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public COADSRowChangeEvent(COADSRow row, global::System.Data.DataRowAction action) {
+            public CashConsolidateDSRowChangeEvent(CashConsolidateDSRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public COADSRow Row {
+            public CashConsolidateDSRow Row {
                 get {
                     return this.eventRow;
                 }
