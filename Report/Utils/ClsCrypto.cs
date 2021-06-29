@@ -12,10 +12,11 @@ namespace Report.Utils
         private byte[] salt;
         public ClsCrypto()
         {
+
             myRijndael.BlockSize = 128;
             myRijndael.KeySize = 128;
             myRijndael.IV = HexStringToByteArray("9c0534f194d6e5892d1c6768d11070eb");
-
+           
             myRijndael.Padding = PaddingMode.PKCS7;
             myRijndael.Mode = CipherMode.CBC;
             iterations = 1000;

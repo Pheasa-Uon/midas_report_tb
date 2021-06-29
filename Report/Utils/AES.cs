@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -10,22 +11,47 @@ namespace Report.Utils
 
     public class AES
     {
-   
-       // private static SecretKeySpec secretKey;
-        private static byte[] key;
-        public static string tr( string text)
+        private static string IV = "IV_VALUE_16_BYTE";
+        private static string PASSWORD = "PASSWORD_VALUE";
+        private static string SALT = "SALT_VALUE";
+
+        public static string EncryptAndEncode(string raw)
         {
-            
-                System.Text.UTF8Encoding UTF8 = new System.Text.UTF8Encoding();
-                AesManaged tdes = new AesManaged();
-                tdes.Key = UTF8.GetBytes("");
-                tdes.Mode = CipherMode.ECB;
-                tdes.Padding = PaddingMode.PKCS7;
-                ICryptoTransform crypt = tdes.CreateEncryptor();
-                byte[] plain = Encoding.UTF8.GetBytes(text);
-                byte[] cipher = crypt.TransformFinalBlock(plain, 0, plain.Length);
-                String encryptedText = Convert.ToBase64String(cipher);
-            return encryptedText;
+            using (var csp = new AesCryptoServiceProvider())
+            {
+                ICryptoTransform e = GetCryptoTransform(csp, true);
+                byte[] inputBuffer = Encoding.UTF8.GetBytes(raw);
+                byte[] output = e.TransformFinalBlock(inputBuffer, 0, inputBuffer.Length);
+                string encrypted = Convert.ToBase64String(output);
+                return encrypted;
+            }
+        }
+        private static ICryptoTransform GetCryptoTransform(AesCryptoServiceProvider csp, bool encrypting)
+        {
+            csp.Mode = CipherMode.CBC;
+            csp.Padding = PaddingMode.PKCS7;
+            var spec = new Rfc2898DeriveBytes(Encoding.UTF8.GetBytes(PASSWORD), Encoding.UTF8.GetBytes(SALT), 65536);
+            byte[] key = spec.GetBytes(16);
+
+
+             csp.IV = Encoding.UTF8.GetBytes(IV);
+            csp.Key = key;
+            if (encrypting)
+            {
+                return csp.CreateEncryptor();
+            }
+            return csp.CreateDecryptor();
+        }
+        public static string DecodeAndDecrypt(string encrypted)
+        {
+            using (var csp = new AesCryptoServiceProvider())
+            {
+                var d = GetCryptoTransform(csp, false);
+                byte[] output = Convert.FromBase64String(encrypted);
+                byte[] decryptedOutput = d.TransformFinalBlock(output, 0, output.Length);
+                string decypted = Encoding.UTF8.GetString(decryptedOutput);
+                return decypted;
+            }
         }
     }
 }

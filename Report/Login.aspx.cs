@@ -20,12 +20,12 @@ namespace Report
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var cls = new ClsCrypto();
-         
-            var pEncrypt = cls.Encrypt(txtPassword.Text);
-            Console.WriteLine(pEncrypt);
-            // BorhjiY6JTfWc/HRSOkbOQ==
-            var user = DataHelper.login(txtUsername.Text, "BorhjiY6JTfWc/HRSOkbOQ==");  //"AQUpvTCF66ztPrYRtLm9ew=="
+            //var cls = new ClsCrypto();
+            //var pEncrypt = cls.Encrypt(txtPassword.Text);
+            //var ts = new AES();
+            var pEncrypt = AES.EncryptAndEncode(txtPassword.Text);
+
+            var user = DataHelper.login(txtUsername.Text, pEncrypt);  //"AQUpvTCF66ztPrYRtLm9ew=="
 
             if (user.id != 0)
             {
