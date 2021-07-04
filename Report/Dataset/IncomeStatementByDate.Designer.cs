@@ -24,9 +24,11 @@ namespace Report.Dataset {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class IncomeStatementByDate : global::System.Data.DataSet {
         
-        private PS_DetailsDataTable tablePS_Details;
+        private PS_INCTRANDataTable tablePS_INCTRAN;
         
-        private PS_PLDataTable tablePS_PL;
+        private PS_TTGOSTRANDataTable tablePS_TTGOSTRAN;
+        
+        private PS_PLTRANDataTable tablePS_PLTRAN;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -56,11 +58,14 @@ namespace Report.Dataset {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["PS_Details"] != null)) {
-                    base.Tables.Add(new PS_DetailsDataTable(ds.Tables["PS_Details"]));
+                if ((ds.Tables["PS_INCTRAN"] != null)) {
+                    base.Tables.Add(new PS_INCTRANDataTable(ds.Tables["PS_INCTRAN"]));
                 }
-                if ((ds.Tables["PS_PL"] != null)) {
-                    base.Tables.Add(new PS_PLDataTable(ds.Tables["PS_PL"]));
+                if ((ds.Tables["PS_TTGOSTRAN"] != null)) {
+                    base.Tables.Add(new PS_TTGOSTRANDataTable(ds.Tables["PS_TTGOSTRAN"]));
+                }
+                if ((ds.Tables["PS_PLTRAN"] != null)) {
+                    base.Tables.Add(new PS_PLTRANDataTable(ds.Tables["PS_PLTRAN"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -84,9 +89,9 @@ namespace Report.Dataset {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PS_DetailsDataTable PS_Details {
+        public PS_INCTRANDataTable PS_INCTRAN {
             get {
-                return this.tablePS_Details;
+                return this.tablePS_INCTRAN;
             }
         }
         
@@ -94,9 +99,19 @@ namespace Report.Dataset {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PS_PLDataTable PS_PL {
+        public PS_TTGOSTRANDataTable PS_TTGOSTRAN {
             get {
-                return this.tablePS_PL;
+                return this.tablePS_TTGOSTRAN;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public PS_PLTRANDataTable PS_PLTRAN {
+            get {
+                return this.tablePS_PLTRAN;
             }
         }
         
@@ -167,11 +182,14 @@ namespace Report.Dataset {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["PS_Details"] != null)) {
-                    base.Tables.Add(new PS_DetailsDataTable(ds.Tables["PS_Details"]));
+                if ((ds.Tables["PS_INCTRAN"] != null)) {
+                    base.Tables.Add(new PS_INCTRANDataTable(ds.Tables["PS_INCTRAN"]));
                 }
-                if ((ds.Tables["PS_PL"] != null)) {
-                    base.Tables.Add(new PS_PLDataTable(ds.Tables["PS_PL"]));
+                if ((ds.Tables["PS_TTGOSTRAN"] != null)) {
+                    base.Tables.Add(new PS_TTGOSTRANDataTable(ds.Tables["PS_TTGOSTRAN"]));
+                }
+                if ((ds.Tables["PS_PLTRAN"] != null)) {
+                    base.Tables.Add(new PS_PLTRANDataTable(ds.Tables["PS_PLTRAN"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -206,16 +224,22 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablePS_Details = ((PS_DetailsDataTable)(base.Tables["PS_Details"]));
+            this.tablePS_INCTRAN = ((PS_INCTRANDataTable)(base.Tables["PS_INCTRAN"]));
             if ((initTable == true)) {
-                if ((this.tablePS_Details != null)) {
-                    this.tablePS_Details.InitVars();
+                if ((this.tablePS_INCTRAN != null)) {
+                    this.tablePS_INCTRAN.InitVars();
                 }
             }
-            this.tablePS_PL = ((PS_PLDataTable)(base.Tables["PS_PL"]));
+            this.tablePS_TTGOSTRAN = ((PS_TTGOSTRANDataTable)(base.Tables["PS_TTGOSTRAN"]));
             if ((initTable == true)) {
-                if ((this.tablePS_PL != null)) {
-                    this.tablePS_PL.InitVars();
+                if ((this.tablePS_TTGOSTRAN != null)) {
+                    this.tablePS_TTGOSTRAN.InitVars();
+                }
+            }
+            this.tablePS_PLTRAN = ((PS_PLTRANDataTable)(base.Tables["PS_PLTRAN"]));
+            if ((initTable == true)) {
+                if ((this.tablePS_PLTRAN != null)) {
+                    this.tablePS_PLTRAN.InitVars();
                 }
             }
         }
@@ -228,21 +252,29 @@ namespace Report.Dataset {
             this.Namespace = "http://tempuri.org/IncomeStatementByDate.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablePS_Details = new PS_DetailsDataTable();
-            base.Tables.Add(this.tablePS_Details);
-            this.tablePS_PL = new PS_PLDataTable();
-            base.Tables.Add(this.tablePS_PL);
+            this.tablePS_INCTRAN = new PS_INCTRANDataTable();
+            base.Tables.Add(this.tablePS_INCTRAN);
+            this.tablePS_TTGOSTRAN = new PS_TTGOSTRANDataTable();
+            base.Tables.Add(this.tablePS_TTGOSTRAN);
+            this.tablePS_PLTRAN = new PS_PLTRANDataTable();
+            base.Tables.Add(this.tablePS_PLTRAN);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializePS_Details() {
+        private bool ShouldSerializePS_INCTRAN() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializePS_PL() {
+        private bool ShouldSerializePS_TTGOSTRAN() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializePS_PLTRAN() {
             return false;
         }
         
@@ -302,19 +334,26 @@ namespace Report.Dataset {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void PS_DetailsRowChangeEventHandler(object sender, PS_DetailsRowChangeEvent e);
+        public delegate void PS_INCTRANRowChangeEventHandler(object sender, PS_INCTRANRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void PS_PLRowChangeEventHandler(object sender, PS_PLRowChangeEvent e);
+        public delegate void PS_TTGOSTRANRowChangeEventHandler(object sender, PS_TTGOSTRANRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void PS_PLTRANRowChangeEventHandler(object sender, PS_PLTRANRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PS_DetailsDataTable : global::System.Data.TypedTableBase<PS_DetailsRow> {
+        public partial class PS_INCTRANDataTable : global::System.Data.TypedTableBase<PS_INCTRANRow> {
+            
+            private global::System.Data.DataColumn columnglm;
             
             private global::System.Data.DataColumn columngl;
+            
+            private global::System.Data.DataColumn columnglnm;
             
             private global::System.Data.DataColumn columngl_name;
             
@@ -324,8 +363,8 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PS_DetailsDataTable() {
-                this.TableName = "PS_Details";
+            public PS_INCTRANDataTable() {
+                this.TableName = "PS_INCTRAN";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -333,7 +372,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PS_DetailsDataTable(global::System.Data.DataTable table) {
+            internal PS_INCTRANDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -350,9 +389,17 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected PS_DetailsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected PS_INCTRANDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn glmColumn {
+                get {
+                    return this.columnglm;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -360,6 +407,14 @@ namespace Report.Dataset {
             public global::System.Data.DataColumn glColumn {
                 get {
                     return this.columngl;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn glnmColumn {
+                get {
+                    return this.columnglnm;
                 }
             }
             
@@ -398,48 +453,50 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PS_DetailsRow this[int index] {
+            public PS_INCTRANRow this[int index] {
                 get {
-                    return ((PS_DetailsRow)(this.Rows[index]));
+                    return ((PS_INCTRANRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PS_DetailsRowChangeEventHandler PS_DetailsRowChanging;
+            public event PS_INCTRANRowChangeEventHandler PS_INCTRANRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PS_DetailsRowChangeEventHandler PS_DetailsRowChanged;
+            public event PS_INCTRANRowChangeEventHandler PS_INCTRANRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PS_DetailsRowChangeEventHandler PS_DetailsRowDeleting;
+            public event PS_INCTRANRowChangeEventHandler PS_INCTRANRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PS_DetailsRowChangeEventHandler PS_DetailsRowDeleted;
+            public event PS_INCTRANRowChangeEventHandler PS_INCTRANRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddPS_DetailsRow(PS_DetailsRow row) {
+            public void AddPS_INCTRANRow(PS_INCTRANRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PS_DetailsRow AddPS_DetailsRow(string gl, string gl_name, string acc_class, string ac_amt) {
-                PS_DetailsRow rowPS_DetailsRow = ((PS_DetailsRow)(this.NewRow()));
+            public PS_INCTRANRow AddPS_INCTRANRow(string glm, string gl, string glnm, string gl_name, string acc_class, string ac_amt) {
+                PS_INCTRANRow rowPS_INCTRANRow = ((PS_INCTRANRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        glm,
                         gl,
+                        glnm,
                         gl_name,
                         acc_class,
                         ac_amt};
-                rowPS_DetailsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPS_DetailsRow);
-                return rowPS_DetailsRow;
+                rowPS_INCTRANRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPS_INCTRANRow);
+                return rowPS_INCTRANRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PS_DetailsDataTable cln = ((PS_DetailsDataTable)(base.Clone()));
+                PS_INCTRANDataTable cln = ((PS_INCTRANDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -447,13 +504,15 @@ namespace Report.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PS_DetailsDataTable();
+                return new PS_INCTRANDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
+                this.columnglm = base.Columns["glm"];
                 this.columngl = base.Columns["gl"];
+                this.columnglnm = base.Columns["glnm"];
                 this.columngl_name = base.Columns["gl_name"];
                 this.columnacc_class = base.Columns["acc_class"];
                 this.columnac_amt = base.Columns["ac_amt"];
@@ -462,8 +521,12 @@ namespace Report.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
+                this.columnglm = new global::System.Data.DataColumn("glm", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnglm);
                 this.columngl = new global::System.Data.DataColumn("gl", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columngl);
+                this.columnglnm = new global::System.Data.DataColumn("glnm", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnglnm);
                 this.columngl_name = new global::System.Data.DataColumn("gl_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columngl_name);
                 this.columnacc_class = new global::System.Data.DataColumn("acc_class", typeof(string), null, global::System.Data.MappingType.Element);
@@ -474,28 +537,28 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PS_DetailsRow NewPS_DetailsRow() {
-                return ((PS_DetailsRow)(this.NewRow()));
+            public PS_INCTRANRow NewPS_INCTRANRow() {
+                return ((PS_INCTRANRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PS_DetailsRow(builder);
+                return new PS_INCTRANRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PS_DetailsRow);
+                return typeof(PS_INCTRANRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PS_DetailsRowChanged != null)) {
-                    this.PS_DetailsRowChanged(this, new PS_DetailsRowChangeEvent(((PS_DetailsRow)(e.Row)), e.Action));
+                if ((this.PS_INCTRANRowChanged != null)) {
+                    this.PS_INCTRANRowChanged(this, new PS_INCTRANRowChangeEvent(((PS_INCTRANRow)(e.Row)), e.Action));
                 }
             }
             
@@ -503,8 +566,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PS_DetailsRowChanging != null)) {
-                    this.PS_DetailsRowChanging(this, new PS_DetailsRowChangeEvent(((PS_DetailsRow)(e.Row)), e.Action));
+                if ((this.PS_INCTRANRowChanging != null)) {
+                    this.PS_INCTRANRowChanging(this, new PS_INCTRANRowChangeEvent(((PS_INCTRANRow)(e.Row)), e.Action));
                 }
             }
             
@@ -512,8 +575,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PS_DetailsRowDeleted != null)) {
-                    this.PS_DetailsRowDeleted(this, new PS_DetailsRowChangeEvent(((PS_DetailsRow)(e.Row)), e.Action));
+                if ((this.PS_INCTRANRowDeleted != null)) {
+                    this.PS_INCTRANRowDeleted(this, new PS_INCTRANRowChangeEvent(((PS_INCTRANRow)(e.Row)), e.Action));
                 }
             }
             
@@ -521,14 +584,14 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PS_DetailsRowDeleting != null)) {
-                    this.PS_DetailsRowDeleting(this, new PS_DetailsRowChangeEvent(((PS_DetailsRow)(e.Row)), e.Action));
+                if ((this.PS_INCTRANRowDeleting != null)) {
+                    this.PS_INCTRANRowDeleting(this, new PS_INCTRANRowChangeEvent(((PS_INCTRANRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovePS_DetailsRow(PS_DetailsRow row) {
+            public void RemovePS_INCTRANRow(PS_INCTRANRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -555,7 +618,7 @@ namespace Report.Dataset {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PS_DetailsDataTable";
+                attribute2.FixedValue = "PS_INCTRANDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -601,18 +664,18 @@ namespace Report.Dataset {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PS_PLDataTable : global::System.Data.TypedTableBase<PS_PLRow> {
+        public partial class PS_TTGOSTRANDataTable : global::System.Data.TypedTableBase<PS_TTGOSTRANRow> {
             
             private global::System.Data.DataColumn columntotal_i;
             
             private global::System.Data.DataColumn columntotal_e;
             
-            private global::System.Data.DataColumn columnp_l;
+            private global::System.Data.DataColumn columnttgostran;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PS_PLDataTable() {
-                this.TableName = "PS_PL";
+            public PS_TTGOSTRANDataTable() {
+                this.TableName = "PS_TTGOSTRAN";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -620,7 +683,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PS_PLDataTable(global::System.Data.DataTable table) {
+            internal PS_TTGOSTRANDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -637,7 +700,285 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected PS_PLDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected PS_TTGOSTRANDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn total_iColumn {
+                get {
+                    return this.columntotal_i;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn total_eColumn {
+                get {
+                    return this.columntotal_e;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ttgostranColumn {
+                get {
+                    return this.columnttgostran;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public PS_TTGOSTRANRow this[int index] {
+                get {
+                    return ((PS_TTGOSTRANRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event PS_TTGOSTRANRowChangeEventHandler PS_TTGOSTRANRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event PS_TTGOSTRANRowChangeEventHandler PS_TTGOSTRANRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event PS_TTGOSTRANRowChangeEventHandler PS_TTGOSTRANRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event PS_TTGOSTRANRowChangeEventHandler PS_TTGOSTRANRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddPS_TTGOSTRANRow(PS_TTGOSTRANRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public PS_TTGOSTRANRow AddPS_TTGOSTRANRow(string total_i, string total_e, string ttgostran) {
+                PS_TTGOSTRANRow rowPS_TTGOSTRANRow = ((PS_TTGOSTRANRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        total_i,
+                        total_e,
+                        ttgostran};
+                rowPS_TTGOSTRANRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPS_TTGOSTRANRow);
+                return rowPS_TTGOSTRANRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                PS_TTGOSTRANDataTable cln = ((PS_TTGOSTRANDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new PS_TTGOSTRANDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columntotal_i = base.Columns["total_i"];
+                this.columntotal_e = base.Columns["total_e"];
+                this.columnttgostran = base.Columns["ttgostran"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columntotal_i = new global::System.Data.DataColumn("total_i", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal_i);
+                this.columntotal_e = new global::System.Data.DataColumn("total_e", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal_e);
+                this.columnttgostran = new global::System.Data.DataColumn("ttgostran", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnttgostran);
+                this.columntotal_i.Caption = "glm";
+                this.columntotal_e.Caption = "glnm";
+                this.columnttgostran.Caption = "gl";
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public PS_TTGOSTRANRow NewPS_TTGOSTRANRow() {
+                return ((PS_TTGOSTRANRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new PS_TTGOSTRANRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(PS_TTGOSTRANRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.PS_TTGOSTRANRowChanged != null)) {
+                    this.PS_TTGOSTRANRowChanged(this, new PS_TTGOSTRANRowChangeEvent(((PS_TTGOSTRANRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.PS_TTGOSTRANRowChanging != null)) {
+                    this.PS_TTGOSTRANRowChanging(this, new PS_TTGOSTRANRowChangeEvent(((PS_TTGOSTRANRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.PS_TTGOSTRANRowDeleted != null)) {
+                    this.PS_TTGOSTRANRowDeleted(this, new PS_TTGOSTRANRowChangeEvent(((PS_TTGOSTRANRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.PS_TTGOSTRANRowDeleting != null)) {
+                    this.PS_TTGOSTRANRowDeleting(this, new PS_TTGOSTRANRowChangeEvent(((PS_TTGOSTRANRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemovePS_TTGOSTRANRow(PS_TTGOSTRANRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                IncomeStatementByDate ds = new IncomeStatementByDate();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "PS_TTGOSTRANDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class PS_PLTRANDataTable : global::System.Data.TypedTableBase<PS_PLTRANRow> {
+            
+            private global::System.Data.DataColumn columntotal_i;
+            
+            private global::System.Data.DataColumn columntotal_e;
+            
+            private global::System.Data.DataColumn columnp_l;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public PS_PLTRANDataTable() {
+                this.TableName = "PS_PLTRAN";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal PS_PLTRANDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected PS_PLTRANDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -677,47 +1018,47 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PS_PLRow this[int index] {
+            public PS_PLTRANRow this[int index] {
                 get {
-                    return ((PS_PLRow)(this.Rows[index]));
+                    return ((PS_PLTRANRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PS_PLRowChangeEventHandler PS_PLRowChanging;
+            public event PS_PLTRANRowChangeEventHandler PS_PLTRANRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PS_PLRowChangeEventHandler PS_PLRowChanged;
+            public event PS_PLTRANRowChangeEventHandler PS_PLTRANRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PS_PLRowChangeEventHandler PS_PLRowDeleting;
+            public event PS_PLTRANRowChangeEventHandler PS_PLTRANRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event PS_PLRowChangeEventHandler PS_PLRowDeleted;
+            public event PS_PLTRANRowChangeEventHandler PS_PLTRANRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddPS_PLRow(PS_PLRow row) {
+            public void AddPS_PLTRANRow(PS_PLTRANRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PS_PLRow AddPS_PLRow(string total_i, string total_e, string p_l) {
-                PS_PLRow rowPS_PLRow = ((PS_PLRow)(this.NewRow()));
+            public PS_PLTRANRow AddPS_PLTRANRow(string total_i, string total_e, string p_l) {
+                PS_PLTRANRow rowPS_PLTRANRow = ((PS_PLTRANRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         total_i,
                         total_e,
                         p_l};
-                rowPS_PLRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPS_PLRow);
-                return rowPS_PLRow;
+                rowPS_PLTRANRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPS_PLTRANRow);
+                return rowPS_PLTRANRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PS_PLDataTable cln = ((PS_PLDataTable)(base.Clone()));
+                PS_PLTRANDataTable cln = ((PS_PLTRANDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -725,7 +1066,7 @@ namespace Report.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PS_PLDataTable();
+                return new PS_PLTRANDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -745,32 +1086,35 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columntotal_e);
                 this.columnp_l = new global::System.Data.DataColumn("p_l", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnp_l);
+                this.columntotal_i.Caption = "glm";
+                this.columntotal_e.Caption = "glnm";
+                this.columnp_l.Caption = "gl";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PS_PLRow NewPS_PLRow() {
-                return ((PS_PLRow)(this.NewRow()));
+            public PS_PLTRANRow NewPS_PLTRANRow() {
+                return ((PS_PLTRANRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PS_PLRow(builder);
+                return new PS_PLTRANRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PS_PLRow);
+                return typeof(PS_PLTRANRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PS_PLRowChanged != null)) {
-                    this.PS_PLRowChanged(this, new PS_PLRowChangeEvent(((PS_PLRow)(e.Row)), e.Action));
+                if ((this.PS_PLTRANRowChanged != null)) {
+                    this.PS_PLTRANRowChanged(this, new PS_PLTRANRowChangeEvent(((PS_PLTRANRow)(e.Row)), e.Action));
                 }
             }
             
@@ -778,8 +1122,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PS_PLRowChanging != null)) {
-                    this.PS_PLRowChanging(this, new PS_PLRowChangeEvent(((PS_PLRow)(e.Row)), e.Action));
+                if ((this.PS_PLTRANRowChanging != null)) {
+                    this.PS_PLTRANRowChanging(this, new PS_PLTRANRowChangeEvent(((PS_PLTRANRow)(e.Row)), e.Action));
                 }
             }
             
@@ -787,8 +1131,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PS_PLRowDeleted != null)) {
-                    this.PS_PLRowDeleted(this, new PS_PLRowChangeEvent(((PS_PLRow)(e.Row)), e.Action));
+                if ((this.PS_PLTRANRowDeleted != null)) {
+                    this.PS_PLTRANRowDeleted(this, new PS_PLTRANRowChangeEvent(((PS_PLTRANRow)(e.Row)), e.Action));
                 }
             }
             
@@ -796,14 +1140,14 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PS_PLRowDeleting != null)) {
-                    this.PS_PLRowDeleting(this, new PS_PLRowChangeEvent(((PS_PLRow)(e.Row)), e.Action));
+                if ((this.PS_PLTRANRowDeleting != null)) {
+                    this.PS_PLTRANRowDeleting(this, new PS_PLTRANRowChangeEvent(((PS_PLTRANRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovePS_PLRow(PS_PLRow row) {
+            public void RemovePS_PLTRANRow(PS_PLTRANRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -830,7 +1174,7 @@ namespace Report.Dataset {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PS_PLDataTable";
+                attribute2.FixedValue = "PS_PLTRANDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -874,15 +1218,31 @@ namespace Report.Dataset {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PS_DetailsRow : global::System.Data.DataRow {
+        public partial class PS_INCTRANRow : global::System.Data.DataRow {
             
-            private PS_DetailsDataTable tablePS_Details;
+            private PS_INCTRANDataTable tablePS_INCTRAN;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PS_DetailsRow(global::System.Data.DataRowBuilder rb) : 
+            internal PS_INCTRANRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePS_Details = ((PS_DetailsDataTable)(this.Table));
+                this.tablePS_INCTRAN = ((PS_INCTRANDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string glm {
+                get {
+                    try {
+                        return ((string)(this[this.tablePS_INCTRAN.glmColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'glm\' in table \'PS_INCTRAN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePS_INCTRAN.glmColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -890,14 +1250,30 @@ namespace Report.Dataset {
             public string gl {
                 get {
                     try {
-                        return ((string)(this[this.tablePS_Details.glColumn]));
+                        return ((string)(this[this.tablePS_INCTRAN.glColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'gl\' in table \'PS_Details\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'gl\' in table \'PS_INCTRAN\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePS_Details.glColumn] = value;
+                    this[this.tablePS_INCTRAN.glColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string glnm {
+                get {
+                    try {
+                        return ((string)(this[this.tablePS_INCTRAN.glnmColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'glnm\' in table \'PS_INCTRAN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePS_INCTRAN.glnmColumn] = value;
                 }
             }
             
@@ -906,14 +1282,14 @@ namespace Report.Dataset {
             public string gl_name {
                 get {
                     try {
-                        return ((string)(this[this.tablePS_Details.gl_nameColumn]));
+                        return ((string)(this[this.tablePS_INCTRAN.gl_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'gl_name\' in table \'PS_Details\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'gl_name\' in table \'PS_INCTRAN\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePS_Details.gl_nameColumn] = value;
+                    this[this.tablePS_INCTRAN.gl_nameColumn] = value;
                 }
             }
             
@@ -922,14 +1298,14 @@ namespace Report.Dataset {
             public string acc_class {
                 get {
                     try {
-                        return ((string)(this[this.tablePS_Details.acc_classColumn]));
+                        return ((string)(this[this.tablePS_INCTRAN.acc_classColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'acc_class\' in table \'PS_Details\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'acc_class\' in table \'PS_INCTRAN\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePS_Details.acc_classColumn] = value;
+                    this[this.tablePS_INCTRAN.acc_classColumn] = value;
                 }
             }
             
@@ -938,78 +1314,102 @@ namespace Report.Dataset {
             public string ac_amt {
                 get {
                     try {
-                        return ((string)(this[this.tablePS_Details.ac_amtColumn]));
+                        return ((string)(this[this.tablePS_INCTRAN.ac_amtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ac_amt\' in table \'PS_Details\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ac_amt\' in table \'PS_INCTRAN\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePS_Details.ac_amtColumn] = value;
+                    this[this.tablePS_INCTRAN.ac_amtColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsglmNull() {
+                return this.IsNull(this.tablePS_INCTRAN.glmColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetglmNull() {
+                this[this.tablePS_INCTRAN.glmColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsglNull() {
-                return this.IsNull(this.tablePS_Details.glColumn);
+                return this.IsNull(this.tablePS_INCTRAN.glColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetglNull() {
-                this[this.tablePS_Details.glColumn] = global::System.Convert.DBNull;
+                this[this.tablePS_INCTRAN.glColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsglnmNull() {
+                return this.IsNull(this.tablePS_INCTRAN.glnmColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetglnmNull() {
+                this[this.tablePS_INCTRAN.glnmColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isgl_nameNull() {
-                return this.IsNull(this.tablePS_Details.gl_nameColumn);
+                return this.IsNull(this.tablePS_INCTRAN.gl_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setgl_nameNull() {
-                this[this.tablePS_Details.gl_nameColumn] = global::System.Convert.DBNull;
+                this[this.tablePS_INCTRAN.gl_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isacc_classNull() {
-                return this.IsNull(this.tablePS_Details.acc_classColumn);
+                return this.IsNull(this.tablePS_INCTRAN.acc_classColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setacc_classNull() {
-                this[this.tablePS_Details.acc_classColumn] = global::System.Convert.DBNull;
+                this[this.tablePS_INCTRAN.acc_classColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isac_amtNull() {
-                return this.IsNull(this.tablePS_Details.ac_amtColumn);
+                return this.IsNull(this.tablePS_INCTRAN.ac_amtColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setac_amtNull() {
-                this[this.tablePS_Details.ac_amtColumn] = global::System.Convert.DBNull;
+                this[this.tablePS_INCTRAN.ac_amtColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PS_PLRow : global::System.Data.DataRow {
+        public partial class PS_TTGOSTRANRow : global::System.Data.DataRow {
             
-            private PS_PLDataTable tablePS_PL;
+            private PS_TTGOSTRANDataTable tablePS_TTGOSTRAN;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal PS_PLRow(global::System.Data.DataRowBuilder rb) : 
+            internal PS_TTGOSTRANRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePS_PL = ((PS_PLDataTable)(this.Table));
+                this.tablePS_TTGOSTRAN = ((PS_TTGOSTRANDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1017,14 +1417,14 @@ namespace Report.Dataset {
             public string total_i {
                 get {
                     try {
-                        return ((string)(this[this.tablePS_PL.total_iColumn]));
+                        return ((string)(this[this.tablePS_TTGOSTRAN.total_iColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'total_i\' in table \'PS_PL\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'total_i\' in table \'PS_TTGOSTRAN\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePS_PL.total_iColumn] = value;
+                    this[this.tablePS_TTGOSTRAN.total_iColumn] = value;
                 }
             }
             
@@ -1033,14 +1433,113 @@ namespace Report.Dataset {
             public string total_e {
                 get {
                     try {
-                        return ((string)(this[this.tablePS_PL.total_eColumn]));
+                        return ((string)(this[this.tablePS_TTGOSTRAN.total_eColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'total_e\' in table \'PS_PL\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'total_e\' in table \'PS_TTGOSTRAN\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePS_PL.total_eColumn] = value;
+                    this[this.tablePS_TTGOSTRAN.total_eColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ttgostran {
+                get {
+                    try {
+                        return ((string)(this[this.tablePS_TTGOSTRAN.ttgostranColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ttgostran\' in table \'PS_TTGOSTRAN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePS_TTGOSTRAN.ttgostranColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Istotal_iNull() {
+                return this.IsNull(this.tablePS_TTGOSTRAN.total_iColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Settotal_iNull() {
+                this[this.tablePS_TTGOSTRAN.total_iColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Istotal_eNull() {
+                return this.IsNull(this.tablePS_TTGOSTRAN.total_eColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Settotal_eNull() {
+                this[this.tablePS_TTGOSTRAN.total_eColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsttgostranNull() {
+                return this.IsNull(this.tablePS_TTGOSTRAN.ttgostranColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetttgostranNull() {
+                this[this.tablePS_TTGOSTRAN.ttgostranColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class PS_PLTRANRow : global::System.Data.DataRow {
+            
+            private PS_PLTRANDataTable tablePS_PLTRAN;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal PS_PLTRANRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablePS_PLTRAN = ((PS_PLTRANDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string total_i {
+                get {
+                    try {
+                        return ((string)(this[this.tablePS_PLTRAN.total_iColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'total_i\' in table \'PS_PLTRAN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePS_PLTRAN.total_iColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string total_e {
+                get {
+                    try {
+                        return ((string)(this[this.tablePS_PLTRAN.total_eColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'total_e\' in table \'PS_PLTRAN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePS_PLTRAN.total_eColumn] = value;
                 }
             }
             
@@ -1049,51 +1548,51 @@ namespace Report.Dataset {
             public string p_l {
                 get {
                     try {
-                        return ((string)(this[this.tablePS_PL.p_lColumn]));
+                        return ((string)(this[this.tablePS_PLTRAN.p_lColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'p_l\' in table \'PS_PL\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'p_l\' in table \'PS_PLTRAN\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePS_PL.p_lColumn] = value;
+                    this[this.tablePS_PLTRAN.p_lColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Istotal_iNull() {
-                return this.IsNull(this.tablePS_PL.total_iColumn);
+                return this.IsNull(this.tablePS_PLTRAN.total_iColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Settotal_iNull() {
-                this[this.tablePS_PL.total_iColumn] = global::System.Convert.DBNull;
+                this[this.tablePS_PLTRAN.total_iColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Istotal_eNull() {
-                return this.IsNull(this.tablePS_PL.total_eColumn);
+                return this.IsNull(this.tablePS_PLTRAN.total_eColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Settotal_eNull() {
-                this[this.tablePS_PL.total_eColumn] = global::System.Convert.DBNull;
+                this[this.tablePS_PLTRAN.total_eColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isp_lNull() {
-                return this.IsNull(this.tablePS_PL.p_lColumn);
+                return this.IsNull(this.tablePS_PLTRAN.p_lColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setp_lNull() {
-                this[this.tablePS_PL.p_lColumn] = global::System.Convert.DBNull;
+                this[this.tablePS_PLTRAN.p_lColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1101,22 +1600,22 @@ namespace Report.Dataset {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class PS_DetailsRowChangeEvent : global::System.EventArgs {
+        public class PS_INCTRANRowChangeEvent : global::System.EventArgs {
             
-            private PS_DetailsRow eventRow;
+            private PS_INCTRANRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PS_DetailsRowChangeEvent(PS_DetailsRow row, global::System.Data.DataRowAction action) {
+            public PS_INCTRANRowChangeEvent(PS_INCTRANRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PS_DetailsRow Row {
+            public PS_INCTRANRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1135,22 +1634,56 @@ namespace Report.Dataset {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class PS_PLRowChangeEvent : global::System.EventArgs {
+        public class PS_TTGOSTRANRowChangeEvent : global::System.EventArgs {
             
-            private PS_PLRow eventRow;
+            private PS_TTGOSTRANRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PS_PLRowChangeEvent(PS_PLRow row, global::System.Data.DataRowAction action) {
+            public PS_TTGOSTRANRowChangeEvent(PS_TTGOSTRANRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PS_PLRow Row {
+            public PS_TTGOSTRANRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class PS_PLTRANRowChangeEvent : global::System.EventArgs {
+            
+            private PS_PLTRANRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public PS_PLTRANRowChangeEvent(PS_PLTRANRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public PS_PLTRANRow Row {
                 get {
                     return this.eventRow;
                 }

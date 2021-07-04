@@ -457,7 +457,7 @@ namespace Report.Utils
             ddl.DataValueField = "id";
             ddl.DataSource = transactionTypeList;
             ddl.DataBind();
-            ddl.Items.Insert(0, new ListItem("--- Select a Value ---", ""));
+            ddl.Items.Insert(0, new ListItem("--- All ---", "0"));
             ddl.SelectedIndex = 0;
         }
 

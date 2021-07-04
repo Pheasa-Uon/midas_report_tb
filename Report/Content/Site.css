@@ -1,5 +1,6 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
+  font-family: "Segoe UI","Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 /* Wrapping element */
@@ -50,4 +51,10 @@ input:disabled {
     max-width: 120px;
     width: 100%;
     float: left;
+}
+.dashboard-title {
+    margin-top: 32px;
+    color: #ffb536;
+    font-weight: bold;
+    text-decoration: underline;
 }

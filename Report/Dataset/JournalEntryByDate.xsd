@@ -31,6 +31,9 @@
               <xs:element name="appr" msprop:Generator_ColumnVarNameInTable="columnappr" msprop:Generator_ColumnPropNameInRow="appr" msprop:Generator_ColumnPropNameInTable="apprColumn" msprop:Generator_UserColumnName="appr" type="xs:string" minOccurs="0" />
               <xs:element name="transaction_type" msprop:Generator_ColumnVarNameInTable="columntransaction_type" msprop:Generator_ColumnPropNameInRow="transaction_type" msprop:Generator_ColumnPropNameInTable="transaction_typeColumn" msprop:Generator_UserColumnName="transaction_type" type="xs:string" minOccurs="0" />
               <xs:element name="lob_name" msprop:Generator_ColumnVarNameInTable="columnlob_name" msprop:Generator_ColumnPropNameInRow="lob_name" msprop:Generator_ColumnPropNameInTable="lob_nameColumn" msprop:Generator_UserColumnName="lob_name" type="xs:string" minOccurs="0" />
+              <xs:element name="contract_no" msprop:Generator_ColumnVarNameInTable="columncontract_no" msprop:Generator_ColumnPropNameInRow="contract_no" msprop:Generator_ColumnPropNameInTable="contract_noColumn" msprop:Generator_UserColumnName="contract_no" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_name" msprop:Generator_ColumnVarNameInTable="columncustomer_name" msprop:Generator_ColumnPropNameInRow="customer_name" msprop:Generator_ColumnPropNameInTable="customer_nameColumn" msprop:Generator_UserColumnName="customer_name" type="xs:string" minOccurs="0" />
+              <xs:element name="last_updated" msprop:Generator_ColumnVarNameInTable="columnlast_updated" msprop:Generator_ColumnPropNameInRow="last_updated" msprop:Generator_ColumnPropNameInTable="last_updatedColumn" msprop:Generator_UserColumnName="last_updated" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

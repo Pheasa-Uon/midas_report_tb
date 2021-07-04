@@ -11,13 +11,14 @@ namespace Report
 {
     public partial class _Default : Page
     {
+        public static List<ReportItem> rp = new List<ReportItem>();
         public static string appName = System.Configuration.ConfigurationManager.AppSettings["appName"];
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 DataHelper.checkLoginSession();
-                //rp = DataHelper.getMenuItem();
+                rp = DataHelper.getMenuItem();
             }
         }
     }

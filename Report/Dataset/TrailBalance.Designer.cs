@@ -289,13 +289,13 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnside;
             
-            private global::System.Data.DataColumn columnopen_balance;
+            private global::System.Data.DataColumn columnO_DR;
             
-            private global::System.Data.DataColumn columndebit_amount;
+            private global::System.Data.DataColumn columnO_CR;
             
-            private global::System.Data.DataColumn columncredit_amount;
+            private global::System.Data.DataColumn columnM_DR;
             
-            private global::System.Data.DataColumn columnclosing_balance;
+            private global::System.Data.DataColumn columnM_CR;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -372,33 +372,33 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn open_balanceColumn {
+            public global::System.Data.DataColumn O_DRColumn {
                 get {
-                    return this.columnopen_balance;
+                    return this.columnO_DR;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn debit_amountColumn {
+            public global::System.Data.DataColumn O_CRColumn {
                 get {
-                    return this.columndebit_amount;
+                    return this.columnO_CR;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn credit_amountColumn {
+            public global::System.Data.DataColumn M_DRColumn {
                 get {
-                    return this.columncredit_amount;
+                    return this.columnM_DR;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn closing_balanceColumn {
+            public global::System.Data.DataColumn M_CRColumn {
                 get {
-                    return this.columnclosing_balance;
+                    return this.columnM_CR;
                 }
             }
             
@@ -439,7 +439,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TrialBalanceDatasetRow AddTrialBalanceDatasetRow(string currency, string gl, string id, string gl_name, string side, string open_balance, string debit_amount, string credit_amount, string closing_balance) {
+            public TrialBalanceDatasetRow AddTrialBalanceDatasetRow(string currency, string gl, string id, string gl_name, string side, string O_DR, string O_CR, string M_DR, string M_CR) {
                 TrialBalanceDatasetRow rowTrialBalanceDatasetRow = ((TrialBalanceDatasetRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         currency,
@@ -447,10 +447,10 @@ namespace Report.Dataset {
                         id,
                         gl_name,
                         side,
-                        open_balance,
-                        debit_amount,
-                        credit_amount,
-                        closing_balance};
+                        O_DR,
+                        O_CR,
+                        M_DR,
+                        M_CR};
                 rowTrialBalanceDatasetRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTrialBalanceDatasetRow);
                 return rowTrialBalanceDatasetRow;
@@ -478,10 +478,10 @@ namespace Report.Dataset {
                 this.columnid = base.Columns["id"];
                 this.columngl_name = base.Columns["gl_name"];
                 this.columnside = base.Columns["side"];
-                this.columnopen_balance = base.Columns["open_balance"];
-                this.columndebit_amount = base.Columns["debit_amount"];
-                this.columncredit_amount = base.Columns["credit_amount"];
-                this.columnclosing_balance = base.Columns["closing_balance"];
+                this.columnO_DR = base.Columns["O_DR"];
+                this.columnO_CR = base.Columns["O_CR"];
+                this.columnM_DR = base.Columns["M_DR"];
+                this.columnM_CR = base.Columns["M_CR"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -497,14 +497,14 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columngl_name);
                 this.columnside = new global::System.Data.DataColumn("side", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnside);
-                this.columnopen_balance = new global::System.Data.DataColumn("open_balance", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnopen_balance);
-                this.columndebit_amount = new global::System.Data.DataColumn("debit_amount", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndebit_amount);
-                this.columncredit_amount = new global::System.Data.DataColumn("credit_amount", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncredit_amount);
-                this.columnclosing_balance = new global::System.Data.DataColumn("closing_balance", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnclosing_balance);
+                this.columnO_DR = new global::System.Data.DataColumn("O_DR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnO_DR);
+                this.columnO_CR = new global::System.Data.DataColumn("O_CR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnO_CR);
+                this.columnM_DR = new global::System.Data.DataColumn("M_DR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM_DR);
+                this.columnM_CR = new global::System.Data.DataColumn("M_CR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM_CR);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -727,65 +727,65 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string open_balance {
+            public string O_DR {
                 get {
                     try {
-                        return ((string)(this[this.tableTrialBalanceDataset.open_balanceColumn]));
+                        return ((string)(this[this.tableTrialBalanceDataset.O_DRColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'open_balance\' in table \'TrialBalanceDataset\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'O_DR\' in table \'TrialBalanceDataset\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTrialBalanceDataset.open_balanceColumn] = value;
+                    this[this.tableTrialBalanceDataset.O_DRColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string debit_amount {
+            public string O_CR {
                 get {
                     try {
-                        return ((string)(this[this.tableTrialBalanceDataset.debit_amountColumn]));
+                        return ((string)(this[this.tableTrialBalanceDataset.O_CRColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'debit_amount\' in table \'TrialBalanceDataset\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'O_CR\' in table \'TrialBalanceDataset\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTrialBalanceDataset.debit_amountColumn] = value;
+                    this[this.tableTrialBalanceDataset.O_CRColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string credit_amount {
+            public string M_DR {
                 get {
                     try {
-                        return ((string)(this[this.tableTrialBalanceDataset.credit_amountColumn]));
+                        return ((string)(this[this.tableTrialBalanceDataset.M_DRColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'credit_amount\' in table \'TrialBalanceDataset\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'M_DR\' in table \'TrialBalanceDataset\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTrialBalanceDataset.credit_amountColumn] = value;
+                    this[this.tableTrialBalanceDataset.M_DRColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string closing_balance {
+            public string M_CR {
                 get {
                     try {
-                        return ((string)(this[this.tableTrialBalanceDataset.closing_balanceColumn]));
+                        return ((string)(this[this.tableTrialBalanceDataset.M_CRColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'closing_balance\' in table \'TrialBalanceDataset\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'M_CR\' in table \'TrialBalanceDataset\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTrialBalanceDataset.closing_balanceColumn] = value;
+                    this[this.tableTrialBalanceDataset.M_CRColumn] = value;
                 }
             }
             
@@ -851,50 +851,50 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isopen_balanceNull() {
-                return this.IsNull(this.tableTrialBalanceDataset.open_balanceColumn);
+            public bool IsO_DRNull() {
+                return this.IsNull(this.tableTrialBalanceDataset.O_DRColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setopen_balanceNull() {
-                this[this.tableTrialBalanceDataset.open_balanceColumn] = global::System.Convert.DBNull;
+            public void SetO_DRNull() {
+                this[this.tableTrialBalanceDataset.O_DRColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isdebit_amountNull() {
-                return this.IsNull(this.tableTrialBalanceDataset.debit_amountColumn);
+            public bool IsO_CRNull() {
+                return this.IsNull(this.tableTrialBalanceDataset.O_CRColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setdebit_amountNull() {
-                this[this.tableTrialBalanceDataset.debit_amountColumn] = global::System.Convert.DBNull;
+            public void SetO_CRNull() {
+                this[this.tableTrialBalanceDataset.O_CRColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Iscredit_amountNull() {
-                return this.IsNull(this.tableTrialBalanceDataset.credit_amountColumn);
+            public bool IsM_DRNull() {
+                return this.IsNull(this.tableTrialBalanceDataset.M_DRColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setcredit_amountNull() {
-                this[this.tableTrialBalanceDataset.credit_amountColumn] = global::System.Convert.DBNull;
+            public void SetM_DRNull() {
+                this[this.tableTrialBalanceDataset.M_DRColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isclosing_balanceNull() {
-                return this.IsNull(this.tableTrialBalanceDataset.closing_balanceColumn);
+            public bool IsM_CRNull() {
+                return this.IsNull(this.tableTrialBalanceDataset.M_CRColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setclosing_balanceNull() {
-                this[this.tableTrialBalanceDataset.closing_balanceColumn] = global::System.Convert.DBNull;
+            public void SetM_CRNull() {
+                this[this.tableTrialBalanceDataset.M_CRColumn] = global::System.Convert.DBNull;
             }
         }
         

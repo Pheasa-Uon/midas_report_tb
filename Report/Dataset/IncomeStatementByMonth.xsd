@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IncomeStatementByMonth" targetNamespace="http://tempuri.org/IncomeStatementByMonth.xsd" xmlns:mstns="http://tempuri.org/IncomeStatementByMonth.xsd" xmlns="http://tempuri.org/IncomeStatementByMonth.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="IncomeStatementByMonth" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="IncomeStatementByMonth" msprop:Generator_UserDSName="IncomeStatementByMonth">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="IncomeStatementByMonthDS" msprop:Generator_TableClassName="IncomeStatementByMonthDSDataTable" msprop:Generator_TableVarName="tableIncomeStatementByMonthDS" msprop:Generator_TablePropName="IncomeStatementByMonthDS" msprop:Generator_RowDeletingName="IncomeStatementByMonthDSRowDeleting" msprop:Generator_RowChangingName="IncomeStatementByMonthDSRowChanging" msprop:Generator_RowEvHandlerName="IncomeStatementByMonthDSRowChangeEventHandler" msprop:Generator_RowDeletedName="IncomeStatementByMonthDSRowDeleted" msprop:Generator_UserTableName="IncomeStatementByMonthDS" msprop:Generator_RowChangedName="IncomeStatementByMonthDSRowChanged" msprop:Generator_RowEvArgName="IncomeStatementByMonthDSRowChangeEvent" msprop:Generator_RowClassName="IncomeStatementByMonthDSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tt" msprop:Generator_ColumnVarNameInTable="columntt" msprop:Generator_ColumnPropNameInRow="tt" msprop:Generator_ColumnPropNameInTable="ttColumn" msprop:Generator_UserColumnName="tt" type="xs:string" minOccurs="0" />
+              <xs:element name="glm" msprop:Generator_ColumnVarNameInTable="columnglm" msprop:Generator_ColumnPropNameInRow="glm" msprop:Generator_ColumnPropNameInTable="glmColumn" msprop:Generator_UserColumnName="glm" type="xs:string" minOccurs="0" />
+              <xs:element name="glnm" msprop:Generator_ColumnVarNameInTable="columnglnm" msprop:Generator_ColumnPropNameInRow="glnm" msprop:Generator_ColumnPropNameInTable="glnmColumn" msprop:Generator_UserColumnName="glnm" type="xs:string" minOccurs="0" />
+              <xs:element name="gl" msprop:Generator_ColumnVarNameInTable="columngl" msprop:Generator_ColumnPropNameInRow="gl" msprop:Generator_ColumnPropNameInTable="glColumn" msprop:Generator_UserColumnName="gl" type="xs:string" minOccurs="0" />
+              <xs:element name="gl_name" msprop:Generator_ColumnVarNameInTable="columngl_name" msprop:Generator_ColumnPropNameInRow="gl_name" msprop:Generator_ColumnPropNameInTable="gl_nameColumn" msprop:Generator_UserColumnName="gl_name" type="xs:string" minOccurs="0" />
+              <xs:element name="acc_class" msprop:Generator_ColumnVarNameInTable="columnacc_class" msprop:Generator_ColumnPropNameInRow="acc_class" msprop:Generator_ColumnPropNameInTable="acc_classColumn" msprop:Generator_UserColumnName="acc_class" type="xs:string" minOccurs="0" />
+              <xs:element name="ac_amt" msprop:Generator_ColumnVarNameInTable="columnac_amt" msprop:Generator_ColumnPropNameInRow="ac_amt" msprop:Generator_ColumnPropNameInTable="ac_amtColumn" msprop:Generator_UserColumnName="ac_amt" type="xs:string" minOccurs="0" />
+              <xs:element name="mon" msprop:Generator_ColumnVarNameInTable="columnmon" msprop:Generator_ColumnPropNameInRow="mon" msprop:Generator_ColumnPropNameInTable="monColumn" msprop:Generator_UserColumnName="mon" type="xs:string" minOccurs="0" />
+              <xs:element name="year" msprop:Generator_ColumnVarNameInTable="columnyear" msprop:Generator_ColumnPropNameInRow="year" msprop:Generator_ColumnPropNameInTable="yearColumn" msprop:Generator_UserColumnName="year" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

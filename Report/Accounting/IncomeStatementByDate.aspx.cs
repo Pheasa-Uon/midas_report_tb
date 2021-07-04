@@ -4,10 +4,6 @@ using Report.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using Report.Utils;
 
 namespace Report.Accounting
@@ -15,52 +11,91 @@ namespace Report.Accounting
     public partial class IncomeStatementByDate : System.Web.UI.Page
     {
         private DBConnect db = new DBConnect();
-        DateTime currentDate = DateTime.Today;
-        private string fromDateStr, toDateStr;
+        public string fromDate, toDate;
         public string format = "dd/MM/yyyy";
+        public string dateFromError = "", dateToError = "";
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataHelper.checkLoginSession();
-            //Convert Date Block
-            fromDateStr = dtpFromDate.Text;
-            toDateStr = dtpToDate.Text;
-
-            //Adding Text and Value to Branch DropdownList block
             if (!IsPostBack)
             {
+                var date = DataHelper.getSystemDateTextbox();
+                DataHelper.checkLoginSession();
                 DataHelper.populateBranchDDLAllowAll(ddBranchName, DataHelper.getUserId());
-                dtpFromDate.Text = DataHelper.getSystemDateStr();
-                dtpToDate.Text = DataHelper.getSystemDateStr();
+                dtpFromDate.Text = date;
+                dtpToDate.Text = date;
             }
         }
-
-        //GenerateReport Function
-        private void GenerateReport(DataTable firstIncomeStatementByDateDT, DataTable secondIncomeStatementByDateDT)
+        
+        private void GenerateReport(DataTable PS_INCTRAN_DT, DataTable PS_GOSTRAN_DT, DataTable PS_TTGOSTRAN_DT, DataTable PS_EXPTRAN_DT, DataTable PS_TTNDITRAN_DT, DataTable PS_OTHRETRAN_DT, DataTable PS_PLTRAN_DT)
         {
-            //Generate Report Block
             ReportParameterCollection reportParameters = new ReportParameterCollection();
-            reportParameters.Add(new ReportParameter("BranchParameter", ddBranchName.SelectedItem.Text));
-            reportParameters.Add(new ReportParameter("FromDateParameter", DateTime.ParseExact(dtpFromDate.Text, format, null).ToString("dd-MMM-yyyy")));
-            reportParameters.Add(new ReportParameter("ToDateParameter", DateTime.ParseExact(dtpToDate.Text, format, null).ToString("dd-MMM-yyyy")));
+            reportParameters.Add(new ReportParameter("Branch", ddBranchName.SelectedItem.Text));
+            reportParameters.Add(new ReportParameter("FromDate", DateTime.ParseExact(dtpFromDate.Text, format, null).ToString("dd-MMM-yyyy")));
+            reportParameters.Add(new ReportParameter("ToDate", DateTime.ParseExact(dtpToDate.Text, format, null).ToString("dd-MMM-yyyy")));
 
-            var _firstIncomeStatementByDate = new ReportDataSource("PS_Details", firstIncomeStatementByDateDT);
-            var _secondIncomeStatementByDate = new ReportDataSource("PS_PL", secondIncomeStatementByDateDT);
-            DataHelper.generateAccountingReport(ReportViewer1, "IncomeStatementByDate", reportParameters, _firstIncomeStatementByDate, _secondIncomeStatementByDate);
+            var PS_INCTRAN_DS = new ReportDataSource("PS_INCTRAN", PS_INCTRAN_DT);
+            var PS_GOSTRAN_DS = new ReportDataSource("PS_GOSTRAN", PS_GOSTRAN_DT);
+            var PS_TTGOSTRAN_DS = new ReportDataSource("PS_TTGOSTRAN", PS_TTGOSTRAN_DT);
+            var PS_EXPTRAN_DS = new ReportDataSource("PS_EXPTRAN", PS_EXPTRAN_DT);
+            var PS_TTNDITRAN_DS = new ReportDataSource("PS_TTNDITRAN", PS_TTNDITRAN_DT);
+            var PS_OTHRETRAN_DS = new ReportDataSource("PS_OTHRETRAN", PS_OTHRETRAN_DT);
+            var PS_PLTRAN_DS = new ReportDataSource("PS_PLTRAN", PS_PLTRAN_DT);
+
+            DataHelper.generateAccountingReport(ReportViewer1, "IncomeStatementByDate", reportParameters,
+                PS_INCTRAN_DS,
+                PS_GOSTRAN_DS,
+                PS_TTGOSTRAN_DS,
+                PS_EXPTRAN_DS,
+                PS_TTNDITRAN_DS,
+                PS_OTHRETRAN_DS,
+                PS_PLTRAN_DS
+                );
         }
 
         protected void btnView_Click(object sender, EventArgs e)
         {
-            var firstIncomeStatementByDateName = "PS_ISDETAILTRAN";
-            var secondIncomeStatementByDateName = "PS_PLTRAN";
+            try
+            {
+                fromDate = DateTime.ParseExact(dtpFromDate.Text.Trim(), format, null).ToString("yyyy-MM-dd");
+            }
+            catch (Exception)
+            {
+                dateFromError = "* Date wrong format";
+                return;
+            }
+            try
+            {
+                toDate = DateTime.ParseExact(dtpToDate.Text.Trim(), format, null).ToString("yyyy-MM-dd");
+            }
+            catch (Exception)
+            {
+                dateToError = "* Date wrong format";
+                return;
+            }
+
+            var PS_INCTRAN = "PS_INCTRAN";
+            var PS_GOSTRAN = "PS_GOSTRAN";
+            var PS_TTGOSTRAN = "PS_TTGOSTRAN";
+            var PS_EXPTRAN = "PS_EXPTRAN";
+            var PS_TTNDITRAN = "PS_TTNDITRAN";
+            var PS_OTHRETRAN = "PS_OTHRETRAN";
+            var PS_PLTRAN = "PS_PLTRAN";
 
             List<Procedure> procedureList = new List<Procedure>();
             procedureList.Add(item: new Procedure() { field_name = "@pBranch", sql_db_type = MySqlDbType.VarChar, value_name = ddBranchName.SelectedItem.Value });
-            procedureList.Add(item: new Procedure() { field_name = "@FR_Date", sql_db_type = MySqlDbType.Date, value_name = DateTime.ParseExact(dtpFromDate.Text, format, null).ToString("yyyy-MM-dd") });
-            procedureList.Add(item: new Procedure() { field_name = "@TO_Date", sql_db_type = MySqlDbType.Date, value_name = DateTime.ParseExact(dtpToDate.Text, format, null).ToString("yyyy-MM-dd") });
+            procedureList.Add(item: new Procedure() { field_name = "@FR_Date", sql_db_type = MySqlDbType.Date, value_name = fromDate });
+            procedureList.Add(item: new Procedure() { field_name = "@TO_Date", sql_db_type = MySqlDbType.Date, value_name = toDate });
 
-            DataTable firstIncomeStatementByDateDT = db.getProcedureDataTable(firstIncomeStatementByDateName, procedureList);
-            DataTable secondIncomeStatementByDateDT = db.getProcedureDataTable(secondIncomeStatementByDateName, procedureList);
-            GenerateReport(firstIncomeStatementByDateDT, secondIncomeStatementByDateDT);
+            DataTable PS_INCTRAN_DS = db.getProcedureDataTable(PS_INCTRAN, procedureList);
+            DataTable PS_GOSTRAN_DS = db.getProcedureDataTable(PS_GOSTRAN, procedureList);
+            DataTable PS_TTGOSTRAN_DS = db.getProcedureDataTable(PS_TTGOSTRAN, procedureList);
+            DataTable PS_EXPTRAN_DS = db.getProcedureDataTable(PS_EXPTRAN, procedureList);
+            DataTable PS_TTNDITRAN_DS = db.getProcedureDataTable(PS_TTNDITRAN, procedureList);
+            DataTable PS_OTHRETRAN_DS = db.getProcedureDataTable(PS_OTHRETRAN, procedureList);
+            DataTable PS_PLTRAN_DS = db.getProcedureDataTable(PS_PLTRAN, procedureList);
+
+            GenerateReport(PS_INCTRAN_DS, PS_GOSTRAN_DS, PS_TTGOSTRAN_DS, PS_EXPTRAN_DS, PS_TTNDITRAN_DS, PS_OTHRETRAN_DS, PS_PLTRAN_DS);
         }
     }
 }

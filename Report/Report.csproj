@@ -176,31 +176,42 @@
     <Content Include="Dataset\BranchProductivity.xsc">
       <DependentUpon>BranchProductivity.xsd</DependentUpon>
     </Content>
-    <Content Include="Accounting\JournalEntryByDate.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Accounting\TrialBalance.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Accounting\IncomeStatementByDate.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Accounting\IncomeStatement.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Accounting\GLTransactionHistory.rdlc">
+    <Content Include="Accounting\AccrualDetail.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Accounting\AccrualDetail.rdlc" />
     <Content Include="Dataset\AccrualDetail.xsc">
       <DependentUpon>AccrualDetail.xsd</DependentUpon>
     </Content>
-    <EmbeddedResource Include="Accounting\AccrualInterest.rdlc" />
-    <EmbeddedResource Include="Accounting\BalanceSheet.rdlc" />
-    <EmbeddedResource Include="Accounting\CashConsolidate.rdlc" />
-    <EmbeddedResource Include="Accounting\CashflowStatement.rdlc" />
-    <EmbeddedResource Include="Accounting\ChartOfAccount.rdlc" />
-    <EmbeddedResource Include="Accounting\DailyCashVault.rdlc" />
+    <Content Include="Accounting\AccrualInterest.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\BalanceSheet.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\CashConsolidate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\CashflowStatement.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\ChartOfAccount.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\DailyCashVault.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Accounting\DailyTillCashPawnOperation.rdlc" />
+    <EmbeddedResource Include="Accounting\DailyTillPettyCash.rdlc" />
+    <EmbeddedResource Include="Accounting\GLTransactionHistory.rdlc" />
+    <EmbeddedResource Include="Accounting\IncomeStatementByDate.rdlc" />
+    <EmbeddedResource Include="Accounting\IncomeStatementByMonth.rdlc" />
+    <EmbeddedResource Include="Accounting\IncomeStatementYTD.rdlc" />
+    <EmbeddedResource Include="Accounting\JournalEntryByDate.rdlc" />
+    <EmbeddedResource Include="Accounting\TrialBalance.rdlc" />
+    <EmbeddedResource Include="Accounting\UnearnedRevenue.rdlc" />
     <None Include="Dataset\AccrualDetail.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -340,6 +351,28 @@
     <Content Include="Dataset\DailyCashVault.xss">
       <DependentUpon>DailyCashVault.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\DailyTillCashPawnOperation.xsc">
+      <DependentUpon>DailyTillCashPawnOperation.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\DailyTillCashPawnOperation.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DailyTillCashPawnOperation.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\DailyTillCashPawnOperation.xss">
+      <DependentUpon>DailyTillCashPawnOperation.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\DailyTillPettyCash.xsc">
+      <DependentUpon>DailyTillPettyCash.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\DailyTillPettyCash.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DailyTillPettyCash.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\DailyTillPettyCash.xss">
+      <DependentUpon>DailyTillPettyCash.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\GLTransactionHistory.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -347,6 +380,28 @@
     </None>
     <Content Include="Dataset\GLTransactionHistory.xss">
       <DependentUpon>GLTransactionHistory.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\IncomeStatementByMonth.xsc">
+      <DependentUpon>IncomeStatementByMonth.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\IncomeStatementByMonth.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IncomeStatementByMonth.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\IncomeStatementByMonth.xss">
+      <DependentUpon>IncomeStatementByMonth.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\IncomeStatementYTD.xsc">
+      <DependentUpon>IncomeStatementYTD.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\IncomeStatementYTD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IncomeStatementYTD.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\IncomeStatementYTD.xss">
+      <DependentUpon>IncomeStatementYTD.xsd</DependentUpon>
     </Content>
     <None Include="Dataset\JournalEntryByDate.xsd">
       <SubType>Designer</SubType>
@@ -582,6 +637,17 @@
     <Content Include="Operation\TurnoverReport.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Dataset\UnearnedRevenue.xsc">
+      <DependentUpon>UnearnedRevenue.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\UnearnedRevenue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UnearnedRevenue.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\UnearnedRevenue.xss">
+      <DependentUpon>UnearnedRevenue.xsd</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
@@ -654,7 +720,9 @@
     </Content>
     <Content Include="Unauthorized.aspx" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
@@ -840,10 +908,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DailyCashVault.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\DailyTillCashPawnOperation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyTillCashPawnOperation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DailyTillPettyCash.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyTillPettyCash.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\GLTransactionHistory.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GLTransactionHistory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\IncomeStatementByMonth.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncomeStatementByMonth.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\IncomeStatementYTD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncomeStatementYTD.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\JournalEntryByDate.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -909,6 +997,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TurnOver.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\UnearnedRevenue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UnearnedRevenue.xsd</DependentUpon>
     </Compile>
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\Currency.cs" />

@@ -2,16 +2,12 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="JournalEntryByDateDSource">
-      <DataSourceReference>PS</DataSourceReference>
-      <rd:DataSourceID>41e852f4-9176-4922-9e8b-7cef75eedad8</rd:DataSourceID>
-    </DataSource>
     <DataSource Name="GLTransactionHistory">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>1d56f1bc-3f6b-4fd3-b099-4eb9ae2a3394</rd:DataSourceID>
+      <rd:DataSourceID>7d9d2c36-750b-48f9-9d70-ed2618503dce</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -92,32 +88,8 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>GLTransactionHistory</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Heng\Documents\C#_Projects\Report\Report\Dataset\GLTransactionHistory.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\GLTransactionHistory.xsd</rd:SchemaPath>
         <rd:TableName>GLHistDataset</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="GL">
-      <Query>
-        <DataSourceName>GLTransactionHistory</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="gl">
-          <DataField>gl</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="gl_name">
-          <DataField>gl_name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>GLTransactionHistory</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Heng\Documents\C#_Projects\Report\Report\Dataset\GLTransactionHistory.xsd</rd:SchemaPath>
-        <rd:TableName>GL</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -140,7 +112,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>GLTransactionHistory</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Heng\Documents\C#_Projects\Report\Report\Dataset\GLTransactionHistory.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\GLTransactionHistory.xsd</rd:SchemaPath>
         <rd:TableName>OpenBalance</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -160,7 +132,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>GLTransactionHistory</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Heng\Documents\C#_Projects\Report\Report\Dataset\GLTransactionHistory.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\GLTransactionHistory.xsd</rd:SchemaPath>
         <rd:TableName>CloseBalance</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -173,8 +145,8 @@
       <Body>
         <ReportItems>
           <Line Name="Line3">
-            <Top>5.21354in</Top>
-            <Left>0.06474in</Left>
+            <Top>4.46354in</Top>
+            <Left>0.18974in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <Style>
@@ -184,8 +156,8 @@
             </Style>
           </Line>
           <Line Name="Line1">
-            <Top>5.21354in</Top>
-            <Left>9.12029in</Left>
+            <Top>4.46354in</Top>
+            <Left>9.24529in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>1</ZIndex>
@@ -214,8 +186,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.08854in</Top>
-            <Left>0.06474in</Left>
+            <Top>3.33854in</Top>
+            <Left>0.18974in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
             <ZIndex>2</ZIndex>
@@ -247,8 +219,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.08854in</Top>
-            <Left>9.12029in</Left>
+            <Top>3.33854in</Top>
+            <Left>9.24529in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
             <ZIndex>3</ZIndex>
@@ -268,10 +240,8 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>IG TECH GROUP CO., LTD</Value>
+                    <Value>=Parameters!CompanyName.Value</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -280,8 +250,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.125in</Top>
+            <Left>0.125in</Left>
             <Height>0.25in</Height>
-            <Width>1.82292in</Width>
+            <Width>5.67365in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -303,6 +275,7 @@
                   <TextRun>
                     <Value>BRANCH:</Value>
                     <Style>
+                      <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -313,14 +286,15 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.30532in</Top>
+            <Top>0.43032in</Top>
+            <Left>0.125in</Left>
             <Height>0.25in</Height>
-            <Width>1.57292in</Width>
+            <Width>0.93837in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
-                <Style>Solid</Style>
+                <Style>None</Style>
               </Border>
               <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
@@ -349,14 +323,15 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.57963in</Top>
+            <Top>0.43032in</Top>
+            <Left>3.25524in</Left>
             <Height>0.25in</Height>
-            <Width>1.57292in</Width>
+            <Width>0.93837in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
-                <Style>Solid</Style>
+                <Style>None</Style>
               </Border>
               <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
@@ -372,7 +347,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!BranchParameter.Value</Value>
+                    <Value>=Parameters!Branch.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Gill Sans MT</FontFamily>
@@ -384,15 +359,15 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.30532in</Top>
-            <Left>1.6007in</Left>
+            <Top>0.43032in</Top>
+            <Left>1.09115in</Left>
             <Height>0.25in</Height>
-            <Width>1.90454in</Width>
+            <Width>2.04604in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
-                <Style>Solid</Style>
+                <Style>None</Style>
               </Border>
               <BackgroundColor>Gainsboro</BackgroundColor>
               <VerticalAlign>Middle</VerticalAlign>
@@ -409,7 +384,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!FromDateParameter.Value</Value>
+                    <Value>=Parameters!FromDate.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Gill Sans MT</FontFamily>
@@ -421,15 +396,15 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.57963in</Top>
-            <Left>1.6007in</Left>
+            <Top>0.43056in</Top>
+            <Left>4.22139in</Left>
             <Height>0.25in</Height>
-            <Width>1.90454in</Width>
+            <Width>1.57726in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
-                <Style>Solid</Style>
+                <Style>None</Style>
               </Border>
               <BackgroundColor>Gainsboro</BackgroundColor>
               <VerticalAlign>Middle</VerticalAlign>
@@ -459,8 +434,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.18354in</Top>
-            <Left>9.2434in</Left>
+            <Top>1.30854in</Top>
+            <Left>9.3684in</Left>
             <Height>0.25in</Height>
             <Width>0.71013in</Width>
             <ZIndex>9</ZIndex>
@@ -494,10 +469,10 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.18354in</Top>
-            <Left>9.96803in</Left>
+            <Top>1.30854in</Top>
+            <Left>10.09303in</Left>
             <Height>0.25in</Height>
-            <Width>1.19792in</Width>
+            <Width>1.25889in</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -527,19 +502,19 @@
                   <Width>2.64884in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.18311in</Width>
+                  <Width>0.2in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.16667in</Width>
+                  <Width>1.1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.15592in</Width>
+                  <Width>0.2in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.06125in</Width>
+                  <Width>1.1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.625in</Width>
+                  <Width>1.65in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -718,7 +693,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(Parameters!CurrencyParameter.Value = "USD", "$","៛")</Value>
+                                  <Value>=IIF(Parameters!Currency.Label = "USD", "$","៛")</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -799,7 +774,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(Parameters!CurrencyParameter.Value = "USD", "$","៛")</Value>
+                                  <Value>=IIF(Parameters!Currency.Label = "USD", "$","៛")</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -925,7 +900,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=UCase("Total " &amp; Parameters!GlCode.Label &amp; "~" &amp; First(Fields!gl_name.Value, "GLHistDataset") &amp; " :")</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -933,7 +908,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -950,117 +925,12 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <ColSpan>4</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox27">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>9pt</FontSize>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox27</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>None</Style>
-                            </Border>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox20">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>9pt</FontSize>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Left</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox20</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>None</Style>
-                            </Border>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox28">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=UCase("Total " &amp; Parameters!GLNameParameter.Value &amp; " :")</Value>
-                                  <Style>
-                                    <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox28</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>None</Style>
-                            </Border>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox31">
@@ -1070,7 +940,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(Parameters!CurrencyParameter.Value = "USD", "$","៛")</Value>
+                                  <Value>=IIF(Parameters!Currency.Label = "USD", "$","៛")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -1150,7 +1020,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(Parameters!CurrencyParameter.Value = "USD", "$","៛")</Value>
+                                  <Value>=IIF(Parameters!Currency.Label = "USD", "$","៛")</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
@@ -1580,10 +1450,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>GLHistDataset</DataSetName>
-            <Top>1.84896in</Top>
-            <Left>0.00191in</Left>
+            <Top>1.97396in</Top>
+            <Left>0.12691in</Left>
             <Height>0.84375in</Height>
-            <Width>11.16404in</Width>
+            <Width>11.22209in</Width>
             <ZIndex>11</ZIndex>
             <Style>
               <Border>
@@ -1611,15 +1481,15 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.57963in</Top>
-            <Left>3.50524in</Left>
+            <Top>0.70463in</Top>
+            <Left>3.25524in</Left>
             <Height>0.25in</Height>
-            <Width>0.74306in</Width>
+            <Width>0.93837in</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
-                <Style>Solid</Style>
+                <Style>None</Style>
               </Border>
               <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
@@ -1635,7 +1505,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!ToDateParameter.Value</Value>
+                    <Value>=Parameters!ToDate.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Gill Sans MT</FontFamily>
@@ -1647,15 +1517,15 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.57963in</Top>
-            <Left>4.27608in</Left>
+            <Top>0.70463in</Top>
+            <Left>4.22139in</Left>
             <Height>0.25in</Height>
-            <Width>1.94792in</Width>
+            <Width>1.57726in</Width>
             <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
-                <Style>Solid</Style>
+                <Style>None</Style>
               </Border>
               <BackgroundColor>Gainsboro</BackgroundColor>
               <VerticalAlign>Middle</VerticalAlign>
@@ -1694,8 +1564,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.52952in</Top>
-            <Left>7.3837in</Left>
+            <Top>1.65452in</Top>
+            <Left>7.5087in</Left>
             <Height>0.25in</Height>
             <Width>1.43405in</Width>
             <ZIndex>14</ZIndex>
@@ -1717,6 +1587,7 @@
                   <TextRun>
                     <Value>GL:</Value>
                     <Style>
+                      <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -1727,15 +1598,15 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.30532in</Top>
-            <Left>3.50524in</Left>
+            <Top>0.70463in</Top>
+            <Left>0.125in</Left>
             <Height>0.25in</Height>
-            <Width>0.74306in</Width>
+            <Width>0.93837in</Width>
             <ZIndex>15</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
-                <Style>Solid</Style>
+                <Style>None</Style>
               </Border>
               <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
@@ -1751,7 +1622,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!GLCodeParameter.Value</Value>
+                    <Value>=Parameters!GlCode.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Gill Sans MT</FontFamily>
@@ -1763,15 +1634,15 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.30532in</Top>
-            <Left>4.27608in</Left>
+            <Top>0.70463in</Top>
+            <Left>1.09115in</Left>
             <Height>0.25in</Height>
-            <Width>1.94792in</Width>
+            <Width>2.04604in</Width>
             <ZIndex>16</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
-                <Style>Solid</Style>
+                <Style>None</Style>
               </Border>
               <BackgroundColor>Gainsboro</BackgroundColor>
               <VerticalAlign>Middle</VerticalAlign>
@@ -1785,7 +1656,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.3482in</Width>
+                  <Width>2.40917in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1843,10 +1714,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>OpenBalance</DataSetName>
-            <Top>1.52952in</Top>
-            <Left>8.81775in</Left>
+            <Top>1.65452in</Top>
+            <Left>8.94275in</Left>
             <Height>0.25in</Height>
-            <Width>2.3482in</Width>
+            <Width>2.40917in</Width>
             <ZIndex>17</ZIndex>
             <Style>
               <Border>
@@ -1855,10 +1726,10 @@
             </Style>
           </Tablix>
           <Line Name="Line2">
-            <Top>1.78521in</Top>
-            <Left>8.81775in</Left>
+            <Top>1.91021in</Top>
+            <Left>8.94275in</Left>
             <Height>0in</Height>
-            <Width>2.3482in</Width>
+            <Width>2.40917in</Width>
             <ZIndex>18</ZIndex>
             <Style>
               <Border>
@@ -1873,7 +1744,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=UCase(Parameters!GLNameParameter.Value)</Value>
+                    <Value>=UCase(First(Fields!gl_name.Value, "GLHistDataset"))</Value>
                     <Style>
                       <FontSize>13pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -1887,10 +1758,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox15</rd:DefaultName>
-            <Top>1.1684in</Top>
-            <Left>0.06474in</Left>
+            <Top>1.2934in</Top>
+            <Left>0.125in</Left>
             <Height>0.26514in</Height>
-            <Width>9.10922in</Width>
+            <Width>9.17396in</Width>
             <ZIndex>19</ZIndex>
             <Style>
               <Border>
@@ -1921,8 +1792,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.22743in</Top>
-            <Left>0.06474in</Left>
+            <Top>4.47743in</Top>
+            <Left>0.18974in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
             <ZIndex>20</ZIndex>
@@ -1954,8 +1825,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.50521in</Top>
-            <Left>0.06474in</Left>
+            <Top>4.75521in</Top>
+            <Left>0.18974in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
             <ZIndex>21</ZIndex>
@@ -1969,8 +1840,8 @@
             </Style>
           </Textbox>
           <Line Name="Line4">
-            <Top>5.21354in</Top>
-            <Left>4.15239in</Left>
+            <Top>4.46354in</Top>
+            <Left>4.27739in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>22</ZIndex>
@@ -1999,8 +1870,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.08854in</Top>
-            <Left>4.15239in</Left>
+            <Top>3.33854in</Top>
+            <Left>4.27739in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
             <ZIndex>23</ZIndex>
@@ -2032,8 +1903,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.22743in</Top>
-            <Left>4.15239in</Left>
+            <Top>4.47743in</Top>
+            <Left>4.27739in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
             <ZIndex>24</ZIndex>
@@ -2065,8 +1936,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.50521in</Top>
-            <Left>4.15239in</Left>
+            <Top>4.75521in</Top>
+            <Left>4.27739in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
             <ZIndex>25</ZIndex>
@@ -2098,8 +1969,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.22743in</Top>
-            <Left>9.12029in</Left>
+            <Top>4.47743in</Top>
+            <Left>9.24529in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
             <ZIndex>26</ZIndex>
@@ -2131,8 +2002,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.50521in</Top>
-            <Left>9.12029in</Left>
+            <Top>4.75521in</Top>
+            <Left>9.24529in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
             <ZIndex>27</ZIndex>
@@ -2146,10 +2017,10 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>8.27in</Height>
+        <Height>5.17104in</Height>
         <Style />
       </Body>
-      <Width>11.16595in</Width>
+      <Width>11.54095in</Width>
       <Page>
         <PageHeight>8.27in</PageHeight>
         <PageWidth>11.69in</PageWidth>
@@ -2164,28 +2035,40 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="BranchParameter">
+    <ReportParameter Name="CompanyName">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="FromDateParameter">
+    <ReportParameter Name="Branch">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="ToDateParameter">
+    <ReportParameter Name="GlCode">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="GLCodeParameter">
+    <ReportParameter Name="Currency">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="GLNameParameter">
+    <ReportParameter Name="FromDate">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="CurrencyParameter">
+    <ReportParameter Name="ToDate">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
@@ -2197,32 +2080,32 @@
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>BranchParameter</ParameterName>
+          <ParameterName>CompanyName</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>FromDateParameter</ParameterName>
+          <ParameterName>Branch</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>ToDateParameter</ParameterName>
+          <ParameterName>GlCode</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>GLCodeParameter</ParameterName>
+          <ParameterName>Currency</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>2</RowIndex>
-          <ParameterName>GLNameParameter</ParameterName>
+          <ParameterName>FromDate</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>2</RowIndex>
-          <ParameterName>CurrencyParameter</ParameterName>
+          <ParameterName>ToDate</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

@@ -21,7 +21,6 @@ namespace Report.Accounting
             if (!IsPostBack)
             {
                 DataHelper.checkLoginSession();
-                DataHelper.checkLoginSession();
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
                 var d = DataHelper.getSystemDate().ToString(format);
                 dtpFromDate.Text = d;

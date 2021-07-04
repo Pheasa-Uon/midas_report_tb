@@ -20,6 +20,7 @@ namespace Report.Operation
                 toDate = dtpToDate.Text;
                 var sysDate = DataHelper.getSystemDate();
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
+                populateOfficer();
                 dtpFromDate.Text = sysDate.ToString(format);
                 dtpToDate.Text = sysDate.ToString(format);
             }
@@ -39,7 +40,6 @@ namespace Report.Operation
 
         protected void btnView_Click(object sender, EventArgs e)
         {   
-            //Split Date Time variable
             var fromDateSql = DateTime.ParseExact(dtpFromDate.Text, format, null);
             var fromDay = fromDateSql.ToString("yyyy-MM-dd");
 
@@ -75,16 +75,21 @@ namespace Report.Operation
 
         protected void ddBranchName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ddBranchName.SelectedValue != "")
+            populateOfficer();
+        }
+        private void populateOfficer()
+        {
+            if (ddBranchName.SelectedItem.Value != "")
             {
                 ddOfficer.Enabled = true;
-                DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedValue));
+                DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedItem.Value));
             }
             else
             {
                 ddOfficer.Enabled = false;
-                ddOfficer.SelectedItem.Text = "";
+                ddOfficer.Items.Clear();
             }
         }
+
     }
 }

@@ -11,12 +11,10 @@ namespace Report.Accounting
     public partial class DailyTillCashOperation : System.Web.UI.Page
     {
         private DBConnect db = new DBConnect();
-        DateTime currentDate = DateTime.Today;
         public string format = "dd/MM/yyyy";
         public string fromDate, toDate;
         public string dateFromError = "", dateToError = "";
-
-    
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -35,8 +33,8 @@ namespace Report.Accounting
             reportParameters.Add(new ReportParameter("FromDate", DateTime.ParseExact(dtpFromDate.Text, format, null).ToString("dd-MMM-yyyy")));
             reportParameters.Add(new ReportParameter("ToDate", DateTime.ParseExact(dtpToDate.Text, format, null).ToString("dd-MMM-yyyy")));
 
-            var _cashFlowStatement = new ReportDataSource("DailyCashVaultDS", cashFlowStatementDT);
-            DataHelper.generateAccountingReport(ReportViewer1, "DailyCashVault", reportParameters, _cashFlowStatement);
+            var ds = new ReportDataSource("DailyTillCashPawnOperationDS", cashFlowStatementDT);
+            DataHelper.generateAccountingReport(ReportViewer1, "DailyTillCashPawnOperation", reportParameters, ds);
         }
 
         protected void btnView_Click(object sender, EventArgs e)
@@ -60,7 +58,7 @@ namespace Report.Accounting
                 return;
             }
 
-            var stp = "PS_TILL_VAULT";
+            var stp = "PS_TILL_CASH";
             List<Procedure> procedureList = new List<Procedure>();
             procedureList.Add(item: new Procedure() { field_name = "@branchId", sql_db_type = MySqlDbType.VarChar, value_name = ddBranchName.SelectedItem.Value });
             procedureList.Add(item: new Procedure() { field_name = "@pFromDate", sql_db_type = MySqlDbType.Date, value_name = fromDate });

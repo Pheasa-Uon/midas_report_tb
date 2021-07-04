@@ -12,7 +12,17 @@
 }
 
     .login-form h2 {
-        margin: 0 0 50px 0;
+        margin: 0;
+        font-size: 22px;
+        font-weight: bold;
+        color: #ffb536;
+        text-align: justify;
+        padding-top: 4px;
+    }
+    .login-form h2:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
     }
 
 .form-control, .btn {

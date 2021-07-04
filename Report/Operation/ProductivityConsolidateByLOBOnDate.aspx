@@ -15,7 +15,7 @@
                      <div>
                         <label>&nbsp;</label>
                     </div>
-                    <asp:Button ID="btnView" runat="server" Text="View" OnClick="btnView_Click" CssClass="btn btn-sm btn-primary" />
+                    <asp:Button ID="btnView" runat="server" Text="View Report" OnClick="btnView_Click" CssClass="btn btn-sm btn-primary" />
                 </div>
             </div>
         </div>

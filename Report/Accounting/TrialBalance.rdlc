@@ -2,20 +2,16 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="TrialBalanceDSource">
-      <DataSourceReference>PS</DataSourceReference>
-      <rd:DataSourceID>41e852f4-9176-4922-9e8b-7cef75eedad8</rd:DataSourceID>
-    </DataSource>
     <DataSource Name="TrailBalance">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>40cac4fe-4fc9-40ee-9851-a28e2c36d03e</rd:DataSourceID>
+      <rd:DataSourceID>f93b90ff-8b62-493b-94c6-a575940cf238</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="TrialBalanceDataset">
+    <DataSet Name="TrialBalanceDS">
       <Query>
         <DataSourceName>TrailBalance</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -41,26 +37,26 @@
           <DataField>side</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="open_balance">
-          <DataField>open_balance</DataField>
+        <Field Name="O_DR">
+          <DataField>O_DR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="debit_amount">
-          <DataField>debit_amount</DataField>
+        <Field Name="O_CR">
+          <DataField>O_CR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="credit_amount">
-          <DataField>credit_amount</DataField>
+        <Field Name="M_DR">
+          <DataField>M_DR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="closing_balance">
-          <DataField>closing_balance</DataField>
+        <Field Name="M_CR">
+          <DataField>M_CR</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>TrailBalance</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Heng\Documents\C#_Projects\Report\Report\Dataset\TrailBalance.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\TrailBalance.xsd</rd:SchemaPath>
         <rd:TableName>TrialBalanceDataset</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -73,7 +69,7 @@
       <Body>
         <ReportItems>
           <Line Name="Line3">
-            <Top>4.33854in</Top>
+            <Top>3.96354in</Top>
             <Left>0.66462in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
@@ -84,8 +80,8 @@
             </Style>
           </Line>
           <Line Name="Line2">
-            <Top>4.33854in</Top>
-            <Left>11.84059in</Left>
+            <Top>3.96354in</Top>
+            <Left>10.21559in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>1</ZIndex>
@@ -114,7 +110,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.33854in</Top>
+            <Top>3.96354in</Top>
             <Left>0.66462in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
@@ -147,8 +143,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.33854in</Top>
-            <Left>11.84059in</Left>
+            <Top>3.96354in</Top>
+            <Left>10.21559in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>3</ZIndex>
@@ -168,10 +164,8 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>IG TECH GROUP CO., LTD</Value>
+                    <Value>CASH U UP CO., LTD</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -180,8 +174,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.125in</Top>
+            <Left>0.125in</Left>
             <Height>0.25in</Height>
-            <Width>1.84375in</Width>
+            <Width>4.47917in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -211,9 +207,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.30532in</Top>
+            <Top>0.43032in</Top>
+            <Left>0.125in</Left>
             <Height>0.25in</Height>
-            <Width>1.57292in</Width>
+            <Width>0.96355in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -244,9 +241,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.56921in</Top>
+            <Top>0.69421in</Top>
+            <Left>0.125in</Left>
             <Height>0.25in</Height>
-            <Width>1.57292in</Width>
+            <Width>0.96355in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -266,7 +264,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!BranchParameter.Value</Value>
+                    <Value>=Parameters!Branch.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Gill Sans MT</FontFamily>
@@ -278,10 +276,10 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.30532in</Top>
-            <Left>1.58742in</Left>
+            <Top>0.43056in</Top>
+            <Left>1.10243in</Left>
             <Height>0.25in</Height>
-            <Width>1.82292in</Width>
+            <Width>2.4855in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -302,7 +300,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!FromDateParameter.Value</Value>
+                    <Value>=Parameters!FromDate.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Gill Sans MT</FontFamily>
@@ -314,10 +312,10 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.56921in</Top>
-            <Left>1.58742in</Left>
+            <Top>0.69445in</Top>
+            <Left>1.10243in</Left>
             <Height>0.25in</Height>
-            <Width>1.82292in</Width>
+            <Width>0.92678in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -353,9 +351,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>1.15452in</Top>
-            <Left>0.00191in</Left>
+            <Left>0.12691in</Left>
             <Height>0.25in</Height>
-            <Width>11.58396in</Width>
+            <Width>10.26763in</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -387,8 +385,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.14781in</Top>
-            <Left>11.59438in</Left>
+            <Top>1.15452in</Top>
+            <Left>10.40843in</Left>
             <Height>0.25in</Height>
             <Width>1.09599in</Width>
             <ZIndex>10</ZIndex>
@@ -422,8 +420,8 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.14781in</Top>
-            <Left>12.70487in</Left>
+            <Top>1.15452in</Top>
+            <Left>11.51892in</Left>
             <Height>0.25in</Height>
             <Width>1.19792in</Width>
             <ZIndex>11</ZIndex>
@@ -446,31 +444,34 @@
                   <Width>0.50217in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.44304in</Width>
+                  <Width>1.06884in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.75487in</Width>
+                  <Width>2.73342in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.25535in</Width>
+                  <Width>0.5855in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.24422in</Width>
+                  <Width>1.1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.33602in</Width>
+                  <Width>1.1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.14497in</Width>
+                  <Width>1.1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.41971in</Width>
+                  <Width>1.1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.63386in</Width>
+                  <Width>1.1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.16667in</Width>
+                  <Width>1.1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.1in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -486,7 +487,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=RowNumber("TrialBalanceDataset")</Value>
+                                  <Value>=RowNumber("TrialBalanceDS")</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                   </Style>
@@ -585,26 +586,25 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="open_balance">
+                        <Textbox Name="side">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(TRIM(Fields!side.Value) = "Debit", Fields!open_balance.Value,0)</Value>
+                                  <Value>=Fields!side.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
-                                    <Format>#,0;(#,0);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>open_balance</rd:DefaultName>
+                          <rd:DefaultName>side</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -621,14 +621,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="redeem_amt">
+                        <Textbox Name="O_DR">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(TRIM(Fields!side.Value) = "Credit", Fields!open_balance.Value,0)</Value>
+                                  <Value>=Fields!O_DR.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -640,7 +640,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>redeem_amt</rd:DefaultName>
+                          <rd:DefaultName>O_DR</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -657,50 +657,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="debit_amount">
+                        <Textbox Name="O_CR">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!debit_amount.Value</Value>
-                                  <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <Format>#,0;(#,0);'-'</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>debit_amount</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="credit_amount">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!credit_amount.Value</Value>
+                                  <Value>=Fields!O_CR.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -712,7 +676,79 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>credit_amount</rd:DefaultName>
+                          <rd:DefaultName>O_CR</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="M_DR">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!M_DR.Value</Value>
+                                  <Style>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>M_DR</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="M_CR">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!M_CR.Value</Value>
+                                  <Style>
+                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>M_CR</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -736,10 +772,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(TRIM(Fields!side.Value) = "Debit", Fields!closing_balance.Value,0)</Value>
+                                  <Value>=Fields!O_DR.Value + Fields!M_DR.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
-                                    <Format>#,0;(#,0);'-'</Format>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -772,7 +808,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(TRIM(Fields!side.Value) = "Credit", Fields!closing_balance.Value,0)</Value>
+                                  <Value>=Fields!O_CR.Value + Fields!M_CR.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -808,7 +844,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=0</Value>
+                                  <Value>=(Fields!O_DR.Value + Fields!M_DR.Value) - (Fields!O_CR.Value + Fields!M_CR.Value)</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -849,7 +885,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>TOTAL :</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>11pt</FontSize>
@@ -875,22 +911,28 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <ColSpan>4</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox375">
+                        <Textbox Name="O_DR1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>TOTAL :</Value>
+                                  <Value>=Sum(Fields!O_DR.Value)</Value>
                                   <Style>
+                                    <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -899,7 +941,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox375</rd:DefaultName>
+                          <rd:DefaultName>O_DR1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -917,20 +959,20 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="id">
+                        <Textbox Name="O_CR1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Sum(Fields!O_CR.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;(#,0);'-'</Format>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -939,7 +981,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>id</rd:DefaultName>
+                          <rd:DefaultName>O_CR1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -957,20 +999,20 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="redeem_num_client1">
+                        <Textbox Name="M_DR1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(IIF(TRIM(Fields!side.Value) = "Debit", Fields!open_balance.Value,0))</Value>
+                                  <Value>=Sum(Fields!M_DR.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;(#,0);'-'</Format>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -979,7 +1021,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>redeem_num_client1</rd:DefaultName>
+                          <rd:DefaultName>M_DR1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -997,20 +1039,20 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="redeem_amt1">
+                        <Textbox Name="M_CR1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(IIF(TRIM(Fields!side.Value) = "Credit", Fields!open_balance.Value,0))</Value>
+                                  <Value>=Sum(Fields!M_CR.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0.00;(#,0.00).'-'</Format>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1019,87 +1061,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>redeem_amt1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="debit_amount1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!debit_amount.Value)</Value>
-                                  <Style>
-                                    <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;(#,0);'-'</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>debit_amount1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Color>LightGrey</Color>
-                              <Style>Solid</Style>
-                            </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="credit_amount1">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!credit_amount.Value)</Value>
-                                  <Style>
-                                    <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Format>#,0.00;(#,0.00).'-'</Format>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Right</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>credit_amount1</rd:DefaultName>
+                          <rd:DefaultName>M_CR1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1124,13 +1086,13 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(IIF(TRIM(Fields!side.Value) = "Debit", Fields!closing_balance.Value,0))</Value>
+                                  <Value>=SUM(Fields!O_DR.Value + Fields!M_DR.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;(#,0);'-'</Format>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1164,13 +1126,13 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(IIF(TRIM(Fields!side.Value) = "Credit", Fields!closing_balance.Value,0))</Value>
+                                  <Value>=sum(Fields!O_CR.Value + Fields!M_CR.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0.00;(#,0.00).'-'</Format>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1204,12 +1166,13 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=sum(Fields!O_DR.Value + Fields!M_DR.Value) - sum(Fields!O_CR.Value + Fields!M_CR.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1368,6 +1331,46 @@
                   <TablixMembers>
                     <TablixMember />
                   </TablixMembers>
+                </TablixMember>
+                <TablixMember>
+                  <TablixHeader>
+                    <Size>0.59375in</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox7">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Side</Value>
+                                <Style>
+                                  <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox7</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>Wheat</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
@@ -1762,7 +1765,7 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>USD Equivalent</Value>
+                                    <Value>Balance</Value>
                                     <Style>
                                       <FontFamily>Gill Sans MT</FontFamily>
                                       <FontSize>9pt</FontSize>
@@ -1809,11 +1812,11 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <FixedColumnHeaders>true</FixedColumnHeaders>
-            <DataSetName>TrialBalanceDataset</DataSetName>
+            <DataSetName>TrialBalanceDS</DataSetName>
             <Top>1.47396in</Top>
-            <Left>0.00191in</Left>
+            <Left>0.12691in</Left>
             <Height>1.09375in</Height>
-            <Width>13.90088in</Width>
+            <Width>12.58993in</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
@@ -1839,8 +1842,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.56921in</Top>
-            <Left>3.41034in</Left>
+            <Top>0.69421in</Top>
+            <Left>2.02921in</Left>
             <Height>0.25in</Height>
             <Width>0.63195in</Width>
             <ZIndex>13</ZIndex>
@@ -1862,7 +1865,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!ToDateParameter.Value</Value>
+                    <Value>=Parameters!ToDate.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Gill Sans MT</FontFamily>
@@ -1874,10 +1877,10 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.56921in</Top>
-            <Left>4.07007in</Left>
+            <Top>0.69445in</Top>
+            <Left>2.66116in</Left>
             <Height>0.25in</Height>
-            <Width>1.19792in</Width>
+            <Width>0.92677in</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -1892,10 +1895,10 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>5.21354in</Height>
+        <Height>4.48438in</Height>
         <Style />
       </Body>
-      <Width>15.75696in</Width>
+      <Width>12.87309in</Width>
       <Page>
         <InteractiveHeight>0in</InteractiveHeight>
         <InteractiveWidth>8.5in</InteractiveWidth>
@@ -1908,38 +1911,55 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="BranchParameter">
+    <ReportParameter Name="CompanyName">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="FromDateParameter">
+    <ReportParameter Name="Branch">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="ToDateParameter">
+    <ReportParameter Name="FromDate">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ToDate">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>2</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
+      <NumberOfRows>3</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>BranchParameter</ParameterName>
+          <ParameterName>CompanyName</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>FromDateParameter</ParameterName>
+          <ParameterName>Branch</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>ToDateParameter</ParameterName>
+          <ParameterName>FromDate</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>ToDate</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
