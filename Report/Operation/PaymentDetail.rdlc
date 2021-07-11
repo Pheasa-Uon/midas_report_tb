@@ -1198,6 +1198,7 @@
                                   <Value>=Fields!interest_pay.Value + Fields!early_redeem_pay.Value + Fields!penalty_pay.Value + Fields!other_income_amount.Value + Fields!fee_collect.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1925,6 +1926,7 @@
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2679,6 +2681,7 @@
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4430,7 +4433,7 @@
         <Height>7.48354in</Height>
         <Style />
       </Body>
-      <Width>23.60765in</Width>
+      <Width>23.68578in</Width>
       <Page>
         <PageHeight>8.27in</PageHeight>
         <PageWidth>11.69in</PageWidth>

@@ -821,7 +821,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=iif(Fields!acc_class.Value="  GROSS PROFIT" OR Fields!acc_class.Value="  NET ODINARY INCOME" OR Fields!acc_class.Value="  NET INCOME", "Khaki", "Beige")</BackgroundColor>
+                            <BackgroundColor>=iif(Fields!acc_class.Value="  GROSS PROFIT" OR Fields!acc_class.Value="  NET ORDINARY INCOME" OR Fields!acc_class.Value="  NET INCOME", "Khaki", "Beige")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -829,6 +829,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -859,7 +860,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>=iif(Fields!acc_class.Value="  GROSS PROFIT" OR Fields!acc_class.Value="  NET ODINARY INCOME" OR Fields!acc_class.Value="  NET INCOME", "Khaki", "Beige")</BackgroundColor>
+                            <BackgroundColor>=iif(Fields!acc_class.Value="  GROSS PROFIT" OR Fields!acc_class.Value="  NET ORDINARY INCOME" OR Fields!acc_class.Value="  NET INCOME", "Khaki", "Beige")</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -867,6 +868,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -1199,7 +1201,7 @@
                         </TablixMember>
                       </TablixMembers>
                       <Visibility>
-                        <Hidden>=iif(Fields!acc_class.Value="  GROSS PROFIT" OR Fields!acc_class.Value="  NET ODINARY INCOME" OR Fields!acc_class.Value="  NET INCOME", true, false)</Hidden>
+                        <Hidden>=iif(Fields!acc_class.Value="  GROSS PROFIT" OR Fields!acc_class.Value="  NET ORDINARY INCOME" OR Fields!acc_class.Value="  NET INCOME", true, false)</Hidden>
                       </Visibility>
                     </TablixMember>
                     <TablixMember>
@@ -1236,7 +1238,7 @@
                                 <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
-                              <BackgroundColor>=iif(Fields!acc_class.Value="  GROSS PROFIT" OR Fields!acc_class.Value="  NET ODINARY INCOME" OR Fields!acc_class.Value="  NET INCOME", "Khaki", "Beige")</BackgroundColor>
+                              <BackgroundColor>=iif(Fields!acc_class.Value="  GROSS PROFIT" OR Fields!acc_class.Value="  NET ORDINARY INCOME" OR Fields!acc_class.Value="  NET INCOME", "Khaki", "Beige")</BackgroundColor>
                               <VerticalAlign>Middle</VerticalAlign>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
@@ -1244,6 +1246,7 @@
                               <PaddingBottom>2pt</PaddingBottom>
                             </Style>
                           </Textbox>
+                          <rd:Selected>true</rd:Selected>
                         </CellContents>
                       </TablixHeader>
                       <KeepWithGroup>Before</KeepWithGroup>

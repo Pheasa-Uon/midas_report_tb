@@ -203,15 +203,33 @@
     <Content Include="Accounting\DailyCashVault.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Accounting\DailyTillCashPawnOperation.rdlc" />
-    <EmbeddedResource Include="Accounting\DailyTillPettyCash.rdlc" />
-    <EmbeddedResource Include="Accounting\GLTransactionHistory.rdlc" />
-    <EmbeddedResource Include="Accounting\IncomeStatementByDate.rdlc" />
-    <EmbeddedResource Include="Accounting\IncomeStatementByMonth.rdlc" />
-    <EmbeddedResource Include="Accounting\IncomeStatementYTD.rdlc" />
-    <EmbeddedResource Include="Accounting\JournalEntryByDate.rdlc" />
-    <EmbeddedResource Include="Accounting\TrialBalance.rdlc" />
-    <EmbeddedResource Include="Accounting\UnearnedRevenue.rdlc" />
+    <Content Include="Accounting\DailyTillCashPawnOperation.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\DailyTillPettyCash.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\GLTransactionHistory.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\IncomeStatementByDate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\IncomeStatementByMonth.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\IncomeStatementYTD.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\JournalEntryByDate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\TrialBalance.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Accounting\UnearnedRevenue.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Dataset\AccrualDetail.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>

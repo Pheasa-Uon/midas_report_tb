@@ -445,7 +445,11 @@ namespace Report.Utils
             ddl.DataValueField = "id";
             ddl.DataSource = branchList;
             ddl.DataBind();
-            ddl.Items.Insert(0, new ListItem("-- ALL --", "ALL"));
+            if (branchList.Count > 1)
+            {
+                ddl.Items.Insert(0, new ListItem("-- ALL --", "ALL"));
+            }
+           
         }
 
         //Populate Transaction Type List To Dropdown List Statement
