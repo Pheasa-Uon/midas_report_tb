@@ -298,6 +298,17 @@
     <Content Include="Dataset\CashConsolidate.xsc">
       <DependentUpon>CashConsolidate.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\CashCollectionOnDate.xsc">
+      <DependentUpon>CashCollectionOnDate.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\CashCollectionOnDate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CashCollectionOnDate.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\CashCollectionOnDate.xss">
+      <DependentUpon>CashCollectionOnDate.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\CashConsolidate.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -456,6 +467,7 @@
     <Content Include="Dataset\PawnListDetail.xss">
       <DependentUpon>PawnListDetail.xsd</DependentUpon>
     </Content>
+    <Content Include="Operation\CashCollectionOnDate.aspx" />
     <Content Include="Operation\PawnListDetail.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -587,9 +599,6 @@
     <Content Include="Operation\BranchProductivityOnDate.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Operation\LateReport.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Dataset\IncomeStatementByDate.xsc">
       <DependentUpon>IncomeStatementByDate.xsd</DependentUpon>
     </Content>
@@ -616,10 +625,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Operation\CustomerList.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Operation\LateReportV2.aspx" />
-    <Content Include="Operation\LateReportV2.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Operation\NewGrant.rdlc">
@@ -665,6 +670,9 @@
     </None>
     <Content Include="Dataset\UnearnedRevenue.xss">
       <DependentUpon>UnearnedRevenue.xsd</DependentUpon>
+    </Content>
+    <Content Include="Operation\LateReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -891,6 +899,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BranchProductivityConsolidate.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\CashCollectionOnDate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CashCollectionOnDate.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\CashConsolidate.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1077,19 +1090,19 @@
     <Compile Include="Operation\BranchProductivityOnDate.aspx.designer.cs">
       <DependentUpon>BranchProductivityOnDate.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Operation\CashCollectionOnDate.aspx.cs">
+      <DependentUpon>CashCollectionOnDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\CashCollectionOnDate.aspx.designer.cs">
+      <DependentUpon>CashCollectionOnDate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Operation\CustomerList.aspx.cs">
       <DependentUpon>CustomerList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Operation\CustomerList.aspx.designer.cs">
       <DependentUpon>CustomerList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operation\LateReportV2.aspx.cs">
-      <DependentUpon>LateReportV2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operation\LateReportV2.aspx.designer.cs">
-      <DependentUpon>LateReportV2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Operation\PaymentDetail.aspx.cs">
       <DependentUpon>PaymentDetail.aspx</DependentUpon>
@@ -1273,6 +1286,11 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Operation\CashCollectionOnDate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

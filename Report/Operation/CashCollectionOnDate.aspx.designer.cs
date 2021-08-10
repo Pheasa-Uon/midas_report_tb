@@ -10,7 +10,7 @@
 namespace Report.Operation {
     
     
-    public partial class LateReportV22 {
+    public partial class CashCollectionOnDate {
         
         /// <summary>
         /// ddBranchName control.
@@ -31,22 +31,13 @@ namespace Report.Operation {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// UpdatePanel1 control.
+        /// ddCurrency control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
-        
-        /// <summary>
-        /// ddOfficer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddOfficer;
+        protected global::System.Web.UI.WebControls.DropDownList ddCurrency;
         
         /// <summary>
         /// btnView control.

@@ -56,7 +56,7 @@ namespace Report.Operation
                 "     LEFT JOIN customer CT ON ST.customer_id = CT.id " +
                 "     LEFT JOIN contract C ON ST.contract_id = C.id " +
                 "     LEFT JOIN currency CUR ON C.currency_id = CUR.id " +
-                "     LEFT JOIN(SELECT* FROM collateral GROUP BY contract_id) CL ON C.id = CL.contract_id " +
+                "     LEFT JOIN(SELECT* FROM collateral WHERE b_status=1 GROUP BY contract_id) CL ON C.id = CL.contract_id " +
                 "     LEFT JOIN collateral_category CLC ON CL.collateral_category_id = CLC.id " +
                 "     LEFT JOIN collateral_type CLT ON CL.collateral_type_id = CLT.id " +
                 "     LEFT JOIN mark MKK ON CL.mark_id = MKK.id " +
