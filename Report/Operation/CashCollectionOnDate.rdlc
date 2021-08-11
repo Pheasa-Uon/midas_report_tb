@@ -560,7 +560,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1849,7 +1848,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>="Cash Collection On Date " &amp; First(Fields!pSystemDate.Value)</Value>
+                                <Value>="Cash Collection On Date " &amp; CDate(First(Fields!pSystemDate.Value)).ToString("dd/MM/yyyy")</Value>
                                 <Style>
                                   <FontFamily>Gill Sans MT</FontFamily>
                                   <FontSize>11pt</FontSize>
@@ -1876,6 +1875,7 @@
                           <PaddingBottom>2pt</PaddingBottom>
                         </Style>
                       </Textbox>
+                      <rd:Selected>true</rd:Selected>
                     </CellContents>
                   </TablixHeader>
                   <TablixMembers>
