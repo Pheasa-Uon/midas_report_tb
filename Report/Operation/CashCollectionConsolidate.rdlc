@@ -2,18 +2,18 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="CashCollectionOnDate">
+    <DataSource Name="CashCollectionConsolidate">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>8bc809e3-001b-4d7a-965a-95e2f86bb8be</rd:DataSourceID>
+      <rd:DataSourceID>d3c345fd-f41a-4174-9e30-85fdab1577af</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="CCOnDate">
+    <DataSet Name="CCConsolidateDS">
       <Query>
-        <DataSourceName>CashCollectionOnDate</DataSourceName>
+        <DataSourceName>CashCollectionConsolidate</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -25,8 +25,8 @@
           <DataField>id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="lob_name">
-          <DataField>lob_name</DataField>
+        <Field Name="appr">
+          <DataField>appr</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="pCount">
@@ -75,9 +75,9 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>CashCollectionOnDate</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\CashCollectionOnDate.xsd</rd:SchemaPath>
-        <rd:TableName>CashCollectionOnDateDS</rd:TableName>
+        <rd:DataSetName>CashCollectionConsolidate</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\CashCollectionConsolidate.xsd</rd:SchemaPath>
+        <rd:TableName>CashCollectionConsolidateDS</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -89,8 +89,8 @@
       <Body>
         <ReportItems>
           <Line Name="Line3">
-            <Top>4.22396in</Top>
-            <Left>1.16462in</Left>
+            <Top>4.07813in</Top>
+            <Left>1.16447in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <Style>
@@ -100,8 +100,8 @@
             </Style>
           </Line>
           <Line Name="Line2">
-            <Top>4.22396in</Top>
-            <Left>7.84059in</Left>
+            <Top>4.07813in</Top>
+            <Left>7.84044in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>1</ZIndex>
@@ -112,8 +112,8 @@
             </Style>
           </Line>
           <Line Name="Line1">
-            <Top>4.22396in</Top>
-            <Left>14.72017in</Left>
+            <Top>4.07813in</Top>
+            <Left>14.72002in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>2</ZIndex>
@@ -142,8 +142,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.22396in</Top>
-            <Left>1.16462in</Left>
+            <Top>4.07813in</Top>
+            <Left>1.16447in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>3</ZIndex>
@@ -175,8 +175,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.22396in</Top>
-            <Left>7.84059in</Left>
+            <Top>4.07813in</Top>
+            <Left>7.84044in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>4</ZIndex>
@@ -208,8 +208,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.22396in</Top>
-            <Left>14.72017in</Left>
+            <Top>4.07813in</Top>
+            <Left>14.72002in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>5</ZIndex>
@@ -219,39 +219,6 @@
               </Border>
               <VerticalAlign>Middle</VerticalAlign>
               <PaddingRight>2pt</PaddingRight>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox2">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>BRANCH:</Value>
-                    <Style>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.43032in</Top>
-            <Left>0.125in</Left>
-            <Height>0.25in</Height>
-            <Width>1.1875in</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
@@ -273,11 +240,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.69421in</Top>
-            <Left>0.125in</Left>
+            <Top>0.54838in</Top>
+            <Left>0.12485in</Left>
             <Height>0.25in</Height>
             <Width>1.1875in</Width>
-            <ZIndex>7</ZIndex>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -296,7 +263,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Cash Collection On Date</Value>
+                    <Value>Cash Collection Consolidate</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -310,11 +277,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.27952in</Top>
-            <Left>0.125in</Left>
+            <Top>1.13369in</Top>
+            <Left>0.12485in</Left>
             <Height>0.25in</Height>
             <Width>16.633in</Width>
-            <ZIndex>8</ZIndex>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -345,11 +312,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.27952in</Top>
-            <Left>16.77189in</Left>
+            <Top>1.13369in</Top>
+            <Left>16.77174in</Left>
             <Height>0.25in</Height>
             <Width>1.09599in</Width>
-            <ZIndex>9</ZIndex>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -380,11 +347,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.27952in</Top>
-            <Left>17.88238in</Left>
+            <Top>1.13369in</Top>
+            <Left>17.88223in</Left>
             <Height>0.25in</Height>
             <Width>1.19792in</Width>
-            <ZIndex>10</ZIndex>
+            <ZIndex>9</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -465,7 +432,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=RowNumber("CCOnDate")</Value>
+                                  <Value>=RowNumber("CCConsolidateDS")</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                   </Style>
@@ -493,14 +460,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="lob_name">
+                        <Textbox Name="appr">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!lob_name.Value</Value>
+                                  <Value>=Fields!appr.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                   </Style>
@@ -511,7 +478,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>lob_name</rd:DefaultName>
+                          <rd:DefaultName>appr</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -560,7 +527,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1808,7 +1774,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>LOB</Value>
+                                <Value>Branch</Value>
                                 <Style>
                                   <FontFamily>Gill Sans MT</FontFamily>
                                   <FontSize>11pt</FontSize>
@@ -2653,12 +2619,12 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>CCOnDate</DataSetName>
-            <Top>1.59896in</Top>
-            <Left>0.125in</Left>
+            <DataSetName>CCConsolidateDS</DataSetName>
+            <Top>1.45313in</Top>
+            <Left>0.12485in</Left>
             <Height>1.24479in</Height>
             <Width>18.95734in</Width>
-            <ZIndex>11</ZIndex>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2683,11 +2649,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.96008in</Top>
-            <Left>0.125in</Left>
+            <Top>0.81425in</Top>
+            <Left>0.12485in</Left>
             <Height>0.25in</Height>
             <Width>1.1875in</Width>
-            <ZIndex>12</ZIndex>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2720,37 +2686,7 @@
             <Left>0.12691in</Left>
             <Height>0.25in</Height>
             <Width>6.32241in</Width>
-            <ZIndex>13</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Branch">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!Branch.Value</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Branch</rd:DefaultName>
-            <Top>0.43032in</Top>
-            <Left>1.32639in</Left>
-            <Height>0.25in</Height>
-            <Width>2.90104in</Width>
-            <ZIndex>14</ZIndex>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2776,11 +2712,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>SystemDate</rd:DefaultName>
-            <Top>0.69618in</Top>
-            <Left>1.32639in</Left>
+            <Top>0.55035in</Top>
+            <Left>1.32624in</Left>
             <Height>0.25in</Height>
             <Width>2.90104in</Width>
-            <ZIndex>15</ZIndex>
+            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2806,11 +2742,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Currency</rd:DefaultName>
-            <Top>0.96008in</Top>
-            <Left>1.32639in</Left>
+            <Top>0.81425in</Top>
+            <Left>1.32624in</Left>
             <Height>0.25in</Height>
             <Width>2.90104in</Width>
-            <ZIndex>16</ZIndex>
+            <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2822,7 +2758,7 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>4.70834in</Height>
+        <Height>4.53646in</Height>
         <Style />
       </Body>
       <Width>19.23069in</Width>
@@ -2838,12 +2774,6 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="Branch">
-      <DataType>String</DataType>
-      <Nullable>true</Nullable>
-      <AllowBlank>true</AllowBlank>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
     <ReportParameter Name="SystemDate">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
@@ -2868,11 +2798,6 @@
       <NumberOfColumns>3</NumberOfColumns>
       <NumberOfRows>2</NumberOfRows>
       <CellDefinitions>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>Branch</ParameterName>
-        </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>

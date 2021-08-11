@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CashCollectionConsolidate" targetNamespace="http://tempuri.org/CashCollectionConsolidate.xsd" xmlns:mstns="http://tempuri.org/CashCollectionConsolidate.xsd" xmlns="http://tempuri.org/CashCollectionConsolidate.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CashCollectionConsolidate" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CashCollectionConsolidate" msprop:Generator_UserDSName="CashCollectionConsolidate">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CashCollectionConsolidateDS" msprop:Generator_TableClassName="CashCollectionConsolidateDSDataTable" msprop:Generator_TableVarName="tableCashCollectionConsolidateDS" msprop:Generator_TablePropName="CashCollectionConsolidateDS" msprop:Generator_RowDeletingName="CashCollectionConsolidateDSRowDeleting" msprop:Generator_RowChangingName="CashCollectionConsolidateDSRowChanging" msprop:Generator_RowEvHandlerName="CashCollectionConsolidateDSRowChangeEventHandler" msprop:Generator_RowDeletedName="CashCollectionConsolidateDSRowDeleted" msprop:Generator_UserTableName="CashCollectionConsolidateDS" msprop:Generator_RowChangedName="CashCollectionConsolidateDSRowChanged" msprop:Generator_RowEvArgName="CashCollectionConsolidateDSRowChangeEvent" msprop:Generator_RowClassName="CashCollectionConsolidateDSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pSystemDate" msprop:Generator_ColumnVarNameInTable="columnpSystemDate" msprop:Generator_ColumnPropNameInRow="pSystemDate" msprop:Generator_ColumnPropNameInTable="pSystemDateColumn" msprop:Generator_UserColumnName="pSystemDate" type="xs:string" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="appr" msprop:Generator_ColumnVarNameInTable="columnappr" msprop:Generator_ColumnPropNameInRow="appr" msprop:Generator_ColumnPropNameInTable="apprColumn" msprop:Generator_UserColumnName="appr" type="xs:string" minOccurs="0" />
+              <xs:element name="pCount" msprop:Generator_ColumnVarNameInTable="columnpCount" msprop:Generator_ColumnPropNameInRow="pCount" msprop:Generator_ColumnPropNameInTable="pCountColumn" msprop:Generator_UserColumnName="pCount" type="xs:string" minOccurs="0" />
+              <xs:element name="pPrinciple" msprop:Generator_ColumnVarNameInTable="columnpPrinciple" msprop:Generator_ColumnPropNameInRow="pPrinciple" msprop:Generator_ColumnPropNameInTable="pPrincipleColumn" msprop:Generator_UserColumnName="pPrinciple" type="xs:string" minOccurs="0" />
+              <xs:element name="pInterest" msprop:Generator_ColumnVarNameInTable="columnpInterest" msprop:Generator_ColumnPropNameInRow="pInterest" msprop:Generator_ColumnPropNameInTable="pInterestColumn" msprop:Generator_UserColumnName="pInterest" type="xs:string" minOccurs="0" />
+              <xs:element name="dpCount" msprop:Generator_ColumnVarNameInTable="columndpCount" msprop:Generator_ColumnPropNameInRow="dpCount" msprop:Generator_ColumnPropNameInTable="dpCountColumn" msprop:Generator_UserColumnName="dpCount" type="xs:string" minOccurs="0" />
+              <xs:element name="dpPrinciple" msprop:Generator_ColumnVarNameInTable="columndpPrinciple" msprop:Generator_ColumnPropNameInRow="dpPrinciple" msprop:Generator_ColumnPropNameInTable="dpPrincipleColumn" msprop:Generator_UserColumnName="dpPrinciple" type="xs:string" minOccurs="0" />
+              <xs:element name="dpInterest" msprop:Generator_ColumnVarNameInTable="columndpInterest" msprop:Generator_ColumnPropNameInRow="dpInterest" msprop:Generator_ColumnPropNameInTable="dpInterestColumn" msprop:Generator_UserColumnName="dpInterest" type="xs:string" minOccurs="0" />
+              <xs:element name="dpOtherIncome" msprop:Generator_ColumnVarNameInTable="columndpOtherIncome" msprop:Generator_ColumnPropNameInRow="dpOtherIncome" msprop:Generator_ColumnPropNameInTable="dpOtherIncomeColumn" msprop:Generator_UserColumnName="dpOtherIncome" type="xs:string" minOccurs="0" />
+              <xs:element name="lpCount" msprop:Generator_ColumnVarNameInTable="columnlpCount" msprop:Generator_ColumnPropNameInRow="lpCount" msprop:Generator_ColumnPropNameInTable="lpCountColumn" msprop:Generator_UserColumnName="lpCount" type="xs:string" minOccurs="0" />
+              <xs:element name="lpPrinciple" msprop:Generator_ColumnVarNameInTable="columnlpPrinciple" msprop:Generator_ColumnPropNameInRow="lpPrinciple" msprop:Generator_ColumnPropNameInTable="lpPrincipleColumn" msprop:Generator_UserColumnName="lpPrinciple" type="xs:string" minOccurs="0" />
+              <xs:element name="lpInterest" msprop:Generator_ColumnVarNameInTable="columnlpInterest" msprop:Generator_ColumnPropNameInRow="lpInterest" msprop:Generator_ColumnPropNameInTable="lpInterestColumn" msprop:Generator_UserColumnName="lpInterest" type="xs:string" minOccurs="0" />
+              <xs:element name="lpOtherIncome" msprop:Generator_ColumnVarNameInTable="columnlpOtherIncome" msprop:Generator_ColumnPropNameInRow="lpOtherIncome" msprop:Generator_ColumnPropNameInTable="lpOtherIncomeColumn" msprop:Generator_UserColumnName="lpOtherIncome" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
