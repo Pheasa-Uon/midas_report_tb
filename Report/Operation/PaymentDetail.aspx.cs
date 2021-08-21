@@ -62,7 +62,7 @@ namespace Report.Operation
                 " LEFT JOIN customer C ON CON.customer_id = C.id " +
                 " LEFT JOIN schedule_ticket STT ON ST.id + 1 = STT.id " +
                 " LEFT JOIN staff_info SI ON CON.pawn_officer_id = SI.id " +
-                " LEFT JOIN(SELECT system_date_id, contract_id, schedule_ticket_id, SUM(waive_amount) waive_amount FROM waive WHERE waive_status = 2 AND trxn_type = 1 GROUP BY system_date_id, contract_id, " +
+                " LEFT JOIN(SELECT system_date_id, contract_id, schedule_ticket_id, SUM(waive_amount) waive_amount FROM waive WHERE waive_status = 2 AND trxn_type >= 2 GROUP BY system_date_id, contract_id, " +
                 " schedule_ticket_id) WV ON PM.contract_id = WV.contract_id AND PM.system_date_id = WV.system_date_id AND PM.schedule_ticket_id = WV.schedule_ticket_id " +
                 " LEFT JOIN(SELECT payment_total_id, SUM(other_income_amount) AS other_income_amount FROM payment_other_income GROUP BY payment_total_id) AS PO ON PM.payment_total_id = PO.payment_total_id " +
                 " WHERE CON.branch_id = " + ddBranchName.SelectedItem.Value +

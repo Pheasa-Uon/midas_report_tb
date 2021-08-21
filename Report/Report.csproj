@@ -587,9 +587,6 @@
     <Content Include="Operation\BranchProductivityOnDate.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Operation\LateReport.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Dataset\IncomeStatementByDate.xsc">
       <DependentUpon>IncomeStatementByDate.xsd</DependentUpon>
     </Content>
@@ -616,10 +613,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Operation\CustomerList.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Operation\LateReportV2.aspx" />
-    <Content Include="Operation\LateReportV2.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Operation\NewGrant.rdlc">
@@ -665,6 +658,9 @@
     </None>
     <Content Include="Dataset\UnearnedRevenue.xss">
       <DependentUpon>UnearnedRevenue.xsd</DependentUpon>
+    </Content>
+    <Content Include="Operation\LateReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -1083,13 +1079,6 @@
     </Compile>
     <Compile Include="Operation\CustomerList.aspx.designer.cs">
       <DependentUpon>CustomerList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operation\LateReportV2.aspx.cs">
-      <DependentUpon>LateReportV2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operation\LateReportV2.aspx.designer.cs">
-      <DependentUpon>LateReportV2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Operation\PaymentDetail.aspx.cs">
       <DependentUpon>PaymentDetail.aspx</DependentUpon>

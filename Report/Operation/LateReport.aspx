@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LateReport.aspx.cs" Inherits="Report.Operation.LateReport" %>
+﻿<%@ Page Title="Late Report" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LateReport.aspx.cs" Inherits="Report.Operation.LateReport" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
