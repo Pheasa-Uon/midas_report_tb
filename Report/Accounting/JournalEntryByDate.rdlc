@@ -560,6 +560,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1971,7 +1972,7 @@
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!trnx_id.Value</Value>
+                      <Value>=Fields!sys_date.Value</Value>
                     </SortExpression>
                   </SortExpressions>
                   <TablixMembers>
