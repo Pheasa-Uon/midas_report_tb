@@ -132,7 +132,9 @@
     <Content Include="Accounting\AccrualDetail.aspx" />
     <Content Include="Accounting\AccrualInterest.aspx" />
     <Content Include="Accounting\BalanceSheet.aspx" />
+    <Content Include="Accounting\CashCollectionOnDate.aspx" />
     <Content Include="Accounting\CashConsolidate.aspx" />
+    <Content Include="Accounting\CashEndingBalance.aspx" />
     <Content Include="Accounting\CashflowStatement.aspx" />
     <Content Include="Accounting\ChartOfAccount.aspx" />
     <Content Include="Accounting\DailyCashVault.aspx" />
@@ -231,7 +233,9 @@
     <Content Include="Accounting\UnearnedRevenue.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Accounting\Fixed Asset Listing.rdlc" />
+    <Content Include="Accounting\CashCollectionOnDate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Dataset\AccrualDetail.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -329,6 +333,17 @@
     </None>
     <Content Include="Dataset\CashConsolidate.xss">
       <DependentUpon>CashConsolidate.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\CashEndingBalance.xsc">
+      <DependentUpon>CashEndingBalance.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\CashEndingBalance.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CashEndingBalance.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\CashEndingBalance.xss">
+      <DependentUpon>CashEndingBalance.xsd</DependentUpon>
     </Content>
     <None Include="Dataset\CashflowStatement.xsd">
       <SubType>Designer</SubType>
@@ -788,12 +803,26 @@
     <Compile Include="Accounting\BalanceSheet.aspx.designer.cs">
       <DependentUpon>BalanceSheet.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\CashCollectionOnDate.aspx.cs">
+      <DependentUpon>CashCollectionOnDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\CashCollectionOnDate.aspx.designer.cs">
+      <DependentUpon>CashCollectionOnDate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\CashConsolidate.aspx.cs">
       <DependentUpon>CashConsolidate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Accounting\CashConsolidate.aspx.designer.cs">
       <DependentUpon>CashConsolidate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\CashEndingBalance.aspx.cs">
+      <DependentUpon>CashEndingBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\CashEndingBalance.aspx.designer.cs">
+      <DependentUpon>CashEndingBalance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Accounting\CashflowStatement.aspx.cs">
       <DependentUpon>CashflowStatement.aspx</DependentUpon>
@@ -934,6 +963,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CashConsolidate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CashEndingBalance.cs">
+      <DependentUpon>CashEndingBalance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\CashEndingBalance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CashEndingBalance.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\CashflowStatement.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1328,6 +1365,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Operation\CashCollectionConsolidate.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accounting\CashEndingBalance.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

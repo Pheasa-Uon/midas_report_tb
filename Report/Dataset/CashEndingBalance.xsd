@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CashEndingBalance" targetNamespace="http://tempuri.org/CashEndingBalance.xsd" xmlns:mstns="http://tempuri.org/CashEndingBalance.xsd" xmlns="http://tempuri.org/CashEndingBalance.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CashEndingBalance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CashEndingBalance" msprop:Generator_UserDSName="CashEndingBalance">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CashEndingBalance" msprop:Generator_TableClassName="CashEndingBalanceDataTable" msprop:Generator_TableVarName="tableCashEndingBalance" msprop:Generator_TablePropName="_CashEndingBalance" msprop:Generator_RowDeletingName="CashEndingBalanceRowDeleting" msprop:Generator_RowChangingName="CashEndingBalanceRowChanging" msprop:Generator_RowEvHandlerName="CashEndingBalanceRowChangeEventHandler" msprop:Generator_RowDeletedName="CashEndingBalanceRowDeleted" msprop:Generator_UserTableName="CashEndingBalance" msprop:Generator_RowChangedName="CashEndingBalanceRowChanged" msprop:Generator_RowEvArgName="CashEndingBalanceRowChangeEvent" msprop:Generator_RowClassName="CashEndingBalanceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="branch_name" msprop:Generator_ColumnVarNameInTable="columnbranch_name" msprop:Generator_ColumnPropNameInRow="branch_name" msprop:Generator_ColumnPropNameInTable="branch_nameColumn" msprop:Generator_UserColumnName="branch_name" type="xs:string" minOccurs="0" />
+              <xs:element name="cash_pawning" msprop:Generator_ColumnVarNameInTable="columncash_pawning" msprop:Generator_ColumnPropNameInRow="cash_pawning" msprop:Generator_ColumnPropNameInTable="cash_pawningColumn" msprop:Generator_UserColumnName="cash_pawning" type="xs:string" minOccurs="0" />
+              <xs:element name="petty_cash" msprop:Generator_ColumnVarNameInTable="columnpetty_cash" msprop:Generator_ColumnPropNameInRow="petty_cash" msprop:Generator_ColumnPropNameInTable="petty_cashColumn" msprop:Generator_UserColumnName="petty_cash" type="xs:string" minOccurs="0" />
+              <xs:element name="cash_in_bank" msprop:Generator_ColumnVarNameInTable="columncash_in_bank" msprop:Generator_ColumnPropNameInRow="cash_in_bank" msprop:Generator_ColumnPropNameInTable="cash_in_bankColumn" msprop:Generator_UserColumnName="cash_in_bank" type="xs:string" minOccurs="0" />
+              <xs:element name="agency_cash" msprop:Generator_ColumnVarNameInTable="columnagency_cash" msprop:Generator_ColumnPropNameInRow="agency_cash" msprop:Generator_ColumnPropNameInTable="agency_cashColumn" msprop:Generator_UserColumnName="agency_cash" type="xs:string" minOccurs="0" />
+              <xs:element name="agency_bank" msprop:Generator_ColumnVarNameInTable="columnagency_bank" msprop:Generator_ColumnPropNameInRow="agency_bank" msprop:Generator_ColumnPropNameInTable="agency_bankColumn" msprop:Generator_UserColumnName="agency_bank" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
