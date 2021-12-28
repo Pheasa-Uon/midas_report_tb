@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-sm-2 form-group">
                     <label>System Date :</label>
-                    <asp:TextBox ID="dtpSystemDate" runat="server" class="form-control input-sm datepick"></asp:TextBox>
+                    <asp:TextBox ID="dtpSystemDate" runat="server" class="form-control input-sm" ReadOnly="True"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="dtpSystemDate"
                         ErrorMessage="* Please select date" ForeColor="Red" Font-Names="Tahoma" Display="Dynamic">
                     </asp:RequiredFieldValidator>

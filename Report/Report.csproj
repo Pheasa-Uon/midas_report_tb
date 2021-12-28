@@ -131,6 +131,7 @@
   <ItemGroup>
     <Content Include="Accounting\AccrualDetail.aspx" />
     <Content Include="Accounting\AccrualInterest.aspx" />
+    <Content Include="Accounting\AccrualInterestOnPawn.aspx" />
     <Content Include="Accounting\BalanceSheet.aspx" />
     <Content Include="Accounting\CashCollectionOnDate.aspx" />
     <Content Include="Accounting\CashConsolidate.aspx" />
@@ -796,6 +797,13 @@
     <Compile Include="Accounting\AccrualInterest.aspx.designer.cs">
       <DependentUpon>AccrualInterest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\AccrualInterestOnPawn.aspx.cs">
+      <DependentUpon>AccrualInterestOnPawn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounting\AccrualInterestOnPawn.aspx.designer.cs">
+      <DependentUpon>AccrualInterestOnPawn.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\BalanceSheet.aspx.cs">
       <DependentUpon>BalanceSheet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1372,6 +1380,10 @@
     <Content Include="Accounting\CashEndingBalance.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Accounting\AccrualInterestOnPawn.rdlc" />
+    <EmbeddedResource Include="Accounting\FixedAssetListing.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

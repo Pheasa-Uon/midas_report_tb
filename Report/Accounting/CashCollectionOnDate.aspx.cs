@@ -36,7 +36,7 @@ namespace Report.Accounting
                 return;
             }
 
-            var spd = "PS_CASH_ENDING";
+            var spd = "PS_CASH_COLLECT_ON_DATE";
             List<Procedure> parameters = new List<Procedure>();
             parameters.Add(item: new Procedure() { field_name = "@pSystemDate", sql_db_type = MySqlDbType.VarChar, value_name = dateSearch });
             DataTable dt = db.getProcedureDataTable(spd, parameters);
