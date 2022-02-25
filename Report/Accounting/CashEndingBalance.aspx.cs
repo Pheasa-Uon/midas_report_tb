@@ -33,21 +33,18 @@ namespace Report.Accounting
                 dateError = "* Date wrong format";
                 return;
             }
-
-            var spd = "PS_CASH_ENDING";
+            
             List<Procedure> parameters = new List<Procedure>();
             parameters.Add(item: new Procedure() { field_name = "@pSystemDate", sql_db_type = MySqlDbType.VarChar, value_name = dateSearch });
-            DataTable dt = db.getProcedureDataTable(spd, parameters);
-            GenerateReport(dt);
+            GenerateReport(db.getProcedureDataTable("PS_CASH_ENDING", parameters), db.getProcedureDataTable("PS_CASH_ENDING_SUMMARY", parameters));
         }
 
-        private void GenerateReport(DataTable dt)
+        private void GenerateReport(DataTable dt, DataTable dtSummary)
         {
             var reportParameters = new ReportParameterCollection();
             reportParameters.Add(new ReportParameter("SystemDate", DateTime.ParseExact(dtpSystemDate.Text.Trim(), format, null).ToString("dd-MMM-yyyy")));
-
-            var ds = new ReportDataSource("CashEndingBalanceDS", dt);
-            DataHelper.generateAccountingReport(ReportViewer1, "CashEndingBalance", reportParameters, ds);
+            
+            DataHelper.generateAccountingReport(ReportViewer1, "CashEndingBalance", reportParameters, new ReportDataSource("CashEndingBalanceDS", dt), new ReportDataSource("CashEndingSummaryDS", dtSummary));
         }
     }
 }

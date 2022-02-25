@@ -1382,7 +1382,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Accounting\AccrualInterestOnPawn.rdlc" />
+    <Content Include="Accounting\AccrualInterestOnPawn.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="Accounting\FixedAssetListing.rdlc" />
   </ItemGroup>
   <PropertyGroup>
