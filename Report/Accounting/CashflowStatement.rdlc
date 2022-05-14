@@ -681,7 +681,17 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!amt.Value</Value>
+                                  <Value>=Switch(
+    Fields!sub_class.Value="Net Income", Fields!amt.Value, 
+    Fields!sub_class.Value ="Depreciation of Proferty. Plan and Equipment", Fields!amt.Value,
+	Fields!sub_class.Value ="Cash Generated From Operating Activities", Fields!amt.Value,
+	Fields!sub_class.Value ="Net Cash Flow From Operating Activities", Fields!amt.Value,
+	Fields!sub_class.Value ="Net Cash Provided By Investing Activities", Fields!amt.Value,
+	Fields!sub_class.Value ="Net Cash Increase of Period", Fields!amt.Value,
+	Fields!sub_class.Value ="    Cash Beginning Of Period", Fields!amt.Value,
+	Fields!sub_class.Value ="Cash At End  Of Period", Fields!amt.Value,
+	Fields!sub_class.Value ="Net Cash Provided By Financing Activities", Fields!amt.Value
+    )</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>

@@ -12,7 +12,7 @@
   <xs:element name="NewGrant" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="NewGrant" msprop:Generator_UserDSName="NewGrant">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="NewGrantDS" msprop:Generator_TableClassName="NewGrantDSDataTable" msprop:Generator_TableVarName="tableNewGrantDS" msprop:Generator_TablePropName="NewGrantDS" msprop:Generator_RowDeletingName="NewGrantDSRowDeleting" msprop:Generator_RowChangingName="NewGrantDSRowChanging" msprop:Generator_RowEvHandlerName="NewGrantDSRowChangeEventHandler" msprop:Generator_RowDeletedName="NewGrantDSRowDeleted" msprop:Generator_UserTableName="NewGrantDS" msprop:Generator_RowChangedName="NewGrantDSRowChanged" msprop:Generator_RowEvArgName="NewGrantDSRowChangeEvent" msprop:Generator_RowClassName="NewGrantDSRow">
+        <xs:element name="NewGrantDS" msprop:Generator_TableClassName="NewGrantDSDataTable" msprop:Generator_TableVarName="tableNewGrantDS" msprop:Generator_RowChangedName="NewGrantDSRowChanged" msprop:Generator_TablePropName="NewGrantDS" msprop:Generator_RowDeletingName="NewGrantDSRowDeleting" msprop:Generator_RowChangingName="NewGrantDSRowChanging" msprop:Generator_RowEvHandlerName="NewGrantDSRowChangeEventHandler" msprop:Generator_RowDeletedName="NewGrantDSRowDeleted" msprop:Generator_RowClassName="NewGrantDSRow" msprop:Generator_UserTableName="NewGrantDS" msprop:Generator_RowEvArgName="NewGrantDSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
@@ -31,6 +31,7 @@
               <xs:element name="other_income_amt" msprop:Generator_ColumnVarNameInTable="columnother_income_amt" msprop:Generator_ColumnPropNameInRow="other_income_amt" msprop:Generator_ColumnPropNameInTable="other_income_amtColumn" msprop:Generator_UserColumnName="other_income_amt" type="xs:string" minOccurs="0" />
               <xs:element name="contract_type" msprop:Generator_ColumnVarNameInTable="columncontract_type" msprop:Generator_ColumnPropNameInRow="contract_type" msprop:Generator_ColumnPropNameInTable="contract_typeColumn" msprop:Generator_UserColumnName="contract_type" type="xs:string" minOccurs="0" />
               <xs:element name="come_through" msprop:Generator_ColumnVarNameInTable="columncome_through" msprop:Generator_ColumnPropNameInRow="come_through" msprop:Generator_ColumnPropNameInTable="come_throughColumn" msprop:Generator_UserColumnName="come_through" type="xs:string" minOccurs="0" />
+              <xs:element name="dv_ref" msprop:Generator_ColumnVarNameInTable="columndv_ref" msprop:Generator_ColumnPropNameInRow="dv_ref" msprop:Generator_ColumnPropNameInTable="dv_refColumn" msprop:Generator_UserColumnName="dv_ref" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

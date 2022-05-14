@@ -22,32 +22,16 @@
           <DataField>id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="fa_product_abbr">
-          <DataField>fa_product_abbr</DataField>
+        <Field Name="fa_product_name">
+          <DataField>fa_product_name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="fa_name">
           <DataField>fa_name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="fa_product_name">
-          <DataField>fa_product_name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="depreciation_method">
-          <DataField>depreciation_method</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="fa_number">
           <DataField>fa_number</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="fa_status">
-          <DataField>fa_status</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="assign_to">
-          <DataField>assign_to</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="buy_date">
@@ -58,35 +42,35 @@
           <DataField>cost</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="trnx_id">
-          <DataField>trnx_id</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="depreciation_accumulate">
           <DataField>depreciation_accumulate</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="depreciation_expense">
-          <DataField>depreciation_expense</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="net_book_value">
           <DataField>net_book_value</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="depreciation_method">
+          <DataField>depreciation_method</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="depreciation_expense">
+          <DataField>depreciation_expense</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="year_life">
           <DataField>year_life</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="salvage_value">
-          <DataField>salvage_value</DataField>
+        <Field Name="assign_to">
+          <DataField>assign_to</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>FixedAssetListing</rd:DataSetName>
-        <rd:SchemaPath>D:\pawn-shop-report\Report\Dataset\FixedAssetListing.xsd</rd:SchemaPath>
-        <rd:TableName>FixedAssetListingDS</rd:TableName>
+        <rd:DataSetName>FixedAssetsListing</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Soriya Chhai\MyData\PS\pawn-shop-report\Report\Dataset\FixedAssetsListing.xsd</rd:SchemaPath>
+        <rd:TableName>FixedAssetsListingDT</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />

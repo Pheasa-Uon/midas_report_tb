@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DailyTillPettyCash.aspx.cs" Inherits="Report.Accounting.DailyTillPettyCash" %>
+﻿<%@ Page Title="Daily Till Petty Cash" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DailyTillPettyCash.aspx.cs" Inherits="Report.Accounting.DailyTillPettyCash" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
