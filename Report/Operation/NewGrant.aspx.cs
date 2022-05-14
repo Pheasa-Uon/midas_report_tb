@@ -77,7 +77,7 @@ namespace Report.Operation
             var sql = "SELECT C.id,C.disbursement_date,CUS.customer_name,STINFO.ticket_no,STINFO.due_date,C.pawn_price_approved, " +
                     " CUR.currency,CUR.currency_code,SI.`name` pawn_officer,PD.lob_name,0 principle_amt,0 int_amt, " +
                     " ROUND(IFNULL(CF.fee, 0), 2) AS other_income_amt, " +
-                    " STINFO.serial_number,C.contract_type, C.come_through " +
+                    " STINFO.serial_number,C.contract_type, C.come_through, C.dv_ref " +
                     " FROM contract C " +
                     " LEFT JOIN(SELECT contract_id, SUM(fee_amount) AS fee FROM contract_fee WHERE b_status= 1 GROUP BY contract_id) CF ON C.id = CF.contract_id " +
                     " LEFT JOIN customer CUS ON C.customer_id = CUS.id " +
@@ -105,7 +105,7 @@ namespace Report.Operation
                   " SELECT C.id,P.payment_date,CUS.customer_name,ST.ticket_no,ST.due_date,0, " +
                   " CUR.currency,CUR.currency_code,SI.`name` pawn_officer,PD.lob_name,P.principle_pay,P.interest_pay, " +
                   " ROUND(IFNULL(OI.total_other_income, 0), 2) AS other_income_amt, " +
-                  " ST.serial_number,C.contract_type, C.`come_through` " +
+                  " ST.serial_number,C.contract_type, C.`come_through`, C.dv_ref " +
                   " FROM payment P " +
                   " INNER JOIN payment_total PTT ON P.payment_total_id = PTT.id " +
                   " INNER JOIN contract C ON PTT.`contract_id`= C.id " +
