@@ -78,7 +78,7 @@ namespace Report.Accounting
                 {
                    sql += " AND jou.transaction_type_id = " + ddTransactionType.SelectedItem.Value;
                 }
-                sql += " ORDER BY act.sys_date;";
+                sql += " ORDER BY jou.entry_no;";
 
             DataTable journalEntryDT = db.getDataTable(sql);
             GenerateReport(journalEntryDT);
