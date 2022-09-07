@@ -148,7 +148,6 @@
                               <TextRun>
                                 <Value>No</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -186,7 +185,6 @@
                               <TextRun>
                                 <Value>Contract ID</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -224,7 +222,6 @@
                               <TextRun>
                                 <Value>Customer Name</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -262,7 +259,6 @@
                               <TextRun>
                                 <Value>LOB Type</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -300,7 +296,6 @@
                               <TextRun>
                                 <Value>Date Disbursed</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -338,7 +333,6 @@
                               <TextRun>
                                 <Value>Date Expired</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -376,7 +370,6 @@
                               <TextRun>
                                 <Value>Outstanding</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -414,7 +407,6 @@
                               <TextRun>
                                 <Value>Interest Rate</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -454,7 +446,6 @@
                               <TextRun>
                                 <Value>Contract Status</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -570,9 +561,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ticket_no.Value</Value>
-                                  <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -605,9 +594,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!serial_number.Value</Value>
-                                  <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -638,9 +625,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ticket_status.Value</Value>
-                                  <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -673,9 +658,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!sAccDate.Value</Value>
-                                  <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -708,9 +691,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!eAccDate.Value</Value>
-                                  <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -743,9 +724,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!num.Value</Value>
-                                  <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -779,7 +758,6 @@
                                 <TextRun>
                                   <Value>=Fields!DRCur.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -815,7 +793,6 @@
                                 <TextRun>
                                   <Value>=Fields!other_pawn_earn.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -851,7 +828,6 @@
                                 <TextRun>
                                   <Value>=Fields!early_redeem.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -887,7 +863,6 @@
                                 <TextRun>
                                   <Value>=Fields!penalty.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -923,7 +898,6 @@
                                 <TextRun>
                                   <Value>=Fields!fee.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -959,7 +933,6 @@
                                 <TextRun>
                                   <Value>=Fields!DRCur.Value + Fields!other_pawn_earn.Value + Fields!early_redeem.Value + Fields!penalty.Value + Fields!fee.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -995,7 +968,6 @@
                                 <TextRun>
                                   <Value>=Fields!interest_pay.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1031,7 +1003,6 @@
                                 <TextRun>
                                   <Value>=Fields!other_pawn_earn.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1067,7 +1038,6 @@
                                 <TextRun>
                                   <Value>=Fields!early_redeem.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1103,7 +1073,6 @@
                                 <TextRun>
                                   <Value>=Fields!penalty.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1139,7 +1108,6 @@
                                 <TextRun>
                                   <Value>=Fields!fee.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1175,7 +1143,6 @@
                                 <TextRun>
                                   <Value>=Fields!interest_pay.Value + Fields!other_pawn_earn.Value + Fields!early_redeem.Value + Fields!penalty.Value + Fields!fee.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1211,7 +1178,6 @@
                                 <TextRun>
                                   <Value>=Fields!DRCur.Value - Fields!interest_pay.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1252,7 +1218,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1293,7 +1258,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1333,7 +1297,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1373,7 +1336,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1413,7 +1375,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1453,7 +1414,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1494,7 +1454,6 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!DRCur.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1535,7 +1494,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!other_pawn_earn.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1576,7 +1534,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!early_redeem.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1617,7 +1574,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!penalty.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1658,7 +1614,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!fee.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1699,7 +1654,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!DRCur.Value + Fields!other_pawn_earn.Value + Fields!early_redeem.Value + Fields!penalty.Value + Fields!fee.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1740,7 +1694,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!interest_pay.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1781,7 +1734,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!other_pawn_earn.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1822,7 +1774,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!early_redeem.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1863,7 +1814,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!penalty.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1904,7 +1854,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!fee.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1945,7 +1894,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!interest_pay.Value + Fields!other_pawn_earn.Value + Fields!early_redeem.Value + Fields!penalty.Value + Fields!fee.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1986,7 +1934,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!DRCur.Value - Fields!interest_pay.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -2032,7 +1979,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2072,7 +2018,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2112,7 +2057,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2152,7 +2096,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2192,7 +2135,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2232,7 +2174,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2272,7 +2213,6 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!DRCur.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2313,7 +2253,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!other_pawn_earn.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2354,7 +2293,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!early_redeem.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2395,7 +2333,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!penalty.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2436,7 +2373,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!fee.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2477,7 +2413,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!DRCur.Value + Fields!other_pawn_earn.Value + Fields!early_redeem.Value + Fields!penalty.Value + Fields!fee.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2518,7 +2453,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!interest_pay.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2559,7 +2493,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!other_pawn_earn.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2600,7 +2533,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!early_redeem.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2641,7 +2573,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!penalty.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2682,7 +2613,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!fee.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2723,7 +2653,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!interest_pay.Value + Fields!other_pawn_earn.Value + Fields!early_redeem.Value + Fields!penalty.Value + Fields!fee.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2764,7 +2693,6 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!DRCur.Value - Fields!interest_pay.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2813,7 +2741,6 @@
                               <TextRun>
                                 <Value>Ticket #</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2853,7 +2780,6 @@
                               <TextRun>
                                 <Value>Serial #</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2893,7 +2819,6 @@
                               <TextRun>
                                 <Value>Ticket Status</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2933,7 +2858,6 @@
                               <TextRun>
                                 <Value>From Accrual Date</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2973,7 +2897,6 @@
                               <TextRun>
                                 <Value>Last Accrual Date</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -3013,7 +2936,6 @@
                               <TextRun>
                                 <Value>Accrual Current Month</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -3053,7 +2975,6 @@
                                   <TextRun>
                                     <Value>Day #</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -3093,7 +3014,6 @@
                                   <TextRun>
                                     <Value>Interest Accrual</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -3135,7 +3055,6 @@
                               <TextRun>
                                 <Value>Other Income Cash Basic</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -3175,7 +3094,6 @@
                                   <TextRun>
                                     <Value>Other Pawn Interest Earned</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -3215,7 +3133,6 @@
                                   <TextRun>
                                     <Value>Early Redeem Income</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -3255,7 +3172,6 @@
                                   <TextRun>
                                     <Value>Penalty</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -3295,7 +3211,6 @@
                                   <TextRun>
                                     <Value>Admin Fee</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -3337,7 +3252,6 @@
                               <TextRun>
                                 <Value>Total</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -3377,7 +3291,6 @@
                               <TextRun>
                                 <Value>Intereste Collect</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -3417,7 +3330,6 @@
                                   <TextRun>
                                     <Value>Interest</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -3457,7 +3369,6 @@
                                   <TextRun>
                                     <Value>Other Pawn Interest Earned</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -3497,7 +3408,6 @@
                                   <TextRun>
                                     <Value>Early Redeem Income</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -3537,7 +3447,6 @@
                                   <TextRun>
                                     <Value>Penalty</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -3577,7 +3486,6 @@
                                   <TextRun>
                                     <Value>Admin Fee</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -3617,7 +3525,6 @@
                                   <TextRun>
                                     <Value>Total Pay</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -3659,7 +3566,6 @@
                               <TextRun>
                                 <Value>Difference</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -3719,9 +3625,7 @@
                                 <TextRuns>
                                   <TextRun>
                                     <Value>=RunningValue(Fields!contract_no.Value, countdistinct,Nothing)</Value>
-                                    <Style>
-                                      <FontFamily>Calibri</FontFamily>
-                                    </Style>
+                                    <Style />
                                   </TextRun>
                                 </TextRuns>
                                 <Style>
@@ -3757,9 +3661,7 @@
                                     <TextRuns>
                                       <TextRun>
                                         <Value>=Fields!contract_no.Value</Value>
-                                        <Style>
-                                          <FontFamily>Calibri</FontFamily>
-                                        </Style>
+                                        <Style />
                                       </TextRun>
                                     </TextRuns>
                                     <Style>
@@ -3795,9 +3697,7 @@
                                         <TextRuns>
                                           <TextRun>
                                             <Value>=Fields!customer_name.Value</Value>
-                                            <Style>
-                                              <FontFamily>Calibri</FontFamily>
-                                            </Style>
+                                            <Style />
                                           </TextRun>
                                         </TextRuns>
                                         <Style>
@@ -3833,9 +3733,7 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>=Fields!lob_name.Value</Value>
-                                                <Style>
-                                                  <FontFamily>Calibri</FontFamily>
-                                                </Style>
+                                                <Style />
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
@@ -3871,9 +3769,7 @@
                                                 <TextRuns>
                                                   <TextRun>
                                                     <Value>=Fields!disbursement_date.Value</Value>
-                                                    <Style>
-                                                      <FontFamily>Calibri</FontFamily>
-                                                    </Style>
+                                                    <Style />
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
@@ -3909,9 +3805,7 @@
                                                     <TextRuns>
                                                       <TextRun>
                                                         <Value>=Fields!expired_date.Value</Value>
-                                                        <Style>
-                                                          <FontFamily>Calibri</FontFamily>
-                                                        </Style>
+                                                        <Style />
                                                       </TextRun>
                                                     </TextRuns>
                                                     <Style>
@@ -3948,7 +3842,6 @@
                                                           <TextRun>
                                                             <Value>=Fields!principle_due.Value</Value>
                                                             <Style>
-                                                              <FontFamily>Calibri</FontFamily>
                                                               <Format>#,0.00;(#,0.00);'-'</Format>
                                                             </Style>
                                                           </TextRun>
@@ -3989,9 +3882,7 @@
                                                             <TextRuns>
                                                               <TextRun>
                                                                 <Value>=Fields!interest_rate.Value</Value>
-                                                                <Style>
-                                                                  <FontFamily>Calibri</FontFamily>
-                                                                </Style>
+                                                                <Style />
                                                               </TextRun>
                                                             </TextRuns>
                                                             <Style>
@@ -4030,9 +3921,7 @@
                                                                 <TextRuns>
                                                                   <TextRun>
                                                                     <Value>%</Value>
-                                                                    <Style>
-                                                                      <FontFamily>Calibri</FontFamily>
-                                                                    </Style>
+                                                                    <Style />
                                                                   </TextRun>
                                                                 </TextRuns>
                                                                 <Style>
@@ -4061,7 +3950,7 @@
                                                       <TablixMembers>
                                                         <TablixMember>
                                                           <TablixHeader>
-                                                            <Size>0.6in</Size>
+                                                            <Size>0.66548in</Size>
                                                             <CellContents>
                                                               <Textbox Name="Textbox506">
                                                                 <CanGrow>true</CanGrow>
@@ -4071,9 +3960,7 @@
                                                                     <TextRuns>
                                                                       <TextRun>
                                                                         <Value>=Fields!contract_status.Value</Value>
-                                                                        <Style>
-                                                                          <FontFamily>Calibri</FontFamily>
-                                                                        </Style>
+                                                                        <Style />
                                                                       </TextRun>
                                                                     </TextRuns>
                                                                     <Style>
@@ -4133,7 +4020,6 @@
                                   <TextRun>
                                     <Value>="TOTAL " &amp; Fields!lob_name.Value &amp; " (" &amp; CountDistinct(Fields!id.Value) &amp; ") :"</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -4176,7 +4062,6 @@
                                       <TextRun>
                                         <Value>=sum(Fields!principle_due.Value)</Value>
                                         <Style>
-                                          <FontFamily>Calibri</FontFamily>
                                           <FontWeight>Bold</FontWeight>
                                           <Format>#,0.00;(#,0.00);'-'</Format>
                                         </Style>
@@ -4220,7 +4105,6 @@
                                           <TextRun>
                                             <Value />
                                             <Style>
-                                              <FontFamily>Calibri</FontFamily>
                                               <FontWeight>Bold</FontWeight>
                                             </Style>
                                           </TextRun>
@@ -4252,7 +4136,7 @@
                               <TablixMembers>
                                 <TablixMember>
                                   <TablixHeader>
-                                    <Size>0.6in</Size>
+                                    <Size>0.66548in</Size>
                                     <CellContents>
                                       <Textbox Name="Textbox507">
                                         <CanGrow>true</CanGrow>
@@ -4263,7 +4147,6 @@
                                               <TextRun>
                                                 <Value />
                                                 <Style>
-                                                  <FontFamily>Calibri</FontFamily>
                                                   <FontWeight>Bold</FontWeight>
                                                 </Style>
                                               </TextRun>
@@ -4318,7 +4201,6 @@
                               <TextRun>
                                 <Value>= "GRAND TOTAL           (" &amp; CountDistinct(Fields!id.Value) &amp; ") :"</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontSize>11pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
@@ -4361,7 +4243,6 @@
                                   <TextRun>
                                     <Value>=sum(Fields!principle_due.Value)</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontSize>11pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Format>#,0.00;(#,0.00);'-'</Format>
@@ -4405,7 +4286,6 @@
                                       <TextRun>
                                         <Value />
                                         <Style>
-                                          <FontFamily>Calibri</FontFamily>
                                           <FontSize>11pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
                                         </Style>
@@ -4437,7 +4317,7 @@
                           <TablixMembers>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>0.6in</Size>
+                                <Size>0.66548in</Size>
                                 <CellContents>
                                   <Textbox Name="Textbox25">
                                     <CanGrow>true</CanGrow>
@@ -4448,7 +4328,6 @@
                                           <TextRun>
                                             <Value />
                                             <Style>
-                                              <FontFamily>Calibri</FontFamily>
                                               <FontSize>11pt</FontSize>
                                               <FontWeight>Bold</FontWeight>
                                             </Style>
@@ -4494,7 +4373,7 @@
             <Top>1.84667in</Top>
             <Left>0.125in</Left>
             <Height>1.43333in</Height>
-            <Width>25.45708in</Width>
+            <Width>25.52256in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -4534,7 +4413,6 @@
                   <TextRun>
                     <Value>Branch Accountant </Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -4567,7 +4445,6 @@
                   <TextRun>
                     <Value>Branch Manager </Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -4600,7 +4477,6 @@
                   <TextRun>
                     <Value>BRANCH:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -4634,7 +4510,6 @@
                   <TextRun>
                     <Value>TO DATE:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -4669,7 +4544,6 @@
                   <TextRun>
                     <Value>ACCRUAL INTEREST VS ACTUAL</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <Color>Red</Color>
@@ -4706,7 +4580,6 @@
                   <TextRun>
                     <Value>Print Date:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -4744,7 +4617,6 @@
                     <Value>=Microsoft.VisualBasic.Strings.Format(NOW, "dd-MMM-yyyy")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Calibri</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -4779,6 +4651,7 @@
                   <TextRun>
                     <Value>=Parameters!CompanyName.Value</Value>
                     <Style>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -4789,7 +4662,7 @@
             <rd:DefaultName>CompanyName</rd:DefaultName>
             <Top>0.155in</Top>
             <Left>0.125in</Left>
-            <Height>0.25in</Height>
+            <Height>0.27381in</Height>
             <Width>6.37708in</Width>
             <ZIndex>10</ZIndex>
             <Style>
@@ -4871,7 +4744,6 @@
                   <TextRun>
                     <Value>FROM DATE:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -4931,7 +4803,7 @@
         <Height>5.65569in</Height>
         <Style />
       </Body>
-      <Width>26.72375in</Width>
+      <Width>25.75947in</Width>
       <Page>
         <InteractiveHeight>0in</InteractiveHeight>
         <InteractiveWidth>8.5in</InteractiveWidth>

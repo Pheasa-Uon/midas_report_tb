@@ -57,7 +57,7 @@ namespace Report.Accounting
                 return;
             }
 
-            var sql = "SELECT acc.id,CC.currency,acc.gl,acc.gl_name,TRIM(acc.side) AS side, " +
+            var sql = "SELECT acc.id,CC.currency,IFNULL(acc.parent_gl,acc.gl) parent_gl,(SELECT gl_name FROM acc_chat_of_account WHERE gl=IFNULL(acc.parent_gl,acc.gl)) parent_gl_name,acc.gl,acc.gl_name,TRIM(acc.side) AS side, " +
                 " CASE WHEN bal_his.balance IS NULL THEN 0 " +
                 " WHEN TRIM(acc.side)= 'Debit' AND bal_his.balance < 0 THEN bal_his.balance * (-1) " +
                 " WHEN TRIM(acc.side)= 'Credit' AND bal_his.balance < 0 THEN bal_his.balance * (-1) " +
@@ -67,7 +67,11 @@ namespace Report.Accounting
                 "  WHEN TRIM(acc.side) = 'Debit' AND bal_his.balance > 0 THEN bal_his.balance " +
                 "    ELSE 0 END AS O_CR, " +
                 " IFNULL(new_amt.debit_amount, 0) M_DR, " +
-                " IFNULL(new_amt.credit_amount, 0) M_CR " +
+                " IFNULL(new_amt.credit_amount, 0) M_CR, " +
+                " CASE WHEN bal_his.balance - IFNULL(new_amt.debit_amount, 0) + IFNULL(new_amt.credit_amount, 0) < 0 THEN " +
+                " (bal_his.balance - IFNULL(new_amt.debit_amount, 0) + IFNULL(new_amt.credit_amount, 0)) * (-1) ELSE 0 END AS C_DR," +
+                " CASE WHEN bal_his.balance - IFNULL(new_amt.debit_amount, 0) + IFNULL(new_amt.credit_amount, 0) > 0 THEN" +
+                " (bal_his.balance - IFNULL(new_amt.debit_amount, 0) + IFNULL(new_amt.credit_amount, 0)) ELSE 0 END AS C_CR" +
                 "  FROM acc_chat_of_account acc LEFT JOIN " +
                 "  (SELECT gl_id, " +
                 "  SUM(CASE WHEN balance_side = 1 THEN amount ELSE 0 END) AS debit_amount, " +

@@ -289,10 +289,6 @@ ul ul a {
         width: 100%;
     }
 
-.navbar-inverse {
-    background-color: #252d47;
-    border-color: #aaa;
-}
 
 .ui-widget-header .ui-icon {
     background-image: url("/images/ui-icons_444444_256x240.png") !important;
@@ -307,26 +303,41 @@ ul ul a {
 }
 
 .navbar-inverse {
-    background: #337ab7;
+    background: #003166;
     border-color: #2e6da4;
 }
 
-.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    background: #275d8b;
+.btn-primary {
+    color: #fff;
+    background-color: #003166;
+    border-color: #00254d;
+}
+
+    .btn-primary:active:hover, .btn-primary.active:hover, .open > .dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open > .dropdown-toggle.btn-primary.focus {
+        background-color: #00254d;
+    }
+    .btn-primary:active:hover, .btn-primary:hover,  .btn-primary:active:focus, .btn-primary:focus {
+        background-color: #00254d;
+    }
+        .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background: #00254d;
 }
 
 .navbar-inverse .navbar-brand {
-        color: #ffb536;
-        font-weight: bold;
-        font-size: 14px;
+    color: #ffb536;
+    font-weight: bold;
+    font-size: 14px;
 }
+
     .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
         color: #e69100;
     }
+
 .list-group-item:first-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
 .list-group-item:last-child {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;

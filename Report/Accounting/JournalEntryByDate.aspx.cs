@@ -61,7 +61,7 @@ namespace Report.Accounting
             var sql = "SELECT CASE WHEN act.balance_side = 1 THEN act.amount ELSE NULL END AS 'DR', " +
                 " CASE WHEN act.balance_side = 2 THEN act.amount ELSE NULL END AS 'CR',jou.is_manual, " +
                 " jou.trnx_id,act.trx_memo, act.gl_code,coa.gl_name,cur.currency,act.amount, " +
-                " jou.trnx_ref,act.sys_date,jou.journal_desc,usr.username,pro.lob_name,con.contract_no, " +
+                " jou.trnx_ref,sysdate.system_date sys_date,jou.journal_desc,usr.username,pro.lob_name,con.contract_no, " +
                 " cus.customer_name, act.last_updated " +
                 " FROM acc_transaction act " +
                 " LEFT JOIN acc_chat_of_account coa ON act.gl_id = coa.id " +
@@ -71,6 +71,7 @@ namespace Report.Accounting
                 " LEFT JOIN contract con ON act.contract_id = con.id " +
                 " LEFT JOIN product pro ON con.product_id = pro.id " +
                 " LEFT JOIN customer cus ON con.customer_id = cus.id " +
+                " LEFT JOIN system_date sysdate on act.system_date_id = sysdate.id" +
                 " WHERE DATE(act.sys_date) BETWEEN DATE('" + fromDate + "') AND DATE('" + toDate + "') AND jou.trnx_status = 1 AND act.branch_id = " + ddBranchName.SelectedItem.Value + " AND act.trx_status IN(1, 2) ";
 
 

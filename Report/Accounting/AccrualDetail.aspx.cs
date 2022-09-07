@@ -69,7 +69,7 @@ namespace Report.Accounting
 
             var scheduleDT = db.getDataTable(scheduleSQL);
 
-            var airSQL = "SELECT t.`sys_date`, st.`ticket_no`, st.`serial_number`, " +
+            var airSQL = "SELECT sy.`system_date` as sys_date, st.`ticket_no`, st.`serial_number`, " +
                 " IF(t.balance_side = 1, t.`amount`, 0) AS DR, " +
                 " IF(t.balance_side = 2, t.amount, 0) AS CR " +
                 " FROM acc_transaction t INNER JOIN " +
@@ -79,8 +79,9 @@ namespace Report.Accounting
                 "          LEFT JOIN `schedule` s ON t.`schedule_id` = s.id " +
                 "          LEFT JOIN schedule_ticket st ON t.`contract_id` = st.`contract_id`  " +
                 "          AND s.`order_no` = st.`order_no` " +
+                " LEFT JOIN system_date sy on sy.id=t.system_date_id " +
                 " WHERE t.`trx_status` = 1 " +
-                " AND DATE(t.sys_date) <= DATE('"+ searchDate + "') " +
+                " AND DATE(sy.system_date) <= DATE('" + searchDate + "') " +
                 " AND c.`contract_no` = '"+txtContract.Text.Trim()+"'; ";
             var airDT = db.getDataTable(airSQL);
 

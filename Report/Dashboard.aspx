@@ -2,14 +2,14 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div style="margin:0 auto; padding: 0 15px">
-        <h3 class="dashboard-title">PAWN SHOP REPORTING (<%=appName %>)</h3>
+        <h3 class="dashboard-title">MIDAS FINANCIAL REPORTING (<%=appName %>)</h3>
          <div class="row">
         <% 
             foreach (var item in rp)
             {
                 var str = "";%>
         <div class="col-md-6">
-             <h4 style="color: #ffb536;text-decoration:underline;font-weight:bold;"><% Response.Write(item.title);%></h4>
+             <h4 style="color: #003166;text-decoration:underline;font-weight:bold;"><% Response.Write(item.title);%></h4>
             <div class="list-group">
                 <% int i = 0;
                     foreach (var subItem in item.items)

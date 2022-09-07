@@ -157,7 +157,7 @@
                   <TextRun>
                     <Value>BRANCH</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -166,8 +166,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.00522in</Top>
-            <Left>0.13542in</Left>
+            <Top>1.13022in</Top>
+            <Left>0.10255in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <Style>
@@ -190,7 +190,7 @@
                   <TextRun>
                     <Value>As of:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -199,8 +199,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.00522in</Top>
-            <Left>4.09552in</Left>
+            <Top>1.13022in</Top>
+            <Left>4.06265in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>1</ZIndex>
@@ -225,7 +225,7 @@
                     <Value>=First(Fields!branch_name.Value, "CONTRACT_DS")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -234,8 +234,8 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.00522in</Top>
-            <Left>1.73612in</Left>
+            <Top>1.13022in</Top>
+            <Left>1.70325in</Left>
             <Height>0.25in</Height>
             <Width>1.82292in</Width>
             <ZIndex>2</ZIndex>
@@ -260,7 +260,7 @@
                   <TextRun>
                     <Value>=Parameters!SystemDate.Value</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <Format>dd-MM-yyyy</Format>
                     </Style>
                   </TextRun>
@@ -270,8 +270,8 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.00522in</Top>
-            <Left>5.66844in</Left>
+            <Top>1.13022in</Top>
+            <Left>5.63557in</Left>
             <Height>0.25in</Height>
             <Width>1.82119in</Width>
             <ZIndex>3</ZIndex>
@@ -296,7 +296,7 @@
                   <TextRun>
                     <Value>ACCRUAL DETAIL REPORT</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <Color>Red</Color>
@@ -310,7 +310,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>0.63763in</Top>
-            <Left>0.13542in</Left>
+            <Left>0.10255in</Left>
             <Height>0.25in</Height>
             <Width>5.39649in</Width>
             <ZIndex>4</ZIndex>
@@ -324,18 +324,6 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Line Name="Line1">
-            <Top>5.5925in</Top>
-            <Left>5.35064in</Left>
-            <Height>0in</Height>
-            <Width>1.9075in</Width>
-            <ZIndex>5</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Line>
           <Textbox Name="Textbox10">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -345,7 +333,7 @@
                   <TextRun>
                     <Value>Seen&amp;Approved By: </Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -355,11 +343,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.54042in</Top>
-            <Left>5.35064in</Left>
+            <Top>4.66542in</Top>
+            <Left>5.31777in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
-            <ZIndex>6</ZIndex>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -369,18 +357,6 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Line Name="Line3">
-            <Top>5.5925in</Top>
-            <Left>0.30898in</Left>
-            <Height>0in</Height>
-            <Width>1.9075in</Width>
-            <ZIndex>7</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Line>
           <Textbox Name="Textbox21">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -390,7 +366,7 @@
                   <TextRun>
                     <Value>Prepared By:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -400,11 +376,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.54042in</Top>
-            <Left>0.3194in</Left>
+            <Top>4.66542in</Top>
+            <Left>0.29695in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
-            <ZIndex>8</ZIndex>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -423,7 +399,7 @@
                   <TextRun>
                     <Value>Print Date:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -436,10 +412,10 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>0.63763in</Top>
-            <Left>5.53191in</Left>
+            <Left>5.49904in</Left>
             <Height>0.25in</Height>
             <Width>0.74591in</Width>
-            <ZIndex>9</ZIndex>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -461,7 +437,7 @@
                     <Value>=Microsoft.VisualBasic.Strings.Format(NOW, "dd-MMM-yyyy")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -471,10 +447,10 @@
               </Paragraph>
             </Paragraphs>
             <Top>0.63763in</Top>
-            <Left>6.29171in</Left>
+            <Left>6.25884in</Left>
             <Height>0.25in</Height>
             <Width>1.19792in</Width>
-            <ZIndex>10</ZIndex>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -496,7 +472,7 @@
                   <TextRun>
                     <Value>CONTRACT #</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -505,11 +481,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.2691in</Top>
-            <Left>0.13542in</Left>
+            <Top>1.3941in</Top>
+            <Left>0.10255in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
-            <ZIndex>11</ZIndex>
+            <ZIndex>9</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -531,7 +507,7 @@
                     <Value>=First(Fields!contract_no.Value, "CONTRACT_DS")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -540,11 +516,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.2691in</Top>
-            <Left>1.73612in</Left>
+            <Top>1.3941in</Top>
+            <Left>1.70325in</Left>
             <Height>0.25in</Height>
             <Width>1.82292in</Width>
-            <ZIndex>12</ZIndex>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -557,72 +533,6 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox22">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Branch Accountant </Value>
-                    <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.64806in</Top>
-            <Left>0.29856in</Left>
-            <Height>0.25in</Height>
-            <Width>1.91792in</Width>
-            <ZIndex>13</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox24">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Branch Manager </Value>
-                    <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.64806in</Top>
-            <Left>5.35064in</Left>
-            <Height>0.25in</Height>
-            <Width>1.9075in</Width>
-            <ZIndex>14</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox12">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -632,7 +542,7 @@
                   <TextRun>
                     <Value>Contract Status</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -641,11 +551,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.2691in</Top>
-            <Left>4.09552in</Left>
+            <Top>1.3941in</Top>
+            <Left>4.06265in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
-            <ZIndex>15</ZIndex>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -667,7 +577,7 @@
                     <Value>=First(Fields!contract_status.Value, "CONTRACT_DS")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -676,11 +586,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.2691in</Top>
-            <Left>5.66844in</Left>
+            <Top>1.3941in</Top>
+            <Left>5.63557in</Left>
             <Height>0.25in</Height>
             <Width>1.82119in</Width>
-            <ZIndex>16</ZIndex>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -702,7 +612,7 @@
                   <TextRun>
                     <Value>Customer Name</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -711,11 +621,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.533in</Top>
-            <Left>0.13542in</Left>
+            <Top>1.658in</Top>
+            <Left>0.10255in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
-            <ZIndex>17</ZIndex>
+            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -737,7 +647,7 @@
                     <Value>=First(Fields!customer_name.Value, "CONTRACT_DS")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -746,11 +656,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.533in</Top>
-            <Left>1.73612in</Left>
+            <Top>1.658in</Top>
+            <Left>1.70325in</Left>
             <Height>0.25in</Height>
             <Width>1.82292in</Width>
-            <ZIndex>18</ZIndex>
+            <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -772,7 +682,7 @@
                   <TextRun>
                     <Value>LOB Type:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -781,11 +691,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.533in</Top>
-            <Left>4.09552in</Left>
+            <Top>1.658in</Top>
+            <Left>4.06265in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
-            <ZIndex>19</ZIndex>
+            <ZIndex>15</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -807,7 +717,7 @@
                     <Value>=First(Fields!lob_name.Value, "CONTRACT_DS")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -816,11 +726,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.533in</Top>
-            <Left>5.66844in</Left>
+            <Top>1.658in</Top>
+            <Left>5.63557in</Left>
             <Height>0.25in</Height>
             <Width>1.82119in</Width>
-            <ZIndex>20</ZIndex>
+            <ZIndex>16</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -842,7 +752,7 @@
                   <TextRun>
                     <Value>Date Disbursed</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -851,11 +761,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.79688in</Top>
-            <Left>0.13542in</Left>
+            <Top>1.92188in</Top>
+            <Left>0.10255in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
-            <ZIndex>21</ZIndex>
+            <ZIndex>17</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -876,7 +786,7 @@
                   <TextRun>
                     <Value>=First(Fields!disbursement_date.Value, "CONTRACT_DS")</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <Format>dd-MM-yyyy</Format>
                     </Style>
                   </TextRun>
@@ -886,11 +796,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.79688in</Top>
-            <Left>1.73612in</Left>
+            <Top>1.92188in</Top>
+            <Left>1.70325in</Left>
             <Height>0.25in</Height>
             <Width>1.82292in</Width>
-            <ZIndex>22</ZIndex>
+            <ZIndex>18</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -912,7 +822,7 @@
                   <TextRun>
                     <Value>Date Expired</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -921,11 +831,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.06078in</Top>
-            <Left>0.13542in</Left>
+            <Top>2.18578in</Top>
+            <Left>0.10255in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
-            <ZIndex>23</ZIndex>
+            <ZIndex>19</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -946,7 +856,7 @@
                   <TextRun>
                     <Value>=First(Fields!expired_date.Value, "CONTRACT_DS")</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <Format>dd-MM-yyyy</Format>
                     </Style>
                   </TextRun>
@@ -956,11 +866,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>2.06078in</Top>
-            <Left>1.73612in</Left>
+            <Top>2.18578in</Top>
+            <Left>1.70325in</Left>
             <Height>0.25in</Height>
             <Width>1.82292in</Width>
-            <ZIndex>24</ZIndex>
+            <ZIndex>20</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -982,7 +892,7 @@
                   <TextRun>
                     <Value>Disbured Amount</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -991,11 +901,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.79688in</Top>
-            <Left>4.09552in</Left>
+            <Top>1.92188in</Top>
+            <Left>4.06265in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
-            <ZIndex>25</ZIndex>
+            <ZIndex>21</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1016,7 +926,7 @@
                   <TextRun>
                     <Value>=First(Fields!pawn_price_approved.Value, "CONTRACT_DS")</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <Format>#,0.00;(#,0.00);'-'</Format>
                     </Style>
                   </TextRun>
@@ -1026,11 +936,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.79688in</Top>
-            <Left>5.90109in</Left>
+            <Top>1.92188in</Top>
+            <Left>5.86822in</Left>
             <Height>0.25in</Height>
             <Width>1.58854in</Width>
-            <ZIndex>26</ZIndex>
+            <ZIndex>22</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1052,7 +962,7 @@
                   <TextRun>
                     <Value>Outstanding Amount</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -1061,11 +971,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.06078in</Top>
-            <Left>4.09552in</Left>
+            <Top>2.18578in</Top>
+            <Left>4.06265in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
-            <ZIndex>27</ZIndex>
+            <ZIndex>23</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1086,7 +996,7 @@
                   <TextRun>
                     <Value>=First(Fields!balance.Value, "CONTRACT_DS")</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                       <Format>#,0.00;(#,0.00);'-'</Format>
                     </Style>
                   </TextRun>
@@ -1096,11 +1006,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>2.06078in</Top>
-            <Left>5.90109in</Left>
+            <Top>2.18578in</Top>
+            <Left>5.86822in</Left>
             <Height>0.25in</Height>
             <Width>1.58854in</Width>
-            <ZIndex>28</ZIndex>
+            <ZIndex>24</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1159,7 +1069,7 @@
                                 <TextRun>
                                   <Value>Due Date</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1195,7 +1105,7 @@
                                 <TextRun>
                                   <Value>Outstanding</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1233,7 +1143,7 @@
                                 <TextRun>
                                   <Value>Interest Rate %</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1269,7 +1179,7 @@
                                 <TextRun>
                                   <Value>Current Due Interest</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1307,7 +1217,7 @@
                                 <TextRun>
                                   <Value># Schedule Days</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1343,7 +1253,7 @@
                                 <TextRun>
                                   <Value>Accrual / Day</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1386,7 +1296,7 @@
                                 <TextRun>
                                   <Value>=Fields!due_date.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                     <Format>dd-MM-yyyy</Format>
                                   </Style>
                                 </TextRun>
@@ -1422,7 +1332,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1458,7 +1368,7 @@
                                 <TextRun>
                                   <Value>=Fields!principle_due.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1497,13 +1407,13 @@
                                 <TextRun>
                                   <Value>=Fields!interest_rate.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value> %</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1538,7 +1448,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1574,7 +1484,7 @@
                                 <TextRun>
                                   <Value>=Fields!interest.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1613,7 +1523,7 @@
                                 <TextRun>
                                   <Value>=Fields!num_of_day.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1648,7 +1558,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1684,7 +1594,7 @@
                                 <TextRun>
                                   <Value>=Fields!accrual_amt.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1740,11 +1650,11 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>SCHEDULE_DS</DataSetName>
-            <Top>2.37896in</Top>
-            <Left>0.13542in</Left>
+            <Top>2.50396in</Top>
+            <Left>0.10255in</Left>
             <Height>0.67708in</Height>
             <Width>7.35421in</Width>
-            <ZIndex>29</ZIndex>
+            <ZIndex>25</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1760,7 +1670,7 @@
                   <TextRun>
                     <Value>$</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1769,11 +1679,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.79688in</Top>
-            <Left>5.66844in</Left>
+            <Top>1.92188in</Top>
+            <Left>5.63557in</Left>
             <Height>0.25in</Height>
             <Width>0.23265in</Width>
-            <ZIndex>30</ZIndex>
+            <ZIndex>26</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1795,7 +1705,7 @@
                   <TextRun>
                     <Value>$</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Segoe UI</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1804,11 +1714,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>2.06078in</Top>
-            <Left>5.66844in</Left>
+            <Top>2.18578in</Top>
+            <Left>5.63557in</Left>
             <Height>0.25in</Height>
             <Width>0.23265in</Width>
-            <ZIndex>31</ZIndex>
+            <ZIndex>27</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1836,7 +1746,7 @@
                               <TextRun>
                                 <Value>No</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Segoe UI</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -1905,7 +1815,7 @@
                                 <TextRun>
                                   <Value>=Fields!sys_date.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                     <Format>dd-MM-yyyy</Format>
                                   </Style>
                                 </TextRun>
@@ -1941,7 +1851,7 @@
                                 <TextRun>
                                   <Value>=Fields!ticket_no.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1976,7 +1886,7 @@
                                 <TextRun>
                                   <Value>=Fields!serial_number.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2011,7 +1921,7 @@
                                 <TextRun>
                                   <Value>=Fields!DR.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -2047,7 +1957,7 @@
                                 <TextRun>
                                   <Value>=Fields!CR.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -2083,7 +1993,7 @@
                                 <TextRun>
                                   <Value>=RunningValue((Fields!DR.Value - Fields!CR.Value), Sum, Nothing)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -2124,7 +2034,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2160,7 +2070,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2196,7 +2106,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2230,7 +2140,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!DR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -2267,7 +2177,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!CR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -2304,7 +2214,7 @@
                                 <TextRun>
                                   <Value>=sum(Fields!DR.Value) -sum(Fields!CR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Segoe UI</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -2349,7 +2259,7 @@
                               <TextRun>
                                 <Value>Accrual Date</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Segoe UI</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2389,7 +2299,7 @@
                               <TextRun>
                                 <Value>Ticket #</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Segoe UI</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2429,7 +2339,7 @@
                               <TextRun>
                                 <Value>Serial #</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Segoe UI</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2469,7 +2379,7 @@
                               <TextRun>
                                 <Value>Accrual Amount</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Segoe UI</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2509,7 +2419,7 @@
                                   <TextRun>
                                     <Value>DEBIT</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
+                                      <FontFamily>Segoe UI</FontFamily>
                                       <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
@@ -2550,7 +2460,7 @@
                                   <TextRun>
                                     <Value>CREDIT</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
+                                      <FontFamily>Segoe UI</FontFamily>
                                       <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
@@ -2591,7 +2501,7 @@
                                   <TextRun>
                                     <Value>BALANCE</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
+                                      <FontFamily>Segoe UI</FontFamily>
                                       <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
@@ -2647,7 +2557,7 @@
                               <TextRun>
                                 <Value>=RowNumber(Nothing)</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Segoe UI</FontFamily>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2685,7 +2595,7 @@
                               <TextRun>
                                 <Value>Total</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Segoe UI</FontFamily>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2716,11 +2626,11 @@
             </TablixRowHierarchy>
             <FixedColumnHeaders>true</FixedColumnHeaders>
             <DataSetName>AIR_DS</DataSetName>
-            <Top>3.19903in</Top>
-            <Left>0.13542in</Left>
+            <Top>3.32403in</Top>
+            <Left>0.10255in</Left>
             <Height>1in</Height>
             <Width>7.35422in</Width>
-            <ZIndex>32</ZIndex>
+            <ZIndex>28</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2736,6 +2646,8 @@
                   <TextRun>
                     <Value>=Parameters!CompanyName.Value</Value>
                     <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -2744,11 +2656,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>CompanyName</rd:DefaultName>
-            <Top>0.18104in</Top>
-            <Left>0.13542in</Left>
-            <Height>0.25in</Height>
-            <Width>6.1424in</Width>
-            <ZIndex>33</ZIndex>
+            <Top>0.13342in</Top>
+            <Left>0.10255in</Left>
+            <Height>0.29762in</Height>
+            <Width>7.35422in</Width>
+            <ZIndex>29</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2759,11 +2671,101 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Line Name="Line4">
+            <Top>5.7175in</Top>
+            <Left>0.29695in</Left>
+            <Height>0in</Height>
+            <Width>1.9075in</Width>
+            <ZIndex>30</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line2">
+            <Top>5.7175in</Top>
+            <Left>5.31777in</Left>
+            <Height>0in</Height>
+            <Width>1.9075in</Width>
+            <ZIndex>31</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox31">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Branch Accountant </Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>5.7175in</Top>
+            <Left>0.29695in</Left>
+            <Height>0.25in</Height>
+            <Width>1.57292in</Width>
+            <ZIndex>32</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox11">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Branch Manager </Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>5.7175in</Top>
+            <Left>5.31777in</Left>
+            <Height>0.25in</Height>
+            <Width>1.57292in</Width>
+            <ZIndex>33</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>6.03869in</Height>
+        <Height>6.18155in</Height>
         <Style />
       </Body>
-      <Width>7.62572in</Width>
+      <Width>7.58974in</Width>
       <Page>
         <PageHeight>8.27in</PageHeight>
         <PageWidth>11.69in</PageWidth>

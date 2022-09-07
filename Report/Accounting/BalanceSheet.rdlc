@@ -243,9 +243,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -281,9 +279,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -358,9 +354,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>$</Value>
-                                  <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -397,7 +391,6 @@
                                 <TextRun>
                                   <Value>=Fields!ac_amt.Value</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -482,7 +475,6 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -521,7 +513,6 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!ac_amt.Value)</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -603,7 +594,6 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -644,7 +634,6 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!ac_amt.Value)</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -733,10 +722,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet2</DataSetName>
-            <Top>1.36681in</Top>
+            <Top>1.61681in</Top>
             <Left>0.125in</Left>
             <Height>1.35938in</Height>
-            <Width>8.38458in</Width>
+            <Width>8.38459in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -752,7 +741,6 @@
                   <TextRun>
                     <Value>AS OF:</Value>
                     <Style>
-                      <FontFamily>Arial</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -761,7 +749,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox69</rd:DefaultName>
-            <Top>0.38889in</Top>
+            <Top>0.63889in</Top>
             <Left>0.125in</Left>
             <Height>0.25in</Height>
             <Width>0.83333in</Width>
@@ -786,7 +774,6 @@
                     <Value>=Parameters!SystemDate.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Arial</FontFamily>
                       <Format>dd-MMM-yyyy</Format>
                     </Style>
                   </TextRun>
@@ -797,7 +784,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox69</rd:DefaultName>
-            <Top>0.38889in</Top>
+            <Top>0.63889in</Top>
             <Left>1in</Left>
             <Height>0.25in</Height>
             <Width>2.43229in</Width>
@@ -832,7 +819,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox71</rd:DefaultName>
-            <Top>2.88889in</Top>
+            <Top>3.13889in</Top>
             <Left>0.125in</Left>
             <Height>0.39583in</Height>
             <Width>5.60854in</Width>
@@ -870,7 +857,6 @@
                                 <TextRun>
                                   <Value>=Fields!total_l_c.Value</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -895,7 +881,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -915,7 +900,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet3</DataSetName>
-            <Top>2.89806in</Top>
+            <Top>3.14806in</Top>
             <Left>6.18799in</Left>
             <Height>0.38667in</Height>
             <Width>2.26042in</Width>
@@ -927,7 +912,7 @@
             </Style>
           </Tablix>
           <Line Name="Line1">
-            <Top>3.29862in</Top>
+            <Top>3.54862in</Top>
             <Left>5.76958in</Left>
             <Height>0in</Height>
             <Width>2.67883in</Width>
@@ -947,7 +932,6 @@
                   <TextRun>
                     <Value>Branch:</Value>
                     <Style>
-                      <FontFamily>Arial</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -956,7 +940,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox69</rd:DefaultName>
-            <Top>0.66666in</Top>
+            <Top>0.91666in</Top>
             <Left>0.125in</Left>
             <Height>0.25in</Height>
             <Width>0.83333in</Width>
@@ -981,7 +965,6 @@
                     <Value>=Parameters!Branch.Label</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Arial</FontFamily>
                       <Format>d</Format>
                     </Style>
                   </TextRun>
@@ -992,7 +975,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox69</rd:DefaultName>
-            <Top>0.66666in</Top>
+            <Top>0.91666in</Top>
             <Left>1in</Left>
             <Height>0.25in</Height>
             <Width>2.43229in</Width>
@@ -1019,7 +1002,6 @@
                     <Value>BALANCE SHEET Consolidate</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Arial</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
@@ -1033,7 +1015,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox68</rd:DefaultName>
-            <Top>1.04737in</Top>
+            <Top>1.29737in</Top>
             <Left>0.125in</Left>
             <Height>0.25in</Height>
             <Width>6.40236in</Width>
@@ -1058,7 +1040,6 @@
                     <Value>Print Date:</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Arial</FontFamily>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
@@ -1072,7 +1053,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox69</rd:DefaultName>
-            <Top>1.04737in</Top>
+            <Top>1.29737in</Top>
             <Left>6.54125in</Left>
             <Height>0.25in</Height>
             <Width>0.83333in</Width>
@@ -1098,7 +1079,6 @@
                     <Value>=Microsoft.VisualBasic.Strings.Format(NOW, "dd-MMM-yyyy")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Arial</FontFamily>
                       <Format>d</Format>
                     </Style>
                   </TextRun>
@@ -1109,7 +1089,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox69</rd:DefaultName>
-            <Top>1.04737in</Top>
+            <Top>1.29737in</Top>
             <Left>7.42667in</Left>
             <Height>0.25in</Height>
             <Width>1.07556in</Width>
@@ -1146,7 +1126,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox6</rd:DefaultName>
-            <Top>2.88889in</Top>
+            <Top>3.13889in</Top>
             <Left>5.76958in</Left>
             <Height>0.39583in</Height>
             <Width>0.39063in</Width>
@@ -1163,10 +1143,10 @@
             </Style>
           </Textbox>
           <Line Name="Line2">
-            <Top>5.22792in</Top>
+            <Top>5.47792in</Top>
             <Left>0.14632in</Left>
             <Height>0in</Height>
-            <Width>1.63021in</Width>
+            <Width>1.83259in</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
@@ -1189,7 +1169,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>5.24181in</Top>
+            <Top>5.49181in</Top>
             <Left>0.14632in</Left>
             <Height>0.25in</Height>
             <Width>1.63542in</Width>
@@ -1205,10 +1185,10 @@
             </Style>
           </Textbox>
           <Line Name="Line3">
-            <Top>5.24181in</Top>
+            <Top>5.49181in</Top>
             <Left>6.40236in</Left>
             <Height>0in</Height>
-            <Width>1.63021in</Width>
+            <Width>1.80283in</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -1231,7 +1211,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>5.2557in</Top>
+            <Top>5.5057in</Top>
             <Left>6.40236in</Left>
             <Height>0.25in</Height>
             <Width>1.63542in</Width>
@@ -1255,6 +1235,7 @@
                   <TextRun>
                     <Value>=Parameters!CompanyName.Value</Value>
                     <Style>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -1263,9 +1244,9 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>CompanyName</rd:DefaultName>
-            <Top>0.06945in</Top>
+            <Top>0.19445in</Top>
             <Left>0.125in</Left>
-            <Height>0.25in</Height>
+            <Height>0.31548in</Height>
             <Width>5.60854in</Width>
             <ZIndex>16</ZIndex>
             <Style>
@@ -1279,7 +1260,7 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>7.17416in</Height>
+        <Height>6.00749in</Height>
         <Style />
       </Body>
       <Width>8.60333in</Width>

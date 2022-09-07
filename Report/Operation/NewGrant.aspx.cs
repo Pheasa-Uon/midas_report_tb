@@ -85,7 +85,7 @@ namespace Report.Operation
                     " LEFT JOIN staff_info SI ON C.pawn_officer_id = SI.id " +
                     " LEFT JOIN product PD ON PD.id = C.product_id " +
                     " LEFT JOIN schedule_ticket STINFO ON STINFO.contract_id = C.id AND STINFO.order_no = 1 " +
-                    " WHERE C.contract_status >= 4 AND C.`b_status`= 1 AND C.contract_type = 'New' " +
+                    " WHERE C.contract_status >= 4 AND C.contract_status != 5 AND C.`b_status`= 1 AND C.contract_type = 'New' " +
                     " AND C.branch_id = " + ddBranchName.SelectedItem.Value +
                     " AND C.currency_id = " + ddCurrency.SelectedItem.Value;
             if (fromDay != "")
@@ -120,7 +120,8 @@ namespace Report.Operation
                   "     FROM payment_other_income " +
                   "     GROUP BY payment_total_id " +
                   " ) OI ON OI.payment_total_id = PTT.id " +
-                  " WHERE PTT.system_date_id = C.disburse_sys_date_id  AND C.contract_type = 'New' AND C.`b_status`= 1 AND PTT.payment_total_status = 1 " +
+                  " WHERE PTT.system_date_id = C.disburse_sys_date_id  AND C.contract_type = 'New' AND C.`b_status`= 1 " +
+                  " AND PTT.payment_total_status = 1 AND PTT.payment_flag != 3 " +
                   " AND C.branch_id = " + ddBranchName.SelectedItem.Value +
                   " AND C.currency_id = " + ddCurrency.SelectedItem.Value;
 

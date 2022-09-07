@@ -111,7 +111,7 @@ namespace Report.Utils
         //Get Currency Statement
         public List<Currency> GetCurrency()
         {
-            string query = "SELECT id,currency,currency_label FROM currency";
+            string query = "SELECT id,currency,currency_label FROM currency WHERE currency_status=True;";
             MySqlCommand cmd = new MySqlCommand(query, connection);
             MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();

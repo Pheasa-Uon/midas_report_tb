@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ContractOutstandingByDate" targetNamespace="http://tempuri.org/ContractOutstandingByDate.xsd" xmlns:mstns="http://tempuri.org/ContractOutstandingByDate.xsd" xmlns="http://tempuri.org/ContractOutstandingByDate.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ContractOutstandingByDate" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ContractOutstandingByDate" msprop:Generator_UserDSName="ContractOutstandingByDate">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ContractOutstandingByDateDataset" msprop:Generator_TableClassName="ContractOutstandingByDateDatasetDataTable" msprop:Generator_TableVarName="tableContractOutstandingByDateDataset" msprop:Generator_TablePropName="ContractOutstandingByDateDataset" msprop:Generator_RowDeletingName="ContractOutstandingByDateDatasetRowDeleting" msprop:Generator_RowChangingName="ContractOutstandingByDateDatasetRowChanging" msprop:Generator_RowEvHandlerName="ContractOutstandingByDateDatasetRowChangeEventHandler" msprop:Generator_RowDeletedName="ContractOutstandingByDateDatasetRowDeleted" msprop:Generator_UserTableName="ContractOutstandingByDateDataset" msprop:Generator_RowChangedName="ContractOutstandingByDateDatasetRowChanged" msprop:Generator_RowEvArgName="ContractOutstandingByDateDatasetRowChangeEvent" msprop:Generator_RowClassName="ContractOutstandingByDateDatasetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="contract_no" msprop:Generator_ColumnVarNameInTable="columncontract_no" msprop:Generator_ColumnPropNameInRow="contract_no" msprop:Generator_ColumnPropNameInTable="contract_noColumn" msprop:Generator_UserColumnName="contract_no" type="xs:string" minOccurs="0" />
+              <xs:element name="branch_id" msprop:Generator_ColumnVarNameInTable="columnbranch_id" msprop:Generator_ColumnPropNameInRow="branch_id" msprop:Generator_ColumnPropNameInTable="branch_idColumn" msprop:Generator_UserColumnName="branch_id" type="xs:string" minOccurs="0" />
+              <xs:element name="currency_id" msprop:Generator_ColumnVarNameInTable="columncurrency_id" msprop:Generator_ColumnPropNameInRow="currency_id" msprop:Generator_ColumnPropNameInTable="currency_idColumn" msprop:Generator_UserColumnName="currency_id" type="xs:string" minOccurs="0" />
+              <xs:element name="bfbal" msprop:Generator_ColumnVarNameInTable="columnbfbal" msprop:Generator_ColumnPropNameInRow="bfbal" msprop:Generator_ColumnPropNameInTable="bfbalColumn" msprop:Generator_UserColumnName="bfbal" type="xs:string" minOccurs="0" />
+              <xs:element name="disburse" msprop:Generator_ColumnVarNameInTable="columndisburse" msprop:Generator_ColumnPropNameInRow="disburse" msprop:Generator_ColumnPropNameInTable="disburseColumn" msprop:Generator_UserColumnName="disburse" type="xs:string" minOccurs="0" />
+              <xs:element name="principle_pay" msprop:Generator_ColumnVarNameInTable="columnprinciple_pay" msprop:Generator_ColumnPropNameInRow="principle_pay" msprop:Generator_ColumnPropNameInTable="principle_payColumn" msprop:Generator_UserColumnName="principle_pay" type="xs:string" minOccurs="0" />
+              <xs:element name="afbal" msprop:Generator_ColumnVarNameInTable="columnafbal" msprop:Generator_ColumnPropNameInRow="afbal" msprop:Generator_ColumnPropNameInTable="afbalColumn" msprop:Generator_UserColumnName="afbal" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_no" msprop:Generator_ColumnVarNameInTable="columncustomer_no" msprop:Generator_ColumnPropNameInRow="customer_no" msprop:Generator_ColumnPropNameInTable="customer_noColumn" msprop:Generator_UserColumnName="customer_no" type="xs:string" minOccurs="0" />
+              <xs:element name="customer_name" msprop:Generator_ColumnVarNameInTable="columncustomer_name" msprop:Generator_ColumnPropNameInRow="customer_name" msprop:Generator_ColumnPropNameInTable="customer_nameColumn" msprop:Generator_UserColumnName="customer_name" type="xs:string" minOccurs="0" />
+              <xs:element name="lob_name" msprop:Generator_ColumnVarNameInTable="columnlob_name" msprop:Generator_ColumnPropNameInRow="lob_name" msprop:Generator_ColumnPropNameInTable="lob_nameColumn" msprop:Generator_UserColumnName="lob_name" type="xs:string" minOccurs="0" />
+              <xs:element name="lob_type" msprop:Generator_ColumnVarNameInTable="columnlob_type" msprop:Generator_ColumnPropNameInRow="lob_type" msprop:Generator_ColumnPropNameInTable="lob_typeColumn" msprop:Generator_UserColumnName="lob_type" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -160,7 +160,6 @@
                               <TextRun>
                                 <Value>No</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -198,7 +197,6 @@
                               <TextRun>
                                 <Value>Contract ID</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -236,7 +234,6 @@
                               <TextRun>
                                 <Value>Customer Name</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -274,7 +271,6 @@
                               <TextRun>
                                 <Value>LOB Type</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -312,7 +308,6 @@
                               <TextRun>
                                 <Value>Date Disbursed</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -350,7 +345,6 @@
                               <TextRun>
                                 <Value>Date Expired</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -388,7 +382,6 @@
                               <TextRun>
                                 <Value>Disburse Amount</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -426,7 +419,6 @@
                               <TextRun>
                                 <Value>Interest Rate</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -466,7 +458,6 @@
                               <TextRun>
                                 <Value>Contract Status</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -504,7 +495,6 @@
                               <TextRun>
                                 <Value>Total Previous Balance</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -544,7 +534,6 @@
                               <TextRun>
                                 <Value>Total Current Balance</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -583,7 +572,6 @@
                               <TextRun>
                                 <Value>BALANCE</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -635,7 +623,6 @@
                               <TextRun>
                                 <Value>DEBIT</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -672,7 +659,6 @@
                               <TextRun>
                                 <Value>CREDIT</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -709,7 +695,6 @@
                               <TextRun>
                                 <Value>BALANCE</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -746,7 +731,6 @@
                               <TextRun>
                                 <Value>DEBIT</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -783,7 +767,6 @@
                               <TextRun>
                                 <Value>CREDIT</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -820,7 +803,6 @@
                               <TextRun>
                                 <Value>DEBIT</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -857,7 +839,6 @@
                               <TextRun>
                                 <Value>CREDIT</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -894,7 +875,6 @@
                               <TextRun>
                                 <Value>BALANCE</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -973,9 +953,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ticket_no.Value</Value>
-                                  <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1008,9 +986,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!serial_number.Value</Value>
-                                  <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1042,7 +1018,6 @@
                                 <TextRun>
                                   <Value>=Fields!principle_due.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1078,7 +1053,6 @@
                                 <TextRun>
                                   <Value>=Fields!interest.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1113,9 +1087,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!num_of_day.Value</Value>
-                                  <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1147,7 +1119,6 @@
                                 <TextRun>
                                   <Value>=Fields!acc_per_day.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1182,9 +1153,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ticket_status.Value</Value>
-                                  <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1217,9 +1186,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!sAccDate.Value</Value>
-                                  <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1252,9 +1219,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!eAccDate.Value</Value>
-                                  <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1287,9 +1252,7 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!num.Value</Value>
-                                  <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                  </Style>
+                                  <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -1323,7 +1286,6 @@
                                 <TextRun>
                                   <Value>=Fields!DRCur.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1364,7 +1326,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1405,7 +1366,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1445,7 +1405,6 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!principle_due.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1486,7 +1445,6 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!interest.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1527,7 +1485,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1567,7 +1524,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1607,7 +1563,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1647,7 +1602,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1687,7 +1641,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1727,7 +1680,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1768,7 +1720,6 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!DRCur.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1814,7 +1765,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1854,7 +1804,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1894,7 +1843,6 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!principle_due.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -1935,7 +1883,6 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!interest.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -1976,7 +1923,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2016,7 +1962,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2056,7 +2001,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2096,7 +2040,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2136,7 +2079,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2176,7 +2118,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2216,7 +2157,6 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!DRCur.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
@@ -2254,7 +2194,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.5in</Size>
+                    <Size>0.69048in</Size>
                     <CellContents>
                       <Textbox Name="Textbox6">
                         <CanGrow>true</CanGrow>
@@ -2265,7 +2205,6 @@
                               <TextRun>
                                 <Value>Ticket #</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2294,7 +2233,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.5in</Size>
+                    <Size>0.69048in</Size>
                     <CellContents>
                       <Textbox Name="Textbox16">
                         <CanGrow>true</CanGrow>
@@ -2305,7 +2244,6 @@
                               <TextRun>
                                 <Value>Serial #</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2334,7 +2272,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.5in</Size>
+                    <Size>0.69048in</Size>
                     <CellContents>
                       <Textbox Name="Textbox140">
                         <CanGrow>true</CanGrow>
@@ -2345,7 +2283,6 @@
                               <TextRun>
                                 <Value>Outstanding</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2374,7 +2311,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.5in</Size>
+                    <Size>0.69048in</Size>
                     <CellContents>
                       <Textbox Name="Textbox472">
                         <CanGrow>true</CanGrow>
@@ -2385,7 +2322,6 @@
                               <TextRun>
                                 <Value>Current Due Interest</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2414,7 +2350,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.5in</Size>
+                    <Size>0.69048in</Size>
                     <CellContents>
                       <Textbox Name="Textbox467">
                         <CanGrow>true</CanGrow>
@@ -2425,7 +2361,6 @@
                               <TextRun>
                                 <Value># Schedule Days</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2454,7 +2389,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.5in</Size>
+                    <Size>0.69048in</Size>
                     <CellContents>
                       <Textbox Name="Textbox462">
                         <CanGrow>true</CanGrow>
@@ -2465,7 +2400,6 @@
                               <TextRun>
                                 <Value>Accrual/Day</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2494,7 +2428,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.5in</Size>
+                    <Size>0.69048in</Size>
                     <CellContents>
                       <Textbox Name="Textbox477">
                         <CanGrow>true</CanGrow>
@@ -2505,7 +2439,6 @@
                               <TextRun>
                                 <Value>Ticket Status</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2534,7 +2467,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.5in</Size>
+                    <Size>0.69048in</Size>
                     <CellContents>
                       <Textbox Name="Textbox370">
                         <CanGrow>true</CanGrow>
@@ -2545,7 +2478,6 @@
                               <TextRun>
                                 <Value>From Accrual Date</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2574,7 +2506,7 @@
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>0.5in</Size>
+                    <Size>0.69048in</Size>
                     <CellContents>
                       <Textbox Name="Textbox487">
                         <CanGrow>true</CanGrow>
@@ -2585,7 +2517,6 @@
                               <TextRun>
                                 <Value>Last Accrual Date</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2625,7 +2556,6 @@
                               <TextRun>
                                 <Value>Current Month</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2654,7 +2584,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>0.25in</Size>
+                        <Size>0.44048in</Size>
                         <CellContents>
                           <Textbox Name="Textbox493">
                             <CanGrow>true</CanGrow>
@@ -2665,7 +2595,6 @@
                                   <TextRun>
                                     <Value>Day #</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -2694,7 +2623,7 @@
                     </TablixMember>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>0.25in</Size>
+                        <Size>0.44048in</Size>
                         <CellContents>
                           <Textbox Name="Textbox498">
                             <CanGrow>true</CanGrow>
@@ -2705,7 +2634,6 @@
                                   <TextRun>
                                     <Value>DEBIT</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -2767,9 +2695,7 @@
                                 <TextRuns>
                                   <TextRun>
                                     <Value>=RunningValue(Fields!contract_no.Value, countdistinct,Nothing)</Value>
-                                    <Style>
-                                      <FontFamily>Calibri</FontFamily>
-                                    </Style>
+                                    <Style />
                                   </TextRun>
                                 </TextRuns>
                                 <Style>
@@ -2805,9 +2731,7 @@
                                     <TextRuns>
                                       <TextRun>
                                         <Value>=Fields!contract_no.Value</Value>
-                                        <Style>
-                                          <FontFamily>Calibri</FontFamily>
-                                        </Style>
+                                        <Style />
                                       </TextRun>
                                     </TextRuns>
                                     <Style>
@@ -2843,9 +2767,7 @@
                                         <TextRuns>
                                           <TextRun>
                                             <Value>=Fields!customer_name.Value</Value>
-                                            <Style>
-                                              <FontFamily>Calibri</FontFamily>
-                                            </Style>
+                                            <Style />
                                           </TextRun>
                                         </TextRuns>
                                         <Style>
@@ -2881,9 +2803,7 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>=Fields!lob_name.Value</Value>
-                                                <Style>
-                                                  <FontFamily>Calibri</FontFamily>
-                                                </Style>
+                                                <Style />
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
@@ -2919,9 +2839,7 @@
                                                 <TextRuns>
                                                   <TextRun>
                                                     <Value>=Fields!disbursement_date.Value</Value>
-                                                    <Style>
-                                                      <FontFamily>Calibri</FontFamily>
-                                                    </Style>
+                                                    <Style />
                                                   </TextRun>
                                                 </TextRuns>
                                                 <Style>
@@ -2957,9 +2875,7 @@
                                                     <TextRuns>
                                                       <TextRun>
                                                         <Value>=Fields!expired_date.Value</Value>
-                                                        <Style>
-                                                          <FontFamily>Calibri</FontFamily>
-                                                        </Style>
+                                                        <Style />
                                                       </TextRun>
                                                     </TextRuns>
                                                     <Style>
@@ -2996,7 +2912,6 @@
                                                           <TextRun>
                                                             <Value>=Fields!pawn_price_approved.Value</Value>
                                                             <Style>
-                                                              <FontFamily>Calibri</FontFamily>
                                                               <Format>#,0.00;(#,0.00);'-'</Format>
                                                             </Style>
                                                           </TextRun>
@@ -3027,7 +2942,7 @@
                                               <TablixMembers>
                                                 <TablixMember>
                                                   <TablixHeader>
-                                                    <Size>0.36979in</Size>
+                                                    <Size>0.3936in</Size>
                                                     <CellContents>
                                                       <Textbox Name="interest_rate">
                                                         <CanGrow>true</CanGrow>
@@ -3037,9 +2952,7 @@
                                                             <TextRuns>
                                                               <TextRun>
                                                                 <Value>=Fields!interest_rate.Value</Value>
-                                                                <Style>
-                                                                  <FontFamily>Calibri</FontFamily>
-                                                                </Style>
+                                                                <Style />
                                                               </TextRun>
                                                             </TextRuns>
                                                             <Style>
@@ -3078,9 +2991,7 @@
                                                                 <TextRuns>
                                                                   <TextRun>
                                                                     <Value>%</Value>
-                                                                    <Style>
-                                                                      <FontFamily>Calibri</FontFamily>
-                                                                    </Style>
+                                                                    <Style />
                                                                   </TextRun>
                                                                 </TextRuns>
                                                                 <Style>
@@ -3109,7 +3020,7 @@
                                                       <TablixMembers>
                                                         <TablixMember>
                                                           <TablixHeader>
-                                                            <Size>0.6in</Size>
+                                                            <Size>0.70119in</Size>
                                                             <CellContents>
                                                               <Textbox Name="Textbox506">
                                                                 <CanGrow>true</CanGrow>
@@ -3119,9 +3030,7 @@
                                                                     <TextRuns>
                                                                       <TextRun>
                                                                         <Value>=Fields!contract_status.Value</Value>
-                                                                        <Style>
-                                                                          <FontFamily>Calibri</FontFamily>
-                                                                        </Style>
+                                                                        <Style />
                                                                       </TextRun>
                                                                     </TextRuns>
                                                                     <Style>
@@ -3158,7 +3067,6 @@
                                                                           <TextRun>
                                                                             <Value>=Fields!DRPre.Value</Value>
                                                                             <Style>
-                                                                              <FontFamily>Calibri</FontFamily>
                                                                               <Format>#,0.00;(#,0.00);'-'</Format>
                                                                             </Style>
                                                                           </TextRun>
@@ -3197,7 +3105,6 @@
                                                                               <TextRun>
                                                                                 <Value>=Fields!CRPre.Value</Value>
                                                                                 <Style>
-                                                                                  <FontFamily>Calibri</FontFamily>
                                                                                   <Format>#,0.00;(#,0.00);'-'</Format>
                                                                                 </Style>
                                                                               </TextRun>
@@ -3236,7 +3143,6 @@
                                                                                   <TextRun>
                                                                                     <Value>=Fields!DRPre.Value - Fields!CRPre.Value</Value>
                                                                                     <Style>
-                                                                                      <FontFamily>Calibri</FontFamily>
                                                                                       <Format>#,0.00;(#,0.00);'-'</Format>
                                                                                     </Style>
                                                                                   </TextRun>
@@ -3275,7 +3181,6 @@
                                                                                       <TextRun>
                                                                                         <Value>=Sum(Fields!DRCur.Value)</Value>
                                                                                         <Style>
-                                                                                          <FontFamily>Calibri</FontFamily>
                                                                                           <Format>#,0.00;(#,0.00);'-'</Format>
                                                                                         </Style>
                                                                                       </TextRun>
@@ -3314,7 +3219,6 @@
                                                                                           <TextRun>
                                                                                             <Value>=Fields!CRCur.Value</Value>
                                                                                             <Style>
-                                                                                              <FontFamily>Calibri</FontFamily>
                                                                                               <Format>#,0.00;(#,0.00);'-'</Format>
                                                                                             </Style>
                                                                                           </TextRun>
@@ -3353,7 +3257,6 @@
                                                                                               <TextRun>
                                                                                                 <Value>=Fields!DRPre.Value + SUM(Fields!DRCur.Value)</Value>
                                                                                                 <Style>
-                                                                                                  <FontFamily>Calibri</FontFamily>
                                                                                                   <Format>#,0.00;(#,0.00);'-'</Format>
                                                                                                 </Style>
                                                                                               </TextRun>
@@ -3392,7 +3295,6 @@
                                                                                                   <TextRun>
                                                                                                     <Value>=Fields!CRPre.Value + Fields!CRCur.Value</Value>
                                                                                                     <Style>
-                                                                                                      <FontFamily>Calibri</FontFamily>
                                                                                                       <Format>#,0.00;(#,0.00);'-'</Format>
                                                                                                     </Style>
                                                                                                   </TextRun>
@@ -3431,7 +3333,6 @@
                                                                                                       <TextRun>
                                                                                                         <Value>=(Fields!DRPre.Value + SUM(Fields!DRCur.Value)) - (Fields!CRPre.Value + Fields!CRCur.Value)</Value>
                                                                                                         <Style>
-                                                                                                          <FontFamily>Calibri</FontFamily>
                                                                                                           <Format>#,0.00;(#,0.00);'-'</Format>
                                                                                                         </Style>
                                                                                                       </TextRun>
@@ -3509,7 +3410,6 @@
                                   <TextRun>
                                     <Value>="TOTAL " &amp; Fields!lob_name.Value &amp; " :"</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -3552,7 +3452,6 @@
                                       <TextRun>
                                         <Value>=Sum(Fields!pawn_price_approved.Value)</Value>
                                         <Style>
-                                          <FontFamily>Calibri</FontFamily>
                                           <FontWeight>Bold</FontWeight>
                                           <Format>#,0.00;(#,0.00);'-'</Format>
                                         </Style>
@@ -3585,7 +3484,7 @@
                           <TablixMembers>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>0.55in</Size>
+                                <Size>0.57381in</Size>
                                 <CellContents>
                                   <Textbox Name="Textbox11">
                                     <CanGrow>true</CanGrow>
@@ -3596,7 +3495,6 @@
                                           <TextRun>
                                             <Value />
                                             <Style>
-                                              <FontFamily>Calibri</FontFamily>
                                               <FontWeight>Bold</FontWeight>
                                             </Style>
                                           </TextRun>
@@ -3628,7 +3526,7 @@
                               <TablixMembers>
                                 <TablixMember>
                                   <TablixHeader>
-                                    <Size>0.6in</Size>
+                                    <Size>0.70119in</Size>
                                     <CellContents>
                                       <Textbox Name="Textbox507">
                                         <CanGrow>true</CanGrow>
@@ -3639,7 +3537,6 @@
                                               <TextRun>
                                                 <Value />
                                                 <Style>
-                                                  <FontFamily>Calibri</FontFamily>
                                                   <FontWeight>Bold</FontWeight>
                                                 </Style>
                                               </TextRun>
@@ -3682,7 +3579,6 @@
                                                   <TextRun>
                                                     <Value>=Sum(Max(Fields!DRPre.Value, "contract_no"))</Value>
                                                     <Style>
-                                                      <FontFamily>Calibri</FontFamily>
                                                       <FontWeight>Bold</FontWeight>
                                                       <Format>#,0.00;(#,0.00);'-'</Format>
                                                     </Style>
@@ -3726,7 +3622,6 @@
                                                       <TextRun>
                                                         <Value>=Sum(MAX(Fields!CRPre.Value,"contract_no"))</Value>
                                                         <Style>
-                                                          <FontFamily>Calibri</FontFamily>
                                                           <FontWeight>Bold</FontWeight>
                                                           <Format>#,0.00;(#,0.00);'-'</Format>
                                                         </Style>
@@ -3770,7 +3665,6 @@
                                                           <TextRun>
                                                             <Value>=SUM(MAX(Fields!DRPre.Value, "contract_no")) - SUM(MAX(Fields!CRPre.Value, "contract_no"))</Value>
                                                             <Style>
-                                                              <FontFamily>Calibri</FontFamily>
                                                               <FontWeight>Bold</FontWeight>
                                                               <Format>#,0.00;(#,0.00);'-'</Format>
                                                             </Style>
@@ -3814,7 +3708,6 @@
                                                               <TextRun>
                                                                 <Value>=Sum(Fields!DRCur.Value)</Value>
                                                                 <Style>
-                                                                  <FontFamily>Calibri</FontFamily>
                                                                   <FontWeight>Bold</FontWeight>
                                                                   <Format>#,0.00;(#,0.00);'-'</Format>
                                                                 </Style>
@@ -3858,7 +3751,6 @@
                                                                   <TextRun>
                                                                     <Value>=Sum(MAX(Fields!CRCur.Value, "contract_no"))</Value>
                                                                     <Style>
-                                                                      <FontFamily>Calibri</FontFamily>
                                                                       <FontWeight>Bold</FontWeight>
                                                                       <Format>#,0.00;(#,0.00);'-'</Format>
                                                                     </Style>
@@ -3902,7 +3794,6 @@
                                                                       <TextRun>
                                                                         <Value>=SUM(Max(Fields!DRPre.Value, "contract_no")) + SUM(Fields!DRCur.Value)</Value>
                                                                         <Style>
-                                                                          <FontFamily>Calibri</FontFamily>
                                                                           <FontWeight>Bold</FontWeight>
                                                                           <Format>#,0.00;(#,0.00);'-'</Format>
                                                                         </Style>
@@ -3946,7 +3837,6 @@
                                                                           <TextRun>
                                                                             <Value>=SUM(MAX(Fields!CRPre.Value, "contract_no") + MAX(Fields!CRCur.Value, "contract_no"))</Value>
                                                                             <Style>
-                                                                              <FontFamily>Calibri</FontFamily>
                                                                               <FontWeight>Bold</FontWeight>
                                                                               <Format>#,0.00;(#,0.00);'-'</Format>
                                                                             </Style>
@@ -3990,7 +3880,6 @@
                                                                               <TextRun>
                                                                                 <Value>=(SUM(MAX(Fields!DRPre.Value, "contract_no")) + SUM(Fields!DRCur.Value)) - (SUM(MAX(Fields!CRPre.Value, "contract_no")) + SUM(MAX(Fields!CRCur.Value, "contract_no")))</Value>
                                                                                 <Style>
-                                                                                  <FontFamily>Calibri</FontFamily>
                                                                                   <FontWeight>Bold</FontWeight>
                                                                                   <Format>#,0.00;(#,0.00);'-'</Format>
                                                                                 </Style>
@@ -4062,7 +3951,6 @@
                               <TextRun>
                                 <Value>= "GRAND TOTAL           (" &amp; CountDistinct(Fields!id.Value) &amp; ") :"</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
                                   <FontSize>11pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
@@ -4105,7 +3993,6 @@
                                   <TextRun>
                                     <Value>=Sum(Fields!pawn_price_approved.Value)</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
                                       <FontSize>11pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Format>#,0.00;(#,0.00);'-'</Format>
@@ -4138,7 +4025,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>0.55in</Size>
+                            <Size>0.57381in</Size>
                             <CellContents>
                               <Textbox Name="Textbox21">
                                 <CanGrow>true</CanGrow>
@@ -4149,7 +4036,6 @@
                                       <TextRun>
                                         <Value />
                                         <Style>
-                                          <FontFamily>Calibri</FontFamily>
                                           <FontSize>11pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
                                         </Style>
@@ -4181,7 +4067,7 @@
                           <TablixMembers>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>0.6in</Size>
+                                <Size>0.70119in</Size>
                                 <CellContents>
                                   <Textbox Name="Textbox25">
                                     <CanGrow>true</CanGrow>
@@ -4192,7 +4078,6 @@
                                           <TextRun>
                                             <Value />
                                             <Style>
-                                              <FontFamily>Calibri</FontFamily>
                                               <FontSize>11pt</FontSize>
                                               <FontWeight>Bold</FontWeight>
                                             </Style>
@@ -4235,7 +4120,6 @@
                                               <TextRun>
                                                 <Value>=Sum(Max(Fields!DRPre.Value, "contract_no"))</Value>
                                                 <Style>
-                                                  <FontFamily>Calibri</FontFamily>
                                                   <FontSize>11pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
                                                   <Format>#,0.00;(#,0.00);'-'</Format>
@@ -4279,7 +4163,6 @@
                                                   <TextRun>
                                                     <Value>=Sum(MAX(Fields!CRPre.Value,"contract_no"))</Value>
                                                     <Style>
-                                                      <FontFamily>Calibri</FontFamily>
                                                       <FontSize>11pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                       <Format>#,0.00;(#,0.00);'-'</Format>
@@ -4323,7 +4206,6 @@
                                                       <TextRun>
                                                         <Value>=SUM(MAX(Fields!DRPre.Value, "contract_no")) - SUM(MAX(Fields!CRPre.Value, "contract_no"))</Value>
                                                         <Style>
-                                                          <FontFamily>Calibri</FontFamily>
                                                           <FontSize>11pt</FontSize>
                                                           <FontWeight>Bold</FontWeight>
                                                           <Format>#,0.00;(#,0.00);'-'</Format>
@@ -4367,7 +4249,6 @@
                                                           <TextRun>
                                                             <Value>=Sum(Fields!DRCur.Value)</Value>
                                                             <Style>
-                                                              <FontFamily>Calibri</FontFamily>
                                                               <FontSize>11pt</FontSize>
                                                               <FontWeight>Bold</FontWeight>
                                                               <Format>#,0.00;(#,0.00);'-'</Format>
@@ -4411,7 +4292,6 @@
                                                               <TextRun>
                                                                 <Value>=Sum(MAX(Fields!CRCur.Value, "contract_no"))</Value>
                                                                 <Style>
-                                                                  <FontFamily>Calibri</FontFamily>
                                                                   <FontSize>11pt</FontSize>
                                                                   <FontWeight>Bold</FontWeight>
                                                                   <Format>#,0.00;(#,0.00);'-'</Format>
@@ -4455,7 +4335,6 @@
                                                                   <TextRun>
                                                                     <Value>=SUM(Max(Fields!DRPre.Value, "contract_no")) + SUM(Fields!DRCur.Value)</Value>
                                                                     <Style>
-                                                                      <FontFamily>Calibri</FontFamily>
                                                                       <FontSize>11pt</FontSize>
                                                                       <FontWeight>Bold</FontWeight>
                                                                       <Format>#,0.00;(#,0.00);'-'</Format>
@@ -4499,7 +4378,6 @@
                                                                       <TextRun>
                                                                         <Value>=SUM(MAX(Fields!CRPre.Value, "contract_no") + MAX(Fields!CRCur.Value, "contract_no"))</Value>
                                                                         <Style>
-                                                                          <FontFamily>Calibri</FontFamily>
                                                                           <FontSize>11pt</FontSize>
                                                                           <FontWeight>Bold</FontWeight>
                                                                           <Format>#,0.00;(#,0.00);'-'</Format>
@@ -4543,7 +4421,6 @@
                                                                           <TextRun>
                                                                             <Value>=(SUM(MAX(Fields!DRPre.Value, "contract_no")) + SUM(Fields!DRCur.Value)) - (SUM(MAX(Fields!CRPre.Value, "contract_no")) + SUM(MAX(Fields!CRCur.Value, "contract_no")))</Value>
                                                                             <Style>
-                                                                              <FontFamily>Calibri</FontFamily>
                                                                               <FontSize>11pt</FontSize>
                                                                               <FontWeight>Bold</FontWeight>
                                                                               <Format>#,0.00;(#,0.00);'-'</Format>
@@ -4605,8 +4482,8 @@
             <DataSetName>AIR_DS</DataSetName>
             <Top>1.84667in</Top>
             <Left>0.125in</Left>
-            <Height>1.25in</Height>
-            <Width>24.87708in</Width>
+            <Height>1.44048in</Height>
+            <Width>25.00208in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -4712,7 +4589,6 @@
                   <TextRun>
                     <Value>BRANCH:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -4746,7 +4622,6 @@
                   <TextRun>
                     <Value>DATE:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -4781,7 +4656,6 @@
                   <TextRun>
                     <Value>ACCRUAL INTEREST ON PAWN</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <Color>Red</Color>
@@ -4819,7 +4693,6 @@
                     <Value>Print Date:</Value>
                     <Style>
                       <FontFamily>Calibri</FontFamily>
-                      <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -4830,8 +4703,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.45397in</Top>
-            <Left>19.93189in</Left>
+            <Top>1.46785in</Top>
+            <Left>20.00133in</Left>
             <Height>0.25in</Height>
             <Width>0.74591in</Width>
             <ZIndex>8</ZIndex>
@@ -4856,7 +4729,6 @@
                     <Value>=Microsoft.VisualBasic.Strings.Format(NOW, "dd-MMM-yyyy")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Calibri</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -4865,8 +4737,8 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.45397in</Top>
-            <Left>20.6778in</Left>
+            <Top>1.46785in</Top>
+            <Left>20.74724in</Left>
             <Height>0.25in</Height>
             <Width>1.19792in</Width>
             <ZIndex>9</ZIndex>
@@ -4891,7 +4763,6 @@
                   <TextRun>
                     <Value>PAWN OFFICER:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -4926,6 +4797,7 @@
                   <TextRun>
                     <Value>=Parameters!CompanyName.Value</Value>
                     <Style>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -5043,7 +4915,7 @@
         <Height>5.65569in</Height>
         <Style />
       </Body>
-      <Width>25.14954in</Width>
+      <Width>25.25668in</Width>
       <Page>
         <InteractiveHeight>0in</InteractiveHeight>
         <InteractiveWidth>8.5in</InteractiveWidth>
