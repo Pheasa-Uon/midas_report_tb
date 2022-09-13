@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TrialBalanceTBC" targetNamespace="http://tempuri.org/TrialBalanceTBC.xsd" xmlns:mstns="http://tempuri.org/TrialBalanceTBC.xsd" xmlns="http://tempuri.org/TrialBalanceTBC.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TrialBalanceTBC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TrialBalanceTBC" msprop:Generator_UserDSName="TrialBalanceTBC">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TrailBalanaceTBC" msprop:Generator_TableClassName="TrailBalanaceTBCDataTable" msprop:Generator_TableVarName="tableTrailBalanaceTBC" msprop:Generator_TablePropName="TrailBalanaceTBC" msprop:Generator_RowDeletingName="TrailBalanaceTBCRowDeleting" msprop:Generator_RowChangingName="TrailBalanaceTBCRowChanging" msprop:Generator_RowEvHandlerName="TrailBalanaceTBCRowChangeEventHandler" msprop:Generator_RowDeletedName="TrailBalanaceTBCRowDeleted" msprop:Generator_UserTableName="TrailBalanaceTBC" msprop:Generator_RowChangedName="TrailBalanaceTBCRowChanged" msprop:Generator_RowEvArgName="TrailBalanaceTBCRowChangeEvent" msprop:Generator_RowClassName="TrailBalanaceTBCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="currency" msprop:Generator_ColumnVarNameInTable="columncurrency" msprop:Generator_ColumnPropNameInRow="currency" msprop:Generator_ColumnPropNameInTable="currencyColumn" msprop:Generator_UserColumnName="currency" type="xs:string" minOccurs="0" />
+              <xs:element name="gl" msprop:Generator_ColumnVarNameInTable="columngl" msprop:Generator_ColumnPropNameInRow="gl" msprop:Generator_ColumnPropNameInTable="glColumn" msprop:Generator_UserColumnName="gl" type="xs:string" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="gl_name" msprop:Generator_ColumnVarNameInTable="columngl_name" msprop:Generator_ColumnPropNameInRow="gl_name" msprop:Generator_ColumnPropNameInTable="gl_nameColumn" msprop:Generator_UserColumnName="gl_name" type="xs:string" minOccurs="0" />
+              <xs:element name="side" msprop:Generator_ColumnVarNameInTable="columnside" msprop:Generator_ColumnPropNameInRow="side" msprop:Generator_ColumnPropNameInTable="sideColumn" msprop:Generator_UserColumnName="side" type="xs:string" minOccurs="0" />
+              <xs:element name="O_DR" msprop:Generator_ColumnVarNameInTable="columnO_DR" msprop:Generator_ColumnPropNameInRow="O_DR" msprop:Generator_ColumnPropNameInTable="O_DRColumn" msprop:Generator_UserColumnName="O_DR" type="xs:string" minOccurs="0" />
+              <xs:element name="O_CR" msprop:Generator_ColumnVarNameInTable="columnO_CR" msprop:Generator_ColumnPropNameInRow="O_CR" msprop:Generator_ColumnPropNameInTable="O_CRColumn" msprop:Generator_UserColumnName="O_CR" type="xs:string" minOccurs="0" />
+              <xs:element name="M_DR" msprop:Generator_ColumnVarNameInTable="columnM_DR" msprop:Generator_ColumnPropNameInRow="M_DR" msprop:Generator_ColumnPropNameInTable="M_DRColumn" msprop:Generator_UserColumnName="M_DR" type="xs:string" minOccurs="0" />
+              <xs:element name="M_CR" msprop:Generator_ColumnVarNameInTable="columnM_CR" msprop:Generator_ColumnPropNameInRow="M_CR" msprop:Generator_ColumnPropNameInTable="M_CRColumn" msprop:Generator_UserColumnName="M_CR" type="xs:string" minOccurs="0" />
+              <xs:element name="C_DR" msprop:Generator_ColumnVarNameInTable="columnC_DR" msprop:Generator_ColumnPropNameInRow="C_DR" msprop:Generator_ColumnPropNameInTable="C_DRColumn" msprop:Generator_UserColumnName="C_DR" type="xs:string" minOccurs="0" />
+              <xs:element name="C_CR" msprop:Generator_ColumnVarNameInTable="columnC_CR" msprop:Generator_ColumnPropNameInRow="C_CR" msprop:Generator_ColumnPropNameInTable="C_CRColumn" msprop:Generator_UserColumnName="C_CR" type="xs:string" minOccurs="0" />
+              <xs:element name="parent_gl" msprop:Generator_ColumnVarNameInTable="columnparent_gl" msprop:Generator_ColumnPropNameInRow="parent_gl" msprop:Generator_ColumnPropNameInTable="parent_glColumn" msprop:Generator_UserColumnName="parent_gl" type="xs:string" minOccurs="0" />
+              <xs:element name="parent_gl_name" msprop:Generator_ColumnVarNameInTable="columnparent_gl_name" msprop:Generator_ColumnPropNameInRow="parent_gl_name" msprop:Generator_ColumnPropNameInTable="parent_gl_nameColumn" msprop:Generator_UserColumnName="parent_gl_name" type="xs:string" minOccurs="0" />
+              <xs:element name="acc_class_id" msprop:Generator_ColumnVarNameInTable="columnacc_class_id" msprop:Generator_ColumnPropNameInRow="acc_class_id" msprop:Generator_ColumnPropNameInTable="acc_class_idColumn" msprop:Generator_UserColumnName="acc_class_id" type="xs:string" minOccurs="0" />
+              <xs:element name="class_name" msprop:Generator_ColumnVarNameInTable="columnclass_name" msprop:Generator_ColumnPropNameInRow="class_name" msprop:Generator_ColumnPropNameInTable="class_nameColumn" msprop:Generator_UserColumnName="class_name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

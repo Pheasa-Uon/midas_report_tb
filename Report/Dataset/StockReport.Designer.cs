@@ -357,6 +357,20 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnvh_color;
             
+            private global::System.Data.DataColumn columnmarket_price;
+            
+            private global::System.Data.DataColumn columnaddress;
+            
+            private global::System.Data.DataColumn columnhot_price;
+            
+            private global::System.Data.DataColumn columnvh_first_issue_date;
+            
+            private global::System.Data.DataColumn columnis_ownership;
+            
+            private global::System.Data.DataColumn columncertificate_check;
+            
+            private global::System.Data.DataColumn columndisbursement_date;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public StockDSDataTable() {
@@ -704,6 +718,62 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn market_priceColumn {
+                get {
+                    return this.columnmarket_price;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn addressColumn {
+                get {
+                    return this.columnaddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn hot_priceColumn {
+                get {
+                    return this.columnhot_price;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn vh_first_issue_dateColumn {
+                get {
+                    return this.columnvh_first_issue_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn is_ownershipColumn {
+                get {
+                    return this.columnis_ownership;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn certificate_checkColumn {
+                get {
+                    return this.columncertificate_check;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn disbursement_dateColumn {
+                get {
+                    return this.columndisbursement_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -778,7 +848,14 @@ namespace Report.Dataset {
                         string pre_serial_number, 
                         string vh_type, 
                         string vh_mark, 
-                        string vh_color) {
+                        string vh_color, 
+                        string market_price, 
+                        string address, 
+                        string hot_price, 
+                        string vh_first_issue_date, 
+                        string is_ownership, 
+                        string certificate_check, 
+                        string disbursement_date) {
                 StockDSRow rowStockDSRow = ((StockDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -819,7 +896,14 @@ namespace Report.Dataset {
                         pre_serial_number,
                         vh_type,
                         vh_mark,
-                        vh_color};
+                        vh_color,
+                        market_price,
+                        address,
+                        hot_price,
+                        vh_first_issue_date,
+                        is_ownership,
+                        certificate_check,
+                        disbursement_date};
                 rowStockDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStockDSRow);
                 return rowStockDSRow;
@@ -881,6 +965,13 @@ namespace Report.Dataset {
                 this.columnvh_type = base.Columns["vh_type"];
                 this.columnvh_mark = base.Columns["vh_mark"];
                 this.columnvh_color = base.Columns["vh_color"];
+                this.columnmarket_price = base.Columns["market_price"];
+                this.columnaddress = base.Columns["address"];
+                this.columnhot_price = base.Columns["hot_price"];
+                this.columnvh_first_issue_date = base.Columns["vh_first_issue_date"];
+                this.columnis_ownership = base.Columns["is_ownership"];
+                this.columncertificate_check = base.Columns["certificate_check"];
+                this.columndisbursement_date = base.Columns["disbursement_date"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -964,6 +1055,20 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnvh_mark);
                 this.columnvh_color = new global::System.Data.DataColumn("vh_color", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnvh_color);
+                this.columnmarket_price = new global::System.Data.DataColumn("market_price", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmarket_price);
+                this.columnaddress = new global::System.Data.DataColumn("address", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaddress);
+                this.columnhot_price = new global::System.Data.DataColumn("hot_price", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhot_price);
+                this.columnvh_first_issue_date = new global::System.Data.DataColumn("vh_first_issue_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvh_first_issue_date);
+                this.columnis_ownership = new global::System.Data.DataColumn("is_ownership", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_ownership);
+                this.columncertificate_check = new global::System.Data.DataColumn("certificate_check", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncertificate_check);
+                this.columndisbursement_date = new global::System.Data.DataColumn("disbursement_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndisbursement_date);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1730,6 +1835,118 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string market_price {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.market_priceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'market_price\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.market_priceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string address {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.addressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'address\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.addressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string hot_price {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.hot_priceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'hot_price\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.hot_priceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string vh_first_issue_date {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.vh_first_issue_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'vh_first_issue_date\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.vh_first_issue_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string is_ownership {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.is_ownershipColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'is_ownership\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.is_ownershipColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string certificate_check {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.certificate_checkColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'certificate_check\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.certificate_checkColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string disbursement_date {
+                get {
+                    try {
+                        return ((string)(this[this.tableStockDS.disbursement_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'disbursement_date\' in table \'StockDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStockDS.disbursement_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tableStockDS.idColumn);
             }
@@ -2194,6 +2411,90 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setvh_colorNull() {
                 this[this.tableStockDS.vh_colorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Ismarket_priceNull() {
+                return this.IsNull(this.tableStockDS.market_priceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setmarket_priceNull() {
+                this[this.tableStockDS.market_priceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsaddressNull() {
+                return this.IsNull(this.tableStockDS.addressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetaddressNull() {
+                this[this.tableStockDS.addressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Ishot_priceNull() {
+                return this.IsNull(this.tableStockDS.hot_priceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Sethot_priceNull() {
+                this[this.tableStockDS.hot_priceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isvh_first_issue_dateNull() {
+                return this.IsNull(this.tableStockDS.vh_first_issue_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setvh_first_issue_dateNull() {
+                this[this.tableStockDS.vh_first_issue_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isis_ownershipNull() {
+                return this.IsNull(this.tableStockDS.is_ownershipColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setis_ownershipNull() {
+                this[this.tableStockDS.is_ownershipColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Iscertificate_checkNull() {
+                return this.IsNull(this.tableStockDS.certificate_checkColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setcertificate_checkNull() {
+                this[this.tableStockDS.certificate_checkColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isdisbursement_dateNull() {
+                return this.IsNull(this.tableStockDS.disbursement_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setdisbursement_dateNull() {
+                this[this.tableStockDS.disbursement_dateColumn] = global::System.Convert.DBNull;
             }
         }
         
