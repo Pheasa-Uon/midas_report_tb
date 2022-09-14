@@ -71,7 +71,7 @@ namespace Report.Accounting
                 "     ELSE CASE WHEN act.balance_side = 2 THEN act.amount ELSE -act.amount END " +
                 " END AS amount, " +
                 " jou.trnx_id,act.trx_memo,act.gl_code,coa.gl_name,cur.currency,jou.trnx_ref, " +
-                " act.sys_date,jou.journal_desc,usr.username,aac.id AS class_type,avd.vendor_name,cus.customer_name,act.balance_side " +
+                " sd.system_date as sys_date,jou.journal_desc,usr.username,aac.id AS class_type,avd.vendor_name,cus.customer_name,act.balance_side " +
                 " FROM acc_transaction act " +
                 " LEFT JOIN acc_chat_of_account coa ON act.gl_id = coa.id " +
                 " LEFT JOIN acc_account_class aac ON coa.acc_class_id = aac.id " +
@@ -82,7 +82,8 @@ namespace Report.Accounting
                 " LEFT JOIN contract con ON act.contract_id = con.id " +
                 " LEFT JOIN customer cus ON con.customer_id = cus.id " +
                 " LEFT JOIN `user` usr ON jou.created_by_id = usr.id " +
-                " WHERE DATE(act.sys_date) BETWEEN DATE('"+ fromDate +"') AND DATE('"+ toDate +"') AND jou.trnx_status = 1 AND act.branch_id = "+ddBranchName.SelectedItem.Value+" AND act.trx_status IN(1, 2) " +
+                " LEFT JOIN system_date sd ON act.system_date_id = sd.id " +
+                " WHERE DATE(act.sys_date) BETWEEN DATE('" + fromDate +"') AND DATE('"+ toDate +"') AND jou.trnx_status = 1 AND act.branch_id = "+ddBranchName.SelectedItem.Value+" AND act.trx_status IN(1, 2) " +
                 " AND act.gl_code = '"+txtGLCode.Text.Trim()+ "' ORDER BY entry_no; ";
 
             var openingBalanceSql = "SELECT ACA.acc_class_id,IFNULL(ABH.balance,0) as open_balance FROM acc_gl_balance_hist ABH LEFT JOIN acc_chat_of_account ACA ON ABH.gl = ACA.gl " +

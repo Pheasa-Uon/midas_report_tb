@@ -414,7 +414,7 @@
                                   <Value>=Fields!sys_date.Value</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
-                                    <Format>dd-MM-yyyy</Format>
+                                    <Format>dd/MM/yyyy</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -902,7 +902,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox25</rd:DefaultName>
             <Top>0.53in</Top>
-            <Left>0.11333in</Left>
+            <Left>0.11334in</Left>
             <Height>0.34896in</Height>
             <Width>11.58243in</Width>
             <ZIndex>1</ZIndex>
