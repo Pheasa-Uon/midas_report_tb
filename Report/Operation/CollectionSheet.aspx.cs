@@ -46,24 +46,31 @@ namespace Report.Operation
             var toDateSql = DateTime.ParseExact(dtpToDate.Text, format, null);
             var toDay = toDateSql.ToString("yyyy-MM-dd");
 
-            var sql = "SELECT ST.ticket_no,CUS.customer_name,CUS.personal_phone, " +
-                    "CUR.currency,PL.principle_less princ_outstanding, ST.due_date, " +
-                    "ST.interest_less,ST.principle_less,ST.penalty_less, " +
-                    "P.lob_name,SI.name CO_Name " +
-                    "FROM schedule_ticket ST " +
-                    "LEFT JOIN contract C ON ST.contract_id = C.id " +
-                    "LEFT JOIN customer CUS ON C.customer_id = CUS.id "+
-                    "LEFT JOIN currency CUR ON C.currency_id = CUR.id "+
-                    "LEFT JOIN product P ON C.product_id = P.id "+
-                    "LEFT JOIN staff_info SI ON C.pawn_officer_id = SI.id "+
-                    "LEFT JOIN(SELECT contract_id, SUM(principle_less) principle_less "+
-                    "FROM schedule_ticket " +
-                    "WHERE ticket_status != 'P' AND branch_id = " + ddBranchName.SelectedItem.Value + " " +
-                    "GROUP BY contract_id) PL ON C.id = PL.contract_id " +
-                    "WHERE ST.ticket_status != 'P' AND ST.ticket_status != 'FPP' " +
-                    "AND DATE(ST.due_date) BETWEEN DATE('" + fromDay + "') AND DATE('" + toDay + "') " +
-                    "AND C.branch_id = " + ddBranchName.SelectedItem.Value + " AND C.contract_status IN(4, 7) AND c.`b_status`= TRUE " +
-                    "AND ST.ticket_status != 'I' ";
+            var sql = "	SELECT ST.ticket_no,CUS.customer_name,CUS.personal_phone, 		" +
+                        "   CUR.currency,PL.principle_less princ_outstanding, ST.due_date, 	" +
+                        "   ST.interest_less,ST.principle_less,ST.penalty_less, 	" +
+                        "   P.lob_name,SI.name CO_Name, 							" +
+                        "   case when ticket_status ='P' then 'Paid' 				" +
+                        "	when ticket_status ='A' then 'Active' 				" +
+                        "   when ticket_status ='I' then 'Inactive' 			" +
+                        "   when ticket_status ='PPP' then 'Partial Prepaid'  	" +
+                        "   when ticket_status ='FPP' then 'Full Prepaid'  	" +
+                        "   else 'Partial Paid' end ticket_status 				" +
+                        " FROM schedule_ticket ST 								" +
+                        " LEFT JOIN contract C ON ST.contract_id = C.id 			" +
+                        " LEFT JOIN customer CUS ON C.customer_id = CUS.id 		" +
+                        " LEFT JOIN currency CUR ON C.currency_id = CUR.id 		" +
+                        " LEFT JOIN product P ON C.product_id = P.id 			" +
+                        " LEFT JOIN staff_info SI ON C.pawn_officer_id = SI.id 	" +
+                        " LEFT JOIN(SELECT contract_id, SUM(principle_less) principle_less  		" +
+                        " FROM schedule_ticket 									" +
+                        " WHERE branch_id = " + ddBranchName.SelectedItem.Value + 
+                        " GROUP BY contract_id) PL ON C.id = PL.contract_id 		" +
+                        " WHERE  DATE(ST.due_date) BETWEEN DATE('" + fromDay + "') AND DATE(' " + toDay + " ') 		" +
+                        " AND C.branch_id = " + ddBranchName.SelectedItem.Value  + 
+                        " AND C.contract_status IN(4, 7) AND c.`b_status`= TRUE	" +
+                        " order by due_date ";
+
             if (ddOfficer.SelectedItem.Value != "0")
             {
                 sql += " AND C.pawn_officer_id=" + ddOfficer.SelectedItem.Value + ";"; 

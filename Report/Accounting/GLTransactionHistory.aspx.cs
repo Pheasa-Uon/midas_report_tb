@@ -83,13 +83,13 @@ namespace Report.Accounting
                 " LEFT JOIN customer cus ON con.customer_id = cus.id " +
                 " LEFT JOIN `user` usr ON jou.created_by_id = usr.id " +
                 " LEFT JOIN system_date sd ON act.system_date_id = sd.id " +
-                " WHERE DATE(act.sys_date) BETWEEN DATE('" + fromDate +"') AND DATE('"+ toDate +"') AND jou.trnx_status = 1 AND act.branch_id = "+ddBranchName.SelectedItem.Value+" AND act.trx_status IN(1, 2) " +
-                " AND act.gl_code = '"+txtGLCode.Text.Trim()+ "' ORDER BY entry_no; ";
+                " WHERE DATE(act.sys_date) BETWEEN DATE('" + fromDate + "') AND DATE('" + toDate + "') AND jou.trnx_status = 1 AND act.branch_id = " + ddBranchName.SelectedItem.Value + " AND act.trx_status IN(1, 2) " +
+                " AND act.gl_code = '" + txtGLCode.Text.Trim() + "' ORDER BY entry_no; ";
 
             var openingBalanceSql = "SELECT ACA.acc_class_id,IFNULL(ABH.balance,0) as open_balance FROM acc_gl_balance_hist ABH LEFT JOIN acc_chat_of_account ACA ON ABH.gl = ACA.gl " +
-                " WHERE ABH.branch_id = "+ddBranchName.SelectedItem.Value+" AND DATE(ABH.sys_date) = DATE_ADD('"+fromDate+"', INTERVAL - 1 DAY) AND ABH.gl = '"+txtGLCode.Text.Trim()+"' LIMIT 1; ";
+                " WHERE ABH.branch_id = " + ddBranchName.SelectedItem.Value + " AND DATE(ABH.sys_date) = DATE_ADD('" + fromDate + "', INTERVAL - 1 DAY) AND ABH.gl = '" + txtGLCode.Text.Trim() + "' LIMIT 1; ";
 
-            var closeBalance = "SELECT IFNULL(balance,0) as close_balance FROM acc_gl_balance_hist WHERE  branch_id = "+ddBranchName.SelectedItem.Value+" AND DATE(sys_date) = DATE('"+fromDate+"') AND gl = '"+txtGLCode.Text.Trim()+"' LIMIT 1;";
+            var closeBalance = "SELECT IFNULL(balance,0) as close_balance FROM acc_gl_balance_hist WHERE  branch_id = " + ddBranchName.SelectedItem.Value + " AND DATE(sys_date) = DATE('" + fromDate + "') AND gl = '" + txtGLCode.Text.Trim() + "' LIMIT 1;";
 
             DataTable glTransactionDT = db.getDataTable(glTransactionSql);
             DataTable openingBalanceDT = db.getDataTable(openingBalanceSql);

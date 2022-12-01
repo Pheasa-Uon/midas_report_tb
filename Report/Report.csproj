@@ -1076,6 +1076,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ChartOfAccount.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\CollectionSheet.cs">
+      <DependentUpon>CollectionSheet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\CollectionSheet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

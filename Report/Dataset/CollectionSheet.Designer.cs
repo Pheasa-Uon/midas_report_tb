@@ -301,6 +301,8 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnCO_Name;
             
+            private global::System.Data.DataColumn columnticket_status;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public CollectionSheetDSDataTable() {
@@ -424,6 +426,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ticket_statusColumn {
+                get {
+                    return this.columnticket_status;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -459,7 +469,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CollectionSheetDSRow AddCollectionSheetDSRow(string ticket_no, string personal_phone, string currency, string customer_name, string princ_outstanding, string interest_less, string principle_less, string penalty_less, string due_date, string lob_name, string CO_Name) {
+            public CollectionSheetDSRow AddCollectionSheetDSRow(string ticket_no, string personal_phone, string currency, string customer_name, string princ_outstanding, string interest_less, string principle_less, string penalty_less, string due_date, string lob_name, string CO_Name, string ticket_status) {
                 CollectionSheetDSRow rowCollectionSheetDSRow = ((CollectionSheetDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ticket_no,
@@ -472,7 +482,8 @@ namespace Report.Dataset {
                         penalty_less,
                         due_date,
                         lob_name,
-                        CO_Name};
+                        CO_Name,
+                        ticket_status};
                 rowCollectionSheetDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCollectionSheetDSRow);
                 return rowCollectionSheetDSRow;
@@ -506,6 +517,7 @@ namespace Report.Dataset {
                 this.columndue_date = base.Columns["due_date"];
                 this.columnlob_name = base.Columns["lob_name"];
                 this.columnCO_Name = base.Columns["CO_Name"];
+                this.columnticket_status = base.Columns["ticket_status"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -533,6 +545,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnlob_name);
                 this.columnCO_Name = new global::System.Data.DataColumn("CO_Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCO_Name);
+                this.columnticket_status = new global::System.Data.DataColumn("ticket_status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnticket_status);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -851,6 +865,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ticket_status {
+                get {
+                    try {
+                        return ((string)(this[this.tableCollectionSheetDS.ticket_statusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ticket_status\' in table \'CollectionSheetDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCollectionSheetDS.ticket_statusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isticket_noNull() {
                 return this.IsNull(this.tableCollectionSheetDS.ticket_noColumn);
             }
@@ -979,6 +1009,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetCO_NameNull() {
                 this[this.tableCollectionSheetDS.CO_NameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isticket_statusNull() {
+                return this.IsNull(this.tableCollectionSheetDS.ticket_statusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setticket_statusNull() {
+                this[this.tableCollectionSheetDS.ticket_statusColumn] = global::System.Convert.DBNull;
             }
         }
         
