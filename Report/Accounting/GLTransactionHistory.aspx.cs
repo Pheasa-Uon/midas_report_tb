@@ -71,7 +71,7 @@ namespace Report.Accounting
                 "     ELSE CASE WHEN act.balance_side = 2 THEN act.amount ELSE -act.amount END " +
                 " END AS amount, " +
                 " jou.trnx_id,act.trx_memo,act.gl_code,coa.gl_name,cur.currency,jou.trnx_ref, " +
-                " sd.system_date as sys_date,jou.journal_desc,usr.username,aac.id AS class_type,avd.vendor_name,cus.customer_name,act.balance_side " +
+                " date(sd.system_date) as sys_date,jou.journal_desc,usr.username,aac.id AS class_type,avd.vendor_name,cus.customer_name,act.balance_side " +
                 " FROM acc_transaction act " +
                 " LEFT JOIN acc_chat_of_account coa ON act.gl_id = coa.id " +
                 " LEFT JOIN acc_account_class aac ON coa.acc_class_id = aac.id " +

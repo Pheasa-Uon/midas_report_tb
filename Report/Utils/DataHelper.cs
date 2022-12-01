@@ -398,6 +398,18 @@ namespace Report.Utils
             ddl.SelectedIndex = 0;
         }
 
+        public static void populateOfficerDDLAll (DropDownList ddl)
+        {
+            DBConnect db = new DBConnect();
+            var officerList = db.GetOfficerNamesAll();
+            ddl.DataTextField = "name";
+            ddl.DataValueField = "id";
+            ddl.DataSource = officerList;
+            ddl.DataBind();
+            ddl.Items.Insert(0, new ListItem("--- All ---", "0"));
+            ddl.SelectedIndex = 0;
+        }
+
         //Populate CO Productivity Officer List To Dropdown List Statement
         public static void populateCOProductivityOfficerDDL(DropDownList ddl, int branchId)
         {
@@ -431,9 +443,10 @@ namespace Report.Utils
             ddl.DataValueField = "id";
             ddl.DataSource = branchList;
             ddl.DataBind();
-            if (branchList.Count > 1)
+            if (branchList.Count >= 1)
             {
-                ddl.Items.Insert(0, new ListItem("--- Select a Value ---", ""));
+                // ddl.Items.Insert(0, new ListItem("--- Select a Value ---", ""));
+                ddl.Items.Insert(0, new ListItem("-- ALL --", "ALL"));
             }
         }
 

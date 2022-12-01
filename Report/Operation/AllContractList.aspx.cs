@@ -28,8 +28,16 @@ namespace Report.Operation
         {
             if (ddBranchName.SelectedItem.Value != "")
             {
-                ddOfficer.Enabled = true;
-                DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedItem.Value));
+                if (ddBranchName.SelectedItem.Value == "ALL")
+                {
+                    ddOfficer.Enabled = true;
+                    DataHelper.populateOfficerDDLAll(ddOfficer);
+                } else
+                {
+                    ddOfficer.Enabled = true;
+                    DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedItem.Value));
+                }
+               
             }
             else
             {
@@ -41,7 +49,7 @@ namespace Report.Operation
         protected void btnView_Click(object sender, EventArgs e)
         {
             var sql = "";
-            if (ddBranchName.SelectedItem.Value == "")
+            if (ddBranchName.SelectedItem.Value == "ALL")
             {
                 sql = "SELECT CT.id,CUS.`customer_no`,CUS.`customer_name`,CUS.`customer_name_kh`,CUS.`dob`,CUS.`identify`, " +
                 "CUS.`personal_phone`,CUS.`address`,CUS.`remark`,BN.`branch_name`,PT.lob_type,PD.lob_name,IDT.identify_type, " +
