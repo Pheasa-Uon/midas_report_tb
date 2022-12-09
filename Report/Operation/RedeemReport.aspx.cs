@@ -75,36 +75,72 @@ namespace Report.Operation
             var month = systemDateSql.ToString("MM");
             var year = systemDateSql.ToString("yyyy");
 
-            var sql = "SELECT c.id, c.redeem_date, c.product_id, cus.customer_name, pro.lob_name, st.ticket_no, " +
-        " p.principle_pay AS principle, p.interest_pay + early_redeem_pay AS interest, " +
-        " IFNULL(OI.total_other_income, 0) AS redeem_other_income, " +
-        " penalty_pay AS total_penalty_paid,cur.currency, staff.`name` pawn_officer, " +
-        " st.serial_number, IFNULL(WV.waive_amount, 0) AS waive_amount " +
-        " FROM payment_total ptt " +
-        " INNER JOIN system_date s ON ptt.system_date_id = s.id " +
-        " INNER JOIN payment p ON ptt.id = p.payment_total_id " +
-        " LEFT JOIN schedule_ticket st ON st.id = p.schedule_ticket_id " +
-        " INNER JOIN contract c ON ptt.contract_id = c.id " +
-        " INNER JOIN customer cus ON cus.id = c.customer_id " +
-        " INNER JOIN product pro ON pro.id = c.product_id " +
-        " INNER JOIN currency cur ON cur.id = c.currency_id " +
-        " INNER JOIN staff_info staff ON staff.id = c.pawn_officer_id " +
-        " LEFT JOIN " +
-        " ( " +
-        "     SELECT payment_total_id, SUM(other_income_amount) AS total_other_income " +
-        "     FROM payment_other_income " +
-        "     GROUP BY payment_total_id " +
-        " ) OI ON OI.payment_total_id = ptt.id " +
-        " LEFT JOIN " +
-        " ( " +
-        "     SELECT system_date_id, contract_id, SUM(waive_amount) waive_amount " +
-        "     FROM waive " +
-        "     WHERE waive_status = 2 AND trxn_type <= 2 GROUP BY system_date_id,contract_id " +
-        " ) WV ON c.id = WV.contract_id AND ptt.system_date_id = WV.system_date_id " +
-        " WHERE ptt.payment_flag = 3 AND c.redeem_type = 2 AND ptt.payment_total_status = TRUE " +
-        " AND c.contract_status = 6 AND c.b_status = 1 " +
-        " AND c.branch_id = " + ddBranchName.SelectedItem.Value +
-        " AND c.currency_id = " + ddCurrency.SelectedItem.Value;
+            var sql = "";
+            if (ddBranchName.SelectedItem.Value == "ALL")
+            {
+                sql = "SELECT c.id, c.redeem_date, c.product_id, cus.customer_name, pro.lob_name, st.ticket_no, " +
+                " p.principle_pay AS principle, p.interest_pay + early_redeem_pay AS interest, " +
+                " IFNULL(OI.total_other_income, 0) AS redeem_other_income, " +
+                " penalty_pay AS total_penalty_paid,cur.currency, staff.`name` pawn_officer, " +
+                " st.serial_number, IFNULL(WV.waive_amount, 0) AS waive_amount " +
+                " FROM payment_total ptt " +
+                " INNER JOIN system_date s ON ptt.system_date_id = s.id " +
+                " INNER JOIN payment p ON ptt.id = p.payment_total_id " +
+                " LEFT JOIN schedule_ticket st ON st.id = p.schedule_ticket_id " +
+                " INNER JOIN contract c ON ptt.contract_id = c.id " +
+                " INNER JOIN customer cus ON cus.id = c.customer_id " +
+                " INNER JOIN product pro ON pro.id = c.product_id " +
+                " INNER JOIN currency cur ON cur.id = c.currency_id " +
+                " INNER JOIN staff_info staff ON staff.id = c.pawn_officer_id " +
+                " LEFT JOIN " +
+                " ( " +
+                "     SELECT payment_total_id, SUM(other_income_amount) AS total_other_income " +
+                "     FROM payment_other_income " +
+                "     GROUP BY payment_total_id " +
+                " ) OI ON OI.payment_total_id = ptt.id " +
+                " LEFT JOIN " +
+                " ( " +
+                "     SELECT system_date_id, contract_id, SUM(waive_amount) waive_amount " +
+                "     FROM waive " +
+                "     WHERE waive_status = 2 AND trxn_type <= 2 GROUP BY system_date_id,contract_id " +
+                " ) WV ON c.id = WV.contract_id AND ptt.system_date_id = WV.system_date_id " +
+                " WHERE ptt.payment_flag = 3 AND c.redeem_type = 2 AND ptt.payment_total_status = TRUE " +
+                " AND c.contract_status = 6 AND c.b_status = 1 " +
+                " AND c.currency_id = " + ddCurrency.SelectedItem.Value;
+            }
+            else
+            {
+                sql = "SELECT c.id, c.redeem_date, c.product_id, cus.customer_name, pro.lob_name, st.ticket_no, " +
+                " p.principle_pay AS principle, p.interest_pay + early_redeem_pay AS interest, " +
+                " IFNULL(OI.total_other_income, 0) AS redeem_other_income, " +
+                " penalty_pay AS total_penalty_paid,cur.currency, staff.`name` pawn_officer, " +
+                " st.serial_number, IFNULL(WV.waive_amount, 0) AS waive_amount " +
+                " FROM payment_total ptt " +
+                " INNER JOIN system_date s ON ptt.system_date_id = s.id " +
+                " INNER JOIN payment p ON ptt.id = p.payment_total_id " +
+                " LEFT JOIN schedule_ticket st ON st.id = p.schedule_ticket_id " +
+                " INNER JOIN contract c ON ptt.contract_id = c.id " +
+                " INNER JOIN customer cus ON cus.id = c.customer_id " +
+                " INNER JOIN product pro ON pro.id = c.product_id " +
+                " INNER JOIN currency cur ON cur.id = c.currency_id " +
+                " INNER JOIN staff_info staff ON staff.id = c.pawn_officer_id " +
+                " LEFT JOIN " +
+                " ( " +
+                "     SELECT payment_total_id, SUM(other_income_amount) AS total_other_income " +
+                "     FROM payment_other_income " +
+                "     GROUP BY payment_total_id " +
+                " ) OI ON OI.payment_total_id = ptt.id " +
+                " LEFT JOIN " +
+                " ( " +
+                "     SELECT system_date_id, contract_id, SUM(waive_amount) waive_amount " +
+                "     FROM waive " +
+                "     WHERE waive_status = 2 AND trxn_type <= 2 GROUP BY system_date_id,contract_id " +
+                " ) WV ON c.id = WV.contract_id AND ptt.system_date_id = WV.system_date_id " +
+                " WHERE ptt.payment_flag = 3 AND c.redeem_type = 2 AND ptt.payment_total_status = TRUE " +
+                " AND c.contract_status = 6 AND c.b_status = 1 " +
+                " AND c.branch_id = " + ddBranchName.SelectedItem.Value +
+                " AND c.currency_id = " + ddCurrency.SelectedItem.Value;
+            }
             if (fromDay != "")
             {
                 sql += " AND C.redeem_date BETWEEN DATE('" + fromDay + "') AND DATE('" + systemDate + "') ";
@@ -142,10 +178,19 @@ namespace Report.Operation
         }
         private void populateOfficer()
         {
-            if (ddBranchName.SelectedValue != "")
+            if (ddBranchName.SelectedItem.Value != "")
             {
-                ddOfficer.Enabled = true;
-                DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedValue));
+                if (ddBranchName.SelectedItem.Value == "ALL")
+                {
+                    ddOfficer.Enabled = true;
+                    DataHelper.populateOfficerDDLAll(ddOfficer);
+                }
+                else
+                {
+                    ddOfficer.Enabled = true;
+                    DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedItem.Value));
+                }
+
             }
             else
             {
