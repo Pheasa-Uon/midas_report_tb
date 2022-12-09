@@ -21,14 +21,27 @@ namespace Report.Operation
 
         protected void btnView_Click(object sender, EventArgs e)
         {
-            var sql = "SELECT CUS.customer_no, customer_name, customer_name_kh, SX.`sex`, " +
+            var sql = "";
+            if (ddBranchName.SelectedItem.Value == "ALL")
+            {
+                sql = "SELECT CUS.customer_no, customer_name, customer_name_kh, SX.`sex`, " +
+                "CUS.dob, IDT.`identify_type`, CUS.`identify`, CUS.`personal_phone`, " +
+                "OCP.`occupation`, CUS.`home_street`, CUS.`address`, CUS.`remark` " +
+                "FROM customer CUS LEFT JOIN identify_type IDT ON CUS.`identify_type_id` = IDT.`id` " +
+                "LEFT JOIN sex SX ON CUS.`sex_id` = SX.`id` " +
+                "LEFT JOIN occupation OCP ON CUS.`occupation_id` = OCP.`id` " +
+                "WHERE CUS.`b_status`= TRUE;";
+            }
+            else
+            {
+                sql = "SELECT CUS.customer_no, customer_name, customer_name_kh, SX.`sex`, " +
                 "CUS.dob, IDT.`identify_type`, CUS.`identify`, CUS.`personal_phone`, " +
                 "OCP.`occupation`, CUS.`home_street`, CUS.`address`, CUS.`remark` " +
                 "FROM customer CUS LEFT JOIN identify_type IDT ON CUS.`identify_type_id` = IDT.`id` " +
                 "LEFT JOIN sex SX ON CUS.`sex_id` = SX.`id` " +
                 "LEFT JOIN occupation OCP ON CUS.`occupation_id` = OCP.`id` " +
                 "WHERE CUS.`b_status`= TRUE AND branch_id = " + ddBranchName.SelectedItem.Value + ";";
-         
+            }
             DataTable dt = db.getDataTable(sql);
             GenerateReport(dt);
         }
