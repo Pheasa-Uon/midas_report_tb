@@ -23,7 +23,8 @@ namespace Report.Operation
             if (!IsPostBack)
             {
                 Utils.DataHelper.checkLoginSession();
-                DataHelper.populateBranchDDLAllowAll(ddBranchName, DataHelper.getUserId());
+                //DataHelper.populateBranchDDLAllowAll(ddBranchName, DataHelper.getUserId());
+                DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
                 var date = DataHelper.getSystemDateTextbox();
                 dtpFromDate.Text = date;
                 dtpToDate.Text = date;
