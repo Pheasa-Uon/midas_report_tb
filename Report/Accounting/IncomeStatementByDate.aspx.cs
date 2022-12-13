@@ -21,7 +21,7 @@ namespace Report.Accounting
             {
                 var date = DataHelper.getSystemDateTextbox();
                 DataHelper.checkLoginSession();
-                DataHelper.populateBranchDDLAllowAll(ddBranchName, DataHelper.getUserId());
+                DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
                 dtpFromDate.Text = date;
                 dtpToDate.Text = date;
             }
