@@ -16,6 +16,7 @@ namespace Report.Accounting
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*
             if (!IsPostBack)
             {
                 DataHelper.checkLoginSession();
@@ -29,7 +30,13 @@ namespace Report.Accounting
                 }
                 
                 dtpSystemDate.Text = DataHelper.getSystemDate().ToString(format);
+            } */
+            if (!IsPostBack)
+            {
+                DataHelper.checkLoginSession();
+                DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
             }
+
         }
         
         private void GenerateReport(DataTable firstBalanceSheetDT, DataTable secondBalanceSheetDT)
