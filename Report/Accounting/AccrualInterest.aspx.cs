@@ -37,13 +37,22 @@ namespace Report.Accounting
         {
             if (ddBranchName.SelectedItem.Value != "")
             {
-                ddOfficer.Enabled = true;
-                DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedItem.Value));
+                if (ddBranchName.SelectedItem.Value == "ALL")
+                {
+                    ddOfficer.Enabled = true;
+                    DataHelper.populateOfficerDDLAll(ddOfficer);
+                }
+                else
+                {
+                    ddOfficer.Enabled = true;
+                    DataHelper.populateOfficerDDL(ddOfficer, Convert.ToInt32(ddBranchName.SelectedItem.Value));
+                }
+
             }
             else
             {
-                ddOfficer.Items.Clear();
                 ddOfficer.Enabled = false;
+                ddOfficer.Items.Clear();
             }
         }
 
