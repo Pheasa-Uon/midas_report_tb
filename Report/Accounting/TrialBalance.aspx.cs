@@ -57,7 +57,42 @@ namespace Report.Accounting
                 return;
             }
 
-            var sql = "SELECT acc.id,CC.currency,IFNULL(acc.parent_gl,acc.gl) parent_gl,(SELECT gl_name FROM acc_chat_of_account WHERE gl=IFNULL(acc.parent_gl,acc.gl)) parent_gl_name,acc.gl,acc.gl_name,TRIM(acc.side) AS side, " +
+            var sql = "";
+            if (ddBranchName.SelectedItem.Value == "ALL")
+            {
+                sql = "SELECT acc.id,CC.currency,IFNULL(acc.parent_gl,acc.gl) parent_gl,(SELECT gl_name FROM acc_chat_of_account WHERE gl=IFNULL(acc.parent_gl,acc.gl)) parent_gl_name,acc.gl,acc.gl_name,TRIM(acc.side) AS side, " +
+                " CASE WHEN bal_his.balance IS NULL THEN 0 " +
+                " WHEN TRIM(acc.side)= 'Debit' AND bal_his.balance < 0 THEN bal_his.balance * (-1) " +
+                " WHEN TRIM(acc.side)= 'Credit' AND bal_his.balance < 0 THEN bal_his.balance * (-1) " +
+                " ELSE 0 END AS O_DR, " +
+                " CASE WHEN bal_his.balance IS NULL THEN 0 " +
+                " WHEN TRIM(acc.side)= 'Credit' AND bal_his.balance >= 0 THEN bal_his.balance " +
+                "  WHEN TRIM(acc.side) = 'Debit' AND bal_his.balance > 0 THEN bal_his.balance " +
+                "    ELSE 0 END AS O_CR, " +
+                " IFNULL(new_amt.debit_amount, 0) M_DR, " +
+                " IFNULL(new_amt.credit_amount, 0) M_CR, " +
+                " CASE WHEN bal_his.balance - IFNULL(new_amt.debit_amount, 0) + IFNULL(new_amt.credit_amount, 0) < 0 THEN " +
+                " (bal_his.balance - IFNULL(new_amt.debit_amount, 0) + IFNULL(new_amt.credit_amount, 0)) * (-1) ELSE 0 END AS C_DR," +
+                " CASE WHEN bal_his.balance - IFNULL(new_amt.debit_amount, 0) + IFNULL(new_amt.credit_amount, 0) > 0 THEN" +
+                " (bal_his.balance - IFNULL(new_amt.debit_amount, 0) + IFNULL(new_amt.credit_amount, 0)) ELSE 0 END AS C_CR" +
+                "  FROM acc_chat_of_account acc LEFT JOIN " +
+                "  (SELECT gl_id, " +
+                "  SUM(CASE WHEN balance_side = 1 THEN amount ELSE 0 END) AS debit_amount, " +
+                "  SUM(CASE WHEN balance_side = 2 THEN amount ELSE 0 END) AS credit_amount " +
+                " FROM acc_transaction WHERE DATE(sys_date) BETWEEN DATE('" + fromDate + "') AND DATE('" + toDate + "') AND b_status = 1 AND trx_status = 1 " +
+                " GROUP BY gl_id " +
+                " ) AS new_amt ON new_amt.gl_id = acc.id " +
+                " LEFT JOIN " +
+                " acc_gl_balance_hist AS bal_his ON acc.id = bal_his.chart_of_account_id AND bal_his.currency_id = " + ddCurrency.SelectedItem.Value +
+                " AND DATE(bal_his.sys_date) = DATE(DATE_ADD('" + fromDate + "', INTERVAL - 1 DAY)) " +
+                " LEFT JOIN " +
+                " currency CC ON acc.currency_id = CC.id " +
+                " WHERE acc.is_leaf = 1 and acc.currency_id = " + ddCurrency.SelectedItem.Value +
+                " ORDER BY acc.gl; ";
+            }
+            else
+            {
+                sql = "SELECT acc.id,CC.currency,IFNULL(acc.parent_gl,acc.gl) parent_gl,(SELECT gl_name FROM acc_chat_of_account WHERE gl=IFNULL(acc.parent_gl,acc.gl)) parent_gl_name,acc.gl,acc.gl_name,TRIM(acc.side) AS side, " +
                 " CASE WHEN bal_his.balance IS NULL THEN 0 " +
                 " WHEN TRIM(acc.side)= 'Debit' AND bal_his.balance < 0 THEN bal_his.balance * (-1) " +
                 " WHEN TRIM(acc.side)= 'Credit' AND bal_his.balance < 0 THEN bal_his.balance * (-1) " +
@@ -86,6 +121,7 @@ namespace Report.Accounting
                 " currency CC ON acc.currency_id = CC.id " +
                 " WHERE acc.is_leaf = 1 AND acc.branch_id = " + ddBranchName.SelectedItem.Value + " AND acc.currency_id = " + ddCurrency.SelectedItem.Value +
                 " ORDER BY acc.gl; ";
+            }
 
             DataTable trialBalanceDT = db.getDataTable(sql);
             GenerateReport(trialBalanceDT);
