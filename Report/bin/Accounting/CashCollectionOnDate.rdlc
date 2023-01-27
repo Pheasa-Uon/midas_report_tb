@@ -69,7 +69,7 @@
           </Line>
           <Line Name="Line2">
             <Top>3.51389in</Top>
-            <Left>6.40369in</Left>
+            <Left>4.41632in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>1</ZIndex>
@@ -144,7 +144,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>3.51389in</Top>
-            <Left>6.40369in</Left>
+            <Left>4.41632in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>4</ZIndex>
