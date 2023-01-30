@@ -101,18 +101,18 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>5.59433in</Width>
+                  <Width>4.69739in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.24669in</Width>
+                  <Width>0.18125in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.54357in</Width>
+                  <Width>2.06238in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.32292in</Height>
+                  <Height>0.31792in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -126,6 +126,7 @@
                                   <Value>=Fields!acc_class.Value</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -160,6 +161,7 @@
                                 <TextRun>
                                   <Value>Balance</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -190,7 +192,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.245in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -203,12 +205,14 @@
                                 <TextRun>
                                   <Value xml:space="preserve">  </Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>=Fields!glm.Value  &amp; IIF(Fields!glnm.Value &lt;&gt; "","000 - " &amp; Fields!glnm.Value,"")</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -243,7 +247,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -279,7 +285,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -308,7 +316,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.25521in</Height>
+                  <Height>0.25021in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -320,7 +328,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!gl.Value &amp; IIF(IsNothing(Fields!gl_name.Value),"--"," - ") &amp; Fields!gl_name.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <ListLevel>1</ListLevel>
@@ -354,7 +364,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>$</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -391,6 +403,7 @@
                                 <TextRun>
                                   <Value>=Fields!ac_amt.Value</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -421,7 +434,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.245in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -434,12 +447,14 @@
                                 <TextRun>
                                   <Value xml:space="preserve">  </Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>="Total " &amp; Fields!glnm.Value</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -475,6 +490,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -513,6 +529,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!ac_amt.Value)</Value>
                                   <Style>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -544,7 +561,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.28125in</Height>
+                  <Height>0.27625in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -557,7 +574,7 @@
                                 <TextRun>
                                   <Value>= "TOTAL " &amp; MID(Fields!acc_class.Value,3) &amp; " :"</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -594,7 +611,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -634,7 +651,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!ac_amt.Value)</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -724,8 +741,8 @@
             <DataSetName>DataSet2</DataSetName>
             <Top>1.61681in</Top>
             <Left>0.125in</Left>
-            <Height>1.35938in</Height>
-            <Width>8.38459in</Width>
+            <Height>1.33438in</Height>
+            <Width>6.94102in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -810,7 +827,6 @@
                   <TextRun>
                     <Value>TOTAL LIABILITIES &amp; EQUITY</Value>
                     <Style>
-                      <FontSize>11pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -820,9 +836,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox71</rd:DefaultName>
             <Top>3.13889in</Top>
-            <Left>0.125in</Left>
-            <Height>0.39583in</Height>
-            <Width>5.60854in</Width>
+            <Left>0.14715in</Left>
+            <Height>0.2625in</Height>
+            <Width>4.67524in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -839,13 +855,52 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.26042in</Width>
+                  <Width>0.18125in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.06238in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.38667in</Height>
+                  <Height>0.2625in</Height>
                   <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox6">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>$</Value>
+                                  <Style>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="total_l_c">
@@ -890,6 +945,7 @@
             <TablixColumnHierarchy>
               <TablixMembers>
                 <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -900,10 +956,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet3</DataSetName>
-            <Top>3.14806in</Top>
-            <Left>6.18799in</Left>
-            <Height>0.38667in</Height>
-            <Width>2.26042in</Width>
+            <Top>3.13889in</Top>
+            <Left>4.82239in</Left>
+            <Height>0.2625in</Height>
+            <Width>2.24363in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -912,10 +968,10 @@
             </Style>
           </Tablix>
           <Line Name="Line1">
-            <Top>3.54862in</Top>
-            <Left>5.76958in</Left>
+            <Top>3.41528in</Top>
+            <Left>4.82239in</Left>
             <Height>0in</Height>
-            <Width>2.67883in</Width>
+            <Width>2.24363in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -1018,7 +1074,7 @@
             <Top>1.29737in</Top>
             <Left>0.125in</Left>
             <Height>0.25in</Height>
-            <Width>6.40236in</Width>
+            <Width>4.87864in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -1054,9 +1110,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox69</rd:DefaultName>
             <Top>1.29737in</Top>
-            <Left>6.54125in</Left>
+            <Left>5.00364in</Left>
             <Height>0.25in</Height>
-            <Width>0.83333in</Width>
+            <Width>0.80626in</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -1090,9 +1146,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox69</rd:DefaultName>
             <Top>1.29737in</Top>
-            <Left>7.42667in</Left>
+            <Left>5.82379in</Left>
             <Height>0.25in</Height>
-            <Width>1.07556in</Width>
+            <Width>1.24223in</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -1106,48 +1162,12 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox6">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>$</Value>
-                    <Style>
-                      <FontSize>11pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox6</rd:DefaultName>
-            <Top>3.13889in</Top>
-            <Left>5.76958in</Left>
-            <Height>0.39583in</Height>
-            <Width>0.39063in</Width>
-            <ZIndex>11</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Line Name="Line2">
-            <Top>5.47792in</Top>
-            <Left>0.14632in</Left>
+            <Top>4.64459in</Top>
+            <Left>0.125in</Left>
             <Height>0in</Height>
-            <Width>1.83259in</Width>
-            <ZIndex>12</ZIndex>
+            <Width>1.79092in</Width>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -1162,18 +1182,20 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Reviewed by:</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>5.49181in</Top>
-            <Left>0.14632in</Left>
+            <Top>4.65848in</Top>
+            <Left>0.125in</Left>
             <Height>0.25in</Height>
-            <Width>1.63542in</Width>
-            <ZIndex>13</ZIndex>
+            <Width>1.54926in</Width>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1185,11 +1207,11 @@
             </Style>
           </Textbox>
           <Line Name="Line3">
-            <Top>5.45014in</Top>
-            <Left>6.54125in</Left>
+            <Top>4.61681in</Top>
+            <Left>5.40548in</Left>
             <Height>0in</Height>
-            <Width>1.80283in</Width>
-            <ZIndex>14</ZIndex>
+            <Width>1.66054in</Width>
+            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -1204,18 +1226,20 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Approved by:</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>5.46403in</Top>
-            <Left>6.54125in</Left>
+            <Top>4.6307in</Top>
+            <Left>5.40548in</Left>
             <Height>0.25in</Height>
-            <Width>1.63542in</Width>
-            <ZIndex>15</ZIndex>
+            <Width>1.49313in</Width>
+            <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1247,8 +1271,8 @@
             <Top>0.19445in</Top>
             <Left>0.125in</Left>
             <Height>0.31548in</Height>
-            <Width>5.60854in</Width>
-            <ZIndex>16</ZIndex>
+            <Width>6.94102in</Width>
+            <ZIndex>15</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1267,18 +1291,20 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Prepared by:</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>5.47792in</Top>
-            <Left>3.39926in</Left>
+            <Top>4.64459in</Top>
+            <Left>2.96272in</Left>
             <Height>0.25in</Height>
-            <Width>1.63542in</Width>
-            <ZIndex>17</ZIndex>
+            <Width>1.42709in</Width>
+            <ZIndex>16</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1290,11 +1316,11 @@
             </Style>
           </Textbox>
           <Line Name="Line4">
-            <Top>5.46403in</Top>
-            <Left>3.39926in</Left>
+            <Top>4.6307in</Top>
+            <Left>2.96272in</Left>
             <Height>0in</Height>
-            <Width>1.83259in</Width>
-            <ZIndex>18</ZIndex>
+            <Width>1.64926in</Width>
+            <ZIndex>17</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -1302,17 +1328,17 @@
             </Style>
           </Line>
         </ReportItems>
-        <Height>6.00749in</Height>
+        <Height>5.1945in</Height>
         <Style />
       </Body>
-      <Width>8.60333in</Width>
+      <Width>7.25in</Width>
       <Page>
-        <PageHeight>11.69in</PageHeight>
-        <PageWidth>8.27in</PageWidth>
-        <InteractiveHeight>0in</InteractiveHeight>
-        <InteractiveWidth>8.27in</InteractiveWidth>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
+        <PageHeight>11.67in</PageHeight>
+        <PageWidth>8.25in</PageWidth>
+        <InteractiveHeight>11.67in</InteractiveHeight>
+        <InteractiveWidth>8.25in</InteractiveWidth>
+        <LeftMargin>0.5in</LeftMargin>
+        <RightMargin>0.5in</RightMargin>
         <TopMargin>1in</TopMargin>
         <BottomMargin>1in</BottomMargin>
         <Style>
