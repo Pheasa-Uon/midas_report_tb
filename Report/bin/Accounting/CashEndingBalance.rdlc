@@ -114,7 +114,7 @@
             <Top>0.77183in</Top>
             <Left>0.12711in</Left>
             <Height>0.25in</Height>
-            <Width>6.2211in</Width>
+            <Width>8.12363in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -146,8 +146,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.85301in</Top>
-            <Left>10.56461in</Left>
+            <Top>0.77183in</Top>
+            <Left>8.26463in</Left>
             <Height>0.25in</Height>
             <Width>0.93841in</Width>
             <ZIndex>1</ZIndex>
@@ -181,8 +181,8 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.85301in</Top>
-            <Left>11.50302in</Left>
+            <Top>0.77183in</Top>
+            <Left>9.20304in</Left>
             <Height>0.25in</Height>
             <Width>1.32958in</Width>
             <ZIndex>2</ZIndex>
@@ -238,37 +238,37 @@
                   <Width>0.4257in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.31537in</Width>
+                  <Width>0.98786in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>0.98293in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>0.92553in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>0.99841in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>0.85458in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>0.2in</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>0.89356in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.2in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>1.04167in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>0.2in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.00833in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.88251in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1in</Width>
@@ -290,6 +290,7 @@
                                   <Value>=RowNumber(nothing)</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -325,6 +326,7 @@
                                   <Value>=Fields!branch_name.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>dd-MMM-yyyy</Format>
                                   </Style>
                                 </TextRun>
@@ -361,6 +363,7 @@
                                   <Value>=Fields!cash_pawning.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -400,6 +403,7 @@
                                   <Value>=Fields!petty_cash.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -439,6 +443,7 @@
                                   <Value>=Fields!cash_in_bank.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -478,6 +483,7 @@
                                   <Value>=Fields!agency_cash.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -517,6 +523,7 @@
                                   <Value>=Fields!agency_bank.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -555,6 +562,7 @@
                                   <Value>="$"</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -592,6 +600,7 @@
                                   <Value>=Fields!cash_pawning.Value + Fields!petty_cash.Value + Fields!cash_in_bank.Value + Fields!agency_cash.Value + Fields!agency_bank.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -630,6 +639,7 @@
                                   <Value>="$"</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -670,6 +680,7 @@
                                   <Value>=Fields!cash_last_day.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -709,6 +720,7 @@
                                   <Value>=Fields!cash_pawning.Value + Fields!petty_cash.Value + Fields!cash_in_bank.Value + Fields!agency_cash.Value + Fields!agency_bank.Value - Fields!cash_last_day.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -748,6 +760,7 @@
                                   <Value>=ROUND((Fields!cash_pawning.Value + Fields!petty_cash.Value + Fields!cash_in_bank.Value + Fields!agency_cash.Value + Fields!agency_bank.Value - Fields!cash_last_day.Value) * 100 / Fields!cash_last_day.Value, 2) &amp; "%"</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -791,6 +804,7 @@
                                   <Value>TOTAL :</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -831,6 +845,7 @@
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -873,6 +888,7 @@
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -915,6 +931,7 @@
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -957,6 +974,7 @@
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -999,6 +1017,7 @@
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1040,6 +1059,7 @@
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1080,6 +1100,7 @@
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1121,6 +1142,7 @@
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1164,6 +1186,7 @@
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1206,6 +1229,7 @@
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1233,7 +1257,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1249,6 +1272,7 @@
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1297,6 +1321,7 @@
                                 <Value>No</Value>
                                 <Style>
                                   <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -1340,6 +1365,7 @@
                                 <Value>Branch Name</Value>
                                 <Style>
                                   <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -1383,6 +1409,7 @@
                                 <Value>1. Cash Pawning</Value>
                                 <Style>
                                   <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -1423,6 +1450,7 @@
                                     <Value>USD</Value>
                                     <Style>
                                       <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -1468,6 +1496,7 @@
                                 <Value>2. Petty Cash</Value>
                                 <Style>
                                   <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -1508,6 +1537,7 @@
                                     <Value>USD</Value>
                                     <Style>
                                       <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -1550,6 +1580,7 @@
                                 <Value>3. Cash in Bank</Value>
                                 <Style>
                                   <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -1590,6 +1621,7 @@
                                     <Value>USD</Value>
                                     <Style>
                                       <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -1632,6 +1664,7 @@
                                 <Value>CASH AGENCE WEY LUY</Value>
                                 <Style>
                                   <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -1672,6 +1705,7 @@
                                     <Value>Cash</Value>
                                     <Style>
                                       <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -1712,6 +1746,7 @@
                                     <Value>Cash In Bank</Value>
                                     <Style>
                                       <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -1757,6 +1792,7 @@
                                 <Value>Total Cash</Value>
                                 <Style>
                                   <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -1797,6 +1833,7 @@
                                     <Value>USD</Value>
                                     <Style>
                                       <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -1843,6 +1880,7 @@
                                 <Value>Total Cash Last Day</Value>
                                 <Style>
                                   <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -1887,6 +1925,7 @@
                                 <Value>Change Amount</Value>
                                 <Style>
                                   <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -1927,6 +1966,7 @@
                                 <Value>% of Change</Value>
                                 <Style>
                                   <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -1967,7 +2007,7 @@
             <Top>1.14468in</Top>
             <Left>0.13153in</Left>
             <Height>0.98958in</Height>
-            <Width>12.74107in</Width>
+            <Width>10.40109in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -2027,7 +2067,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.05432in</Top>
+            <Top>4.55432in</Top>
             <Left>0.1676in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
@@ -2060,7 +2100,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>6.16196in</Top>
+            <Top>5.53696in</Top>
             <Left>0.16761in</Left>
             <Height>0.20833in</Height>
             <Width>1.91792in</Width>
@@ -2093,8 +2133,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.98488in</Top>
-            <Left>10.79021in</Left>
+            <Top>4.55432in</Top>
+            <Left>8.6147in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
             <ZIndex>8</ZIndex>
@@ -2126,8 +2166,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>6.09252in</Top>
-            <Left>10.79021in</Left>
+            <Top>5.53697in</Top>
+            <Left>8.62511in</Left>
             <Height>0.20832in</Height>
             <Width>1.91792in</Width>
             <ZIndex>9</ZIndex>
@@ -2141,7 +2181,7 @@
             </Style>
           </Textbox>
           <Line Name="Line2">
-            <Top>6.09252in</Top>
+            <Top>5.46752in</Top>
             <Left>0.16761in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
@@ -2153,8 +2193,8 @@
             </Style>
           </Line>
           <Line Name="Line4">
-            <Top>6.02307in</Top>
-            <Left>10.79022in</Left>
+            <Top>5.46752in</Top>
+            <Left>8.62512in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>11</ZIndex>
@@ -2174,6 +2214,7 @@
                     <Value>Cash Ending Balance</Value>
                     <Style>
                       <FontFamily>Gill Sans MT</FontFamily>
+                      <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -2184,7 +2225,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>CompanyName</rd:DefaultName>
-            <Top>2.60975in</Top>
+            <Top>2.35975in</Top>
             <Left>0.13153in</Left>
             <Height>0.25in</Height>
             <Width>4.14107in</Width>
@@ -2209,6 +2250,7 @@
                     <Value>="On Date: " + Parameters!SystemDate.Value</Value>
                     <Style>
                       <FontFamily>Gill Sans MT</FontFamily>
+                      <FontSize>9pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2218,7 +2260,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.87364in</Top>
+            <Top>2.62364in</Top>
             <Left>0.13153in</Left>
             <Height>0.25in</Height>
             <Width>4.14107in</Width>
@@ -2262,6 +2304,7 @@
                                   <Value>No</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2298,6 +2341,7 @@
                                   <Value>Description</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2334,6 +2378,7 @@
                                   <Value>Amount</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2375,6 +2420,7 @@
                                   <Value>=Fields!id.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2409,6 +2455,7 @@
                                   <Value>=Fields!gl_name.Value</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2442,6 +2489,7 @@
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
                                     <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -2495,10 +2543,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>CashEndingSummaryDS</DataSetName>
-            <Top>3.19667in</Top>
+            <Top>2.94667in</Top>
             <Left>0.13153in</Left>
             <Height>0.5in</Height>
-            <Width>4.14107in</Width>
+            <Width>4.14108in</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -2507,19 +2555,19 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>6.54886in</Height>
+        <Height>5.78696in</Height>
         <Style />
       </Body>
-      <Width>13.01784in</Width>
+      <Width>10.61927in</Width>
       <Page>
         <PageHeight>8.27in</PageHeight>
         <PageWidth>11.69in</PageWidth>
         <InteractiveHeight>0in</InteractiveHeight>
         <InteractiveWidth>11.69in</InteractiveWidth>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
-        <BottomMargin>1in</BottomMargin>
+        <LeftMargin>0.5in</LeftMargin>
+        <RightMargin>0.5in</RightMargin>
+        <TopMargin>0.5in</TopMargin>
+        <BottomMargin>0.5in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
