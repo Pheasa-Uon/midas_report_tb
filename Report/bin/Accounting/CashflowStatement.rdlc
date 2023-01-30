@@ -77,8 +77,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.83555in</Top>
-            <Left>9.32624in</Left>
+            <Top>1.7991in</Top>
+            <Left>5.17625in</Left>
             <Height>0.25in</Height>
             <Width>0.72099in</Width>
             <Style>
@@ -112,8 +112,8 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.83555in</Top>
-            <Left>10.06173in</Left>
+            <Top>1.7991in</Top>
+            <Left>5.91174in</Left>
             <Height>0.25in</Height>
             <Width>1.19792in</Width>
             <ZIndex>1</ZIndex>
@@ -154,7 +154,7 @@
             <Top>1.51611in</Top>
             <Left>0.17588in</Left>
             <Height>0.27777in</Height>
-            <Width>11.08378in</Width>
+            <Width>6.93378in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -320,7 +320,7 @@
           </Line>
           <Line Name="Line1">
             <Top>4.29167in</Top>
-            <Left>9.35216in</Left>
+            <Left>5.20216in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>8</ZIndex>
@@ -383,7 +383,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>4.29167in</Top>
-            <Left>9.35216in</Left>
+            <Left>5.20216in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>10</ZIndex>
@@ -540,18 +540,18 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.47932in</Width>
+                  <Width>0.06458in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>8.41682in</Width>
+                  <Width>5.33156in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.18765in</Width>
+                  <Width>1.53765in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.24444in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -634,7 +634,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.25in</Height>
+                  <Height>0.24444in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -747,7 +747,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.28125in</Height>
+                  <Height>0.27569in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -893,8 +893,8 @@
             <DataSetName>CashFlowDS</DataSetName>
             <Top>2.11854in</Top>
             <Left>0.17587in</Left>
-            <Height>0.78125in</Height>
-            <Width>11.08379in</Width>
+            <Height>0.76458in</Height>
+            <Width>6.93379in</Width>
             <ZIndex>15</ZIndex>
             <Style>
               <Border>
@@ -956,7 +956,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>4.29167in</Top>
-            <Left>4.71059in</Left>
+            <Left>2.69476in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>17</ZIndex>
@@ -971,7 +971,7 @@
           </Textbox>
           <Line Name="Line4">
             <Top>4.29167in</Top>
-            <Left>4.71059in</Left>
+            <Left>2.69476in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>18</ZIndex>
@@ -985,14 +985,14 @@
         <Height>4.71271in</Height>
         <Style />
       </Body>
-      <Width>11.40875in</Width>
+      <Width>7.25in</Width>
       <Page>
         <PageHeight>11.69in</PageHeight>
         <PageWidth>8.27in</PageWidth>
-        <InteractiveHeight>0in</InteractiveHeight>
+        <InteractiveHeight>11.69in</InteractiveHeight>
         <InteractiveWidth>8.27in</InteractiveWidth>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
+        <LeftMargin>0.5in</LeftMargin>
+        <RightMargin>0.5in</RightMargin>
         <TopMargin>1in</TopMargin>
         <BottomMargin>1in</BottomMargin>
         <Style />
