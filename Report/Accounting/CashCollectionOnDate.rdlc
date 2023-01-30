@@ -81,7 +81,7 @@
           </Line>
           <Line Name="Line1">
             <Top>3.51389in</Top>
-            <Left>8.75029in</Left>
+            <Left>8.65738in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>2</ZIndex>
@@ -177,7 +177,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>3.51389in</Top>
-            <Left>8.75029in</Left>
+            <Left>8.65738in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>5</ZIndex>
@@ -214,7 +214,7 @@
             <Top>0.65152in</Top>
             <Left>0.11549in</Left>
             <Height>0.25in</Height>
-            <Width>8.27431in</Width>
+            <Width>8.16751in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -247,7 +247,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>0.65152in</Top>
-            <Left>8.3898in</Left>
+            <Left>8.29689in</Left>
             <Height>0.25in</Height>
             <Width>0.93841in</Width>
             <ZIndex>7</ZIndex>
@@ -282,7 +282,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>0.65152in</Top>
-            <Left>9.32821in</Left>
+            <Left>9.2353in</Left>
             <Height>0.25in</Height>
             <Width>1.32958in</Width>
             <ZIndex>8</ZIndex>
@@ -334,40 +334,40 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.4257in</Width>
+                  <Width>0.45556in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.31537in</Width>
+                  <Width>1.34523in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>1.22986in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>1.22986in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>1.11319in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>1.22986in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.14in</Width>
+                  <Width>0.16986in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>1.08986in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.14in</Width>
+                  <Width>0.16986in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>1.02486in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.14in</Width>
+                  <Width>0.16986in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.2in</Width>
+                  <Width>1.22986in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -1856,7 +1856,7 @@
             <Top>0.94825in</Top>
             <Left>0.10714in</Left>
             <Height>1.23958in</Height>
-            <Width>10.56107in</Width>
+            <Width>10.45774in</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -1868,14 +1868,14 @@
         <Height>4.00199in</Height>
         <Style />
       </Body>
-      <Width>10.83636in</Width>
+      <Width>10.61136in</Width>
       <Page>
         <PageHeight>8.27in</PageHeight>
         <PageWidth>11.69in</PageWidth>
         <InteractiveHeight>0in</InteractiveHeight>
         <InteractiveWidth>11.69in</InteractiveWidth>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
+        <LeftMargin>0.5in</LeftMargin>
+        <RightMargin>0.5in</RightMargin>
         <TopMargin>1in</TopMargin>
         <BottomMargin>1in</BottomMargin>
         <Style />
