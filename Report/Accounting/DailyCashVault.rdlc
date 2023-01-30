@@ -1287,8 +1287,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.82931in</Top>
-            <Left>8.69451in</Left>
+            <Top>2.29598in</Top>
+            <Left>5.93618in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
             <ZIndex>13</ZIndex>
@@ -1397,17 +1397,19 @@
             </Style>
           </Line>
         </ReportItems>
-        <Height>5.54632in</Height>
+        <Height>4.54632in</Height>
         <Style />
       </Body>
-      <Width>10.74263in</Width>
+      <Width>10.61243in</Width>
       <Page>
-        <InteractiveHeight>0in</InteractiveHeight>
-        <InteractiveWidth>8.5in</InteractiveWidth>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
-        <BottomMargin>1in</BottomMargin>
+        <PageHeight>8.27in</PageHeight>
+        <PageWidth>11.69in</PageWidth>
+        <InteractiveHeight>8.27in</InteractiveHeight>
+        <InteractiveWidth>11.69in</InteractiveWidth>
+        <LeftMargin>0.5in</LeftMargin>
+        <RightMargin>0.5in</RightMargin>
+        <TopMargin>0.5in</TopMargin>
+        <BottomMargin>0.5in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
