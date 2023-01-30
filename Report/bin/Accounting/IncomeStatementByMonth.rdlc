@@ -93,9 +93,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
             <Top>1.50545in</Top>
-            <Left>0.26955in</Left>
+            <Left>0.14455in</Left>
             <Height>0.2743in</Height>
-            <Width>5.2376in</Width>
+            <Width>4.94969in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -127,7 +127,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox25</rd:DefaultName>
             <Top>1.50545in</Top>
-            <Left>5.50715in</Left>
+            <Left>5.10813in</Left>
             <Height>0.2743in</Height>
             <Width>0.74305in</Width>
             <ZIndex>1</ZIndex>
@@ -164,7 +164,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox26</rd:DefaultName>
             <Top>1.50545in</Top>
-            <Left>6.2502in</Left>
+            <Left>5.85118in</Left>
             <Height>0.2743in</Height>
             <Width>1.20486in</Width>
             <ZIndex>2</ZIndex>
@@ -199,7 +199,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox25</rd:DefaultName>
             <Top>0.74604in</Top>
-            <Left>0.26955in</Left>
+            <Left>0.14455in</Left>
             <Height>0.2743in</Height>
             <Width>0.94792in</Width>
             <ZIndex>3</ZIndex>
@@ -236,7 +236,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox26</rd:DefaultName>
             <Top>0.74604in</Top>
-            <Left>1.24525in</Left>
+            <Left>1.12025in</Left>
             <Height>0.2743in</Height>
             <Width>2.18229in</Width>
             <ZIndex>4</ZIndex>
@@ -274,7 +274,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox25</rd:DefaultName>
             <Top>0.125in</Top>
-            <Left>0.26955in</Left>
+            <Left>0.14455in</Left>
             <Height>0.2743in</Height>
             <Width>4.48959in</Width>
             <ZIndex>5</ZIndex>
@@ -308,7 +308,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox25</rd:DefaultName>
             <Top>1.03423in</Top>
-            <Left>0.26955in</Left>
+            <Left>0.14455in</Left>
             <Height>0.2743in</Height>
             <Width>0.94792in</Width>
             <ZIndex>6</ZIndex>
@@ -345,7 +345,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox26</rd:DefaultName>
             <Top>1.03423in</Top>
-            <Left>1.24525in</Left>
+            <Left>1.12025in</Left>
             <Height>0.2743in</Height>
             <Width>2.18229in</Width>
             <ZIndex>7</ZIndex>
@@ -380,7 +380,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox25</rd:DefaultName>
             <Top>0.45785in</Top>
-            <Left>0.26955in</Left>
+            <Left>0.14455in</Left>
             <Height>0.2743in</Height>
             <Width>0.94792in</Width>
             <ZIndex>8</ZIndex>
@@ -417,7 +417,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox26</rd:DefaultName>
             <Top>0.45785in</Top>
-            <Left>1.24525in</Left>
+            <Left>1.12025in</Left>
             <Height>0.2743in</Height>
             <Width>2.18229in</Width>
             <ZIndex>9</ZIndex>
@@ -1005,7 +1005,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>4.4896in</Size>
+                            <Size>4.19793in</Size>
                             <CellContents>
                               <Textbox Name="acc_class">
                                 <CanGrow>true</CanGrow>
@@ -1063,7 +1063,7 @@
                           <TablixMembers>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>4.4896in</Size>
+                                <Size>4.19793in</Size>
                                 <CellContents>
                                   <Textbox Name="glm">
                                     <CanGrow>true</CanGrow>
@@ -1115,7 +1115,7 @@
                                 </SortExpression>
                               </SortExpressions>
                               <TablixHeader>
-                                <Size>4.4896in</Size>
+                                <Size>4.19793in</Size>
                                 <CellContents>
                                   <Textbox Name="gl_name">
                                     <CanGrow>true</CanGrow>
@@ -1153,7 +1153,7 @@
                             </TablixMember>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>4.4896in</Size>
+                                <Size>4.19793in</Size>
                                 <CellContents>
                                   <Textbox Name="Textbox41">
                                     <CanGrow>true</CanGrow>
@@ -1204,7 +1204,7 @@
                     </TablixMember>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>4.4896in</Size>
+                        <Size>4.19793in</Size>
                         <CellContents>
                           <Textbox Name="acc_class1">
                             <CanGrow>true</CanGrow>
@@ -1257,9 +1257,9 @@
             </TablixRowHierarchy>
             <DataSetName>IncomeStatementByMonthDS</DataSetName>
             <Top>1.85292in</Top>
-            <Left>0.26954in</Left>
+            <Left>0.14454in</Left>
             <Height>1.59375in</Height>
-            <Width>7.20317in</Width>
+            <Width>6.9115in</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -1270,7 +1270,7 @@
           </Tablix>
           <Line Name="Line3">
             <Top>4.85255in</Top>
-            <Left>5.81965in</Left>
+            <Left>5.44465in</Left>
             <Height>0in</Height>
             <Width>1.63021in</Width>
             <ZIndex>11</ZIndex>
@@ -1296,7 +1296,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
             <Top>4.85255in</Top>
-            <Left>5.81965in</Left>
+            <Left>5.44465in</Left>
             <Height>0.25in</Height>
             <Width>1.63542in</Width>
             <ZIndex>12</ZIndex>
@@ -1312,7 +1312,7 @@
           </Textbox>
           <Line Name="Line6">
             <Top>4.85255in</Top>
-            <Left>0.38954in</Left>
+            <Left>0.26454in</Left>
             <Height>0in</Height>
             <Width>1.63021in</Width>
             <ZIndex>13</ZIndex>
@@ -1338,7 +1338,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
             <Top>4.85255in</Top>
-            <Left>0.38954in</Left>
+            <Left>0.26454in</Left>
             <Height>0.25in</Height>
             <Width>1.63542in</Width>
             <ZIndex>14</ZIndex>
@@ -1354,7 +1354,7 @@
           </Textbox>
           <Line Name="Line7">
             <Top>4.85255in</Top>
-            <Left>3.04209in</Left>
+            <Left>2.79209in</Left>
             <Height>0in</Height>
             <Width>1.63021in</Width>
             <ZIndex>15</ZIndex>
@@ -1380,7 +1380,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
             <Top>4.85255in</Top>
-            <Left>3.04209in</Left>
+            <Left>2.79209in</Left>
             <Height>0.25in</Height>
             <Width>1.63542in</Width>
             <ZIndex>16</ZIndex>
@@ -1398,12 +1398,14 @@
         <Height>5.49677in</Height>
         <Style />
       </Body>
-      <Width>7.73003in</Width>
+      <Width>7.25in</Width>
       <Page>
-        <InteractiveHeight>0in</InteractiveHeight>
-        <InteractiveWidth>8.5in</InteractiveWidth>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
+        <PageHeight>11.69in</PageHeight>
+        <PageWidth>8.27in</PageWidth>
+        <InteractiveHeight>11.69in</InteractiveHeight>
+        <InteractiveWidth>8.27in</InteractiveWidth>
+        <LeftMargin>0.5in</LeftMargin>
+        <RightMargin>0.5in</RightMargin>
         <TopMargin>1in</TopMargin>
         <BottomMargin>1in</BottomMargin>
         <Style />
