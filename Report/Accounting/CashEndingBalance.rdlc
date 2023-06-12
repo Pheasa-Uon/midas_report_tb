@@ -757,7 +757,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=ROUND((Fields!cash_pawning.Value + Fields!petty_cash.Value + Fields!cash_in_bank.Value + Fields!agency_cash.Value + Fields!agency_bank.Value - Fields!cash_last_day.Value) * 100 / Fields!cash_last_day.Value, 2) &amp; "%"</Value>
+                                  <Value>=ROUND(((Fields!cash_pawning.Value + Fields!petty_cash.Value + Fields!cash_in_bank.Value + Fields!agency_cash.Value + Fields!agency_bank.Value - Fields!cash_last_day.Value) * 100 / Fields!cash_last_day.Value), 2) &amp; "%"</Value>
                                   <Style>
                                     <FontFamily>Gill Sans MT</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -2007,7 +2007,7 @@
             <Top>1.14468in</Top>
             <Left>0.13153in</Left>
             <Height>0.98958in</Height>
-            <Width>10.40109in</Width>
+            <Width>10.40108in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>

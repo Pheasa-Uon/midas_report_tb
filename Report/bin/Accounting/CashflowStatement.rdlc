@@ -308,7 +308,7 @@
           </Textbox>
           <Line Name="Line3">
             <Top>4.29167in</Top>
-            <Left>0.17587in</Left>
+            <Left>2.69962in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>7</ZIndex>
@@ -350,7 +350,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>4.29167in</Top>
-            <Left>0.17587in</Left>
+            <Left>2.69962in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>9</ZIndex>
@@ -893,7 +893,7 @@
             <DataSetName>CashFlowDS</DataSetName>
             <Top>2.11854in</Top>
             <Left>0.17587in</Left>
-            <Height>0.76458in</Height>
+            <Height>0.76457in</Height>
             <Width>6.93379in</Width>
             <ZIndex>15</ZIndex>
             <Style>
@@ -956,7 +956,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>4.29167in</Top>
-            <Left>2.69476in</Left>
+            <Left>0.17588in</Left>
             <Height>0.25in</Height>
             <Width>1.57292in</Width>
             <ZIndex>17</ZIndex>
@@ -971,7 +971,7 @@
           </Textbox>
           <Line Name="Line4">
             <Top>4.29167in</Top>
-            <Left>2.69476in</Left>
+            <Left>0.17588in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
             <ZIndex>18</ZIndex>

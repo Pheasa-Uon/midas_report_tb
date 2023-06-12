@@ -585,7 +585,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>INCOME STATEMENT</Value>
+                    <Value>                                        INCOME STATEMENT</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontFamily>Arial</FontFamily>
@@ -602,7 +602,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
             <Top>0.91889in</Top>
-            <Left>0.18972in</Left>
+            <Left>0.20361in</Left>
             <Height>0.2743in</Height>
             <Width>5.95833in</Width>
             <ZIndex>1</ZIndex>
@@ -908,7 +908,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>IG TECH GROUP CO., LTD</Value>
+                    <Value>=Parameters!CompanyName.Value</Value>
                     <Style>
                       <FontFamily>Calibri</FontFamily>
                       <FontSize>12pt</FontSize>
@@ -1095,8 +1095,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>4.4075in</Top>
-            <Left>0.14392in</Left>
+            <Top>4.53944in</Top>
+            <Left>3.33705in</Left>
             <Height>0.25in</Height>
             <Width>1.63542in</Width>
             <ZIndex>10</ZIndex>
@@ -1153,8 +1153,8 @@
             </Style>
           </Textbox>
           <Line Name="Line4">
-            <Top>4.33806in</Top>
-            <Left>0.14392in</Left>
+            <Top>4.47in</Top>
+            <Left>3.33705in</Left>
             <Height>0in</Height>
             <Width>1.76563in</Width>
             <ZIndex>13</ZIndex>
@@ -1179,8 +1179,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>4.48389in</Top>
-            <Left>3.20684in</Left>
+            <Top>4.55333in</Top>
+            <Left>0.32038in</Left>
             <Height>0.25in</Height>
             <Width>1.63542in</Width>
             <ZIndex>14</ZIndex>
@@ -1195,8 +1195,8 @@
             </Style>
           </Textbox>
           <Line Name="Line5">
-            <Top>4.41445in</Top>
-            <Left>3.20684in</Left>
+            <Top>4.48389in</Top>
+            <Left>0.32038in</Left>
             <Height>0in</Height>
             <Width>1.76563in</Width>
             <ZIndex>15</ZIndex>
@@ -1237,6 +1237,10 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="CompanyName">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -1252,6 +1256,11 @@
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>
           <ParameterName>ToDateParameter</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>CompanyName</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

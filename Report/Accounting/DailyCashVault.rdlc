@@ -1183,7 +1183,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Checked By:</Value>
+                    <Value>Reviewed By:</Value>
                     <Style>
                       <FontFamily>Calibri</FontFamily>
                       <FontSize>9pt</FontSize>
@@ -1275,7 +1275,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Verified By:</Value>
+                    <Value>Approved By:</Value>
                     <Style>
                       <FontFamily>Calibri</FontFamily>
                       <FontSize>9pt</FontSize>
@@ -1287,8 +1287,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.29598in</Top>
-            <Left>5.93618in</Left>
+            <Top>2.82931in</Top>
+            <Left>8.70284in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
             <ZIndex>13</ZIndex>
