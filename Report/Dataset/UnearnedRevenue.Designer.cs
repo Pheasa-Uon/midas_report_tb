@@ -344,6 +344,8 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnBL;
             
+            private global::System.Data.DataColumn columnco_pawn;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public UNEARNED_DSDataTable() {
@@ -499,6 +501,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn co_pawnColumn {
+                get {
+                    return this.columnco_pawn;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -534,7 +544,23 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UNEARNED_DSRow AddUNEARNED_DSRow(string id, string contract_no, string customer_name, string lob_name, string pawn_price_approved, string disbursement_date, string expired_date, string contract_status, string redeem_date, string sys_date, string DR, string CR, string ticket_no, string balance_side, string BL) {
+            public UNEARNED_DSRow AddUNEARNED_DSRow(
+                        string id, 
+                        string contract_no, 
+                        string customer_name, 
+                        string lob_name, 
+                        string pawn_price_approved, 
+                        string disbursement_date, 
+                        string expired_date, 
+                        string contract_status, 
+                        string redeem_date, 
+                        string sys_date, 
+                        string DR, 
+                        string CR, 
+                        string ticket_no, 
+                        string balance_side, 
+                        string BL, 
+                        string co_pawn) {
                 UNEARNED_DSRow rowUNEARNED_DSRow = ((UNEARNED_DSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -551,7 +577,8 @@ namespace Report.Dataset {
                         CR,
                         ticket_no,
                         balance_side,
-                        BL};
+                        BL,
+                        co_pawn};
                 rowUNEARNED_DSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUNEARNED_DSRow);
                 return rowUNEARNED_DSRow;
@@ -589,6 +616,7 @@ namespace Report.Dataset {
                 this.columnticket_no = base.Columns["ticket_no"];
                 this.columnbalance_side = base.Columns["balance_side"];
                 this.columnBL = base.Columns["BL"];
+                this.columnco_pawn = base.Columns["co_pawn"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -624,6 +652,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnbalance_side);
                 this.columnBL = new global::System.Data.DataColumn("BL", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBL);
+                this.columnco_pawn = new global::System.Data.DataColumn("co_pawn", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnco_pawn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1351,6 +1381,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string co_pawn {
+                get {
+                    try {
+                        return ((string)(this[this.tableUNEARNED_DS.co_pawnColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'co_pawn\' in table \'UNEARNED_DS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUNEARNED_DS.co_pawnColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tableUNEARNED_DS.idColumn);
             }
@@ -1527,6 +1573,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetBLNull() {
                 this[this.tableUNEARNED_DS.BLColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isco_pawnNull() {
+                return this.IsNull(this.tableUNEARNED_DS.co_pawnColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setco_pawnNull() {
+                this[this.tableUNEARNED_DS.co_pawnColumn] = global::System.Convert.DBNull;
             }
         }
         
