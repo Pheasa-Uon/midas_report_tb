@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Fixed Asset Listing" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FixedAssetListing.aspx.cs" Inherits="Report.Accounting.FixedAssetListing" %>
+﻿<%@ Page Title="Fixed Assets Listing" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FixedAssetListing.aspx.cs" Inherits="Report.Accounting.FixedAssetListing" %>
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
