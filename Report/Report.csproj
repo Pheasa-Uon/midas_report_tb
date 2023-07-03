@@ -491,6 +491,17 @@
     <Content Include="Dataset\FixedAssetsListing.xsc">
       <DependentUpon>FixedAssetsListing.xsd</DependentUpon>
     </Content>
+    <Content Include="Dataset\FixedAssetListing.xsc">
+      <DependentUpon>FixedAssetListing.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\FixedAssetListing.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FixedAssetListing.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\FixedAssetListing.xss">
+      <DependentUpon>FixedAssetListing.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\FixedAssetsListing.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -1121,6 +1132,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DailyTillPettyCash.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\FixedAssetListing.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FixedAssetListing.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\FixedAssetsListing.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1510,9 +1526,6 @@
     <Content Include="Accounting\AccrualInterestOnPawn.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Accounting\FixedAssetListing.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Operation\Customer.rdlc">
@@ -1523,6 +1536,9 @@
     <Content Include="Operation\ContractOutstandingByDate.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Accounting\FixedAssetListing.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
