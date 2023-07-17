@@ -1004,7 +1004,8 @@
                                 <TextRun>
                                   <Value>Due Date</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -1041,7 +1042,8 @@
                                 <TextRun>
                                   <Value>Outstanding</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -1080,7 +1082,8 @@
                                 <TextRun>
                                   <Value>Interest Rate %</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -1117,7 +1120,8 @@
                                 <TextRun>
                                   <Value>Current Due Interest</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -1156,7 +1160,8 @@
                                 <TextRun>
                                   <Value># Schedule Days</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -1193,7 +1198,8 @@
                                 <TextRun>
                                   <Value>Accrual / Day</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
@@ -1237,7 +1243,8 @@
                                 <TextRun>
                                   <Value>=Fields!due_date.Value</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>dd-MM-yyyy</Format>
                                   </Style>
                                 </TextRun>
@@ -1273,7 +1280,8 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1309,7 +1317,8 @@
                                 <TextRun>
                                   <Value>=Fields!principle_due.Value</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1348,13 +1357,15 @@
                                 <TextRun>
                                   <Value>=Fields!interest_rate.Value</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value> %</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1389,7 +1400,8 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1425,7 +1437,8 @@
                                 <TextRun>
                                   <Value>=Fields!interest.Value</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1464,7 +1477,8 @@
                                 <TextRun>
                                   <Value>=Fields!num_of_day.Value</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1499,7 +1513,8 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1535,7 +1550,8 @@
                                 <TextRun>
                                   <Value>=Fields!accrual_amt.Value</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1687,7 +1703,8 @@
                               <TextRun>
                                 <Value>No</Value>
                                 <Style>
-                                  <FontFamily>Segoe UI</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -1757,7 +1774,8 @@
                                 <TextRun>
                                   <Value>=Fields!sys_date.Value</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>dd-MM-yyyy</Format>
                                   </Style>
                                 </TextRun>
@@ -1793,7 +1811,8 @@
                                 <TextRun>
                                   <Value>=Fields!ticket_no.Value</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1828,7 +1847,8 @@
                                 <TextRun>
                                   <Value>=Fields!serial_number.Value</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1863,7 +1883,8 @@
                                 <TextRun>
                                   <Value>=Fields!DR.Value</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1899,7 +1920,8 @@
                                 <TextRun>
                                   <Value>=Fields!CR.Value</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1935,7 +1957,8 @@
                                 <TextRun>
                                   <Value>=RunningValue((Fields!DR.Value - Fields!CR.Value), Sum, Nothing)</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1976,7 +1999,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2012,7 +2036,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2048,7 +2073,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2082,7 +2108,8 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!DR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -2119,7 +2146,8 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!CR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -2156,7 +2184,8 @@
                                 <TextRun>
                                   <Value>=sum(Fields!DR.Value) -sum(Fields!CR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -2201,7 +2230,8 @@
                               <TextRun>
                                 <Value>Accrual Date</Value>
                                 <Style>
-                                  <FontFamily>Segoe UI</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -2242,7 +2272,8 @@
                               <TextRun>
                                 <Value>Ticket #</Value>
                                 <Style>
-                                  <FontFamily>Segoe UI</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -2283,7 +2314,8 @@
                               <TextRun>
                                 <Value>Serial #</Value>
                                 <Style>
-                                  <FontFamily>Segoe UI</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -2324,7 +2356,8 @@
                               <TextRun>
                                 <Value>Accrual Amount</Value>
                                 <Style>
-                                  <FontFamily>Segoe UI</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -2365,7 +2398,7 @@
                                   <TextRun>
                                     <Value>DEBIT</Value>
                                     <Style>
-                                      <FontFamily>Segoe UI</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
                                       <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>White</Color>
@@ -2407,7 +2440,7 @@
                                   <TextRun>
                                     <Value>CREDIT</Value>
                                     <Style>
-                                      <FontFamily>Segoe UI</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
                                       <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>White</Color>
@@ -2449,7 +2482,7 @@
                                   <TextRun>
                                     <Value>BALANCE</Value>
                                     <Style>
-                                      <FontFamily>Segoe UI</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
                                       <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>White</Color>
@@ -2506,7 +2539,8 @@
                               <TextRun>
                                 <Value>=RowNumber(Nothing)</Value>
                                 <Style>
-                                  <FontFamily>Segoe UI</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2544,7 +2578,8 @@
                               <TextRun>
                                 <Value>Total</Value>
                                 <Style>
-                                  <FontFamily>Segoe UI</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                 </Style>
                               </TextRun>
                             </TextRuns>

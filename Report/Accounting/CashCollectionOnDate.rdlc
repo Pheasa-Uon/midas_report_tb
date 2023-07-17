@@ -7,6 +7,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>6b99f435-1212-4d79-93a7-ffac4d3e3f8b</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -104,7 +105,6 @@
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>8pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1807,6 +1807,7 @@
                   <TextRun>
                     <Value>Reviewed by:</Value>
                     <Style>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
                   </TextRun>
@@ -1851,6 +1852,7 @@
                   <TextRun>
                     <Value>Approved by:</Value>
                     <Style>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
                   </TextRun>
@@ -1883,6 +1885,7 @@
                   <TextRun>
                     <Value>Prepared by:</Value>
                     <Style>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
                     </Style>
                   </TextRun>
