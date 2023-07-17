@@ -8,6 +8,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>7be5eea3-85a6-45f5-a0f6-33cb52a40597</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -160,7 +161,8 @@
                               <TextRun>
                                 <Value>No</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -199,7 +201,8 @@
                               <TextRun>
                                 <Value>Contract ID</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -238,7 +241,8 @@
                               <TextRun>
                                 <Value>Customer Name</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -277,7 +281,8 @@
                               <TextRun>
                                 <Value>LOB Type</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -316,7 +321,8 @@
                               <TextRun>
                                 <Value>Disbursement Amount</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -355,7 +361,8 @@
                               <TextRun>
                                 <Value>Date Disbursed</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -394,7 +401,8 @@
                               <TextRun>
                                 <Value>Date Expired</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -433,7 +441,8 @@
                               <TextRun>
                                 <Value>Redeem Date</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -472,7 +481,8 @@
                               <TextRun>
                                 <Value>Contract Status</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -511,7 +521,8 @@
                               <TextRun>
                                 <Value>Pawn Officer</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -590,7 +601,8 @@
                                 <TextRun>
                                   <Value>=Fields!sys_date.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>dd-MM-yyyy</Format>
                                   </Style>
                                 </TextRun>
@@ -626,7 +638,8 @@
                                 <TextRun>
                                   <Value>=Fields!ticket_no.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -661,7 +674,8 @@
                                 <TextRun>
                                   <Value>=iif(Fields!balance_side.Value="1", "Cleared unearned revenue", iif(Fields!balance_side.Value="2", "Received Prepaid Interest", Fields!balance_side.Value))</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -696,7 +710,8 @@
                                 <TextRun>
                                   <Value>=Fields!DR.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -732,7 +747,8 @@
                                 <TextRun>
                                   <Value>=Fields!CR.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -768,7 +784,8 @@
                                 <TextRun>
                                   <Value>=Fields!BL.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -809,7 +826,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -849,7 +867,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -889,7 +908,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -929,7 +949,8 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!DR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -970,7 +991,8 @@
                                 <TextRun>
                                   <Value>=SUM(Fields!CR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1011,7 +1033,8 @@
                                 <TextRun>
                                   <Value>=SUM(Max(Fields!BL.Value, "contract_no"))</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1057,8 +1080,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1097,8 +1120,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1137,8 +1160,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1177,8 +1200,8 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!DR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1218,8 +1241,8 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!CR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1259,8 +1282,8 @@
                                 <TextRun>
                                   <Value>=SUM(Max(Fields!BL.Value, "contract_no"))</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1308,7 +1331,8 @@
                               <TextRun>
                                 <Value>Date Posting</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -1349,7 +1373,8 @@
                               <TextRun>
                                 <Value>Ticket#</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -1390,7 +1415,8 @@
                               <TextRun>
                                 <Value>Description</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -1431,7 +1457,8 @@
                               <TextRun>
                                 <Value>UNEARNED REVENUE</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -1472,7 +1499,8 @@
                                   <TextRun>
                                     <Value>DR</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>White</Color>
                                     </Style>
@@ -1513,7 +1541,8 @@
                                   <TextRun>
                                     <Value>CR</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>White</Color>
                                     </Style>
@@ -1556,7 +1585,8 @@
                               <TextRun>
                                 <Value>UNEARNED BALANE</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -1597,7 +1627,8 @@
                                   <TextRun>
                                     <Value />
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>White</Color>
                                     </Style>
@@ -1661,7 +1692,8 @@
                                   <TextRun>
                                     <Value>=RunningValue(Fields!contract_no.Value, countdistinct,Nothing)</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -1699,7 +1731,8 @@
                                       <TextRun>
                                         <Value>=Fields!contract_no.Value</Value>
                                         <Style>
-                                          <FontFamily>Calibri</FontFamily>
+                                          <FontFamily>Century Gothic</FontFamily>
+                                          <FontSize>9pt</FontSize>
                                         </Style>
                                       </TextRun>
                                     </TextRuns>
@@ -1737,7 +1770,8 @@
                                           <TextRun>
                                             <Value>=Fields!customer_name.Value</Value>
                                             <Style>
-                                              <FontFamily>Calibri</FontFamily>
+                                              <FontFamily>Century Gothic</FontFamily>
+                                              <FontSize>9pt</FontSize>
                                             </Style>
                                           </TextRun>
                                         </TextRuns>
@@ -1775,7 +1809,8 @@
                                               <TextRun>
                                                 <Value>=Fields!lob_name.Value</Value>
                                                 <Style>
-                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontFamily>Century Gothic</FontFamily>
+                                                  <FontSize>9pt</FontSize>
                                                 </Style>
                                               </TextRun>
                                             </TextRuns>
@@ -1813,7 +1848,8 @@
                                                   <TextRun>
                                                     <Value>=Fields!pawn_price_approved.Value</Value>
                                                     <Style>
-                                                      <FontFamily>Calibri</FontFamily>
+                                                      <FontFamily>Century Gothic</FontFamily>
+                                                      <FontSize>9pt</FontSize>
                                                       <Format>#,0.00;(#,0.00);'-'</Format>
                                                     </Style>
                                                   </TextRun>
@@ -1852,7 +1888,8 @@
                                                       <TextRun>
                                                         <Value>=Fields!disbursement_date.Value</Value>
                                                         <Style>
-                                                          <FontFamily>Calibri</FontFamily>
+                                                          <FontFamily>Century Gothic</FontFamily>
+                                                          <FontSize>9pt</FontSize>
                                                         </Style>
                                                       </TextRun>
                                                     </TextRuns>
@@ -1890,7 +1927,8 @@
                                                           <TextRun>
                                                             <Value>=Fields!expired_date.Value</Value>
                                                             <Style>
-                                                              <FontFamily>Calibri</FontFamily>
+                                                              <FontFamily>Century Gothic</FontFamily>
+                                                              <FontSize>9pt</FontSize>
                                                             </Style>
                                                           </TextRun>
                                                         </TextRuns>
@@ -1928,7 +1966,8 @@
                                                               <TextRun>
                                                                 <Value>=Fields!redeem_date.Value</Value>
                                                                 <Style>
-                                                                  <FontFamily>Calibri</FontFamily>
+                                                                  <FontFamily>Century Gothic</FontFamily>
+                                                                  <FontSize>9pt</FontSize>
                                                                 </Style>
                                                               </TextRun>
                                                             </TextRuns>
@@ -1966,7 +2005,8 @@
                                                                   <TextRun>
                                                                     <Value>=Fields!contract_status.Value</Value>
                                                                     <Style>
-                                                                      <FontFamily>Calibri</FontFamily>
+                                                                      <FontFamily>Century Gothic</FontFamily>
+                                                                      <FontSize>9pt</FontSize>
                                                                     </Style>
                                                                   </TextRun>
                                                                 </TextRuns>
@@ -2004,7 +2044,8 @@
                                                                       <TextRun>
                                                                         <Value>=Fields!co_pawn.Value</Value>
                                                                         <Style>
-                                                                          <FontFamily>Calibri</FontFamily>
+                                                                          <FontFamily>Century Gothic</FontFamily>
+                                                                          <FontSize>9pt</FontSize>
                                                                           <Format>#,0.00;(#,0.00);'-'</Format>
                                                                         </Style>
                                                                       </TextRun>
@@ -2071,7 +2112,8 @@
                                   <TextRun>
                                     <Value>="TOTAL " &amp; Fields!lob_name.Value &amp; " :"</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -2114,7 +2156,8 @@
                                       <TextRun>
                                         <Value>=SUM(Max(Fields!pawn_price_approved.Value, "contract_no"))</Value>
                                         <Style>
-                                          <FontFamily>Calibri</FontFamily>
+                                          <FontFamily>Century Gothic</FontFamily>
+                                          <FontSize>9pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
                                           <Format>#,0.00;(#,0.00);'-'</Format>
                                         </Style>
@@ -2158,7 +2201,8 @@
                                           <TextRun>
                                             <Value />
                                             <Style>
-                                              <FontFamily>Calibri</FontFamily>
+                                              <FontFamily>Century Gothic</FontFamily>
+                                              <FontSize>9pt</FontSize>
                                               <FontWeight>Bold</FontWeight>
                                             </Style>
                                           </TextRun>
@@ -2201,7 +2245,8 @@
                                               <TextRun>
                                                 <Value />
                                                 <Style>
-                                                  <FontFamily>Calibri</FontFamily>
+                                                  <FontFamily>Century Gothic</FontFamily>
+                                                  <FontSize>9pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
                                                 </Style>
                                               </TextRun>
@@ -2244,7 +2289,8 @@
                                                   <TextRun>
                                                     <Value />
                                                     <Style>
-                                                      <FontFamily>Calibri</FontFamily>
+                                                      <FontFamily>Century Gothic</FontFamily>
+                                                      <FontSize>9pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                     </Style>
                                                   </TextRun>
@@ -2287,7 +2333,8 @@
                                                       <TextRun>
                                                         <Value />
                                                         <Style>
-                                                          <FontFamily>Calibri</FontFamily>
+                                                          <FontFamily>Century Gothic</FontFamily>
+                                                          <FontSize>9pt</FontSize>
                                                           <FontWeight>Bold</FontWeight>
                                                         </Style>
                                                       </TextRun>
@@ -2330,7 +2377,8 @@
                                                           <TextRun>
                                                             <Value />
                                                             <Style>
-                                                              <FontFamily>Calibri</FontFamily>
+                                                              <FontFamily>Century Gothic</FontFamily>
+                                                              <FontSize>9pt</FontSize>
                                                               <FontWeight>Bold</FontWeight>
                                                               <Format>#,0.00;(#,0.00);'-'</Format>
                                                             </Style>
@@ -2392,8 +2440,8 @@
                               <TextRun>
                                 <Value>= "Total Unearned Pawn Interest Revenue Before Adjustment (" &amp; CountDistinct(Fields!id.Value) &amp; ") :"</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
-                                  <FontSize>11pt</FontSize>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -2432,8 +2480,8 @@
                                   <TextRun>
                                     <Value>=SUM(Max(Fields!pawn_price_approved.Value, "contract_no"))</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
-                                      <FontSize>11pt</FontSize>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Format>#,0.00;(#,0.00);'-'</Format>
                                     </Style>
@@ -2476,8 +2524,8 @@
                                       <TextRun>
                                         <Value />
                                         <Style>
-                                          <FontFamily>Calibri</FontFamily>
-                                          <FontSize>11pt</FontSize>
+                                          <FontFamily>Century Gothic</FontFamily>
+                                          <FontSize>9pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
                                         </Style>
                                       </TextRun>
@@ -2519,8 +2567,8 @@
                                           <TextRun>
                                             <Value />
                                             <Style>
-                                              <FontFamily>Calibri</FontFamily>
-                                              <FontSize>11pt</FontSize>
+                                              <FontFamily>Century Gothic</FontFamily>
+                                              <FontSize>9pt</FontSize>
                                               <FontWeight>Bold</FontWeight>
                                             </Style>
                                           </TextRun>
@@ -2562,8 +2610,8 @@
                                               <TextRun>
                                                 <Value />
                                                 <Style>
-                                                  <FontFamily>Calibri</FontFamily>
-                                                  <FontSize>11pt</FontSize>
+                                                  <FontFamily>Century Gothic</FontFamily>
+                                                  <FontSize>9pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
                                                 </Style>
                                               </TextRun>
@@ -2605,8 +2653,8 @@
                                                   <TextRun>
                                                     <Value />
                                                     <Style>
-                                                      <FontFamily>Calibri</FontFamily>
-                                                      <FontSize>11pt</FontSize>
+                                                      <FontFamily>Century Gothic</FontFamily>
+                                                      <FontSize>9pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                     </Style>
                                                   </TextRun>
@@ -2648,8 +2696,8 @@
                                                       <TextRun>
                                                         <Value />
                                                         <Style>
-                                                          <FontFamily>Calibri</FontFamily>
-                                                          <FontSize>11pt</FontSize>
+                                                          <FontFamily>Century Gothic</FontFamily>
+                                                          <FontSize>9pt</FontSize>
                                                           <FontWeight>Bold</FontWeight>
                                                           <Format>#,0.00;(#,0.00);'-'</Format>
                                                         </Style>
@@ -2717,9 +2765,10 @@
                   <TextRun>
                     <Value>=Parameters!CompanyName.Value</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
+                      <Color>#e2be7d</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2749,9 +2798,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>BRANCH:</Value>
+                    <Value>Branch:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2782,10 +2831,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>AS OF:</Value>
+                    <Value>As Of Date:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>9pt</FontSize>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2818,8 +2866,7 @@
                   <TextRun>
                     <Value>=Parameters!Branch.Value</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2854,8 +2901,7 @@
                   <TextRun>
                     <Value>=Parameters!SystemDate.Value</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2890,10 +2936,10 @@
                   <TextRun>
                     <Value>UNEARNED PAWN INTEREST REVENUE</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
-                      <Color>Red</Color>
+                      <Color>#e2be7d</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2927,8 +2973,7 @@
                   <TextRun>
                     <Value>Print Date:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>9pt</FontSize>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2964,7 +3009,7 @@
                     <Value>=Microsoft.VisualBasic.Strings.Format(NOW, "dd-MMM-yyyy")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2997,10 +3042,9 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>PAWN OFFICER:</Value>
+                    <Value>Pawn Officer:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>9pt</FontSize>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -3033,8 +3077,7 @@
                   <TextRun>
                     <Value>=Parameters!PawnOfficer.Value</Value>
                     <Style>
-                      <FontStyle>Italic</FontStyle>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -3061,7 +3104,7 @@
             </Style>
           </Textbox>
           <Line Name="Line3">
-            <Top>5.75465in</Top>
+            <Top>5.50465in</Top>
             <Left>6.68437in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
@@ -3081,9 +3124,8 @@
                   <TextRun>
                     <Value>Reviewed by:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -3091,7 +3133,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.81021in</Top>
+            <Top>5.56021in</Top>
             <Left>6.67395in</Left>
             <Height>0.25in</Height>
             <Width>1.91792in</Width>
@@ -3106,7 +3148,7 @@
             </Style>
           </Textbox>
           <Line Name="Line1">
-            <Top>5.70257in</Top>
+            <Top>5.45257in</Top>
             <Left>11.919in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
@@ -3126,9 +3168,8 @@
                   <TextRun>
                     <Value>Approved by:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -3136,7 +3177,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.75465in</Top>
+            <Top>5.50465in</Top>
             <Left>11.919in</Left>
             <Height>0.25in</Height>
             <Width>1.9075in</Width>
@@ -3165,7 +3206,8 @@
                               <TextRun>
                                 <Value>No</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -3204,7 +3246,8 @@
                               <TextRun>
                                 <Value>Adjustment</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -3243,7 +3286,8 @@
                               <TextRun>
                                 <Value />
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -3312,7 +3356,8 @@
                                 <TextRun>
                                   <Value>=Fields!sys_date.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>dd-MM-yyyy</Format>
                                   </Style>
                                 </TextRun>
@@ -3348,7 +3393,8 @@
                                 <TextRun>
                                   <Value>=Fields!trx_memo.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3383,7 +3429,8 @@
                                 <TextRun>
                                   <Value>=Fields!DR.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -3419,7 +3466,8 @@
                                 <TextRun>
                                   <Value>=Fields!CR.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -3455,7 +3503,8 @@
                                 <TextRun>
                                   <Value>=Fields!BL.Value</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -3496,7 +3545,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -3536,7 +3586,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -3576,7 +3627,8 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!DR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -3617,7 +3669,8 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!CR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -3658,7 +3711,8 @@
                                 <TextRun>
                                   <Value>=Sum(Max(Fields!BL.Value, "contract_no2"))</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -3704,8 +3758,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -3744,8 +3798,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -3784,8 +3838,8 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!DR.Value, "UNEARNED_DS") + Sum(Fields!DR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -3825,8 +3879,8 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!CR.Value, "UNEARNED_DS") + Sum(Fields!CR.Value)</Value>
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -3866,8 +3920,8 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Calibri</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -3914,7 +3968,8 @@
                               <TextRun>
                                 <Value>Date Posting</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -3955,7 +4010,8 @@
                               <TextRun>
                                 <Value>Description</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -3996,7 +4052,8 @@
                               <TextRun>
                                 <Value>UNEARNED REVENUE</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -4037,7 +4094,8 @@
                                   <TextRun>
                                     <Value>DR</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>White</Color>
                                     </Style>
@@ -4078,7 +4136,8 @@
                                   <TextRun>
                                     <Value>CR</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>White</Color>
                                     </Style>
@@ -4121,7 +4180,8 @@
                               <TextRun>
                                 <Value>UNEARNED BALANE</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                   <Color>White</Color>
                                 </Style>
@@ -4162,7 +4222,8 @@
                                   <TextRun>
                                     <Value />
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Color>White</Color>
                                     </Style>
@@ -4226,7 +4287,8 @@
                                   <TextRun>
                                     <Value>=RunningValue(Fields!contract_no.Value, countdistinct, nothing)</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -4264,7 +4326,8 @@
                                       <TextRun>
                                         <Value>=Fields!lob_name.Value</Value>
                                         <Style>
-                                          <FontFamily>Calibri</FontFamily>
+                                          <FontFamily>Century Gothic</FontFamily>
+                                          <FontSize>9pt</FontSize>
                                         </Style>
                                       </TextRun>
                                     </TextRuns>
@@ -4302,7 +4365,8 @@
                                           <TextRun>
                                             <Value />
                                             <Style>
-                                              <FontFamily>Calibri</FontFamily>
+                                              <FontFamily>Century Gothic</FontFamily>
+                                              <FontSize>9pt</FontSize>
                                               <Format>#,0.00;(#,0.00);'-'</Format>
                                             </Style>
                                           </TextRun>
@@ -4355,7 +4419,8 @@
                                   <TextRun>
                                     <Value>Total Adjustment :</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -4398,7 +4463,8 @@
                                       <TextRun>
                                         <Value />
                                         <Style>
-                                          <FontFamily>Calibri</FontFamily>
+                                          <FontFamily>Century Gothic</FontFamily>
+                                          <FontSize>9pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
                                           <Format>#,0.00;(#,0.00);'-'</Format>
                                         </Style>
@@ -4450,8 +4516,8 @@
                               <TextRun>
                                 <Value>Total Unearned Pawns Interest Revenue After Adjustment :</Value>
                                 <Style>
-                                  <FontFamily>Calibri</FontFamily>
-                                  <FontSize>11pt</FontSize>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -4490,8 +4556,8 @@
                                   <TextRun>
                                     <Value>=First(Fields!subTotal.Value)</Value>
                                     <Style>
-                                      <FontFamily>Calibri</FontFamily>
-                                      <FontSize>11pt</FontSize>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                       <Format>#,0.00;(#,0.00);'-'</Format>
                                     </Style>
@@ -4550,9 +4616,8 @@
                   <TextRun>
                     <Value>Prepared by:</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -4560,7 +4625,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.81021in</Top>
+            <Top>5.56021in</Top>
             <Left>0.71353in</Left>
             <Height>0.25in</Height>
             <Width>1.91792in</Width>
@@ -4575,7 +4640,7 @@
             </Style>
           </Textbox>
           <Line Name="Line4">
-            <Top>5.75465in</Top>
+            <Top>5.50465in</Top>
             <Left>0.72395in</Left>
             <Height>0in</Height>
             <Width>1.9075in</Width>
@@ -4587,7 +4652,7 @@
             </Style>
           </Line>
         </ReportItems>
-        <Height>6.42132in</Height>
+        <Height>6.14632in</Height>
         <Style />
       </Body>
       <Width>16.4515in</Width>

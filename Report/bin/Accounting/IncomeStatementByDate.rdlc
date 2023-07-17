@@ -272,10 +272,10 @@
                     <Value>INCOME STATEMENT BY DATE</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Arial</FontFamily>
-                      <FontSize>14pt</FontSize>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
-                      <Color>Red</Color>
+                      <Color>#e2be7d</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -309,8 +309,7 @@
                   <TextRun>
                     <Value>From Date :</Value>
                     <Style>
-                      <FontFamily>Arial</FontFamily>
-                      <FontWeight>Bold</FontWeight>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -344,7 +343,7 @@
                     <Value>=Parameters!FromDate.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Arial</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <Format>dd-MMM-yyyy</Format>
                     </Style>
                   </TextRun>
@@ -382,10 +381,11 @@
                     <Value>=Parameters!CompanyName.Value</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
-                      <FontFamily>Arial</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>None</TextDecoration>
-                      <Color>#000000</Color>
+                      <Color>#e2be7d</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -417,9 +417,7 @@
                   <TextRun>
                     <Value>Print Date :</Value>
                     <Style>
-                      <FontFamily>Arial</FontFamily>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -453,7 +451,7 @@
                     <Value>=Microsoft.VisualBasic.Strings.Format(NOW, "dd-MMM-yyyy")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Arial</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <Format>d</Format>
                     </Style>
                   </TextRun>
@@ -490,8 +488,7 @@
                   <TextRun>
                     <Value>To Date :</Value>
                     <Style>
-                      <FontFamily>Arial</FontFamily>
-                      <FontWeight>Bold</FontWeight>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -525,7 +522,7 @@
                     <Value>=Parameters!ToDate.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Arial</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <Format>dd-MMM-yyyy</Format>
                     </Style>
                   </TextRun>
@@ -573,7 +570,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Approved by:</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -604,8 +603,7 @@
                   <TextRun>
                     <Value>Branch :</Value>
                     <Style>
-                      <FontFamily>Arial</FontFamily>
-                      <FontWeight>Bold</FontWeight>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -639,7 +637,7 @@
                     <Value>=Parameters!Branch.Value</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Arial</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <Format>dd-MMM-yyyy</Format>
                     </Style>
                   </TextRun>
@@ -695,7 +693,7 @@
                                 <TextRun>
                                   <Value>=Fields!acc_class.Value</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
@@ -731,6 +729,7 @@
                                 <TextRun>
                                   <Value>Balance</Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
@@ -775,12 +774,14 @@
                                 <TextRun>
                                   <Value xml:space="preserve">  </Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>=Fields!glm.Value &amp; IIF(Fields!glnm.Value &lt;&gt; "", "000 - " &amp; Fields!glnm.Value, "")</Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -816,7 +817,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -854,7 +855,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -896,7 +897,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!gl.Value &amp; IIF(IsNothing(Fields!gl_name.Value), "--", " - ") &amp; Fields!gl_name.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <ListLevel>1</ListLevel>
@@ -931,7 +934,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -969,7 +972,7 @@
                                 <TextRun>
                                   <Value>=Fields!ac_amt.Value</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1013,12 +1016,14 @@
                                 <TextRun>
                                   <Value xml:space="preserve">  </Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>="Total " &amp; Fields!glnm.Value</Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1054,7 +1059,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1093,7 +1098,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!ac_amt.Value)</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1138,7 +1143,7 @@
                                 <TextRun>
                                   <Value>="TOTAL " &amp; MID(Fields!acc_class.Value, 3) &amp; " :"</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1175,8 +1180,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1216,8 +1220,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!ac_amt.Value)</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1344,7 +1347,7 @@
                                 <TextRun>
                                   <Value>=Fields!acc_class.Value</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
@@ -1380,6 +1383,7 @@
                                 <TextRun>
                                   <Value>Balance</Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
@@ -1424,12 +1428,14 @@
                                 <TextRun>
                                   <Value xml:space="preserve">  </Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>=Fields!glm.Value &amp; IIF(Fields!glnm.Value &lt;&gt; "", "000 - " &amp; Fields!glnm.Value, "")</Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1465,7 +1471,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1503,7 +1509,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1545,7 +1551,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!gl.Value &amp; IIF(IsNothing(Fields!gl_name.Value), "--", " - ") &amp; Fields!gl_name.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <ListLevel>1</ListLevel>
@@ -1580,7 +1588,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1618,7 +1626,7 @@
                                 <TextRun>
                                   <Value>=Fields!ac_amt.Value</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1662,12 +1670,14 @@
                                 <TextRun>
                                   <Value xml:space="preserve">  </Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>="Total " &amp; Fields!glnm.Value</Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1703,7 +1713,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1742,7 +1752,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!ac_amt.Value)</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1787,7 +1797,7 @@
                                 <TextRun>
                                   <Value>="TOTAL " &amp; MID(Fields!acc_class.Value, 3) &amp; " :"</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1824,8 +1834,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1865,8 +1874,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!ac_amt.Value)</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1996,8 +2004,7 @@
                                 <TextRun>
                                   <Value>GROSS PROFIT :</Value>
                                   <Style>
-                                    <FontFamily>lato</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2037,7 +2044,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -2075,8 +2084,7 @@
                                   <Value>$</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2118,8 +2126,7 @@
                                   <Value>=Fields!ttgostran.Value</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -2209,7 +2216,7 @@
                                 <TextRun>
                                   <Value>=Fields!acc_class.Value</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
@@ -2245,6 +2252,7 @@
                                 <TextRun>
                                   <Value>Balance</Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
@@ -2289,12 +2297,14 @@
                                 <TextRun>
                                   <Value xml:space="preserve">  </Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>=Fields!glm.Value &amp; IIF(Fields!glnm.Value &lt;&gt; "", "000 - " &amp; Fields!glnm.Value, "")</Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2330,7 +2340,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2368,7 +2378,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2410,7 +2420,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!gl.Value &amp; IIF(IsNothing(Fields!gl_name.Value), "--", " - ") &amp; Fields!gl_name.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <ListLevel>1</ListLevel>
@@ -2445,7 +2457,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2483,7 +2495,7 @@
                                 <TextRun>
                                   <Value>=Fields!ac_amt.Value</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -2527,12 +2539,14 @@
                                 <TextRun>
                                   <Value xml:space="preserve">  </Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>="Total " &amp; Fields!glnm.Value</Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2568,7 +2582,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2607,7 +2621,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!ac_amt.Value)</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -2652,7 +2666,7 @@
                                 <TextRun>
                                   <Value>="TOTAL " &amp; MID(Fields!acc_class.Value, 3) &amp; " :"</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2689,8 +2703,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2730,8 +2743,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!ac_amt.Value)</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -2861,8 +2873,7 @@
                                 <TextRun>
                                   <Value>NET ORDINARY INCOME :</Value>
                                   <Style>
-                                    <FontFamily>lato</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2902,7 +2913,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -2940,8 +2953,7 @@
                                   <Value>$</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2983,8 +2995,7 @@
                                   <Value>=Fields!ttgostran.Value</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -3074,7 +3085,7 @@
                                 <TextRun>
                                   <Value>=Fields!acc_class.Value</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
@@ -3110,6 +3121,7 @@
                                 <TextRun>
                                   <Value>Balance</Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
@@ -3154,12 +3166,14 @@
                                 <TextRun>
                                   <Value xml:space="preserve">  </Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>=Fields!glm.Value &amp; IIF(Fields!glnm.Value &lt;&gt; "", "000 - " &amp; Fields!glnm.Value, "")</Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -3195,7 +3209,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3233,7 +3247,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3275,7 +3289,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!gl.Value &amp; IIF(IsNothing(Fields!gl_name.Value), "--", " - ") &amp; Fields!gl_name.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <ListLevel>1</ListLevel>
@@ -3310,7 +3326,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3348,7 +3364,7 @@
                                 <TextRun>
                                   <Value>=Fields!ac_amt.Value</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -3392,12 +3408,14 @@
                                 <TextRun>
                                   <Value xml:space="preserve">  </Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
                                   <Value>="Total " &amp; Fields!glnm.Value</Value>
                                   <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -3433,7 +3451,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -3472,7 +3490,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!ac_amt.Value)</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -3517,7 +3535,7 @@
                                 <TextRun>
                                   <Value>="TOTAL " &amp; MID(Fields!acc_class.Value, 3) &amp; " :"</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -3554,8 +3572,7 @@
                                 <TextRun>
                                   <Value>$</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -3595,8 +3612,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!ac_amt.Value)</Value>
                                   <Style>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -3726,8 +3742,7 @@
                                 <TextRun>
                                   <Value>NET INCOME:</Value>
                                   <Style>
-                                    <FontFamily>lato</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -3767,7 +3782,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -3805,8 +3822,7 @@
                                   <Value>$</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -3848,8 +3864,7 @@
                                   <Value>=Fields!p_l.Value</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Arial</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -3931,7 +3946,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Reviewed by:</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -3961,7 +3978,9 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Prepared by:</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
