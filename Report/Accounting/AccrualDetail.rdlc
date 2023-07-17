@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -7,6 +7,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>784296e6-4699-46a8-a0df-f1a0fb8ad82e</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -157,7 +158,7 @@
                   <TextRun>
                     <Value>BRANCH</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -190,7 +191,7 @@
                   <TextRun>
                     <Value>As of:</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -225,7 +226,7 @@
                     <Value>=First(Fields!branch_name.Value, "CONTRACT_DS")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -260,7 +261,7 @@
                   <TextRun>
                     <Value>=Parameters!SystemDate.Value</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <Format>dd-MM-yyyy</Format>
                     </Style>
                   </TextRun>
@@ -296,20 +297,20 @@
                   <TextRun>
                     <Value>ACCRUAL DETAIL REPORT</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
-                      <Color>Red</Color>
+                      <Color>#e2be7d</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Center</TextAlign>
+                  <TextAlign>Left</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.63763in</Top>
+            <Top>0.47271in</Top>
             <Left>0.10255in</Left>
             <Height>0.25in</Height>
             <Width>5.21358in</Width>
@@ -324,72 +325,6 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox10">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Seen&amp;Approved By: </Value>
-                    <Style>
-                      <FontFamily>Segoe UI</FontFamily>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.66542in</Top>
-            <Left>5.31777in</Left>
-            <Height>0.25in</Height>
-            <Width>1.75555in</Width>
-            <ZIndex>5</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox21">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Prepared By:</Value>
-                    <Style>
-                      <FontFamily>Segoe UI</FontFamily>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.66542in</Top>
-            <Left>0.29695in</Left>
-            <Height>0.25in</Height>
-            <Width>1.9075in</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox4">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -399,7 +334,7 @@
                   <TextRun>
                     <Value>Print Date:</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -411,11 +346,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.63763in</Top>
-            <Left>5.31777in</Left>
+            <Top>0.86633in</Top>
+            <Left>3.81265in</Left>
             <Height>0.25in</Height>
-            <Width>0.74591in</Width>
-            <ZIndex>7</ZIndex>
+            <Width>1.50348in</Width>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -437,7 +372,7 @@
                     <Value>=Microsoft.VisualBasic.Strings.Format(NOW, "dd-MMM-yyyy")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -446,11 +381,11 @@
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>0.63763in</Top>
-            <Left>6.07757in</Left>
+            <Top>0.86633in</Top>
+            <Left>5.31613in</Left>
             <Height>0.25in</Height>
-            <Width>0.99575in</Width>
-            <ZIndex>8</ZIndex>
+            <Width>1.75294in</Width>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -472,7 +407,7 @@
                   <TextRun>
                     <Value>CONTRACT #</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -485,7 +420,7 @@
             <Left>0.10255in</Left>
             <Height>0.25in</Height>
             <Width>1.3507in</Width>
-            <ZIndex>9</ZIndex>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -507,7 +442,7 @@
                     <Value>=First(Fields!contract_no.Value, "CONTRACT_DS")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -520,7 +455,7 @@
             <Left>1.45325in</Left>
             <Height>0.25in</Height>
             <Width>1.68373in</Width>
-            <ZIndex>10</ZIndex>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -542,7 +477,7 @@
                   <TextRun>
                     <Value>Contract Status</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -555,7 +490,7 @@
             <Left>3.81265in</Left>
             <Height>0.25in</Height>
             <Width>1.50348in</Width>
-            <ZIndex>11</ZIndex>
+            <ZIndex>9</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -577,7 +512,7 @@
                     <Value>=First(Fields!contract_status.Value, "CONTRACT_DS")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -590,7 +525,7 @@
             <Left>5.31777in</Left>
             <Height>0.25in</Height>
             <Width>1.75555in</Width>
-            <ZIndex>12</ZIndex>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -612,7 +547,7 @@
                   <TextRun>
                     <Value>Customer Name</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -625,7 +560,7 @@
             <Left>0.10255in</Left>
             <Height>0.25in</Height>
             <Width>1.3507in</Width>
-            <ZIndex>13</ZIndex>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -647,7 +582,7 @@
                     <Value>=First(Fields!customer_name.Value, "CONTRACT_DS")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -660,7 +595,7 @@
             <Left>1.45325in</Left>
             <Height>0.25in</Height>
             <Width>1.68373in</Width>
-            <ZIndex>14</ZIndex>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -682,7 +617,7 @@
                   <TextRun>
                     <Value>LOB Type:</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -695,7 +630,7 @@
             <Left>3.81265in</Left>
             <Height>0.25in</Height>
             <Width>1.50348in</Width>
-            <ZIndex>15</ZIndex>
+            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -717,7 +652,7 @@
                     <Value>=First(Fields!lob_name.Value, "CONTRACT_DS")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -730,7 +665,7 @@
             <Left>5.31777in</Left>
             <Height>0.25in</Height>
             <Width>1.75555in</Width>
-            <ZIndex>16</ZIndex>
+            <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -752,7 +687,7 @@
                   <TextRun>
                     <Value>Date Disbursed</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -765,7 +700,7 @@
             <Left>0.10255in</Left>
             <Height>0.25in</Height>
             <Width>1.3507in</Width>
-            <ZIndex>17</ZIndex>
+            <ZIndex>15</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -786,7 +721,7 @@
                   <TextRun>
                     <Value>=First(Fields!disbursement_date.Value, "CONTRACT_DS")</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <Format>dd-MM-yyyy</Format>
                     </Style>
                   </TextRun>
@@ -800,7 +735,7 @@
             <Left>1.45325in</Left>
             <Height>0.25in</Height>
             <Width>1.68373in</Width>
-            <ZIndex>18</ZIndex>
+            <ZIndex>16</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -822,7 +757,7 @@
                   <TextRun>
                     <Value>Date Expired</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -835,7 +770,7 @@
             <Left>0.10255in</Left>
             <Height>0.25in</Height>
             <Width>1.3507in</Width>
-            <ZIndex>19</ZIndex>
+            <ZIndex>17</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -856,7 +791,7 @@
                   <TextRun>
                     <Value>=First(Fields!expired_date.Value, "CONTRACT_DS")</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <Format>dd-MM-yyyy</Format>
                     </Style>
                   </TextRun>
@@ -870,7 +805,7 @@
             <Left>1.45325in</Left>
             <Height>0.25in</Height>
             <Width>1.68373in</Width>
-            <ZIndex>20</ZIndex>
+            <ZIndex>18</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -892,7 +827,7 @@
                   <TextRun>
                     <Value>Disbured Amount</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -905,7 +840,7 @@
             <Left>3.81265in</Left>
             <Height>0.25in</Height>
             <Width>1.50348in</Width>
-            <ZIndex>21</ZIndex>
+            <ZIndex>19</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -926,7 +861,7 @@
                   <TextRun>
                     <Value>=First(Fields!pawn_price_approved.Value, "CONTRACT_DS")</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <Format>#,0.00;(#,0.00);'-'</Format>
                     </Style>
                   </TextRun>
@@ -940,7 +875,7 @@
             <Left>5.55042in</Left>
             <Height>0.25in</Height>
             <Width>1.5229in</Width>
-            <ZIndex>22</ZIndex>
+            <ZIndex>20</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -962,7 +897,7 @@
                   <TextRun>
                     <Value>Outstanding Amount</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
@@ -975,7 +910,7 @@
             <Left>3.81265in</Left>
             <Height>0.25in</Height>
             <Width>1.50348in</Width>
-            <ZIndex>23</ZIndex>
+            <ZIndex>21</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -996,7 +931,7 @@
                   <TextRun>
                     <Value>=First(Fields!balance.Value, "CONTRACT_DS")</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <Format>#,0.00;(#,0.00);'-'</Format>
                     </Style>
                   </TextRun>
@@ -1010,7 +945,7 @@
             <Left>5.55042in</Left>
             <Height>0.25in</Height>
             <Width>1.5229in</Width>
-            <ZIndex>24</ZIndex>
+            <ZIndex>22</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1070,6 +1005,7 @@
                                   <Value>Due Date</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
+                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1084,7 +1020,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Silver</BackgroundColor>
+                            <BackgroundColor>#2d351e</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1106,6 +1042,7 @@
                                   <Value>Outstanding</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
+                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1120,7 +1057,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Silver</BackgroundColor>
+                            <BackgroundColor>#2d351e</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1144,6 +1081,7 @@
                                   <Value>Interest Rate %</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
+                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1158,7 +1096,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Silver</BackgroundColor>
+                            <BackgroundColor>#2d351e</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1180,6 +1118,7 @@
                                   <Value>Current Due Interest</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
+                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1194,7 +1133,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Silver</BackgroundColor>
+                            <BackgroundColor>#2d351e</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1218,6 +1157,7 @@
                                   <Value># Schedule Days</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
+                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1232,7 +1172,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Silver</BackgroundColor>
+                            <BackgroundColor>#2d351e</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1254,6 +1194,7 @@
                                   <Value>Accrual / Day</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
+                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1268,7 +1209,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Silver</BackgroundColor>
+                            <BackgroundColor>#2d351e</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1654,7 +1595,7 @@
             <Left>0.10255in</Left>
             <Height>0.67708in</Height>
             <Width>6.97077in</Width>
-            <ZIndex>25</ZIndex>
+            <ZIndex>23</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1670,7 +1611,7 @@
                   <TextRun>
                     <Value>$</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1683,7 +1624,7 @@
             <Left>5.31777in</Left>
             <Height>0.25in</Height>
             <Width>0.21876in</Width>
-            <ZIndex>26</ZIndex>
+            <ZIndex>24</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1705,7 +1646,7 @@
                   <TextRun>
                     <Value>$</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -1718,7 +1659,7 @@
             <Left>5.31777in</Left>
             <Height>0.25in</Height>
             <Width>0.21876in</Width>
-            <ZIndex>27</ZIndex>
+            <ZIndex>25</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1748,6 +1689,7 @@
                                 <Style>
                                   <FontFamily>Segoe UI</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -1762,7 +1704,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>#adc4a0</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2049,7 +1991,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Silver</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2085,7 +2027,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Silver</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2119,7 +2061,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Silver</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2156,7 +2098,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Silver</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2193,7 +2135,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Silver</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2230,7 +2172,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Silver</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2261,6 +2203,7 @@
                                 <Style>
                                   <FontFamily>Segoe UI</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2275,7 +2218,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>#adc4a0</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2301,6 +2244,7 @@
                                 <Style>
                                   <FontFamily>Segoe UI</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2315,7 +2259,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>#adc4a0</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2341,6 +2285,7 @@
                                 <Style>
                                   <FontFamily>Segoe UI</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2355,7 +2300,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>#adc4a0</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2381,6 +2326,7 @@
                                 <Style>
                                   <FontFamily>Segoe UI</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2395,7 +2341,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>#adc4a0</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2422,6 +2368,7 @@
                                       <FontFamily>Segoe UI</FontFamily>
                                       <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
+                                      <Color>White</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -2436,7 +2383,7 @@
                                 <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
-                              <BackgroundColor>#adc4a0</BackgroundColor>
+                              <BackgroundColor>#2d351e</BackgroundColor>
                               <VerticalAlign>Middle</VerticalAlign>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
@@ -2463,6 +2410,7 @@
                                       <FontFamily>Segoe UI</FontFamily>
                                       <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
+                                      <Color>White</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -2477,7 +2425,7 @@
                                 <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
-                              <BackgroundColor>#adc4a0</BackgroundColor>
+                              <BackgroundColor>#2d351e</BackgroundColor>
                               <VerticalAlign>Middle</VerticalAlign>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
@@ -2504,6 +2452,7 @@
                                       <FontFamily>Segoe UI</FontFamily>
                                       <FontSize>9pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
+                                      <Color>White</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -2518,7 +2467,7 @@
                                 <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
-                              <BackgroundColor>#adc4a0</BackgroundColor>
+                              <BackgroundColor>#2d351e</BackgroundColor>
                               <VerticalAlign>Middle</VerticalAlign>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
@@ -2610,7 +2559,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>Silver</BackgroundColor>
+                          <BackgroundColor>#e2be7d</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2630,7 +2579,7 @@
             <Left>0.10255in</Left>
             <Height>1in</Height>
             <Width>6.97077in</Width>
-            <ZIndex>28</ZIndex>
+            <ZIndex>26</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2646,9 +2595,10 @@
                   <TextRun>
                     <Value>=Parameters!CompanyName.Value</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontSize>11pt</FontSize>
                       <FontWeight>Bold</FontWeight>
+                      <Color>#e2be7d</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2660,6 +2610,50 @@
             <Left>0.10255in</Left>
             <Height>0.29762in</Height>
             <Width>6.97077in</Width>
+            <ZIndex>27</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line3">
+            <Top>5.15744in</Top>
+            <Left>5.44311in</Left>
+            <Height>0in</Height>
+            <Width>1.63021in</Width>
+            <ZIndex>28</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox11">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Approved by:</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox7</rd:DefaultName>
+            <Top>5.15744in</Top>
+            <Left>5.44311in</Left>
+            <Height>0.25in</Height>
+            <Width>1.63542in</Width>
             <ZIndex>29</ZIndex>
             <Style>
               <Border>
@@ -2671,11 +2665,11 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Line Name="Line4">
-            <Top>5.7175in</Top>
-            <Left>0.29695in</Left>
+          <Line Name="Line6">
+            <Top>5.15744in</Top>
+            <Left>2.79576in</Left>
             <Height>0in</Height>
-            <Width>1.9075in</Width>
+            <Width>1.63021in</Width>
             <ZIndex>30</ZIndex>
             <Style>
               <Border>
@@ -2683,86 +2677,84 @@
               </Border>
             </Style>
           </Line>
-          <Line Name="Line2">
-            <Top>5.7175in</Top>
-            <Left>5.31777in</Left>
-            <Height>0in</Height>
-            <Width>1.75555in</Width>
+          <Textbox Name="Textbox48">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Reviewed by:</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox7</rd:DefaultName>
+            <Top>5.15744in</Top>
+            <Left>2.79576in</Left>
+            <Height>0.25in</Height>
+            <Width>1.63542in</Width>
             <ZIndex>31</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line7">
+            <Top>5.15744in</Top>
+            <Left>0.143in</Left>
+            <Height>0in</Height>
+            <Width>1.63021in</Width>
+            <ZIndex>32</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
               </Border>
             </Style>
           </Line>
-          <Textbox Name="Textbox31">
+          <Textbox Name="Textbox49">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Branch Accountant </Value>
+                    <Value>Prepared by:</Value>
                     <Style>
-                      <FontFamily>Segoe UI</FontFamily>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.7175in</Top>
-            <Left>0.29695in</Left>
+            <rd:DefaultName>Textbox7</rd:DefaultName>
+            <Top>5.15744in</Top>
+            <Left>0.143in</Left>
             <Height>0.25in</Height>
-            <Width>1.57292in</Width>
-            <ZIndex>32</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox11">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Branch Manager </Value>
-                    <Style>
-                      <FontFamily>Segoe UI</FontFamily>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.7175in</Top>
-            <Left>5.31777in</Left>
-            <Height>0.25in</Height>
-            <Width>1.57292in</Width>
+            <Width>1.63542in</Width>
             <ZIndex>33</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>6.18155in</Height>
+        <Height>5.54822in</Height>
         <Style />
       </Body>
       <Width>7.1889in</Width>
