@@ -589,7 +589,6 @@
     </Content>
     <Content Include="Operation\CashCollectionConsolidate.aspx" />
     <Content Include="Operation\CashCollectionOnDate.aspx" />
-    <Content Include="Operation\Customer.aspx" />
     <Content Include="Operation\ContractOutstandingByDate.aspx" />
     <Content Include="Operation\PawnListDetail.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -1326,13 +1325,6 @@
     <Compile Include="Operation\CashCollectionOnDate.aspx.designer.cs">
       <DependentUpon>CashCollectionOnDate.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Operation\Customer.aspx.cs">
-      <DependentUpon>Customer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operation\Customer.aspx.designer.cs">
-      <DependentUpon>Customer.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Operation\CustomerList.aspx.cs">
       <DependentUpon>CustomerList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1548,11 +1540,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Accounting\AccrualInterestOnPawn.rdlc">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Operation\Customer.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
