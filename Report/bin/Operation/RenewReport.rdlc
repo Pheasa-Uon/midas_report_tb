@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -7,6 +7,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>9e0f9b76-a730-4ee4-ab40-8b8eb3ed2ada</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -111,20 +112,22 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>BRANCH:</Value>
+                    <Value>Branch:</Value>
                     <Style>
-                      <FontWeight>Bold</FontWeight>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.4375in</Top>
-            <Left>0.125in</Left>
+            <Top>0.8125in</Top>
+            <Left>11.97675in</Left>
             <Height>0.25in</Height>
-            <Width>1.13021in</Width>
+            <Width>0.9855in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -143,21 +146,22 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>SYSTEM DATE:</Value>
+                    <Value>To Date:</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.97354in</Top>
-            <Left>3.58968in</Left>
+            <Top>1.91798in</Top>
+            <Left>11.97675in</Left>
             <Height>0.25in</Height>
-            <Width>1.06771in</Width>
+            <Width>0.9855in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -179,27 +183,29 @@
                   <TextRun>
                     <Value>RENEW REPORT</Value>
                     <Style>
+                      <FontFamily>Century Gothic</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
-                      <Color>Red</Color>
+                      <Color>#e2be7d</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Center</TextAlign>
+                  <TextAlign>Left</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.2791in</Top>
+            <Top>0.40973in</Top>
             <Left>0.125in</Left>
             <Height>0.25in</Height>
-            <Width>13.42042in</Width>
+            <Width>5.85175in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -215,21 +221,20 @@
                   <TextRun>
                     <Value>Print Date:</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Right</TextAlign>
+                  <TextAlign>Left</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.2791in</Top>
-            <Left>13.5732in</Left>
+            <Top>2.19576in</Top>
+            <Left>11.97675in</Left>
             <Height>0.25in</Height>
-            <Width>1.09599in</Width>
+            <Width>0.9855in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -252,25 +257,25 @@
                     <Value>=Microsoft.VisualBasic.Strings.Format(NOW, "dd-MMM-yyyy")</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
-                      <FontFamily>Gill Sans MT</FontFamily>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Center</TextAlign>
+                  <TextAlign>Left</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
-            <Top>1.2791in</Top>
-            <Left>14.68369in</Left>
+            <Top>2.19576in</Top>
+            <Left>12.97675in</Left>
             <Height>0.25in</Height>
-            <Width>1.19792in</Width>
+            <Width>2.90486in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <BackgroundColor>Gainsboro</BackgroundColor>
+              <BackgroundColor>LightGrey</BackgroundColor>
               <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
@@ -285,21 +290,22 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>CURRENCY:</Value>
+                    <Value>Currency:</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.97354in</Top>
-            <Left>0.125in</Left>
+            <Top>1.36806in</Top>
+            <Left>11.97675in</Left>
             <Height>0.25in</Height>
-            <Width>1.13021in</Width>
+            <Width>0.9855in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -388,7 +394,7 @@
                                 <TextRun>
                                   <Value>=RowNumber("RenewDS")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -423,7 +429,7 @@
                                 <TextRun>
                                   <Value>=Fields!disbursement_date.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <Format>dd-MMM-yyyy</Format>
                                   </Style>
                                 </TextRun>
@@ -459,7 +465,7 @@
                                 <TextRun>
                                   <Value>=Fields!customer_name.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <Format>#,0;(#,0);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -495,7 +501,7 @@
                                 <TextRun>
                                   <Value>=Fields!lob_name.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -530,7 +536,7 @@
                                 <TextRun>
                                   <Value>=Fields!ticket_no.Value &amp; " (" &amp; Fields!serial_number.Value &amp; ")"</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -565,7 +571,7 @@
                                 <TextRun>
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -603,7 +609,7 @@
                                 <TextRun>
                                   <Value>=iif(Fields!row_number.Value=1, Fields!pawn_price_approved.Value, 0)</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -642,7 +648,7 @@
                                 <TextRun>
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -680,7 +686,7 @@
                                 <TextRun>
                                   <Value>=Fields!principle.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -719,7 +725,7 @@
                                 <TextRun>
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -757,7 +763,7 @@
                                 <TextRun>
                                   <Value>=Fields!interest.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -796,7 +802,7 @@
                                 <TextRun>
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -834,7 +840,7 @@
                                 <TextRun>
                                   <Value>=Fields!other_income.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -873,7 +879,7 @@
                                 <TextRun>
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -911,7 +917,7 @@
                                 <TextRun>
                                   <Value>=Fields!penalty.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -950,7 +956,7 @@
                                 <TextRun>
                                   <Value>=Fields!waive.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -989,7 +995,7 @@
                                 <TextRun>
                                   <Value>=Fields!due_date.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <Format>dd-MMM-yyyy</Format>
                                   </Style>
                                 </TextRun>
@@ -1025,7 +1031,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1060,7 +1066,7 @@
                                 <TextRun>
                                   <Value>=Fields!pawn_officer.Value</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1100,7 +1106,7 @@
                                 <TextRun>
                                   <Value>= "Total " &amp; Fields!lob_name.Value &amp; " : "</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1142,7 +1148,7 @@
                                 <TextRun>
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1182,7 +1188,7 @@
                                 <TextRun>
                                   <Value>=sum(iif(Fields!row_number.Value=1, Fields!pawn_price_approved.Value, 0))</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1223,7 +1229,7 @@
                                 <TextRun>
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1263,7 +1269,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!principle.Value)</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1304,7 +1310,7 @@
                                 <TextRun>
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1344,7 +1350,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!interest.Value)</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1385,7 +1391,7 @@
                                 <TextRun>
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1425,7 +1431,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!other_income.Value)</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1466,7 +1472,7 @@
                                 <TextRun>
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1506,7 +1512,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!penalty.Value)</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1547,7 +1553,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!waive.Value)</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1588,7 +1594,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1624,7 +1630,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1660,7 +1666,7 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1701,8 +1707,7 @@
                                 <TextRun>
                                   <Value>GRAND TOTAL :</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1718,7 +1723,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1744,7 +1749,7 @@
                                 <TextRun>
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1763,7 +1768,7 @@
                             <RightBorder>
                               <Style>None</Style>
                             </RightBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1785,8 +1790,7 @@
                                   <Value>=Sum(iif(Fields!row_number.Value=1, Fields!pawn_price_approved.Value, 0))</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1806,7 +1810,7 @@
                             <LeftBorder>
                               <Style>None</Style>
                             </LeftBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1828,8 +1832,7 @@
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1848,7 +1851,7 @@
                             <RightBorder>
                               <Style>None</Style>
                             </RightBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1870,8 +1873,7 @@
                                   <Value>=Sum(Fields!principle.Value)</Value>
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1891,7 +1893,7 @@
                             <LeftBorder>
                               <Style>None</Style>
                             </LeftBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1913,8 +1915,7 @@
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
                                     <FontStyle>Normal</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -1933,7 +1934,7 @@
                             <RightBorder>
                               <Style>None</Style>
                             </RightBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1955,8 +1956,7 @@
                                   <Value>=Sum(Fields!interest.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -1976,7 +1976,7 @@
                             <LeftBorder>
                               <Style>None</Style>
                             </LeftBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -1997,8 +1997,7 @@
                                 <TextRun>
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2017,7 +2016,7 @@
                             <RightBorder>
                               <Style>None</Style>
                             </RightBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2038,8 +2037,7 @@
                                 <TextRun>
                                   <Value>=Sum(Fields!other_income.Value)</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -2059,7 +2057,7 @@
                             <LeftBorder>
                               <Style>None</Style>
                             </LeftBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2080,8 +2078,7 @@
                                 <TextRun>
                                   <Value>=IIF(Parameters!Currency.Value = "USD","$","KHR")</Value>
                                   <Style>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2100,7 +2097,7 @@
                             <RightBorder>
                               <Style>None</Style>
                             </RightBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2122,8 +2119,7 @@
                                   <Value>=Sum(Fields!penalty.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -2143,7 +2139,7 @@
                             <LeftBorder>
                               <Style>None</Style>
                             </LeftBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2165,8 +2161,7 @@
                                   <Value>=Sum(Fields!waive.Value)</Value>
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
@@ -2186,7 +2181,7 @@
                             <LeftBorder>
                               <Style>None</Style>
                             </LeftBorder>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2208,8 +2203,7 @@
                                   <Value />
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2225,7 +2219,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2247,8 +2241,7 @@
                                   <Value />
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2264,7 +2257,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2286,8 +2279,7 @@
                                   <Value />
                                   <Style>
                                     <FontStyle>Italic</FontStyle>
-                                    <FontFamily>Gill Sans MT</FontFamily>
-                                    <FontSize>11pt</FontSize>
+                                    <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -2303,7 +2295,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Yellow</BackgroundColor>
+                            <BackgroundColor>#e2be7d</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2332,8 +2324,9 @@
                               <TextRun>
                                 <Value>No</Value>
                                 <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2348,7 +2341,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2375,8 +2368,9 @@
                               <TextRun>
                                 <Value>Transaction Date</Value>
                                 <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2391,7 +2385,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2418,8 +2412,9 @@
                               <TextRun>
                                 <Value>Client Name</Value>
                                 <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2434,7 +2429,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2459,10 +2454,11 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>LOB</Value>
+                                <Value>Product Name</Value>
                                 <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2477,7 +2473,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2501,8 +2497,9 @@
                               <TextRun>
                                 <Value>Ref. Ticket #</Value>
                                 <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2517,7 +2514,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2541,8 +2538,9 @@
                               <TextRun>
                                 <Value>Renew</Value>
                                 <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2557,7 +2555,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Top</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2581,8 +2579,9 @@
                                   <TextRun>
                                     <Value>Principle</Value>
                                     <Style>
-                                      <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
                                       <FontWeight>Bold</FontWeight>
+                                      <Color>White</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -2597,7 +2596,7 @@
                                 <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
-                              <BackgroundColor>Wheat</BackgroundColor>
+                              <BackgroundColor>#2d351e</BackgroundColor>
                               <VerticalAlign>Middle</VerticalAlign>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
@@ -2625,8 +2624,9 @@
                                   <TextRun>
                                     <Value>Principle Paid</Value>
                                     <Style>
-                                      <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
                                       <FontWeight>Bold</FontWeight>
+                                      <Color>White</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -2641,7 +2641,7 @@
                                 <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
-                              <BackgroundColor>Wheat</BackgroundColor>
+                              <BackgroundColor>#2d351e</BackgroundColor>
                               <VerticalAlign>Middle</VerticalAlign>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
@@ -2669,8 +2669,9 @@
                                   <TextRun>
                                     <Value>Interest Paid</Value>
                                     <Style>
-                                      <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
                                       <FontWeight>Bold</FontWeight>
+                                      <Color>White</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -2685,7 +2686,7 @@
                                 <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
-                              <BackgroundColor>Wheat</BackgroundColor>
+                              <BackgroundColor>#2d351e</BackgroundColor>
                               <VerticalAlign>Middle</VerticalAlign>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
@@ -2713,8 +2714,9 @@
                                   <TextRun>
                                     <Value>Other Income</Value>
                                     <Style>
-                                      <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
                                       <FontWeight>Bold</FontWeight>
+                                      <Color>White</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -2729,7 +2731,7 @@
                                 <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
-                              <BackgroundColor>Wheat</BackgroundColor>
+                              <BackgroundColor>#2d351e</BackgroundColor>
                               <VerticalAlign>Middle</VerticalAlign>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
@@ -2757,8 +2759,9 @@
                                   <TextRun>
                                     <Value>Penalty</Value>
                                     <Style>
-                                      <FontFamily>Gill Sans MT</FontFamily>
+                                      <FontFamily>Century Gothic</FontFamily>
                                       <FontWeight>Bold</FontWeight>
+                                      <Color>White</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -2773,7 +2776,7 @@
                                 <Color>LightGrey</Color>
                                 <Style>Solid</Style>
                               </Border>
-                              <BackgroundColor>Wheat</BackgroundColor>
+                              <BackgroundColor>#2d351e</BackgroundColor>
                               <VerticalAlign>Middle</VerticalAlign>
                               <PaddingLeft>2pt</PaddingLeft>
                               <PaddingRight>2pt</PaddingRight>
@@ -2797,8 +2800,9 @@
                                       <TextRun>
                                         <Value>Paid</Value>
                                         <Style>
-                                          <FontFamily>Gill Sans MT</FontFamily>
+                                          <FontFamily>Century Gothic</FontFamily>
                                           <FontWeight>Bold</FontWeight>
+                                          <Color>White</Color>
                                         </Style>
                                       </TextRun>
                                     </TextRuns>
@@ -2813,7 +2817,7 @@
                                     <Color>LightGrey</Color>
                                     <Style>Solid</Style>
                                   </Border>
-                                  <BackgroundColor>Wheat</BackgroundColor>
+                                  <BackgroundColor>#2d351e</BackgroundColor>
                                   <VerticalAlign>Middle</VerticalAlign>
                                   <PaddingLeft>2pt</PaddingLeft>
                                   <PaddingRight>2pt</PaddingRight>
@@ -2841,8 +2845,9 @@
                                       <TextRun>
                                         <Value>Waived</Value>
                                         <Style>
-                                          <FontFamily>Gill Sans MT</FontFamily>
+                                          <FontFamily>Century Gothic</FontFamily>
                                           <FontWeight>Bold</FontWeight>
+                                          <Color>White</Color>
                                         </Style>
                                       </TextRun>
                                     </TextRuns>
@@ -2857,7 +2862,7 @@
                                     <Color>LightGrey</Color>
                                     <Style>Solid</Style>
                                   </Border>
-                                  <BackgroundColor>Wheat</BackgroundColor>
+                                  <BackgroundColor>#2d351e</BackgroundColor>
                                   <VerticalAlign>Middle</VerticalAlign>
                                   <PaddingLeft>2pt</PaddingLeft>
                                   <PaddingRight>2pt</PaddingRight>
@@ -2885,8 +2890,9 @@
                               <TextRun>
                                 <Value>Expired Date</Value>
                                 <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2901,7 +2907,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2925,8 +2931,9 @@
                               <TextRun>
                                 <Value>REMARK</Value>
                                 <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2941,7 +2948,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -2965,8 +2972,9 @@
                               <TextRun>
                                 <Value>Officer</Value>
                                 <Style>
-                                  <FontFamily>Gill Sans MT</FontFamily>
+                                  <FontFamily>Century Gothic</FontFamily>
                                   <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
                                 </Style>
                               </TextRun>
                             </TextRuns>
@@ -2981,7 +2989,7 @@
                             <Color>LightGrey</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>Wheat</BackgroundColor>
+                          <BackgroundColor>#2d351e</BackgroundColor>
                           <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
@@ -3020,7 +3028,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>RenewDS</DataSetName>
-            <Top>1.59854in</Top>
+            <Top>2.47354in</Top>
             <Left>0.125in</Left>
             <Height>1.48958in</Height>
             <Width>15.75661in</Width>
@@ -3038,21 +3046,22 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>FROM DATE:</Value>
+                    <Value>From Date:</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.70139in</Top>
-            <Left>3.58968in</Left>
+            <Top>1.64583in</Top>
+            <Left>11.97675in</Left>
             <Height>0.25in</Height>
-            <Width>1.06771in</Width>
+            <Width>0.9855in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -3065,141 +3074,6 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Line Name="Line3">
-            <Top>4.23916in</Top>
-            <Left>0.85286in</Left>
-            <Height>0in</Height>
-            <Width>1.9075in</Width>
-            <ZIndex>8</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Line>
-          <Line Name="Line2">
-            <Top>4.23916in</Top>
-            <Left>9.40383in</Left>
-            <Height>0in</Height>
-            <Width>1.9075in</Width>
-            <ZIndex>9</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Line>
-          <Line Name="Line1">
-            <Top>4.23916in</Top>
-            <Left>13.37544in</Left>
-            <Height>0in</Height>
-            <Width>1.9075in</Width>
-            <ZIndex>10</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Line>
-          <Textbox Name="Textbox23">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Prepared by/date :</Value>
-                    <Style>
-                      <FontFamily>Gill Sans MT</FontFamily>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.28084in</Top>
-            <Left>0.85286in</Left>
-            <Height>0.25in</Height>
-            <Width>1.57292in</Width>
-            <ZIndex>11</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox20">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Reviewed by/date :</Value>
-                    <Style>
-                      <FontFamily>Gill Sans MT</FontFamily>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.28084in</Top>
-            <Left>9.40383in</Left>
-            <Height>0.25in</Height>
-            <Width>1.57292in</Width>
-            <ZIndex>12</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox10">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Approved by/date :</Value>
-                    <Style>
-                      <FontFamily>Gill Sans MT</FontFamily>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.28084in</Top>
-            <Left>13.37544in</Left>
-            <Height>0.25in</Height>
-            <Width>1.57292in</Width>
-            <ZIndex>13</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <VerticalAlign>Middle</VerticalAlign>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="CompanyName">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -3209,23 +3083,29 @@
                   <TextRun>
                     <Value>=Parameters!CompanyName.Value</Value>
                     <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
+                      <Color>#e2be7d</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>CompanyName</rd:DefaultName>
             <Top>0.11806in</Top>
             <Left>0.125in</Left>
             <Height>0.25in</Height>
-            <Width>5.99175in</Width>
-            <ZIndex>14</ZIndex>
+            <Width>5.85175in</Width>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -3240,22 +3120,28 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Parameters!Currency.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Currency</rd:DefaultName>
-            <Top>0.97354in</Top>
-            <Left>1.28993in</Left>
+            <Top>1.36806in</Top>
+            <Left>12.97614in</Left>
             <Height>0.25in</Height>
-            <Width>2.27197in</Width>
-            <ZIndex>15</ZIndex>
+            <Width>2.90547in</Width>
+            <ZIndex>9</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <BackgroundColor>LightGrey</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -3270,22 +3156,28 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Parameters!FromDate.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>FromDate</rd:DefaultName>
-            <Top>0.70139in</Top>
-            <Left>4.67128in</Left>
+            <Top>1.64583in</Top>
+            <Left>12.97614in</Left>
             <Height>0.25in</Height>
-            <Width>1.44547in</Width>
-            <ZIndex>16</ZIndex>
+            <Width>2.90547in</Width>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <BackgroundColor>LightGrey</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -3300,22 +3192,28 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Parameters!SystemDate.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>SystemDate</rd:DefaultName>
-            <Top>0.97354in</Top>
-            <Left>4.67128in</Left>
+            <Top>1.91798in</Top>
+            <Left>12.97614in</Left>
             <Height>0.25in</Height>
-            <Width>1.44547in</Width>
-            <ZIndex>17</ZIndex>
+            <Width>2.90547in</Width>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <BackgroundColor>LightGrey</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -3330,22 +3228,28 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Parameters!Branch.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Branch</rd:DefaultName>
-            <Top>0.4375in</Top>
-            <Left>1.28993in</Left>
+            <Top>0.8125in</Top>
+            <Left>12.97614in</Left>
             <Height>0.25in</Height>
-            <Width>4.82682in</Width>
-            <ZIndex>18</ZIndex>
+            <Width>2.90547in</Width>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <BackgroundColor>LightGrey</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
               <PaddingLeft>2pt</PaddingLeft>
               <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
@@ -3359,22 +3263,23 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>PAWN OFFICER:</Value>
+                    <Value>Pawn Officer:</Value>
                     <Style>
-                      <FontSize>9pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
+                      <FontFamily>Century Gothic</FontFamily>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.70139in</Top>
-            <Left>0.125in</Left>
+            <Top>1.09028in</Top>
+            <Left>11.97675in</Left>
             <Height>0.25in</Height>
-            <Width>1.13021in</Width>
-            <ZIndex>19</ZIndex>
+            <Width>0.9855in</Width>
+            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3394,17 +3299,155 @@
                 <TextRuns>
                   <TextRun>
                     <Value>=Parameters!PawnOfficer.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>PawnOfficer</rd:DefaultName>
+            <Top>1.09028in</Top>
+            <Left>12.97614in</Left>
+            <Height>0.25in</Height>
+            <Width>2.90547in</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>LightGrey</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line3">
+            <Top>5.34285in</Top>
+            <Left>13.27315in</Left>
+            <Height>0in</Height>
+            <Width>1.63021in</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox20">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Approved by:</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>PawnOfficer</rd:DefaultName>
-            <Top>0.70965in</Top>
-            <Left>1.28299in</Left>
+            <rd:DefaultName>Textbox7</rd:DefaultName>
+            <Top>5.34285in</Top>
+            <Left>13.27315in</Left>
             <Height>0.25in</Height>
-            <Width>2.27891in</Width>
+            <Width>1.63542in</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line6">
+            <Top>5.34285in</Top>
+            <Left>6.7508in</Left>
+            <Height>0in</Height>
+            <Width>1.63021in</Width>
+            <ZIndex>17</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox48">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Reviewed by:</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox7</rd:DefaultName>
+            <Top>5.34285in</Top>
+            <Left>6.7508in</Left>
+            <Height>0.25in</Height>
+            <Width>1.63542in</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line7">
+            <Top>5.34285in</Top>
+            <Left>0.97304in</Left>
+            <Height>0in</Height>
+            <Width>1.63021in</Width>
+            <ZIndex>19</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox49">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Prepared by:</Value>
+                    <Style>
+                      <FontFamily>Century Gothic</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox7</rd:DefaultName>
+            <Top>5.34285in</Top>
+            <Left>0.97304in</Left>
+            <Height>0.25in</Height>
+            <Width>1.63542in</Width>
             <ZIndex>20</ZIndex>
             <Style>
               <Border>
@@ -3417,10 +3460,10 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>4.69187in</Height>
+        <Height>5.82947in</Height>
         <Style />
       </Body>
-      <Width>16.02642in</Width>
+      <Width>15.88161in</Width>
       <Page>
         <PageHeight>8.27in</PageHeight>
         <PageWidth>11.69in</PageWidth>

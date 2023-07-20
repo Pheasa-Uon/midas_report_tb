@@ -2710,7 +2710,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>LOB</Value>
+                                <Value>Product Name</Value>
                                 <Style>
                                   <FontFamily>Century Gothic</FontFamily>
                                   <FontSize>9pt</FontSize>
@@ -5132,7 +5132,7 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>LOB</Value>
+                                    <Value>Product Name</Value>
                                     <Style>
                                       <FontFamily>Century Gothic</FontFamily>
                                       <FontSize>9pt</FontSize>
