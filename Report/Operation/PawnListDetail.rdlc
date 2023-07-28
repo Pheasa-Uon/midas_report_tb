@@ -2875,7 +2875,7 @@
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
-                      <Color>#e2be7d</Color>
+                      <Color>="ff2d351e"</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>

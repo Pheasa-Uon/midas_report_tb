@@ -8,7 +8,6 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>7be5eea3-85a6-45f5-a0f6-33cb52a40597</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -279,7 +278,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>LOB Type</Value>
+                                <Value>Product Name</Value>
                                 <Style>
                                   <FontFamily>Century Gothic</FontFamily>
                                   <FontSize>9pt</FontSize>
@@ -2768,7 +2767,7 @@
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
-                      <Color>#e2be7d</Color>
+                      <Color>="ff2d351e"</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>

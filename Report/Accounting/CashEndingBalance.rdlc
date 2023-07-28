@@ -7,7 +7,6 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>3f76738e-4871-47b1-9fca-e8621774831c</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -210,7 +209,7 @@
                     <Style>
                       <FontFamily>Century Gothic</FontFamily>
                       <FontWeight>Bold</FontWeight>
-                      <Color>#e1be7d</Color>
+                      <Color>="ff2d351e"</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
