@@ -7,7 +7,6 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>92b74f25-6565-49fb-a98a-eff8968ef519</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -118,10 +117,14 @@
           <DataField>redeem_penalty</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="renew_pawn_price_row1">
+          <DataField>renew_pawn_price_row1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>TurnOver</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Soriya\MyData\PS\pawn-shop-report\Report\Dataset\TurnOver.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\002-MIDAS Financial System\010-Reports\003-VS Report\001-VS Report_20230126\Report\Dataset\TurnOver.xsd</rd:SchemaPath>
         <rd:TableName>TurnoverDS</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -896,14 +899,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="renew_pawn_price">
+                        <Textbox Name="renew_pawn_price_row1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=iif(Fields!row_number.Value=1, Fields!renew_pawn_price.Value, 0)</Value>
+                                  <Value>=Fields!renew_pawn_price_row1.Value</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -916,7 +919,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>renew_pawn_price</rd:DefaultName>
+                          <rd:DefaultName>renew_pawn_price_row1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1051,7 +1054,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=iif(Fields!row_number.Value=1, Fields!renew_pawn_price.Value, 0) + Fields!new_pawn_price.Value</Value>
+                                  <Value>=Fields!renew_pawn_price_row1.Value + Fields!new_pawn_price.Value</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -1555,18 +1558,17 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="outs1">
+                        <Textbox Name="renew_pawn_price_row11">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=sum(iif(Fields!row_number.Value=1, Fields!renew_pawn_price.Value, 0))</Value>
+                                  <Value>=Sum(Fields!renew_pawn_price_row1.Value)</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>9pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -1576,7 +1578,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>outs1</rd:DefaultName>
+                          <rd:DefaultName>renew_pawn_price_row11</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1719,7 +1721,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=sum(iif(Fields!row_number.Value=1, Fields!renew_pawn_price.Value, 0) + Fields!new_pawn_price.Value)</Value>
+                                  <Value>=sum(Fields!renew_pawn_price_row1.Value + Fields!new_pawn_price.Value)</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -2241,12 +2243,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=sum(iif(Fields!row_number.Value=1, Fields!renew_pawn_price.Value, 0))</Value>
+                                  <Value>=Sum(Fields!renew_pawn_price_row1.Value)</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>9pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
                                     <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
@@ -2401,9 +2401,8 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=sum(iif(Fields!row_number.Value=1, Fields!renew_pawn_price.Value, 0) + Fields!new_pawn_price.Value)</Value>
+                                  <Value>=sum(Fields!renew_pawn_price_row1.Value + Fields!new_pawn_price.Value)</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -3766,7 +3765,7 @@
                       <FontFamily>Century Gothic</FontFamily>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
-                      <Color>#e2be7d</Color>
+                      <Color>="ff2d351e"</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>

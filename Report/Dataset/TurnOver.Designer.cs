@@ -329,6 +329,8 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnredeem_penalty;
             
+            private global::System.Data.DataColumn columnrenew_pawn_price_row1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public TurnoverDSDataTable() {
@@ -564,6 +566,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn renew_pawn_price_row1Column {
+                get {
+                    return this.columnrenew_pawn_price_row1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -624,7 +634,8 @@ namespace Report.Dataset {
                         string sys_date_id, 
                         string redeem_interest, 
                         string redeem_other_income, 
-                        string redeem_penalty) {
+                        string redeem_penalty, 
+                        string renew_pawn_price_row1) {
                 TurnoverDSRow rowTurnoverDSRow = ((TurnoverDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         payment_flag,
@@ -651,7 +662,8 @@ namespace Report.Dataset {
                         sys_date_id,
                         redeem_interest,
                         redeem_other_income,
-                        redeem_penalty};
+                        redeem_penalty,
+                        renew_pawn_price_row1};
                 rowTurnoverDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTurnoverDSRow);
                 return rowTurnoverDSRow;
@@ -699,6 +711,7 @@ namespace Report.Dataset {
                 this.columnredeem_interest = base.Columns["redeem_interest"];
                 this.columnredeem_other_income = base.Columns["redeem_other_income"];
                 this.columnredeem_penalty = base.Columns["redeem_penalty"];
+                this.columnrenew_pawn_price_row1 = base.Columns["renew_pawn_price_row1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -754,6 +767,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnredeem_other_income);
                 this.columnredeem_penalty = new global::System.Data.DataColumn("redeem_penalty", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnredeem_penalty);
+                this.columnrenew_pawn_price_row1 = new global::System.Data.DataColumn("renew_pawn_price_row1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrenew_pawn_price_row1);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1296,6 +1311,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string renew_pawn_price_row1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableTurnoverDS.renew_pawn_price_row1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'renew_pawn_price_row1\' in table \'TurnoverDS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTurnoverDS.renew_pawn_price_row1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Ispayment_flagNull() {
                 return this.IsNull(this.tableTurnoverDS.payment_flagColumn);
             }
@@ -1592,6 +1623,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setredeem_penaltyNull() {
                 this[this.tableTurnoverDS.redeem_penaltyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isrenew_pawn_price_row1Null() {
+                return this.IsNull(this.tableTurnoverDS.renew_pawn_price_row1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setrenew_pawn_price_row1Null() {
+                this[this.tableTurnoverDS.renew_pawn_price_row1Column] = global::System.Convert.DBNull;
             }
         }
         
