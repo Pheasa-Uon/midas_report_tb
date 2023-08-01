@@ -7,6 +7,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>1fc1b6fb-aae8-4d1e-9edc-2db171ae08c4</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -673,7 +674,7 @@
                               </TextRuns>
                               <LeftIndent>=SWITCH(Level() = 1, 1 * 15 &amp; "pt",Level() = 2, 1 * 30 &amp; "pt", True,"0pt")</LeftIndent>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -690,6 +691,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1102,7 +1104,7 @@
             </SortExpressions>
             <Top>1.55902in</Top>
             <Height>1.07292in</Height>
-            <Width>10.84076in</Width>
+            <Width>10.84074in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>

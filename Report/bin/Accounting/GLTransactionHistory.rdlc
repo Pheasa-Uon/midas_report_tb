@@ -198,7 +198,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>0.77257in</Top>
-            <Left>8.06795in</Left>
+            <Left>8.94295in</Left>
             <Height>0.25in</Height>
             <Width>0.96615in</Width>
             <ZIndex>1</ZIndex>
@@ -233,7 +233,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>1.32465in</Top>
-            <Left>8.06795in</Left>
+            <Left>8.94295in</Left>
             <Height>0.25in</Height>
             <Width>0.93837in</Width>
             <ZIndex>2</ZIndex>
@@ -269,7 +269,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>0.77257in</Top>
-            <Left>9.0341in</Left>
+            <Left>9.9091in</Left>
             <Height>0.25in</Height>
             <Width>1.57195in</Width>
             <ZIndex>3</ZIndex>
@@ -306,7 +306,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>1.32489in</Top>
-            <Left>9.0341in</Left>
+            <Left>9.9091in</Left>
             <Height>0.25in</Height>
             <Width>1.57726in</Width>
             <ZIndex>4</ZIndex>
@@ -342,7 +342,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>1.87674in</Top>
-            <Left>8.06795in</Left>
+            <Left>8.94295in</Left>
             <Height>0.25in</Height>
             <Width>0.93837in</Width>
             <ZIndex>5</ZIndex>
@@ -377,7 +377,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>1.87674in</Top>
-            <Left>9.0341in</Left>
+            <Left>9.9091in</Left>
             <Height>0.25in</Height>
             <Width>1.57195in</Width>
             <ZIndex>6</ZIndex>
@@ -1385,7 +1385,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>1.59896in</Top>
-            <Left>8.06795in</Left>
+            <Left>8.94295in</Left>
             <Height>0.25in</Height>
             <Width>0.93837in</Width>
             <ZIndex>8</ZIndex>
@@ -1421,7 +1421,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>1.59896in</Top>
-            <Left>9.0341in</Left>
+            <Left>9.9091in</Left>
             <Height>0.25in</Height>
             <Width>1.57726in</Width>
             <ZIndex>9</ZIndex>
@@ -1459,7 +1459,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>2.15452in</Top>
-            <Left>6.55605in</Left>
+            <Left>7.43105in</Left>
             <Height>0.25in</Height>
             <Width>1.49084in</Width>
             <ZIndex>10</ZIndex>
@@ -1491,7 +1491,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>1.04688in</Top>
-            <Left>8.06795in</Left>
+            <Left>8.94295in</Left>
             <Height>0.25in</Height>
             <Width>0.96615in</Width>
             <ZIndex>11</ZIndex>
@@ -1527,7 +1527,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>1.04688in</Top>
-            <Left>9.0341in</Left>
+            <Left>9.9091in</Left>
             <Height>0.25in</Height>
             <Width>1.57195in</Width>
             <ZIndex>12</ZIndex>
@@ -1608,7 +1608,7 @@
             </TablixRowHierarchy>
             <DataSetName>OpenBalance</DataSetName>
             <Top>2.15452in</Top>
-            <Left>8.07467in</Left>
+            <Left>8.94967in</Left>
             <Height>0.25in</Height>
             <Width>2.53139in</Width>
             <ZIndex>13</ZIndex>
@@ -1620,7 +1620,7 @@
           </Tablix>
           <Line Name="Line2">
             <Top>2.41021in</Top>
-            <Left>8.19689in</Left>
+            <Left>9.07189in</Left>
             <Height>0in</Height>
             <Width>2.40917in</Width>
             <ZIndex>14</ZIndex>
@@ -1806,7 +1806,7 @@
         <Height>5.17104in</Height>
         <Style />
       </Body>
-      <Width>10.61136in</Width>
+      <Width>12.41136in</Width>
       <Page>
         <PageHeight>8.27in</PageHeight>
         <PageWidth>11.69in</PageWidth>
