@@ -297,6 +297,8 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnyear;
             
+            private global::System.Data.DataColumn columnac_amt_exchange;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public IncomeStatementByMonthDSDataTable() {
@@ -404,6 +406,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ac_amt_exchangeColumn {
+                get {
+                    return this.columnac_amt_exchange;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -439,7 +449,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public IncomeStatementByMonthDSRow AddIncomeStatementByMonthDSRow(string tt, string glm, string glnm, string gl, string gl_name, string acc_class, string ac_amt, string mon, string year) {
+            public IncomeStatementByMonthDSRow AddIncomeStatementByMonthDSRow(string tt, string glm, string glnm, string gl, string gl_name, string acc_class, string ac_amt, string mon, string year, string ac_amt_exchange) {
                 IncomeStatementByMonthDSRow rowIncomeStatementByMonthDSRow = ((IncomeStatementByMonthDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         tt,
@@ -450,7 +460,8 @@ namespace Report.Dataset {
                         acc_class,
                         ac_amt,
                         mon,
-                        year};
+                        year,
+                        ac_amt_exchange};
                 rowIncomeStatementByMonthDSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowIncomeStatementByMonthDSRow);
                 return rowIncomeStatementByMonthDSRow;
@@ -482,6 +493,7 @@ namespace Report.Dataset {
                 this.columnac_amt = base.Columns["ac_amt"];
                 this.columnmon = base.Columns["mon"];
                 this.columnyear = base.Columns["year"];
+                this.columnac_amt_exchange = base.Columns["ac_amt_exchange"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -505,6 +517,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnmon);
                 this.columnyear = new global::System.Data.DataColumn("year", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnyear);
+                this.columnac_amt_exchange = new global::System.Data.DataColumn("ac_amt_exchange", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnac_amt_exchange);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -791,6 +805,23 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ac_amt_exchange {
+                get {
+                    try {
+                        return ((string)(this[this.tableIncomeStatementByMonthDS.ac_amt_exchangeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ac_amt_exchange\' in table \'IncomeStatementByMonthDS\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIncomeStatementByMonthDS.ac_amt_exchangeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsttNull() {
                 return this.IsNull(this.tableIncomeStatementByMonthDS.ttColumn);
             }
@@ -895,6 +926,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetyearNull() {
                 this[this.tableIncomeStatementByMonthDS.yearColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isac_amt_exchangeNull() {
+                return this.IsNull(this.tableIncomeStatementByMonthDS.ac_amt_exchangeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setac_amt_exchangeNull() {
+                this[this.tableIncomeStatementByMonthDS.ac_amt_exchangeColumn] = global::System.Convert.DBNull;
             }
         }
         
