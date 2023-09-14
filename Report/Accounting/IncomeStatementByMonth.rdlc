@@ -838,7 +838,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -877,7 +876,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -916,7 +914,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -1628,6 +1625,7 @@
                                   <PaddingBottom>2pt</PaddingBottom>
                                 </Style>
                               </Textbox>
+                              <rd:Selected>true</rd:Selected>
                             </CellContents>
                           </TablixHeader>
                           <KeepWithGroup>After</KeepWithGroup>
@@ -1683,6 +1681,7 @@
                                       <PaddingBottom>2pt</PaddingBottom>
                                     </Style>
                                   </Textbox>
+                                  <rd:Selected>true</rd:Selected>
                                 </CellContents>
                               </TablixHeader>
                             </TablixMember>
@@ -1735,6 +1734,7 @@
                                       <PaddingBottom>2pt</PaddingBottom>
                                     </Style>
                                   </Textbox>
+                                  <rd:Selected>true</rd:Selected>
                                 </CellContents>
                               </TablixHeader>
                             </TablixMember>
@@ -1779,6 +1779,7 @@
                                       <PaddingBottom>2pt</PaddingBottom>
                                     </Style>
                                   </Textbox>
+                                  <rd:Selected>true</rd:Selected>
                                 </CellContents>
                               </TablixHeader>
                             </TablixMember>
@@ -1807,7 +1808,7 @@
                                     </Style>
                                   </TextRun>
                                   <TextRun>
-                                    <Value>="TOTAL " &amp; MID(Fields!acc_class.Value, 3) &amp; " :"</Value>
+                                    <Value>=iif(Fields!acc_class.Value="  GROSS PROFIT(LOSS)" OR Fields!acc_class.Value="  PBIT/OPERATING PROFIT(LOSS)" OR Fields!acc_class.Value="  NET INCOME(LOSS)", MID(Fields!acc_class.Value, 3) &amp; " :", "TOTAL " &amp; MID(Fields!acc_class.Value, 3) &amp; " :")</Value>
                                     <Style>
                                       <FontFamily>Century Gothic</FontFamily>
                                       <FontWeight>Bold</FontWeight>
@@ -1831,7 +1832,6 @@
                               <PaddingBottom>2pt</PaddingBottom>
                             </Style>
                           </Textbox>
-                          <rd:Selected>true</rd:Selected>
                         </CellContents>
                       </TablixHeader>
                       <KeepWithGroup>Before</KeepWithGroup>
