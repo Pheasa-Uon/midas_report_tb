@@ -87,7 +87,7 @@ namespace Report.Accounting
                 " AND DATE(bal_his.sys_date) = DATE(DATE_ADD('" + fromDate + "', INTERVAL - 1 DAY)) " +
                 " LEFT JOIN " +
                 " currency CC ON acc.currency_id = CC.id " +
-                " WHERE acc.is_leaf = 1 and bal_his.balance <> 0  and acc.currency_id = " + ddCurrency.SelectedItem.Value +
+                " WHERE acc.is_leaf = 1 and acc.balance <> 0  and acc.currency_id = " + ddCurrency.SelectedItem.Value +
                 " ORDER BY acc.gl; ";
             }
             else
@@ -119,7 +119,7 @@ namespace Report.Accounting
                 " AND DATE(bal_his.sys_date) = DATE(DATE_ADD('" + fromDate + "', INTERVAL - 1 DAY)) " +
                 " LEFT JOIN " +
                 " currency CC ON acc.currency_id = CC.id " +
-                " WHERE acc.is_leaf = 1 and bal_his.balance <> 0 AND acc.branch_id = " + ddBranchName.SelectedItem.Value + " AND acc.currency_id = " + ddCurrency.SelectedItem.Value +
+                " WHERE acc.is_leaf = 1 and acc.balance <> 0 AND acc.branch_id = " + ddBranchName.SelectedItem.Value + " AND acc.currency_id = " + ddCurrency.SelectedItem.Value +
                 " ORDER BY acc.gl; ";
             }
 
