@@ -307,6 +307,8 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnside;
             
+            private global::System.Data.DataColumn columnis_leaf;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public COADSDataTable() {
@@ -454,6 +456,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn is_leafColumn {
+                get {
+                    return this.columnis_leaf;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -489,7 +499,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public COADSRow AddCOADSRow(string id, string gl_name, string parent_acc_id, string gl, string branch_code, string appr, string currency, string class_name, string currency_code, string account_type, string debit, string credit, string balance, string side) {
+            public COADSRow AddCOADSRow(string id, string gl_name, string parent_acc_id, string gl, string branch_code, string appr, string currency, string class_name, string currency_code, string account_type, string debit, string credit, string balance, string side, string is_leaf) {
                 COADSRow rowCOADSRow = ((COADSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -505,7 +515,8 @@ namespace Report.Dataset {
                         debit,
                         credit,
                         balance,
-                        side};
+                        side,
+                        is_leaf};
                 rowCOADSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCOADSRow);
                 return rowCOADSRow;
@@ -542,6 +553,7 @@ namespace Report.Dataset {
                 this.columncredit = base.Columns["credit"];
                 this.columnbalance = base.Columns["balance"];
                 this.columnside = base.Columns["side"];
+                this.columnis_leaf = base.Columns["is_leaf"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -575,6 +587,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnbalance);
                 this.columnside = new global::System.Data.DataColumn("side", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnside);
+                this.columnis_leaf = new global::System.Data.DataColumn("is_leaf", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnis_leaf);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -941,6 +955,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string is_leaf {
+                get {
+                    try {
+                        return ((string)(this[this.tableCOADS.is_leafColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'is_leaf\' in table \'COADS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCOADS.is_leafColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tableCOADS.idColumn);
             }
@@ -1105,6 +1135,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetsideNull() {
                 this[this.tableCOADS.sideColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isis_leafNull() {
+                return this.IsNull(this.tableCOADS.is_leafColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setis_leafNull() {
+                this[this.tableCOADS.is_leafColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -37,7 +37,7 @@ namespace Report.Accounting
             if (ddBranchName.SelectedItem.Value == "ALL")
             {
                 chartOfAccountSql = "SELECT * FROM " +
-                                    "(SELECT coal.id, coal.`parent_acc_id`, coal.gl_name, coal.gl, bch.`branch_code`, bch.`appr`, ccc.`currency_code`, ccc.`currency`, aac.`class_name`, aact.`account_type`, coal.side, " +
+                                    "(SELECT coal.id, coal.is_leaf, coal.`parent_acc_id`, coal.gl_name, coal.gl, bch.`branch_code`, bch.`appr`, ccc.`currency_code`, ccc.`currency`, aac.`class_name`, aact.`account_type`, coal.side, " +
                                     "CASE WHEN TRIM(coal.side)= 'Debit' AND coal.balance < 0 THEN coal.balance * (-1)  " +
                                     "	WHEN TRIM(coal.side)= 'Credit' AND coal.balance < 0 THEN coal.balance * (-1) ELSE 0 END debit, " +
                                     "CASE WHEN TRIM(coal.side)= 'Credit' AND coal.balance >= 0 THEN coal.balance  " +
@@ -54,7 +54,7 @@ namespace Report.Accounting
                                     "LEFT JOIN acc_account_type aact ON coal.`acc_type_id` = aact.id " +
                                     "WHERE coal.`parent_acc_id` IS NOT NULL and coal.`currency_id` = " + ddCurrency.SelectedItem.Value + " and coal.b_status = '1' " +
                                     "UNION ALL " +
-                                    "SELECT coaa.id, coaa.parent_acc_id, coaa.gl_name, coaa.gl, bch.`branch_code`, bch.`appr`, ccc.`currency_code`, ccc.`currency`, aac.`class_name`, aact.`account_type`,coaa.side, " +
+                                    "SELECT coaa.id,coaa.is_leaf, coaa.parent_acc_id, coaa.gl_name, coaa.gl, bch.`branch_code`, bch.`appr`, ccc.`currency_code`, ccc.`currency`, aac.`class_name`, aact.`account_type`,coaa.side, " +
                                     "CASE WHEN TRIM(coaa.side)= 'Debit' AND coaa.balance < 0 THEN coaa.balance * (-1)  " +
                                     "	WHEN TRIM(coaa.side)= 'Credit' AND coaa.balance < 0 THEN coaa.balance * (-1) ELSE 0 END debit, " +
                                     "CASE WHEN TRIM(coaa.side)= 'Credit' AND coaa.balance >= 0 THEN coaa.balance  " +
@@ -74,7 +74,7 @@ namespace Report.Accounting
             else
             {
                 chartOfAccountSql = "SELECT * FROM " +
-                                    "(SELECT coal.id, coal.`parent_acc_id`, coal.gl_name, coal.gl, bch.`branch_code`, bch.`appr`, ccc.`currency_code`, ccc.`currency`, aac.`class_name`, aact.`account_type`, coal.side, " +
+                                    "(SELECT coal.id,coal.is_leaf, coal.`parent_acc_id`, coal.gl_name, coal.gl, bch.`branch_code`, bch.`appr`, ccc.`currency_code`, ccc.`currency`, aac.`class_name`, aact.`account_type`, coal.side, " +
                                     "CASE WHEN TRIM(coal.side)= 'Debit' AND coal.balance < 0 THEN coal.balance * (-1)  " +
                                     "	WHEN TRIM(coal.side)= 'Credit' AND coal.balance < 0 THEN coal.balance * (-1) ELSE 0 END debit, " +
                                     "CASE WHEN TRIM(coal.side)= 'Credit' AND coal.balance >= 0 THEN coal.balance  " +
@@ -91,7 +91,7 @@ namespace Report.Accounting
                                     "LEFT JOIN acc_account_type aact ON coal.`acc_type_id` = aact.id " +
                                     "WHERE coal.branch_id = " + ddBranchName.SelectedValue + " and coal.`currency_id` = " + ddCurrency.SelectedItem.Value + " AND coal.`parent_acc_id` IS NOT NULL and coal.b_status = '1' " +
                                     "UNION ALL " +
-                                    "SELECT coaa.id, coaa.parent_acc_id, coaa.gl_name, coaa.gl, bch.`branch_code`, bch.`appr`, ccc.`currency_code`, ccc.`currency`, aac.`class_name`, aact.`account_type`, coaa.side, " +
+                                    "SELECT coaa.id,coaa.is_leaf, coaa.parent_acc_id, coaa.gl_name, coaa.gl, bch.`branch_code`, bch.`appr`, ccc.`currency_code`, ccc.`currency`, aac.`class_name`, aact.`account_type`, coaa.side, " +
                                     "CASE WHEN TRIM(coaa.side)= 'Debit' AND coaa.balance < 0 THEN coaa.balance * (-1)  " +
                                     "	WHEN TRIM(coaa.side)= 'Credit' AND coaa.balance < 0 THEN coaa.balance * (-1) ELSE 0 END debit, " +
                                     "CASE WHEN TRIM(coaa.side)= 'Credit' AND coaa.balance >= 0 THEN coaa.balance  " +

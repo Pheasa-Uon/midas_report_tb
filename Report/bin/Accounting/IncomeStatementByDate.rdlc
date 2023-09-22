@@ -2001,7 +2001,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>GROSS PROFIT :</Value>
+                                  <Value>GROSS PROFIT(LOSS):</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -2870,7 +2870,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>NET ORDINARY INCOME :</Value>
+                                  <Value>PBIT/OPERATING PROFIT(LOSS) :</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -3739,7 +3739,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>NET INCOME:</Value>
+                                  <Value>NET INCOME(LOSS):</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
