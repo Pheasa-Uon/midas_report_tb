@@ -328,6 +328,8 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnac_amt;
             
+            private global::System.Data.DataColumn columnaccount_type;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Dataset2DataTable() {
@@ -419,6 +421,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn account_typeColumn {
+                get {
+                    return this.columnaccount_type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -454,7 +464,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Dataset2Row AddDataset2Row(string glm, string gl, string glnm, string balance, string gl_name, string acc_class, string ac_amt) {
+            public Dataset2Row AddDataset2Row(string glm, string gl, string glnm, string balance, string gl_name, string acc_class, string ac_amt, string account_type) {
                 Dataset2Row rowDataset2Row = ((Dataset2Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         glm,
@@ -463,7 +473,8 @@ namespace Report.Dataset {
                         balance,
                         gl_name,
                         acc_class,
-                        ac_amt};
+                        ac_amt,
+                        account_type};
                 rowDataset2Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataset2Row);
                 return rowDataset2Row;
@@ -493,6 +504,7 @@ namespace Report.Dataset {
                 this.columngl_name = base.Columns["gl_name"];
                 this.columnacc_class = base.Columns["acc_class"];
                 this.columnac_amt = base.Columns["ac_amt"];
+                this.columnaccount_type = base.Columns["account_type"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -512,6 +524,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnacc_class);
                 this.columnac_amt = new global::System.Data.DataColumn("ac_amt", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnac_amt);
+                this.columnaccount_type = new global::System.Data.DataColumn("account_type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaccount_type);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1069,6 +1083,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string account_type {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataset2.account_typeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'account_type\' in table \'Dataset2\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataset2.account_typeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsglmNull() {
                 return this.IsNull(this.tableDataset2.glmColumn);
             }
@@ -1149,6 +1179,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setac_amtNull() {
                 this[this.tableDataset2.ac_amtColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isaccount_typeNull() {
+                return this.IsNull(this.tableDataset2.account_typeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setaccount_typeNull() {
+                this[this.tableDataset2.account_typeColumn] = global::System.Convert.DBNull;
             }
         }
         
