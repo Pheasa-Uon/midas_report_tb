@@ -8,7 +8,6 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>71855982-3168-4fea-ac84-15f01eaf7abf</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -204,32 +203,33 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="account_type">
+                        <Textbox Name="account_type2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!account_type.Value</Value>
+                                  <Value>=mid(Fields!account_type.Value,3,50)</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>account_type</rd:DefaultName>
+                          <rd:DefaultName>account_type2</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>#2d351e</BackgroundColor>
+                            <BackgroundColor>LightGrey</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -241,7 +241,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox43">
+                        <Textbox Name="Textbox85">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -252,23 +252,24 @@
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>9pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox43</rd:DefaultName>
+                          <rd:DefaultName>Textbox85</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>#2d351e</BackgroundColor>
+                            <RightBorder>
+                              <Style>None</Style>
+                            </RightBorder>
+                            <BackgroundColor>LightGrey</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -280,7 +281,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox44">
+                        <Textbox Name="Textbox86">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -291,23 +292,24 @@
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>9pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox44</rd:DefaultName>
+                          <rd:DefaultName>Textbox86</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>#2d351e</BackgroundColor>
+                            <LeftBorder>
+                              <Style>None</Style>
+                            </LeftBorder>
+                            <BackgroundColor>LightGrey</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -588,7 +590,7 @@
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>="Total " &amp; Fields!glnm.Value</Value>
+                                  <Value>="Total " &amp; Fields!glnm.Value &amp; " :"</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -597,7 +599,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -704,14 +706,14 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="account_type1">
+                        <Textbox Name="account_type">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!account_type.Value</Value>
+                                  <Value>="TOTAL " &amp; MID(Fields!account_type.Value,3,50) &amp;":"</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -720,16 +722,17 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>account_type1</rd:DefaultName>
+                          <rd:DefaultName>account_type</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <BackgroundColor>LightGrey</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -741,7 +744,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox15">
+                        <Textbox Name="Textbox94">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -761,7 +764,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox15</rd:DefaultName>
+                          <rd:DefaultName>Textbox94</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -770,6 +773,7 @@
                             <RightBorder>
                               <Style>None</Style>
                             </RightBorder>
+                            <BackgroundColor>LightGrey</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -781,14 +785,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox16">
+                        <Textbox Name="ac_amt2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value>=Sum(Fields!ac_amt.Value)</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -801,7 +805,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox16</rd:DefaultName>
+                          <rd:DefaultName>ac_amt2</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -810,6 +814,7 @@
                             <LeftBorder>
                               <Style>None</Style>
                             </LeftBorder>
+                            <BackgroundColor>LightGrey</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -959,28 +964,27 @@
             <TablixRowHierarchy>
               <TablixMembers>
                 <TablixMember>
-                  <Group Name="gl">
+                  <Group Name="acc_class">
                     <GroupExpressions>
                       <GroupExpression>=Fields!acc_class.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!gl.Value</Value>
+                      <Value>=Fields!acc_class.Value</Value>
                     </SortExpression>
                   </SortExpressions>
                   <TablixMembers>
                     <TablixMember />
-                    <TablixMember />
                     <TablixMember>
-                      <Group Name="glm">
+                      <Group Name="account_type">
                         <GroupExpressions>
-                          <GroupExpression>=SWITCH(Fields!glnm.Value &lt;&gt; "",Fields!glm.Value)</GroupExpression>
+                          <GroupExpression>=Fields!account_type.Value</GroupExpression>
                         </GroupExpressions>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Fields!glm.Value</Value>
+                          <Value>=Fields!account_type.Value</Value>
                         </SortExpression>
                       </SortExpressions>
                       <TablixMembers>
@@ -988,13 +992,30 @@
                           <KeepWithGroup>After</KeepWithGroup>
                         </TablixMember>
                         <TablixMember>
-                          <Group Name="Details" />
+                          <Group Name="glm">
+                            <GroupExpressions>
+                              <GroupExpression>=SWITCH(Fields!glnm.Value &lt;&gt; "",Fields!glm.Value)</GroupExpression>
+                            </GroupExpressions>
+                          </Group>
+                          <SortExpressions>
+                            <SortExpression>
+                              <Value>=Fields!glm.Value</Value>
+                            </SortExpression>
+                          </SortExpressions>
                           <TablixMembers>
-                            <TablixMember />
+                            <TablixMember>
+                              <KeepWithGroup>After</KeepWithGroup>
+                            </TablixMember>
+                            <TablixMember>
+                              <Group Name="Details" />
+                              <TablixMembers>
+                                <TablixMember />
+                              </TablixMembers>
+                            </TablixMember>
+                            <TablixMember>
+                              <KeepWithGroup>Before</KeepWithGroup>
+                            </TablixMember>
                           </TablixMembers>
-                        </TablixMember>
-                        <TablixMember>
-                          <KeepWithGroup>Before</KeepWithGroup>
                         </TablixMember>
                         <TablixMember>
                           <KeepWithGroup>Before</KeepWithGroup>
@@ -1246,7 +1267,7 @@
             </Style>
           </Tablix>
           <Line Name="Line1">
-            <Top>3.79028in</Top>
+            <Top>3.41528in</Top>
             <Left>4.82239in</Left>
             <Height>0in</Height>
             <Width>2.24363in</Width>
@@ -1618,7 +1639,7 @@
         <Height>5.1945in</Height>
         <Style />
       </Body>
-      <Width>7.25in</Width>
+      <Width>8.06602in</Width>
       <Page>
         <PageHeight>11.67in</PageHeight>
         <PageWidth>8.25in</PageWidth>

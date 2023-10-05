@@ -575,7 +575,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!acc_class.Value</Value>
+                                  <Value>=MID(Fields!acc_class.Value,3)</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -663,7 +663,7 @@
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Fields!glm.Value &amp; IIF(Fields!glnm.Value &lt;&gt; "", "000 - " &amp; Fields!glnm.Value, "")</Value>
+                                  <Value>=Fields!glm.Value &amp; IIF(Fields!glnm.Value &lt;&gt; "", "000 -" &amp; Fields!glnm.Value, "")</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -905,7 +905,7 @@
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>="Total " &amp; Fields!glnm.Value</Value>
+                                  <Value>="Total" &amp; Fields!glnm.Value</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -1232,7 +1232,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!acc_class.Value</Value>
+                                  <Value>=MID(Fields!acc_class.Value,3)</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -2107,7 +2107,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!acc_class.Value</Value>
+                                  <Value>=MID(Fields!acc_class.Value,3)</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -2982,7 +2982,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!acc_class.Value</Value>
+                                  <Value>=MID(Fields!acc_class.Value,3)</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -3007,6 +3007,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>

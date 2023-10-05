@@ -35,6 +35,8 @@ namespace Report.Accounting
             {
                 DataHelper.checkLoginSession();
                 DataHelper.populateBranchDDL(ddBranchName, DataHelper.getUserId());
+                var d = DataHelper.getSystemDate().ToString(format);
+                dtpSystemDate.Text = d;
             }
 
         }
