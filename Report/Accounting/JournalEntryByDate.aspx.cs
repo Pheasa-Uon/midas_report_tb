@@ -66,7 +66,7 @@ namespace Report.Accounting
                " CASE WHEN act.balance_side = 2 THEN act.amount ELSE NULL END AS 'CR',jou.is_manual, " +
                " jou.trnx_id,act.trx_memo, act.gl_code,coa.gl_name,cur.currency,act.amount, " +
                " jou.trnx_ref,sysdate.system_date sys_date,jou.journal_desc,usr.username,pro.lob_name,con.contract_no, " +
-               " cus.customer_name, act.last_updated " +
+               " IFNULL(cus.customer_name,jou.journal_name) as customer_name, act.last_updated " +
                " FROM acc_transaction act " +
                " LEFT JOIN acc_chat_of_account coa ON act.gl_id = coa.id " +
                " LEFT JOIN currency cur ON act.currency_id = cur.id " +
@@ -84,7 +84,7 @@ namespace Report.Accounting
                 " CASE WHEN act.balance_side = 2 THEN act.amount ELSE NULL END AS 'CR',jou.is_manual, " +
                 " jou.trnx_id,act.trx_memo, act.gl_code,coa.gl_name,cur.currency,act.amount, " +
                 " jou.trnx_ref,sysdate.system_date sys_date,jou.journal_desc,usr.username,pro.lob_name,con.contract_no, " +
-                " cus.customer_name, act.last_updated " +
+                " IFNULL(cus.customer_name,jou.journal_name) as customer_name, act.last_updated " +
                 " FROM acc_transaction act " +
                 " LEFT JOIN acc_chat_of_account coa ON act.gl_id = coa.id " +
                 " LEFT JOIN currency cur ON act.currency_id = cur.id " +
