@@ -330,6 +330,8 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columncash_last_day;
             
+            private global::System.Data.DataColumn columnvault;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public CashEndingBalanceDataTable() {
@@ -429,6 +431,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn vaultColumn {
+                get {
+                    return this.columnvault;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -464,7 +474,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CashEndingBalanceRow AddCashEndingBalanceRow(string id, string branch_name, string cash_pawning, string petty_cash, string cash_in_bank, string agency_cash, string agency_bank, string cash_last_day) {
+            public CashEndingBalanceRow AddCashEndingBalanceRow(string id, string branch_name, string cash_pawning, string petty_cash, string cash_in_bank, string agency_cash, string agency_bank, string cash_last_day, string vault) {
                 CashEndingBalanceRow rowCashEndingBalanceRow = ((CashEndingBalanceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -474,7 +484,8 @@ namespace Report.Dataset {
                         cash_in_bank,
                         agency_cash,
                         agency_bank,
-                        cash_last_day};
+                        cash_last_day,
+                        vault};
                 rowCashEndingBalanceRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCashEndingBalanceRow);
                 return rowCashEndingBalanceRow;
@@ -505,6 +516,7 @@ namespace Report.Dataset {
                 this.columnagency_cash = base.Columns["agency_cash"];
                 this.columnagency_bank = base.Columns["agency_bank"];
                 this.columncash_last_day = base.Columns["cash_last_day"];
+                this.columnvault = base.Columns["vault"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -526,6 +538,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columnagency_bank);
                 this.columncash_last_day = new global::System.Data.DataColumn("cash_last_day", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncash_last_day);
+                this.columnvault = new global::System.Data.DataColumn("vault", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvault);
                 this.ExtendedProperties.Add("Generator_TablePropName", "_CashEndingBalance");
                 this.ExtendedProperties.Add("Generator_UserTableName", "CashEndingBalance");
             }
@@ -1073,6 +1087,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string vault {
+                get {
+                    try {
+                        return ((string)(this[this.tableCashEndingBalance.vaultColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'vault\' in table \'CashEndingBalance\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCashEndingBalance.vaultColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tableCashEndingBalance.idColumn);
             }
@@ -1165,6 +1195,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setcash_last_dayNull() {
                 this[this.tableCashEndingBalance.cash_last_dayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsvaultNull() {
+                return this.IsNull(this.tableCashEndingBalance.vaultColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetvaultNull() {
+                this[this.tableCashEndingBalance.vaultColumn] = global::System.Convert.DBNull;
             }
         }
         
