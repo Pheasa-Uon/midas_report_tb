@@ -1864,11 +1864,14 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Principle</Value>
+                                        <Value>Principal</Value>
                                         <Style>
+                                          <FontStyle>Normal</FontStyle>
                                           <FontFamily>Century Gothic</FontFamily>
                                           <FontSize>9pt</FontSize>
-                                          <Color>White</Color>
+                                          <FontWeight>Normal</FontWeight>
+                                          <TextDecoration>None</TextDecoration>
+                                          <Color>#ffffff</Color>
                                         </Style>
                                       </TextRun>
                                     </TextRuns>
@@ -2031,7 +2034,18 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Principle Paid</Value>
+                                        <Value>Principal </Value>
+                                        <Style>
+                                          <FontStyle>Normal</FontStyle>
+                                          <FontFamily>Century Gothic</FontFamily>
+                                          <FontSize>9pt</FontSize>
+                                          <FontWeight>Normal</FontWeight>
+                                          <TextDecoration>None</TextDecoration>
+                                          <Color>#ffffff</Color>
+                                        </Style>
+                                      </TextRun>
+                                      <TextRun>
+                                        <Value>Paid</Value>
                                         <Style>
                                           <FontFamily>Century Gothic</FontFamily>
                                           <FontSize>9pt</FontSize>
@@ -2244,7 +2258,18 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>Principle Paid</Value>
+                                    <Value>Principal </Value>
+                                    <Style>
+                                      <FontStyle>Normal</FontStyle>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontSize>9pt</FontSize>
+                                      <FontWeight>Normal</FontWeight>
+                                      <TextDecoration>None</TextDecoration>
+                                      <Color>#ffffff</Color>
+                                    </Style>
+                                  </TextRun>
+                                  <TextRun>
+                                    <Value>Paid</Value>
                                     <Style>
                                       <FontFamily>Century Gothic</FontFamily>
                                       <FontSize>9pt</FontSize>
@@ -2412,11 +2437,14 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>Principle</Value>
+                                    <Value>Principal</Value>
                                     <Style>
+                                      <FontStyle>Normal</FontStyle>
                                       <FontFamily>Century Gothic</FontFamily>
                                       <FontSize>9pt</FontSize>
-                                      <Color>White</Color>
+                                      <FontWeight>Normal</FontWeight>
+                                      <TextDecoration>None</TextDecoration>
+                                      <Color>#ffffff</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>
@@ -2439,6 +2467,7 @@
                               <PaddingBottom>2pt</PaddingBottom>
                             </Style>
                           </Textbox>
+                          <rd:Selected>true</rd:Selected>
                         </CellContents>
                       </TablixHeader>
                     </TablixMember>

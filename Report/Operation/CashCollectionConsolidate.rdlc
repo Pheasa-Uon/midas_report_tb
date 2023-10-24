@@ -1807,10 +1807,13 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Principle</Value>
+                                        <Value>Principal</Value>
                                         <Style>
-                                          <FontFamily>Gill Sans MT</FontFamily>
-                                          <Color>White</Color>
+                                          <FontStyle>Normal</FontStyle>
+                                          <FontFamily>Century Gothic</FontFamily>
+                                          <FontWeight>Normal</FontWeight>
+                                          <TextDecoration>None</TextDecoration>
+                                          <Color>#ffffff</Color>
                                         </Style>
                                       </TextRun>
                                     </TextRuns>
@@ -1970,7 +1973,17 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Principle Paid</Value>
+                                        <Value>Principal </Value>
+                                        <Style>
+                                          <FontStyle>Normal</FontStyle>
+                                          <FontFamily>Century Gothic</FontFamily>
+                                          <FontWeight>Normal</FontWeight>
+                                          <TextDecoration>None</TextDecoration>
+                                          <Color>#ffffff</Color>
+                                        </Style>
+                                      </TextRun>
+                                      <TextRun>
+                                        <Value>Paid</Value>
                                         <Style>
                                           <FontFamily>Gill Sans MT</FontFamily>
                                           <Color>White</Color>
@@ -2179,7 +2192,17 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>Principle Paid</Value>
+                                    <Value>Principal </Value>
+                                    <Style>
+                                      <FontStyle>Normal</FontStyle>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontWeight>Normal</FontWeight>
+                                      <TextDecoration>None</TextDecoration>
+                                      <Color>#ffffff</Color>
+                                    </Style>
+                                  </TextRun>
+                                  <TextRun>
+                                    <Value>Paid</Value>
                                     <Style>
                                       <FontFamily>Gill Sans MT</FontFamily>
                                       <Color>White</Color>
@@ -2344,10 +2367,13 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>Principle</Value>
+                                    <Value>Principal</Value>
                                     <Style>
-                                      <FontFamily>Gill Sans MT</FontFamily>
-                                      <Color>White</Color>
+                                      <FontStyle>Normal</FontStyle>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <FontWeight>Normal</FontWeight>
+                                      <TextDecoration>None</TextDecoration>
+                                      <Color>#ffffff</Color>
                                     </Style>
                                   </TextRun>
                                 </TextRuns>

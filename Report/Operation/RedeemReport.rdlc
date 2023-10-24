@@ -3989,12 +3989,14 @@
                                                       <Paragraph>
                                                         <TextRuns>
                                                           <TextRun>
-                                                            <Value>Principle</Value>
+                                                            <Value>Principal</Value>
                                                             <Style>
+                                                              <FontStyle>Normal</FontStyle>
                                                               <FontFamily>Century Gothic</FontFamily>
                                                               <FontSize>9pt</FontSize>
                                                               <FontWeight>Bold</FontWeight>
-                                                              <Color>White</Color>
+                                                              <TextDecoration>None</TextDecoration>
+                                                              <Color>#ffffff</Color>
                                                             </Style>
                                                           </TextRun>
                                                         </TextRuns>
@@ -4017,6 +4019,7 @@
                                                       <PaddingBottom>2pt</PaddingBottom>
                                                     </Style>
                                                   </Textbox>
+                                                  <rd:Selected>true</rd:Selected>
                                                 </CellContents>
                                               </TablixHeader>
                                               <TablixMembers>
