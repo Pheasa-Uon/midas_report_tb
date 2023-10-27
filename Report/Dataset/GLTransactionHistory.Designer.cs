@@ -418,6 +418,8 @@ namespace Report.Dataset {
             
             private global::System.Data.DataColumn columnbalance_side;
             
+            private global::System.Data.DataColumn columnjournal_name;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public GLHistDatasetDataTable() {
@@ -589,6 +591,14 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn journal_nameColumn {
+                get {
+                    return this.columnjournal_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -641,7 +651,8 @@ namespace Report.Dataset {
                         string class_type, 
                         string vendor_name, 
                         string customer_name, 
-                        string balance_side) {
+                        string balance_side, 
+                        string journal_name) {
                 GLHistDatasetRow rowGLHistDatasetRow = ((GLHistDatasetRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         DR,
@@ -660,7 +671,8 @@ namespace Report.Dataset {
                         class_type,
                         vendor_name,
                         customer_name,
-                        balance_side};
+                        balance_side,
+                        journal_name};
                 rowGLHistDatasetRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGLHistDatasetRow);
                 return rowGLHistDatasetRow;
@@ -700,6 +712,7 @@ namespace Report.Dataset {
                 this.columnvendor_name = base.Columns["vendor_name"];
                 this.columncustomer_name = base.Columns["customer_name"];
                 this.columnbalance_side = base.Columns["balance_side"];
+                this.columnjournal_name = base.Columns["journal_name"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -739,6 +752,8 @@ namespace Report.Dataset {
                 base.Columns.Add(this.columncustomer_name);
                 this.columnbalance_side = new global::System.Data.DataColumn("balance_side", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbalance_side);
+                this.columnjournal_name = new global::System.Data.DataColumn("journal_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnjournal_name);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1922,6 +1937,22 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string journal_name {
+                get {
+                    try {
+                        return ((string)(this[this.tableGLHistDataset.journal_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'journal_name\' in table \'GLHistDataset\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGLHistDataset.journal_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsDRNull() {
                 return this.IsNull(this.tableGLHistDataset.DRColumn);
             }
@@ -2122,6 +2153,18 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setbalance_sideNull() {
                 this[this.tableGLHistDataset.balance_sideColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isjournal_nameNull() {
+                return this.IsNull(this.tableGLHistDataset.journal_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setjournal_nameNull() {
+                this[this.tableGLHistDataset.journal_nameColumn] = global::System.Convert.DBNull;
             }
         }
         
