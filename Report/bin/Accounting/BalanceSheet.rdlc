@@ -8,7 +8,6 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>71855982-3168-4fea-ac84-15f01eaf7abf</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -1006,6 +1005,9 @@
                       </SortExpressions>
                       <TablixMembers>
                         <TablixMember>
+                          <Visibility>
+                            <Hidden>=IIF(Fields!account_type.Value = "99.Net Income" or Fields!account_type.Value = "8 .EQUITY",TRUE,FALSE)</Hidden>
+                          </Visibility>
                           <KeepWithGroup>After</KeepWithGroup>
                         </TablixMember>
                         <TablixMember>
@@ -1039,7 +1041,11 @@
                         </TablixMember>
                       </TablixMembers>
                     </TablixMember>
-                    <TablixMember />
+                    <TablixMember>
+                      <Visibility>
+                        <Hidden>=IIF(Fields!account_type.Value = "99.Net Income" or Fields!account_type.Value = "8 .EQUITY",TRUE,FALSE)</Hidden>
+                      </Visibility>
+                    </TablixMember>
                   </TablixMembers>
                 </TablixMember>
               </TablixMembers>
