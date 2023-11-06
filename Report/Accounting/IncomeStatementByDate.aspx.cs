@@ -26,8 +26,8 @@ namespace Report.Accounting
                 dtpToDate.Text = date;
             }
         }
-        
-        private void GenerateReport(DataTable PS_INCTRAN_DT, DataTable PS_GOSTRAN_DT, DataTable PS_TTGOSTRAN_DT, DataTable PS_EXPTRAN_DT, DataTable PS_TTNDITRAN_DT, DataTable PS_OTHRETRAN_DT, DataTable PS_PLTRAN_DT)
+
+        private void GenerateReport(DataTable PS_INCTRAN_DT, DataTable PS_GOSTRAN_DT, DataTable PS_TTGOSTRAN_DT, DataTable PS_EXPTRAN_DT, DataTable PS_TTNDITRAN_DT, DataTable PS_OTHRETRAN_DT, DataTable PS_INCEXPTRAN_DT, DataTable PS_PLBINCTRAN_DT, DataTable PS_INCTAXTTRAN_DT, DataTable PS_PLTRAN_DT)
         {
             ReportParameterCollection reportParameters = new ReportParameterCollection();
             reportParameters.Add(new ReportParameter("Branch", ddBranchName.SelectedItem.Text));
@@ -40,6 +40,9 @@ namespace Report.Accounting
             var PS_EXPTRAN_DS = new ReportDataSource("PS_EXPTRAN", PS_EXPTRAN_DT);
             var PS_TTNDITRAN_DS = new ReportDataSource("PS_TTNDITRAN", PS_TTNDITRAN_DT);
             var PS_OTHRETRAN_DS = new ReportDataSource("PS_OTHRETRAN", PS_OTHRETRAN_DT);
+            var PS_INCEXPTRAN_DS = new ReportDataSource("PS_INCEXPTRAN", PS_INCEXPTRAN_DT);
+            var PS_PLBINCTRAN_DS = new ReportDataSource("PS_PLBINCTRAN", PS_PLBINCTRAN_DT);
+            var PS_INCTAXTTRAN_DS = new ReportDataSource("PS_INCTAXTTRAN", PS_INCTAXTTRAN_DT);
             var PS_PLTRAN_DS = new ReportDataSource("PS_PLTRAN", PS_PLTRAN_DT);
 
             DataHelper.generateAccountingReport(ReportViewer1, "IncomeStatementByDate", reportParameters,
@@ -49,6 +52,9 @@ namespace Report.Accounting
                 PS_EXPTRAN_DS,
                 PS_TTNDITRAN_DS,
                 PS_OTHRETRAN_DS,
+                PS_INCEXPTRAN_DS,
+                PS_PLBINCTRAN_DS,
+                PS_INCTAXTTRAN_DS,
                 PS_PLTRAN_DS
                 );
         }
@@ -80,6 +86,9 @@ namespace Report.Accounting
             var PS_EXPTRAN = "PS_EXPTRAN";
             var PS_TTNDITRAN = "PS_TTNDITRAN";
             var PS_OTHRETRAN = "PS_OTHRETRAN";
+            var PS_INCEXPTRAN = "PS_INCEXPTRAN";
+            var PS_PLBINCTRAN = "PS_PLBINCTRAN";
+            var PS_INCTAXTTRAN = "PS_INCTAXTTRAN";
             var PS_PLTRAN = "PS_PLTRAN";
 
             List<Procedure> procedureList = new List<Procedure>();
@@ -93,9 +102,12 @@ namespace Report.Accounting
             DataTable PS_EXPTRAN_DS = db.getProcedureDataTable(PS_EXPTRAN, procedureList);
             DataTable PS_TTNDITRAN_DS = db.getProcedureDataTable(PS_TTNDITRAN, procedureList);
             DataTable PS_OTHRETRAN_DS = db.getProcedureDataTable(PS_OTHRETRAN, procedureList);
+            DataTable PS_INCEXPTRAN_DS = db.getProcedureDataTable(PS_INCEXPTRAN, procedureList);
+            DataTable PS_PLBINCTRAN_DS = db.getProcedureDataTable(PS_PLBINCTRAN, procedureList);
+            DataTable PS_INCTAXTTRAN_DS = db.getProcedureDataTable(PS_INCTAXTTRAN, procedureList);
             DataTable PS_PLTRAN_DS = db.getProcedureDataTable(PS_PLTRAN, procedureList);
 
-            GenerateReport(PS_INCTRAN_DS, PS_GOSTRAN_DS, PS_TTGOSTRAN_DS, PS_EXPTRAN_DS, PS_TTNDITRAN_DS, PS_OTHRETRAN_DS, PS_PLTRAN_DS);
+            GenerateReport(PS_INCTRAN_DS, PS_GOSTRAN_DS, PS_TTGOSTRAN_DS, PS_EXPTRAN_DS, PS_TTNDITRAN_DS, PS_OTHRETRAN_DS, PS_INCEXPTRAN_DS, PS_PLBINCTRAN_DS, PS_INCTAXTTRAN_DS, PS_PLTRAN_DS);
         }
     }
 }
