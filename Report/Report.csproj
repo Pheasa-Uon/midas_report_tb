@@ -192,6 +192,7 @@
     <Content Include="Images\profile.png" />
     <Content Include="Images\ui-icons_444444_256x240.png" />
     <Content Include="Operation\AllContractList.aspx" />
+    <Content Include="Operation\AllSourceOfFundAccountList.aspx" />
     <Content Include="Operation\BranchProductivity.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -294,6 +295,17 @@
     </Content>
     <Content Include="Dataset\BalanceSheetByPeriod.xsc">
       <DependentUpon>BalanceSheetByPeriod.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\AllSourceOfFundAccountList.xsc">
+      <DependentUpon>AllSourceOfFundAccountList.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\AllSourceOfFundAccountList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AllSourceOfFundAccountList.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\AllSourceOfFundAccountList.xss">
+      <DependentUpon>AllSourceOfFundAccountList.xsd</DependentUpon>
     </Content>
     <None Include="Dataset\BalanceSheetByPeriod.xsd">
       <SubType>Designer</SubType>
@@ -1064,6 +1076,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AllContractList.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\AllSourceOfFundAccountList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllSourceOfFundAccountList.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\BalanceSheetByPeriod.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1277,6 +1294,13 @@
     </Compile>
     <Compile Include="Operation\AllContractList.aspx.designer.cs">
       <DependentUpon>AllContractList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\AllSourceOfFundAccountList.aspx.cs">
+      <DependentUpon>AllSourceOfFundAccountList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\AllSourceOfFundAccountList.aspx.designer.cs">
+      <DependentUpon>AllSourceOfFundAccountList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Operation\BranchProductivity.aspx.cs">
       <DependentUpon>BranchProductivity.aspx</DependentUpon>
@@ -1557,6 +1581,9 @@
     <Content Include="Accounting\BalanceSheetByPeriod.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Operation\AllSourceOfFundAccountList.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
