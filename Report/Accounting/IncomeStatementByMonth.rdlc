@@ -54,8 +54,16 @@
           <DataField>year</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="ac_amt_exchange">
-          <DataField>ac_amt_exchange</DataField>
+        <Field Name="current_amt">
+          <DataField>current_amt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="previous_amt">
+          <DataField>previous_amt</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="amt_ytd">
+          <DataField>amt_ytd</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -616,7 +624,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!ac_amt_exchange.Value)</Value>
+                                  <Value>=((sum(Fields!current_amt.Value) - sum(Fields!previous_amt.Value)) / IIF(Fields!previous_amt.Value = 0,1 * 100,sum(Fields!previous_amt.Value)))</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -653,7 +661,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!ac_amt.Value)</Value>
+                                  <Value>=Fields!amt_ytd.Value</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -732,7 +740,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!ac_amt_exchange.Value)</Value>
+                                  <Value>=((sum(Fields!current_amt.Value) - sum(Fields!previous_amt.Value)) / IIF(Fields!previous_amt.Value = 0,1 * 100,sum(Fields!previous_amt.Value)))</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -769,7 +777,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!ac_amt.Value)</Value>
+                                  <Value>=SUM(MAX(Fields!amt_ytd.Value,"gl_name"),"glm")</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -854,7 +862,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!ac_amt_exchange.Value)</Value>
+                                  <Value>=((sum(Fields!current_amt.Value) - sum(Fields!previous_amt.Value)) / IIF(Fields!previous_amt.Value = 0,1 * 100,sum(Fields!previous_amt.Value)))</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -897,7 +905,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!ac_amt.Value)</Value>
+                                  <Value>=iif(Fields!acc_class.Value="  GROSS PROFIT" OR Fields!acc_class.Value="  OPERATING PROFIT" OR Fields!acc_class.Value="  PROFIT BEFORE INCOME TAX" OR Fields!acc_class.Value="  NET PROFIT (LOSS) FOR THE PERIOD", SUM(MAX(Fields!amt_ytd.Value,"tt")),SUM(MAX(Fields!amt_ytd.Value,"gl_name")))</Value>
                                   <Style>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontWeight>Bold</FontWeight>

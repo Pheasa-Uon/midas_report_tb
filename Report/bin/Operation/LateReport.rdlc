@@ -7,7 +7,6 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>39afa9c6-d361-4ccb-a2f4-e4f1248c580b</rd:DataSourceID>
     </DataSource>
   </DataSources>
@@ -6073,7 +6072,7 @@
                           <FontFamily>Century Gothic</FontFamily>
                           <FontSize>12pt</FontSize>
                           <FontWeight>Bold</FontWeight>
-                          <Color>Red</Color>
+                          <Color>#e2be7d</Color>
                         </Style>
                       </TextRun>
                     </TextRuns>
@@ -6106,7 +6105,7 @@
                   <Border>
                     <Style>None</Style>
                   </Border>
-                  <BackgroundColor>#977ccd</BackgroundColor>
+                  <BackgroundColor>#233e99</BackgroundColor>
                 </Style>
               </Rectangle>
               <Rectangle Name="Rectangle4">
@@ -6119,7 +6118,7 @@
                   <Border>
                     <Style>None</Style>
                   </Border>
-                  <BackgroundColor>#977ccd</BackgroundColor>
+                  <BackgroundColor>#233e99</BackgroundColor>
                 </Style>
               </Rectangle>
             </ReportItems>

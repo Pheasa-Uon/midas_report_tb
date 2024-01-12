@@ -24,7 +24,9 @@
               <xs:element name="ac_amt" msprop:Generator_ColumnPropNameInTable="ac_amtColumn" msprop:Generator_ColumnPropNameInRow="ac_amt" msprop:Generator_UserColumnName="ac_amt" msprop:Generator_ColumnVarNameInTable="columnac_amt" type="xs:string" minOccurs="0" />
               <xs:element name="mon" msprop:Generator_ColumnPropNameInTable="monColumn" msprop:Generator_ColumnPropNameInRow="mon" msprop:Generator_UserColumnName="mon" msprop:Generator_ColumnVarNameInTable="columnmon" type="xs:string" minOccurs="0" />
               <xs:element name="year" msprop:Generator_ColumnPropNameInTable="yearColumn" msprop:Generator_ColumnPropNameInRow="year" msprop:Generator_UserColumnName="year" msprop:Generator_ColumnVarNameInTable="columnyear" type="xs:string" minOccurs="0" />
-              <xs:element name="ac_amt_exchange" msprop:Generator_ColumnPropNameInRow="ac_amt_exchange" msprop:Generator_ColumnPropNameInTable="ac_amt_exchangeColumn" msprop:Generator_ColumnVarNameInTable="columnac_amt_exchange" msprop:Generator_UserColumnName="ac_amt_exchange" type="xs:string" minOccurs="0" />
+              <xs:element name="current_amt" msprop:Generator_UserColumnName="current_amt" msprop:Generator_ColumnPropNameInTable="current_amtColumn" msprop:Generator_ColumnPropNameInRow="current_amt" msprop:Generator_ColumnVarNameInTable="columncurrent_amt" type="xs:string" minOccurs="0" />
+              <xs:element name="previous_amt" msprop:Generator_ColumnPropNameInRow="previous_amt" msprop:Generator_ColumnPropNameInTable="previous_amtColumn" msprop:Generator_ColumnVarNameInTable="columnprevious_amt" msprop:Generator_UserColumnName="previous_amt" type="xs:string" minOccurs="0" />
+              <xs:element name="amt_ytd" msprop:Generator_ColumnPropNameInRow="amt_ytd" msprop:Generator_ColumnPropNameInTable="amt_ytdColumn" msprop:Generator_ColumnVarNameInTable="columnamt_ytd" msprop:Generator_UserColumnName="amt_ytd" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
