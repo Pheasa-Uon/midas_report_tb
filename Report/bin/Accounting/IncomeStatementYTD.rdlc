@@ -2963,7 +2963,7 @@
                                 <TextRun>
                                   <Value>OPERATING PROFIT:</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
+                                    <FontStyle>Normal</FontStyle>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -3047,7 +3047,7 @@
                                 <TextRun>
                                   <Value>=Fields!ttdni.Value</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
+                                    <FontStyle>Normal</FontStyle>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -3792,9 +3792,8 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value />
+                                  <Value> NET PROFIT (LOSS) FOR THE PERIOD:</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -3802,7 +3801,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -3880,7 +3879,7 @@
                                 <TextRun>
                                   <Value>=Fields!NETINCOME.Value</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
+                                    <FontStyle>Normal</FontStyle>
                                     <FontFamily>Century Gothic</FontFamily>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
