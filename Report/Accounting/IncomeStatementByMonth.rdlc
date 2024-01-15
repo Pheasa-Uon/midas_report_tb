@@ -1651,7 +1651,7 @@
                             </CellContents>
                           </TablixHeader>
                           <Visibility>
-                            <Hidden>=IIF(Fields!acc_class.Value = "5.FINANCE INCOME" OR Fields!acc_class.Value = "6.FINANCE COST" OR Fields!acc_class.Value = "7.INCOME TAX EXPENSE" ,True, False)</Hidden>
+                            <Hidden>=IIF(Fields!acc_class.Value = "9.FINANCE INCOME" OR Fields!acc_class.Value = "10.FINANCE COST" OR Fields!acc_class.Value = "12.INCOME TAX EXPENSE" ,True, False)</Hidden>
                           </Visibility>
                           <KeepWithGroup>After</KeepWithGroup>
                         </TablixMember>
@@ -1870,7 +1870,7 @@
                         </CellContents>
                       </TablixHeader>
                       <Visibility>
-                        <Hidden>=IIF(Fields!acc_class.Value = "5.FINANCE INCOME" OR Fields!acc_class.Value = "6.FINANCE COST" OR Fields!acc_class.Value = "7.INCOME TAX EXPENSE" ,True, False)</Hidden>
+                        <Hidden>=IIF(Fields!acc_class.Value = "9.FINANCE INCOME" OR Fields!acc_class.Value = "10.FINANCE COST" OR Fields!acc_class.Value = "12.INCOME TAX EXPENSE" ,True, False)</Hidden>
                       </Visibility>
                       <KeepWithGroup>Before</KeepWithGroup>
                     </TablixMember>
