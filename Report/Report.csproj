@@ -191,6 +191,7 @@
     <Content Include="Images\midas.png" />
     <Content Include="Images\profile.png" />
     <Content Include="Images\ui-icons_444444_256x240.png" />
+    <Content Include="Operation\AccountReceivableAgingReport.aspx" />
     <Content Include="Operation\AllContractList.aspx" />
     <Content Include="Operation\AllSourceOfFundAccountList.aspx" />
     <Content Include="Operation\BranchProductivity.aspx" />
@@ -274,6 +275,17 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Accounting\TrialBalanceTotalByClass.rdlc" />
+    <Content Include="Dataset\AccountReceivableAgingReport.xsc">
+      <DependentUpon>AccountReceivableAgingReport.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\AccountReceivableAgingReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountReceivableAgingReport.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\AccountReceivableAgingReport.xss">
+      <DependentUpon>AccountReceivableAgingReport.xsd</DependentUpon>
+    </Content>
     <None Include="Dataset\AccrualDetail.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
@@ -298,6 +310,17 @@
     </Content>
     <Content Include="Dataset\AllSourceOfFundAccountList.xsc">
       <DependentUpon>AllSourceOfFundAccountList.xsd</DependentUpon>
+    </Content>
+    <Content Include="Dataset\AllContractList.xsc">
+      <DependentUpon>AllContractList.xsd</DependentUpon>
+    </Content>
+    <None Include="Dataset\AllContractList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AllContractList.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Dataset\AllContractList.xss">
+      <DependentUpon>AllContractList.xsd</DependentUpon>
     </Content>
     <None Include="Dataset\AllSourceOfFundAccountList.xsd">
       <SubType>Designer</SubType>
@@ -1061,6 +1084,11 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Dataset\AccountReceivableAgingReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountReceivableAgingReport.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\AccrualDetail.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1288,6 +1316,13 @@
       <DependentUpon>BalanceSheet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Models\UserResponse.cs" />
+    <Compile Include="Operation\AccountReceivableAgingReport.aspx.cs">
+      <DependentUpon>AccountReceivableAgingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Operation\AccountReceivableAgingReport.aspx.designer.cs">
+      <DependentUpon>AccountReceivableAgingReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Operation\AllContractList.aspx.cs">
       <DependentUpon>AllContractList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1584,6 +1619,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Operation\AllSourceOfFundAccountList.rdlc" />
+    <EmbeddedResource Include="Operation\AccountReceivableAgingReport.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

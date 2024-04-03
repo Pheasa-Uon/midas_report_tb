@@ -552,5 +552,10 @@ namespace Report.Utils
                 return res;
             }
         }
+
+        internal static void populateBranchDDL(object ddBranchName, int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }   

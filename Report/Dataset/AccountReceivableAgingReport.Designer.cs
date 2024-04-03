@@ -20,17 +20,17 @@ namespace Report.Dataset {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("AllContractlist")]
+    [global::System.Xml.Serialization.XmlRootAttribute("AccountReceivableAgingReport")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class AllContractlist : global::System.Data.DataSet {
+    public partial class AccountReceivableAgingReport : global::System.Data.DataSet {
         
-        private AllContractlListDataTable tableAllContractlList;
+        private AccountReceivableAgingReportDSDataTable tableAccountReceivableAgingReportDS;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public AllContractlist() {
+        public AccountReceivableAgingReport() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Report.Dataset {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected AllContractlist(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected AccountReceivableAgingReport(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Report.Dataset {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["AllContractlList"] != null)) {
-                    base.Tables.Add(new AllContractlListDataTable(ds.Tables["AllContractlList"]));
+                if ((ds.Tables["AccountReceivableAgingReportDS"] != null)) {
+                    base.Tables.Add(new AccountReceivableAgingReportDSDataTable(ds.Tables["AccountReceivableAgingReportDS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Report.Dataset {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public AllContractlListDataTable AllContractlList {
+        public AccountReceivableAgingReportDSDataTable AccountReceivableAgingReportDS {
             get {
-                return this.tableAllContractlList;
+                return this.tableAccountReceivableAgingReportDS;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            AllContractlist cln = ((AllContractlist)(base.Clone()));
+            AccountReceivableAgingReport cln = ((AccountReceivableAgingReport)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Report.Dataset {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["AllContractlList"] != null)) {
-                    base.Tables.Add(new AllContractlListDataTable(ds.Tables["AllContractlList"]));
+                if ((ds.Tables["AccountReceivableAgingReportDS"] != null)) {
+                    base.Tables.Add(new AccountReceivableAgingReportDSDataTable(ds.Tables["AccountReceivableAgingReportDS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableAllContractlList = ((AllContractlListDataTable)(base.Tables["AllContractlList"]));
+            this.tableAccountReceivableAgingReportDS = ((AccountReceivableAgingReportDSDataTable)(base.Tables["AccountReceivableAgingReportDS"]));
             if ((initTable == true)) {
-                if ((this.tableAllContractlList != null)) {
-                    this.tableAllContractlList.InitVars();
+                if ((this.tableAccountReceivableAgingReportDS != null)) {
+                    this.tableAccountReceivableAgingReportDS.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "AllContractlist";
+            this.DataSetName = "AccountReceivableAgingReport";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/AllContractlist.xsd";
+            this.Namespace = "http://tempuri.org/AccountReceivableAgingReport.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableAllContractlList = new AllContractlListDataTable();
-            base.Tables.Add(this.tableAllContractlList);
+            this.tableAccountReceivableAgingReportDS = new AccountReceivableAgingReportDSDataTable();
+            base.Tables.Add(this.tableAccountReceivableAgingReportDS);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeAllContractlList() {
+        private bool ShouldSerializeAccountReceivableAgingReportDS() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Report.Dataset {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            AllContractlist ds = new AllContractlist();
+            AccountReceivableAgingReport ds = new AccountReceivableAgingReport();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,93 +270,77 @@ namespace Report.Dataset {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void AllContractlListRowChangeEventHandler(object sender, AllContractlListRowChangeEvent e);
+        public delegate void AccountReceivableAgingReportDSRowChangeEventHandler(object sender, AccountReceivableAgingReportDSRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class AllContractlListDataTable : global::System.Data.TypedTableBase<AllContractlListRow> {
-            
-            private global::System.Data.DataColumn columnid;
-            
-            private global::System.Data.DataColumn columncustomer_no;
+        public partial class AccountReceivableAgingReportDSDataTable : global::System.Data.TypedTableBase<AccountReceivableAgingReportDSRow> {
             
             private global::System.Data.DataColumn columncustomer_name;
             
-            private global::System.Data.DataColumn columndob;
-            
-            private global::System.Data.DataColumn columnidentify;
-            
-            private global::System.Data.DataColumn columnpersonal_phone;
-            
-            private global::System.Data.DataColumn columnaddress;
-            
-            private global::System.Data.DataColumn columnremark;
-            
-            private global::System.Data.DataColumn columnbranch_name;
-            
             private global::System.Data.DataColumn columnlob_name;
-            
-            private global::System.Data.DataColumn columnidentify_type;
-            
-            private global::System.Data.DataColumn columnsex;
-            
-            private global::System.Data.DataColumn columnoccupation;
             
             private global::System.Data.DataColumn columndisbursement_date;
             
-            private global::System.Data.DataColumn columnhome_street;
-            
-            private global::System.Data.DataColumn columnpawn_price_approved;
+            private global::System.Data.DataColumn columnprinciple_less;
             
             private global::System.Data.DataColumn columninterest_rate;
             
-            private global::System.Data.DataColumn columnoutstanding;
+            private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columnnum_of_install;
-            
-            private global::System.Data.DataColumn columnexpired_date;
-            
-            private global::System.Data.DataColumn columnprovince;
-            
-            private global::System.Data.DataColumn columndistrict;
-            
-            private global::System.Data.DataColumn columncommune;
-            
-            private global::System.Data.DataColumn columnvillage;
-            
-            private global::System.Data.DataColumn columnname;
-            
-            private global::System.Data.DataColumn columncurency_code;
-            
-            private global::System.Data.DataColumn columnticket_type;
+            private global::System.Data.DataColumn columncontract_id;
             
             private global::System.Data.DataColumn columncontract_no;
             
-            private global::System.Data.DataColumn columncome_through;
+            private global::System.Data.DataColumn columndue_date;
             
-            private global::System.Data.DataColumn columncycle_num;
+            private global::System.Data.DataColumn columncreated_date;
             
-            private global::System.Data.DataColumn columnfirst_disbursement_date;
+            private global::System.Data.DataColumn columnaging_late;
             
-            private global::System.Data.DataColumn columncontract_status;
+            private global::System.Data.DataColumn columnprinciple130;
             
-            private global::System.Data.DataColumn columncustomer_name_kh;
+            private global::System.Data.DataColumn columninterest130;
             
-            private global::System.Data.DataColumn columnaccrual_interest_income;
+            private global::System.Data.DataColumn columnprinciple3160;
             
-            private global::System.Data.DataColumn columnoutstanding_interest;
+            private global::System.Data.DataColumn columninterest3160;
+            
+            private global::System.Data.DataColumn columnprinciple6190;
+            
+            private global::System.Data.DataColumn columninterest6190;
+            
+            private global::System.Data.DataColumn columnprinciple91;
+            
+            private global::System.Data.DataColumn columninterest91;
             
             private global::System.Data.DataColumn columncurrency_code;
             
-            private global::System.Data.DataColumn columncontract_type;
+            private global::System.Data.DataColumn columnpenalty_less;
+            
+            private global::System.Data.DataColumn columnticket_type;
+            
+            private global::System.Data.DataColumn columnSerial_number;
+            
+            private global::System.Data.DataColumn columncontract_status;
+            
+            private global::System.Data.DataColumn columnticket_no;
+            
+            private global::System.Data.DataColumn columncurrent_principle;
+            
+            private global::System.Data.DataColumn columninterest_current;
+            
+            private global::System.Data.DataColumn columninterest_accrual;
+            
+            private global::System.Data.DataColumn columntotal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AllContractlListDataTable() {
-                this.TableName = "AllContractlList";
+            public AccountReceivableAgingReportDSDataTable() {
+                this.TableName = "AccountReceivableAgingReportDS";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -364,7 +348,7 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal AllContractlListDataTable(global::System.Data.DataTable table) {
+            internal AccountReceivableAgingReportDSDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -381,25 +365,9 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected AllContractlListDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected AccountReceivableAgingReportDSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
-                get {
-                    return this.columnid;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn customer_noColumn {
-                get {
-                    return this.columncustomer_no;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -407,54 +375,6 @@ namespace Report.Dataset {
             public global::System.Data.DataColumn customer_nameColumn {
                 get {
                     return this.columncustomer_name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn dobColumn {
-                get {
-                    return this.columndob;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn identifyColumn {
-                get {
-                    return this.columnidentify;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn personal_phoneColumn {
-                get {
-                    return this.columnpersonal_phone;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn addressColumn {
-                get {
-                    return this.columnaddress;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn remarkColumn {
-                get {
-                    return this.columnremark;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn branch_nameColumn {
-                get {
-                    return this.columnbranch_name;
                 }
             }
             
@@ -468,30 +388,6 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn identify_typeColumn {
-                get {
-                    return this.columnidentify_type;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn sexColumn {
-                get {
-                    return this.columnsex;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn occupationColumn {
-                get {
-                    return this.columnoccupation;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn disbursement_dateColumn {
                 get {
                     return this.columndisbursement_date;
@@ -500,17 +396,9 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn home_streetColumn {
+            public global::System.Data.DataColumn principle_lessColumn {
                 get {
-                    return this.columnhome_street;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn pawn_price_approvedColumn {
-                get {
-                    return this.columnpawn_price_approved;
+                    return this.columnprinciple_less;
                 }
             }
             
@@ -524,81 +412,17 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn outstandingColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnoutstanding;
+                    return this.columnid;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn num_of_installColumn {
+            public global::System.Data.DataColumn contract_idColumn {
                 get {
-                    return this.columnnum_of_install;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn expired_dateColumn {
-                get {
-                    return this.columnexpired_date;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn provinceColumn {
-                get {
-                    return this.columnprovince;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn districtColumn {
-                get {
-                    return this.columndistrict;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn communeColumn {
-                get {
-                    return this.columncommune;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn villageColumn {
-                get {
-                    return this.columnvillage;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn nameColumn {
-                get {
-                    return this.columnname;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn curency_codeColumn {
-                get {
-                    return this.columncurency_code;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ticket_typeColumn {
-                get {
-                    return this.columnticket_type;
+                    return this.columncontract_id;
                 }
             }
             
@@ -612,57 +436,89 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn come_throughColumn {
+            public global::System.Data.DataColumn due_dateColumn {
                 get {
-                    return this.columncome_through;
+                    return this.columndue_date;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn cycle_numColumn {
+            public global::System.Data.DataColumn created_dateColumn {
                 get {
-                    return this.columncycle_num;
+                    return this.columncreated_date;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn first_disbursement_dateColumn {
+            public global::System.Data.DataColumn aging_lateColumn {
                 get {
-                    return this.columnfirst_disbursement_date;
+                    return this.columnaging_late;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn contract_statusColumn {
+            public global::System.Data.DataColumn principle130Column {
                 get {
-                    return this.columncontract_status;
+                    return this.columnprinciple130;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn customer_name_khColumn {
+            public global::System.Data.DataColumn interest130Column {
                 get {
-                    return this.columncustomer_name_kh;
+                    return this.columninterest130;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn accrual_interest_incomeColumn {
+            public global::System.Data.DataColumn principle3160Column {
                 get {
-                    return this.columnaccrual_interest_income;
+                    return this.columnprinciple3160;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn outstanding_interestColumn {
+            public global::System.Data.DataColumn interest3160Column {
                 get {
-                    return this.columnoutstanding_interest;
+                    return this.columninterest3160;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn principle6190Column {
+                get {
+                    return this.columnprinciple6190;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn interest6190Column {
+                get {
+                    return this.columninterest6190;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn principle91Column {
+                get {
+                    return this.columnprinciple91;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn interest91Column {
+                get {
+                    return this.columninterest91;
                 }
             }
             
@@ -676,9 +532,73 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn contract_typeColumn {
+            public global::System.Data.DataColumn penalty_lessColumn {
                 get {
-                    return this.columncontract_type;
+                    return this.columnpenalty_less;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ticket_typeColumn {
+                get {
+                    return this.columnticket_type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Serial_numberColumn {
+                get {
+                    return this.columnSerial_number;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn contract_statusColumn {
+                get {
+                    return this.columncontract_status;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ticket_noColumn {
+                get {
+                    return this.columnticket_no;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn current_principleColumn {
+                get {
+                    return this.columncurrent_principle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn interest_currentColumn {
+                get {
+                    return this.columninterest_current;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn interest_accrualColumn {
+                get {
+                    return this.columninterest_accrual;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn totalColumn {
+                get {
+                    return this.columntotal;
                 }
             }
             
@@ -693,118 +613,102 @@ namespace Report.Dataset {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AllContractlListRow this[int index] {
+            public AccountReceivableAgingReportDSRow this[int index] {
                 get {
-                    return ((AllContractlListRow)(this.Rows[index]));
+                    return ((AccountReceivableAgingReportDSRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AllContractlListRowChangeEventHandler AllContractlListRowChanging;
+            public event AccountReceivableAgingReportDSRowChangeEventHandler AccountReceivableAgingReportDSRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AllContractlListRowChangeEventHandler AllContractlListRowChanged;
+            public event AccountReceivableAgingReportDSRowChangeEventHandler AccountReceivableAgingReportDSRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AllContractlListRowChangeEventHandler AllContractlListRowDeleting;
+            public event AccountReceivableAgingReportDSRowChangeEventHandler AccountReceivableAgingReportDSRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AllContractlListRowChangeEventHandler AllContractlListRowDeleted;
+            public event AccountReceivableAgingReportDSRowChangeEventHandler AccountReceivableAgingReportDSRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddAllContractlListRow(AllContractlListRow row) {
+            public void AddAccountReceivableAgingReportDSRow(AccountReceivableAgingReportDSRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AllContractlListRow AddAllContractlListRow(
-                        string id, 
-                        string customer_no, 
+            public AccountReceivableAgingReportDSRow AddAccountReceivableAgingReportDSRow(
                         string customer_name, 
-                        string dob, 
-                        string identify, 
-                        string personal_phone, 
-                        string address, 
-                        string remark, 
-                        string branch_name, 
                         string lob_name, 
-                        string identify_type, 
-                        string sex, 
-                        string occupation, 
                         string disbursement_date, 
-                        string home_street, 
-                        string pawn_price_approved, 
+                        string principle_less, 
                         string interest_rate, 
-                        string outstanding, 
-                        string num_of_install, 
-                        string expired_date, 
-                        string province, 
-                        string district, 
-                        string commune, 
-                        string village, 
-                        string name, 
-                        string curency_code, 
-                        string ticket_type, 
+                        string id, 
+                        string contract_id, 
                         string contract_no, 
-                        string come_through, 
-                        string cycle_num, 
-                        string first_disbursement_date, 
-                        string contract_status, 
-                        string customer_name_kh, 
-                        string accrual_interest_income, 
-                        string outstanding_interest, 
+                        string due_date, 
+                        string created_date, 
+                        string aging_late, 
+                        string principle130, 
+                        string interest130, 
+                        string principle3160, 
+                        string interest3160, 
+                        string principle6190, 
+                        string interest6190, 
+                        string principle91, 
+                        string interest91, 
                         string currency_code, 
-                        string contract_type) {
-                AllContractlListRow rowAllContractlListRow = ((AllContractlListRow)(this.NewRow()));
+                        string penalty_less, 
+                        string ticket_type, 
+                        string Serial_number, 
+                        string contract_status, 
+                        string ticket_no, 
+                        string current_principle, 
+                        string interest_current, 
+                        string interest_accrual, 
+                        string total) {
+                AccountReceivableAgingReportDSRow rowAccountReceivableAgingReportDSRow = ((AccountReceivableAgingReportDSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id,
-                        customer_no,
                         customer_name,
-                        dob,
-                        identify,
-                        personal_phone,
-                        address,
-                        remark,
-                        branch_name,
                         lob_name,
-                        identify_type,
-                        sex,
-                        occupation,
                         disbursement_date,
-                        home_street,
-                        pawn_price_approved,
+                        principle_less,
                         interest_rate,
-                        outstanding,
-                        num_of_install,
-                        expired_date,
-                        province,
-                        district,
-                        commune,
-                        village,
-                        name,
-                        curency_code,
-                        ticket_type,
+                        id,
+                        contract_id,
                         contract_no,
-                        come_through,
-                        cycle_num,
-                        first_disbursement_date,
-                        contract_status,
-                        customer_name_kh,
-                        accrual_interest_income,
-                        outstanding_interest,
+                        due_date,
+                        created_date,
+                        aging_late,
+                        principle130,
+                        interest130,
+                        principle3160,
+                        interest3160,
+                        principle6190,
+                        interest6190,
+                        principle91,
+                        interest91,
                         currency_code,
-                        contract_type};
-                rowAllContractlListRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowAllContractlListRow);
-                return rowAllContractlListRow;
+                        penalty_less,
+                        ticket_type,
+                        Serial_number,
+                        contract_status,
+                        ticket_no,
+                        current_principle,
+                        interest_current,
+                        interest_accrual,
+                        total};
+                rowAccountReceivableAgingReportDSRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAccountReceivableAgingReportDSRow);
+                return rowAccountReceivableAgingReportDSRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                AllContractlListDataTable cln = ((AllContractlListDataTable)(base.Clone()));
+                AccountReceivableAgingReportDSDataTable cln = ((AccountReceivableAgingReportDSDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -812,154 +716,130 @@ namespace Report.Dataset {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new AllContractlListDataTable();
+                return new AccountReceivableAgingReportDSDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columncustomer_no = base.Columns["customer_no"];
                 this.columncustomer_name = base.Columns["customer_name"];
-                this.columndob = base.Columns["dob"];
-                this.columnidentify = base.Columns["identify"];
-                this.columnpersonal_phone = base.Columns["personal_phone"];
-                this.columnaddress = base.Columns["address"];
-                this.columnremark = base.Columns["remark"];
-                this.columnbranch_name = base.Columns["branch_name"];
                 this.columnlob_name = base.Columns["lob_name"];
-                this.columnidentify_type = base.Columns["identify_type"];
-                this.columnsex = base.Columns["sex"];
-                this.columnoccupation = base.Columns["occupation"];
                 this.columndisbursement_date = base.Columns["disbursement_date"];
-                this.columnhome_street = base.Columns["home_street"];
-                this.columnpawn_price_approved = base.Columns["pawn_price_approved"];
+                this.columnprinciple_less = base.Columns["principle_less"];
                 this.columninterest_rate = base.Columns["interest_rate"];
-                this.columnoutstanding = base.Columns["outstanding"];
-                this.columnnum_of_install = base.Columns["num_of_install"];
-                this.columnexpired_date = base.Columns["expired_date"];
-                this.columnprovince = base.Columns["province"];
-                this.columndistrict = base.Columns["district"];
-                this.columncommune = base.Columns["commune"];
-                this.columnvillage = base.Columns["village"];
-                this.columnname = base.Columns["name"];
-                this.columncurency_code = base.Columns["curency_code"];
-                this.columnticket_type = base.Columns["ticket_type"];
+                this.columnid = base.Columns["id"];
+                this.columncontract_id = base.Columns["contract_id"];
                 this.columncontract_no = base.Columns["contract_no"];
-                this.columncome_through = base.Columns["come_through"];
-                this.columncycle_num = base.Columns["cycle_num"];
-                this.columnfirst_disbursement_date = base.Columns["first_disbursement_date"];
-                this.columncontract_status = base.Columns["contract_status"];
-                this.columncustomer_name_kh = base.Columns["customer_name_kh"];
-                this.columnaccrual_interest_income = base.Columns["accrual_interest_income"];
-                this.columnoutstanding_interest = base.Columns["outstanding_interest"];
+                this.columndue_date = base.Columns["due_date"];
+                this.columncreated_date = base.Columns["created_date"];
+                this.columnaging_late = base.Columns["aging_late"];
+                this.columnprinciple130 = base.Columns["principle130"];
+                this.columninterest130 = base.Columns["interest130"];
+                this.columnprinciple3160 = base.Columns["principle3160"];
+                this.columninterest3160 = base.Columns["interest3160"];
+                this.columnprinciple6190 = base.Columns["principle6190"];
+                this.columninterest6190 = base.Columns["interest6190"];
+                this.columnprinciple91 = base.Columns["principle91"];
+                this.columninterest91 = base.Columns["interest91"];
                 this.columncurrency_code = base.Columns["currency_code"];
-                this.columncontract_type = base.Columns["contract_type"];
+                this.columnpenalty_less = base.Columns["penalty_less"];
+                this.columnticket_type = base.Columns["ticket_type"];
+                this.columnSerial_number = base.Columns["Serial_number"];
+                this.columncontract_status = base.Columns["contract_status"];
+                this.columnticket_no = base.Columns["ticket_no"];
+                this.columncurrent_principle = base.Columns["current_principle"];
+                this.columninterest_current = base.Columns["interest_current"];
+                this.columninterest_accrual = base.Columns["interest_accrual"];
+                this.columntotal = base.Columns["total"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columncustomer_no = new global::System.Data.DataColumn("customer_no", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncustomer_no);
                 this.columncustomer_name = new global::System.Data.DataColumn("customer_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncustomer_name);
-                this.columndob = new global::System.Data.DataColumn("dob", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndob);
-                this.columnidentify = new global::System.Data.DataColumn("identify", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidentify);
-                this.columnpersonal_phone = new global::System.Data.DataColumn("personal_phone", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpersonal_phone);
-                this.columnaddress = new global::System.Data.DataColumn("address", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnaddress);
-                this.columnremark = new global::System.Data.DataColumn("remark", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnremark);
-                this.columnbranch_name = new global::System.Data.DataColumn("branch_name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnbranch_name);
                 this.columnlob_name = new global::System.Data.DataColumn("lob_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlob_name);
-                this.columnidentify_type = new global::System.Data.DataColumn("identify_type", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidentify_type);
-                this.columnsex = new global::System.Data.DataColumn("sex", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsex);
-                this.columnoccupation = new global::System.Data.DataColumn("occupation", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnoccupation);
                 this.columndisbursement_date = new global::System.Data.DataColumn("disbursement_date", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndisbursement_date);
-                this.columnhome_street = new global::System.Data.DataColumn("home_street", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhome_street);
-                this.columnpawn_price_approved = new global::System.Data.DataColumn("pawn_price_approved", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpawn_price_approved);
+                this.columnprinciple_less = new global::System.Data.DataColumn("principle_less", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprinciple_less);
                 this.columninterest_rate = new global::System.Data.DataColumn("interest_rate", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columninterest_rate);
-                this.columnoutstanding = new global::System.Data.DataColumn("outstanding", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnoutstanding);
-                this.columnnum_of_install = new global::System.Data.DataColumn("num_of_install", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnum_of_install);
-                this.columnexpired_date = new global::System.Data.DataColumn("expired_date", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnexpired_date);
-                this.columnprovince = new global::System.Data.DataColumn("province", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprovince);
-                this.columndistrict = new global::System.Data.DataColumn("district", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndistrict);
-                this.columncommune = new global::System.Data.DataColumn("commune", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncommune);
-                this.columnvillage = new global::System.Data.DataColumn("village", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnvillage);
-                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnname);
-                this.columncurency_code = new global::System.Data.DataColumn("curency_code", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncurency_code);
-                this.columnticket_type = new global::System.Data.DataColumn("ticket_type", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnticket_type);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columncontract_id = new global::System.Data.DataColumn("contract_id", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontract_id);
                 this.columncontract_no = new global::System.Data.DataColumn("contract_no", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncontract_no);
-                this.columncome_through = new global::System.Data.DataColumn("come_through", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncome_through);
-                this.columncycle_num = new global::System.Data.DataColumn("cycle_num", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncycle_num);
-                this.columnfirst_disbursement_date = new global::System.Data.DataColumn("first_disbursement_date", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfirst_disbursement_date);
-                this.columncontract_status = new global::System.Data.DataColumn("contract_status", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncontract_status);
-                this.columncustomer_name_kh = new global::System.Data.DataColumn("customer_name_kh", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncustomer_name_kh);
-                this.columnaccrual_interest_income = new global::System.Data.DataColumn("accrual_interest_income", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnaccrual_interest_income);
-                this.columnoutstanding_interest = new global::System.Data.DataColumn("outstanding_interest", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnoutstanding_interest);
+                this.columndue_date = new global::System.Data.DataColumn("due_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndue_date);
+                this.columncreated_date = new global::System.Data.DataColumn("created_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncreated_date);
+                this.columnaging_late = new global::System.Data.DataColumn("aging_late", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaging_late);
+                this.columnprinciple130 = new global::System.Data.DataColumn("principle130", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprinciple130);
+                this.columninterest130 = new global::System.Data.DataColumn("interest130", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterest130);
+                this.columnprinciple3160 = new global::System.Data.DataColumn("principle3160", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprinciple3160);
+                this.columninterest3160 = new global::System.Data.DataColumn("interest3160", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterest3160);
+                this.columnprinciple6190 = new global::System.Data.DataColumn("principle6190", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprinciple6190);
+                this.columninterest6190 = new global::System.Data.DataColumn("interest6190", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterest6190);
+                this.columnprinciple91 = new global::System.Data.DataColumn("principle91", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprinciple91);
+                this.columninterest91 = new global::System.Data.DataColumn("interest91", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterest91);
                 this.columncurrency_code = new global::System.Data.DataColumn("currency_code", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncurrency_code);
-                this.columncontract_type = new global::System.Data.DataColumn("contract_type", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncontract_type);
+                this.columnpenalty_less = new global::System.Data.DataColumn("penalty_less", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpenalty_less);
+                this.columnticket_type = new global::System.Data.DataColumn("ticket_type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnticket_type);
+                this.columnSerial_number = new global::System.Data.DataColumn("Serial_number", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSerial_number);
+                this.columncontract_status = new global::System.Data.DataColumn("contract_status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontract_status);
+                this.columnticket_no = new global::System.Data.DataColumn("ticket_no", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnticket_no);
+                this.columncurrent_principle = new global::System.Data.DataColumn("current_principle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncurrent_principle);
+                this.columninterest_current = new global::System.Data.DataColumn("interest_current", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterest_current);
+                this.columninterest_accrual = new global::System.Data.DataColumn("interest_accrual", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterest_accrual);
+                this.columntotal = new global::System.Data.DataColumn("total", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AllContractlListRow NewAllContractlListRow() {
-                return ((AllContractlListRow)(this.NewRow()));
+            public AccountReceivableAgingReportDSRow NewAccountReceivableAgingReportDSRow() {
+                return ((AccountReceivableAgingReportDSRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new AllContractlListRow(builder);
+                return new AccountReceivableAgingReportDSRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(AllContractlListRow);
+                return typeof(AccountReceivableAgingReportDSRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.AllContractlListRowChanged != null)) {
-                    this.AllContractlListRowChanged(this, new AllContractlListRowChangeEvent(((AllContractlListRow)(e.Row)), e.Action));
+                if ((this.AccountReceivableAgingReportDSRowChanged != null)) {
+                    this.AccountReceivableAgingReportDSRowChanged(this, new AccountReceivableAgingReportDSRowChangeEvent(((AccountReceivableAgingReportDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -967,8 +847,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.AllContractlListRowChanging != null)) {
-                    this.AllContractlListRowChanging(this, new AllContractlListRowChangeEvent(((AllContractlListRow)(e.Row)), e.Action));
+                if ((this.AccountReceivableAgingReportDSRowChanging != null)) {
+                    this.AccountReceivableAgingReportDSRowChanging(this, new AccountReceivableAgingReportDSRowChangeEvent(((AccountReceivableAgingReportDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -976,8 +856,8 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.AllContractlListRowDeleted != null)) {
-                    this.AllContractlListRowDeleted(this, new AllContractlListRowChangeEvent(((AllContractlListRow)(e.Row)), e.Action));
+                if ((this.AccountReceivableAgingReportDSRowDeleted != null)) {
+                    this.AccountReceivableAgingReportDSRowDeleted(this, new AccountReceivableAgingReportDSRowChangeEvent(((AccountReceivableAgingReportDSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -985,14 +865,14 @@ namespace Report.Dataset {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.AllContractlListRowDeleting != null)) {
-                    this.AllContractlListRowDeleting(this, new AllContractlListRowChangeEvent(((AllContractlListRow)(e.Row)), e.Action));
+                if ((this.AccountReceivableAgingReportDSRowDeleting != null)) {
+                    this.AccountReceivableAgingReportDSRowDeleting(this, new AccountReceivableAgingReportDSRowChangeEvent(((AccountReceivableAgingReportDSRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveAllContractlListRow(AllContractlListRow row) {
+            public void RemoveAccountReceivableAgingReportDSRow(AccountReceivableAgingReportDSRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1001,7 +881,7 @@ namespace Report.Dataset {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                AllContractlist ds = new AllContractlist();
+                AccountReceivableAgingReport ds = new AccountReceivableAgingReport();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1019,7 +899,7 @@ namespace Report.Dataset {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "AllContractlListDataTable";
+                attribute2.FixedValue = "AccountReceivableAgingReportDSDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1063,47 +943,15 @@ namespace Report.Dataset {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class AllContractlListRow : global::System.Data.DataRow {
+        public partial class AccountReceivableAgingReportDSRow : global::System.Data.DataRow {
             
-            private AllContractlListDataTable tableAllContractlList;
+            private AccountReceivableAgingReportDSDataTable tableAccountReceivableAgingReportDS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal AllContractlListRow(global::System.Data.DataRowBuilder rb) : 
+            internal AccountReceivableAgingReportDSRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableAllContractlList = ((AllContractlListDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string id {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.idColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string customer_no {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.customer_noColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'customer_no\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.customer_noColumn] = value;
-                }
+                this.tableAccountReceivableAgingReportDS = ((AccountReceivableAgingReportDSDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1111,110 +959,15 @@ namespace Report.Dataset {
             public string customer_name {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.customer_nameColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.customer_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'customer_name\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'customer_name\' in table \'AccountReceivableAgingReportDS\' is" +
+                                " DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.customer_nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string dob {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.dobColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dob\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.dobColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string identify {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.identifyColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'identify\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.identifyColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string personal_phone {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.personal_phoneColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'personal_phone\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.personal_phoneColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string address {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.addressColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'address\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.addressColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string remark {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.remarkColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'remark\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.remarkColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string branch_name {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.branch_nameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'branch_name\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.branch_nameColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.customer_nameColumn] = value;
                 }
             }
             
@@ -1223,62 +976,15 @@ namespace Report.Dataset {
             public string lob_name {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.lob_nameColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.lob_nameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'lob_name\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'lob_name\' in table \'AccountReceivableAgingReportDS\' is DBNu" +
+                                "ll.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.lob_nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string identify_type {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.identify_typeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'identify_type\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.identify_typeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string sex {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.sexColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'sex\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.sexColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string occupation {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.occupationColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'occupation\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.occupationColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.lob_nameColumn] = value;
                 }
             }
             
@@ -1287,47 +993,32 @@ namespace Report.Dataset {
             public string disbursement_date {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.disbursement_dateColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.disbursement_dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'disbursement_date\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'disbursement_date\' in table \'AccountReceivableAgingReportDS" +
+                                "\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.disbursement_dateColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.disbursement_dateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string home_street {
+            public string principle_less {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.home_streetColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.principle_lessColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'home_street\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle_less\' in table \'AccountReceivableAgingReportDS\' i" +
+                                "s DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.home_streetColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string pawn_price_approved {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.pawn_price_approvedColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'pawn_price_approved\' in table \'AllContractlList\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.pawn_price_approvedColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.principle_lessColumn] = value;
                 }
             }
             
@@ -1336,174 +1027,48 @@ namespace Report.Dataset {
             public string interest_rate {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.interest_rateColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.interest_rateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'interest_rate\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest_rate\' in table \'AccountReceivableAgingReportDS\' is" +
+                                " DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.interest_rateColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.interest_rateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string outstanding {
+            public string id {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.outstandingColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'outstanding\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'AccountReceivableAgingReportDS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.outstandingColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string num_of_install {
+            public string contract_id {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.num_of_installColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.contract_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'num_of_install\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'contract_id\' in table \'AccountReceivableAgingReportDS\' is D" +
+                                "BNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.num_of_installColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string expired_date {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.expired_dateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'expired_date\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.expired_dateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string province {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.provinceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'province\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.provinceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string district {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.districtColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'district\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.districtColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string commune {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.communeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'commune\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.communeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string village {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.villageColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'village\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.villageColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string name {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.nameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'name\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string curency_code {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.curency_codeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'curency_code\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.curency_codeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string ticket_type {
-                get {
-                    try {
-                        return ((string)(this[this.tableAllContractlList.ticket_typeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ticket_type\' in table \'AllContractlList\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableAllContractlList.ticket_typeColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.contract_idColumn] = value;
                 }
             }
             
@@ -1512,129 +1077,202 @@ namespace Report.Dataset {
             public string contract_no {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.contract_noColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.contract_noColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'contract_no\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'contract_no\' in table \'AccountReceivableAgingReportDS\' is D" +
+                                "BNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.contract_noColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.contract_noColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string come_through {
+            public string due_date {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.come_throughColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.due_dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'come_through\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'due_date\' in table \'AccountReceivableAgingReportDS\' is DBNu" +
+                                "ll.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.come_throughColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.due_dateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string cycle_num {
+            public string created_date {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.cycle_numColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.created_dateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cycle_num\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'created_date\' in table \'AccountReceivableAgingReportDS\' is " +
+                                "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.cycle_numColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.created_dateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string first_disbursement_date {
+            public string aging_late {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.first_disbursement_dateColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.aging_lateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'first_disbursement_date\' in table \'AllContractlList\' is DBN" +
-                                "ull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'aging_late\' in table \'AccountReceivableAgingReportDS\' is DB" +
+                                "Null.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.first_disbursement_dateColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.aging_lateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string contract_status {
+            public string principle130 {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.contract_statusColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.principle130Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'contract_status\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle130\' in table \'AccountReceivableAgingReportDS\' is " +
+                                "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.contract_statusColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.principle130Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string customer_name_kh {
+            public string interest130 {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.customer_name_khColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.interest130Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'customer_name_kh\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest130\' in table \'AccountReceivableAgingReportDS\' is D" +
+                                "BNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.customer_name_khColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.interest130Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string accrual_interest_income {
+            public string principle3160 {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.accrual_interest_incomeColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.principle3160Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'accrual_interest_income\' in table \'AllContractlList\' is DBN" +
-                                "ull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle3160\' in table \'AccountReceivableAgingReportDS\' is" +
+                                " DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.accrual_interest_incomeColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.principle3160Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string outstanding_interest {
+            public string interest3160 {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.outstanding_interestColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.interest3160Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'outstanding_interest\' in table \'AllContractlList\' is DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest3160\' in table \'AccountReceivableAgingReportDS\' is " +
+                                "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.outstanding_interestColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.interest3160Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string principle6190 {
+                get {
+                    try {
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.principle6190Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle6190\' in table \'AccountReceivableAgingReportDS\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAccountReceivableAgingReportDS.principle6190Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string interest6190 {
+                get {
+                    try {
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.interest6190Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest6190\' in table \'AccountReceivableAgingReportDS\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAccountReceivableAgingReportDS.interest6190Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string principle91 {
+                get {
+                    try {
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.principle91Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'principle91\' in table \'AccountReceivableAgingReportDS\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAccountReceivableAgingReportDS.principle91Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string interest91 {
+                get {
+                    try {
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.interest91Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest91\' in table \'AccountReceivableAgingReportDS\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableAccountReceivableAgingReportDS.interest91Column] = value;
                 }
             }
             
@@ -1643,475 +1281,517 @@ namespace Report.Dataset {
             public string currency_code {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.currency_codeColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.currency_codeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'currency_code\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'currency_code\' in table \'AccountReceivableAgingReportDS\' is" +
+                                " DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.currency_codeColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.currency_codeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string contract_type {
+            public string penalty_less {
                 get {
                     try {
-                        return ((string)(this[this.tableAllContractlList.contract_typeColumn]));
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.penalty_lessColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'contract_type\' in table \'AllContractlList\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'penalty_less\' in table \'AccountReceivableAgingReportDS\' is " +
+                                "DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAllContractlList.contract_typeColumn] = value;
+                    this[this.tableAccountReceivableAgingReportDS.penalty_lessColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsidNull() {
-                return this.IsNull(this.tableAllContractlList.idColumn);
+            public string ticket_type {
+                get {
+                    try {
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.ticket_typeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ticket_type\' in table \'AccountReceivableAgingReportDS\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAccountReceivableAgingReportDS.ticket_typeColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetidNull() {
-                this[this.tableAllContractlList.idColumn] = global::System.Convert.DBNull;
+            public string Serial_number {
+                get {
+                    try {
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.Serial_numberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Serial_number\' in table \'AccountReceivableAgingReportDS\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAccountReceivableAgingReportDS.Serial_numberColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Iscustomer_noNull() {
-                return this.IsNull(this.tableAllContractlList.customer_noColumn);
+            public string contract_status {
+                get {
+                    try {
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.contract_statusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'contract_status\' in table \'AccountReceivableAgingReportDS\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAccountReceivableAgingReportDS.contract_statusColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setcustomer_noNull() {
-                this[this.tableAllContractlList.customer_noColumn] = global::System.Convert.DBNull;
+            public string ticket_no {
+                get {
+                    try {
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.ticket_noColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ticket_no\' in table \'AccountReceivableAgingReportDS\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAccountReceivableAgingReportDS.ticket_noColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string current_principle {
+                get {
+                    try {
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.current_principleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'current_principle\' in table \'AccountReceivableAgingReportDS" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAccountReceivableAgingReportDS.current_principleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string interest_current {
+                get {
+                    try {
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.interest_currentColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest_current\' in table \'AccountReceivableAgingReportDS\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAccountReceivableAgingReportDS.interest_currentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string interest_accrual {
+                get {
+                    try {
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.interest_accrualColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'interest_accrual\' in table \'AccountReceivableAgingReportDS\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAccountReceivableAgingReportDS.interest_accrualColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string total {
+                get {
+                    try {
+                        return ((string)(this[this.tableAccountReceivableAgingReportDS.totalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'total\' in table \'AccountReceivableAgingReportDS\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableAccountReceivableAgingReportDS.totalColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Iscustomer_nameNull() {
-                return this.IsNull(this.tableAllContractlList.customer_nameColumn);
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.customer_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setcustomer_nameNull() {
-                this[this.tableAllContractlList.customer_nameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsdobNull() {
-                return this.IsNull(this.tableAllContractlList.dobColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetdobNull() {
-                this[this.tableAllContractlList.dobColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsidentifyNull() {
-                return this.IsNull(this.tableAllContractlList.identifyColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetidentifyNull() {
-                this[this.tableAllContractlList.identifyColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Ispersonal_phoneNull() {
-                return this.IsNull(this.tableAllContractlList.personal_phoneColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setpersonal_phoneNull() {
-                this[this.tableAllContractlList.personal_phoneColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsaddressNull() {
-                return this.IsNull(this.tableAllContractlList.addressColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetaddressNull() {
-                this[this.tableAllContractlList.addressColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsremarkNull() {
-                return this.IsNull(this.tableAllContractlList.remarkColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetremarkNull() {
-                this[this.tableAllContractlList.remarkColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isbranch_nameNull() {
-                return this.IsNull(this.tableAllContractlList.branch_nameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setbranch_nameNull() {
-                this[this.tableAllContractlList.branch_nameColumn] = global::System.Convert.DBNull;
+                this[this.tableAccountReceivableAgingReportDS.customer_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Islob_nameNull() {
-                return this.IsNull(this.tableAllContractlList.lob_nameColumn);
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.lob_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setlob_nameNull() {
-                this[this.tableAllContractlList.lob_nameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isidentify_typeNull() {
-                return this.IsNull(this.tableAllContractlList.identify_typeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setidentify_typeNull() {
-                this[this.tableAllContractlList.identify_typeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IssexNull() {
-                return this.IsNull(this.tableAllContractlList.sexColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetsexNull() {
-                this[this.tableAllContractlList.sexColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsoccupationNull() {
-                return this.IsNull(this.tableAllContractlList.occupationColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetoccupationNull() {
-                this[this.tableAllContractlList.occupationColumn] = global::System.Convert.DBNull;
+                this[this.tableAccountReceivableAgingReportDS.lob_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isdisbursement_dateNull() {
-                return this.IsNull(this.tableAllContractlList.disbursement_dateColumn);
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.disbursement_dateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setdisbursement_dateNull() {
-                this[this.tableAllContractlList.disbursement_dateColumn] = global::System.Convert.DBNull;
+                this[this.tableAccountReceivableAgingReportDS.disbursement_dateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Ishome_streetNull() {
-                return this.IsNull(this.tableAllContractlList.home_streetColumn);
+            public bool Isprinciple_lessNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.principle_lessColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Sethome_streetNull() {
-                this[this.tableAllContractlList.home_streetColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Ispawn_price_approvedNull() {
-                return this.IsNull(this.tableAllContractlList.pawn_price_approvedColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setpawn_price_approvedNull() {
-                this[this.tableAllContractlList.pawn_price_approvedColumn] = global::System.Convert.DBNull;
+            public void Setprinciple_lessNull() {
+                this[this.tableAccountReceivableAgingReportDS.principle_lessColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isinterest_rateNull() {
-                return this.IsNull(this.tableAllContractlList.interest_rateColumn);
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.interest_rateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setinterest_rateNull() {
-                this[this.tableAllContractlList.interest_rateColumn] = global::System.Convert.DBNull;
+                this[this.tableAccountReceivableAgingReportDS.interest_rateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsoutstandingNull() {
-                return this.IsNull(this.tableAllContractlList.outstandingColumn);
+            public bool IsidNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetoutstandingNull() {
-                this[this.tableAllContractlList.outstandingColumn] = global::System.Convert.DBNull;
+            public void SetidNull() {
+                this[this.tableAccountReceivableAgingReportDS.idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isnum_of_installNull() {
-                return this.IsNull(this.tableAllContractlList.num_of_installColumn);
+            public bool Iscontract_idNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.contract_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setnum_of_installNull() {
-                this[this.tableAllContractlList.num_of_installColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isexpired_dateNull() {
-                return this.IsNull(this.tableAllContractlList.expired_dateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setexpired_dateNull() {
-                this[this.tableAllContractlList.expired_dateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsprovinceNull() {
-                return this.IsNull(this.tableAllContractlList.provinceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetprovinceNull() {
-                this[this.tableAllContractlList.provinceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsdistrictNull() {
-                return this.IsNull(this.tableAllContractlList.districtColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetdistrictNull() {
-                this[this.tableAllContractlList.districtColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IscommuneNull() {
-                return this.IsNull(this.tableAllContractlList.communeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetcommuneNull() {
-                this[this.tableAllContractlList.communeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsvillageNull() {
-                return this.IsNull(this.tableAllContractlList.villageColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetvillageNull() {
-                this[this.tableAllContractlList.villageColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsnameNull() {
-                return this.IsNull(this.tableAllContractlList.nameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetnameNull() {
-                this[this.tableAllContractlList.nameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Iscurency_codeNull() {
-                return this.IsNull(this.tableAllContractlList.curency_codeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setcurency_codeNull() {
-                this[this.tableAllContractlList.curency_codeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isticket_typeNull() {
-                return this.IsNull(this.tableAllContractlList.ticket_typeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setticket_typeNull() {
-                this[this.tableAllContractlList.ticket_typeColumn] = global::System.Convert.DBNull;
+            public void Setcontract_idNull() {
+                this[this.tableAccountReceivableAgingReportDS.contract_idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Iscontract_noNull() {
-                return this.IsNull(this.tableAllContractlList.contract_noColumn);
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.contract_noColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setcontract_noNull() {
-                this[this.tableAllContractlList.contract_noColumn] = global::System.Convert.DBNull;
+                this[this.tableAccountReceivableAgingReportDS.contract_noColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Iscome_throughNull() {
-                return this.IsNull(this.tableAllContractlList.come_throughColumn);
+            public bool Isdue_dateNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.due_dateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setcome_throughNull() {
-                this[this.tableAllContractlList.come_throughColumn] = global::System.Convert.DBNull;
+            public void Setdue_dateNull() {
+                this[this.tableAccountReceivableAgingReportDS.due_dateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Iscycle_numNull() {
-                return this.IsNull(this.tableAllContractlList.cycle_numColumn);
+            public bool Iscreated_dateNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.created_dateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setcycle_numNull() {
-                this[this.tableAllContractlList.cycle_numColumn] = global::System.Convert.DBNull;
+            public void Setcreated_dateNull() {
+                this[this.tableAccountReceivableAgingReportDS.created_dateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isfirst_disbursement_dateNull() {
-                return this.IsNull(this.tableAllContractlList.first_disbursement_dateColumn);
+            public bool Isaging_lateNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.aging_lateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setfirst_disbursement_dateNull() {
-                this[this.tableAllContractlList.first_disbursement_dateColumn] = global::System.Convert.DBNull;
+            public void Setaging_lateNull() {
+                this[this.tableAccountReceivableAgingReportDS.aging_lateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Iscontract_statusNull() {
-                return this.IsNull(this.tableAllContractlList.contract_statusColumn);
+            public bool Isprinciple130Null() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.principle130Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setcontract_statusNull() {
-                this[this.tableAllContractlList.contract_statusColumn] = global::System.Convert.DBNull;
+            public void Setprinciple130Null() {
+                this[this.tableAccountReceivableAgingReportDS.principle130Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Iscustomer_name_khNull() {
-                return this.IsNull(this.tableAllContractlList.customer_name_khColumn);
+            public bool Isinterest130Null() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.interest130Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setcustomer_name_khNull() {
-                this[this.tableAllContractlList.customer_name_khColumn] = global::System.Convert.DBNull;
+            public void Setinterest130Null() {
+                this[this.tableAccountReceivableAgingReportDS.interest130Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isaccrual_interest_incomeNull() {
-                return this.IsNull(this.tableAllContractlList.accrual_interest_incomeColumn);
+            public bool Isprinciple3160Null() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.principle3160Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setaccrual_interest_incomeNull() {
-                this[this.tableAllContractlList.accrual_interest_incomeColumn] = global::System.Convert.DBNull;
+            public void Setprinciple3160Null() {
+                this[this.tableAccountReceivableAgingReportDS.principle3160Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isoutstanding_interestNull() {
-                return this.IsNull(this.tableAllContractlList.outstanding_interestColumn);
+            public bool Isinterest3160Null() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.interest3160Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setoutstanding_interestNull() {
-                this[this.tableAllContractlList.outstanding_interestColumn] = global::System.Convert.DBNull;
+            public void Setinterest3160Null() {
+                this[this.tableAccountReceivableAgingReportDS.interest3160Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isprinciple6190Null() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.principle6190Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setprinciple6190Null() {
+                this[this.tableAccountReceivableAgingReportDS.principle6190Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isinterest6190Null() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.interest6190Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setinterest6190Null() {
+                this[this.tableAccountReceivableAgingReportDS.interest6190Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isprinciple91Null() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.principle91Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setprinciple91Null() {
+                this[this.tableAccountReceivableAgingReportDS.principle91Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isinterest91Null() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.interest91Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setinterest91Null() {
+                this[this.tableAccountReceivableAgingReportDS.interest91Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Iscurrency_codeNull() {
-                return this.IsNull(this.tableAllContractlList.currency_codeColumn);
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.currency_codeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setcurrency_codeNull() {
-                this[this.tableAllContractlList.currency_codeColumn] = global::System.Convert.DBNull;
+                this[this.tableAccountReceivableAgingReportDS.currency_codeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Iscontract_typeNull() {
-                return this.IsNull(this.tableAllContractlList.contract_typeColumn);
+            public bool Ispenalty_lessNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.penalty_lessColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setcontract_typeNull() {
-                this[this.tableAllContractlList.contract_typeColumn] = global::System.Convert.DBNull;
+            public void Setpenalty_lessNull() {
+                this[this.tableAccountReceivableAgingReportDS.penalty_lessColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isticket_typeNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.ticket_typeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setticket_typeNull() {
+                this[this.tableAccountReceivableAgingReportDS.ticket_typeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSerial_numberNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.Serial_numberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSerial_numberNull() {
+                this[this.tableAccountReceivableAgingReportDS.Serial_numberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Iscontract_statusNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.contract_statusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setcontract_statusNull() {
+                this[this.tableAccountReceivableAgingReportDS.contract_statusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isticket_noNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.ticket_noColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setticket_noNull() {
+                this[this.tableAccountReceivableAgingReportDS.ticket_noColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Iscurrent_principleNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.current_principleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setcurrent_principleNull() {
+                this[this.tableAccountReceivableAgingReportDS.current_principleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isinterest_currentNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.interest_currentColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setinterest_currentNull() {
+                this[this.tableAccountReceivableAgingReportDS.interest_currentColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isinterest_accrualNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.interest_accrualColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setinterest_accrualNull() {
+                this[this.tableAccountReceivableAgingReportDS.interest_accrualColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IstotalNull() {
+                return this.IsNull(this.tableAccountReceivableAgingReportDS.totalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SettotalNull() {
+                this[this.tableAccountReceivableAgingReportDS.totalColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2119,22 +1799,22 @@ namespace Report.Dataset {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class AllContractlListRowChangeEvent : global::System.EventArgs {
+        public class AccountReceivableAgingReportDSRowChangeEvent : global::System.EventArgs {
             
-            private AllContractlListRow eventRow;
+            private AccountReceivableAgingReportDSRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AllContractlListRowChangeEvent(AllContractlListRow row, global::System.Data.DataRowAction action) {
+            public AccountReceivableAgingReportDSRowChangeEvent(AccountReceivableAgingReportDSRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AllContractlListRow Row {
+            public AccountReceivableAgingReportDSRow Row {
                 get {
                     return this.eventRow;
                 }
